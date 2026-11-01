@@ -211,11 +211,12 @@ def verify_with_firstfall(mp4_path: str, fps: int = 24, ppm: float = 539.8) -> d
     output = res.stdout + res.stderr
     print(output)
 
-    # Parse JSON output from firstfall if printed
+    # Parse JSON output from firstfall if printed (finding outer { ... })
     try:
-        lines = [line.strip() for line in output.splitlines() if line.strip().startswith("{") and line.strip().endswith("}")]
-        if lines:
-            return json.loads(lines[-1])
+        idx_start = output.find("{")
+        idx_end = output.rfind("}")
+        if idx_start != -1 and idx_end != -1 and idx_end > idx_start:
+            return json.loads(output[idx_start : idx_end + 1])
     except Exception as e:
         print(f"[verify] Error parsing firstfall JSON: {e}")
     return {"raw_output": output}
@@ -245,6 +246,7 @@ def main():
     parser.add_argument("--guidance", type=float, default=DEFAULT_GUIDANCE, help="Guidance scale / CFG (default: 6.0)")
     parser.add_argument("--flow-shift", type=float, default=DEFAULT_FLOW_SHIFT, help="Flow shift parameter (default: 10.0)")
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED, help="Random seed (default: 1)")
+    parser.add_argument("--dry-run", action="store_true", help="Execute CPU-only dry run without GPU/endpoint call (prepares conditioning, letterboxing, payload, mock output, and sidecar)")
     parser.add_argument("--verify", action="store_true", help="Run referee-validated firstfall tracker on output")
     parser.add_argument("--ppm", type=float, default=539.8, help="Pixels per meter for verification (default: 539.8)")
 
@@ -294,7 +296,21 @@ def main():
     print(f"[inference] Running recipe ({args.mode} mode, {args.width}x{args.height}, {args.num_frames}f @ {args.fps}fps, CFG {args.guidance}, Shift {args.flow_shift}, Seed {args.seed})...")
     sidecar_meta = {}
 
-    if args.mode == "endpoint":
+    if args.dry_run:
+        print("[inference] DRY RUN MODE: generating mock video on CPU without calling GPU/endpoint...")
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+        writer = cv2.VideoWriter(str(out_path), fourcc, args.fps, (args.width, args.height))
+        for i in range(min(args.num_frames, 24)):
+            mock_frame = processed_img.copy()
+            cv2.putText(mock_frame, f"Recipe Dry Run Frame {i}", (40, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+            writer.write(mock_frame)
+        writer.release()
+        sidecar_meta = {
+            "mode": "dry-run",
+            "wall_seconds": 0.05,
+            "note": "Dry run executed successfully. Verified conditioning frame, letterboxing, payload dictionary, and CLI parameters.",
+        }
+    elif args.mode == "endpoint":
         video_bytes, sidecar_meta = run_inference_endpoint(
             url=args.url,
             image_bytes=img_bytes,

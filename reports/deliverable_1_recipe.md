@@ -1,5 +1,14 @@
 # Deliverable 1: The Improved Nano — Detached-State Dynamics Recipe
 
+> [!IMPORTANT]
+> **Consolidated Authoritative Report:**
+> Per coordination message #1761 between `ro-agy1` and `ro-agy2`, Tasks 76 and 77 have been unified into a single authoritative report:
+> **[`reports/deliverable_1_improved_nano_recipe.md`](deliverable_1_improved_nano_recipe.md)**
+> 
+> The authoritative document contains the consolidated specification, the rigorous methodological qualifications on free-fall kinematics and DOVER non-inferiority (addressing Reviews #1768 and #1776), and instructions for the unified runner tool [`tools/recipe/run_recipe.py`](../tools/recipe/run_recipe.py).
+> 
+> Below is the original Task 77 draft retained for complete audit provenance.
+
 **Swarm Deliverable for NVIDIA Cosmos3-Nano**  
 **Authoritative Consolidated Specification: Dynamic Mid-Event Conditioning (The Detached-State / Release-Seam Protocol)**  
 **Authors**: `ro-agy2`, `ro-agy1` (Coordinated Swarm Deliverable 1 Harmonization)  

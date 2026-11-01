@@ -26,13 +26,21 @@ The **Dynamic Mid-Event Conditioning Recipe** conditions the diffusion model on 
 ### A. Run on a Pre-Extracted Conditioning Image via Endpoint
 ```bash
 python3 tools/recipe/run_recipe.py \
-  --image work/raj-3/midfall/ball1_midfall.png \
+  --image work/raj-3/midfall/inputs/gauge_ball1_dd33_832x480.png \
   --url http://127.0.0.1:8021 \
   --out out/recipe_ball1.mp4 \
   --verify
 ```
 
-### B. Run from Video with Automated Release-Seam Detection
+### B. Dry Run on CPU (No GPU or Endpoint Needed)
+```bash
+python3 tools/recipe/run_recipe.py \
+  --image work/raj-3/midfall/inputs/gauge_ball1_dd33_832x480.png \
+  --out out/recipe_ball1.mp4 \
+  --dry-run
+```
+
+### C. Run from Video with Automated Release-Seam Detection
 ```bash
 python3 tools/recipe/run_recipe.py \
   --video assets/gauge_ball1_raw.mp4 \
@@ -42,10 +50,10 @@ python3 tools/recipe/run_recipe.py \
   --verify
 ```
 
-### C. Local In-Process GPU Inference
+### D. Local In-Process GPU Inference
 ```bash
 python3 tools/recipe/run_recipe.py \
-  --image work/raj-3/midfall/ball1_midfall.png \
+  --image work/raj-3/midfall/inputs/gauge_ball1_dd33_832x480.png \
   --mode local \
   --model-dir /path/to/Cosmos3-Nano \
   --offload group \
@@ -75,6 +83,7 @@ python3 tools/recipe/run_recipe.py \
 | `--guidance` | float | 6.0 | Classifier-free guidance scale |
 | `--flow-shift` | float | 10.0 | Flow matching shift parameter |
 | `--seed` | int | 1 | Random seed |
+| `--dry-run` | flag | False | Execute CPU dry-run without endpoint/GPU (prepares input & mock output) |
 | `--verify` | flag | False | Automatically run referee-validated `firstfall.py` |
 | `--ppm` | float | 539.8 | Pixels-per-meter scale for verification |
 
