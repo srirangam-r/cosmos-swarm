@@ -1,0 +1,2269 @@
+{
+  "scope": "deterministic CPU software acceptance; no model/video/physics evidence",
+  "source_commit": "16dcfac",
+  "source_sha256": {
+    "before": "1b936a4844a0b8356baf2654f7eab14d87cee459f30d35f503d6f4b1173af301",
+    "after": "4eedc41bf3759710868c4e98b2239f4d5b49b3e041b0507b6c0b27c30534050b"
+  },
+  "numpy": "2.2.6",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "serial_cases": [
+    {
+      "latent": false,
+      "storage": "list",
+      "pixels": "float",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ]
+        },
+        "body_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "ac75182d87e600967bed3e4440c0eea03c0f8022eb447d4651d5cfca0190d3c7"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": false,
+      "storage": "list",
+      "pixels": "uint8",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ]
+        },
+        "body_hash": "41745e869af605f6005811dd6a627e2732b260d80614880b41bd25bc69576582",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "66f952a83339274eb287b64ef7b028d88915ac6df06a183f7c0436fa2b25107b"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": false,
+      "storage": "numpy",
+      "pixels": "float",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ]
+        },
+        "body_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "ac75182d87e600967bed3e4440c0eea03c0f8022eb447d4651d5cfca0190d3c7"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": false,
+      "storage": "numpy",
+      "pixels": "uint8",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ]
+        },
+        "body_hash": "41745e869af605f6005811dd6a627e2732b260d80614880b41bd25bc69576582",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "66f952a83339274eb287b64ef7b028d88915ac6df06a183f7c0436fa2b25107b"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "list",
+      "pixels": "float",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            },
+            "latent": {
+              "start_step": 1
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "latent": {
+            "spec": {
+              "start_step": 1
+            },
+            "artifact_id": null,
+            "sigmas_request": [
+              1,
+              0.9,
+              0.5,
+              0
+            ]
+          }
+        },
+        "body_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "ac75182d87e600967bed3e4440c0eea03c0f8022eb447d4651d5cfca0190d3c7"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "list",
+      "pixels": "uint8",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            },
+            "latent": {
+              "start_step": 1
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "latent": {
+            "spec": {
+              "start_step": 1
+            },
+            "artifact_id": null,
+            "sigmas_request": [
+              1,
+              0.9,
+              0.5,
+              0
+            ]
+          }
+        },
+        "body_hash": "41745e869af605f6005811dd6a627e2732b260d80614880b41bd25bc69576582",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "66f952a83339274eb287b64ef7b028d88915ac6df06a183f7c0436fa2b25107b"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "numpy",
+      "pixels": "float",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            },
+            "latent": {
+              "start_step": 1
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "latent": {
+            "spec": {
+              "start_step": 1
+            },
+            "artifact_id": null,
+            "sigmas_request": [
+              1,
+              0.9,
+              0.5,
+              0
+            ]
+          }
+        },
+        "body_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "ac75182d87e600967bed3e4440c0eea03c0f8022eb447d4651d5cfca0190d3c7"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "numpy",
+      "pixels": "uint8",
+      "parity": true,
+      "evidence": {
+        "side": {
+          "prompt": "synthetic CPU test",
+          "negative_prompt": "synthetic-negative",
+          "size": "6x4",
+          "num_frames": 2,
+          "fps": 24.0,
+          "num_inference_steps": 3,
+          "guidance_scale": 6.0,
+          "flow_shift": 10.0,
+          "seed": 123,
+          "negative_metadata_mode": "inverse",
+          "extra_params": {
+            "client": "acceptance-A",
+            "crf": 7,
+            "noise": {
+              "device": "cpu"
+            },
+            "latent": {
+              "start_step": 1
+            }
+          },
+          "has_action": false,
+          "input_image": null,
+          "frames_out": 2,
+          "out_hw": [
+            4,
+            6
+          ],
+          "seconds": 0.0,
+          "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, safety check off)",
+          "scheduler": "UniPCMultistepScheduler",
+          "torch": "CPU-FAKE",
+          "server": "raj-1 server.py",
+          "server_rev": {
+            "fixture": "same"
+          },
+          "sigmas_used": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "latent": {
+            "spec": {
+              "start_step": 1
+            },
+            "artifact_id": null,
+            "sigmas_request": [
+              1,
+              0.9,
+              0.5,
+              0
+            ]
+          }
+        },
+        "body_hash": "41745e869af605f6005811dd6a627e2732b260d80614880b41bd25bc69576582",
+        "headers": {
+          "X-Seconds": "0.0",
+          "X-Clip-Id": "FIXED_0001_acceptance-A"
+        },
+        "trace": [
+          "new-scheduler",
+          "new-scheduler",
+          "context-enter",
+          "context-enter",
+          "context-enter",
+          {
+            "pipeline": {
+              "prompt": "synthetic CPU test",
+              "num_inference_steps": 3,
+              "guidance_scale": 6.0,
+              "fps": 24.0,
+              "enable_safety_check": false,
+              "output_type": "np",
+              "negative_prompt": "synthetic-negative",
+              "num_frames": 2,
+              "height": 4,
+              "width": 6,
+              "generator": {
+                "cpu_seed": 123
+              }
+            }
+          },
+          "context-exit",
+          "context-exit",
+          "context-exit",
+          {
+            "encode": {
+              "fps": 24.0,
+              "crf": 7,
+              "pixels": "66f952a83339274eb287b64ef7b028d88915ac6df06a183f7c0436fa2b25107b"
+            }
+          }
+        ],
+        "state": {
+          "waiting": 0,
+          "busy": false,
+          "served": 1
+        }
+      }
+    }
+  ],
+  "mutation_cases": [
+    {
+      "latent": false,
+      "storage": "list",
+      "mutation": "in-place",
+      "versions": {
+        "before": {
+          "recorded": [
+            7.12346,
+            8.65432
+          ],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": false,
+      "storage": "list",
+      "mutation": "delete-attribute",
+      "versions": {
+        "before": {
+          "recorded": [],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": false,
+      "storage": "numpy",
+      "mutation": "in-place",
+      "versions": {
+        "before": {
+          "recorded": [
+            9.87654,
+            9.87654,
+            9.87654,
+            9.87654
+          ],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": false,
+      "storage": "numpy",
+      "mutation": "delete-attribute",
+      "versions": {
+        "before": {
+          "recorded": [],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "expected": [
+            1.0,
+            0.75,
+            0.25,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "list",
+      "mutation": "in-place",
+      "versions": {
+        "before": {
+          "recorded": [
+            7.12346,
+            8.65432
+          ],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "list",
+      "mutation": "delete-attribute",
+      "versions": {
+        "before": {
+          "recorded": [],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "numpy",
+      "mutation": "in-place",
+      "versions": {
+        "before": {
+          "recorded": [
+            9.87654,
+            9.87654,
+            9.87654
+          ],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    },
+    {
+      "latent": true,
+      "storage": "numpy",
+      "mutation": "delete-attribute",
+      "versions": {
+        "before": {
+          "recorded": [],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": false,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        },
+        "after": {
+          "recorded": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "expected": [
+            0.9,
+            0.5,
+            0.0
+          ],
+          "own_schedule_retained": true,
+          "response_hash": "0e914d8de93f64f98046b835ebb4064f17ede8dea2fbe6da5baee7820f9982d9"
+        }
+      }
+    }
+  ],
+  "pipeline_failures": [
+    {
+      "version": "before",
+      "latent": false,
+      "cleanup_and_recovery": true
+    },
+    {
+      "version": "after",
+      "latent": false,
+      "cleanup_and_recovery": true
+    },
+    {
+      "version": "before",
+      "latent": true,
+      "cleanup_and_recovery": true
+    },
+    {
+      "version": "after",
+      "latent": true,
+      "cleanup_and_recovery": true
+    }
+  ],
+  "assertions": 292,
+  "passed": 292,
+  "checks": [
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "pipeline error HTTP500 preserved",
+      "pass": true
+    },
+    {
+      "name": "failed inference writes no sidecar or bytes",
+      "pass": true
+    },
+    {
+      "name": "failed inference releases hooks/LOCK/state",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "next request recovers with own receipt",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "pipeline error HTTP500 preserved",
+      "pass": true
+    },
+    {
+      "name": "failed inference writes no sidecar or bytes",
+      "pass": true
+    },
+    {
+      "name": "failed inference releases hooks/LOCK/state",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "next request recovers with own receipt",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "serial suffix exact",
+      "pass": true
+    },
+    {
+      "name": "serial response equals written synthetic bytes",
+      "pass": true
+    },
+    {
+      "name": "full serial sidecar/response/call/encoder parity",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "A reached encode",
+      "pass": true
+    },
+    {
+      "name": "request exits without thread leak",
+      "pass": true
+    },
+    {
+      "name": "request has no error",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "patched isolation / baseline negative control",
+      "pass": true
+    },
+    {
+      "name": "post mutation lock/state cleanup",
+      "pass": true
+    },
+    {
+      "name": "mutation leaves synthetic response bytes identical",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "pipeline error HTTP500 preserved",
+      "pass": true
+    },
+    {
+      "name": "failed inference writes no sidecar or bytes",
+      "pass": true
+    },
+    {
+      "name": "failed inference releases hooks/LOCK/state",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "next request recovers with own receipt",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "pipeline error HTTP500 preserved",
+      "pass": true
+    },
+    {
+      "name": "failed inference writes no sidecar or bytes",
+      "pass": true
+    },
+    {
+      "name": "failed inference releases hooks/LOCK/state",
+      "pass": true
+    },
+    {
+      "name": "pipeline holds LOCK",
+      "pass": true
+    },
+    {
+      "name": "encoder outside LOCK",
+      "pass": true
+    },
+    {
+      "name": "hooks removed before encoding",
+      "pass": true
+    },
+    {
+      "name": "exactly one sidecar",
+      "pass": true
+    },
+    {
+      "name": "next request recovers with own receipt",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Model/scheduler/latent/codec dependencies injected; sync body otherwise unchanged",
+    "No HTTP/ASGI, torch, CUDA, actual MP4 encoding, deployment, or native sampling tested",
+    "Does not explain or repair historical receipts;303 remains2/4 suffix consistency",
+    "No277 adoption, reader289 PASS, physics improvement, or NVIDIA result"
+  ]
+}
