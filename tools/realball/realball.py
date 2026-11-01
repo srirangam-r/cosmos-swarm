@@ -13,7 +13,7 @@ Usage:
 import sys, json, argparse, numpy as np, cv2
 sys.path.insert(0, __file__.rsplit('/', 1)[0] + '/../trk_ballfall')
 import trk, measure_ball as mb
-VERSION = 'realball v1 (dedup + hinge onset + free-v0 quad from onset+1)'
+VERSION = 'realball v1.1 (dedup + motion-prior hinge onset + free-v0 quad from onset+1)'
 
 def dedup(F, rel=0.1):
     """Indices to keep. Drops exact repeats only if they recur with a fixed period (frame-rate conversion)."""
@@ -28,15 +28,18 @@ def dedup(F, rel=0.1):
     if not periodic: return list(range(len(F))), 0
     s = set(dup.tolist()); return [i for i in range(len(F)) if i not in s], P
 
-def measure(F, fps, mpp=None, diam=None, skip=1, nboot=200, seed=0, no_dedup=False):
+def measure(F, fps, mpp=None, diam=None, skip=1, nboot=200, seed=0, no_dedup=False, move_px=4.0):
     keep, P = (list(range(len(F))), 0) if no_dedup else dedup(F)
     fps_true = fps * len(keep) / len(F)
     B = trk.blobs(F[keep], mode='ball'); ok = np.array([i for i, b in enumerate(B) if b])
     t = ok / fps_true; y = np.array([B[i][1] for i in ok]); minor = np.array([B[i][4] for i in ok])
     s0 = mpp if mpp else diam / np.median(minor)                     # provisional scale for impact detection / fit units
     Y = y * s0
-    k = mb.first_impact(Y, 0.006 if diam else 2 * s0)
-    n = max(k - 1, 5); p = mb.fit_hinge(t[:n], Y[:n]); t0 = p[2]
+    # motion prior (v1.1): first frame >= move_px below the initial position; ignore hold-phase jitter before it
+    r = int(np.argmax(y > np.median(y[:3]) + move_px)) if np.any(y > np.median(y[:3]) + move_px) else 0
+    a0 = max(r - 6, 0)
+    k = a0 + mb.first_impact(Y[a0:], 0.006 if diam else 2 * s0)
+    n = max(k - 1, a0 + 5); p = mb.fit_hinge(t[a0:n], Y[a0:n]); t0 = p[2]
     j0 = int(np.searchsorted(t, t0)) + skip
     if n - j0 < 4: j0 = max(n - 4, 0)
     if not mpp:                                                     # free-ball scale: post-onset, pre-impact blobs
@@ -59,7 +62,7 @@ def measure(F, fps, mpp=None, diam=None, skip=1, nboot=200, seed=0, no_dedup=Fal
                 if h0 > 0 and hr > 0: e = float(np.sqrt(hr / h0))
     return dict(g=float(2 * c[0]), g_ci95=[float(np.percentile(gs, 2.5)), float(np.percentile(gs, 97.5))], g_sd=float(np.std(gs)),
                 r2=float(r2), rms_m=float(res.std()), t0=float(t0), fit_frames=[int(ok[j0]), int(ok[n - 1])], n_fit=int(n - j0),
-                impact_frame=int(ok[k]), g_hinge_v0=float(p[1]) * (s / s0), e=e, m_per_px=float(s), dup_period=P,
+                impact_frame=int(ok[k]), motion_frame=int(ok[r]), g_hinge_v0=float(p[1]) * (s / s0), e=e, m_per_px=float(s), dup_period=P,
                 fps_true=float(fps_true), method=VERSION)
 
 if __name__ == '__main__':
