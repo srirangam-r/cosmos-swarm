@@ -20,3 +20,24 @@ Validation:
 Caveats:
 - On real footage the blob size is a biased scale (+32 to +38% in g). Use a calibrated --mpp.
 - Static camera only. The tracker is a thresholded diff, not SAM.
+
+## firstfall.py (v1): first fall of ONE seeded ball, for Cosmos clips with a moving scene
+Why: trk.blobs (used by realball and measure_ball v5) takes the largest change blob. On Cosmos GAUGE clips that is
+often the retracting gripper or the tilting plank, so both tools fit the wrong object (task 9 first clip).
+```
+python3 -I firstfall.py clip.mp4 --fps 24 --ppm 539.8 --point x,y [--pframe N] [--tmax N] [--qc qc.png]
+python3 -I firstfall.py --planted planted.json clip_dir out.json
+```
+- Tracker: you seed a point on the ball at frame --pframe (default: the trk.blobs centroid). The seed colour is the median Lab of a 5x5 patch.
+  A pixel is a candidate if its colour matches (Lab distance < 25) AND it differs by > 30 from frame 0 or from the last window frame.
+  A static dark curtain fails the change test, and a light gripper or plank fails the colour test.
+  Each frame keeps the component nearest the constant-velocity prediction. Scale (--diam only) is the minor side of the uncoloured change blob that contains the ball.
+- Fit: the realball v1.1 recipe, unchanged. Flag as v5: ok needs dAIC > 10, R² > 0.98 and n ≥ 5.
+- Extra readouts: fall_time_s, fall_px/fall_m, g_from_h_T = 2h/T², and d_growth (size at impact / at fit start).
+- --tmax: for Cosmos clips that reset after impact, cut the window a few frames after first contact. The last window frame is a reference background, so g depends on it.
+  On task-9 clip 1 it gave 3.39 [2.90, 3.88] with tmax=16 and 2.75 [1.77, 3.66] with no tmax. Report both.
+- Planted: referee PASS 20/20 within 10%, with g 8/8 and e 4/4 < 5% (ff_referee_v1.json, ff_planted_estimates_v1.json; sha256 c7a1033f616c).
+  g/e are within 3% of realball v1.1 on every clip. period/a use the trk_ballfall v3 code. The d_growth addition leaves the planted estimates byte-identical.
+- Real footage: see work/raj-2/task9_duration/firstfall/firstfall_gauge_real.json (GAUGE real drops at Cosmos resolution, 539.8 px/m, vs mocap).
+- Known failure: a black ball in front of the black curtain shows no change against the background, so the track is lost.
+  Example: raj-1's spawned big ball, lost at frame 29. Use samball (SAM2.1) for those clips.
