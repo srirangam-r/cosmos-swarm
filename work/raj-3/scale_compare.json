@@ -1,0 +1,66 @@
+[
+ {
+  "clip": "planted-01",
+  "d_minor": 22.0,
+  "d_area_top3": 23.883285285767386,
+  "d_area_med": 23.722813466638858,
+  "d_major": 23.0,
+  "d_f0minor": 22.0
+ },
+ {
+  "clip": "planted-03",
+  "d_minor": 22.0,
+  "d_area_top3": 23.85661494212072,
+  "d_area_med": 23.534213434057992,
+  "d_major": 23.0,
+  "d_f0minor": 22.0
+ },
+ {
+  "clip": "planted-04",
+  "d_minor": 22.0,
+  "d_area_top3": 23.883285285767386,
+  "d_area_med": 23.615226456547084,
+  "d_major": 23.0,
+  "d_f0minor": 22.62741470336914
+ },
+ {
+  "clip": "planted-06",
+  "d_minor": 22.62741470336914,
+  "d_area_top3": 24.016192740836935,
+  "d_area_med": 23.789808272341748,
+  "d_major": 23.0,
+  "d_f0minor": 23.0
+ },
+ {
+  "clip": "planted-08",
+  "d_minor": 23.0,
+  "d_area_top3": 23.89660929533143,
+  "d_area_med": 23.66908109081279,
+  "d_major": 23.0,
+  "d_f0minor": 23.0
+ },
+ {
+  "clip": "planted-12",
+  "d_minor": 22.62741470336914,
+  "d_area_top3": 23.949831208240088,
+  "d_area_med": 23.74963406702674,
+  "d_major": 23.33452033996582,
+  "d_f0minor": 22.62741470336914
+ },
+ {
+  "clip": "planted-14",
+  "d_minor": 22.0,
+  "d_area_top3": 23.452920571340155,
+  "d_area_med": 23.26213245840639,
+  "d_major": 23.0,
+  "d_f0minor": 21.0
+ },
+ {
+  "clip": "planted-15",
+  "d_minor": 22.903944969177246,
+  "d_area_top3": 24.02944305508133,
+  "d_area_med": 23.85661494212072,
+  "d_major": 23.0,
+  "d_f0minor": 22.0
+ }
+]
