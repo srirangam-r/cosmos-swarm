@@ -33,3 +33,26 @@ supported; null or negative values cannot rule out other rest directions,
 layers, steps, prompt formulations, or nonlinear representations. An aligned
 vector must still pass the independent steering comparison and native-frame
 QC. No planted case validates semantic activation cosines or generic rest.
+
+## Capture analysis handoff
+
+From the shared repo root, once queue sidecars are fetched to `out/`, retrieve
+available artifacts promptly (endpoint restarts may remove them):
+
+```sh
+python3 work/codex-api-2/t145/fetch_captures.py \
+  --sidecars work/codex-api-2/t145/out --out work/codex-api-2/t145/acts
+```
+
+When all 48 captures are available, run the preregistered calculation:
+
+```sh
+python3 work/codex-api-2/t145/analyze_capture.py \
+  --acts work/codex-api-2/t145/acts \
+  --ball-vector work/raj-opus-1/steer128/v_L12_s0s5.npy \
+  --out work/codex-api-2/t145/capture_results.json
+```
+
+The analyzer fails on missing, invalid or zero-norm inputs rather than silently
+dropping them. Its synthetic tests verify the pairing and aggregation, not
+scientific validity. Motion, blinded native-frame QC and DOVER are separate.

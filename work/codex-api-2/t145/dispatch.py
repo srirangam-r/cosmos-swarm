@@ -59,7 +59,7 @@ def dispatch(jobs, expected):
     for job in jobs:
         while job["name"] not in known:
             if time.monotonic() > deadline:
-                raise TimeoutError("One-hour dispatch deadline exceeded")
+                raise TimeoutError("Three-hour dispatch deadline exceeded")
             body = {"owner": OWNER, "name": job["name"], "prompt": job["prompt"], "endpoints": ENDPOINTS}
             body.update({key: job[key] for key in PARAMS if key in job})
             try:
