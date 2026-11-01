@@ -1,0 +1,212 @@
+{
+ "F0": {
+  "subjects": [
+   {
+    "description": "A 121 g solid black ball, 6 cm in diameter, held in the open-able two-finger gripper of a white Franka robot arm, high above a light wooden plank",
+    "appearance_details": "Matte black sphere",
+    "relationship": "The ball is dropped onto the wooden plank below it",
+    "location": "Upper left of frame, in the robot gripper",
+    "relative_size": "Small within frame",
+    "orientation": "",
+    "pose": "",
+    "action": "Released, falls, then bounces on the plank",
+    "state_changes": "Free fall, then successive bounces with diminishing peak heights, then at rest on the plank",
+    "clothing": "",
+    "expression": "",
+    "gender": "",
+    "age": "",
+    "skin_tone_and_texture": "",
+    "facial_features": "",
+    "number_of_subjects": 1,
+    "number_of_arms": 0,
+    "number_of_legs": 0
+   },
+   {
+    "description": "A white Franka robot arm with a two-finger gripper mounted on the table",
+    "appearance_details": "White links, black joints, green status light at the base",
+    "relationship": "Holds and releases the ball",
+    "location": "Upper center of frame",
+    "relative_size": "Large within frame",
+    "orientation": "",
+    "pose": "",
+    "action": "Stays still except for the gripper fingers opening to release the ball",
+    "state_changes": "Gripper opens",
+    "clothing": "",
+    "expression": "",
+    "gender": "",
+    "age": "",
+    "skin_tone_and_texture": "",
+    "facial_features": "",
+    "number_of_subjects": 1,
+    "number_of_arms": 1,
+    "number_of_legs": 0
+   }
+  ],
+  "background_setting": "A robotics lab: a black perforated optical breadboard on a wooden table, a light wooden plank fixed on the breadboard, black curtains behind. Coefficient of friction 0.81; coefficient of restitution 0.58.",
+  "lighting": {
+   "conditions": "Indoor artificial lighting",
+   "direction": "Overhead",
+   "shadows": "Soft",
+   "illumination_effect": "Even, clear visibility"
+  },
+  "aesthetics": {
+   "composition": "Static frontal view of the robot, ball and plank",
+   "color_scheme": "Black, white and light wood",
+   "mood_atmosphere": "Clinical lab experiment",
+   "patterns": "Regular hole grid of the optical breadboard"
+  },
+  "cinematography": {
+   "camera_motion": "Static camera, no motion",
+   "framing": "Static frontal camera view, wide shot",
+   "camera_angle": "Eye-level",
+   "depth_of_field": "Deep",
+   "focus": "Sharp on the ball and plank",
+   "lens_focal_length": "Standard"
+  },
+  "style_medium": "Live-action video",
+  "artistic_style": "Realistic lab footage",
+  "context": "A physics experiment: a ball is dropped onto a plank and bounces. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "actions": [
+   {
+    "time": "0:00-0:07",
+    "description": "When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank."
+   }
+  ],
+  "text_and_signage_elements": [],
+  "segments": [
+   {
+    "segment_index": 0,
+    "time_range": "0:00-0:07",
+    "description": "When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank.",
+    "key_changes": "Ball falls and bounces",
+    "camera": "Static"
+   }
+  ],
+  "transitions": [],
+  "temporal_caption": "The black ball is suspended high above the wooden plank in the robot gripper. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank.",
+  "audio_description": "",
+  "resolution": {
+   "W": 832,
+   "H": 480
+  },
+  "aspect_ratio": "16,9",
+  "duration": "7s",
+  "fps": 24
+ },
+ "F1": {
+  "subjects": [
+   {
+    "description": "A 121 g solid black ball, 6 cm in diameter, held in the open-able two-finger gripper of a white Franka robot arm, high above a light wooden plank",
+    "appearance_details": "Matte black sphere",
+    "relationship": "The ball is dropped onto the wooden plank below it",
+    "location": "Upper left of frame, in the robot gripper",
+    "relative_size": "Small within frame",
+    "orientation": "",
+    "pose": "",
+    "action": "Released at about 0:01, drops about 40 cm in real-time free fall and hits the plank about 0.3 seconds later, bounces a few times quickly",
+    "state_changes": "Held still, then a fast real-speed free fall (about 0.3 s), quick bounces with diminishing heights (first rebound about 14 cm), at rest on the plank by 0:02",
+    "clothing": "",
+    "expression": "",
+    "gender": "",
+    "age": "",
+    "skin_tone_and_texture": "",
+    "facial_features": "",
+    "number_of_subjects": 1,
+    "number_of_arms": 0,
+    "number_of_legs": 0
+   },
+   {
+    "description": "A white Franka robot arm with a two-finger gripper mounted on the table",
+    "appearance_details": "White links, black joints, green status light at the base",
+    "relationship": "Holds and releases the ball",
+    "location": "Upper center of frame",
+    "relative_size": "Large within frame",
+    "orientation": "",
+    "pose": "",
+    "action": "Stays still except for the gripper fingers opening to release the ball",
+    "state_changes": "Gripper opens",
+    "clothing": "",
+    "expression": "",
+    "gender": "",
+    "age": "",
+    "skin_tone_and_texture": "",
+    "facial_features": "",
+    "number_of_subjects": 1,
+    "number_of_arms": 1,
+    "number_of_legs": 0
+   }
+  ],
+  "background_setting": "A robotics lab: a black perforated optical breadboard on a wooden table, a light wooden plank fixed on the breadboard, black curtains behind. Coefficient of friction 0.81; coefficient of restitution 0.58.",
+  "lighting": {
+   "conditions": "Indoor artificial lighting",
+   "direction": "Overhead",
+   "shadows": "Soft",
+   "illumination_effect": "Even, clear visibility"
+  },
+  "aesthetics": {
+   "composition": "Static frontal view of the robot, ball and plank",
+   "color_scheme": "Black, white and light wood",
+   "mood_atmosphere": "Clinical lab experiment",
+   "patterns": "Regular hole grid of the optical breadboard"
+  },
+  "cinematography": {
+   "camera_motion": "Static camera, no motion",
+   "framing": "Static frontal camera view, wide shot",
+   "camera_angle": "Eye-level",
+   "depth_of_field": "Deep",
+   "focus": "Sharp on the ball and plank",
+   "lens_focal_length": "Standard"
+  },
+  "style_medium": "Live-action video",
+  "artistic_style": "Realistic lab footage",
+  "context": "A physics experiment: a ball is dropped onto a plank and bounces. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "actions": [
+   {
+    "time": "0:00-0:01",
+    "description": "The robot gripper holds the black ball still high above the plank, then its fingers open."
+   },
+   {
+    "time": "0:01-0:02",
+    "description": "The ball drops straight down at real speed under gravity, falling about 40 cm and hitting the plank in about 0.3 seconds, then bounces several quick times with rapidly diminishing heights and comes to rest on the plank."
+   },
+   {
+    "time": "0:02-0:07",
+    "description": "The ball lies motionless on the plank; the robot arm stays still. Nothing else moves."
+   }
+  ],
+  "text_and_signage_elements": [],
+  "segments": [
+   {
+    "segment_index": 0,
+    "time_range": "0:00-0:01",
+    "description": "The ball is held still in the gripper above the plank; the gripper opens.",
+    "key_changes": "Gripper opens",
+    "camera": "Static"
+   },
+   {
+    "segment_index": 1,
+    "time_range": "0:01-0:02",
+    "description": "Real-time free fall: the ball accelerates downward under gravity, hits the plank within about a third of a second, rebounds to about a third of its drop height, then bounces lower and faster until it settles.",
+    "key_changes": "Fast fall, impact, quick diminishing bounces",
+    "camera": "Static"
+   },
+   {
+    "segment_index": 2,
+    "time_range": "0:02-0:07",
+    "description": "The ball rests on the plank without moving.",
+    "key_changes": "None",
+    "camera": "Static"
+   }
+  ],
+  "transitions": [],
+  "temporal_caption": "The black ball is held still in the robot gripper high above the wooden plank. At about one second, the gripper opens and the ball drops straight down at real speed under gravity, falling about 40 centimeters and striking the plank roughly 0.3 seconds after release. It rebounds to about 14 centimeters, then bounces several more times, each bounce lower and quicker, and settles on the plank before the two-second mark. For the rest of the video the ball lies motionless on the plank and nothing else moves.",
+  "audio_description": "",
+  "resolution": {
+   "W": 832,
+   "H": 480
+  },
+  "aspect_ratio": "16,9",
+  "duration": "7s",
+  "fps": 24
+ }
+}
