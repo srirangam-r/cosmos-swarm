@@ -46,7 +46,7 @@ The master table below contrasts the unmodified stock Cosmos3-Nano baseline agai
 | **Time to Complete Rest** | $\text{s}$ | Never settles | $43/84$ at rest by f92 (blind pooled #2211) | $>7.9$ (Standard F) | $1.40\text{--}2.60$ | $0.15$ | DiT prior bottleneck under standard prompt |
 | **Serial Clip Chaining Settling** | $\%$ | Never settles ($0/2$) | Not run | **$0/2$ settled** (seam stagnation refuted as tracker bug #2493) | $100\%$ | $0.0\%$ | Limit cycle persists across still-frame restarts |
 | **Temporal RoPE fast05 Damping** | score | Perpetual bounce | Not run | **$0\%$ damping** (tether re-lift #2419; DOVER $\Delta -0.025$ #2396) | Settles | $0.004$ | Margin inconclusive vs proposed $\delta=0.020$ |
-| **Prompt-Timed Bounce Settling (QT)** | $\text{px/f}$ | $3.43 \pm 0.13$ (continuous bounce) | Not run | **$1.18 \pm 0.17$** ($\Delta -2.24 \pm 0.24, p=3.3\times 10^{-5}$) | $0.47$ (Real settled) | $0.24$ | **8/8 pairs lower; settles on plank at f42–f63 (~1.5 s); DOVER Fused $+0.0068 \pm 0.0033$ (PASS)** |
+| **Prompt-Timed Bounce Settling (QT)** | $\text{px/f}$ | $3.43 \pm 0.13$ (continuous bounce) | Not run | **$1.18 \pm 0.17$** ($\Delta -2.24 \pm 0.24, p=3.3\times 10^{-5}$) | $0.47$ (Real settled) | $0.24$ | **8/8 pairs lower; settles on plank at f42–f63 (~1.5 s); pooled 17/20 ($85\%$) settle vs 0/20 base (#2720, #2726); DOVER Fused $+0.0068 \pm 0.0033$ (PASS)** |
 | **II. NVIDIA SCOREBOARD (4 PILLARS)** | | | | | | | |
 | **Pillar 1: DOVER Technical** | score | $-0.0407 \pm 0.0013$ | Arm A: $\Delta -0.0129 \pm 0.0041$ / Arm C: $\Delta -0.005$ | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0012 \pm 0.0009$ (n.s., $p=0.232$)** |
 | **Pillar 1: DOVER Fused** | score | $0.5645 \pm 0.0069$ | Arm A: $\Delta -0.0767 \pm 0.0211$ (**REGRESSION**) / Arm C: $\Delta -0.0482$ | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0114 \pm 0.0060$ (corrected)** |
@@ -241,6 +241,19 @@ Evaluated across $n=8$ matched pairs (GAUGE Ball 1 and Ball 2 across seeds 1–5
    - Stillness control sentence (`QS`: "The camera and the table stay still for the rest of the video") fails to stop bouncing on Seeds 3 & 4 (last20: 3.124 and 2.735 vs F 3.326 and 3.132; late tile variance 171.06 and 74.74).
    - Stated restitution numbers (`R20/R95`, #2260; $e=0.20$ vs $0.95$) fail ($e_T \approx 1.0$).
    - Settling is uniquely steered by explicit event-count and terminal-state timing text.
+5. **Direct Recipe-Prompt Evaluation (v7 RECT vs REC, ro-1 Finding #2720, commit `3492d86`)**:
+   - Testing the clause directly on top of Deliverable 1's recipe prompt (`tools/recipe DEFAULT_PROMPT`) across $n=6$ clips (2 inputs $\times$ seeds 1–3) confirms that the ball settles in **5/6 ($83.3\%$) RECT clips vs 0/6 ($0.0\%$) REC clips**.
+   - Gross visual artifacts collapse from **4/6 to 0/6** (REC spawned duplicate balls, giant spheres with floating debris, or morphing boxes; RECT generated none).
+   - Late corridor motion collapses by **$\Delta = -6.24 \pm 2.11$** ($6/6$ lower; REC $7.23 \to$ RECT $0.99$, real reference $0.75$).
+   - DOVER Fused is flat ($\Delta = -0.004 \pm 0.007$, CI90 $[-0.018, +0.011]$, well within proposed $0.020$ margin).
+   - Normalized Dynamic Degree drops by $\Delta = -2.30 \pm 1.19$ ($6/6$ lower; Ball 1 $|DD - \text{real}|$ drops to $0.47/2.06/0.10$).
+6. **Independent Blind Replication (rog1 Review #2726, commit `5f7d2f6`)**:
+   - Pre-registered blind visual re-code of fresh mid-fall inputs (ball1 dd35, ball2 dd33) at seeds 21–23 confirms settling in **4/6 QT vs 0/6 F** ($p=0.03$), with late motion proxy dropping by $-691 \pm 334\text{ px}$ ($5/6$ lower).
+   - Across all cohorts (ro-1 GAUGE $8/8$, ro-1 recipe $5/6$, rog1 $4/6$), the timed clause settles **17/20 ($85.0\%$) clips vs 0/20 ($0.0\%$) without** across 4 distinct inputs and 3 independent endpoint stacks.
+7. **Window-Partitioned HUE Plausibility Audit & Ground-Truth Distance Error (Findings #2577, #2668, Review #2731)**:
+   - Early window ($f0\text{--}35$, airborne bouncing): plausibility is identical between QT and base F ($\Delta = -0.015 \pm 0.010, p=0.177$).
+   - Late window ($f46\text{--}92$, resting tail): real GAUGE continuation video drops along with QT ($0.531$ real vs $0.515$ QT vs $0.616$ base F).
+   - Distance-to-real ground truth error ($|\text{Score}_{\text{gen}} - \text{Score}_{\text{real}}|$): QT is **5.1x closer to real video overall** ($0.017$ vs $0.085$), **1.5x closer on Physical Laws** ($0.048$ vs $0.072$), **5.5x closer on gripper holding questions (Q1)** ($0.108$ vs $0.601$), and **3.4x closer on diminishing bounces (Q6)** ($0.014$ vs $0.049$; base F scores 0.916 despite never settling).
 
 ### 2.8 Why Contact Transitions Fail: Architectural Synthesis on the DiT/VAE Temporal Manifold (Human Steering #1950)
 
@@ -317,9 +330,9 @@ NVIDIA utilizes DOVER (Video Quality Assessment, val-l1080p) to screen pre-train
 5. **DOVER Scoreboard Comparison Across Alternative Proposed Fixes**:
    To place the recipe's DOVER performance into full context, the swarm evaluated all competing algorithmic and fine-tuning interventions on NVIDIA's DOVER metric:
    - *Synthetic SFT LoRA (Task 24, rog-cc #2168, #2201, #2350, commit `c78021f`, `final_table.py` commit `ca19c2b`)*: Arm A drops DOVER Fused by **$-0.0767 \pm 0.0211$** vs base (and **$-0.0821 \pm 0.0217$** vs same-box baseL), while Arm C drops by **$-0.0482 \pm 0.0204$** (and **$-0.0537 \pm 0.0220$** vs baseL), failing non-inferiority decisively across all arms.
-   - *Temporal RoPE Frequency Editing (Task 92, rog-cc Review #2396, commit `cc05328`)*: Halving the two fastest temporal RoPE frequencies ($j=0, 3$; fast05) drops DOVER Fused by **$-0.0250 \pm 0.0040$** (CI90 $[-0.033, -0.017]$, 6/6 pairs degraded), exceeding the proposed non-inferiority margin $\delta = 0.020$. Driven by Aesthetic DOVER: $\Delta = -0.0088 \pm 0.0014$.
+   - *Temporal RoPE Frequency Editing (Task 92, rog-cc Review #2396, commit `cc05328`)*: Halving the two fastest temporal RoPE frequencies ($j=0, 3$; fast05) drops DOVER Fused by **$-0.0250 \pm 0.0040$** (CI90 $[-0.033, -0.017]$, 6/6 pairs degraded; $\pm 0.0040$ is the SE of the paired difference), rendering the margin inconclusive vs the proposed non-inferiority bound $\delta = 0.020$ (upper bound $-0.017$ does not clear $-0.020$). Driven by Aesthetic DOVER: $\Delta = -0.0088 \pm 0.0014$.
    - *Spatial RoPE Frequency Scaling (Task 90, ro-agy1 Finding #2402, commit `ead77bf`)*: Early 0.7x spatial RoPE dilation yields DOVER Fused $\Delta = +0.0033 \pm 0.0154$ (n.s.), but completely fails release ($0/3$) while doubling spurious flow.
-   - *Serial-Event Clip Chaining (Task 42, agy-4 Finding #2407, commit `8780f81`)*: DOVER Fused $\Delta = +0.0028$ (0.5398 vs 0.5370), but fails to induce settling (0/2 settled) due to velocity stagnation at seams.
+   - *Serial-Event Clip Chaining (Task 42, agy-4 Finding #2407, commit `8780f81`)*: DOVER Fused $\Delta = +0.0028$ (0.5398 vs 0.5370), but fails to induce settling (0/2 settled; while 5-frame velocity stagnation was refuted as a tracker area-filter artifact by agy-2 #2493, the continuous bouncing limit cycle persists across restarts).
    - **Synthesis**: The Detached-State Recipe remains the only intervention that preserves technical video quality ($\Delta = +0.0038 \pm 0.0010$, statistically resolved gain) without triggering severe aesthetic collapse.
 
 ### 3.2 Pillar 2: Motion Fidelity & Dynamic Degree (VBench RAFT)

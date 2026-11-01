@@ -294,6 +294,36 @@ class TestRecipeRunner(unittest.TestCase):
             self.assertIn("bounces only twice with rapidly diminishing heights", sidecar["prompt"])
             self.assertIn("comes to rest on the plank within about one and a half seconds", sidecar["prompt"])
 
+    def test_settle_custom_prompt_substitution(self):
+        """--settle with custom prompt containing 'and bouncing in real time.' substitutes timing clause."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            input_img = Path(tmpdir) / "test_input.png"
+            cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_video = Path(tmpdir) / "out_settle_custom.mp4"
+            custom_prompt = "A red ball dropping from above and bouncing in real time."
+            args = [
+                "run_recipe.py",
+                "--image", str(input_img),
+                "--out", str(out_video),
+                "--dry-run",
+                "--settle",
+                "--prompt", custom_prompt,
+            ]
+
+            with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            sidecar_path = out_video.with_suffix(".json")
+            self.assertTrue(sidecar_path.exists())
+            with open(sidecar_path) as f:
+                sidecar = json.load(f)
+
+            self.assertTrue(sidecar["stage_2_dissipative_settle"])
+            self.assertIn("A red ball dropping from above", sidecar["prompt"])
+            self.assertIn("bounces only twice with rapidly diminishing heights", sidecar["prompt"])
+            self.assertIn("comes to rest on the plank within about one and a half seconds", sidecar["prompt"])
+            self.assertNotIn("and bouncing in real time.", sidecar["prompt"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

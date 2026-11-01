@@ -405,15 +405,15 @@ def main():
     # Load prompt if JSON file or basic prompt flag
     if args.basic_prompt:
         prompt_str = DEFAULT_PROMPT_BASIC
-    elif args.settle or args.prompt == DEFAULT_PROMPT or args.prompt == TIMED_DISSIPATIVE_PROMPT:
-        prompt_str = TIMED_DISSIPATIVE_PROMPT
-        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, Review #2553, #2606)")
     elif args.settle and "and bouncing in real time." in args.prompt:
         prompt_str = args.prompt.replace(
             "and bouncing in real time.",
             "bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video."
         )
         print("[prompt] Stage 2: Substituted dissipative timing clause into custom prompt (ro-1 #2460, #2606)")
+    elif args.settle or args.prompt == DEFAULT_PROMPT or args.prompt == TIMED_DISSIPATIVE_PROMPT:
+        prompt_str = TIMED_DISSIPATIVE_PROMPT
+        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, Review #2553, #2606)")
     else:
         prompt_str = args.prompt
     if prompt_str.endswith(".json") and os.path.exists(prompt_str):
