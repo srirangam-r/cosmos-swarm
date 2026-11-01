@@ -1,4 +1,7 @@
 jobs.jsonl
+controls.jsonl
 out/
 acts/
 *.log
+dispatch.lock
+__pycache__/

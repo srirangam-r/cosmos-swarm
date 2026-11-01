@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Resume task 145 without duplicating names when the shared queue owner cap fills."""
 
+import fcntl
 import json
 import sys
 import time
@@ -31,14 +32,30 @@ def queue_names():
 
 
 def main():
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: python dispatch.py /path/to/jobs.jsonl")
-    jobs = [json.loads(line) for line in Path(sys.argv[1]).read_text().splitlines() if line]
-    if len(jobs) != 84 or len({job["name"] for job in jobs}) != 84:
-        raise RuntimeError("Unexpected preregistered job matrix")
+    if len(sys.argv) != 3:
+        raise SystemExit("usage: python dispatch.py /path/to/jobs.jsonl /path/to/controls.jsonl")
+    jobs = [json.loads(line) for path in sys.argv[1:] for line in Path(path).read_text().splitlines() if line]
+    expected = {f"t145_{scene}_{arm}_s{seed}"
+                for scene in ("block", "top", "cart", "disc")
+                for arm in ("F", "S2", "Z2", "S4", "Z4", "N", "R", "M", "N2")
+                for seed in (4, 5, 6)}
+    if len(jobs) != len(expected) or {job["name"] for job in jobs} != expected:
+        raise RuntimeError("Unexpected preregistered job matrix or duplicate names")
+    lock_path = Path(__file__).with_name("dispatch.lock")
+    with lock_path.open("w") as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as error:
+            raise RuntimeError("Another task-145 dispatcher already holds the lock") from error
+        dispatch(jobs, expected)
+
+
+def dispatch(jobs, expected):
     known = queue_names()
-    print(f"Already queued: {len(known)} / 84", flush=True)
-    deadline = time.monotonic() + 3600
+    if not known <= expected:
+        raise RuntimeError(f"Unexpected existing task-145 names: {sorted(known - expected)}")
+    print(f"Already queued: {len(known)} / {len(expected)}", flush=True)
+    deadline = time.monotonic() + 3 * 3600
     for job in jobs:
         while job["name"] not in known:
             if time.monotonic() > deadline:
@@ -61,7 +78,7 @@ def main():
                 continue
             known.add(job["name"])
             print(f"{result['id']} {job['name']}", flush=True)
-    print(f"Dispatch complete: {len(known)} / 84 unique task-145 names", flush=True)
+    print(f"Dispatch complete: {len(known)} / {len(expected)} unique task-145 names", flush=True)
 
 
 if __name__ == "__main__":
