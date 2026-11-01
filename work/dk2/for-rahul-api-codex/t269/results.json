@@ -1,0 +1,27 @@
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+{
+ "energy_rel_err_phase": 8.881784197001252e-16,
+ "energy_rel_err_control": 8.881784197001252e-16,
+ "parseval_full_fft": 6.661338147750939e-16,
+ "phase_vs_control_mag_diff": 2.6645352591003757e-15,
+ "alpha0_identity": 0.0,
+ "magnitude_vs_fullfft_expectation": 2.220446049250313e-15,
+ "lowband_phase_err_vs_donor": 6.155834254665468e-13,
+ "highband_phase_err_vs_noise": 6.615493850172544e-14,
+ "self_gamma1_identity": 2.220446049250313e-15,
+ "bcthw_vs_cthw": 0.0,
+ "float32_energy_rel_err": 1.4098561673669963e-07,
+ "float32_vs_float64_maxabs": 5.814204220300212e-07,
+ "float32_dtype_preserved": "torch.float32",
+ "fixture_T24_energy_before": 13.5,
+ "fixture_T24_energy_after": 13.500000000000007,
+ "nano_shape_energy_rel_err": 7.463422457831825e-08,
+ "nano_shape_out_std": 1.0002347230911255,
+ "nano_shape_out_mean": 0.005155869759619236,
+ "nano_shape_per_frame_std_min_max": [
+  0.9966779947280884,
+  1.0042579174041748
+ ],
+ "dc_sign_follows_donor": true,
+ "torch": "2.15.0+cpu"
+}
