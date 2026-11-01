@@ -1,0 +1,38 @@
+{
+ "arms": {
+  "base": {
+   "n_clips": 32,
+   "n_prompts_both_seeds": 16,
+   "overall": 0.7062843291312642,
+   "Physical Laws": 0.5863131515742723,
+   "Visual Integrity": 0.6791369580586131,
+   "Geometric Reasoning": 0.6778074506670236,
+   "Semantic Alignment": 0.8786965018080082
+  }
+ },
+ "seed_noise": {
+  "base": {
+   "overall": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.02456353445470536
+   },
+   "Physical Laws": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.030982656388194724
+   },
+   "Visual Integrity": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.013236207998694495
+   },
+   "Geometric Reasoning": {
+    "n_pairs": 15,
+    "per_clip_seed_sd": 0.041955290300344374
+   },
+   "Semantic Alignment": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.05790195821899385
+   }
+  }
+ },
+ "paired_vs_base": {}
+}
