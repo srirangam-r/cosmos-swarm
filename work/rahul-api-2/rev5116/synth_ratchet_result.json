@@ -1,0 +1,53 @@
+{
+ "static": {
+  "true_diameter": 46,
+  "true_growth": 1.0,
+  "d_f0": 48.0,
+  "d_end": 48.0,
+  "growth": 1.0,
+  "d_at": [
+   48.0,
+   48.0,
+   48.0,
+   48.0,
+   48.0,
+   48.0,
+   48.0
+  ],
+  "n_frames_diameter_decreased": 0
+ },
+ "fall_bounce": {
+  "true_diameter": 46,
+  "true_growth": 1.0,
+  "d_f0": 48.0,
+  "d_end": 48.0,
+  "growth": 1.0,
+  "d_at": [
+   48.0,
+   48.0,
+   48.0,
+   48.0,
+   48.0,
+   48.0,
+   48.0
+  ],
+  "n_frames_diameter_decreased": 0
+ },
+ "roll": {
+  "true_diameter": 46,
+  "true_growth": 1.0,
+  "d_f0": 46.0,
+  "d_end": 56.0,
+  "growth": 1.2173913043478262,
+  "d_at": [
+   46.0,
+   48.0,
+   52.0,
+   54.0,
+   56.0,
+   56.0,
+   56.0
+  ],
+  "n_frames_diameter_decreased": 0
+ }
+}
