@@ -1,0 +1,10 @@
+clip,sigma_c,seed,gripper_kept,ball_in_jaws_after_f3,new_ball_first_seen,new_ball_size_vs_real,code,notes
+s005t_s1,0.05,1,yes,yes (to f92),f3 mid-air below gripper,~3x,DUPLICATE,real ball stays in jaws; large ball bounces to f92 without settling
+s005t_s2,0.05,2,partly,unclear,f6 from top,~10x,GIANT_PHANTOM,giant sphere drops from frame top and bounces on plank
+s005t_s3,0.05,3,yes,yes,f3 on plank,~4x,DUPLICATE,ball materialises at plank level and bounces
+s010t_s1,0.10,1,yes,yes,f3 mid-air below gripper,~3x,DUPLICATE,same pattern as s005t_s1
+s010t_s2,0.10,2,no (gone f3),n/a,f3 on plank,~4x,SCENE_CORRUPT+PHANTOM,gripper erased; ball vanishes f12-30 then re-enters from top f33
+s010t_s3,0.10,3,no (gone f3),n/a,f3 near frame top,~4x,SCENE_CORRUPT+PHANTOM,gripper erased; ball falls from top
+s015t_s1,0.15,1,yes (arm repainted),yes,f3 mid-air,~4x,DUPLICATE+ARM_CHANGED,arm becomes a different dotted robot
+s015t_s2,0.15,2,no (gone f6),n/a,f3 from top,~10x,SCENE_CORRUPT+GIANT_PHANTOM,giant ball lands f9 and hovers on plank f12-45
+s015t_s3,0.15,3,no (gone f3),n/a,f3 from top,~4x,SCENE_CORRUPT+PHANTOM,arm repainted and gripper erased
