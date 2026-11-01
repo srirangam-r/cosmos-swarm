@@ -147,11 +147,19 @@ def main():
     for p in a.inputs:
         clips += sorted(glob.glob(os.path.join(p, "*.mp4"))) if os.path.isdir(p) else [p]
     res = json.load(open(a.out)) if os.path.exists(a.out) else {}
+    # Output is keyed by basename for compatibility with existing score files.
+    # Refuse collisions up front rather than silently discarding a clip.
+    paths_by_name = {k: os.path.abspath(v.get("clip", "")) for k, v in res.items()}
+    for c in clips:
+        name, path = os.path.basename(c), os.path.abspath(c)
+        if name in paths_by_name and paths_by_name[name] != path:
+            sys.exit(f"duplicate clip basename {name}: {paths_by_name[name]} and {path}")
+        paths_by_name[name] = path
     for c in clips:
         side = os.path.splitext(c)[0] + ".json"
         meta = json.load(open(side)) if os.path.exists(side) else {}
         fps = float(meta.get("fps") or video_fps(c))
-        r = dict(clip=c, fps=fps, sidecar=side if meta else None)
+        r = dict(clip=c, fps=fps, sidecar=side if meta else None, metadata=meta)
         t0 = time.time()
         if not a.no_dd:
             r.update(dynamic_degree(c, fps, a.device))

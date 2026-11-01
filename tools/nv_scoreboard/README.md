@@ -21,6 +21,7 @@ python score.py CLIPS_DIR [more clips] --dover_dir <DOVER_DIR> --device cuda|cpu
 - fps comes from the sidecar `<clip>.json` key `fps` if there is one, otherwise from the container.
 - Per clip it writes `dd_binary, dd_norm, dd_frac, dd_maxrad[...]` and `dover_fused, dover_technical, dover_aesthetic` (each with an `_sd` over `--dover_reps` random fragment draws).
 - `--no_dd` / `--no_dover` turn either part off.
+- Sidecar metadata is embedded in new score files so comparisons remain portable. Duplicate clip basenames are rejected, including collisions with existing output entries; use separate output files or unique names.
 
 **Speed** (832x480, 189 frames): on GPU, ~15-20 s per clip for everything. On CPU, DOVER is ~17 s per draw, but RAFT-large dynamic degree takes ~8 min per clip.
 
@@ -30,11 +31,11 @@ python compare.py noise  scores.json --real ../../work/raj-4/nv_scoreboard_real/
 python compare.py paired before.json after.json --real ../../work/raj-4/nv_scoreboard_real/gauge_real_matched.json [--pair_by image,seed]
 ```
 - Use a stable, unique `image_id` (or `image_sha256`) in each sidecar, identical for the same input across runs. Otherwise the entire image path is used; basename-only matching is unsafe. Missing or duplicate pairing keys and unmatched runs are errors.
-- `noise` groups clips that differ only in seed (same image, prompt, negative prompt and settings). It requires explicit image, prompt, negative prompt (empty string is valid), seed, num_frames, fps, steps, guidance, flow_shift, width and height. Repeated seeds in a group are rejected. It reports pooled within-group seed SD, not uncertainty across scenes.
+- `noise` groups clips by image, prompt, negative prompt and listed settings. It requires explicit image, prompt, negative prompt (null and empty string are distinct valid values), seed, num_frames, fps, steps, guidance, flow_shift, width and height. Repeated seeds in a group are rejected. It reports pooled within-group seed SD, not uncertainty across scenes. Check model, checkpoint, inference stack, template switches and other settings separately: these are not included in the grouping key. Explicit null's interpretation depends on the inference stack.
 - `paired` matches clips using image and seed by default. It averages seeds within each scene, weights scenes equally, and bootstraps scenes for a descriptive 95% CI of AFTER−BEFORE. With `--real`, the motion-fidelity gap |dd − dd_real(task)| is descriptive and pair-weighted; its reference uncertainty is not included. A single scene cannot provide a scene-level CI. Use several independent scenes; a small-sample bootstrap may still be unreliable.
 - No automated non-inferiority verdict is provided. A CI crossing zero does not establish no degradation: specify an acceptable margin in advance and use an appropriate design and interval, including reference uncertainty for motion fidelity.
 - The task (ball / pend / slope) comes from the clip basename via `--task_re`. Reference clips whose names match no task are ignored.
-- Tested only on synthetic score files so far. The Cosmos seed-noise baseline is pending (task 4).
+- The comparator has synthetic regression checks and a sidecar compatibility check; the Cosmos seed-noise baseline is pending (task 4). Older score files without embedded metadata still require their sidecars at the recorded paths.
 
 ## Definitions
 **Dynamic degree** is a re-implementation of VBench's `dynamic_degree.py`:

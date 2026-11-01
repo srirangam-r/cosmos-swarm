@@ -31,10 +31,10 @@ def load(path):
     out = {}
     for name, r in d.items():
         side = r.get("sidecar")
-        meta = {}
+        meta = r.get("metadata") or {}
         for cand in ([side, os.path.join(base, side)] if side else []) + \
                     [os.path.splitext(r.get("clip", ""))[0] + ".json"]:
-            if cand and os.path.exists(cand):
+            if not meta and cand and os.path.exists(cand):
                 meta = json.load(open(cand)); break
         out[name] = dict(r, meta=meta)
     return out
@@ -60,8 +60,12 @@ def field(r, what):
         v = g(m, "prompt_text", "prompt")
         return hashlib.sha256(str(v).encode()).hexdigest() if v is not None else None
     if what == "neg":
-        v = next((m[k] for k in ("negative_prompt_text", "negative_prompt") if k in m and m[k] is not None), None)
-        return hashlib.sha256(str(v).encode()).hexdigest() if v is not None else None
+        # Explicit null is a real request value, distinct from an absent key or
+        # an empty string. Its interpretation is specific to the inference stack.
+        for k in ("negative_prompt_text", "negative_prompt"):
+            if k in m:
+                return hashlib.sha256(json.dumps(m[k], sort_keys=True).encode()).hexdigest()
+        return None
     if what == "settings":
         return tuple(g(m, *ks) for ks in (("num_frames",), ("fps",), ("steps", "num_inference_steps"),
                                           ("guidance", "guidance_scale"), ("flow_shift",), ("width",), ("height",)))
