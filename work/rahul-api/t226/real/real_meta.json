@@ -1,0 +1,26 @@
+{
+ "t226_P_real_s0": {
+  "src": "/home/sha/swarm-work/rahul-api/dl/gauge_pend/data/rigid/pendulum/video/10.mp4",
+  "fps_dedup": 25.0,
+  "start": 93,
+  "n": 93,
+  "last_src_frame": 189,
+  "frame0_vs_input_MAD": 2.8720202445983887
+ },
+ "t226_F_real_s0": {
+  "src": "/home/sha/swarm-work/rahul-api/dl/gauge/data/rigid/bouncing ball/video/1.mp4",
+  "fps_dedup": 25.443037974683545,
+  "start": 33,
+  "n": 93,
+  "last_src_frame": 131,
+  "frame0_vs_input_MAD": 0.0
+ },
+ "t226_H_real_s0": {
+  "src": "/home/sha/swarm-work/rahul-api/dl/gauge/data/rigid/bouncing ball/video/1.mp4",
+  "fps_dedup": 25.443037974683545,
+  "start": 0,
+  "n": 93,
+  "last_src_frame": 98,
+  "frame0_vs_input_MAD": 0.0
+ }
+}
