@@ -1,0 +1,91 @@
+id,coder,end_state,clone,retether,vanish,bounces,settle_frame,confidence,note
+03ebba,4,HELD,N,Y,N,3+,NA,M,ball yo-yos up and down on thin string from gripper all clip; reaches table level
+0410bc,1,MOVING,N,Y,N,3+,NA,H,repeated cycles of fall and return to gripper; ball drifting right near table back at end
+055634,1,HELD,N,Y,N,3+,NA,M,repeated drop and return cycles; robot moves; ball hanging blurred at gripper f188 and absent f182
+08468f,1,HELD,N,Y,N,3+,NA,M,robot moves; ball bounces then rises to gripper; larger near gripper f188 touching it
+089377,5,MOVING,N,Y,N,3+,NA,H,small blurred ball yo-yos between plank and gripper string; moving at end
+09661f,1,HELD,N,Y,N,3+,NA,M,repeated bounce and return; ball dangles on string under gripper at f182 and f188
+143271,2,HELD,N,Y,N,3+,NA,M,robot moves gripper in and out of crop; ball hangs on string at f176 and f188; hidden f182
+15b07a,2,MOVING,N,Y,Y,3+,NA,L,ball hangs at string and bounces; absent in several tiles; at far table back edge f176 and f188
+184928,1,MOVING,Y,Y,U,3+,NA,M,chaotic; two balls f122-f171 and distorted blurry blob f170; ball airborne or hanging at end
+18f92a,1,REST,N,N,U,3+,160,M,ball grows large and gets hollow cutouts; rolls off plank left; creeps slowly then rests
+1933a0,5,HELD,N,Y,N,3+,NA,M,ball yo-yos on thin string from gripper; touches plank repeatedly; robot static
+1a4f9f,4,REST,N,N,N,3+,83,H,ball bounces on plank then settles at left-center of plank
+1befc9,5,MOVING,N,Y,N,2,NA,M,ball hangs near gripper f17-f94 then drops and rolls slowly left off plank
+1de170,6,MOVING,N,Y,N,3+,NA,M,ball repeatedly rises under gripper and drops; airborne near table back at end
+20e747,2,HELD,N,Y,N,0,NA,H,ball hangs and swings on string from gripper; dips low near table but never clearly lands
+21b4b9,2,REST,U,N,U,3+,158,M,ball grows ~2x; odd grey-white blur shapes early at f6-f22; slowly creeps then still
+252a4b,1,REST,N,N,N,3+,66,H,several small bounces then sits on plank; tiny wobble in place
+27a266,2,MOVING,N,Y,N,3+,NA,M,ball repeatedly rises to gripper string and drops again; blurry; still moving at end
+2932e3,3,MOVING,N,N,N,3+,NA,H,ball keeps bouncing on plank with motion blur through f188
+2c780a,5,REST,Y,N,N,1,33,M,ball rests on plank from f33; second ball repeatedly drops in then disappears; robot dips
+2e4725,3,HELD,N,Y,U,3+,NA,M,ball on string below moving gripper; yo-yo like; ball often hard to see; robot moves
+353a6a,3,MOVING,N,N,N,3+,NA,H,ball bounces repeatedly on plank through end; still bouncing at f188
+3a3e98,6,MOVING,N,N,N,3+,NA,H,ball keeps bouncing across plank and table through the end; motion blur
+3f7136,6,MOVING,N,Y,N,3+,NA,M,robot moves up and down; ball hangs under gripper then drops repeatedly; ends hanging-ish
+424eea,2,REST,N,Y,N,3+,61,M,ball goes back up near gripper at f6 and f17-22 then bounces; rests on plank from f61
+4302cb,5,MOVING,N,Y,N,3+,NA,M,ball cycles between plank and gripper string; robot moves; still moving at end
+49413a,2,MOVING,N,Y,N,3+,NA,H,ball repeatedly bounces and rises back under gripper; mid-air at f182; robot moves
+4ce827,6,MOVING,N,Y,N,3+,NA,H,ball hangs under gripper around f138-f149 then drops; still bouncing on plank at end
+4dcf99,1,MOVING,N,N,N,3+,NA,H,ball keeps bouncing with motion blur near back of table through f188
+50c276,2,REST,N,N,N,2,158,M,ball grows ~2x; bounces then creeps slowly on plank; still from f158; robot moves
+50dcb9,6,MOVING,N,U,U,3+,NA,L,ball rolls off front and grows large; high bounces near gripper; not visible f188
+50e54f,5,REST,N,N,N,2,133,M,ball grows about 3x and creeps slowly rightward then nearly still; logo rotates slightly
+516fab,3,MOVING,N,N,N,3+,NA,H,ball keeps bouncing high all clip; airborne at different heights in last tiles
+53495d,1,HELD,N,Y,N,3+,NA,M,repeated bounce on plank then lifted with gripper out of frame; hangs from gripper f188
+547e2f,6,MOVING,N,N,N,3+,NA,H,robot arm moves; ball keeps bouncing on plank to the end; blurry deformed
+54be79,6,REST,N,N,N,3+,158,M,ball hops in place at far end of plank; tiny jitter; faint ghostly at times
+5a245e,4,MOVING,Y,N,N,3+,NA,H,ball bounces wildly incl. toward camera (looks large); END f164 shows front and back ball at once
+5b4040,4,MOVING,N,N,N,3+,NA,H,ball glossy or striped and motion-blurred; keeps bouncing above table back edge; string tip not attached
+5e80bc,3,REST,N,N,N,3+,55,H,small bounces on plank early then ball sits still on plank from about f55
+607008,1,MOVING,N,Y,N,3+,NA,H,ball repeatedly bounces then returns up to hang on string at gripper; airborne at f188
+624537,2,MOVING,N,Y,N,3+,NA,H,repeated cycle: ball hangs under gripper drops bounces rises again; bouncing at end; robot moves
+6f5f92,6,MOVING,N,Y,N,3+,NA,H,ball repeatedly hangs on string under gripper then drops; still in motion at end
+713b6e,6,MOVING,Y,Y,Y,3+,NA,H,ball repeatedly drops from gripper; two balls at once in places; ghostly blur
+71d0e2,1,MOVING,N,Y,N,3+,NA,H,repeated drop and return up on string; airborne at f176 f182 f188
+7baba6,2,MOVING,N,Y,N,3+,NA,H,ball grows; leaves frame at edges twice; reappears at gripper and drops; bouncing at end
+7d3faa,6,REST,N,N,N,2,61,H,ball bounces on plank early then rolls slightly and rests on plank
+80d51f,4,REST,N,U,Y,3+,176,L,gripper lowers into scene; ball blurred and misshapen at left plank end in last tiles
+811e6f,4,GONE,N,Y,N,3+,NA,M,robot/camera moves; ball repeatedly returns under gripper; rolls right behind robot base by f176
+828be7,4,REST,N,N,N,3+,55,H,human hand appears in crop f17-f33; ball bounces on plank then rests at left end
+8325b0,4,HELD,N,Y,N,3+,NA,M,ball swings and bounces on string from gripper all clip; hanging under gripper at end
+866ae9,4,MOVING,N,N,N,3+,NA,H,ball grows larger (about 1.5x) and rolls or bounces left across plank at end; LED turns red
+8898d0,3,MOVING,N,N,N,3+,NA,H,ball bounces on plank all clip with motion blur; still bouncing in last tiles
+8aef28,2,REST,N,N,N,2,160,M,ball grows >2x; rolls slowly off plank onto table; nearly still from f160; robot leaves view
+8b1107,2,MOVING,N,Y,N,3+,NA,H,ball with white marks bounces repeatedly and returns near gripper; still bouncing at end
+8ef576,4,MOVING,N,N,N,3+,NA,H,ball blurred and keeps bouncing near table back edge to the end
+8f374c,3,MOVING,N,N,N,3+,NA,H,ball keeps bouncing repeatedly near back of table and plank through f188
+9699b0,1,MOVING,N,Y,N,3+,NA,M,repeated cycles of fall and return to gripper; airborne f176 then rolling slowly on plank
+9a571d,5,REST,N,N,N,3+,176,H,many bounces and blurred rolling; settles on plank late; robot static
+9fe337,3,REST,N,N,N,1,39,H,one high rebound off plank f11 to f22 then lands f33 and stays still
+a00be8,2,MOVING,N,Y,N,3+,NA,H,ball repeatedly bounces and returns up near gripper string; still bouncing at end
+a15404,4,HELD,Y,Y,N,3+,NA,M,original dangles and swings under strap; second ball appears ~f100 and rolls slowly at table edge
+abfee5,5,MOVING,N,Y,N,3+,NA,M,ball repeatedly bounces then rises to hang below gripper; still moving at end
+b05d43,3,REST,N,N,N,3+,170,M,ball bounces many times until f160 then lands on plank and rests with slight jitter
+b20042,5,REST,N,N,N,2,138,M,ball grows about 3x; slow creep rolling with 8-ball logo turning; position nearly constant at end
+b23d6f,1,MOVING,N,U,Y,3+,NA,M,ball often not visible for several tiles; ghostly translucent at f170; bouncing at table back at end
+b5d0e9,5,UNCLEAR,Y,Y,N,3+,NA,L,big ball rests on table while small ball keeps bouncing on string; original ambiguous
+bc89d3,4,REST,N,N,N,3+,111,H,ball bounces repeatedly incl. rise near gripper height early; small hops on plank then rests; white strip hangs from gripper
+bd67e5,6,MOVING,N,Y,U,3+,NA,H,ball repeatedly rises to gripper and drops again; still bouncing at end
+bd70db,6,MOVING,N,N,U,3+,NA,M,robot moves and blurs; ball bouncing blurred; faint or hidden in f188
+c61eeb,5,MOVING,N,N,N,1,NA,M,ball drifts left off plank and rolls slowly leftward to end; robot moves
+c6cc25,6,REST,N,Y,N,3+,182,M,ball repeatedly hangs under gripper and drops; finally sits at table back edge
+c7d435,3,REST,N,N,N,1,83,H,one clear rebound at f6-f11 then small hops and slow drift; resting by about f83
+d148f8,4,REST,N,N,N,3+,138,M,ball bounces on plank then rolls off onto table and creeps slowly right
+d1b531,6,REST,N,N,N,3+,170,H,many small bounces on plank then rests on plank near end
+d50d51,3,MOVING,N,N,N,3+,NA,H,ball bounces high repeatedly all clip; airborne near gripper height at f188; looks glassy
+d6ee78,5,MOVING,N,Y,N,3+,NA,H,ball yo-yos between plank and gripper string repeatedly; bouncing at end
+d94802,3,MOVING,N,Y,N,3+,NA,M,ball on string yo-yos up and down all clip; lands on plank f182 and rolls; surface texture changes
+dc4e98,4,REST,U,U,N,3+,164,H,robot gripper moves in and out of crop; small dark blobs above resting ball at times
+e435be,2,MOVING,N,Y,N,3+,NA,M,cycle of bounce then hangs from gripper string; bouncing f176-182 hanging at f188; robot moves
+e639d4,3,REST,N,Y,U,2,55,M,robot moves fast f6-f17; ball not clearly seen f6-f11 then near gripper at f17-f22 then drops
+e6e40a,2,REST,N,N,N,1,33,H,one bounce off plank then settles and stays still
+e9fc9b,5,MOVING,N,N,U,3+,NA,H,fuzzy blurred ball bounces all over table; missing in some tiles; still moving at end
+ea3d74,1,REST,Y,Y,U,3+,138,M,huge size growth; ball hangs at gripper f6-f11 with small second ball; big ball creeps to rest
+eb4dd3,3,HELD,N,Y,U,3+,NA,M,ball hangs on strap below gripper for long stretches and yo-yos; hanging at f188
+f0de68,1,REST,Y,Y,N,3+,144,M,huge size growth; ball at gripper f6-f11 then rolls off plank and rests; second ball drops late
+f1af21,4,MOVING,N,N,N,3+,NA,H,ball blurred and still bouncing near table back edge at end; robot LED flickers orange
+f354cf,6,MOVING,N,Y,N,3+,NA,H,ball repeatedly hangs under gripper then drops; moving at end
+f3be46,5,REST,N,Y,N,3+,77,M,ball rises back near gripper string at f17-22 then falls and settles on plank
+f63e13,3,REST,N,N,N,3+,166,M,ball grows greatly >1.5x while bouncing then rolls off plank onto table and stops
+f7fe66,5,REST,N,N,N,0,33,H,ball lands on plank and stays; robot repeatedly dips and lifts nearby
