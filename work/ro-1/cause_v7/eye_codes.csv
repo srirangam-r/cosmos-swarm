@@ -3,3 +3,11 @@ v7_REC_ball1_fps24_93f_s1,ball1,REC,1,N,,bounces to f90 (UNBLINDED eye read)
 v7_RECT_ball1_fps24_93f_s1,ball1,RECT,1,Y,~51,bounces to ~f45 then on plank with slight shifts; ball looks glossier/larger than input
 v7_REC_ball2_fps24_93f_s1,ball2,REC,1,N,,two balls from ~f24 (duplicate) both bouncing to f90 (UNBLINDED eye read)
 v7_RECT_ball2_fps24_93f_s1,ball2,RECT,1,Y,~60,bounces f6-57 then on plank; slow roll/spin to f90 but no lift; ball larger/glossier than input
+v7_REC_ball1_fps24_93f_s2,ball1,REC,2,N,,bounces; big rebound out of top f48-57 then falls back and keeps bouncing to f90; camera dollies (UNBLINDED)
+v7_RECT_ball1_fps24_93f_s2,ball1,RECT,2,Y,~15,lands ~f12 then sits on plank with slow roll toward lower-left and camera drift; no lift; ball turns matte black and larger (UNBLINDED)
+v7_REC_ball2_fps24_93f_s2,ball2,REC,2,N,,small hops f9-50; second ball drops in from top f54-66 and the pair bounces/stacks to f90; gripper returns (UNBLINDED)
+v7_RECT_ball2_fps24_93f_s2,ball2,RECT,2,N*,,lands ~f9 small shifts to ~f45 no lift after; then camera pans and ball ROLLS along plank toward lower-left and leaves frame f72-90 (no bounce but not at rest in frame; strict N) (UNBLINDED)
+v7_REC_ball1_fps24_93f_s3,ball1,REC,3,N,,giant metallic sphere on plank + floating black debris objects f3-90; gripper gone (ARTIFACT) (UNBLINDED)
+v7_RECT_ball1_fps24_93f_s3,ball1,RECT,3,Y,~21,lands f15-18 then at rest with slight drift; ball glossy black and larger (UNBLINDED)
+v7_REC_ball2_fps24_93f_s3,ball2,REC,3,N,,phantom box object appears f3 and morphs beside ball to f90; ball rolls toward lower-right (ARTIFACT) (UNBLINDED)
+v7_RECT_ball2_fps24_93f_s3,ball2,RECT,3,Y,~15,lands f6 small hop f12 then at rest; only specular/spin changes (UNBLINDED)
