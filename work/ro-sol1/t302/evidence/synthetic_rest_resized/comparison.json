@@ -1,0 +1,149 @@
+{
+  "name": "synthetic_rest_resized",
+  "physics": "pendulum",
+  "input": "work/ro-sol1/t297/evidence/pendulum fixture/synthetic input.png",
+  "input_sha256": "aba2cfe1909b04e770fde9f574c574cf8d293bc4a949bdf368e65ff971a295e2",
+  "kwargs": {
+    "pivot": [
+      161,
+      61
+    ],
+    "bob": [
+      135,
+      124
+    ],
+    "period": 1.186,
+    "release_from_rest": true,
+    "num_frames": 25,
+    "fps": 24,
+    "width": 416,
+    "height": 240
+  },
+  "trace": {
+    "before": {
+      "raw_frame_sha256": [
+        "4eb105119abc9662a0e4a94551b4fcf485d10841d9aaf80b4352dfb5b0c0a32d",
+        "dd89e2c746e07704b937fd00ede7c302a2882812a8c87956515bb012d05f8a6e",
+        "df8ff55a9927c623a87d633b00b5570c97761d4f83dba751e11766eb8f714ec6",
+        "de890e4e3fa714a7e2d1f72f6acf0cfee26c8672a88345283061cbb0ee9d965b",
+        "045b09b994996a5284252aab3f7cdc98fe60b6d4284a82d01bebcb285424a610",
+        "d87aaff63a26c6040a90b51d7ede123545c6ab9c7333c019c926454337f88044",
+        "7ccb84ee1377a9558f4651689170d1fff7b31b84095c26510a959c6b1c720a06",
+        "c23a15abb27741a17f6f9354799aeaae91b9be6abdc2dc6b0985c3a47af04de7",
+        "89bc0d80cccb5f3c56e778ddae36d8b0cc8ce0eeb21164ae3901e531e2997703",
+        "ff4c549108d1782f863e6661faa8da58b0df562bfd1fd0cd8fcd71fba6e506e2",
+        "b42b198a8ccba866127093f600bc93065ae5b20a20c9d27ab1b82e5b99061f57",
+        "eeed1b2c93d2ce9650f4c0f97d211e77f83d3af502e622c0fc275272114adb5e",
+        "f72cb1adde9d1025ed0a54316cd5990940778ffad5c359cc2a7c20fc7d47a17b",
+        "f270f5eb6016723f3872e0e05b1704f27f294600162dd264c28a8ae403ffc599",
+        "e5d99614aa238c5bdc4ac861528a5e07620ebc28e67c991c7fc24dcfa8cbfa26",
+        "b8d6728a3a4ba3cc547e2852e6fae343c2cf4ed8539dbb1d113ec99a79af3ab7",
+        "f9dbb3422fe717306f2a5cf8244efef8c65b62e1c50c89b4607d366b67220ae5",
+        "02d5479d11f8442455dfc7b6f5ca749b3c80511f8c91d3e5930de4bdde1b6e96",
+        "899b913f9ce97d6cc62e4418a87bf69198cad05761dbdb6d2729527075be4560",
+        "236efe7a00a9c109ed0a3d0c4570ba1f72804602bdb9f993b7734d17855a683c",
+        "03569f851b05bcfa2557206da1db1bd30ad514c5e35c93480b083d3f959a2a59",
+        "86a88a9a9c2b72ebe4b030fe49b0bafe1d94aef6efcef7c382bddeded20decc1",
+        "680f3447612167ca77c8586870c348652ab25ef8bc742534f80634d5784a3ff6",
+        "72cb5a9ab1fc5b1ba88f1ea4db7e2b2b0daec2866108a51c39d200de8fd5d20c",
+        "5889d71456f58ba9de2d295e213fc9341ba51e32a753070af90d526f1989853e"
+      ],
+      "raw_frame0_vs_input": {
+        "changed_pixels": 437,
+        "mae_8bit": 0.012843883547008546,
+        "max_channel_error": 47,
+        "identical": false
+      },
+      "decoded_frame0_vs_input": {
+        "changed_pixels": 99838,
+        "mae_8bit": 2.704039797008547,
+        "max_channel_error": 59,
+        "identical": false
+      },
+      "decoded_frame0_vs_raw": {
+        "changed_pixels": 99838,
+        "mae_8bit": 2.695282451923077,
+        "max_channel_error": 59,
+        "identical": false
+      },
+      "decoded_frames": 25,
+      "fps": 24.0,
+      "mp4_sha256": "7ff85ebc716e772fc144db2c48e2229ed86fb518aa3ab8547772b51abf48babe",
+      "builder_metadata": {
+        "physics": "pendulum",
+        "period": 1.186,
+        "g": 9.81,
+        "amplitude_deg": 18.0,
+        "release_from_rest": true,
+        "L_px": 68.15423684555495,
+        "th_cur_deg": 22.425861921351792,
+        "num_frames": 25,
+        "fps": 24,
+        "resolution": "416x240"
+      }
+    },
+    "after": {
+      "raw_frame_sha256": [
+        "9cbe050032beb5ea3646885d60ca5fb1a0bb9fb55015f7d1229693d869d6f144",
+        "dd89e2c746e07704b937fd00ede7c302a2882812a8c87956515bb012d05f8a6e",
+        "df8ff55a9927c623a87d633b00b5570c97761d4f83dba751e11766eb8f714ec6",
+        "de890e4e3fa714a7e2d1f72f6acf0cfee26c8672a88345283061cbb0ee9d965b",
+        "045b09b994996a5284252aab3f7cdc98fe60b6d4284a82d01bebcb285424a610",
+        "d87aaff63a26c6040a90b51d7ede123545c6ab9c7333c019c926454337f88044",
+        "7ccb84ee1377a9558f4651689170d1fff7b31b84095c26510a959c6b1c720a06",
+        "c23a15abb27741a17f6f9354799aeaae91b9be6abdc2dc6b0985c3a47af04de7",
+        "89bc0d80cccb5f3c56e778ddae36d8b0cc8ce0eeb21164ae3901e531e2997703",
+        "ff4c549108d1782f863e6661faa8da58b0df562bfd1fd0cd8fcd71fba6e506e2",
+        "b42b198a8ccba866127093f600bc93065ae5b20a20c9d27ab1b82e5b99061f57",
+        "eeed1b2c93d2ce9650f4c0f97d211e77f83d3af502e622c0fc275272114adb5e",
+        "f72cb1adde9d1025ed0a54316cd5990940778ffad5c359cc2a7c20fc7d47a17b",
+        "f270f5eb6016723f3872e0e05b1704f27f294600162dd264c28a8ae403ffc599",
+        "e5d99614aa238c5bdc4ac861528a5e07620ebc28e67c991c7fc24dcfa8cbfa26",
+        "b8d6728a3a4ba3cc547e2852e6fae343c2cf4ed8539dbb1d113ec99a79af3ab7",
+        "f9dbb3422fe717306f2a5cf8244efef8c65b62e1c50c89b4607d366b67220ae5",
+        "02d5479d11f8442455dfc7b6f5ca749b3c80511f8c91d3e5930de4bdde1b6e96",
+        "899b913f9ce97d6cc62e4418a87bf69198cad05761dbdb6d2729527075be4560",
+        "236efe7a00a9c109ed0a3d0c4570ba1f72804602bdb9f993b7734d17855a683c",
+        "03569f851b05bcfa2557206da1db1bd30ad514c5e35c93480b083d3f959a2a59",
+        "86a88a9a9c2b72ebe4b030fe49b0bafe1d94aef6efcef7c382bddeded20decc1",
+        "680f3447612167ca77c8586870c348652ab25ef8bc742534f80634d5784a3ff6",
+        "72cb5a9ab1fc5b1ba88f1ea4db7e2b2b0daec2866108a51c39d200de8fd5d20c",
+        "5889d71456f58ba9de2d295e213fc9341ba51e32a753070af90d526f1989853e"
+      ],
+      "raw_frame0_vs_input": {
+        "changed_pixels": 0,
+        "mae_8bit": 0.0,
+        "max_channel_error": 0,
+        "identical": true
+      },
+      "decoded_frame0_vs_input": {
+        "changed_pixels": 99838,
+        "mae_8bit": 2.696103766025641,
+        "max_channel_error": 59,
+        "identical": false
+      },
+      "decoded_frame0_vs_raw": {
+        "changed_pixels": 99838,
+        "mae_8bit": 2.696103766025641,
+        "max_channel_error": 59,
+        "identical": false
+      },
+      "decoded_frames": 25,
+      "fps": 24.0,
+      "mp4_sha256": "ddd25742f1651cfee2649af6167357182b0f896e0dd86bb8896ecb99f155718a",
+      "builder_metadata": {
+        "physics": "pendulum",
+        "period": 1.186,
+        "g": 9.81,
+        "amplitude_deg": 18.0,
+        "release_from_rest": true,
+        "L_px": 68.15423684555495,
+        "th_cur_deg": 22.425861921351792,
+        "num_frames": 25,
+        "fps": 24,
+        "resolution": "416x240"
+      }
+    }
+  },
+  "status": "ANALYTICAL CPU FIXTURE; NOT NANO OUTPUT OR EXECUTOR ADOPTION"
+}

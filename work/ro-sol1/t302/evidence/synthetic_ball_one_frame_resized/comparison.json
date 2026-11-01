@@ -1,0 +1,97 @@
+{
+  "name": "synthetic_ball_one_frame_resized",
+  "physics": "ball",
+  "input": "work/ro-sol1/t297/evidence/ball fixture/synthetic input.png",
+  "input_sha256": "2f9b94c6df5af4fecc70e877d2a45cba233e601de87b36f17daab9556ba9a88c",
+  "kwargs": {
+    "center": [
+      140,
+      59
+    ],
+    "floor_y": 170,
+    "radius": 7,
+    "ppm": 269.9,
+    "hold": 0.25,
+    "num_frames": 1,
+    "fps": 24,
+    "width": 416,
+    "height": 240
+  },
+  "trace": {
+    "before": {
+      "raw_frame_sha256": [
+        "a7334e70507a6c79a0f702ad1ac173e7c2af8c63cce92f0abc36173974438b83"
+      ],
+      "raw_frame0_vs_input": {
+        "changed_pixels": 160,
+        "mae_8bit": 0.011111111111111112,
+        "max_channel_error": 46,
+        "identical": false
+      },
+      "decoded_frame0_vs_input": {
+        "changed_pixels": 99839,
+        "mae_8bit": 2.67516359508547,
+        "max_channel_error": 76,
+        "identical": false
+      },
+      "decoded_frame0_vs_raw": {
+        "changed_pixels": 99839,
+        "mae_8bit": 2.6696881677350426,
+        "max_channel_error": 57,
+        "identical": false
+      },
+      "decoded_frames": 1,
+      "fps": 24.0,
+      "mp4_sha256": "19ebfa3f79c3fbe03f399537543e0948e459e51de33de88d5505b360bf2067fa",
+      "builder_metadata": {
+        "physics": "ball",
+        "g": 9.81,
+        "e": 0.58,
+        "floor_y": 170,
+        "drop_px": 111,
+        "hold_s": 0.25,
+        "num_frames": 1,
+        "fps": 24,
+        "resolution": "416x240"
+      }
+    },
+    "after": {
+      "raw_frame_sha256": [
+        "d9cd2abaf8f0c3691489acd98e0d3cc614a5dae8d1377b21ee13eb42e4a97ad7"
+      ],
+      "raw_frame0_vs_input": {
+        "changed_pixels": 0,
+        "mae_8bit": 0.0,
+        "max_channel_error": 0,
+        "identical": true
+      },
+      "decoded_frame0_vs_input": {
+        "changed_pixels": 99838,
+        "mae_8bit": 2.6717781784188035,
+        "max_channel_error": 80,
+        "identical": false
+      },
+      "decoded_frame0_vs_raw": {
+        "changed_pixels": 99838,
+        "mae_8bit": 2.6717781784188035,
+        "max_channel_error": 80,
+        "identical": false
+      },
+      "decoded_frames": 1,
+      "fps": 24.0,
+      "mp4_sha256": "801ed183cd1f83f8df9b169401e3d1cebafef73ad92b7d6356979a3480b9f66d",
+      "builder_metadata": {
+        "physics": "ball",
+        "g": 9.81,
+        "e": 0.58,
+        "floor_y": 170,
+        "drop_px": 111,
+        "hold_s": 0.25,
+        "num_frames": 1,
+        "fps": 24,
+        "resolution": "416x240"
+      }
+    }
+  },
+  "status": "ANALYTICAL CPU FIXTURE; NOT NANO OUTPUT OR EXECUTOR ADOPTION"
+}

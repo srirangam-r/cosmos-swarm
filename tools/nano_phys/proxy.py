@@ -90,6 +90,10 @@ def generate_pendulum_proxy(
         if ra.ndim == 2:
             ra = ra[..., None]
         frame = (bg * (1.0 - ra) + rot * ra).astype(np.uint8)
+        # Feathered compositing alters even a zero-angle pose. Preserve the
+        # resized input at the raw writer boundary; MP4 encoding is still lossy.
+        if i == 0:
+            frame = im.copy()
         vw.write(frame)
 
     vw.release()
@@ -177,6 +181,9 @@ def generate_ball_proxy(
         sh = cv2.warpAffine(im, M, (W, H))
         sa = cv2.warpAffine(alpha, M, (W, H))[..., None]
         frame = (bg * (1.0 - sa) + sh * sa).astype(np.uint8)
+        # Preserve the initial image before lossy encoding, as for pendulums.
+        if k == 0:
+            frame = im.copy()
         vw.write(frame)
 
     vw.release()

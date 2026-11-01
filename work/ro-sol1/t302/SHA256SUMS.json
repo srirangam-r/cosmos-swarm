@@ -1,0 +1,246 @@
+{
+  "README.md": {
+    "sha256": "c6859d59ad5642d72e347b458fd1281cdbb5d699445d2705a79e4e7e169a81a6",
+    "bytes": 4005
+  },
+  "availability.json": {
+    "sha256": "4a17ce0e3c4b7466ad7a1ee45da158ee063e95cbfa924bb279be325233d59f84",
+    "bytes": 538
+  },
+  "baseline_proxy.py": {
+    "sha256": "1e7cbdff3ba78348ec13c21d329e8c0ce6d59afe1d1c7c0034f244572c670ff5",
+    "bytes": 5967
+  },
+  "check_frame0.py": {
+    "sha256": "7ede72fdc7cf09cf0f412cf1bd460e465f89ea43c381961075ffa7d62df187e8",
+    "bytes": 8324
+  },
+  "evidence/acceptance.json": {
+    "sha256": "f0a6aded0a20db90da81da05f1b99ff8b512cc1f7a0fba260e0ab7aa1d3f599c",
+    "bytes": 124291
+  },
+  "evidence/real06_P1.186/after.mp4": {
+    "sha256": "ca93369cccb3057d431e465f47769e9a3158a3339d9e5e9752fe45eb4f03db1f",
+    "bytes": 583943
+  },
+  "evidence/real06_P1.186/after_decoded_frame0.png": {
+    "sha256": "f90834e9a9d73faaa4212f4033c7b2a12c3f6ddd84aeec9dc1f8612f38f225f0",
+    "bytes": 407287
+  },
+  "evidence/real06_P1.186/after_raw_frame0.png": {
+    "sha256": "fe4953ddd9971a798f95003c23fbc08d3d432e8acda2477e39c3cce6c655ec6e",
+    "bytes": 499518
+  },
+  "evidence/real06_P1.186/before.mp4": {
+    "sha256": "80c06c6c54efb43481af5908ec3dfda76fb869afd8c24619abdb5f264a1fbee7",
+    "bytes": 583921
+  },
+  "evidence/real06_P1.186/before_decoded_frame0.png": {
+    "sha256": "9690be10dd9d3de7aff36e061b0fd934ead3de4ddc95de703bcb44265f709642",
+    "bytes": 407175
+  },
+  "evidence/real06_P1.186/before_raw_frame0.png": {
+    "sha256": "516e06ee10707c613e66977a28044846b353c7a12cc85431c2f51ba687b48e12",
+    "bytes": 499726
+  },
+  "evidence/real06_P1.186/comparison.json": {
+    "sha256": "5bf40ae6af9786576fe41cf94e454447445954263aa402f95c82ca0ea138ec2b",
+    "bytes": 16790
+  },
+  "evidence/real06_P2.0162/after.mp4": {
+    "sha256": "e6de35580a52ae540ef7044ed5bca982aaca94f571f5e08491eb3ac5e2d1bcc1",
+    "bytes": 555070
+  },
+  "evidence/real06_P2.0162/after_decoded_frame0.png": {
+    "sha256": "f90834e9a9d73faaa4212f4033c7b2a12c3f6ddd84aeec9dc1f8612f38f225f0",
+    "bytes": 407287
+  },
+  "evidence/real06_P2.0162/after_raw_frame0.png": {
+    "sha256": "fe4953ddd9971a798f95003c23fbc08d3d432e8acda2477e39c3cce6c655ec6e",
+    "bytes": 499518
+  },
+  "evidence/real06_P2.0162/before.mp4": {
+    "sha256": "0ec5d0aabd349670834bf518484ea348eee69eae303f4a900d86db665d5e8601",
+    "bytes": 554971
+  },
+  "evidence/real06_P2.0162/before_decoded_frame0.png": {
+    "sha256": "9690be10dd9d3de7aff36e061b0fd934ead3de4ddc95de703bcb44265f709642",
+    "bytes": 407175
+  },
+  "evidence/real06_P2.0162/before_raw_frame0.png": {
+    "sha256": "516e06ee10707c613e66977a28044846b353c7a12cc85431c2f51ba687b48e12",
+    "bytes": 499726
+  },
+  "evidence/real06_P2.0162/comparison.json": {
+    "sha256": "54eacda73d7e1a4ad890f2259649c561404f650169a7ae241935a76a131cd08c",
+    "bytes": 16794
+  },
+  "evidence/real14_P1.186/after.mp4": {
+    "sha256": "d6aabbf3eaf532ed422eaae0657a0f567f41e0ca936afade7735e07def0df27f",
+    "bytes": 557474
+  },
+  "evidence/real14_P1.186/after_decoded_frame0.png": {
+    "sha256": "257063b2571e631a3ae3616933447d5c4782c31b485d2530bcc8007b6a958ce0",
+    "bytes": 412965
+  },
+  "evidence/real14_P1.186/after_raw_frame0.png": {
+    "sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2",
+    "bytes": 501238
+  },
+  "evidence/real14_P1.186/before.mp4": {
+    "sha256": "ee77517b93b2ac55f1cc0682913bddf07e83d459395e7892d96ec5a8a84ccd4a",
+    "bytes": 557440
+  },
+  "evidence/real14_P1.186/before_decoded_frame0.png": {
+    "sha256": "28e3d9f41f0764b5d6295853950c073bd4286be617a4cfe880ab7de3196387c5",
+    "bytes": 412781
+  },
+  "evidence/real14_P1.186/before_raw_frame0.png": {
+    "sha256": "cef9c8d2c01cc23702303f18704eb2bc8ee74bea92ecec4734cfd74e1b41214c",
+    "bytes": 501599
+  },
+  "evidence/real14_P1.186/comparison.json": {
+    "sha256": "7c33f2195ba78d294039d5b184b02a7f97a6ec19ea77c1aee383bde182ef03f4",
+    "bytes": 16792
+  },
+  "evidence/real14_P2.0162/after.mp4": {
+    "sha256": "ffb81c3a8fe610d2e3b7e6379bea1ebf9b5472ef3333ebfbe656bd18a2704cef",
+    "bytes": 534622
+  },
+  "evidence/real14_P2.0162/after_decoded_frame0.png": {
+    "sha256": "257063b2571e631a3ae3616933447d5c4782c31b485d2530bcc8007b6a958ce0",
+    "bytes": 412965
+  },
+  "evidence/real14_P2.0162/after_raw_frame0.png": {
+    "sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2",
+    "bytes": 501238
+  },
+  "evidence/real14_P2.0162/before.mp4": {
+    "sha256": "a3cfa0f65e5f084ed3d69afdfbf3ed3b7fc45ececd1922f3fb5e88823fb4cb93",
+    "bytes": 534548
+  },
+  "evidence/real14_P2.0162/before_decoded_frame0.png": {
+    "sha256": "28e3d9f41f0764b5d6295853950c073bd4286be617a4cfe880ab7de3196387c5",
+    "bytes": 412781
+  },
+  "evidence/real14_P2.0162/before_raw_frame0.png": {
+    "sha256": "cef9c8d2c01cc23702303f18704eb2bc8ee74bea92ecec4734cfd74e1b41214c",
+    "bytes": 501599
+  },
+  "evidence/real14_P2.0162/comparison.json": {
+    "sha256": "423e1b8bd5f9f8e33bf48c27d937ca61d979c820796729404c0ac362c06183a0",
+    "bytes": 16796
+  },
+  "evidence/synthetic_ball_hold/after.mp4": {
+    "sha256": "4cbed048780b4b140b719446071e7fcf4d82e77b71a58e0c501ad7e96862c9b7",
+    "bytes": 87095
+  },
+  "evidence/synthetic_ball_hold/after_decoded_frame0.png": {
+    "sha256": "7badd62dfedee1a7aebdd1f94afda043e401290cebf75f53fdbe67c63404406a",
+    "bytes": 8164
+  },
+  "evidence/synthetic_ball_hold/after_raw_frame0.png": {
+    "sha256": "2f9b94c6df5af4fecc70e877d2a45cba233e601de87b36f17daab9556ba9a88c",
+    "bytes": 2992
+  },
+  "evidence/synthetic_ball_hold/before.mp4": {
+    "sha256": "25d13f55af7546a0df56c7e00808456a3c705e6ad6c2c2d9388e82adbb23924f",
+    "bytes": 86901
+  },
+  "evidence/synthetic_ball_hold/before_decoded_frame0.png": {
+    "sha256": "f543c27c1814d0dba5531cd2345610dbbb7934c0cdaf78a56cea5176011c347a",
+    "bytes": 7996
+  },
+  "evidence/synthetic_ball_hold/before_raw_frame0.png": {
+    "sha256": "e826de99d2ee2ca568f8110b471f44451c9b34d8696ab3ce3eb1feb3ab438e1a",
+    "bytes": 4210
+  },
+  "evidence/synthetic_ball_hold/comparison.json": {
+    "sha256": "e5cd5304244de48e5789500178bc01bad808de533029351528c777f70d52e75c",
+    "bytes": 16519
+  },
+  "evidence/synthetic_ball_no_hold/after.mp4": {
+    "sha256": "ddfa1d61e94bb4c33759148066aa3fdb2bb96bb12e2222139ce326b25bc23f98",
+    "bytes": 87466
+  },
+  "evidence/synthetic_ball_no_hold/after_decoded_frame0.png": {
+    "sha256": "7badd62dfedee1a7aebdd1f94afda043e401290cebf75f53fdbe67c63404406a",
+    "bytes": 8164
+  },
+  "evidence/synthetic_ball_no_hold/after_raw_frame0.png": {
+    "sha256": "2f9b94c6df5af4fecc70e877d2a45cba233e601de87b36f17daab9556ba9a88c",
+    "bytes": 2992
+  },
+  "evidence/synthetic_ball_no_hold/before.mp4": {
+    "sha256": "647de58cd24e77ad06202443683d7e650fdbe863c2fedaae4a50c6a118f5ab77",
+    "bytes": 87182
+  },
+  "evidence/synthetic_ball_no_hold/before_decoded_frame0.png": {
+    "sha256": "f543c27c1814d0dba5531cd2345610dbbb7934c0cdaf78a56cea5176011c347a",
+    "bytes": 7996
+  },
+  "evidence/synthetic_ball_no_hold/before_raw_frame0.png": {
+    "sha256": "e826de99d2ee2ca568f8110b471f44451c9b34d8696ab3ce3eb1feb3ab438e1a",
+    "bytes": 4210
+  },
+  "evidence/synthetic_ball_no_hold/comparison.json": {
+    "sha256": "e0bdc91c93fa912d76f6867bdc73416af67f7c24edcc6cf015bb291863744393",
+    "bytes": 16513
+  },
+  "evidence/synthetic_ball_one_frame_resized/after.mp4": {
+    "sha256": "801ed183cd1f83f8df9b169401e3d1cebafef73ad92b7d6356979a3480b9f66d",
+    "bytes": 3450
+  },
+  "evidence/synthetic_ball_one_frame_resized/after_decoded_frame0.png": {
+    "sha256": "65c079a2d704f52f203ff0a7c3ec05cf43d16a3360cbac6be092d979d8b03c98",
+    "bytes": 3754
+  },
+  "evidence/synthetic_ball_one_frame_resized/after_raw_frame0.png": {
+    "sha256": "cc750917c9689ed006046551d3aa8a661a6414b68eb12fa1cafe22f99b2c715e",
+    "bytes": 1393
+  },
+  "evidence/synthetic_ball_one_frame_resized/before.mp4": {
+    "sha256": "19ebfa3f79c3fbe03f399537543e0948e459e51de33de88d5505b360bf2067fa",
+    "bytes": 3419
+  },
+  "evidence/synthetic_ball_one_frame_resized/before_decoded_frame0.png": {
+    "sha256": "bbb959f4c81489a0f821e599aedf4f55fdf37419b061450553394add66e2dd10",
+    "bytes": 3693
+  },
+  "evidence/synthetic_ball_one_frame_resized/before_raw_frame0.png": {
+    "sha256": "4e4e5efbd2e879b43cc630ebfd7a65a56e0a5cdf4bb23d211d11999c22d82bc1",
+    "bytes": 1832
+  },
+  "evidence/synthetic_ball_one_frame_resized/comparison.json": {
+    "sha256": "dd99b830ada551279b3195c15b1cc4ace62723dc01dc76d8082fc87d5b8617ae",
+    "bytes": 2592
+  },
+  "evidence/synthetic_rest_resized/after.mp4": {
+    "sha256": "ddd25742f1651cfee2649af6167357182b0f896e0dd86bb8896ecb99f155718a",
+    "bytes": 11587
+  },
+  "evidence/synthetic_rest_resized/after_decoded_frame0.png": {
+    "sha256": "1067758fcbe9b1976c082cb88aef8ba90144c6f0b3cc77409b0382cbacf7aeb0",
+    "bytes": 5303
+  },
+  "evidence/synthetic_rest_resized/after_raw_frame0.png": {
+    "sha256": "383f3b19a710eba0d14193b2564c1bbb247ea1392d0f65fe77114c10617147e8",
+    "bytes": 2178
+  },
+  "evidence/synthetic_rest_resized/before.mp4": {
+    "sha256": "7ff85ebc716e772fc144db2c48e2229ed86fb518aa3ab8547772b51abf48babe",
+    "bytes": 11576
+  },
+  "evidence/synthetic_rest_resized/before_decoded_frame0.png": {
+    "sha256": "47ec13caaee07ec723d08317549c744f65cb61e23e2776acc6259f4312c938bd",
+    "bytes": 5338
+  },
+  "evidence/synthetic_rest_resized/before_raw_frame0.png": {
+    "sha256": "dd1a3335de8e847897b5f074c98867c9f6fa82318ab6b8802f48ee2587f7b050",
+    "bytes": 3475
+  },
+  "evidence/synthetic_rest_resized/comparison.json": {
+    "sha256": "6f2335a5bb62803a0d69796c4528dfa24a28ccd946c38ee32bdb781a5581b1ae",
+    "bytes": 6422
+  }
+}
