@@ -1,0 +1,178 @@
+{
+ "judge_noise_sd_offset": {
+  "overall": 0.01621236501452115,
+  "Physical Laws": 0.020972137890056426,
+  "Visual Integrity": 0.009825074224271155,
+  "Geometric Reasoning": 0.012884100304420274,
+  "Semantic Alignment": 0.11409476871503212
+ },
+ "orig_mean": {
+  "overall": 0.6743209885481076,
+  "Physical Laws": 0.6286789273015327,
+  "Visual Integrity": 0.7469525380680958,
+  "Geometric Reasoning": 0.6779132744090425,
+  "Semantic Alignment": 0.6436779393504063
+ },
+ "drops": {
+  "freeze": {
+   "overall": {
+    "mean": 0.06701499064309661,
+    "se": 0.008152913083357628,
+    "n": 12,
+    "frac_orig_higher": 1.0
+   },
+   "Physical Laws": {
+    "mean": 0.08391527862598498,
+    "se": 0.013709948487086121,
+    "n": 12,
+    "frac_orig_higher": 1.0
+   },
+   "Visual Integrity": {
+    "mean": 0.006947389493385951,
+    "se": 0.004163254400465291,
+    "n": 12,
+    "frac_orig_higher": 0.75
+   },
+   "Geometric Reasoning": {
+    "mean": 0.06257982500311401,
+    "se": 0.010039804714430948,
+    "n": 12,
+    "frac_orig_higher": 1.0
+   },
+   "Semantic Alignment": {
+    "mean": 0.24358440819196403,
+    "se": 0.05491941653443044,
+    "n": 12,
+    "frac_orig_higher": 0.8333333333333334
+   }
+  },
+  "noise": {
+   "overall": {
+    "mean": 0.07144883679799159,
+    "se": 0.009470785652861812,
+    "n": 12,
+    "frac_orig_higher": 1.0
+   },
+   "Physical Laws": {
+    "mean": 0.04379966132756737,
+    "se": 0.009887391675538532,
+    "n": 12,
+    "frac_orig_higher": 0.9166666666666666
+   },
+   "Visual Integrity": {
+    "mean": 0.12606889257828394,
+    "se": 0.006041987266575173,
+    "n": 12,
+    "frac_orig_higher": 1.0
+   },
+   "Geometric Reasoning": {
+    "mean": 0.019509495339459854,
+    "se": 0.0030773012999127775,
+    "n": 12,
+    "frac_orig_higher": 0.9166666666666666
+   },
+   "Semantic Alignment": {
+    "mean": 0.14815839674944678,
+    "se": 0.0678531230123248,
+    "n": 12,
+    "frac_orig_higher": 0.6666666666666666
+   }
+  },
+  "reverse": {
+   "overall": {
+    "mean": 0.004937729654976945,
+    "se": 0.0027313315078488294,
+    "n": 12,
+    "frac_orig_higher": 0.75
+   },
+   "Physical Laws": {
+    "mean": -0.0007462593726813663,
+    "se": 0.004370684291732752,
+    "n": 12,
+    "frac_orig_higher": 0.5
+   },
+   "Visual Integrity": {
+    "mean": 0.002554521895945072,
+    "se": 0.003209671781308606,
+    "n": 12,
+    "frac_orig_higher": 0.5833333333333334
+   },
+   "Geometric Reasoning": {
+    "mean": 0.008349580069383014,
+    "se": 0.005058224224711703,
+    "n": 12,
+    "frac_orig_higher": 0.75
+   },
+   "Semantic Alignment": {
+    "mean": 0.03894925303757191,
+    "se": 0.02112421676700047,
+    "n": 12,
+    "frac_orig_higher": 0.6666666666666666
+   }
+  },
+  "shuffle": {
+   "overall": {
+    "mean": 0.004760077879883529,
+    "se": 0.008463037859405031,
+    "n": 12,
+    "frac_orig_higher": 0.4166666666666667
+   },
+   "Physical Laws": {
+    "mean": 0.0165602166619566,
+    "se": 0.012392997571242832,
+    "n": 12,
+    "frac_orig_higher": 0.5833333333333334
+   },
+   "Visual Integrity": {
+    "mean": -0.0017559497306744258,
+    "se": 0.0028060119634698063,
+    "n": 12,
+    "frac_orig_higher": 0.5
+   },
+   "Geometric Reasoning": {
+    "mean": -0.0027615225149525227,
+    "se": 0.003615008813055077,
+    "n": 12,
+    "frac_orig_higher": 0.5
+   },
+   "Semantic Alignment": {
+    "mean": -0.0180703136138618,
+    "se": 0.04287895354004215,
+    "n": 12,
+    "frac_orig_higher": 0.6666666666666666
+   }
+  },
+  "splice": {
+   "overall": {
+    "mean": 0.03336733147406423,
+    "se": 0.013838569514431518,
+    "n": 12,
+    "frac_orig_higher": 0.6666666666666666
+   },
+   "Physical Laws": {
+    "mean": 0.0394394573962523,
+    "se": 0.016435133492905086,
+    "n": 12,
+    "frac_orig_higher": 0.5833333333333334
+   },
+   "Visual Integrity": {
+    "mean": 0.027039191996057827,
+    "se": 0.003649659798045754,
+    "n": 12,
+    "frac_orig_higher": 1.0
+   },
+   "Geometric Reasoning": {
+    "mean": 0.009677924422754206,
+    "se": 0.005748307501710376,
+    "n": 12,
+    "frac_orig_higher": 0.75
+   },
+   "Semantic Alignment": {
+    "mean": 0.08774734226365884,
+    "se": 0.09473107703760016,
+    "n": 12,
+    "frac_orig_higher": 0.6666666666666666
+   }
+  }
+ }
+}
