@@ -1,0 +1,489 @@
+{
+  "finding_id": 1175,
+  "author": "rog-cc",
+  "task_id": 31,
+  "replication_task_id": 61,
+  "replicated_by": "rahul-5-agy",
+  "timestamp": "2026-11-01T06:00:00Z",
+  "motion_summary": {
+    "empty_mean": 2.285861909389496,
+    "empty_se": 0.06716009714849541,
+    "nvneg_mean": 1.723288133740425,
+    "nvneg_se": 0.033786991302565926,
+    "paired_diffs": [
+      0.34687721729278564,
+      0.8263511657714844,
+      0.34982407093048096,
+      0.5976765155792236,
+      0.3316887617111206,
+      0.7028141021728516,
+      0.3967142105102539,
+      0.9486441612243652
+    ]
+  },
+  "mae_results": {
+    "inv_vs_same": {
+      "ball1_s1_empty": {
+        "pair": [
+          "negmeta_inv_empty_ball1_s1",
+          "negmeta_same_empty_ball1_s1"
+        ],
+        "mae": 3.0476698875427246
+      },
+      "ball1_s1_nvneg": {
+        "pair": [
+          "negmeta_inv_nvneg_ball1_s1",
+          "negmeta_same_nvneg_ball1_s1"
+        ],
+        "mae": 2.112922191619873
+      },
+      "ball1_s2_empty": {
+        "pair": [
+          "negmeta_inv_empty_ball1_s2",
+          "negmeta_same_empty_ball1_s2"
+        ],
+        "mae": 5.393061637878418
+      },
+      "ball1_s2_nvneg": {
+        "pair": [
+          "negmeta_inv_nvneg_ball1_s2",
+          "negmeta_same_nvneg_ball1_s2"
+        ],
+        "mae": 3.35094952583313
+      },
+      "ball2_s1_empty": {
+        "pair": [
+          "negmeta_inv_empty_ball2_s1",
+          "negmeta_same_empty_ball2_s1"
+        ],
+        "mae": 2.7318968772888184
+      },
+      "ball2_s1_nvneg": {
+        "pair": [
+          "negmeta_inv_nvneg_ball2_s1",
+          "negmeta_same_nvneg_ball2_s1"
+        ],
+        "mae": 2.3599886894226074
+      },
+      "ball2_s2_empty": {
+        "pair": [
+          "negmeta_inv_empty_ball2_s2",
+          "negmeta_same_empty_ball2_s2"
+        ],
+        "mae": 6.120550632476807
+      },
+      "ball2_s2_nvneg": {
+        "pair": [
+          "negmeta_inv_nvneg_ball2_s2",
+          "negmeta_same_nvneg_ball2_s2"
+        ],
+        "mae": 2.5540597438812256
+      }
+    },
+    "empty_vs_nvneg": {
+      "ball1_s1_inv": {
+        "pair": [
+          "negmeta_inv_empty_ball1_s1",
+          "negmeta_inv_nvneg_ball1_s1"
+        ],
+        "mae": 5.8058905601501465
+      },
+      "ball1_s1_same": {
+        "pair": [
+          "negmeta_same_empty_ball1_s1",
+          "negmeta_same_nvneg_ball1_s1"
+        ],
+        "mae": 6.208452224731445
+      },
+      "ball1_s2_inv": {
+        "pair": [
+          "negmeta_inv_empty_ball1_s2",
+          "negmeta_inv_nvneg_ball1_s2"
+        ],
+        "mae": 15.173009872436523
+      },
+      "ball1_s2_same": {
+        "pair": [
+          "negmeta_same_empty_ball1_s2",
+          "negmeta_same_nvneg_ball1_s2"
+        ],
+        "mae": 14.695696830749512
+      },
+      "ball2_s1_inv": {
+        "pair": [
+          "negmeta_inv_empty_ball2_s1",
+          "negmeta_inv_nvneg_ball2_s1"
+        ],
+        "mae": 6.008208274841309
+      },
+      "ball2_s1_same": {
+        "pair": [
+          "negmeta_same_empty_ball2_s1",
+          "negmeta_same_nvneg_ball2_s1"
+        ],
+        "mae": 5.681933403015137
+      },
+      "ball2_s2_inv": {
+        "pair": [
+          "negmeta_inv_empty_ball2_s2",
+          "negmeta_inv_nvneg_ball2_s2"
+        ],
+        "mae": 15.03870964050293
+      },
+      "ball2_s2_same": {
+        "pair": [
+          "negmeta_same_empty_ball2_s2",
+          "negmeta_same_nvneg_ball2_s2"
+        ],
+        "mae": 15.115654945373535
+      }
+    },
+    "seed1_vs_seed2": {
+      "ball1_inv_empty": {
+        "pair": [
+          "negmeta_inv_empty_ball1_s1",
+          "negmeta_inv_empty_ball1_s2"
+        ],
+        "mae": 12.404526710510254
+      },
+      "ball1_inv_nvneg": {
+        "pair": [
+          "negmeta_inv_nvneg_ball1_s1",
+          "negmeta_inv_nvneg_ball1_s2"
+        ],
+        "mae": 11.281044960021973
+      },
+      "ball1_same_empty": {
+        "pair": [
+          "negmeta_same_empty_ball1_s1",
+          "negmeta_same_empty_ball1_s2"
+        ],
+        "mae": 12.202619552612305
+      },
+      "ball1_same_nvneg": {
+        "pair": [
+          "negmeta_same_nvneg_ball1_s1",
+          "negmeta_same_nvneg_ball1_s2"
+        ],
+        "mae": 11.601910591125488
+      },
+      "ball2_inv_empty": {
+        "pair": [
+          "negmeta_inv_empty_ball2_s1",
+          "negmeta_inv_empty_ball2_s2"
+        ],
+        "mae": 12.154790878295898
+      },
+      "ball2_inv_nvneg": {
+        "pair": [
+          "negmeta_inv_nvneg_ball2_s1",
+          "negmeta_inv_nvneg_ball2_s2"
+        ],
+        "mae": 10.601600646972656
+      },
+      "ball2_same_empty": {
+        "pair": [
+          "negmeta_same_empty_ball2_s1",
+          "negmeta_same_empty_ball2_s2"
+        ],
+        "mae": 11.97559642791748
+      },
+      "ball2_same_nvneg": {
+        "pair": [
+          "negmeta_same_nvneg_ball2_s1",
+          "negmeta_same_nvneg_ball2_s2"
+        ],
+        "mae": 10.62962818145752
+      }
+    },
+    "summary": {
+      "inv_vs_same_min": 2.112922191619873,
+      "inv_vs_same_max": 6.120550632476807,
+      "inv_vs_same_mean": 3.4588873982429504,
+      "empty_vs_nvneg_min": 5.681933403015137,
+      "empty_vs_nvneg_max": 15.173009872436523,
+      "empty_vs_nvneg_mean": 10.465944468975067,
+      "seed_noise_min": 10.601600646972656,
+      "seed_noise_max": 12.404526710510254,
+      "seed_noise_mean": 11.606464743614197
+    }
+  },
+  "firstfall_results": {
+    "negmeta_inv_empty_ball1_s1": {
+      "flag": "no_free_fall",
+      "fall_px": 3.363636363636367,
+      "g": 1.7292899063925276,
+      "onset": null,
+      "fall_time_s": -0.16666655977687367
+    },
+    "negmeta_inv_nvneg_ball1_s1": {
+      "flag": "weak",
+      "fall_px": 0.0,
+      "g": 1.2449055205631614,
+      "onset": null,
+      "fall_time_s": -0.12499997208367368
+    },
+    "negmeta_same_empty_ball1_s1": {
+      "flag": "weak",
+      "fall_px": 115.86147186147186,
+      "g": 0.391312718535091,
+      "onset": null,
+      "fall_time_s": 1.875
+    },
+    "negmeta_same_nvneg_ball1_s1": {
+      "flag": "weak",
+      "fall_px": 0.0,
+      "g": 3.0123977541539593,
+      "onset": null,
+      "fall_time_s": -0.16666662679522212
+    },
+    "negmeta_inv_empty_ball1_s2": {
+      "flag": "ok",
+      "fall_px": 252.70005175983437,
+      "g": 3.1265098188588145,
+      "onset": null,
+      "fall_time_s": 0.5398010426792886
+    },
+    "negmeta_inv_nvneg_ball1_s2": {
+      "flag": "weak",
+      "fall_px": 0.0,
+      "g": 8.631067371663708,
+      "onset": null,
+      "fall_time_s": -0.2083333125705277
+    },
+    "negmeta_same_empty_ball1_s2": {
+      "flag": "weak",
+      "fall_px": 0.0,
+      "g": 21.365570994841583,
+      "onset": null,
+      "fall_time_s": -0.12559715873385344
+    },
+    "negmeta_same_nvneg_ball1_s2": {
+      "flag": "weak",
+      "fall_px": 209.4937031399159,
+      "g": 0.029229567908071855,
+      "onset": null,
+      "fall_time_s": 4.583333333333327
+    },
+    "negmeta_inv_empty_ball2_s1": {
+      "flag": "weak",
+      "fall_px": 0.6422493505937723,
+      "g": -3.9081184321747418,
+      "onset": null,
+      "fall_time_s": -0.04166656842471317
+    },
+    "negmeta_inv_nvneg_ball2_s1": {
+      "flag": "weak",
+      "fall_px": 6.793103448275865,
+      "g": 1.060273603987841,
+      "onset": null,
+      "fall_time_s": 0.08281525158445449
+    },
+    "negmeta_same_empty_ball2_s1": {
+      "flag": "no_free_fall",
+      "fall_px": 2.4048806462505468,
+      "g": 0.013754196740161309,
+      "onset": null,
+      "fall_time_s": 1.1249999999962126
+    },
+    "negmeta_same_nvneg_ball2_s1": {
+      "flag": "weak",
+      "fall_px": 63.0,
+      "g": 0.6993808192308711,
+      "onset": null,
+      "fall_time_s": 0.7635656029875821
+    },
+    "negmeta_inv_empty_ball2_s2": {
+      "flag": "ok",
+      "fall_px": 177.5553042828275,
+      "g": 3.0409591567531478,
+      "onset": null,
+      "fall_time_s": 0.4785997993425345
+    },
+    "negmeta_inv_nvneg_ball2_s2": {
+      "flag": "weak",
+      "fall_px": 0.0,
+      "g": 10.821178821887571,
+      "onset": null,
+      "fall_time_s": -0.1666666657985992
+    },
+    "negmeta_same_empty_ball2_s2": {
+      "flag": "weak",
+      "fall_px": 0.0,
+      "g": 15.983795382091095,
+      "onset": null,
+      "fall_time_s": -0.16666665632640285
+    },
+    "negmeta_same_nvneg_ball2_s2": {
+      "flag": "no_free_fall",
+      "fall_px": 60.12475021410219,
+      "g": 0.00591616966859032,
+      "onset": null,
+      "fall_time_s": 1.0416666666666665
+    }
+  },
+  "classifications": {
+    "negmeta_inv_empty_ball1_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.323); arm swings down to it. firstfall flag=no_free_fall (fall_px=3.4).",
+      "mean_frame_diff": 2.0914204120635986,
+      "plank_diff_max": 41.992210388183594,
+      "firstfall_flag": "no_free_fall",
+      "firstfall_fall_px": 3.363636363636367,
+      "firstfall_g": 1.7292899063925276,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_nvneg_ball1_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.267); arm swings down to it. firstfall flag=weak (fall_px=0.0).",
+      "mean_frame_diff": 1.744543194770813,
+      "plank_diff_max": 17.73415184020996,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.0,
+      "firstfall_g": 1.2449055205631614,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_empty_ball1_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.315); arm swings down to it. firstfall flag=weak (fall_px=115.9).",
+      "mean_frame_diff": 2.0701208114624023,
+      "plank_diff_max": 38.7772102355957,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 115.86147186147186,
+      "firstfall_g": 0.391312718535091,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_nvneg_ball1_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.267); arm swings down to it. firstfall flag=weak (fall_px=0.0).",
+      "mean_frame_diff": 1.7384320497512817,
+      "plank_diff_max": 17.078332901000977,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.0,
+      "firstfall_g": 3.0123977541539593,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_empty_ball1_s2": {
+      "mode": "violent_swing_and_plank_flip",
+      "note": "Arm violently impacts and flips plank (plank diff max=71.12 vs f0). firstfall flag=ok.",
+      "mean_frame_diff": 2.329463243484497,
+      "plank_diff_max": 71.1156997680664,
+      "firstfall_flag": "ok",
+      "firstfall_fall_px": 252.70005175983437,
+      "firstfall_g": 3.1265098188588145,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_nvneg_ball1_s2": {
+      "mode": "stationary_hold_then_slow_lower",
+      "note": "Arm stationary to ~f36, then slowly lowers held ball to plank (plank diff max=17.95). firstfall flag=weak (g=8.63).",
+      "mean_frame_diff": 1.5031120777130127,
+      "plank_diff_max": 17.953393936157227,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.0,
+      "firstfall_g": 8.631067371663708,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_empty_ball1_s2": {
+      "mode": "violent_swing_and_plank_flip",
+      "note": "Arm violently impacts and flips plank (plank diff max=56.81 vs f0). firstfall flag=weak.",
+      "mean_frame_diff": 2.362190008163452,
+      "plank_diff_max": 56.814605712890625,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.0,
+      "firstfall_g": 21.365570994841583,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_nvneg_ball1_s2": {
+      "mode": "stationary_hold_then_slow_lower",
+      "note": "Arm stationary to ~f36, then slowly lowers held ball to plank (plank diff max=19.39). firstfall flag=weak (g=0.03).",
+      "mean_frame_diff": 1.6593759059906006,
+      "plank_diff_max": 19.391090393066406,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 209.4937031399159,
+      "firstfall_g": 0.029229567908071855,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_empty_ball2_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.375); arm swings down to it. firstfall flag=weak (fall_px=0.6).",
+      "mean_frame_diff": 2.187281608581543,
+      "plank_diff_max": 43.29769515991211,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.6422493505937723,
+      "firstfall_g": -3.9081184321747418,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_nvneg_ball2_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.280); arm swings down to it. firstfall flag=weak (fall_px=6.8).",
+      "mean_frame_diff": 1.837457537651062,
+      "plank_diff_max": 18.267364501953125,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 6.793103448275865,
+      "firstfall_g": 1.060273603987841,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_empty_ball2_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.344); arm swings down to it. firstfall flag=no_free_fall (fall_px=2.4).",
+      "mean_frame_diff": 2.1876392364501953,
+      "plank_diff_max": 38.900150299072266,
+      "firstfall_flag": "no_free_fall",
+      "firstfall_fall_px": 2.4048806462505468,
+      "firstfall_g": 0.013754196740161309,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_nvneg_ball2_s1": {
+      "mode": "phantom_spawn_on_plank",
+      "note": "Arm lifts; ball appears on plank (plank dark max=0.275); arm swings down to it. firstfall flag=weak (fall_px=63.0).",
+      "mean_frame_diff": 1.7909250259399414,
+      "plank_diff_max": 17.910757064819336,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 63.0,
+      "firstfall_g": 0.6993808192308711,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_empty_ball2_s2": {
+      "mode": "violent_swing_and_plank_flip",
+      "note": "Arm violently impacts and flips plank (plank diff max=71.39 vs f0). firstfall flag=ok.",
+      "mean_frame_diff": 2.35819673538208,
+      "plank_diff_max": 71.39351654052734,
+      "firstfall_flag": "ok",
+      "firstfall_fall_px": 177.5553042828275,
+      "firstfall_g": 3.0409591567531478,
+      "clean_release_free_fall": false
+    },
+    "negmeta_inv_nvneg_ball2_s2": {
+      "mode": "stationary_hold_then_slow_lower",
+      "note": "Arm stationary to ~f36, then slowly lowers held ball to plank (plank diff max=22.14). firstfall flag=weak (g=10.82).",
+      "mean_frame_diff": 1.7605202198028564,
+      "plank_diff_max": 22.143484115600586,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.0,
+      "firstfall_g": 10.821178821887571,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_empty_ball2_s2": {
+      "mode": "violent_swing_and_plank_flip",
+      "note": "Arm violently impacts and flips plank (plank diff max=57.80 vs f0). firstfall flag=weak.",
+      "mean_frame_diff": 2.7005832195281982,
+      "plank_diff_max": 57.804969787597656,
+      "firstfall_flag": "weak",
+      "firstfall_fall_px": 0.0,
+      "firstfall_g": 15.983795382091095,
+      "clean_release_free_fall": false
+    },
+    "negmeta_same_nvneg_ball2_s2": {
+      "mode": "stationary_hold_then_slow_lower",
+      "note": "Arm stationary to ~f36, then slowly lowers held ball to plank (plank diff max=22.23). firstfall flag=no_free_fall (g=0.01).",
+      "mean_frame_diff": 1.751939058303833,
+      "plank_diff_max": 22.232999801635742,
+      "firstfall_flag": "no_free_fall",
+      "firstfall_fall_px": 60.12475021410219,
+      "firstfall_g": 0.00591616966859032,
+      "clean_release_free_fall": false
+    }
+  },
+  "clean_release_count": 0,
+  "total_clips": 16
+}
