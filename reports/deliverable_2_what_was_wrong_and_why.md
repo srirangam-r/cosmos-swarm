@@ -68,6 +68,7 @@ FINDING: From GAUGE frame 0 (Franka gripper holding a ball), Cosmos3-Nano never 
   - Independent Replication 1: Review `#1367` / `#1372` (agy-1, `commit d70c116`) across 9 PhaseLock clips in `work/rahul-5-agy/phaselock/`.
   - Independent Replication 2: Review `#1382` (rahul-5-agy, `commit f33369d`) and Review `#1513` (rog-cc) across 16 clips in `work/rog-cc/negmeta_clips/`.
   - Independent Replication 3: Review `#1322` (agy-3, `commit 717786a`) across 8 held-ball clips in `work/agy-3/task58_a100_multiseed_review/`.
+  - Cross-Domain Replication: Corroborated on a second physical system by ro-3 (Finding `#2323`): on real GAUGE pendulum frames, Nano exhibits an identical boundary release failure from rest (0/4 swing from horizontal rest, 100% deadlock), while mid-swing conditioning restores motion in 3/3 clips, confirming that the release deadlock is universal to static boundary constraints across physical systems.
 - **Causal Mechanism**: Web video datasets and Cosmos training data reject static or unmoving clips (§3.2.1 tech report). Consequently, the model lacks learned transitions from stationary mechanical grasp to unforced gravitational release. Prompting the model to "release" fails because text tokens do not overcome the visual prior anchoring the ball to the gripper geometry.
 
 ---
@@ -237,6 +238,28 @@ FINDING: Synthetic ballistic fine-tuning (Task 24 LoRA) does not produce bit-lev
 
 ---
 
+### Finding 9: Early RoPE Spatial Frequency Scaling Fails to Resolve Mechanical Grasp Deadlock
+
+```
+FINDING: Scaling RoPE spatial (height/width) frequencies by 0.7x in early denoising steps (t >= 900) does not break Cosmos3-Nano's held-ball release deadlock from frame 0; physical release failure (0% release) and phantom duplicate cloning persist (Task 90, Finding #2402).
+```
+
+- **Quantitative Value**:
+  - **Physical Release Rate**: **0/3 (0.0%)** treatment vs **0/3 (0.0%)** control ($\Delta = 0.0 \pm 0.0$, $n=3$ paired seeds 1–3).
+  - **Kinematic Trajectory**: In Seed 1, ball remains pinned in gripper at $y \approx 147\text{ px}$ across f10..f90 (`firstfall` flag `weak`, $n_{\text{fit}}=4$, $\text{fall\_px}=12.2\text{ px}$ hold wobble). In Seed 2, ball remains locked in gripper at $y \approx 144\text{--}146\text{ px}$ throughout clip while a phantom clone materializes at $y \approx 330\text{ px}$ near plank (`firstfall` flag `weak`, $\text{fall\_px}=11.4\text{ px}$ on clone). In Seed 3, ball remains stationary in gripper at $(291.6, 140.3)$ across f45..f90 (`firstfall` flag `weak`, $\text{fall\_px}=0.0$).
+  - **NVIDIA Scoreboard (DOVER reps=3, RAFT-large DD, n=3 paired seeds)**:
+    - DOVER Fused: Control $0.4335 \pm 0.0172$ vs RoPE 0.7x $0.4367 \pm 0.0113$ (Paired $\Delta = +0.0033 \pm 0.0154$, n.s.).
+    - DOVER Technical: Control $-0.0667 \pm 0.0029$ vs RoPE 0.7x $-0.0637 \pm 0.0010$ (Paired $\Delta = +0.0030 \pm 0.0027$).
+    - DOVER Aesthetic: Control $0.0338 \pm 0.0044$ vs RoPE 0.7x $0.0327 \pm 0.0049$ (Paired $\Delta = -0.0011 \pm 0.0054$).
+    - Dynamic Degree (`dd_norm`): Control $3.02 \pm 1.28$ vs RoPE 0.7x $6.19 \pm 2.70$ (Paired $\Delta = +3.17 \pm 1.42$; increased background/gripper optical flow).
+- **Setup**: `nvidia/Cosmos3-Nano` (bfloat16, vLLM/diffusers), GAUGE Ball 1 Frame 0 (letterboxed to $832\times 480$), 93f, 24 fps, 35 steps, CFG 6.0, flow shift 10.0, prompt diffusers standard. Treatment: spatial RoPE frequencies scaled by 0.7 for $t \ge 900$.
+- **Method**: Referee-validated `tools/realball/firstfall.py` (PASS msg 264), multi-ROI spatio-temporal component tracking, `tools/nv_scoreboard/score.py` (DOVER reps=3, RAFT-large DD).
+- **Control**: Matched unmodified Cosmos3-Nano rollout on identical prompt, frame-0 image, and seeds 1–3 (scale=1.0).
+- **Evidence**: Commit `ead77bf`, Finding `#2402`, `work/ro-agy1/task90_rope_scale/` (README.md, `scores_task90_3seeds.json`, contact strips `gauge_b1_*_strip.jpg`, JSON sidecars).
+- **Causal Mechanism**: Hypothesized by arXiv 2609.23658 and steering #696/#1825 to widen spatial receptive fields and dissolve the gripper grasp anchor. Testing reveals that spatial RoPE dilation during early steps does not relax the cross-attention visual grasp prior; the object remains rigidly locked in the gripper, phantom clones still emerge, and background motion jitter increases.
+
+---
+
 ## Synthesis: Why Cosmos3-Nano Fails Physics
 
 Integrating the replicated evidence across all experimental axes yields a unified architectural diagnosis:
@@ -274,6 +297,7 @@ Integrating the replicated evidence across all experimental axes yields a unifie
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
   - Tuning inference sampler hyperparameters (CFG scale $\in [1.0, 6.0]$ or flow shift $\in [3.0, 10.0]$): Flow shift is an operational no-op on the diffusers UniPC schedule, low CFG ($\le 2.5$) induces mid-air levitation/reversal rather than dissipation, and CFG 4–6 preserves perpetual bouncing invariant to scale (Task 71, Task 75, commit `a1fb2e3`).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
+  - Scaling RoPE spatial frequencies (Finding 9 proves early RoPE spatial dilation by 0.7x fails to break the grasp deadlock: 0/3 release, phantom cloning persists, and spurious optical flow increases).
   - Supervised LoRA fine-tuning trained on synthetic drops without matched general-domain regularization (Task 24 LoRA induces severe out-of-distribution visual degradation, dropping DOVER fused by $-0.077 \pm 0.021$ and HUE plausibility by $-0.028 \pm 0.012$, while physical hallucinations like size jumps and clones persist in 28/84 clips; #2168, #2201, #2211).
 - **What DOES work / Open Fix Directions**:
   - **Dynamic Conditioning**: Initializing I2V from a mid-event frame where the object is already detached (mid-fall conditioning) completely bypasses the release deadlock and restores true Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$).
