@@ -1,0 +1,13 @@
+{
+  "arithmetic_checks": 25,
+  "frozen_codes_and_key": true,
+  "reanalysis_byte_identical_files": 3,
+  "example_movie_file_sha_and_decoded_lengths_pass": 3,
+  "remote_rgb_exact_matches": 0,
+  "local_ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers",
+  "remote_ffmpeg": "ffmpeg version 6.1.1-3ubuntu5+esm15 Copyright (c) 2000-2023 the FFmpeg developers",
+  "source_counts_and_pairs": true,
+  "request_video_contracts": 24,
+  "source_input_job_hashes": 7,
+  "gaussian_doses_byte_exact": true
+}

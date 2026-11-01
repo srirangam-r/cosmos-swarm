@@ -1,0 +1,119 @@
+{
+ "totals": {
+  "b0": {
+   "hover": 4,
+   "fall": 4,
+   "clean_fall": 1,
+   "clone": 8,
+   "morph": 2,
+   "holder_redrawn": 0,
+   "hover_strict": 4,
+   "clean_strict": 0,
+   "clean_lenient": 1
+  },
+  "b05": {
+   "hover": 5,
+   "fall": 3,
+   "clean_fall": 0,
+   "clone": 8,
+   "morph": 2,
+   "holder_redrawn": 2,
+   "hover_strict": 5,
+   "clean_strict": 0,
+   "clean_lenient": 1
+  },
+  "b15": {
+   "hover": 3,
+   "fall": 5,
+   "clean_fall": 2,
+   "clone": 6,
+   "morph": 1,
+   "holder_redrawn": 0,
+   "hover_strict": 2,
+   "clean_strict": 2,
+   "clean_lenient": 2
+  }
+ },
+ "paired_vs_b0": {
+  "b05": {
+   "hover": {
+    "up": 1,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "hover_strict": {
+    "up": 1,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "fall": {
+    "up": 0,
+    "down": 1,
+    "sign_p_two_sided": 1.0
+   },
+   "clean_fall": {
+    "up": 0,
+    "down": 1,
+    "sign_p_two_sided": 1.0
+   },
+   "clean_strict": {
+    "up": 0,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "clean_lenient": {
+    "up": 0,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "holder_redrawn": {
+    "up": 2,
+    "down": 0,
+    "sign_p_two_sided": 0.5
+   }
+  },
+  "b15": {
+   "hover": {
+    "up": 0,
+    "down": 1,
+    "sign_p_two_sided": 1.0
+   },
+   "hover_strict": {
+    "up": 0,
+    "down": 2,
+    "sign_p_two_sided": 0.5
+   },
+   "fall": {
+    "up": 1,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "clean_fall": {
+    "up": 1,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "clean_strict": {
+    "up": 2,
+    "down": 0,
+    "sign_p_two_sided": 0.5
+   },
+   "clean_lenient": {
+    "up": 1,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   },
+   "holder_redrawn": {
+    "up": 0,
+    "down": 0,
+    "sign_p_two_sided": 1.0
+   }
+  }
+ },
+ "n_per_arm": 8,
+ "verdict": [
+  "b05: hover within +-1 of b0",
+  "b15: hover within +-1 of b0",
+  "AGAINST softness (both blur arms within +-1)"
+ ]
+}

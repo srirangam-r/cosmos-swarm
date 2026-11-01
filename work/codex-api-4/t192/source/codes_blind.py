@@ -1,0 +1,35 @@
+# Blind codes for task 174 (sheet IDs from blind.py; key not opened until frozen). Same code definitions as PREREG.
+# hover = original stays suspended (no descent >1 d below its f0 position, no vanish) through f92. Upward drift is allowed but flagged drift_up=1
+#   (rule made explicit at the 9th sheet, still blind; strict 'stays in the spot crop' hover = hover and not drift_up; both are reported).
+# fall = original LEAVES its spot by any route (descends, vanishes, morphs away; = 'leaves' in Addendum 2). clean_fall: PREREG primary. vanish: original disappears without a visible descent.
+import json
+D=dict(hover=0,fall=0,clean_fall=0,clone=0,morph=0,holder_redrawn=0,vanish=0,drift_up=0,ghost=0,borderline=0,note="")
+C={
+ "IAXA": dict(fall=1,morph=1,clone=1,note="SEEN UNBLINDED. f15 ~1.5-2x ball replaces the original at its spot, rises a little, sits high f23-29, descends f30-37 to plank; a small textured ball reappears ~45 px ABOVE the spot f31-92 (identity ambiguous). Spot empty f16-92."),
+ "IEIB": dict(fall=1,vanish=1,clone=1,note="original nudged up f1, gone f2-13 (corridor empty); a ~2x ball enters from the top f14, falls f14-19, bounces, rolls on plank."),
+ "TIYF": dict(hover=1,holder_redrawn=1,clone=1,note="SEEN UNBLINDED. a hanging cable/gripper column is drawn above the ball f1-4 and holds it all clip; whitish bits drop f12-14; a ~3x ball enters from the top f14-15 and falls/bounces."),
+ "ZOSL": dict(hover=1,clone=1,note="original hovers at its spot f0-92; ~3x ball enters from the top f11-12, falls f12-19, bounces, rolls on plank."),
+ "NHFL": dict(fall=1,vanish=1,clone=1,note="original gone at f2, replaced by a small red light that drifts right; camera/scene shifts (plank angle changes, green light gone); a ~5x ball bounces in the foreground f6-90."),
+ "TMGC": dict(hover=1,clone=1,note="original hovers at its spot f0-92; ~3x ball enters top f10-11, falls f11-16, lands, rolls."),
+ "WEWX": dict(hover=1,clone=1,note="original hovers at its spot f0-92 (occluded f8, f24-28 by the clone); ~4x ball enters top f6-7, falls f7-14, keeps bouncing to f90."),
+ "QIAB": dict(hover=1,holder_redrawn=1,clone=1,note="a dark strap/cable is drawn from above f5-6 and the original hangs from it at ~its spot to f92 (a bit larger and glossier, sways); ~2x ball enters top f7-8, falls f8-12, keeps bouncing."),
+ "YDUQ": dict(hover=1,clone=1,drift_up=1,note="DRIFT_UP: original stays suspended but drifts up/right ~1.5 d over f20-40 (leaves the spot crop at the top), then stays there to f92; ~4x ball enters top f7, falls f7-11, bounces to f90; view shifts slightly after f12."),
+ "FDAF": dict(fall=1,morph=1,clone=1,note="the ORIGINAL descends f4-8 (>=4 distinct heights) but breaks into whitish shards f9-11 (morph), smudge reaches the plank f12-13, a ball bounces/rolls on the plank f15-84 with bits flying; a small ball reappears near the spot f88-92 (late clone). Not clean (morph)."),
+ "SCOG": dict(fall=1,morph=1,clone=1,note="the ORIGINAL descends f1-7 but swells ~1.5x at f1 and ~3x by f4-6, with a dark vertical smear above it f5-6; reaches the plank f7, gone f8-10, a ball rolls in from the left f10-11 and bounces; plank empty from ~f66. Not clean (size jump)."),
+ "QODU": dict(fall=1,morph=1,clone=1,note="original rises up/right f1-7 (white specks drop below it), then a ~1.5-2x ball descends from there f8-12 and rolls off lower right f13-14; a small ball sits mid-air ~120 px below the spot f12-36 then lands; a giant foreground ball f18-24. Not clean."),
+ "ZIWQ": dict(fall=1,clean_fall=1,ghost=1,borderline=1,clone=1,note="BORDERLINE clean (ghost convention of hrx_t139_s1/s4): original becomes a white streak f1, a translucent same-size ball at distinct heights f2/f3/f4, plank f4-5 (white box-like blob at impact f5), bounces up f6-10 and down f11-12; white specks stay at the spot all clip (residue, not a ball); more faint balls fall later (f19-23, f30-42)."),
+ "VULF": dict(fall=1,morph=1,clone=1,borderline=1,note="BORDERLINE: the ORIGINAL descends continuously f1-5 (white streak f1, heights f2/f3/f4), plank f5-6, bounces high f9-14 and on; but it grows 22 px -> ~38 px by f3 (~1.7x, gradual), so not clean under the >=1.5x rule; white specks stay at the spot; giant foreground balls pass f12, f24-40, f56, f68, f84."),
+ "VWXL": dict(fall=1,clean_fall=1,note="CLEAN: the original descends continuously f1-11 (>10 distinct heights, size ~kept, slight growth <1.5x), plank ~f12, small bounces f13-23, rolls on plank to f92. Slow (~12 f to plank). A faint grey speck sits at the spot after f4 (likely background)."),
+ "JXKI": dict(fall=1,vanish=1,clone=1,note="original gone f1-5; ~3x ball enters top f6-7, falls f7-11, bounces high repeatedly; giant foreground balls in the spot crop f8-92."),
+ "BURE": dict(fall=1,vanish=1,clone=1,note="original gone f1-5; ~3x ball enters top f6-7, falls f7-11, bounces high repeatedly; two balls on the plank f78-90."),
+ "JZZZ": dict(fall=1,clean_fall=1,ghost=1,note="CLEAN (ghost convention): the original descends f1-4 at distinct heights (y 48->65->100->180->230 in the corridor tile; f3-4 translucent), size kept, reaching plank level ~f4 (fast, ~4 f); after impact a dark blob jumps to the corridor bottom f5-6 (discontinuous), then a small ball bounces at the plank's back edge f8-23 and rolls on the plank."),
+ "FTXP": dict(hover=1,clone=1,note="original hovers at its spot f0-92; ~2x glossy ball enters top f11-14, falls f14-21, bounces, rolls on plank."),
+ "HBYW": dict(hover=1,clone=1,note="original hovers at its spot f0-92; ~2x glossy ball enters top f11-14, falls f14-21, bounces, rolls on plank (near-identical layout to FTXP)."),
+ "DSLM": dict(hover=1,clone=1,note="original hovers at its spot f0-92; ~2x glossy ball enters top f12-14, falls f14-20, bounces, rolls on plank (same layout as FTXP/HBYW)."),
+ "SUER": dict(hover=1,clone=1,note="original hovers at its spot f0-92; a giant (~6x) ball enters top-right f12-13, falls f13-19, lands and rolls on/near the plank."),
+ "KASQ": dict(hover=1,clone=1,note="original hovers at its spot f0-92; a giant (~5x) ball bounces in the foreground from f6 to f90 (enters from the lower right edge ~f18-23 in the corridor)."),
+ "SLVH": dict(hover=1,clone=1,note="original hovers at its spot f0-92; giant (~6x) ball enters top-right f12-13, falls f13-19, lands and rolls (same layout as SUER)."),
+}
+out={k:{**D,**v} for k,v in C.items()}
+json.dump(out,open('codes_blind.json','w'),indent=1)
+print(len(out),'coded')

@@ -1,0 +1,1387 @@
+{
+  "agreement_operational_definitions_differ": {
+    "clean_fall": {
+      "agree": 22,
+      "certain_n": 24,
+      "disagreements": [
+        {
+          "author": 1,
+          "id": "Q04",
+          "independent": "N",
+          "name": "hrb_b0_s11"
+        },
+        {
+          "author": 1,
+          "id": "Q10",
+          "independent": "N",
+          "name": "hrb_b15_s12"
+        }
+      ],
+      "unknown_n": 0
+    },
+    "clone": {
+      "agree": 18,
+      "certain_n": 19,
+      "disagreements": [
+        {
+          "author": 0,
+          "id": "Q10",
+          "independent": "Y",
+          "name": "hrb_b15_s12"
+        }
+      ],
+      "unknown_n": 5
+    },
+    "hover": {
+      "agree": 18,
+      "certain_n": 19,
+      "disagreements": [
+        {
+          "author": 1,
+          "id": "Q21",
+          "independent": "N",
+          "name": "hrb_b05_s1"
+        }
+      ],
+      "unknown_n": 5
+    }
+  },
+  "caveats": [
+    "Same24 clips, one input, no fresh seeds",
+    "Unvalidated partially masked independent LLM coding, U excluded only with denominators shown",
+    "Independent clean_fall requires whole-clip single identity; source first-descent convention differs",
+    "No sigma/checkpoint/initial tensor capture; sampler Karras/ignored shift from source report, not instrumented here",
+    "Intervals descriptive under exchangeable seeds, not scene generalization or equivalence",
+    "Pixel softness does not isolate all aspects of image or latent conditioning"
+  ],
+  "exact_endpoint_matched_pairs": {
+    "b05": 0,
+    "b15": 8
+  },
+  "independent_counts": {
+    "b0": {
+      "clean_fall": {
+        "N": 8,
+        "U": 0,
+        "Y": 0
+      },
+      "clone": {
+        "N": 0,
+        "U": 2,
+        "Y": 6
+      },
+      "hover": {
+        "N": 3,
+        "U": 1,
+        "Y": 4
+      },
+      "original_descends": {
+        "N": 5,
+        "U": 1,
+        "Y": 2
+      }
+    },
+    "b05": {
+      "clean_fall": {
+        "N": 8,
+        "U": 0,
+        "Y": 0
+      },
+      "clone": {
+        "N": 0,
+        "U": 1,
+        "Y": 7
+      },
+      "hover": {
+        "N": 2,
+        "U": 2,
+        "Y": 4
+      },
+      "original_descends": {
+        "N": 5,
+        "U": 2,
+        "Y": 1
+      }
+    },
+    "b15": {
+      "clean_fall": {
+        "N": 7,
+        "U": 0,
+        "Y": 1
+      },
+      "clone": {
+        "N": 1,
+        "U": 2,
+        "Y": 5
+      },
+      "hover": {
+        "N": 4,
+        "U": 2,
+        "Y": 2
+      },
+      "original_descends": {
+        "N": 3,
+        "U": 2,
+        "Y": 3
+      }
+    }
+  },
+  "independent_paired_complete_case": {
+    "b05": {
+      "clean_fall": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4217525162283793,
+          0.4217525162283793
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "included_seeds": [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14
+        ],
+        "mean": 0.0,
+        "n": 8,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 8,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": true
+      },
+      "clone": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5837233962990637,
+          0.5837233962990637
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "included_seeds": [
+          1,
+          2,
+          3,
+          13,
+          14
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 5,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "zero_sample_variance": true
+      },
+      "hover": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5182537580005022,
+          0.5182537580005022
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.4592581264399005
+        ],
+        "included_seeds": [
+          1,
+          2,
+          3,
+          11,
+          13,
+          14
+        ],
+        "mean": 0.0,
+        "n": 6,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 6,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.4592581264399005
+        ],
+        "zero_sample_variance": true
+      },
+      "original_descends": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5182537580005022,
+          0.5182537580005022
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.4592581264399005
+        ],
+        "included_seeds": [
+          1,
+          2,
+          3,
+          11,
+          13,
+          14
+        ],
+        "mean": 0.0,
+        "n": 6,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 6,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.4592581264399005
+        ],
+        "zero_sample_variance": true
+      }
+    },
+    "b15": {
+      "clean_fall": {
+        "bootstrap95": [
+          0.0,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4201814039436605,
+          0.5754500196169428
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "included_seeds": [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14
+        ],
+        "mean": 0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.5,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.1705780313762874,
+          0.4205780313762874
+        ],
+        "ties": 7,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      },
+      "clone": {
+        "bootstrap95": [
+          -0.75,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.8477699852319124,
+          0.6624900913361628
+        ],
+        "delta": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "down": 1,
+        "down_rate_cp95": [
+          0.006309463209709866,
+          0.8058795503167565
+        ],
+        "included_seeds": [
+          3,
+          11,
+          13,
+          14
+        ],
+        "mean": -0.25,
+        "n": 4,
+        "seed_se": 0.25,
+        "sign_p_decrease": 0.5,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -1.0,
+          0.5456115763210657
+        ],
+        "ties": 3,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.6023646356164746
+        ],
+        "zero_sample_variance": false
+      },
+      "hover": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5837233962990637,
+          0.5837233962990637
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "included_seeds": [
+          1,
+          4,
+          11,
+          13,
+          14
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 5,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "zero_sample_variance": true
+      },
+      "original_descends": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5837233962990637,
+          0.5837233962990637
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "included_seeds": [
+          3,
+          4,
+          11,
+          13,
+          14
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 5,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "zero_sample_variance": true
+      }
+    }
+  },
+  "input_dose": {
+    "b0": {
+      "laplacian_variance": 718.1174924565803,
+      "mae_from_b0": 0.0,
+      "matches_Pillow_GaussianBlur": true,
+      "matches_cv2_GaussianBlur": true,
+      "max_error_from_Pillow_blur": 0,
+      "name": "v8_A.png",
+      "sha256": "f2ef47b388cf9025b85ed4708e5b82a06c8471c0bb21fe97ac55ba25a44beffc",
+      "shape": [
+        480,
+        832,
+        3
+      ]
+    },
+    "b05": {
+      "laplacian_variance": 269.2967188499132,
+      "mae_from_b0": 0.8408962673611111,
+      "matches_Pillow_GaussianBlur": false,
+      "matches_cv2_GaussianBlur": true,
+      "max_error_from_Pillow_blur": 9,
+      "name": "x_mineA_v8_blur0.5.png",
+      "sha256": "dbd93269eed147dbc773c2e30bffd847d513167e125c5f8de25b9edb52783c32",
+      "shape": [
+        480,
+        832,
+        3
+      ]
+    },
+    "b15": {
+      "laplacian_variance": 8.123069256507277,
+      "mae_from_b0": 2.905145733173077,
+      "matches_Pillow_GaussianBlur": false,
+      "matches_cv2_GaussianBlur": true,
+      "max_error_from_Pillow_blur": 10,
+      "name": "x_mineA_v8_blur1.5.png",
+      "sha256": "51c460824f52aa545f6b16a3179e1ba93a9bdbfb3c7035245b86ede006a07585",
+      "shape": [
+        480,
+        832,
+        3
+      ]
+    },
+    "x_mineA_v8_f0proxy.png": {
+      "laplacian_variance": 578.3932669794708,
+      "sha256": "d860764b92279bee5fc78fae0bba13ffaf8bd902b0b860a006a4181d07988b4d"
+    },
+    "x_t139A_ball1_f0proxy.png": {
+      "laplacian_variance": 465.4686334164748,
+      "sha256": "bb594f8968d36b2c0e5e974deab0ffad8eb1c66024c1861ea28af93742b4ae0f"
+    }
+  },
+  "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "request_video_contracts_pass": 24,
+  "settings": {
+    "flow_shift": 10.0,
+    "fps": 24,
+    "guidance": 6.0,
+    "height": 480,
+    "num_frames": 93,
+    "steps": 35,
+    "width": 832
+  },
+  "source_blind_join_pass": true,
+  "source_code_hashes_verified": {
+    "codes_blind.json": "f101b3b46b1be04c163f7e61f2ffdc5f6459f4af5be55e922b576d3f7e569ae5",
+    "codes_blind.py": "0d9203cf34f30dbb0872cd46a2806630e77422e8c682c52c4da162978feba8f3"
+  },
+  "source_counts": {
+    "b0": {
+      "clean_fall": 1,
+      "clean_lenient": 1,
+      "clean_strict": 0,
+      "clone": 8,
+      "fall": 4,
+      "holder_redrawn": 0,
+      "hover": 4,
+      "hover_strict": 4,
+      "morph": 2
+    },
+    "b05": {
+      "clean_fall": 0,
+      "clean_lenient": 1,
+      "clean_strict": 0,
+      "clone": 8,
+      "fall": 3,
+      "holder_redrawn": 2,
+      "hover": 5,
+      "hover_strict": 5,
+      "morph": 2
+    },
+    "b15": {
+      "clean_fall": 2,
+      "clean_lenient": 2,
+      "clean_strict": 2,
+      "clone": 6,
+      "fall": 5,
+      "holder_redrawn": 0,
+      "hover": 3,
+      "hover_strict": 2,
+      "morph": 1
+    }
+  },
+  "source_input_job_hashes_verified": [
+    "inputs/v8_A.png",
+    "inputs/x_t139A_ball1_f0proxy.png",
+    "inputs/x_mineA_v8_f0proxy.png",
+    "jobs_blur_gpu0.jsonl",
+    "jobs_blur_gpu1.jsonl",
+    "inputs/x_mineA_v8_blur0.5.png",
+    "inputs/x_mineA_v8_blur1.5.png"
+  ],
+  "source_paired": {
+    "b05": {
+      "clean_fall": {
+        "bootstrap95": [
+          -0.375,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5754500196169428,
+          0.4201814039436605
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 1,
+        "down_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "mean": -0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 0.5,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.4205780313762874,
+          0.1705780313762874
+        ],
+        "ties": 7,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": false
+      },
+      "clean_lenient": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4217525162283793,
+          0.4217525162283793
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.0,
+        "n": 8,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 8,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": true
+      },
+      "clean_strict": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4217525162283793,
+          0.4217525162283793
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.0,
+        "n": 8,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 8,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": true
+      },
+      "clone": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4217525162283793,
+          0.4217525162283793
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.0,
+        "n": 8,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 8,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": true
+      },
+      "fall": {
+        "bootstrap95": [
+          -0.375,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5754500196169428,
+          0.4201814039436605
+        ],
+        "delta": [
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 1,
+        "down_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "mean": -0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 0.5,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.4205780313762874,
+          0.1705780313762874
+        ],
+        "ties": 7,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": false
+      },
+      "holder_redrawn": {
+        "bootstrap95": [
+          0.0,
+          0.625
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.3996668390053815,
+          0.694198842944765
+        ],
+        "delta": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.25,
+        "n": 8,
+        "seed_se": 0.16366341767699427,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.25,
+        "sign_p_two_sided": 0.5,
+        "t95": [
+          -0.13700248644224833,
+          0.6370024864422483
+        ],
+        "ties": 6,
+        "up": 2,
+        "up_rate_cp95": [
+          0.031854026249944226,
+          0.6508557944128242
+        ],
+        "zero_sample_variance": false
+      },
+      "hover": {
+        "bootstrap95": [
+          0.0,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4201814039436605,
+          0.5754500196169428
+        ],
+        "delta": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.5,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.1705780313762874,
+          0.4205780313762874
+        ],
+        "ties": 7,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      },
+      "hover_strict": {
+        "bootstrap95": [
+          0.0,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4201814039436605,
+          0.5754500196169428
+        ],
+        "delta": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.5,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.1705780313762874,
+          0.4205780313762874
+        ],
+        "ties": 7,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      },
+      "morph": {
+        "bootstrap95": [
+          -0.375,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5738789073322239,
+          0.5738789073322239
+        ],
+        "delta": [
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 1,
+        "down_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "mean": 0.0,
+        "n": 8,
+        "seed_se": 0.1889822365046136,
+        "sign_p_decrease": 0.75,
+        "sign_p_increase": 0.75,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.44687197944897317,
+          0.44687197944897317
+        ],
+        "ties": 6,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      }
+    },
+    "b15": {
+      "clean_fall": {
+        "bootstrap95": [
+          0.0,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4201814039436605,
+          0.5754500196169428
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.5,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.1705780313762874,
+          0.4205780313762874
+        ],
+        "ties": 7,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      },
+      "clean_lenient": {
+        "bootstrap95": [
+          0.0,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4201814039436605,
+          0.5754500196169428
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.5,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.1705780313762874,
+          0.4205780313762874
+        ],
+        "ties": 7,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      },
+      "clean_strict": {
+        "bootstrap95": [
+          0.0,
+          0.625
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.3996668390053815,
+          0.694198842944765
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.25,
+        "n": 8,
+        "seed_se": 0.16366341767699427,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.25,
+        "sign_p_two_sided": 0.5,
+        "t95": [
+          -0.13700248644224833,
+          0.6370024864422483
+        ],
+        "ties": 6,
+        "up": 2,
+        "up_rate_cp95": [
+          0.031854026249944226,
+          0.6508557944128242
+        ],
+        "zero_sample_variance": false
+      },
+      "clone": {
+        "bootstrap95": [
+          -0.625,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.694198842944765,
+          0.3996668390053815
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "down": 2,
+        "down_rate_cp95": [
+          0.031854026249944226,
+          0.6508557944128242
+        ],
+        "mean": -0.25,
+        "n": 8,
+        "seed_se": 0.16366341767699427,
+        "sign_p_decrease": 0.25,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 0.5,
+        "t95": [
+          -0.6370024864422483,
+          0.13700248644224833
+        ],
+        "ties": 6,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": false
+      },
+      "fall": {
+        "bootstrap95": [
+          0.0,
+          0.375
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4201814039436605,
+          0.5754500196169428
+        ],
+        "delta": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 0.5,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.1705780313762874,
+          0.4205780313762874
+        ],
+        "ties": 7,
+        "up": 1,
+        "up_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "zero_sample_variance": false
+      },
+      "holder_redrawn": {
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.4217525162283793,
+          0.4217525162283793
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 0,
+        "down_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "mean": 0.0,
+        "n": 8,
+        "seed_se": 0.0,
+        "sign_p_decrease": 1.0,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": null,
+        "ties": 8,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": true
+      },
+      "hover": {
+        "bootstrap95": [
+          -0.375,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5754500196169428,
+          0.4201814039436605
+        ],
+        "delta": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 1,
+        "down_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "mean": -0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 0.5,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.4205780313762874,
+          0.1705780313762874
+        ],
+        "ties": 7,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": false
+      },
+      "hover_strict": {
+        "bootstrap95": [
+          -0.625,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.694198842944765,
+          0.3996668390053815
+        ],
+        "delta": [
+          0.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 2,
+        "down_rate_cp95": [
+          0.031854026249944226,
+          0.6508557944128242
+        ],
+        "mean": -0.25,
+        "n": 8,
+        "seed_se": 0.16366341767699427,
+        "sign_p_decrease": 0.25,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 0.5,
+        "t95": [
+          -0.6370024864422483,
+          0.13700248644224833
+        ],
+        "ties": 6,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": false
+      },
+      "morph": {
+        "bootstrap95": [
+          -0.375,
+          0.0
+        ],
+        "bootstrap_warning": "Discrete empirical support; zero-width/one-direction intervals are not equivalence bounds",
+        "conservative_paired95": [
+          -0.5754500196169428,
+          0.4201814039436605
+        ],
+        "delta": [
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "down": 1,
+        "down_rate_cp95": [
+          0.0031597235312519063,
+          0.5265096708752065
+        ],
+        "mean": -0.125,
+        "n": 8,
+        "seed_se": 0.125,
+        "sign_p_decrease": 0.5,
+        "sign_p_increase": 1.0,
+        "sign_p_two_sided": 1.0,
+        "t95": [
+          -0.4205780313762874,
+          0.1705780313762874
+        ],
+        "ties": 7,
+        "up": 0,
+        "up_rate_cp95": [
+          0.0,
+          0.3694166475528192
+        ],
+        "zero_sample_variance": false
+      }
+    }
+  }
+}

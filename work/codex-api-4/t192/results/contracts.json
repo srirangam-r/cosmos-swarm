@@ -1,0 +1,218 @@
+[
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q01",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s13",
+    "seed": 13,
+    "server_clip_id": "20261101T121250_0012_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q02",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s12",
+    "seed": 12,
+    "server_clip_id": "20261101T120305_0009_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q03",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s2",
+    "seed": 2,
+    "server_clip_id": "20261101T114201_0003_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q04",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s11",
+    "seed": 11,
+    "server_clip_id": "20261101T115905_0008_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q05",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s11",
+    "seed": 11,
+    "server_clip_id": "20261101T115930_0008_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q06",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s2",
+    "seed": 2,
+    "server_clip_id": "20261101T114520_0004_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q07",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s1",
+    "seed": 1,
+    "server_clip_id": "20261101T113833_0002_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q08",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s12",
+    "seed": 12,
+    "server_clip_id": "20261101T120604_0010_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q09",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s4",
+    "seed": 4,
+    "server_clip_id": "20261101T115601_0007_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q10",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s12",
+    "seed": 12,
+    "server_clip_id": "20261101T120640_0010_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q11",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s2",
+    "seed": 2,
+    "server_clip_id": "20261101T114530_0004_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q12",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s13",
+    "seed": 13,
+    "server_clip_id": "20261101T121009_0011_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q13",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s14",
+    "seed": 14,
+    "server_clip_id": "20261101T121702_0013_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q14",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s3",
+    "seed": 3,
+    "server_clip_id": "20261101T114857_0005_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q15",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s11",
+    "seed": 11,
+    "server_clip_id": "20261101T120229_0009_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q16",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s14",
+    "seed": 14,
+    "server_clip_id": "20261101T121336_0012_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q17",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s4",
+    "seed": 4,
+    "server_clip_id": "20261101T115236_0006_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q18",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s4",
+    "seed": 4,
+    "server_clip_id": "20261101T115539_0007_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q19",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s14",
+    "seed": 14,
+    "server_clip_id": "20261101T121613_0013_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q20",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s1",
+    "seed": 1,
+    "server_clip_id": "20261101T114157_0003_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8062",
+    "id": "Q21",
+    "image_basename": "x_mineA_v8_blur0.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b05_s1",
+    "seed": 1,
+    "server_clip_id": "20261101T113832_0002_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q22",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s13",
+    "seed": 13,
+    "server_clip_id": "20261101T120927_0011_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q23",
+    "image_basename": "x_mineA_v8_blur1.5.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b15_s3",
+    "seed": 3,
+    "server_clip_id": "20261101T115212_0006_rahul-api"
+  },
+  {
+    "endpoint": "http://100.95.186.53:8061",
+    "id": "Q24",
+    "image_basename": "v8_A.png",
+    "model_declaration": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+    "name": "hrb_b0_s3",
+    "seed": 3,
+    "server_clip_id": "20261101T114842_0005_rahul-api"
+  }
+]

@@ -1,0 +1,962 @@
+[
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; ~2x glossy ball enters top f12-14, falls f14-20, bounces, rolls on plank (same layout as FTXP/HBYW).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q01",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q01",
+      "notes": "Original small ball stays near start through f92; large second ball enters above f12 and bounces below.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b15_s13",
+    "rgb_sha256": "51fb9a74f831e406cc97c88c8b952cfbd43a2ef7248813f958bba79d9004cf20",
+    "seed": 13,
+    "sha256": "2b110bc13a9bdb056fd8665596ebfe486d99f1dade23d8cde931f8bc933e883d",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7245747
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "original gone f1-5; ~3x ball enters top f6-7, falls f7-11, bounces high repeatedly; giant foreground balls in the spot crop f8-92.",
+      "vanish": 1
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q02",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "U",
+      "hover": "U",
+      "id": "Q02",
+      "notes": "Dense f0-23: original fades by f1; larger ball enters from above f5-6. Identity lost; definite replacement/size discontinuity; simultaneous duplicate uncertain.",
+      "original_descends": "U"
+    },
+    "name": "hrb_b0_s12",
+    "rgb_sha256": "46f51e4b247d2380c5dfb65716345d4664284ce60b81a483790773c93e83891f",
+    "seed": 12,
+    "sha256": "784f625fa801a282ef143746b5e9b44f6e53250dacf0568a3bbba237dbd35347",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 10181905
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; ~3x ball enters from the top f11-12, falls f12-19, bounces, rolls on plank.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q03",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q03",
+      "notes": "Original remains at start; second larger ball enters above f12 and remains below.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b0_s2",
+    "rgb_sha256": "f73723f24515524550b8e5447548cd2770ce191bb8cec911a4f11830d5b2122c",
+    "seed": 2,
+    "sha256": "1cb650cc4c6dc028a59cc64193bf12e687923abce87a958964c1e96b844a3684",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8159590
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 1,
+      "clean_fall": 1,
+      "clean_lenient": 1,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 1,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "BORDERLINE clean (ghost convention of hrx_t139_s1/s4): original becomes a white streak f1, a translucent same-size ball at distinct heights f2/f3/f4, plank f4-5 (white box-like blob at impact f5), bounces up f6-10 and down f11-12; white specks stay at the spot all clip (residue, not a ball); more faint balls fall later (f19-23, f30-42).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q04",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "N",
+      "id": "Q04",
+      "notes": "Dense f1-4 follows descending object but severe elongation/tether-like remnants; full overview f24 shows separate second ball beyond table.",
+      "original_descends": "Y"
+    },
+    "name": "hrb_b0_s11",
+    "rgb_sha256": "36a643655a357f6d37959e508fcc505d1226de9bfb2d110571d1deee94f29c66",
+    "seed": 11,
+    "sha256": "910d4c072e174975cab0bb2caa5b938e38dc2c7d93eb3c5336254a333db804e7",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 9294987
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 1,
+      "clean_fall": 0,
+      "clean_lenient": 1,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 1,
+      "note": "BORDERLINE: the ORIGINAL descends continuously f1-5 (white streak f1, heights f2/f3/f4), plank f5-6, bounces high f9-14 and on; but it grows 22 px -> ~38 px by f3 (~1.7x, gradual), so not clean under the >=1.5x rule; white specks stay at the spot; giant foreground balls pass f12, f24-40, f56, f68, f84.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q05",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "U",
+      "hover": "N",
+      "id": "Q05",
+      "notes": "Dense f1-6 follows descent; major size/shape change and thin tether-like trail to start; little stationary highlights are not confidently second balls.",
+      "original_descends": "Y"
+    },
+    "name": "hrb_b05_s11",
+    "rgb_sha256": "881c74d75fb53ad9b4cb79c379e2ed7e1f0d2086a4ad0d2fadc812b64a4bb63b",
+    "seed": 11,
+    "sha256": "e527305c05b8b2a0dfc2b79f2405926498a389984b0724dbc9d1056ff33012a4",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7899567
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; ~3x ball enters top f10-11, falls f11-16, lands, rolls.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q06",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q06",
+      "notes": "Small original stays throughout; much larger ball enters f12.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b05_s2",
+    "rgb_sha256": "49132391b903a3167c24ad7985d10581493e45a7449c165c4095cbccea2e8c97",
+    "seed": 2,
+    "sha256": "296715830114d86d608ac5802d6c40bf858c3d244ca187f7869f2771109770d0",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7435558
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 1,
+      "note": "SEEN UNBLINDED. f15 ~1.5-2x ball replaces the original at its spot, rises a little, sits high f23-29, descends f30-37 to plank; a small textured ball reappears ~45 px ABOVE the spot f31-92 (identity ambiguous). Spot empty f16-92.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q07",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "N",
+      "id": "Q07",
+      "notes": "Original rises by more than a diameter in later frames and exits top; separate ball descends f24-40. Upward departure is not a fall.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b0_s1",
+    "rgb_sha256": "5e81fa2e8a8a523baf6079f9c0017fb4a7d17c8553e10f59413d73d86f83ba76",
+    "seed": 1,
+    "sha256": "9a2772417b53fb362560b7ba60e17e617dbbd8d697ffe9af4115bd7ac78fae30",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8064297
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "original gone f1-5; ~3x ball enters top f6-7, falls f7-11, bounces high repeatedly; two balls on the plank f78-90.",
+      "vanish": 1
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q08",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "U",
+      "id": "Q08",
+      "notes": "Original fades f1-4; larger ball enters above f6. Later f64 and f80 show two balls at once; original identity unresolved.",
+      "original_descends": "U"
+    },
+    "name": "hrb_b05_s12",
+    "rgb_sha256": "41cc96f48bfaf8cc686b1b339c72e1b005dcea61fb3e382764d12a97a95f119c",
+    "seed": 12,
+    "sha256": "cef6fdeed6ed36225b846057b370e0c88351786d429f269a103a32c16d13640c",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 9314003
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 1,
+      "note": "original rises up/right f1-7 (white specks drop below it), then a ~1.5-2x ball descends from there f8-12 and rolls off lower right f13-14; a small ball sits mid-air ~120 px below the spot f12-36 then lands; a giant foreground ball f18-24. Not clean.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q09",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "N",
+      "id": "Q09",
+      "notes": "Small object moves upward first then descends by f12-24; huge separate foreground ball at f12-28.",
+      "original_descends": "Y"
+    },
+    "name": "hrb_b15_s4",
+    "rgb_sha256": "acc97b41a160a20a2fe267abe1c428934862421f15f15187aeaad90849378f56",
+    "seed": 4,
+    "sha256": "80faebbf312ec2e39753dc8b45a832986a3e4b39bc46b3cc95c37112bd3ee112",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 5866947
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 1,
+      "clean_lenient": 1,
+      "clean_strict": 1,
+      "clone": 0,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 1,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "CLEAN (ghost convention): the original descends f1-4 at distinct heights (y 48->65->100->180->230 in the corridor tile; f3-4 translucent), size kept, reaching plank level ~f4 (fast, ~4 f); after impact a dark blob jumps to the corridor bottom f5-6 (discontinuous), then a small ball bounces at the plank's back edge f8-23 and rolls on the plank.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q10",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "N",
+      "id": "Q10",
+      "notes": "Dense f1-4 shows original descending; later simultaneous balls on rear table and plank (e.g. f40-60).",
+      "original_descends": "Y"
+    },
+    "name": "hrb_b15_s12",
+    "rgb_sha256": "3a5cad86605b5d19a4053f867de9cb9e1ad221ca58674966fde5fd93fa53e261",
+    "seed": 12,
+    "sha256": "18e8e892eb0f07556fbff06a9afb224fc99400d9002b9a3254dada1fa4495cb1",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7468770
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "original gone at f2, replaced by a small red light that drifts right; camera/scene shifts (plank angle changes, green light gone); a ~5x ball bounces in the foreground f6-90.",
+      "vanish": 1
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q11",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "U",
+      "hover": "U",
+      "id": "Q11",
+      "notes": "Dense f1-2 original becomes orange cable/strap remnant; larger ball enters from right f3. Original identity uncertain; definite major morph/replacement.",
+      "original_descends": "U"
+    },
+    "name": "hrb_b15_s2",
+    "rgb_sha256": "d700946b0f2c4476d6d42d49e90ba45edc9ec0de350cda973410a35d78e2d7c0",
+    "seed": 2,
+    "sha256": "b41b526d9e04e2af90da90c19a2770cb00aaf8b676663040c5ffc10f9e34ad70",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8576488
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; ~2x glossy ball enters top f11-14, falls f14-21, bounces, rolls on plank (near-identical layout to FTXP).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q12",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q12",
+      "notes": "Original small ball stays; larger shiny ball enters from top f12 and bounces.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b05_s13",
+    "rgb_sha256": "b61962d0a29272270f207262be921f406a8ce36f21eed84db924e86bb3ecdbd7",
+    "seed": 13,
+    "sha256": "4b7f8876e7f69239590f731801a641a4319eabec98fa931c746cef9072271ae5",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7885441
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; a giant (~5x) ball bounces in the foreground from f6 to f90 (enters from the lower right edge ~f18-23 in the corridor).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q13",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q13",
+      "notes": "Original stays near start; huge new ball enters from right f4.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b15_s14",
+    "rgb_sha256": "8068180899978d0b919dcbd3cea3b95723bde1f8d343a791018cfeb9418f1667",
+    "seed": 14,
+    "sha256": "1d3a8c002c03091128d839cf256d66ada81deec17bc3273b0c8e47d71bdf7a7d",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7267091
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 1,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "a dark strap/cable is drawn from above f5-6 and the original hangs from it at ~its spot to f92 (a bit larger and glossier, sways); ~2x ball enters top f7-8, falls f8-12, keeps bouncing.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q14",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q14",
+      "notes": "Dense f0-23: original round marker remains near start while strap appears; separate large ball enters top f6 and bounces.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b05_s3",
+    "rgb_sha256": "07a337acf86264eb71859036f2ca0aa5a15b4f3bcf38a8f270e6a26cd2333014",
+    "seed": 3,
+    "sha256": "a615c8ded3693fbe2993f00a5d0451e17c174352a048c1046525cd13ce3923c3",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 9784615
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 1,
+      "clean_lenient": 1,
+      "clean_strict": 1,
+      "clone": 0,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "CLEAN: the original descends continuously f1-11 (>10 distinct heights, size ~kept, slight growth <1.5x), plank ~f12, small bounces f13-23, rolls on plank to f92. Slow (~12 f to plank). A faint grey speck sits at the spot after f4 (likely background).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q15",
+    "independent": {
+      "clean_fall": "Y",
+      "clone": "N",
+      "hover": "N",
+      "id": "Q15",
+      "notes": "All93 consecutive native crops reviewed plus full overviews. Single continuously followed ball falls f1-14 then bounces/rolls. No definite duplicate or major identity deformation in reviewed region; small highlight changes remain.",
+      "original_descends": "Y"
+    },
+    "name": "hrb_b15_s11",
+    "rgb_sha256": "71cd335f8a48e439b762cf2603c03fd5c7eafc924ece535cfbc5343e25e977d0",
+    "seed": 11,
+    "sha256": "aa994b24dbbe9390da50e9f896bb0a08e689d4ed712770dbd55938d35cbb63dd",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7403017
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; a giant (~6x) ball enters top-right f12-13, falls f13-19, lands and rolls on/near the plank.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q16",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q16",
+      "notes": "Original small ball stays; very large separate ball enters top f12.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b0_s14",
+    "rgb_sha256": "f14f8154f3297a26fd7d7cfbcaa9f0c6c452dcc003baac8061242bb36d79aa53",
+    "seed": 14,
+    "sha256": "c3bf6a9138b6046d9374dccb2f03c8a4db1273453f872318a5fd5d818ee462ba",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8165792
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 1,
+      "note": "the ORIGINAL descends f4-8 (>=4 distinct heights) but breaks into whitish shards f9-11 (morph), smudge reaches the plank f12-13, a ball bounces/rolls on the plank f15-84 with bits flying; a small ball reappears near the spot f88-92 (late clone). Not clean (morph).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q17",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "U",
+      "hover": "N",
+      "id": "Q17",
+      "notes": "Dense f0-8 follows original downward; f9-14 show transparent/fragmented object and trailing detached highlights; not a clean single identity. Duplicate versus fragments uncertain.",
+      "original_descends": "Y"
+    },
+    "name": "hrb_b0_s4",
+    "rgb_sha256": "7b8496bd7653b9e0663827f36c5220c84d158ececbb16ef2dc9ee902550d1274",
+    "seed": 4,
+    "sha256": "701497209aaba0ba6fdc599e79bec15dc22deca19895fec7ebc401f459823661",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8072639
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 1,
+      "note": "the ORIGINAL descends f1-7 but swells ~1.5x at f1 and ~3x by f4-6, with a dark vertical smear above it f5-6; reaches the plank f7, gone f8-10, a ball rolls in from the left f10-11 and bounces; plank empty from ~f66. Not clean (size jump).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q18",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "U",
+      "id": "Q18",
+      "notes": "Dense f1-3 original splits into vertically separated ball-like parts, then becomes large textured/morphing object. Original identity uncertain.",
+      "original_descends": "U"
+    },
+    "name": "hrb_b05_s4",
+    "rgb_sha256": "7f3da394a116021b1c3c002f31986adec999959253f13bb6a0e563b5af1cd12a",
+    "seed": 4,
+    "sha256": "56922c935bb917d19a9c18a5e6e69290b1e7865127286cc794f527b3b5a2adbb",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7400810
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; giant (~6x) ball enters top-right f12-13, falls f13-19, lands and rolls (same layout as SUER).",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q19",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q19",
+      "notes": "Original stays; very large separate ball enters f12.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b05_s14",
+    "rgb_sha256": "7008022bba0423d139cc549b4396082517aff2e0511f89c764872081c6a6797a",
+    "seed": 14,
+    "sha256": "9da81ae1d6116bea112948626e09068590a7651b380b7136d40371e28d974c01",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7535351
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 1,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 0,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "original nudged up f1, gone f2-13 (corridor empty); a ~2x ball enters from the top f14, falls f14-19, bounces, rolls on plank.",
+      "vanish": 1
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q20",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "U",
+      "hover": "N",
+      "id": "Q20",
+      "notes": "Dense f1-3 original rises and exits top, absent f4-12; a larger ball returns f13-15. Long gap plus size change prevents original descent identity; no definite simultaneous duplicate seen.",
+      "original_descends": "U"
+    },
+    "name": "hrb_b15_s1",
+    "rgb_sha256": "4629a9a3f96584d07d5b6b10cf9b27d27e2d678929c1cf14e5781af33f395c2d",
+    "seed": 1,
+    "sha256": "2a82aef9e32b61601301793514c58687b460e66977f7f1c66d35d96be26f5c60",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7664780
+  },
+  {
+    "arm": "b05",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 1,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "SEEN UNBLINDED. a hanging cable/gripper column is drawn above the ball f1-4 and holds it all clip; whitish bits drop f12-14; a ~3x ball enters from the top f14-15 and falls/bounces.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q21",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "N",
+      "id": "Q21",
+      "notes": "Original becomes attached to a strap and rises substantially; separate ball bounces below by f16-20.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b05_s1",
+    "rgb_sha256": "56e33efb3f941f4abf722a57419c88c859d1f3dd02cecd13acb61fea6c95e3c6",
+    "seed": 1,
+    "sha256": "d64bd1a146d666aad52d15cebd1e8bff24e0c63f341ded236a075d0454001e39",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 7625041
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92; ~2x glossy ball enters top f11-14, falls f14-21, bounces, rolls on plank.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q22",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q22",
+      "notes": "Original small ball stays; large shiny second ball enters above f12.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b0_s13",
+    "rgb_sha256": "8b5bd65ae2fbb9baff355610613453d719a47f91ba103416cbd6f35c0f3ed1e6",
+    "seed": 13,
+    "sha256": "a95f2d52c50ecfe1858d543a6e2b92311d5b94b1d78ffe727a815113f4cd0269",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8929206
+  },
+  {
+    "arm": "b15",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 1,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 0,
+      "morph": 0,
+      "note": "DRIFT_UP: original stays suspended but drifts up/right ~1.5 d over f20-40 (leaves the spot crop at the top), then stays there to f92; ~4x ball enters top f7, falls f7-11, bounces to f90; view shifts slightly after f12.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q23",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "U",
+      "id": "Q23",
+      "notes": "Original remains high while camera/framing changes; near-one-diameter upward displacement cannot be cleanly assigned to object drift. Clear separate larger ball below.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b15_s3",
+    "rgb_sha256": "932a83c49315b8e6e1eb4e30383538466ef14bbefc95495be3176462723f8b28",
+    "seed": 3,
+    "sha256": "22decaf6d2c41b0d0d9fe829ba11e1ee32b8fc9315e7cdefe0418f10ea4840d3",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 9039891
+  },
+  {
+    "arm": "b0",
+    "author": {
+      "borderline": 0,
+      "clean_fall": 0,
+      "clean_lenient": 0,
+      "clean_strict": 0,
+      "clone": 1,
+      "drift_up": 0,
+      "fall": 0,
+      "ghost": 0,
+      "holder_redrawn": 0,
+      "hover": 1,
+      "hover_strict": 1,
+      "morph": 0,
+      "note": "original hovers at its spot f0-92 (occluded f8, f24-28 by the clone); ~4x ball enters top f6-7, falls f7-14, keeps bouncing to f90.",
+      "vanish": 0
+    },
+    "fps": 24.0,
+    "frames": 93,
+    "id": "Q24",
+    "independent": {
+      "clean_fall": "N",
+      "clone": "Y",
+      "hover": "Y",
+      "id": "Q24",
+      "notes": "Original small ball stays; large second ball enters top f4-8 and bounces below.",
+      "original_descends": "N"
+    },
+    "name": "hrb_b0_s3",
+    "rgb_sha256": "f2e5c14a2803d57aff9377375a57b1d18c2d69334dd8266a00163e0d7b289b2f",
+    "seed": 3,
+    "sha256": "0cd34599863d5a2d1348c0d9ed86605a0eb98e20c0d2d27fcbb0a2603433b436",
+    "shape": [
+      480,
+      832,
+      3
+    ],
+    "size": 8772530
+  }
+]

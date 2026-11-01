@@ -1,0 +1,42 @@
+{
+  "local_ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers",
+  "remote_ffmpeg": "ffmpeg version 6.1.1-3ubuntu5+esm15 Copyright (c) 2000-2023 the FFmpeg developers",
+  "numpy": "1.26.4",
+  "scipy": "1.8.0",
+  "cv2": "4.13.0",
+  "pillow": "9.0.1",
+  "samples": [
+    {
+      "name": "hrb_b05_s1",
+      "frame": 0,
+      "remote_png_sha256": "e4ac9a46e9a558360d0c6a1b55d001c8d631026c02d2f1cd17097a047aee5a4d",
+      "max_abs_rgb_difference": 2,
+      "mean_abs_rgb_difference": 0.802791967147436,
+      "nonzero_channel_fraction": 0.7571631276709402
+    },
+    {
+      "name": "hrb_b15_s11",
+      "frame": 0,
+      "remote_png_sha256": "dc7b88a6103991706942f360bcf4c1b9f895afa30d338e3c617926d2ab3f9caf",
+      "max_abs_rgb_difference": 2,
+      "mean_abs_rgb_difference": 0.7993197449252136,
+      "nonzero_channel_fraction": 0.7558927617521367
+    },
+    {
+      "name": "hrb_b15_s12",
+      "frame": 0,
+      "remote_png_sha256": "dc7b88a6103991706942f360bcf4c1b9f895afa30d338e3c617926d2ab3f9caf",
+      "max_abs_rgb_difference": 2,
+      "mean_abs_rgb_difference": 0.7993197449252136,
+      "nonzero_channel_fraction": 0.7558927617521367
+    },
+    {
+      "name": "hrb_b15_s12",
+      "frame": 48,
+      "remote_png_sha256": "207399e7200533ba0a3627c1df4b3f5d1f6fca11374e819ea3aebb663edad106",
+      "max_abs_rgb_difference": 2,
+      "mean_abs_rgb_difference": 0.7812892294337607,
+      "nonzero_channel_fraction": 0.7406108106303418
+    }
+  ]
+}
