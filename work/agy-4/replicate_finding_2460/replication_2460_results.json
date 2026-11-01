@@ -1,0 +1,990 @@
+{
+  "finding_id": 2460,
+  "title": "Timed prompt induces bounce settling without DOVER degradation",
+  "raw_mp4_audit": {
+    "F_s3": {
+      "frames": 93,
+      "early_diff": 3.434,
+      "late_diff": 3.369,
+      "last20_diff": 3.327,
+      "sample_trajectory": [
+        {
+          "frame": 0,
+          "ball": {
+            "x": 65.4,
+            "y": 25.5,
+            "area": 428.0
+          }
+        },
+        {
+          "frame": 6,
+          "ball": {
+            "x": 70.8,
+            "y": 216.7,
+            "area": 890.5
+          }
+        },
+        {
+          "frame": 12,
+          "ball": {
+            "x": 67.6,
+            "y": 129.4,
+            "area": 834.0
+          }
+        },
+        {
+          "frame": 18,
+          "ball": {
+            "x": 70.5,
+            "y": 140.3,
+            "area": 898.0
+          }
+        },
+        {
+          "frame": 24,
+          "ball": {
+            "x": 70.3,
+            "y": 210.3,
+            "area": 916.5
+          }
+        },
+        {
+          "frame": 30,
+          "ball": {
+            "x": 66.2,
+            "y": 153.5,
+            "area": 338.5
+          }
+        },
+        {
+          "frame": 36,
+          "ball": {
+            "x": 70.3,
+            "y": 142.7,
+            "area": 818.0
+          }
+        },
+        {
+          "frame": 42,
+          "ball": {
+            "x": 68.6,
+            "y": 161.8,
+            "area": 279.5
+          }
+        },
+        {
+          "frame": 48,
+          "ball": {
+            "x": 71.4,
+            "y": 211.7,
+            "area": 1105.5
+          }
+        },
+        {
+          "frame": 54,
+          "ball": {
+            "x": 77.1,
+            "y": 203.3,
+            "area": 380.5
+          }
+        },
+        {
+          "frame": 60,
+          "ball": {
+            "x": 76.0,
+            "y": 184.9,
+            "area": 227.5
+          }
+        },
+        {
+          "frame": 66,
+          "ball": {
+            "x": 63.6,
+            "y": 162.7,
+            "area": 425.5
+          }
+        },
+        {
+          "frame": 72,
+          "ball": {
+            "x": 62.0,
+            "y": 167.3,
+            "area": 329.0
+          }
+        },
+        {
+          "frame": 78,
+          "ball": {
+            "x": 72.7,
+            "y": 197.3,
+            "area": 396.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 68.9,
+            "y": 207.7,
+            "area": 543.5
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 64.2,
+            "y": 210.8,
+            "area": 569.5
+          }
+        }
+      ],
+      "final_frame_ball": {
+        "x": 54.9,
+        "y": 175.3,
+        "area": 393.5
+      }
+    },
+    "QT_s3": {
+      "frames": 93,
+      "early_diff": 2.133,
+      "late_diff": 1.896,
+      "last20_diff": 2.02,
+      "sample_trajectory": [
+        {
+          "frame": 0,
+          "ball": {
+            "x": 71.3,
+            "y": 217.2,
+            "area": 712.0
+          }
+        },
+        {
+          "frame": 6,
+          "ball": {
+            "x": 53.9,
+            "y": 223.9,
+            "area": 60.0
+          }
+        },
+        {
+          "frame": 12,
+          "ball": {
+            "x": 71.0,
+            "y": 217.3,
+            "area": 694.0
+          }
+        },
+        {
+          "frame": 18,
+          "ball": {
+            "x": 62.7,
+            "y": 197.3,
+            "area": 62.5
+          }
+        },
+        {
+          "frame": 24,
+          "ball": {
+            "x": 61.8,
+            "y": 203.6,
+            "area": 140.5
+          }
+        },
+        {
+          "frame": 30,
+          "ball": {
+            "x": 53.6,
+            "y": 222.7,
+            "area": 55.5
+          }
+        },
+        {
+          "frame": 36,
+          "ball": {
+            "x": 53.2,
+            "y": 222.8,
+            "area": 67.5
+          }
+        },
+        {
+          "frame": 42,
+          "ball": {
+            "x": 83.9,
+            "y": 216.1,
+            "area": 86.5
+          }
+        },
+        {
+          "frame": 48,
+          "ball": {
+            "x": 86.5,
+            "y": 216.2,
+            "area": 92.5
+          }
+        },
+        {
+          "frame": 54,
+          "ball": {
+            "x": 87.9,
+            "y": 215.7,
+            "area": 183.0
+          }
+        },
+        {
+          "frame": 60,
+          "ball": {
+            "x": 87.0,
+            "y": 215.0,
+            "area": 121.0
+          }
+        },
+        {
+          "frame": 66,
+          "ball": {
+            "x": 84.3,
+            "y": 214.8,
+            "area": 71.5
+          }
+        },
+        {
+          "frame": 72,
+          "ball": {
+            "x": 87.1,
+            "y": 214.9,
+            "area": 131.5
+          }
+        },
+        {
+          "frame": 78,
+          "ball": {
+            "x": 88.6,
+            "y": 215.1,
+            "area": 233.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 61.6,
+            "y": 205.1,
+            "area": 50.5
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 86.4,
+            "y": 212.2,
+            "area": 48.0
+          }
+        }
+      ],
+      "final_frame_ball": {
+        "x": 65.3,
+        "y": 209.8,
+        "area": 318.0
+      }
+    }
+  },
+  "strip_audit": {
+    "cause5_F_ball1_fps24_93f_s3.strip.jpg": {
+      "early_diff": 4.665,
+      "late_diff": 4.427,
+      "last7_diff": 4.269,
+      "late_var": 69.32,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": null
+        },
+        {
+          "frame": 81,
+          "ball": null
+        },
+        {
+          "frame": 84,
+          "ball": null
+        },
+        {
+          "frame": 87,
+          "ball": null
+        },
+        {
+          "frame": 90,
+          "ball": null
+        }
+      ]
+    },
+    "cause5_F_ball1_fps24_93f_s4.strip.jpg": {
+      "early_diff": 6.492,
+      "late_diff": 4.066,
+      "last7_diff": 4.269,
+      "late_var": 139.53,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": null
+        },
+        {
+          "frame": 81,
+          "ball": null
+        },
+        {
+          "frame": 84,
+          "ball": null
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 54.4,
+            "y": 109.2,
+            "area": 58.0
+          }
+        },
+        {
+          "frame": 90,
+          "ball": null
+        }
+      ]
+    },
+    "cause5_F_ball1_fps24_93f_s5.strip.jpg": {
+      "early_diff": 4.856,
+      "late_diff": 5.548,
+      "last7_diff": 5.274,
+      "late_var": 131.21,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 30.6,
+            "y": 76.4,
+            "area": 284.0
+          }
+        },
+        {
+          "frame": 81,
+          "ball": null
+        },
+        {
+          "frame": 84,
+          "ball": null
+        },
+        {
+          "frame": 87,
+          "ball": null
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 31.9,
+            "y": 101.3,
+            "area": 472.5
+          }
+        }
+      ]
+    },
+    "cause5_QS_ball1_fps24_93f_s3.strip.jpg": {
+      "early_diff": 4.717,
+      "late_diff": 4.85,
+      "last7_diff": 4.994,
+      "late_var": 171.06,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 60.8,
+            "y": 121.8,
+            "area": 30.5
+          }
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 60.1,
+            "y": 110.2,
+            "area": 123.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 60.2,
+            "y": 109.4,
+            "area": 118.0
+          }
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 61.8,
+            "y": 120.3,
+            "area": 90.0
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 61.7,
+            "y": 113.8,
+            "area": 130.0
+          }
+        }
+      ]
+    },
+    "cause5_QS_ball1_fps24_93f_s4.strip.jpg": {
+      "early_diff": 3.93,
+      "late_diff": 3.809,
+      "last7_diff": 4.05,
+      "late_var": 74.74,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": null
+        },
+        {
+          "frame": 81,
+          "ball": null
+        },
+        {
+          "frame": 84,
+          "ball": null
+        },
+        {
+          "frame": 87,
+          "ball": null
+        },
+        {
+          "frame": 90,
+          "ball": null
+        }
+      ]
+    },
+    "cause5_QS_ball1_fps24_93f_s5.strip.jpg": {
+      "early_diff": 6.204,
+      "late_diff": 7.353,
+      "last7_diff": 5.025,
+      "late_var": 105.75,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": null
+        },
+        {
+          "frame": 81,
+          "ball": null
+        },
+        {
+          "frame": 84,
+          "ball": null
+        },
+        {
+          "frame": 87,
+          "ball": null
+        },
+        {
+          "frame": 90,
+          "ball": null
+        }
+      ]
+    },
+    "cause5_QT_ball1_fps24_93f_s3.strip.jpg": {
+      "early_diff": 3.839,
+      "late_diff": 3.361,
+      "last7_diff": 3.368,
+      "late_var": 54.4,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 58.3,
+            "y": 116.8,
+            "area": 154.0
+          }
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 58.3,
+            "y": 117.3,
+            "area": 136.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 54.5,
+            "y": 117.4,
+            "area": 141.0
+          }
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 58.8,
+            "y": 116.9,
+            "area": 152.0
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 56.2,
+            "y": 117.1,
+            "area": 131.0
+          }
+        }
+      ]
+    },
+    "cause5_QT_ball1_fps24_93f_s4.strip.jpg": {
+      "early_diff": 3.947,
+      "late_diff": 2.356,
+      "last7_diff": 2.195,
+      "late_var": 5.98,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": null
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 57.9,
+            "y": 119.2,
+            "area": 95.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 58.1,
+            "y": 118.9,
+            "area": 95.5
+          }
+        },
+        {
+          "frame": 87,
+          "ball": null
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 58.0,
+            "y": 119.0,
+            "area": 94.0
+          }
+        }
+      ]
+    },
+    "cause5_QT_ball1_fps24_93f_s5.strip.jpg": {
+      "early_diff": 5.392,
+      "late_diff": 3.522,
+      "last7_diff": 2.278,
+      "late_var": 5.9,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 52.2,
+            "y": 119.2,
+            "area": 116.5
+          }
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 52.4,
+            "y": 119.2,
+            "area": 123.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 54.0,
+            "y": 119.3,
+            "area": 110.0
+          }
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 52.2,
+            "y": 119.0,
+            "area": 129.0
+          }
+        },
+        {
+          "frame": 90,
+          "ball": null
+        }
+      ]
+    },
+    "cause6_F_ball2_fps24_93f_s3.strip.jpg": {
+      "early_diff": 4.868,
+      "late_diff": 4.711,
+      "last7_diff": 4.759,
+      "late_var": 115.75,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": null
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 51.5,
+            "y": 113.1,
+            "area": 168.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 56.8,
+            "y": 118.6,
+            "area": 100.5
+          }
+        },
+        {
+          "frame": 87,
+          "ball": null
+        },
+        {
+          "frame": 90,
+          "ball": null
+        }
+      ]
+    },
+    "cause6_QT_ball2_fps24_93f_s1.strip.jpg": {
+      "early_diff": 4.229,
+      "late_diff": 3.764,
+      "last7_diff": 2.927,
+      "late_var": 96.11,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 65.8,
+            "y": 115.2,
+            "area": 111.5
+          }
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 67.5,
+            "y": 115.7,
+            "area": 111.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 68.1,
+            "y": 115.8,
+            "area": 126.0
+          }
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 72.1,
+            "y": 117.2,
+            "area": 102.0
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 71.6,
+            "y": 117.2,
+            "area": 110.0
+          }
+        }
+      ]
+    },
+    "cause6_QT_ball2_fps24_93f_s2.strip.jpg": {
+      "early_diff": 4.71,
+      "late_diff": 4.26,
+      "last7_diff": 3.052,
+      "late_var": 66.94,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 59.9,
+            "y": 119.9,
+            "area": 102.5
+          }
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 61.7,
+            "y": 119.9,
+            "area": 93.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 62.3,
+            "y": 119.6,
+            "area": 96.0
+          }
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 62.9,
+            "y": 119.1,
+            "area": 103.5
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 63.1,
+            "y": 119.2,
+            "area": 99.0
+          }
+        }
+      ]
+    },
+    "cause6_QT_ball2_fps24_93f_s3.strip.jpg": {
+      "early_diff": 4.2,
+      "late_diff": 2.814,
+      "last7_diff": 2.646,
+      "late_var": 23.54,
+      "permanence_last5_tiles": [
+        {
+          "frame": 78,
+          "ball": {
+            "x": 55.5,
+            "y": 116.6,
+            "area": 168.5
+          }
+        },
+        {
+          "frame": 81,
+          "ball": {
+            "x": 55.6,
+            "y": 117.9,
+            "area": 161.5
+          }
+        },
+        {
+          "frame": 84,
+          "ball": {
+            "x": 55.6,
+            "y": 117.1,
+            "area": 176.0
+          }
+        },
+        {
+          "frame": 87,
+          "ball": {
+            "x": 56.0,
+            "y": 114.5,
+            "area": 161.5
+          }
+        },
+        {
+          "frame": 90,
+          "ball": {
+            "x": 56.3,
+            "y": 114.7,
+            "area": 189.0
+          }
+        }
+      ]
+    }
+  },
+  "statistical_audit": {
+    "last20": {
+      "mean": -2.2399,
+      "se": 0.2381,
+      "t_stat": -9.41,
+      "ci_95": [
+        -2.8029,
+        -1.6768
+      ],
+      "one_sided_95_lb": -2.691,
+      "negative_count": 8,
+      "positive_count": 0
+    },
+    "dover_fused": {
+      "mean": 0.0068,
+      "se": 0.0033,
+      "t_stat": 2.06,
+      "ci_95": [
+        -0.001,
+        0.0146
+      ],
+      "one_sided_95_lb": 0.0006,
+      "negative_count": 2,
+      "positive_count": 6
+    },
+    "dynamic_degree": {
+      "mean": -0.6174,
+      "se": 0.2194,
+      "t_stat": -2.81,
+      "ci_95": [
+        -1.1364,
+        -0.0985
+      ],
+      "one_sided_95_lb": -1.0332,
+      "negative_count": 7,
+      "positive_count": 1
+    },
+    "dist_to_real_dd": {
+      "mean": -0.6159,
+      "se": 0.2199,
+      "t_stat": -2.8,
+      "ci_95": [
+        -1.1359,
+        -0.0959
+      ],
+      "one_sided_95_lb": -1.0326,
+      "negative_count": 7,
+      "positive_count": 1
+    },
+    "pairs": [
+      {
+        "label": "b1_s1",
+        "f_key": "b1_F_s1",
+        "qt_key": "b1_QT_s1",
+        "f_last20": 3.048,
+        "qt_last20": 1.187,
+        "delta_last20": -1.861,
+        "f_dover": 0.5483,
+        "qt_dover": 0.5584,
+        "delta_dover": 0.0101,
+        "f_dd": 1.27,
+        "qt_dd": 0.8,
+        "delta_dd": -0.47,
+        "f_dist_to_real": 0.71,
+        "qt_dist_to_real": 0.24,
+        "delta_dist_to_real": -0.47
+      },
+      {
+        "label": "b1_s2",
+        "f_key": "b1_F_s2",
+        "qt_key": "b1_QT_s2",
+        "f_last20": 3.445,
+        "qt_last20": 1.249,
+        "delta_last20": -2.196,
+        "f_dover": 0.5393,
+        "qt_dover": 0.5533,
+        "delta_dover": 0.0139,
+        "f_dd": 0.72,
+        "qt_dd": 0.56,
+        "delta_dd": -0.16,
+        "f_dist_to_real": 0.15,
+        "qt_dist_to_real": 0.01,
+        "delta_dist_to_real": -0.15
+      },
+      {
+        "label": "b1_s3",
+        "f_key": "b1_F_s3",
+        "qt_key": "b1_QT_s3",
+        "f_last20": 3.326,
+        "qt_last20": 2.019,
+        "delta_last20": -1.307,
+        "f_dover": 0.5245,
+        "qt_dover": 0.5148,
+        "delta_dover": -0.0097,
+        "f_dd": 1.33,
+        "qt_dd": 0.76,
+        "delta_dd": -0.58,
+        "f_dist_to_real": 0.77,
+        "qt_dist_to_real": 0.2,
+        "delta_dist_to_real": -0.58
+      },
+      {
+        "label": "b1_s4",
+        "f_key": "b1_F_s4",
+        "qt_key": "b1_QT_s4",
+        "f_last20": 3.132,
+        "qt_last20": 0.723,
+        "delta_last20": -2.409,
+        "f_dover": 0.5466,
+        "qt_dover": 0.5546,
+        "delta_dover": 0.008,
+        "f_dd": 3.04,
+        "qt_dd": 1.12,
+        "delta_dd": -1.92,
+        "f_dist_to_real": 2.48,
+        "qt_dist_to_real": 0.55,
+        "delta_dist_to_real": -1.92
+      },
+      {
+        "label": "b1_s5",
+        "f_key": "b1_F_s5",
+        "qt_key": "b1_QT_s5",
+        "f_last20": 3.918,
+        "qt_last20": 0.558,
+        "delta_last20": -3.36,
+        "f_dover": 0.5406,
+        "qt_dover": 0.5452,
+        "delta_dover": 0.0046,
+        "f_dd": 1.95,
+        "qt_dd": 1.3,
+        "delta_dd": -0.66,
+        "f_dist_to_real": 1.39,
+        "qt_dist_to_real": 0.73,
+        "delta_dist_to_real": -0.66
+      },
+      {
+        "label": "b2_s1",
+        "f_key": "b2_F_s1",
+        "qt_key": "b2_QT_s1",
+        "f_last20": 4.054,
+        "qt_last20": 1.176,
+        "delta_last20": -2.878,
+        "f_dover": 0.5482,
+        "qt_dover": 0.5691,
+        "delta_dover": 0.0209,
+        "f_dd": 1.87,
+        "qt_dd": 1.0,
+        "delta_dd": -0.87,
+        "f_dist_to_real": 1.3,
+        "qt_dist_to_real": 0.43,
+        "delta_dist_to_real": -0.87
+      },
+      {
+        "label": "b2_s2",
+        "f_key": "b2_F_s2",
+        "qt_key": "b2_QT_s2",
+        "f_last20": 3.239,
+        "qt_last20": 0.895,
+        "delta_last20": -2.344,
+        "f_dover": 0.5475,
+        "qt_dover": 0.5557,
+        "delta_dover": 0.0082,
+        "f_dd": 0.92,
+        "qt_dd": 1.13,
+        "delta_dd": 0.21,
+        "f_dist_to_real": 0.36,
+        "qt_dist_to_real": 0.57,
+        "delta_dist_to_real": 0.21
+      },
+      {
+        "label": "b2_s3",
+        "f_key": "b2_F_s3",
+        "qt_key": "b2_QT_s3",
+        "f_last20": 3.231,
+        "qt_last20": 1.667,
+        "delta_last20": -1.564,
+        "f_dover": 0.5548,
+        "qt_dover": 0.5533,
+        "delta_dover": -0.0015,
+        "f_dd": 1.26,
+        "qt_dd": 0.76,
+        "delta_dd": -0.5,
+        "f_dist_to_real": 0.69,
+        "qt_dist_to_real": 0.19,
+        "delta_dist_to_real": -0.5
+      }
+    ]
+  }
+}
