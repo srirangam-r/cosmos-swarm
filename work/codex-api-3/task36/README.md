@@ -1,5 +1,42 @@
 # Task 36: real-clip fit coverage diagnostic
 
+## Mocap-only rebound sensitivity (shift 6)
+
+`mocap_rebounds.py` fits the first two full rebound flights in the separate
+30 fps GAUGE position JSONs, without using the video track or a camera–mocap
+clock alignment. It estimates the plane as the median of the last ten height
+samples, excludes the three detected local-minimum samples, fits one quadratic
+per flight, and divides the second flight's two-root interval by the first's.
+This is a time-ratio diagnostic for the second impact, not first-impact e.
+
+For the four same-rig files `1.json`–`4.json`, the ratios are 0.70483,
+0.70640, 0.71052, and 0.70615; their mean is 0.70698 ± 0.00123 (sample SE).
+Deleting one more sample next to each contact gives mean 0.70563; the largest
+individual change is 0.00758. Offsetting the inferred resting plane ±5 mm
+changes the mean to 0.71526 or 0.69819. This sensitivity is not a confidence
+interval: the sensor's preprocessing, calibration, plane uncertainty, contact
+dynamics and dependence among clips remain unknown. Discrete impact-index
+ratios are 0.69231, 0.75, 0.75, 0.69231; their one-frame quantization is large.
+
+The script checks 2,000 idealized numerical 30 fps bouncing trajectories per
+noise level, generated with seed 881122. Independent white position noise of
+0, 0.5 and 2 mm yields 2,000/2,000 returned ratios, with absolute-error 95th
+percentiles near 0, 0.00504 and 0.02058, respectively. This is **not** a video
+tracker, codec, correlated-error, mocap-instrument, or planted-case validation.
+Therefore the real values are provisional diagnostic reference estimates, not
+a validated restitution finding or evidence of Nano's behavior.
+
+Download the four publicly released GAUGE dev JSON files under
+`data/rigid/bouncing ball/json/{1,2,3,4}.json` into `mocap/`, then run:
+
+```bash
+python3 work/codex-api-3/task36/mocap_rebounds.py > work/codex-api-3/task36/mocap_rebounds.json
+python3 -m unittest discover -s work/codex-api-3/task36 -p 'test_mocap_rebounds.py' -v
+```
+
+The intended source is `InternRobotics/GAUGE-Dataset` on Hugging Face. The
+script never uses later frames for any recipe; these are evaluation inputs.
+
 This is a diagnostic of the existing tool, not a restitution or model-physics
 estimate. The referee PASS is for planted first-impact restitution and gravity,
 not multi-flight fits on real footage. See board findings #596, #600, #1042,
@@ -135,4 +172,90 @@ done
 python3 work/codex-api-3/task36/compare_centers.py > work/codex-api-3/task36/center_comparison.json
 python3 work/codex-api-3/task36/hough_centers.py > work/codex-api-3/task36/hough_comparison.json
 python3 work/codex-api-3/task36/center_substitution.py > work/codex-api-3/task36/center_substitution.json
+```
+
+## Contact-free residual and fixed-segment noise audit (shift 4)
+
+This diagnostic is not a new tracker, restitution estimate, or planted-case
+validation. Starting from `compare_fit.py`'s existing detected first-two-flight
+segments, remove the two frames nearest each detected impact: remove the last
+two frames of the first segment and the first and last two from the second.
+Fit each segment independently with three free quadratic coefficients. The
+first-flight training RMSE values are 1.146, 1.681, 1.702, and 1.754 px;
+second-flight values are 2.283, 0.869, 1.420, and 2.552 px. Each segment has
+only 5–7 frames and three fitted coefficients, so its in-sample RMSE is
+downward-biased; these numbers are not unbiased estimates of tracker error.
+Impact trimming does not remove the initial gripper-release transition.
+
+`noise_floor_audit.py` also draws 30,000 independent Gaussian noise vectors
+per clip from a fixed RNG seed and projects them onto the residual subspace
+of the *untrimmed*, fixed observed two-flight shared-quadratic design. At
+assumed per-frame standard deviation 1.0 px, at least one segment exceeds
+1.5 px in 0.65–0.80% of simulations; at 2.3 px, it does so in 93.5–94.0%.
+Monte Carlo SE is at most 0.15 percentage points at 2.3 px. This tests only
+the ordinary-least-squares residual gate conditional on chosen segment frames:
+it does not simulate ball images, peak detection, robust refitting, correlated
+tracker errors, or the original tool's end-to-end rejection rate.
+
+The Gaussian model explains a high hypothetical rejection rate, but **not
+the magnitude** of the observed untrimmed OLS residuals: maximum per-segment
+observed RMSE is 4.586, 5.552, 3.940, and 4.698 px. At sigma=2.3 px, 0, 0,
+10, and 0 out of 30,000 draws respectively reach those maxima. These are
+conditional, exploratory model-tail comparisons, not calibrated p-values:
+segments were selected from the same tracks and the four clips share one rig.
+Systematic/heteroscedastic tracking errors, contacts, selection, and imperfect
+flight models remain possible. This does not identify their causes or justify
+loosening the original threshold.
+
+```bash
+OPENBLAS_NUM_THREADS=1 python3 work/codex-api-3/task36/noise_floor_audit.py > work/codex-api-3/task36/noise_floor_audit.json
+OPENBLAS_NUM_THREADS=1 python3 -m unittest discover -s work/codex-api-3/task36 -p 'test_noise_floor_audit.py'
+```
+
+## Mocap alignment sensitivity (shift 5)
+
+This is an exploratory measurement diagnostic, **not** a planted-validated
+tracker or a gravity/restitution estimate. The corresponding real GAUGE dev
+mocap samples are at `InternRobotics/GAUGE-Dataset`, under
+`data/rigid/bouncing ball/json/1.json` through `4.json`. They are 30 Hz, in mm;
+the shared video tracks are 25 fps. The mocap files begin at the release and
+the videos include a hold, so their origin offset is not known independently.
+
+`mocap_alignment.py` linearly interpolates mocap height and fits its clock
+offset, projected scale and intercept to the first two track segments. A
+0.025-frame grid spans ±2 frames around the difference between the first
+detected video peak and the first sampled mocap minimum (SciPy `find_peaks`,
+prominence 10 mm and distance three mocap samples). Scale is constrained to
+[-0.75, -0.35] px/mm. The four pre-existing hand-annotated frames per clip,
+the two peak frames and the nearest frame on either side of the first two
+peaks are excluded from the training fit; the peak locations still influence
+the offset search and the segment selection. The annotations were selected
+after reviewing footage, by an annotator who had previously seen the tracks.
+
+At the fitted offsets, absolute error versus the projected mocap is lower for
+the manual centers by 1.20, 10.29, 5.72 and 6.79 px per clip, respectively
+(mean tracker-minus-manual MAE +6.00 ± 1.87 px, sample SE, four same-rig clips
+and four selected frames per clip). But this depends on synchronization: on
+the common training-frame subset valid for all offset perturbations, the
+baseline differences are +1.19, +10.31, +5.71 and +6.81 px (mean +6.00 ± 1.88).
+Increasing
+each fitted offset by 0.5 video frames and refitting intercept and scale gives
+per-clip differences of -4.21, -1.47, +0.87 and -1.67 px (mean -1.62 ± 1.04).
+The common-subset fit RMSE at the original versus shifted offsets is 5.30/10.83,
+7.65/7.23, 3.46/10.66, 5.77/6.70 px, respectively. The perturbation is a
+sensitivity analysis, not a calibrated timing confidence interval. Clock and
+camera projection error, mocap interpolation, and selected frames are all
+confounded with tracking error. Consequently the apparent benefit at the
+fitted offsets is **not** independent confirmation of tracker bias; an
+independently synchronized clock or more accurate ground-truth image centers
+are needed. No changed fitter or physical claim follows.
+
+```bash
+mkdir -p work/codex-api-3/task36/mocap
+for ball in 1 2 3 4; do
+  curl -fsSL "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/main/data/rigid/bouncing%20ball/json/${ball}.json" \
+    -o "work/codex-api-3/task36/mocap/${ball}.json"
+done
+python3 work/codex-api-3/task36/mocap_alignment.py > work/codex-api-3/task36/mocap_alignment.json
+python3 -m unittest discover -s work/codex-api-3/task36 -p 'test_mocap_alignment.py'
 ```

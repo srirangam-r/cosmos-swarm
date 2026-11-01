@@ -1,0 +1,277 @@
+{
+  "simulation_seed": 20261101,
+  "simulations_per_clip": 30000,
+  "scope": "fixed observed segments; unrobust OLS residual gate only; not full tracker",
+  "clips": {
+    "real1": {
+      "peaks": [
+        37,
+        48,
+        55,
+        61,
+        64
+      ],
+      "trim_two_contact_adjacent_frames": [
+        {
+          "frames": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "n": 6,
+          "rmse_px": 1.1459088719689423,
+          "df_adjusted_residual_scale_px": 1.620559867982133
+        },
+        {
+          "frames": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "n": 6,
+          "rmse_px": 2.2825876084996644,
+          "df_adjusted_residual_scale_px": 3.2280663532449942
+        }
+      ],
+      "full_segment_lengths": [
+        8,
+        10
+      ],
+      "fixed_full_segment_gate_simulation": {
+        "observed_ols_segment_rmse_px": [
+          3.0830435452878255,
+          4.586460919868902
+        ],
+        "noise_models": {
+          "1.0": {
+            "rejection_fraction": 0.008033333333333333,
+            "monte_carlo_se": 0.0005153897841727459,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "2.3": {
+            "rejection_fraction": 0.9369,
+            "monte_carlo_se": 0.0014037852399850915,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "3.0": {
+            "rejection_fraction": 0.9941333333333333,
+            "monte_carlo_se": 0.0004409175617916539,
+            "max_rmse_at_least_observed_count": 163,
+            "max_rmse_at_least_observed_fraction": 0.005433333333333333
+          }
+        }
+      }
+    },
+    "real2": {
+      "peaks": [
+        39,
+        49,
+        58,
+        62,
+        68
+      ],
+      "trim_two_contact_adjacent_frames": [
+        {
+          "frames": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "n": 7,
+          "rmse_px": 1.6807408473403493,
+          "df_adjusted_residual_scale_px": 2.22341115020527
+        },
+        {
+          "frames": [
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "n": 5,
+          "rmse_px": 0.8694149099907916,
+          "df_adjusted_residual_scale_px": 1.3746656736405913
+        }
+      ],
+      "full_segment_lengths": [
+        9,
+        9
+      ],
+      "fixed_full_segment_gate_simulation": {
+        "observed_ols_segment_rmse_px": [
+          2.7226671016457855,
+          5.552346770952198
+        ],
+        "noise_models": {
+          "1.0": {
+            "rejection_fraction": 0.006666666666666667,
+            "monte_carlo_se": 0.00046983054470813273,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "2.3": {
+            "rejection_fraction": 0.9375,
+            "monte_carlo_se": 0.0013975424859373686,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "3.0": {
+            "rejection_fraction": 0.9943666666666666,
+            "monte_carlo_se": 0.00043211105396988455,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          }
+        }
+      }
+    },
+    "real3": {
+      "peaks": [
+        39,
+        49,
+        52,
+        58,
+        62,
+        65
+      ],
+      "trim_two_contact_adjacent_frames": [
+        {
+          "frames": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "n": 7,
+          "rmse_px": 1.7018499338305078,
+          "df_adjusted_residual_scale_px": 2.2513358468336264
+        },
+        {
+          "frames": [
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "n": 5,
+          "rmse_px": 1.4202325765270143,
+          "df_adjusted_residual_scale_px": 2.2455848744973776
+        }
+      ],
+      "full_segment_lengths": [
+        9,
+        9
+      ],
+      "fixed_full_segment_gate_simulation": {
+        "observed_ols_segment_rmse_px": [
+          2.939656182518712,
+          3.9397404124633515
+        ],
+        "noise_models": {
+          "1.0": {
+            "rejection_fraction": 0.006466666666666667,
+            "monte_carlo_se": 0.0004627760037314269,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "2.3": {
+            "rejection_fraction": 0.9351,
+            "monte_carlo_se": 0.0014222984918785503,
+            "max_rmse_at_least_observed_count": 10,
+            "max_rmse_at_least_observed_fraction": 0.0003333333333333333
+          },
+          "3.0": {
+            "rejection_fraction": 0.9939,
+            "monte_carlo_se": 0.0004495475503214313,
+            "max_rmse_at_least_observed_count": 1312,
+            "max_rmse_at_least_observed_fraction": 0.04373333333333333
+          }
+        }
+      }
+    },
+    "real4": {
+      "peaks": [
+        35,
+        45,
+        48,
+        53,
+        58,
+        64
+      ],
+      "trim_two_contact_adjacent_frames": [
+        {
+          "frames": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "n": 7,
+          "rmse_px": 1.7538922701346575,
+          "df_adjusted_residual_scale_px": 2.3201813865874104
+        },
+        {
+          "frames": [
+            38,
+            39,
+            40,
+            41,
+            42
+          ],
+          "n": 5,
+          "rmse_px": 2.5524612211969613,
+          "df_adjusted_residual_scale_px": 4.0357955491186255
+        }
+      ],
+      "full_segment_lengths": [
+        9,
+        9
+      ],
+      "fixed_full_segment_gate_simulation": {
+        "observed_ols_segment_rmse_px": [
+          2.653993812118215,
+          4.698089644751909
+        ],
+        "noise_models": {
+          "1.0": {
+            "rejection_fraction": 0.0068,
+            "monte_carlo_se": 0.0004744737435657882,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "2.3": {
+            "rejection_fraction": 0.9399666666666666,
+            "monte_carlo_se": 0.0013714874190967783,
+            "max_rmse_at_least_observed_count": 0,
+            "max_rmse_at_least_observed_fraction": 0.0
+          },
+          "3.0": {
+            "rejection_fraction": 0.9942,
+            "monte_carlo_se": 0.00043841989005974726,
+            "max_rmse_at_least_observed_count": 109,
+            "max_rmse_at_least_observed_fraction": 0.0036333333333333335
+          }
+        }
+      }
+    }
+  }
+}
