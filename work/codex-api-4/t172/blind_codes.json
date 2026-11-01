@@ -1,0 +1,12 @@
+{
+  "protocol": "t172 PREREG; unvalidated sampled native-crop QC, arm/seed masked, author aggregate known",
+  "P01": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob moves left behind post f8; rod points out left crop f16-32; swings back right f40-56; bob sampled low/stationary f80,88,92. Apparent rod/bob size differs from f0; crop excludes parts of arc."},
+  "P02": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob rises right f16-32 and returns f48; top cap rotates; f56 rod appears disconnected/broken; further rightward excursion f88-92. Large visible motion, not frozen."},
+  "P03": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob moves left behind post f8 then outside left crop f16-32, returns right f40-56, sampled low/stationary f80,88,92. Apparent size/length change; full arc partly out of crop."},
+  "P04": {"visible_motion": true, "rigid_swing": "no", "notes": "Bob moves behind post f16, then right f24-48; two rods/bobs visible together f56-64; branching assembly visible f24 onward; large motion continues late."},
+  "P05": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob travels downward/left across post f8-32, outside left crop f40-80, returns near bottom f88-92. Bob grows/apparent rod length changes; no static initial pose."},
+  "P06": {"visible_motion": true, "rigid_swing": "no", "notes": "Bob blurred by f16; two rods/bobs at f24 and opposing rods f32 onward; large swings through f92. Multiple appendages preclude intact single pendulum."},
+  "P07": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob moves downward/left through post f8-32, out left f40-80, returns at f88-92. Apparent bob size and rod length change."},
+  "P08": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob goes down/right f8-16, rod sweeps left f24-32, right f48-56, left f72 then low/right f88-92. Apparent rod elongates substantially; motion obvious."},
+  "P09": {"visible_motion": true, "rigid_swing": "unclear", "notes": "Bob moves downward/left through post f8-32, out left f40-80, returns bottom f88-92. Apparent size/length changes; no static initial pose."}
+}
