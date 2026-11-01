@@ -1,0 +1,91 @@
+id,end_state,confidence,note
+03ebba,MOVING,M,hangs under gripper f182 then on plank f188
+0410bc,MOVING,M,back table edge position changes
+055634,HELD,M,hangs under gripper f188
+08468f,HELD,M,on plank f176 then hanging at gripper
+089377,MOVING,M,hanging then on plank
+09661f,HELD,H,swings on string under gripper
+143271,HELD,L,gone f182 hangs f188
+15b07a,REST,L,small ball back edge small shifts
+184928,MOVING,M,blurred on plank f188
+18f92a,REST,H,
+1933a0,HELD,H,swinging on string
+1a4f9f,REST,M,
+1befc9,REST,M,slight drift
+1de170,MOVING,M,blurred at back table
+20e747,HELD,H,swinging
+21b4b9,REST,H,
+252a4b,REST,H,
+27a266,UNCLEAR,L,ghostly faint ball near gripper
+2932e3,MOVING,H,bouncing on plank
+2c780a,REST,M,
+2e4725,MOVING,M,ball at back table gripper moves
+353a6a,MOVING,H,bouncing
+3a3e98,MOVING,M,
+3f7136,HELD,M,hangs below gripper
+424eea,REST,H,
+4302cb,MOVING,M,ghostly
+49413a,MOVING,M,
+4ce827,MOVING,H,bouncing
+4dcf99,MOVING,M,back table
+50c276,REST,H,
+50dcb9,GONE,M,not visible f182 f188
+50e54f,REST,H,ball grown large in front
+516fab,MOVING,H,
+53495d,HELD,M,hangs under gripper
+547e2f,MOVING,M,
+54be79,MOVING,M,
+5a245e,MOVING,M,
+5b4040,MOVING,M,ghostly back table
+5e80bc,REST,M,
+607008,MOVING,M,rises f188
+624537,MOVING,H,
+6f5f92,MOVING,M,
+713b6e,MOVING,H,
+71d0e2,MOVING,M,
+7baba6,MOVING,H,
+7d3faa,REST,H,
+80d51f,MOVING,L,ball morphs into fragments
+811e6f,GONE,M,no ball visible
+828be7,REST,H,
+8325b0,HELD,M,swinging below gripper
+866ae9,MOVING,H,rolling
+8898d0,MOVING,H,
+8aef28,REST,H,ball grown gripper gone
+8b1107,MOVING,H,
+8ef576,UNCLEAR,L,ghostly faint ball near plank back
+8f374c,MOVING,M,
+9699b0,MOVING,L,small hops in place
+9a571d,REST,M,
+9fe337,REST,H,
+a00be8,MOVING,H,
+a15404,MOVING,M,second ball at right edge
+abfee5,MOVING,H,
+b05d43,REST,H,
+b20042,REST,H,ball grown
+b23d6f,MOVING,M,ghostly at back of plank
+b5d0e9,REST,L,big grown ball rests; second small ball moves at back
+bc89d3,REST,M,
+bd67e5,MOVING,H,
+bd70db,GONE,L,ball not visible f188
+c61eeb,REST,M,
+c6cc25,REST,M,on back table
+c7d435,REST,H,
+d148f8,REST,H,
+d1b531,REST,H,
+d50d51,MOVING,L,ghostly
+d6ee78,MOVING,H,
+d94802,MOVING,H,rolling
+dc4e98,REST,H,
+e435be,HELD,M,ends under gripper
+e639d4,REST,M,
+e6e40a,REST,H,
+e9fc9b,MOVING,H,
+ea3d74,REST,H,ball grown
+eb4dd3,HELD,M,hangs under gripper f188
+f0de68,REST,L,big grown ball rests; second ball bounces
+f1af21,MOVING,M,
+f354cf,MOVING,H,
+f3be46,REST,H,
+f63e13,REST,H,ball grown
+f7fe66,REST,H,
