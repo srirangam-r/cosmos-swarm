@@ -1,0 +1,30 @@
+hue R-base           overall              -0.0037 ± 0.0047 CI90 [-0.0119,+0.0045] n=16 up=7 non-inferior
+hue R-base           Physical Laws        -0.0066 ± 0.0095 CI90 [-0.0233,+0.0100] n=16 up=8 non-inferior
+hue R-base           Visual Integrity     -0.0081 ± 0.0040 CI90 [-0.0152,-0.0011] n=16 up=6 
+hue R-base           Geometric Reasoning  -0.0018 ± 0.0088 CI90 [-0.0173,+0.0138] n=15 up=7 
+hue R-base           Semantic Alignment   +0.0003 ± 0.0061 CI90 [-0.0104,+0.0111] n=16 up=9 
+hue R-base:physics   overall              -0.0003 ± 0.0060 CI90 [-0.0113,+0.0107] n=10 up=5 
+hue R-base:physics   Physical Laws        -0.0046 ± 0.0121 CI90 [-0.0268,+0.0176] n=10 up=6 
+hue R-base:physics   Visual Integrity     -0.0056 ± 0.0051 CI90 [-0.0150,+0.0037] n=10 up=4 
+hue R-base:physics   Geometric Reasoning  +0.0100 ± 0.0107 CI90 [-0.0095,+0.0296] n=10 up=6 
+hue R-base:physics   Semantic Alignment   +0.0023 ± 0.0074 CI90 [-0.0113,+0.0159] n=10 up=5 
+hue R-base:robot     overall              -0.0093 ± 0.0077 CI90 [-0.0248,+0.0061] n=6 up=2 
+hue R-base:robot     Physical Laws        -0.0100 ± 0.0168 CI90 [-0.0439,+0.0238] n=6 up=2 
+hue R-base:robot     Visual Integrity     -0.0123 ± 0.0067 CI90 [-0.0258,+0.0012] n=6 up=2 
+hue R-base:robot     Geometric Reasoning  -0.0253 ± 0.0099 CI90 [-0.0464,-0.0043] n=5 up=1 
+hue R-base:robot     Semantic Alignment   -0.0029 ± 0.0115 CI90 [-0.0261,+0.0203] n=6 up=4 
+nv R-base           dover_fused          -0.0045 ± 0.0090 CI90 [-0.0203,+0.0112] n=16 up=8 inconclusive
+nv R-base           dover_technical      -0.0025 ± 0.0020 CI90 [-0.0060,+0.0010] n=16 up=6 
+nv R-base           dover_aesthetic      +0.0004 ± 0.0029 CI90 [-0.0046,+0.0055] n=16 up=8 
+nv R-base           dd_binary            -0.0625 ± 0.0546 CI90 [-0.1582,+0.0332] n=16 up=1 
+nv R-base           dd_norm              -0.0958 ± 0.5462 CI90 [-1.0533,+0.8616] n=16 up=7 non-inferior
+nv R-base:physics   dover_fused          -0.0115 ± 0.0135 CI90 [-0.0362,+0.0132] n=10 up=4 
+nv R-base:physics   dover_technical      -0.0052 ± 0.0026 CI90 [-0.0098,-0.0005] n=10 up=2 
+nv R-base:physics   dover_aesthetic      -0.0001 ± 0.0046 CI90 [-0.0084,+0.0083] n=10 up=5 
+nv R-base:physics   dd_binary            -0.1000 ± 0.0868 CI90 [-0.2591,+0.0591] n=10 up=1 
+nv R-base:physics   dd_norm              -0.8781 ± 0.6093 CI90 [-1.9951,+0.2388] n=10 up=3 
+nv R-base:robot     dover_fused          +0.0071 ± 0.0076 CI90 [-0.0082,+0.0223] n=6 up=4 
+nv R-base:robot     dover_technical      +0.0018 ± 0.0025 CI90 [-0.0031,+0.0068] n=6 up=4 
+nv R-base:robot     dover_aesthetic      +0.0013 ± 0.0020 CI90 [-0.0027,+0.0053] n=6 up=3 
+nv R-base:robot     dd_binary            +0.0000 ± 0.0000 CI90 [+0.0000,+0.0000] n=6 up=0 
+nv R-base:robot     dd_norm              +1.2080 ± 0.8535 CI90 [-0.5119,+2.9279] n=6 up=4 
