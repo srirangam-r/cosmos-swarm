@@ -1,0 +1,26 @@
+{
+ "width": 832,
+ "height": 480,
+ "num_frames": 189,
+ "fps": 24,
+ "steps": 35,
+ "guidance": 6.0,
+ "flow_shift": 10.0,
+ "seed": 4,
+ "negative_prompt": null,
+ "image": "/home/nail/swarm-work/raj-3/brev_box/inputs/gauge_ball2_f0_832x480.png",
+ "name": "box_ctrl_b2_noneg_s4",
+ "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "extra_params": {
+  "client": "raj-3"
+ },
+ "source_frame": "GAUGE ball 2.mp4 frame 0 (held ball), letterboxed 832x468+6px pad (same transform as raj-1)",
+ "protocol": "task 15 same-stack A/B: exact GAUGE App. C.1 ball prompt, no negative; mid_* vs ctrl_* differ ONLY in the first frame (released/mid-fall vs held)",
+ "prompt_text": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt_text": null,
+ "model": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+ "endpoint": "http://127.0.0.1:8014",
+ "server_clip_id": "20261101T050617_0019_raj-3",
+ "seconds": 191.7,
+ "wall_seconds": 199.0
+}
