@@ -1,0 +1,57 @@
+diff --git a/tools/cosmos_local/server.py b/tools/cosmos_local/server.py
+index 3a1eef4..9bec665 100644
+--- a/tools/cosmos_local/server.py
++++ b/tools/cosmos_local/server.py
+@@ -30,6 +30,7 @@ import neg_meta  # negative_metadata_mode / negative_preset (NVIDIA reference CF
+ import internals  # optional per-request hooks: temporal RoPE, conditioning frame, capture, steering
+ import loss_probe  # POST /v1/probe/loss
+ import noise  # optional per-request initial noise: CPU-drawn (portable seeds) or mixed from two seeds
++import action_cfg  # optional action-contrast guidance for forward dynamics (task 255 E3)
+ import latent  # optional latent-space control: SDEdit/ProxyUp start, ODE inversion, band keep, SFR, PhyRPR x0 fusion
+ from diffusers.pipelines.cosmos.pipeline_cosmos3_omni import CosmosActionCondition
+ from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
+@@ -88,10 +89,10 @@ print(f"loaded in {time.time()-t0:.0f}s" + (" (VAE swap on)" if VAE_SWAP else ""
+ 
+ LOCK = threading.Lock()
+ STATE = dict(busy=False, served=0, waiting=0, started=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+-STATE["features"] = ["noise", "internals", "latent", "sidecars"]  # the queue only sends a job to endpoints that list its options
++STATE["features"] = ["noise", "internals", "latent", "sidecars", "action_cfg"]  # the queue only sends a job to endpoints that list its options
+ import hashlib  # noqa: E402
+ SERVER_REV = {f: hashlib.md5((Path(__file__).parent / f).read_bytes()).hexdigest()[:10]
+-              for f in ("server.py", "noise.py", "internals.py", "neg_meta.py") if (Path(__file__).parent / f).exists()}
++              for f in ("server.py", "noise.py", "internals.py", "neg_meta.py", "action_cfg.py") if (Path(__file__).parent / f).exists()}
+ app = FastAPI()
+ 
+ 
+@@ -174,6 +175,12 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
+         raise HTTPException(400, str(e))
+     if lspec and nspec and nspec.mix:
+         raise HTTPException(400, "latent and noise.mix both set the initial state; use latent.band instead of noise.mix")
++    try:
++        aspec = action_cfg.parse(extra, guidance_scale, num_inference_steps)
++    except ValueError as e:
++        raise HTTPException(400, str(e))
++    if aspec:  # the CFG pass becomes "same text, contrast action": v(a') + (1 + scale) * (v(a) - v(a'))
++        call["guidance_scale"] = 1.0 + aspec.scale
+     spec = parse_internals(extra, num_frames, num_inference_steps, uploads)
+     if spec and spec.prompt_switch and float(guidance_scale) <= 1.0:
+         raise HTTPException(400, "internals: prompt_switch changes the conditional CFG pass, so it needs guidance_scale > 1")
+@@ -209,7 +216,8 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
+                     lat_arrays["x0_ref"] = x0_ref
+                 lspec.summary["sigmas_request"] = [round(x, 5) for x in sig]
+             with neg_meta.negative_metadata(pipe, neg_mode), noise.installed(pipe, nspec), lat_ctx, \
+-                    (internals.installed(pipe, spec) if spec else contextlib.nullcontext()) as rec:
++                    (internals.installed(pipe, spec) if spec else contextlib.nullcontext()) as rec, \
++                    action_cfg.installed(pipe, aspec, len(extra["action"][0]) if aspec and extra.get("action") else None):
+                 res = pipe(**call)
+             dt = time.time() - t1
+             latent_artifact = None
+@@ -247,6 +255,8 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
+     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
+     if nspec:
+         side["noise"] = dict(spec=nspec.raw, mixed=nspec.used)
++    if aspec:
++        side["action_cfg"] = action_cfg.summary(aspec)
+     if lspec:
+         side["latent"] = dict(spec=lspec.raw, artifact_id=latent_artifact, **lspec.summary)
+         if latent_artifact:
