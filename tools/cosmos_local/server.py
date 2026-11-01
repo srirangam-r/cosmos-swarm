@@ -30,6 +30,7 @@ import neg_meta  # negative_metadata_mode / negative_preset (NVIDIA reference CF
 import internals  # optional per-request hooks: temporal RoPE, conditioning frame, capture, steering
 import loss_probe  # POST /v1/probe/loss
 import noise  # optional per-request initial noise: CPU-drawn (portable seeds) or mixed from two seeds
+import latent  # optional latent-space control: SDEdit/ProxyUp start, ODE inversion, band keep, SFR, PhyRPR x0 fusion
 from diffusers.pipelines.cosmos.pipeline_cosmos3_omni import CosmosActionCondition
 from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
 
@@ -87,7 +88,7 @@ print(f"loaded in {time.time()-t0:.0f}s" + (" (VAE swap on)" if VAE_SWAP else ""
 
 LOCK = threading.Lock()
 STATE = dict(busy=False, served=0, waiting=0, started=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
-STATE["features"] = ["noise", "internals", "sidecars"]  # the queue only sends a job to endpoints that list its options
+STATE["features"] = ["noise", "internals", "latent", "sidecars"]  # the queue only sends a job to endpoints that list its options
 import hashlib  # noqa: E402
 SERVER_REV = {f: hashlib.md5((Path(__file__).parent / f).read_bytes()).hexdigest()[:10]
               for f in ("server.py", "noise.py", "internals.py", "neg_meta.py") if (Path(__file__).parent / f).exists()}
@@ -166,8 +167,14 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
         nspec = noise.parse(extra)
     except ValueError as e:
         raise HTTPException(400, str(e))
-    spec = parse_internals(extra, num_frames, num_inference_steps,
-                           {Path(f.filename or "").name: f.file.read() for f in internals_files or []})
+    uploads = {Path(f.filename or "").name: f.file.read() for f in internals_files or []}
+    try:
+        lspec = latent.parse(extra, uploads, num_inference_steps)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    if lspec and nspec and nspec.mix:
+        raise HTTPException(400, "latent and noise.mix both set the initial state; use latent.band instead of noise.mix")
+    spec = parse_internals(extra, num_frames, num_inference_steps, uploads)
     if spec and spec.prompt_switch and float(guidance_scale) <= 1.0:
         raise HTTPException(400, "internals: prompt_switch changes the conditional CFG pass, so it needs guidance_scale > 1")
     rec, artifact_id = None, None
@@ -183,10 +190,34 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
                 pipe.scheduler = UniPCMultistepScheduler.from_config(BASE_SCHED, flow_shift=float(flow_shift))
             call["generator"] = noise.generator(nspec, seed)
             t1 = time.time()
-            with neg_meta.negative_metadata(pipe, neg_mode), noise.installed(pipe, nspec), \
+            lat_ctx, lat_arrays = contextlib.nullcontext(), {}
+            if lspec:  # build the start state (aux pipeline passes), then start the main pass from it
+                x0_ref = latent.encode_ref(pipe, uploads[lspec.ref], num_frames, W, H) if lspec.ref else None
+                sig = latent.sigma_list(UniPCMultistepScheduler, BASE_SCHED, flow_shift, num_inference_steps)
+                neg_ctx = lambda: neg_meta.negative_metadata(pipe, neg_mode)
+                shape = None
+                if x0_ref is None:  # the latent shape without a reference: 48 ch, (frames-1)/4+1, H/16, W/16
+                    shape = (1, 48, (num_frames - 1) // 4 + 1, H // 16, W // 16)
+                x_start, lat_arrays = latent.build_start(pipe, call, lspec, x0_ref, sig, int(seed),
+                                                         lambda: noise.generator(nspec, seed), neg_ctx, uploads, shape)
+                inj = lspec.x0_inject
+                pipe.scheduler = latent.start_at_scheduler(
+                    UniPCMultistepScheduler, BASE_SCHED, flow_shift, lspec.start_step, x0_ref,
+                    latent.region_mask(x0_ref.shape, inj, uploads) if inj else None, inj["steps"] if inj else None)  # inj needs ref
+                lat_ctx = latent.vision_noise(pipe, x_start)
+                if x0_ref is not None:
+                    lat_arrays["x0_ref"] = x0_ref
+                lspec.summary["sigmas_request"] = [round(x, 5) for x in sig]
+            with neg_meta.negative_metadata(pipe, neg_mode), noise.installed(pipe, nspec), lat_ctx, \
                     (internals.installed(pipe, spec) if spec else contextlib.nullcontext()) as rec:
                 res = pipe(**call)
             dt = time.time() - t1
+            latent_artifact = None
+            if lspec and lspec.returns:
+                latent_artifact = ARTIFACTS.new_id()
+                ARTIFACTS.save(latent_artifact, {k: lat_arrays[k].detach().cpu().numpy().astype(np.float16)
+                                                 for k in lspec.returns if k in lat_arrays},
+                               dict(kind="latent", spec=lspec.raw, summary=lspec.summary, seed=int(seed)))
             if spec:  # captured activations -> .npz (hooks are already removed here)
                 artifact_id = internals.save_capture(ARTIFACTS, rec, spec, dict(prompt=prompt, seed=seed, num_frames=num_frames,
                                                      num_inference_steps=num_inference_steps, guidance_scale=guidance_scale))
@@ -216,10 +247,14 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
     if nspec:
         side["noise"] = dict(spec=nspec.raw, mixed=nspec.used)
+    if lspec:
+        side["latent"] = dict(spec=lspec.raw, artifact_id=latent_artifact, **lspec.summary)
+        if latent_artifact:
+            headers["X-Artifact-Ids"] = ",".join(a for a in (headers.get("X-Artifact-Ids"), latent_artifact) if a)
     if spec:
         side["internals"] = dict(spec=spec.raw, artifact_id=artifact_id, **rec.summary())
         if artifact_id:
-            headers["X-Artifact-Ids"] = artifact_id
+            headers["X-Artifact-Ids"] = ",".join(a for a in (artifact_id, headers.get("X-Artifact-Ids")) if a)
     (OUT / f"{stem}.json").write_text(json.dumps(side, indent=1))
     print(f"served {stem} {len(frames)}f in {dt:.0f}s", flush=True)
     return Response(mp4, media_type="video/mp4", headers=headers)
