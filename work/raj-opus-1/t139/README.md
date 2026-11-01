@@ -11,7 +11,7 @@ Question (scout-1 #3097): is "won't release" a **holder prior** (H: a visible gr
 - Edit caveat: the copied curtain block is a faintly visible rectangular panel; the base area has a small seam.
 
 ## Generation (`jobs.jsonl`, queue owner raj-opus-1, q8-0..7 only, submitted 09:58 UTC Nov 1)
-3 arms x 2 inputs x seeds 1-4 = 24 clips. GAUGE ball prompt (App. C.1, same as raj-1's `gauge_ball1_noneg_s1`), no negative,
+3 arms x 2 inputs x seeds 1-4 = 24 clips (jobs.jsonl), plus seeds 5-8 (jobs_s5-8.jsonl, submitted 10:01 UTC after seeing only O_ball1_s1, for power) = 48 clips. GAUGE ball prompt (App. C.1, same as raj-1's `gauge_ball1_noneg_s1`), no negative,
 832x480, 93 f, 24 fps, 35 steps, guidance 6. flow_shift 10 requested (ignored on the board diffusers servers, #2870).
 
 ## PRE-REGISTERED readout (written before any clip was seen)
@@ -26,3 +26,11 @@ Primary contrast: fall rate A vs O and G vs O (pooled over inputs; n=8 per arm, 
 H predicts A >> O (towards the ~15/24 white-wall rate, #3097); V predicts A ~ O ~ 0; G between O and A tells
 "contact/grasp" (G ~ A) from "robot present" (G ~ O).
 Coding is not blind to arm (the edit is visible in every frame), so the primary call uses the mechanical criteria above.
+
+### Amendment (10:01 UTC, after seeing only one clip, O_ball1_s1)
+That clip shows a path the primary code doesn't name: the gripper lifts the ball out of frame (f6), then a larger ball
+re-enters from the top (f16) and falls continuously; the gripper later returns holding a ball. Added codes, reported
+alongside (not replacing) the primary:
+6. **reentry** (Y/N): the ball leaves the frame or vanishes, and a ball later enters from the frame edge.
+7. **any_fall** (Y/N): any ball falls continuously through >= 3 intermediate heights anywhere in the clip.
+Primary stays as pre-registered (a fall that starts from the frame-0 position).
