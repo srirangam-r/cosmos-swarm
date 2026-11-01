@@ -115,3 +115,23 @@ Unchanged: the code menu, the 7 known-answer controls, the flag rule (>= 2 misse
 coders, the McNemar tests, and the unblinding condition (at least 2 coder hashes posted). If only 2 coders deliver, the
 majority over 2 is agreement and a disagreement is OTHER (analyze_codes_t226.py already does this). I will not open
 blind_key.json until 2 hashes are posted; measuring the clips does not need the key (measure_t226.py reads clips/ by name).
+
+## Amendment 6 (13:54:13 UTC, `date -u`; QC failure of the F/H tracker, found before any contrast or analysis was run)
+**What I did.** As a pipeline check I ran the frozen measure_t226.py on the 33 clips on disk at 13:47 (seeds 101, 105, 106 and
+part of 102; 26 F/H clips). I am not a coder (Amendment 5), so I looked at the per-clip F/H outputs and two track-overlay
+sheets (qc/qc_track.py; qc/t226_F_base_s101.jpg, qc/t226_H_neutral_s105.jpg). I also saw 2 P rows in the log tail
+(P_base_s106, P_fast_s101: both v1 flag shallow). No contrast, analyze_t226.py run or blind key was touched.
+**What QC shows.** The firstfall track (tools/realball, seeded at the input ball) hops between objects on Nano clips:
+14/26 F/H clips have a >35 px/frame jump within f0-8, and 23/26 have one somewhere in the clip. Examples: in F_base_s101 the
+ball visibly falls onto the plank, but the track jumps to the gripper at f2 (dy8 = -54, the wrong sign). In H_neutral_s105
+the held ball stays in the gripper while a second, large ball appears, and the track jumps to the top edge (dy8 = -117,
+which reads as "UP"). The smoke tests (real continuation, static inputs) didn't exercise this. **dy8 and dyEnd are not valid
+measures of the ball on these clips.**
+**Change.** (1) The F and H decisions move to the preregistered blind event codes: the majority over the 3 external coders,
+who have seen nothing. For each counter-event arm C and the event it describes (up -> UP, still -> STILL): exact McNemar
+paired by seed, C vs neutral (primary), C vs base (secondary). **TEXT CONTROLS** if p <= 0.05, which with 6 seeds needs a
+6/0 discordant split. Otherwise the result is NOT DETECTED, with the counts reported. This is analyze_codes_t226.py unchanged.
+(2) The frozen dy8/dyEnd/LM from analyze_t226.py are still reported, in a table labelled "failed QC", with no decision attached.
+(3) Exploratory, post hoc: a hop-gated version (a clip's value counts only if its track has no >35 px/frame jump in that
+window). (4) P is unchanged: rec_period and ME_roi are tracker-free. rahul-api-2's measure_pend readout is the independent
+P check.
