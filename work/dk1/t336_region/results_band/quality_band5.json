@@ -1,0 +1,77 @@
+{
+ "scorer_drift_vs_t319": {
+  "per_clip": [
+   -0.008444890822261075,
+   -0.008038250126578106
+  ],
+  "mean": -0.00824157047441959,
+  "note": "dk1 4060 rescoring of sha-matched dk2 t276 plain s1 real_12/17 minus t319"
+ },
+ "rows": [
+  {
+   "clip": "t336_real_12_reg_s1",
+   "dover_fused": 0.35792588625858063,
+   "plain_t319": 0.5894178686898106,
+   "nphys_t319": 0.5120645733676215,
+   "d_vs_plain": -0.23149198243122998,
+   "d_vs_plain_driftcorr": -0.2232504119568104,
+   "d_vs_nphys_driftcorr": -0.14589711663462124
+  },
+  {
+   "clip": "t336_real_12_reg_s2",
+   "dover_fused": 0.16746854444184675,
+   "plain_t319": 0.5055496214451844,
+   "nphys_t319": 0.4839448540534344,
+   "d_vs_plain": -0.33808107700333767,
+   "d_vs_plain_driftcorr": -0.32983950652891814,
+   "d_vs_nphys_driftcorr": -0.30823473913716803
+  },
+  {
+   "clip": "t336_real_12_reg_s3",
+   "dover_fused": 0.2741864313145064,
+   "plain_t319": 0.5535853264953972,
+   "nphys_t319": 0.5009205089884571,
+   "d_vs_plain": -0.2793988951808908,
+   "d_vs_plain_driftcorr": -0.2711573247064712,
+   "d_vs_nphys_driftcorr": -0.21849250719953112
+  },
+  {
+   "clip": "t336_real_12_regsfr_s1",
+   "dover_fused": 0.4295583492681628,
+   "plain_t319": 0.5894178686898106,
+   "nphys_t319": 0.5120645733676215,
+   "d_vs_plain": -0.15985951942164783,
+   "d_vs_plain_driftcorr": -0.15161794894722824,
+   "d_vs_nphys_driftcorr": -0.07426465362503909
+  },
+  {
+   "clip": "t336_real_12_regsfr_s2",
+   "dover_fused": 0.44440533400033105,
+   "plain_t319": 0.5055496214451844,
+   "nphys_t319": 0.4839448540534344,
+   "d_vs_plain": -0.061144287444853396,
+   "d_vs_plain_driftcorr": -0.052902716970433805,
+   "d_vs_nphys_driftcorr": -0.03129794957868376
+  }
+ ],
+ "summary": {
+  "reg": {
+   "n": 3,
+   "mean_d_vs_plain_driftcorr": -0.27474908106406654,
+   "range": [
+    -0.32983950652891814,
+    -0.2232504119568104
+   ],
+   "n_pass_ge_-0.020": 0
+  },
+  "regsfr": {
+   "n": 2,
+   "mean_d_vs_plain_driftcorr": -0.10226033295883102,
+   "range": [
+    -0.15161794894722824,
+    -0.052902716970433805
+   ],
+   "n_pass_ge_-0.020": 0
+  }
+ }
+}
