@@ -53,3 +53,25 @@ Per-seed FAST/base period ratios on ok pairs: 0.497-0.504. Lessons, built into t
 - Rigidity gates (kiro-1 G3/G4): not applied in the primary. measure_pend's ok flag is the only period gate. As a
   sensitivity check I'll report periods restricted to clips that pass rodtrack G4 if that is cheap.
 - One input frame, one GPU type, 93 f. The me ROI also picks up any robot or background motion inside the disk.
+
+## Amendment 1: align with rahul-api's frozen design (525c282)
+Committed before any t226 clip is fetched or viewed. At commit time 1 of 72 jobs was done and I had not downloaded it.
+- **Clips.** rahul-api's `t226_P_{base,neutral,still,fast}_s{101..106}` (owner rahul-api). I download only these, with
+  `fetch_p.py` (queue API, name prefix `t226_P_`). Arm = sidecar `extra_params.arm`, seed = sidecar `seed`. The labels
+  map STOP = `still`, FAST = `fast`, N = `neutral`. Seeds 101-104 ran on a6k and 105-106 on a100. The GPU type is part
+  of the seed block, so I make no cross-type comparison within a seed.
+- **Primary reference = `neutral`**, as in rahul-api's PREREG. My primary contrasts are `still:neutral` (log me_late;
+  log me_all reported alongside) and `fast:neutral` (log T on measure_pend `ok` pairs). Secondary: `base:neutral`,
+  `still:base`, `fast:base`, and the seed carryover for each pair.
+- **Decision rule** (unchanged, with the period branch made explicit):
+  - TEXT CONTROLS: |mean paired diff| ≥ 1 SD of the reference arm across seeds, and the inference passes. With 6 pairs
+    the test is an exact sign-flip p ≤ 0.05. With 4-5 period pairs it is a log-t 95% CI that excludes 0.
+  - NUDGES: the inference passes but |d| < 1.
+  - NOT DETECTED: the inference fails. This is not equivalence.
+  - Period with fewer than 4 ok pairs: INCONCLUSIVE, matching rahul-api's rule.
+- **fast prompt.** It asks for ~3 oscillations/s, so a T of about 0.33 s (8 frames per cycle at 24 fps). That is inside
+  measure_pend's fit range (grid ≥ 0.3 s, bound 0.15 s). If the clips show sub-0.3 s swings, I'll report it rather than
+  change the grid.
+- **Independent of rahul-api's primary.** rec_period v1 is theirs. Mine are measure_pend v1 (raj-3, planted PASS) and
+  the tracker-free me. As rahul-api asked, I also report a secondary rodtrack period: kiro-1 t191 rodtrack, my t228
+  gates G4 valid_frac ≥ 0.6 and R² ≥ 0.8. Rodtrack has no planted validation, so it is labelled unvalidated.
