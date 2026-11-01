@@ -49,8 +49,20 @@ def dedup(F, rel=0.1):
     keep = [0] + [k for k in range(1, len(F)) if d[k - 1] >= rel * np.median(d)]
     return F[keep], len(keep) / len(F)
 
-def measure(F, fps, diam=None, mpp=None, nboot=300, seed=0, skip=1, keep_track=False):
-    B = trk.blobs(F, mode='ball'); ok = [i for i, b in enumerate(B) if b]
+def measure(F, fps, diam=None, mpp=None, nboot=300, seed=0, skip=1, keep_track=False, fallback=True):
+    """Primary tracker: trk.blobs(mode='ball') (background from first/last frame). If its result is not flag=ok and
+    fallback=True, retry with the temporal-median background (trk.blobs mode='diff') and return that only if it is ok;
+    the primary result is kept under 'primary'. Planted clips are all ok with the primary, so they are unaffected."""
+    r = _measure(F, fps, diam, mpp, nboot, seed, skip, keep_track, 'ball')
+    if r['flag'] == 'ok' or not fallback: return r
+    try: r2 = _measure(F, fps, diam, mpp, nboot, seed, skip, keep_track, 'diff')
+    except Exception: return r
+    if r2['flag'] == 'ok':
+        r2['primary'] = {k: v for k, v in r.items() if k != 'track'}; return r2
+    r['fallback'] = {k: v for k, v in r2.items() if k != 'track'}; return r
+
+def _measure(F, fps, diam, mpp, nboot, seed, skip, keep_track, mode):
+    B = trk.blobs(F, mode=mode); ok = [i for i, b in enumerate(B) if b]
     y = np.array([B[i][1] for i in ok]); t = np.array(ok) / fps
     d_px = float(np.median([B[i][4] for i in ok]))
     s = mpp if mpp else diam / d_px
@@ -82,7 +94,7 @@ def measure(F, fps, diam=None, mpp=None, nboot=300, seed=0, skip=1, keep_track=F
     flag = 'ok' if (daic > 10 and r2 > 0.98 and m >= 5) else ('no_free_fall' if daic <= 2 else 'weak')
     return dict(g=g, flag=flag, n_quad=int(m), g_hinge_v4=float(p[1]), g_by_skip=g_skip, r2_lin=float(r2_lin), dAIC_quad_vs_lin=float(daic), onset_frame=int(ok[s0]), g_ci95=[float(np.percentile(gs, 2.5)), float(np.percentile(gs, 97.5))],
                 g_sd=float(np.std(gs)), g_scale_sys_1px=float(g / d_px) if diam else 0.0, r2=float(r2), t0=float(p[2]), n_fit=int(n), impact_frame=int(ok[k]),
-                g_poly_v3=float(2 * poly[0]), e=e, d_px=d_px, m_per_px=float(s), fps=fps, method=VERSION,
+                g_poly_v3=float(2 * poly[0]), e=e, d_px=d_px, m_per_px=float(s), fps=fps, method=VERSION, tracker=mode,
                 **({'track': [[int(i), float(B[i][0]), float(B[i][1]), float(B[i][4])] for i in ok]} if keep_track else {}))
 
 if __name__ == '__main__':

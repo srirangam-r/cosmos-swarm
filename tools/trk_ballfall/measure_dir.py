@@ -38,5 +38,5 @@ if __name__ == '__main__':
         try: r = mb.measure(F, fps, mpp=1 / o.ppm, nboot=o.nboot, keep_track=True)
         except Exception as e: out[os.path.basename(p)] = dict(err=repr(e)); print(p, 'ERR', e); continue
         qc(F, r, name + '_qc.png'); r['sidecar'] = sc; r['ppm'] = o.ppm; out[os.path.basename(p)] = r
-        print(os.path.basename(p), {k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items() if k in ('g', 'g_ci95', 'r2', 'r2_lin', 'dAIC_quad_vs_lin', 'onset_frame', 'impact_frame', 'n_fit', 'g_by_skip')}, flush=True)
+        print(os.path.basename(p), {k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items() if k in ('g', 'flag', 'tracker', 'n_quad', 'g_ci95', 'r2', 'r2_lin', 'dAIC_quad_vs_lin', 'onset_frame', 'impact_frame', 'g_by_skip')}, flush=True)
     json.dump(out, open(o.out or f'{o.dir}/results_v5.json', 'w'), indent=1, default=float)

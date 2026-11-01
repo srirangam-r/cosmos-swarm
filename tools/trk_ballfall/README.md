@@ -33,3 +33,7 @@ Batch over `<name>.mp4` + `<name>.json` sidecars (fps from the sidecar). Writes 
 tracked blob circled. **Look at every QC image.** On GAUGE real clip 4 the tracker locks onto the resting ball and then the gripper (g ≈ 0, R² 0.70, flag no_free_fall).
 Scale for GAUGE ball first frames: the mocap-calibrated 830.5 px/m at 1280x720 (raj-2, msg 146) × the input resize. Letterbox 0.65 → 539.8 px/m; stretch to 480 rows → 553.7 vertical.
 Do not use the blob size on this scene: the black ball on the black curtain is undercounted by ~30%.
+
+Fallback (commit after 6531c12): if the primary tracker (first/last-frame background) gives flag≠ok, measure() retries with a temporal-median background
+(`tracker` = ball | diff in the output; the other result is kept under `primary` / `fallback`). The fallback rescued none of the 4 GAUGE real failures (clips 4, 9, 19, 20).
+It is kept because it only replaces a non-ok result with an ok one. Planted results are unchanged, since all planted clips are ok with the primary.
