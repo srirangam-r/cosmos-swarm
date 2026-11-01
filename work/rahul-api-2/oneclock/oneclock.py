@@ -16,6 +16,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.join(HERE, '..', '..', '..', 'tools')
 sys.path.insert(0, os.path.join(TOOLS, 'realball')); sys.path.insert(0, os.path.join(TOOLS, 'trk_ballfall'))
 import firstfall  # noqa: E402
+sys.path.insert(0, HERE)
+from track2 import track2  # noqa: E402
 
 VERSION = 'oneclock v1 (firstfall.track; prominence-8 impacts; per-segment free quadratic)'
 
@@ -69,11 +71,12 @@ def analyse(cy, prom=8.0):
     return out
 
 
-def run(path, fps, ppm, point):
+def run(path, fps, ppm, point, tracker='ff'):
     F = read(path)
-    cx, cy, area, info = firstfall.track(F, point=point, pframe=0)
+    if tracker == 'ff': cx, cy, area, info = firstfall.track(F, point=point, pframe=0)
+    else: cx, cy, area = track2(F, point)
     r = analyse(cy)
-    r.update(clip=os.path.basename(path), fps=fps, ppm=ppm, method=VERSION,
+    r.update(clip=os.path.basename(path), fps=fps, ppm=ppm, method=VERSION, tracker=tracker,
              track_y=[None if not np.isfinite(v) else round(float(v), 2) for v in cy])
     s = fps * fps / ppm                                                    # px/frame^2 -> m/s^2 (context only)
     if r.get('fall'): r['g_eq_fall'] = r['fall']['a'] * s
@@ -84,11 +87,11 @@ def run(path, fps, ppm, point):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('out'); ap.add_argument('clips', nargs='+')
     ap.add_argument('--fps', type=float, default=24.0); ap.add_argument('--ppm', type=float, default=539.8)
-    ap.add_argument('--point', default='280,116')
+    ap.add_argument('--point', default='280,116'); ap.add_argument('--tracker', default='ff', choices=['ff', 't2'])
     a = ap.parse_args(); pt = tuple(float(v) for v in a.point.split(','))
     res = []
     for c in a.clips:
-        try: r = run(c, a.fps, a.ppm, pt)
+        try: r = run(c, a.fps, a.ppm, pt, a.tracker)
         except Exception as ex: r = dict(clip=os.path.basename(c), flag='error', err=repr(ex))
         res.append(r)
         print(r['clip'], r.get('flag'), 'onset', r.get('onset'), 'imp', r.get('impacts'),

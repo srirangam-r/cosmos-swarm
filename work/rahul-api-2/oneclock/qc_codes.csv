@@ -1,0 +1,5 @@
+clip,include,reason,coded_utc
+oc_A_ball1_s21,1,clean continuous fall f0-~8; high continuous bounces; one ball,2026-11-01T11:00
+oc_A_ball1_s22,0,clean fall f0-~9 but NO rebound flight: ball rolls toward camera and leaves frame by f24,2026-11-01T11:00
+oc_A_ball1_s23,1,clean fall f0-~10 and flight 1; late artifacts only after f60 (ball approaches camera; ball reappears high f86+),2026-11-01T11:00
+oc_A_ball1_s24,0,fall clean but flight 1 has semi-transparent/ghost ball and a jump toward camera at f12,2026-11-01T11:00
