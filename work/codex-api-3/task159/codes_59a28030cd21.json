@@ -1,0 +1,63 @@
+{
+  "group": "59a28030cd21",
+  "coding_status": "provisional blind; no arm labels viewed",
+  "source": "qc_delivery at 38f0891; CRF18 H.264 native-size recompression",
+  "method": "Overview sampled f0,8,...,88,92 and all native-size late frames f60-92; early frames are not exhaustively examined. Codes about absent artifacts are therefore conservative.",
+  "rows": [
+    {
+      "row": "A",
+      "object": "wooden block",
+      "appears": "yes",
+      "moves_any": "yes",
+      "stationary_f60_f92": "unclear",
+      "camera_stable": "yes",
+      "identity_or_exit_ambiguous": "unclear",
+      "gross_artifacts": "unclear",
+      "notes": "Block moves with hand f16-40. Visible part appears still f60-92, but hand partly occludes it until about f66. Earlier f24-40 hand and blur make continuity uncertain; early frames sparsely sampled. Table edges and cabinet seam stable. Revised from yes to unclear before freeze because partial late occlusion limits assessment."
+    },
+    {
+      "row": "B",
+      "object": "wooden block",
+      "appears": "yes",
+      "moves_any": "yes",
+      "stationary_f60_f92": "unclear",
+      "camera_stable": "yes",
+      "identity_or_exit_ambiguous": "yes",
+      "gross_artifacts": "unclear",
+      "notes": "Block-like object under hand f24-32; not visible f48-60; block enters at right f61-62, travels left f62-80, partly out of frame at end. Identity across absence is uncertain. Background edges stable."
+    },
+    {
+      "row": "C",
+      "object": "wooden block",
+      "appears": "yes",
+      "moves_any": "yes",
+      "stationary_f60_f92": "unclear",
+      "camera_stable": "yes",
+      "identity_or_exit_ambiguous": "yes",
+      "gross_artifacts": "unclear",
+      "notes": "Block at hand f24-32, not visible f48-61, enters from right f62-63 and translates left through f74; hand covers it f76 onward. Identity across absence is uncertain. Background edges stable."
+    },
+    {
+      "row": "D",
+      "object": "wooden block(s)",
+      "appears": "yes",
+      "moves_any": "yes",
+      "stationary_f60_f92": "unclear",
+      "camera_stable": "yes",
+      "identity_or_exit_ambiguous": "yes",
+      "gross_artifacts": "unclear",
+      "notes": "Block near hand f0-24 and hand covering possible block at upper edge f48-74. Additional block-like shapes enter from right f61-68 and move left; object near hand leaves upper frame by f76. With multiple shapes and occlusion target identity is unclear; moving shapes do not establish movement of initial block. Table and cabinet remain stable."
+    },
+    {
+      "row": "E",
+      "object": "wooden block",
+      "appears": "yes",
+      "moves_any": "yes",
+      "stationary_f60_f92": "unclear",
+      "camera_stable": "yes",
+      "identity_or_exit_ambiguous": "yes",
+      "gross_artifacts": "unclear",
+      "notes": "Block by hand f24-32, not visible f48-61, enters from right f62-63 and moves left through f74; hand covers it f75 onward. Identity across absence is uncertain. Background edges stable."
+    }
+  ]
+}

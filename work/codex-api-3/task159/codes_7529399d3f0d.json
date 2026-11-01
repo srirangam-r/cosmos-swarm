@@ -1,0 +1,28 @@
+{
+  "group": "7529399d3f0d",
+  "coding_status": "provisional blind; no arm labels viewed",
+  "source": "qc_delivery at 38f0891; CRF18 H.264 native-size recompression",
+  "method": "Overview f0,8,...,88,92 and all decoded native-size late frames f60-92; additionally A f0-24 and D f24-40 consecutive. Other early frames sampled, so motion/artifact negatives are conservative.",
+  "rows": [
+    {
+      "row": "A", "object": "round coin-like object", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "unclear", "camera_stable": "yes", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "yes",
+      "notes": "Dark disc moves from upper-left edge f0 to central plank by f8, splits/duplicates f9-11: one light disc remains on plank while the other moves down and exits right f20-23. Light disc looks stationary f60-92, but its continuity with the initial object is ambiguous. Background plank appears fixed."
+    },
+    {
+      "row": "B", "object": "coin", "appears": "yes", "moves_any": "unclear", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "unclear", "gross_artifacts": "unclear",
+      "notes": "Coin stays near plank edge in sampled frames and all late frames, with no clearly visible gross displacement relative to the plank. Camera angle and table edge shift over the clip; subtle translation/rotation is not reliably ruled out. Early frames are sampled; no absence claims."
+    },
+    {
+      "row": "C", "object": "coin", "appears": "yes", "moves_any": "unclear", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "unclear", "gross_artifacts": "unclear",
+      "notes": "Coin stays near plank edge in sampled frames and all late frames, with no clearly visible gross displacement relative to the plank. Camera angle and table edge shift over the clip; subtle translation/rotation is not reliably ruled out. Early frames are sampled; no absence claims."
+    },
+    {
+      "row": "D", "object": "coin", "appears": "yes", "moves_any": "unclear", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "yes",
+      "notes": "One coin remains near center f24-30; another enters right f31-32 and the two visibly merge to one f33-36. Which survives is uncertain. The remaining coin appears motionless relative to wood late, but identity and camera angle change prevent a confident original-object stationary code."
+    },
+    {
+      "row": "E", "object": "coin", "appears": "yes", "moves_any": "unclear", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "unclear", "gross_artifacts": "unclear",
+      "notes": "Coin stays near plank edge in sampled frames and all late frames, with no clearly visible gross displacement relative to the plank. Camera angle and table edge shift over the clip; subtle translation/rotation is not reliably ruled out. Early frames are sampled; no absence claims."
+    }
+  ]
+}

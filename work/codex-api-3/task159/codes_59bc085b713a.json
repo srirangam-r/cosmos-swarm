@@ -1,0 +1,28 @@
+{
+  "group": "59bc085b713a",
+  "coding_status": "provisional blind; no arm labels viewed",
+  "source": "qc_delivery at 38f0891; CRF18 H.264 native-size recompression",
+  "method": "Overview sampled f0,8,...,88,92 at native size. Object motion in late window is directly visible at multiple sampled frames; early frames are not exhaustively examined. Artifact absence is not asserted.",
+  "rows": [
+    {
+      "row": "A", "object": "multicolored top", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "no", "camera_stable": "yes", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Top absent f0, visible near right boundary f8; moves markedly relative to floor f64,72,80,88 and f92. Initial offscreen location and sampled early frames limit continuity assessment. Floor seams remain stable."
+    },
+    {
+      "row": "B", "object": "multicolored top", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "no", "camera_stable": "yes", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Top partly at right frame edge f0; clearly changes location f64,72,80,88 and f92. Initial partial edge exit and sparse early frames limit continuity assessment. Floor seams remain stable."
+    },
+    {
+      "row": "C", "object": "multicolored top", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "no", "camera_stable": "yes", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Top absent f0, visible near right boundary f8; changes location f64,72,80,88 and f92. Initial offscreen location and sparse early frames limit continuity assessment. Floor seams remain stable."
+    },
+    {
+      "row": "D", "object": "multicolored top", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "no", "camera_stable": "yes", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Top absent f0, visible near right boundary f8; changes location f64,72,80,88 and f92. Initial offscreen location and sparse early frames limit continuity assessment. Floor seams remain stable."
+    },
+    {
+      "row": "E", "object": "multicolored top", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "no", "camera_stable": "yes", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Top absent f0, visible near right boundary f8; changes location f64,72,80,88 and f92. Initial offscreen location and sparse early frames limit continuity assessment. Floor seams remain stable."
+    }
+  ]
+}

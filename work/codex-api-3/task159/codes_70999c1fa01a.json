@@ -1,0 +1,28 @@
+{
+  "group": "70999c1fa01a",
+  "coding_status": "provisional blind; no arm labels viewed",
+  "source": "qc_delivery at 38f0891; CRF18 H.264 native-size recompression",
+  "method": "Overview f0,8,...,88,92 plus all decoded native-size late frames f60-92. Camera pan, small object size, shape changes, and hand contact make late stillness uncertain. Early frames not exhaustive.",
+  "rows": [
+    {
+      "row": "A", "object": "wooden toy wagon", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Wagon moves toward right of scene f0-24, partly clipped at right f16. Camera pans relative to cabinet and stool. Wagon small and partly under hand/handle in f60-92; tiny movement relative to panning scene cannot be ruled out. Early frames sampled."
+    },
+    {
+      "row": "B", "object": "wooden toy wagon", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Wagon moves right toward cabinet f0-32 while camera pans. Body changes from open railing to a block-like top f24-48, so object continuity and morphing versus perspective are uncertain. Small wagon appears still f60-92, but small motion or shape change remains difficult to judge at this scale."
+    },
+    {
+      "row": "C", "object": "wooden toy wagon", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Wagon moves right, partly outside right edge f16-32; later moves into view next to a hand. Camera pans as cabinetry shifts. It is near the cabinet throughout f60-92 but small motion or rotation during hand contact cannot be ruled out. Early frames sampled."
+    },
+    {
+      "row": "D", "object": "wooden toy wagon", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Wagon moves right and is partly outside right edge f16-24. Camera pans relative to cabinet and stool. Initial box-like wagon is flatter by f32-48, with identity/shape ambiguous; contact with hand and tiny late motions prevent a confident f60-92 stationary judgment."
+    },
+    {
+      "row": "E", "object": "wooden toy wagon", "appears": "yes", "moves_any": "yes", "stationary_f60_f92": "unclear", "camera_stable": "no", "identity_or_exit_ambiguous": "yes", "gross_artifacts": "unclear",
+      "notes": "Wagon moves toward right and recedes f0-32; its open upper frame becomes a small table-like structure, so identity/shape is uncertain. Camera pans relative to cabinetry. Hand partly covers wagon f66-89; late motion cannot be ruled out."
+    }
+  ]
+}
