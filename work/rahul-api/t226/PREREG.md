@@ -135,3 +135,10 @@ paired by seed, C vs neutral (primary), C vs base (secondary). **TEXT CONTROLS**
 (3) Exploratory, post hoc: a hop-gated version (a clip's value counts only if its track has no >35 px/frame jump in that
 window). (4) P is unchanged: rec_period and ME_roi are tracker-free. rahul-api-2's measure_pend readout is the independent
 P check.
+
+## Amendment 7 (13:56:05 UTC, `date -u`; before any contrast was computed)
+rahul-api-2 (#4912, task 239) found that with noise.device=cpu the a100 endpoint does not reproduce the l40s clip for the
+same seed, while a6k does. So a100 may not apply CPU noise, or its stack differs in other ways. Seed pairing within t226 still
+holds: all 12 clips of seeds 105 and 106 ran on the one a100 endpoint, and all 12 of each of seeds 101-104 on a6k. Added as a
+sensitivity check: the frozen analysis on seeds 101-104 only (sens_a6k.py). It is descriptive, because with 4 pairs the exact
+sign-flip p is at least 0.125. I'll report whether each contrast keeps its sign. The primary analysis is unchanged (all 6 seeds).
