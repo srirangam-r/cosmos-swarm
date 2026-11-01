@@ -1,0 +1,85 @@
+clip,fell,artifact,end_state,note
+00a475,Y,none,rest,
+0152b7,Y,size_jump,rest,ball grows ~3x
+06809d,Y,respawn,rest,new ball appears at top f60+
+0780c6,Y,none,rest,
+15ebd6,Y,none,rest,
+1ab545,Y,none,air,lands f12 then rises and hovers mid-height (energy gain)
+20443e,Y,none,rest,
+213cda,N,tether,air,ball hangs on string and swings; phantom small ball on plank
+2adddf,Y,none,air,high bounces; in air at f92
+2b5a65,Y,duplicate,rest,two balls stacked at f12
+2c0f57,Y,none,rest,
+2e3db5,N,plank_morph,air,ball stays at top; plank tilts into ramp and back
+2eecd3,N,none,air,ball stays fixed at f0 position
+35eda3,Y,none,rest,
+36e6bd,Y,none,rest,first rebound back to ~top height (energy gain)
+3caae8,Y,none,rest,
+3fc7f0,Y,none,rest,high first rebound
+4120b2,Y,none,rest,
+413bf4,Y,none,air,
+44bcfb,Y,none,rest,
+5ab7eb,Y,size_jump,rest,ball grows huge and rolls out
+5ed352,Y,none,rest,
+604902,Y,none,air,rebounds rise over time (energy gain)
+635d5b,Y,none,rest,
+6361ab,Y,none,rest,
+6759fe,Y,none,rest,
+6ab35c,Y,duplicate,rest,ghost trail balls above
+6aff9b,Y,respawn,air,ball re-forms at top
+6d3df5,Y,none,rest,
+70f54c,N,duplicate,air,top ball stays; giant 2nd ball appears on plank
+714e0d,Y,size_jump,air,
+720fbf,Y,respawn,air,two balls at top at f92
+735b74,Y,none,rest,
+7510f5,N,none,air,ball stays fixed
+7882dd,Y,none,rest,
+7a02e8,Y,none,rest,
+7c0a8e,Y,none,air,lands f12 then rises to top and hovers (energy gain)
+7e9000,Y,duplicate,air,tether + stacked duplicates
+7f3de9,Y,none,air,never settles; bobs mid-air
+7f7279,Y,none,rest,
+808ef1,Y,plank_morph,air,plank tilts into ramp
+85f0fe,N,tether,air,ball morphs into hanging block on string
+86ecd1,Y,none,rest,
+8fef3c,Y,none,rest,
+910269,Y,size_jump,rest,ball grows and rolls out
+95920c,Y,none,rest,
+9a3268,Y,size_jump,rest,
+9ebbaa,Y,morph,rest,object morphs at f92
+a018e3,Y,none,rest,
+a21c3b,Y,none,rest,
+a9e6ef,Y,none,rest,
+b2b61f,N,duplicate,air,top ball stays; 2nd ball falls
+b5b1e0,Y,none,rest,
+bdbc93,Y,none,rest,
+bf90a1,Y,none,rest,
+c0f94d,N,duplicate,air,top ball stays; 2nd ball falls/bobs
+c1e599,Y,none,air,
+c2cd86,Y,none,rest,
+c39911,N,tether,air,ball hangs on visible string
+c85e89,Y,vanish,rest,ball disappears after landing
+c99152,N,tether,air,pendulum on string; size change
+c9bb60,N,tether,air,tether + size change + morph
+cf499a,Y,none,rest,
+d0b29b,Y,size_jump,rest,mild growth ~1.3x
+d46f3d,N,none,air,ball stays fixed
+d79d8e,Y,duplicate,rest,two balls on plank
+d8f3eb,Y,none,rest,
+d92193,Y,none,rest,
+dca858,Y,none,rest,
+dd1147,Y,none,rest,
+ddcc26,Y,none,air,rises back to top and hovers (energy gain)
+e51394,Y,none,rest,
+e68855,Y,none,rest,
+e85fc7,Y,none,rest,
+e878ab,Y,none,air,hovers mid-height
+eb93d4,Y,none,rest,
+f25326,Y,none,rest,
+f2abd9,Y,duplicate,rest,duplicate then vanish
+f3b7ab,Y,size_jump,air,
+f690ef,Y,none,rest,large lateral drift while falling
+fc16d6,Y,size_jump,air,size + duplicate + vanish
+fdfbd8,Y,none,air,rises and hovers
+feae8b,Y,none,rest,
+fff2b9,Y,none,rest,
