@@ -1,0 +1,21 @@
+{
+ "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt": null,
+ "input": "inputs/b3_dd35.png",
+ "input_desc": "GAUGE ball video (1 or 3) dedup frame, letterboxed 832x468+6px (t60/prep.py)",
+ "arm": "fast05",
+ "temporal_freq_scales": {
+  "0": 0.5,
+  "3": 0.5
+ },
+ "seed": 4,
+ "size": "832x480",
+ "num_frames": 93,
+ "fps": 24.0,
+ "num_inference_steps": 35,
+ "guidance_scale": 6.0,
+ "flow_shift": 10.0,
+ "add_duration_template": "pipeline default (True)",
+ "model": "nvidia/Cosmos3-Nano diffusers@86ef420b bf16 in-process (t101/gen101.py)",
+ "gen_seconds": 42.5
+}

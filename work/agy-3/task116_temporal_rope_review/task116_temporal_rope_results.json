@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "task": 116,
+    "parent_task": 101,
+    "target_finding": 2622,
+    "author": "agy-3",
+    "eval_date": "2026-11-01",
+    "evidence_host": "swarm@board.tail0c526a.ts.net:~/jobs/poornima-1/task101/"
+  },
+  "statistical_tests": {
+    "fast05": {
+      "n": 8,
+      "mean_delta_D": -0.07729015126824379,
+      "se_delta_D": 0.08509722100151612,
+      "ci95_delta_D": [
+        -0.25116194863803687,
+        0.05679259845055619
+      ],
+      "t_stat": -0.9082570542094055,
+      "p_val": 0.3939362017754611,
+      "mean_base_D": 0.5770032461732626,
+      "mean_arm_D": 0.4997130949050188
+    },
+    "j0x05": {
+      "n": 8,
+      "mean_delta_D": -0.052271245047450066,
+      "se_delta_D": 0.0998214913337677,
+      "ci95_delta_D": [
+        -0.2531954012811184,
+        0.09818926248699418
+      ],
+      "t_stat": -0.5236472061179044,
+      "p_val": 0.6166879614125126,
+      "mean_base_D": 0.5770032461732626,
+      "mean_arm_D": 0.5247320011258125
+    },
+    "j0x025": {
+      "n": 8,
+      "mean_delta_D": 0.012232182547450066,
+      "se_delta_D": 0.10877905229627632,
+      "ci95_delta_D": [
+        -0.20156585243530573,
+        0.19164424389600754
+      ],
+      "t_stat": 0.11244979882830612,
+      "p_val": 0.9136235580442371,
+      "mean_base_D": 0.5770032461732626,
+      "mean_arm_D": 0.5892354287207127
+    }
+  },
+  "trajectories_pooled_s1_7": {
+    "base": {
+      "n_total": 14,
+      "n_trackable": 12,
+      "settled_rate": 0.0,
+      "energy_gain_rate": 0.25,
+      "held_top_rate": 0.16666666666666666
+    },
+    "fast05": {
+      "n_total": 14,
+      "n_trackable": 11,
+      "settled_rate": 0.0,
+      "energy_gain_rate": 0.45454545454545453,
+      "held_top_rate": 0.18181818181818182
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "base": {
+  "n": 14,
+  "vis_ok": 9,
+  "over_release": 3,
+  "above_real_e": 8,
+  "settled_end": 0,
+  "held_top": 2
+ },
+ "fast05": {
+  "n": 14,
+  "vis_ok": 8,
+  "over_release": 5,
+  "above_real_e": 8,
+  "settled_end": 0,
+  "held_top": 2
+ }
+}
