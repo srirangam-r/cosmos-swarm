@@ -1,0 +1,134 @@
+{
+  "cfg1p0_shift10p0_s1.mp4": {
+    "sha256": "10121afdb8a61c3613c7a590e64cfd0060bc60c4eff1a6bd656c54b4b108c551",
+    "endpoint": "a100",
+    "endpoint_url": "http://127.0.0.1:8014",
+    "guidance": 1.0,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "server_clip_id": "20261101T063312_0034_rahul-5-agy",
+    "seconds": 46.3,
+    "wall_seconds": 48.1
+  },
+  "cfg1p0_shift10p0_s2.mp4": {
+    "sha256": "5e71b835cc5bfbd72ee1d399b3cca1f18fd6e1ab3cfe6281a739fea74df4d98f",
+    "endpoint": "a100",
+    "endpoint_url": "http://127.0.0.1:8014",
+    "guidance": 1.0,
+    "flow_shift": 10.0,
+    "seed": 2,
+    "server_clip_id": "20261101T063400_0035_rahul-5-agy",
+    "seconds": 46.3,
+    "wall_seconds": 48.1
+  },
+  "cfg2p5_shift10p0_s1.mp4": {
+    "sha256": "2d3878abf4079693cf0a5b425c10275967037e5fc81d06511be2c37f3aa1909f",
+    "endpoint": "puget21",
+    "endpoint_url": "http://100.77.182.40:8021",
+    "guidance": 2.5,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "server_clip_id": "20261101T063354_0083_rahul-5-agy",
+    "seconds": 139.7,
+    "wall_seconds": 146.7
+  },
+  "cfg2p5_shift10p0_s2.mp4": {
+    "sha256": "8326b61c368e7e2b53ba6009b491c54c7bb28bfd5fc229dd719330b3502080e8",
+    "endpoint": "puget13",
+    "endpoint_url": "http://100.77.182.40:8013",
+    "guidance": 2.5,
+    "flow_shift": 10.0,
+    "seed": 2,
+    "server_clip_id": "20261101T063416_0048_rahul-5-agy",
+    "seconds": 145.6,
+    "wall_seconds": 152.8
+  },
+  "cfg3p0_shift5p0_s1.mp4": {
+    "sha256": "25f49111527e33f2badd83ff5293524e41d3d3cfc2a5c5974fc55d02b0b46153",
+    "endpoint": "gb10",
+    "endpoint_url": "http://100.122.219.51:8011",
+    "guidance": 3.0,
+    "flow_shift": 5.0,
+    "seed": 1,
+    "server_clip_id": "20261101T063745_0041_rahul-5-agy",
+    "seconds": 254.7,
+    "wall_seconds": 259.3
+  },
+  "cfg3p0_shift5p0_s2.mp4": {
+    "sha256": "f76a9e0a9a4484ba4eefa0e3261c6c1ef1aea55092b20ecab0aaa52769adbda7",
+    "endpoint": "puget21",
+    "endpoint_url": "http://100.77.182.40:8021",
+    "guidance": 3.0,
+    "flow_shift": 5.0,
+    "seed": 2,
+    "server_clip_id": "20261101T063619_0084_rahul-5-agy",
+    "seconds": 141.1,
+    "wall_seconds": 145.4
+  },
+  "cfg4p0_shift10p0_s1.mp4": {
+    "sha256": "d55458045623c03c69d00036ca8dd331075c08755a06ab9e497c53566ffe8bc2",
+    "endpoint": "puget21",
+    "endpoint_url": "http://100.77.182.40:8021",
+    "guidance": 4.0,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "server_clip_id": "20261101T063125_0082_rahul-5-agy",
+    "seconds": 133.1,
+    "wall_seconds": 138.6
+  },
+  "cfg4p0_shift10p0_s2.mp4": {
+    "sha256": "b3d95ee9a68690deb5cef11476b128e32b4be82a083562f827c9eae9139cb29a",
+    "endpoint": "a100",
+    "endpoint_url": "http://127.0.0.1:8014",
+    "guidance": 4.0,
+    "flow_shift": 10.0,
+    "seed": 2,
+    "server_clip_id": "20261101T063218_0033_rahul-5-agy",
+    "seconds": 79.8,
+    "wall_seconds": 86.5
+  },
+  "cfg6p0_shift10p0_s1.mp4": {
+    "sha256": "a82c489df0197262a9d58ec6ad53cbf49900db211cdd6b914749728a87058f5e",
+    "endpoint": "gb10",
+    "endpoint_url": "http://100.122.219.51:8011",
+    "guidance": 6.0,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "server_clip_id": "20261101T063326_0040_rahul-5-agy",
+    "seconds": 257.2,
+    "wall_seconds": 261.7
+  },
+  "cfg6p0_shift10p0_s2.mp4": {
+    "sha256": "6af5474bd8bfec3565caa053d5ffb7f2ddd576bf07fe7726c83beebf086b93c6",
+    "endpoint": "puget13",
+    "endpoint_url": "http://100.77.182.40:8013",
+    "guidance": 6.0,
+    "flow_shift": 10.0,
+    "seed": 2,
+    "server_clip_id": "20261101T063131_0047_rahul-5-agy",
+    "seconds": 138.6,
+    "wall_seconds": 154.7
+  },
+  "cfg6p0_shift3p0_s1.mp4": {
+    "sha256": "f4979adff29167a381e1a0764c13865e603f50a0f3195a1633d2966b35430816",
+    "endpoint": "a100",
+    "endpoint_url": "http://127.0.0.1:8014",
+    "guidance": 6.0,
+    "flow_shift": 3.0,
+    "seed": 1,
+    "server_clip_id": "20261101T063522_0036_rahul-5-agy",
+    "seconds": 79.8,
+    "wall_seconds": 81.7
+  },
+  "cfg6p0_shift3p0_s2.mp4": {
+    "sha256": "6af5474bd8bfec3565caa053d5ffb7f2ddd576bf07fe7726c83beebf086b93c6",
+    "endpoint": "puget13",
+    "endpoint_url": "http://100.77.182.40:8013",
+    "guidance": 6.0,
+    "flow_shift": 3.0,
+    "seed": 2,
+    "server_clip_id": "20261101T063647_0049_rahul-5-agy",
+    "seconds": 146.6,
+    "wall_seconds": 150.9
+  }
+}
