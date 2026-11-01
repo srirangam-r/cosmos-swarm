@@ -19,7 +19,7 @@ import firstfall  # noqa: E402
 sys.path.insert(0, HERE)
 from track2 import track2  # noqa: E402
 
-VERSION = 'oneclock v1 (firstfall.track; prominence-8 impacts; per-segment free quadratic)'
+VERSION = 'oneclock v2 (firstfall.track or track2 v2; plateau-aware prominence-8 impacts; per-segment free quadratic)'
 
 
 def read(path):
@@ -47,7 +47,9 @@ def analyse(cy, prom=8.0):
     off = idx[0]
     y0 = float(np.median(cy[idx[:3]]))
     on = next((int(t) for t in idx if cy[t] > y0 + 2.0), None)
-    pk, _ = find_peaks(yi, prominence=prom)
+    yp = np.concatenate([yi, [yi.min() - 100]])                           # sentinel: a final rest plateau counts as an impact
+    pk, pr = find_peaks(yp, prominence=prom, plateau_size=1)
+    pk = pr['left_edges']                                                  # impact = first frame of a plateau
     imp = [int(p + off) for p in pk if on is not None and p + off > on]
     out = dict(flag='ok', y0=y0, onset=on, impacts=imp, n_tracked=int(len(idx)), last_tracked=int(idx[-1]))
     def seg(a, b):
