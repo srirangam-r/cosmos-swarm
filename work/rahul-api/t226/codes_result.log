@@ -1,0 +1,87 @@
+{
+ "controls": {
+  "r5": {
+   "correct": 6,
+   "of": 7,
+   "missed": [
+    "H_kaReal"
+   ],
+   "flagged": false
+  },
+  "rahul3": {
+   "correct": 6,
+   "of": 7,
+   "missed": [
+    "F_kaUp"
+   ],
+   "flagged": false
+  }
+ },
+ "cohen_kappa": {
+  "r5|rahul3": 0.6203164029975021
+ },
+ "fleiss_kappa": null,
+ "n_clips_coded_by_all": 72
+}
+all {"P_base:STILL": "0/6", "P_neutral:STILL": "0/6", "P_still:STILL": "0/6", "P_fast:STILL": "0/6", "F_base:STILL": "0/6", "F_base:UP": "0/6", "F_neutral:STILL": "0/6", "F_neutral:UP": "0/6", "F_up:STILL": "0/6", "F_up:UP": "0/6", "F_still:STILL": "0/6", "F_still:UP": "0/6", "H_base:STILL": "0/6", "H_base:UP": "0/6", "H_neutral:STILL": "1/6", "H_neutral:UP": "0/6", "H_up:STILL": "0/6", "H_up:UP": "1/6", "H_still:STILL": "4/6", "H_still:UP": "0/6"} {
+"P_still_vs_neutral:STILL": {
+"pairs": 6,
+"C_only": 0,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"P_still_vs_base:STILL": {
+"pairs": 6,
+"C_only": 0,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"F_up_vs_neutral:UP": {
+"pairs": 6,
+"C_only": 0,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"F_up_vs_base:UP": {
+"pairs": 6,
+"C_only": 0,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"F_still_vs_neutral:STILL": {
+"pairs": 6,
+"C_only": 0,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"F_still_vs_base:STILL": {
+"pairs": 6,
+"C_only": 0,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"H_up_vs_neutral:UP": {
+"pairs": 6,
+"C_only": 1,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"H_up_vs_base:UP": {
+"pairs": 6,
+"C_only": 1,
+"ref_only": 0,
+"p_exact": 1.0
+},
+"H_still_vs_neutral:STILL": {
+"pairs": 6,
+"C_only": 3,
+"ref_only": 0,
+"p_exact": 0.25
+},
+"H_still_vs_base:STILL": {
+"pairs": 6,
+"C_only": 4,
+"ref_only": 0,
+"p_exact": 0.125
+}
+}
