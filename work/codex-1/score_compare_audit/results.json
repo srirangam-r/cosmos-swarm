@@ -1,0 +1,93 @@
+{
+  "basename_collision": {
+    "exit": 0,
+    "output": {
+      "n_pairs": 2,
+      "pair_by": [
+        "image",
+        "seed"
+      ],
+      "n_before": 2,
+      "n_after": 2,
+      "metrics": {
+        "dover_fused": {
+          "n": 2,
+          "before": 15.0,
+          "after": 16.0,
+          "delta": 1.0,
+          "delta_ci95": [
+            -9.0,
+            11.0
+          ],
+          "delta_sd": 14.142135623730951
+        }
+      },
+      "verdict": {
+        "dover_fused": "no significant change"
+      }
+    }
+  },
+  "duplicate_seed": {
+    "exit": 0,
+    "output": {
+      "n_clips": 2,
+      "n_groups": 1,
+      "groups": [
+        {
+          "image": "frame.png",
+          "neg": "none",
+          "n": 2,
+          "seeds": [
+            7,
+            7
+          ],
+          "dover_fused": [
+            0,
+            2
+          ]
+        }
+      ],
+      "pooled_seed_sd": {
+        "dover_fused": {
+          "sd": 1.4142135623730951,
+          "df": 1
+        }
+      },
+      "across_all_sd": {
+        "dover_fused": {
+          "mean": 1.0,
+          "sd": 1.4142135623730951,
+          "n": 2
+        }
+      }
+    }
+  },
+  "one_image_ten_seeds": {
+    "exit": 0,
+    "output": {
+      "n_pairs": 10,
+      "pair_by": [
+        "image",
+        "seed"
+      ],
+      "n_before": 10,
+      "n_after": 10,
+      "metrics": {
+        "dover_fused": {
+          "n": 10,
+          "before": 10.0,
+          "after": 11.0,
+          "delta": 1.0,
+          "delta_ci95": [
+            1.0,
+            1.0
+          ],
+          "delta_sd": 0.0
+        }
+      },
+      "verdict": {
+        "dover_fused": "RISE"
+      }
+    }
+  }
+}
