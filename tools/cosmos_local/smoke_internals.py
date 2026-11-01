@@ -64,8 +64,11 @@ same = {"rope scale 1.0": {"rope": {"temporal_scale": 1.0}}, "conditioning noise
         "capture is read-only": {"capture": {"layers": [L1], "step_range": [0, 3]}}}
 for name, spec in same.items():
     check(gen(spec).content == plain, f"{name} -> identical to plain")
-d = diff(gen({"conditioning": {"attention_scale": {"factor": 1.0}}}).content, plain)
-check(d < 1.0, f"attention factor 1.0 -> near-identical (mean abs frame diff {d:.4f}/255)")
+# A key bias switches SDPA to a different kernel, and sampling amplifies the rounding difference, so factor 1.0 is not
+# bit-equal to plain (~10/255 measured on an A100). It must be deterministic: factor 1.0 is the control arm for this hook.
+att1 = gen({"conditioning": {"attention_scale": {"factor": 1.0}}}).content
+check(gen({"conditioning": {"attention_scale": {"factor": 1.0}}}).content == att1, "attention factor 1.0 twice -> identical (its own control arm)")
+print(f"INFO attention factor 1.0 vs plain (kernel change only): {diff(att1, plain):.3f}/255")
 
 for name, spec in {"rope temporal 0.5": {"rope": {"temporal_scale": 0.5}}, "rope j=0,3 x0.5 (gen92 'fast05')": {"rope": {"temporal_scale": {"0": 0.5, "3": 0.5}}},
                    "cond noise 0.6": {"conditioning": {"noise": {"level": 0.6}}},
@@ -77,14 +80,18 @@ for name, spec in {"rope temporal 0.5": {"rope": {"temporal_scale": 0.5}}, "rope
 
 # capture
 cap = {"capture": {"layers": [L1, L2], "step_range": [0, 6], "every": 3, "passes": ["cond", "uncond"], "full": True}}
+cap["capture"]["full"] = False
 r = gen(cap)
 aid = r.headers.get("X-Artifact-Ids")
 check(bool(aid), f"capture returns an artifact id ({aid})")
 z = np.load(io.BytesIO(requests.get(f"{URL}/v1/artifacts/{aid}").content))
 keys = sorted(k for k in z.files if k.endswith("_mean"))
 check(keys == sorted(f"s{s:03d}_{p}_L{l:02d}_mean" for s in (0, 3) for p in ("cond", "uncond") for l in (L1, L2)), f"capture keys {keys}")
-m, f = z[keys[0]], z[keys[0].replace("_mean", "_full")]
-check(m.shape == (T, D) and f.ndim == 3 and f.shape[0] == T and f.shape[2] == D, f"shapes mean {m.shape}, full {f.shape} (expect [{T},{D}], [{T},S,{D}])")
+m = z[keys[0]]
+check(m.shape == (T, D), f"mean shape {m.shape} (expect [{T},{D}])")
+zf = np.load(io.BytesIO(requests.get(f"{URL}/v1/artifacts/" + gen({"capture": {"layers": [L1], "step_range": [0, 1], "passes": ["cond"], "full": True}}).headers["X-Artifact-Ids"]).content))
+f = zf[[k for k in zf.files if k.endswith("_full")][0]]
+check(f.ndim == 3 and f.shape[0] == T and f.shape[2] == D, f"full shape {f.shape} (expect [{T},S,{D}])")
 check(np.isfinite(m).all() and np.abs(m).max() > 0, "captured means are finite and nonzero")
 aid2 = gen(cap).headers["X-Artifact-Ids"]
 z2 = np.load(io.BytesIO(requests.get(f"{URL}/v1/artifacts/{aid2}").content))

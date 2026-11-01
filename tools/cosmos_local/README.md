@@ -84,3 +84,9 @@ The video is decoded (width/height must be multiples of 16, or give `size`), a `
 
 ### Tests
 CPU only, no weights (a real tiny `Cosmos3OmniTransformer` in a fake pipeline). With the server's venv: `python test_internals.py && python test_loss_probe.py && python test_server_fake.py` (the last starts the real FastAPI app on a loopback port). `python smoke_internals.py --url ... --image ...` is the GPU smoke test: run it only on a server you started on a free GPU.
+
+**Controls (measured on the real model).** Sampling amplifies tiny numeric differences: two clips whose settings differ
+by a hair (attention factor 1.0 vs 0.999) differ by ~14/255 per pixel. So judge every hook across seeds, never one clip.
+`conditioning.attention_scale` also switches attention to a different SDPA kernel (it passes a key bias), so even factor
+1.0 differs from a plain clip (~10/255). Use **factor 1.0 as the control arm** for that hook, not a plain request. The
+other hooks (rope 1.0, noise 0, steer alpha 0, capture) are bit-identical to plain requests.
