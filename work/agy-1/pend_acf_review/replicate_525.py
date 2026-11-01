@@ -271,14 +271,24 @@ def main():
             m: summarize_ratios(short_ratios[m]) for m in short_ratios
         }
 
-    # 3. Available 93f Nano clips + saved 189f JSON outputs
-    for name, rel_path, fps in [
-        ("pend_A_fps24_93f_s1", "work/ro-1/fps_sweep/pend_A_fps24_93f_s1.mp4", 24.0),
-        ("pend_B_fps12_93f_s1", "work/ro-1/fps_sweep/pend_B_fps12_93f_s1.mp4", 12.0),
+    # 3. All available Nano clips (93f, 189f, 61f)
+    for name, rel_path, fps, nf in [
+        ("pend_A_fps24_93f_s1", "work/ro-1/fps_sweep/pend_A_fps24_93f_s1.mp4", 24.0, 93),
+        ("pend_B_fps12_93f_s1", "work/ro-1/fps_sweep/pend_B_fps12_93f_s1.mp4", 12.0, 93),
+        ("pend_fps48_189f_s1", "work/ro-3/task25_fps_pendulum/clips189/pend_fps48_s1_189f_crf20.mp4", 48.0, 189),
+        ("pend_fps24_189f_s1", "work/ro-3/task25_fps_pendulum/clips189/pend_fps24_s1_189f_crf20.mp4", 24.0, 189),
+        ("pend_fps24_nodur_189f_s1", "work/ro-3/task25_fps_pendulum/clips189/pend_fps24_nodur_s1_189f_crf20.mp4", 24.0, 189),
+        ("pend_fps12_189f_s1", "work/ro-3/task25_fps_pendulum/clips189/pend_fps12_s1_189f_crf20.mp4", 12.0, 189),
+        ("pend_fps24_189f_s2", "work/ro-3/task25_fps_pendulum/clips_more/pend_fps24_s2.mp4", 24.0, 189),
+        ("pend_fps24_61f_s1", "work/ro-3/task25_fps_pendulum/clips_more/pend_fps24_61f_s1.mp4", 24.0, 61),
     ]:
         r = independent_estimators(f"{REPO}/{rel_path}", fps, skip=12, release=False)
-        r["num_frames"] = 93
-        r["p_over_num_frames_acf"] = r["pend_acf_cli"]["period_frames"] / 93.0
+        r["num_frames"] = nf
+        r["p_over_num_frames_acf"] = (
+            (r["pend_acf_cli"]["period_frames"] / float(nf))
+            if r["pend_acf_cli"]["period_frames"] is not None
+            else None
+        )
         results["nano_clips"][name] = r
 
     # Cross-check saved 189f JSON outputs from ro-3

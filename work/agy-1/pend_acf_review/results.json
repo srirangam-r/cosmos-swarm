@@ -3457,6 +3457,549 @@
       },
       "num_frames": 93,
       "p_over_num_frames_acf": 0.3755862146139576
+    },
+    "pend_fps48_189f_s1": {
+      "fps": 48.0,
+      "skip": 12,
+      "release_frame": 12,
+      "n_used": 177,
+      "pend_acf_cli": {
+        "period_frames": 103.37075647445688,
+        "period_s": 2.153557426551185,
+        "ci95_frames": [
+          102.98865191635072,
+          103.75286103256305
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "l1_acf": {
+        "period_frames": 103.37075647445688,
+        "period_s": 2.153557426551185
+      },
+      "l2_med_acf": {
+        "period_frames": 103.70201265797103,
+        "period_s": 2.160458597041063
+      },
+      "cos_med_acf": {
+        "period_frames": 103.70407959233324,
+        "period_s": 2.1605016581736094
+      },
+      "dark_bob_tracker": {
+        "period_zc_frames": 104.81964667628388,
+        "period_zc_s": 2.1837426390892474,
+        "zc_intervals_frames": [
+          104.82
+        ],
+        "right_turning_frames": [
+          14,
+          22,
+          24,
+          130,
+          133
+        ],
+        "left_turning_frames": [
+          72,
+          174
+        ],
+        "right_turning_diffs": [
+          8,
+          2,
+          106,
+          3
+        ],
+        "left_turning_diffs": [
+          102
+        ]
+      },
+      "num_frames": 189,
+      "p_over_num_frames_acf": 0.5469352194415709
+    },
+    "pend_fps24_189f_s1": {
+      "fps": 24.0,
+      "skip": 12,
+      "release_frame": 12,
+      "n_used": 177,
+      "pend_acf_cli": {
+        "period_frames": 107.1010658964601,
+        "period_s": 4.462544412352504,
+        "ci95_frames": [
+          106.71212799403331,
+          107.49000379888689
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "l1_acf": {
+        "period_frames": 107.1010658964601,
+        "period_s": 4.462544412352504
+      },
+      "l2_med_acf": {
+        "period_frames": 107.1759976916101,
+        "period_s": 4.465666570483754
+      },
+      "cos_med_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "dark_bob_tracker": {
+        "period_zc_frames": 13.350987788164787,
+        "period_zc_s": 0.5562911578401994,
+        "zc_intervals_frames": [
+          3.068,
+          13.351,
+          52.283,
+          3.945,
+          49.6
+        ],
+        "right_turning_frames": [
+          30,
+          33,
+          38,
+          129,
+          139
+        ],
+        "left_turning_frames": [
+          63,
+          65,
+          72,
+          74,
+          82,
+          89,
+          97,
+          108,
+          116,
+          170,
+          181
+        ],
+        "right_turning_diffs": [
+          3,
+          5,
+          91,
+          10
+        ],
+        "left_turning_diffs": [
+          2,
+          7,
+          2,
+          8,
+          7,
+          8,
+          11,
+          8,
+          54,
+          11
+        ]
+      },
+      "num_frames": 189,
+      "p_over_num_frames_acf": 0.5666723063304767
+    },
+    "pend_fps24_nodur_189f_s1": {
+      "fps": 24.0,
+      "skip": 12,
+      "release_frame": 12,
+      "n_used": 177,
+      "pend_acf_cli": {
+        "period_frames": 107.37705654189595,
+        "period_s": 4.474044022578998,
+        "ci95_frames": [
+          106.98761783139074,
+          107.76649525240117
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "l1_acf": {
+        "period_frames": 107.37705654189595,
+        "period_s": 4.474044022578998
+      },
+      "l2_med_acf": {
+        "period_frames": 107.37189386536213,
+        "period_s": 4.4738289110567555
+      },
+      "cos_med_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "dark_bob_tracker": {
+        "period_zc_frames": 6.2210463548546855,
+        "period_zc_s": 0.2592102647856119,
+        "zc_intervals_frames": [
+          5.093,
+          1.102,
+          8.204,
+          5.399,
+          52.473,
+          4.364,
+          7.043,
+          43.321
+        ],
+        "right_turning_frames": [
+          22,
+          31,
+          33,
+          38,
+          140,
+          144
+        ],
+        "left_turning_frames": [
+          62,
+          65,
+          69,
+          71,
+          76,
+          82,
+          97,
+          99,
+          106,
+          108,
+          112,
+          114,
+          169,
+          180
+        ],
+        "right_turning_diffs": [
+          9,
+          2,
+          5,
+          102,
+          4
+        ],
+        "left_turning_diffs": [
+          3,
+          4,
+          2,
+          5,
+          6,
+          15,
+          2,
+          7,
+          2,
+          4,
+          2,
+          55,
+          11
+        ]
+      },
+      "num_frames": 189,
+      "p_over_num_frames_acf": 0.5681325742957458
+    },
+    "pend_fps12_189f_s1": {
+      "fps": 12.0,
+      "skip": 12,
+      "release_frame": 12,
+      "n_used": 177,
+      "pend_acf_cli": {
+        "period_frames": 66.54757669807798,
+        "period_s": 5.545631391506498,
+        "ci95_frames": [
+          45.47373695525698,
+          67.65546261856939
+        ],
+        "flag": "check",
+        "window_spread": 0.15118504747389294
+      },
+      "l1_acf": {
+        "period_frames": 111.16677517019303,
+        "period_s": 9.263897930849419
+      },
+      "l2_med_acf": {
+        "period_frames": 111.13065160879911,
+        "period_s": 9.260887634066593
+      },
+      "cos_med_acf": {
+        "period_frames": 110.91282697751265,
+        "period_s": 9.242735581459387
+      },
+      "dark_bob_tracker": {
+        "period_zc_frames": 9.15785027497104,
+        "period_zc_s": 0.76315418958092,
+        "zc_intervals_frames": [
+          45.35,
+          19.27,
+          27.436,
+          9.158,
+          1.842,
+          7.437,
+          25.673,
+          8.056,
+          12.118,
+          40.865,
+          1.576,
+          27.43,
+          35.154,
+          4.224,
+          9.111,
+          1.579,
+          28.142,
+          5.955,
+          6.909
+        ],
+        "right_turning_frames": [
+          33,
+          40,
+          44,
+          77,
+          99,
+          103,
+          105,
+          110,
+          112,
+          116,
+          143,
+          146,
+          154,
+          186
+        ],
+        "left_turning_frames": [
+          14,
+          22,
+          53,
+          57,
+          64,
+          67,
+          82,
+          84,
+          87,
+          90,
+          118,
+          123,
+          129,
+          131,
+          133,
+          135,
+          137,
+          163,
+          165,
+          176,
+          180
+        ],
+        "right_turning_diffs": [
+          7,
+          4,
+          33,
+          22,
+          4,
+          2,
+          5,
+          2,
+          4,
+          27,
+          3,
+          8,
+          32
+        ],
+        "left_turning_diffs": [
+          8,
+          31,
+          4,
+          7,
+          3,
+          15,
+          2,
+          3,
+          3,
+          28,
+          5,
+          6,
+          2,
+          2,
+          2,
+          2,
+          26,
+          2,
+          11,
+          4
+        ]
+      },
+      "num_frames": 189,
+      "p_over_num_frames_acf": 0.35210358041311096
+    },
+    "pend_fps24_189f_s2": {
+      "fps": 24.0,
+      "skip": 12,
+      "release_frame": 12,
+      "n_used": 177,
+      "pend_acf_cli": {
+        "period_frames": 56.65424356061306,
+        "period_s": 2.3605934816922107,
+        "ci95_frames": [
+          45.64440596980419,
+          59.040308189351585
+        ],
+        "flag": "check",
+        "window_spread": 0.09672391988334107
+      },
+      "l1_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "l2_med_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "cos_med_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "dark_bob_tracker": {
+        "period_zc_frames": 12.090217445013955,
+        "period_zc_s": 0.5037590602089148,
+        "zc_intervals_frames": [
+          12.09,
+          49.644,
+          8.792,
+          10.784,
+          6.229,
+          8.858,
+          12.391,
+          25.83,
+          26.758,
+          4.147,
+          32.867,
+          27.261,
+          9.822,
+          6.96,
+          11.62,
+          1.687,
+          27.909,
+          16.368,
+          20.772
+        ],
+        "right_turning_frames": [
+          20,
+          27,
+          30,
+          32,
+          35,
+          37,
+          42,
+          46,
+          79,
+          86,
+          89,
+          92,
+          94,
+          103,
+          108,
+          130,
+          146,
+          148,
+          159,
+          174,
+          178,
+          181,
+          183,
+          185
+        ],
+        "left_turning_frames": [
+          63,
+          67,
+          70,
+          72,
+          80,
+          82,
+          117,
+          119,
+          138,
+          171,
+          176
+        ],
+        "right_turning_diffs": [
+          7,
+          3,
+          2,
+          3,
+          2,
+          5,
+          4,
+          33,
+          7,
+          3,
+          3,
+          2,
+          9,
+          5,
+          22,
+          16,
+          2,
+          11,
+          15,
+          4,
+          3,
+          2,
+          2
+        ],
+        "left_turning_diffs": [
+          4,
+          3,
+          2,
+          8,
+          2,
+          35,
+          2,
+          19,
+          33,
+          5
+        ]
+      },
+      "num_frames": 189,
+      "p_over_num_frames_acf": 0.29975790243710615
+    },
+    "pend_fps24_61f_s1": {
+      "fps": 24.0,
+      "skip": 12,
+      "release_frame": 12,
+      "n_used": 49,
+      "pend_acf_cli": {
+        "period_frames": null,
+        "period_s": null,
+        "ci95_frames": null,
+        "flag": "fail",
+        "window_spread": null
+      },
+      "l1_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "l2_med_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "cos_med_acf": {
+        "period_frames": null,
+        "period_s": null
+      },
+      "dark_bob_tracker": {
+        "period_zc_frames": 8.535730631516472,
+        "period_zc_s": 0.355655442979853,
+        "zc_intervals_frames": [
+          8.536,
+          4.756,
+          15.568
+        ],
+        "right_turning_frames": [
+          15,
+          22,
+          25,
+          30,
+          34,
+          36,
+          42
+        ],
+        "left_turning_frames": [],
+        "right_turning_diffs": [
+          7,
+          3,
+          5,
+          4,
+          2,
+          6
+        ],
+        "left_turning_diffs": []
+      },
+      "num_frames": 61,
+      "p_over_num_frames_acf": null
     }
   },
   "nano_saved_189f": {
