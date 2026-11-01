@@ -86,7 +86,7 @@ def main():
     (ROOT/'results.json').write_text(json.dumps(out,indent=1)+'\n')
     with (ROOT/'table.csv').open('w',newline='') as f:
         fields=['id','name','scene','arm','seed','motion_early','motion_late','motion_all','scene_preserved','rigid_swing','visible_motion','geometry_failure','queue_id','sha256']
-        w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
+        w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');w.writeheader()
         for r in rows:w.writerow({**{k:r[k] for k in ['id','name','scene','arm','seed','queue_id','sha256']},**{k:r['roi'][k] for k in ['motion_early','motion_late','motion_all']},**{k:r['codes'][k] for k in ['scene_preserved','rigid_swing','visible_motion','geometry_failure']}})
     print(json.dumps({'source_max_abs_error':out['source_max_abs_error'],'statuses':out['status_counts'],
         'codes':{a:v['codes'] for a,v in arms.items()},'seed_clustered_motion':{a:v['seed_clustered']['roi'] for a,v in arms.items()},
