@@ -91,6 +91,12 @@ def measure(F, fps, ppm=None, diam=None, point=None, pframe=0, tmax=None, nboot=
     if tmax: F = F[:tmax]
     cx, cy, area, info = track(F, point, pframe)
     ok = np.where(np.isfinite(cy))[0]
+    def lost(reason):
+        info.pop('minor', None)
+        return (dict(flag='lost', reason=reason, n_tracked=int(len(ok)), fps_true=float(fps_true),
+                     track_info=info, method=VERSION), (cx, cy, area))
+    if len(ok) < 6:
+        return lost('fewer than six tracked points')
     t = ok / fps_true; y = cy[ok]; dpx = 2 * np.sqrt(area[ok] / np.pi)
     mn = info.pop('minor')[ok]; mn[0] = dpx[0] if not np.isfinite(mn[0]) else mn[0]
     dsz = np.where(np.isfinite(mn), mn, dpx)                              # scale: blob minor side where clean, else colour-blob equiv. diameter
@@ -99,7 +105,10 @@ def measure(F, fps, ppm=None, diam=None, point=None, pframe=0, tmax=None, nboot=
     r = int(np.argmax(y > np.median(y[:3]) + move_px)) if np.any(y > np.median(y[:3]) + move_px) else 0
     a0 = max(r - 6, 0)
     k = a0 + mb.first_impact(Y[a0:], 0.006 if (diam and not ppm) else 2 * s)
-    n = max(k - 1, a0 + 5); p = mb.fit_hinge(t[a0:n], Y[a0:n]); t0 = p[2]
+    n = max(k - 1, a0 + 5)
+    if n > len(ok):
+        return lost('insufficient tracked points after motion onset')
+    p = mb.fit_hinge(t[a0:n], Y[a0:n]); t0 = p[2]
     j0 = int(np.searchsorted(t, t0)) + skip
     if n - j0 < 4: j0 = max(n - 4, 0)
     if diam and not ppm:
@@ -138,6 +147,11 @@ def qc_png(path, F, trk_, r):
     cx, cy, area = trk_
     fig, ax = plt.subplots(1, 2, figsize=(15, 5), gridspec_kw=dict(width_ratios=[1, 2]))
     ax[0].plot(np.arange(len(cy)), cy, '.'); ax[0].invert_yaxis(); ax[0].set_xlabel('frame'); ax[0].set_ylabel('y px (down)')
+    if r['flag'] == 'lost':
+        ax[0].set_title(f"[lost] {r['reason']} (n={r['n_tracked']})")
+        ax[1].axis('off')
+        fig.tight_layout(); fig.savefig(path, dpi=70); plt.close(fig)
+        return
     for f, col in [(r['fit_frames'][0], 'g'), (r['fit_frames'][1], 'b'), (r['impact_frame'], 'r')]: ax[0].axvline(f, color=col, ls='--')
     ax[0].set_title(f"[{r['flag']}] g={r['g']:.2f} [{r['g_ci95'][0]:.2f},{r['g_ci95'][1]:.2f}] R2={r['r2']:.3f} n={r['n_fit']}\n"
                     f"T_fall={r['fall_time_s']:.3f}s fall={r['fall_px']:.0f}px d_ratio={r['d_ratio']:.2f}", fontsize=9)

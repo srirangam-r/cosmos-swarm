@@ -43,3 +43,5 @@ python3 -I firstfall.py --planted planted.json clip_dir out.json
 - d_growth is noisy: on real drops (constant ball) it ranges 0.27-1.39 (median 0.71). Treat it only as a gross check.
 - Known failure: a black ball in front of the black curtain shows no change against the background, so the track is lost.
   Example: raj-1's spawned big ball, lost at frame 29. Use samball (SAM2.1) for those clips.
+
+Short-track handling (post-v1): fewer than six tracked points return `flag: lost`, a reason and the raw track instead of a fit. The JSON omits `g` and fit fields; callers must check the flag before reading them. `--qc` produces a diagnostic plot for this case. The referee's v1 pass predates this guard; it has not been resubmitted, and the estimator for sufficient tracks is unchanged. Regression: `python3 -m unittest discover -s tools/realball -p test_firstfall_short.py -v`.
