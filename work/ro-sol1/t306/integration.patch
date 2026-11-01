@@ -1,0 +1,89 @@
+--- a/work/rahul-5-agy/gallery/index.html
++++ b/work/rahul-5-agy/gallery/index.html
+@@ -834,25 +834,25 @@
+         </div>
+       </section>
+ 
+-      <!-- ROW 5: Sim-Proxy Ball Drop Real-g Calibration (Task 266) -->
++      <!-- ROW 5: Analytical Ball Proxies; Diffusion Measurement QC Failed (Task 266) -->
+       <section class="gallery-card" id="row-ball-gravity">
+         <div class="card-header">
+           <div class="card-title-group">
+             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+-              <span class="badge-status badge-provisional">PROVISIONAL (DIFFUSION QUEUED #5785)</span>
+-              <h2>5. Earth-Gravity Free-Fall Sim-Proxy Adaptation (Task 266)</h2>
++              <span class="badge-status badge-provisional">FAILED MEASUREMENT QC &bull; #5887</span>
++              <h2>5. Ball-Drop Motion Proxies (Task 266)</h2>
+             </div>
+             <div class="card-meta">
+-              Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="#5563">Task #266 Thread</a> &bull; Target: Free-Fall Gravity Constant (0.45 m/s&sup2; &rarr; 9.81 m/s&sup2;)
+-            </div>
+-          </div>
+-          <span class="label-badge badge-control-model">Provisional &bull; In Flight</span>
++              Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="#5887">Owner QC Report #5887</a> &bull; Analytical proxy inputs displayed
++            </div>
++          </div>
++          <span class="label-badge badge-control-model">0/18 Measurable &bull; Owner Eye QC</span>
+         </div>
+ 
+         <div class="video-viewport">
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-plain-model">Uncalibrated Proxy Control (g &approx; 4.90 m/s&sup2;)</span>
++              <span class="label-badge badge-plain-model">Analytical Proxy &bull; Prescribed g = 4.905 m/s&sup2;</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -865,7 +865,7 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model">Earth-Gravity Calibrated Proxy (g = 9.81 m/s&sup2;)</span>
++              <span class="label-badge badge-control-model">Analytical Proxy &bull; Prescribed g = 9.81 m/s&sup2;</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -894,14 +894,14 @@
+ 
+         <div class="card-footer">
+           <div class="sentence-box">
+-            <div class="sentence-label">Mechanism &amp; Explanation</div>
+-            <p><strong>Analytical Sim-Proxy Trajectory:</strong> Supplying a calibrated parabolic trajectory sim-proxy during latent initialization forces Cosmos3-Nano to overcome its default slow-motion free-fall rate (0.45 m/s&sup2;), scaling downward acceleration to real gravitational acceleration (9.81 m/s&sup2;).</p>
+-            <p style="margin-top: 0.5rem;"><strong>Generation Status:</strong> Kinematic proxies generated and validated (ball_g981 vs ball_g490 control shown). 18 diffusion generation jobs submitted by rahul-3 to the upgraded q8 queue (<a href="#5785">#5785</a>, k=12, seeds 1&ndash;6); rendered diffusion outputs currently in flight on the queue.</p>
+-          </div>
+-          <div class="metric-card">
+-            <div class="metric-title">Effective Gravitational Acceleration</div>
+-            <div class="metric-value">g = 9.81 m/s&sup2; (Proxy)</div>
+-            <div class="metric-sub">Provisional: 18 diffusion jobs queued on q8 (<a href="#5785">#5785</a>); proxies displayed</div>
++            <div class="sentence-label">Displayed Inputs &amp; Measurement Limits</div>
++            <p><strong>Analytical Motion Inputs:</strong> These two animations show prescribed ball trajectories used to guide latent initialization. Their gravity values are inputs to the proxy renderer. A measured Cosmos3-Nano gravity improvement has not been established.</p>
++            <p style="margin-top: 0.5rem;"><strong>Generation and QC:</strong> All 18 diffusion clips completed and were fetched (plain / g981 / g490, seeds 1&ndash;6, 93 frames, k=12). In the <a href="#5887">owner's eye-QC report #5887</a>, camera pan/zoom and ambiguous release made 0/18 clips measurable for fitted gravity or bounce time. Task #266 is failed; these players display the analytical proxies.</p>
++          </div>
++          <div class="metric-card" style="border-left-color: var(--accent-amber);">
++            <div class="metric-title">Measurable Diffusion Clips</div>
++            <div class="metric-value" style="color: var(--accent-amber);">0 / 18</div>
++            <div class="metric-sub">Owner eye QC (<a href="#5887">#5887</a>); prescribed proxy g shown above</div>
+           </div>
+         </div>
+       </section>
+@@ -971,14 +971,14 @@
+           </div>
+         </div>
+ 
+-        <div class="evidence-card" id="5563"><span id="5785"></span>
++        <div class="evidence-card" id="5563"><span id="5785"></span><span id="5887"></span>
+           <div class="evidence-title">
+-            <span>Finding #5563 / #5785: Task 266 Gravity</span>
+-            <span class="label-badge badge-provisional">Provisional</span>
+-          </div>
+-          <div class="evidence-meta">Authors: rahul-3, ro-3 &bull; Task #266 &bull; q8 Queue</div>
++            <span>Task 266 Gravity: Owner QC Report #5887</span>
++            <span class="label-badge badge-provisional">Failed Measurement QC</span>
++          </div>
++          <div class="evidence-meta">Authors: rahul-3, ro-3 &bull; Task #266 &bull; 18 Diffusion Clips Completed</div>
+           <div class="evidence-desc">
+-            Parabolic free-fall sim-proxy adaptation to correct Earth gravity (0.45 &rarr; 9.81 m/s&sup2;). 18 diffusion generation jobs submitted by rahul-3 to upgraded q8 queue (#5785); kinematic proxies displayed.
++            The displayed analytical proxies prescribe g = 9.81 and 4.905 m/s&sup2;. All 18 plain/g981/g490 diffusion clips completed; owner eye QC (#5887) found 0/18 measurable for fitted gravity or bounce time because of camera pan/zoom and ambiguous release. No measured gravity improvement is established. Task #266 failed; #5785 records the earlier submission.
+           </div>
+         </div>
+ 

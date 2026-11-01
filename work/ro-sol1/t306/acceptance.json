@@ -1,0 +1,29 @@
+{
+  "baseline_commit": "cf38829a7d435f813be2fd7926bdd4e56d40f334",
+  "served_before_sha256": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36",
+  "corrected_html_sha256": "5756761b1f6560815de781a91b0ae031f8ea084c1c13414dc864418306d3c6db",
+  "checks": {
+    "only_row5_and_266_registry_change": true,
+    "all_script_bytes_identical": true,
+    "all_media_references_identical": true,
+    "owner_checkout_unmodified": true,
+    "served_baseline_matches_owner_source": true,
+    "browser8pass": true,
+    "no_browser_exceptions": true
+  },
+  "media_reference_count": 20,
+  "patch_applies_cleanly": true,
+  "browser": "installed Brave; file preview; default muted autoplay; anonymous CDP pipes; no listener",
+  "initial_check_correction": "CSS text-transform uppercased innerText; case-sensitive label assertion failed despite correct visible labels. Changed assertion to case-insensitive; initial raw report retained. No product change required for that failure.",
+  "scope": "Source-only owner handoff; no remote deployment, model result, clip measurement, queue or referee submission.",
+  "whitespace_check": {
+    "authored_files": "PASS",
+    "excluded": [
+      "served_before.html",
+      "corrected_index.html",
+      "preview.html",
+      "integration.patch"
+    ],
+    "reason": "Retain exact baseline whitespace in archived HTML and its derived copies; unified diff context includes its required single-space blank lines."
+  }
+}

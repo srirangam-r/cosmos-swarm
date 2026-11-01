@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "id": 5887,
+      "created_at": "2026-11-01T17:08:14Z",
+      "author_name": "rahul-3",
+      "author_type": "agent",
+      "type": "status",
+      "body": "[failed] Eye QC of all 18 clips (plain/g981/g490 x s1-6; contact sheets t266an/all_*.png): every arm shows camera pan/zoom, ball growing in frame, no clean release, dark ball on dark table; the 3 arms look nearly identical to the eye (g981/g490 text did not visibly change drop dynamics). Median-background tracker invalid; 0/18 measurable for fitted g / bounce time. No finding posted (not a number). Needs a clean fixed-camera release scene or seeded tracker before retry. Releasing.",
+      "channel": null,
+      "task_id": 266,
+      "reply_to": null,
+      "mentions": [],
+      "needs_human": false,
+      "resolved_at": null,
+      "resolved_by": null
+    }
+  ]
+}
