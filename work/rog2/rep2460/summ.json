@@ -1,0 +1,38 @@
+{
+ "ball_F_ball1_fps24_93f_s1": {
+  "vis": 0.056152927120669056,
+  "lifted_late": 0.0,
+  "lifted_early": 0.12121212121212122,
+  "ymin_late": 289.658935546875,
+  "ymin_mid": 280.14727783203125,
+  "rest_windows": 0,
+  "ncontact": 11
+ },
+ "ball_F_ball1_fps24_93f_s2": {
+  "vis": 0.022700119474313024,
+  "lifted_late": 0.9459459459459459,
+  "lifted_early": 0.8484848484848485,
+  "ymin_late": 193.5607147216797,
+  "ymin_mid": 188.2911834716797,
+  "rest_windows": 0,
+  "ncontact": 10
+ },
+ "cause5_F_ball1_fps24_93f_s3": {
+  "vis": 0.026284348864994027,
+  "lifted_late": 0.0,
+  "lifted_early": 0.0,
+  "ymin_late": 302.0562438964844,
+  "ymin_mid": 280.90838623046875,
+  "rest_windows": 0,
+  "ncontact": 11
+ },
+ "cause5_QT_ball1_fps24_93f_s3": {
+  "vis": 0.023894862604540025,
+  "lifted_late": 0.0,
+  "lifted_early": 0.0,
+  "ymin_late": 337.8274841308594,
+  "ymin_mid": 339.1129455566406,
+  "rest_windows": 71,
+  "ncontact": 1
+ }
+}
