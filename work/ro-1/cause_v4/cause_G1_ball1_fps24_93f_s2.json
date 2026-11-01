@@ -1,0 +1,28 @@
+{
+ "width": 832,
+ "height": 480,
+ "num_frames": 93,
+ "fps": 24,
+ "steps": 35,
+ "guidance": 1.0,
+ "flow_shift": 10.0,
+ "seed": 2,
+ "negative_prompt": null,
+ "image": "gauge_ball1_dd33_832x480.png",
+ "source": "GAUGE-Dataset data/rigid/bouncing ball/video/1.mp4, deduplicated (25-in-30 fps) frame 33 = ball already released and in free fall (~2-3 frames after onset), letterboxed 1280x720->832x468 + 6px pad (raj-3 task 15 input)",
+ "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "arm": "G1",
+ "name": "cause_G1_ball1_fps24_93f_s2",
+ "stated_duration_s": 3.875,
+ "protocol": "task22 cause arms: GAUGE ball1 dd33 mid-fall, one change vs base F arm",
+ "extra_params": {
+  "client": "ro-1"
+ },
+ "prompt_text": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt_text": null,
+ "model": "nvidia/Cosmos3-Nano (diffusers bf16, all on GPU, ro-rtx6000 GPU1)",
+ "endpoint": "http://100.77.182.40:8021",
+ "server_clip_id": "20261101T050515_0060_ro-1",
+ "seconds": 75.5,
+ "wall_seconds": 99.6
+}

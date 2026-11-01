@@ -1,0 +1,72 @@
+{
+ "cause_G1_ball1_fps24_93f_s1.mp4": {
+  "early": 1.926,
+  "late": 1.812,
+  "late_last20": 1.438
+ },
+ "cause_G1_ball1_fps24_93f_s2.mp4": {
+  "early": 11.73,
+  "late": 5.8,
+  "late_last20": 5.419
+ },
+ "cause_G3_ball1_fps24_93f_s1.mp4": {
+  "early": 2.52,
+  "late": 2.464,
+  "late_last20": 2.383
+ },
+ "cause_G3_ball1_fps24_93f_s2.mp4": {
+  "early": 3.056,
+  "late": 3.167,
+  "late_last20": 3.026
+ },
+ "cause_QT_ball1_fps24_93f_s1.mp4": {
+  "early": 3.018,
+  "late": 1.641,
+  "late_last20": 1.155
+ },
+ "cause_QT_ball1_fps24_93f_s2.mp4": {
+  "early": 2.686,
+  "late": 1.452,
+  "late_last20": 1.224
+ },
+ "cause_R20_ball1_fps24_93f_s1.mp4": {
+  "early": 3.618,
+  "late": 3.603,
+  "late_last20": 3.287
+ },
+ "cause_R20_ball1_fps24_93f_s2.mp4": {
+  "early": 3.542,
+  "late": 3.67,
+  "late_last20": 3.773
+ },
+ "cause_R95_ball1_fps24_93f_s1.mp4": {
+  "early": 3.386,
+  "late": 3.013,
+  "late_last20": 2.814
+ },
+ "cause_R95_ball1_fps24_93f_s2.mp4": {
+  "early": 4.006,
+  "late": 4.869,
+  "late_last20": 4.706
+ },
+ "ball_F_ball1_fps24_93f_s1.mp4": {
+  "early": 3.816,
+  "late": 3.322,
+  "late_last20": 3.021
+ },
+ "ball_F_ball1_fps24_93f_s2.mp4": {
+  "early": 3.523,
+  "late": 3.469,
+  "late_last20": 3.408
+ },
+ "ball_F_ball2_fps24_93f_s1.mp4": {
+  "early": 4.088,
+  "late": 4.242,
+  "late_last20": 4.018
+ },
+ "ball_F_ball2_fps24_93f_s2.mp4": {
+  "early": 3.951,
+  "late": 3.324,
+  "late_last20": 3.203
+ }
+}
