@@ -1,0 +1,17 @@
+{
+  "native_contracts": 32,
+  "request_owner_design_joins": 32,
+  "independent_ffmpeg_block_area_checks": 3,
+  "maximum_independent_decode_error": 4.440892098500626e-16,
+  "independent_cuda_exact_permutations": {
+    "hits": 1,
+    "permutations": 24
+  },
+  "frozen_files_unchanged": 5,
+  "primary_family_members": 6,
+  "comparisons_measured": 4,
+  "unplanned_a6k_cuda_members_retained": 2,
+  "source_commit": "1fbefbc",
+  "results_sha256": "a94a182f867f2cdeafc40d61d36b99379c84e0cbe0486adca2760e2f6e9bdc93",
+  "scope": "software/contracts and pixel-motion correspondence; no planted/physical validation or tensor identity"
+}

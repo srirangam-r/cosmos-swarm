@@ -116,3 +116,14 @@ exploratory four-seed CPU-versus-CUDA control on q8 shows no detected integer-se
 correspondence (advantage −0.0062 gray levels, bootstrap 95% [−0.1714,+0.1637]);
 this is not equivalence or cross-GPU evidence. Queue sidecars record requested
 noise, not authenticated executed noise. E1–E4 outcomes remain unopened.
+
+The later [E0 cross-GPU follow-up](e0_cross_gpu/README.md) finds the owner's
+target jobs under raj-noise-c and independently decodes all32 native clips.
+All three CPU-requested GPU pairs show positive seed correspondence with the
+unchanged temporal-change metric (same/different distance ratios0.516–0.566;
+each raw permutation p=.0001, six-member Holm p=.0006, n=8seed clusters).
+The four-seed CPU-minus-CUDA contrast is underpowered: +0.3463gray levels,
+bootstrap95% [−0.0386,+0.8510]. Native execution/input/runtime/sampler provenance
+remains pending. This independently corroborates pixel-motion correspondence
+on the tested clips; it establishes neither exact noise/output identity nor
+unrestricted pairing across queue stacks. Full values are in SUMMARY.md.
