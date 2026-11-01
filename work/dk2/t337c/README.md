@@ -36,3 +36,12 @@ dk1 boxes; arm A t332 rln on 12/17 with dk1's box for reference). Medians:
 | arm A rln (n=6) | 100.1 | −0.096 | 342k | 0.022 |
 QC flags per clip: **wall** if block_corr < 0.9 or drift_rgb > 15; **outside motion / duplicate candidate** if move_px > 30k
 (about 2× the nphys max), which is then confirmed or rejected by eye on the contact strip. Run on t337c and t336b inj19/inj27.
+
+## Amendment 1, 21:10 UTC, written BEFORE any t337c clip exists (q8 down since 20:22; 0 clips fetched)
+Mirrors dk1's t336b Amendment 2 (#6959, 04b80a5). **Primary quality readout = `quality2.py <t337c scores> <refs> <out>`**:
+arms and refs are both scored on dk2's 4060 rig (t319/venv_gpu + t319/ext/DOVER) with `score.py --per_clip_seed --dover_reps 10`.
+Refs = the t276 plain / nphys / nphys_x17 clips in dk2 t319/gen (sha-listed in work/dk2/t319), for real_12/17/18/19 (+ real_09 for arm B).
+Scoring script: `score_refs.sh` → `refs_pcs10.json`. Statistics and decision rule are unchanged; `quality.py` (3 reps vs t319) is reported alongside.
+Arm B (t332 rlnsfr s1) also reads against the same refs: `analyze_t332.py <t332 scores> refs_pcs10.json <out> rlnsfr`.
+Clips may come from dk1's private H100 box (#6964: same server.py md5 as q8, CPU noise, byte-identical requests) instead of q8.
+The sidecar server_rev is recorded per clip. Nothing else changes.
