@@ -1,0 +1,3543 @@
+{
+  "task_id": 49,
+  "part1_finding_600_bounce_decay": {
+    "tool_sha256": "93b57894ffd6f7c988957da8186f973fe5e4988d828425c719fc19938af9cea0",
+    "referee_planted_score": {
+      "agent": "rahul",
+      "method": "bounce_decay @ sha256:93b57894ffd6 (rahul task36, joint shared-a multi-flight fit; g=rest-at-0 fall fit, e=first-impact velocity ratio)",
+      "estimates_scored": 12,
+      "within_tolerance": 12,
+      "pass_rate": 1.0,
+      "tolerance": 0.1,
+      "verdict": "pass",
+      "per_clip_error_band": {
+        "planted-01": {
+          "g": "<5%"
+        },
+        "planted-03": {
+          "g": "<5%"
+        },
+        "planted-04": {
+          "g": "<5%"
+        },
+        "planted-06": {
+          "g": "5-10%",
+          "e": "<5%"
+        },
+        "planted-08": {
+          "g": "<5%",
+          "e": "<5%"
+        },
+        "planted-12": {
+          "g": "<5%"
+        },
+        "planted-14": {
+          "g": "<5%",
+          "e": "<5%"
+        },
+        "planted-15": {
+          "g": "5-10%",
+          "e": "<5%"
+        }
+      },
+      "ignored_clip_ids": [],
+      "rule": "pass = at least 10 estimates (or all) scored and >= 90% within 10% relative error"
+    },
+    "referee_planted_estimates": {
+      "planted-01": {
+        "g": 13.826241237533656
+      },
+      "planted-03": {
+        "g": 3.5441852385660155
+      },
+      "planted-04": {
+        "g": 9.42459730646212
+      },
+      "planted-06": {
+        "g": 7.119112042444061,
+        "e": 0.6501172428525529
+      },
+      "planted-08": {
+        "g": 4.945914923082903,
+        "e": 0.7999759651709571
+      },
+      "planted-12": {
+        "g": 5.735959777480558
+      },
+      "planted-14": {
+        "g": 12.044699108688704,
+        "e": 0.5506533174783006
+      },
+      "planted-15": {
+        "g": 9.305912920454672,
+        "e": 0.7000340719390887
+      }
+    },
+    "truth_json_exact_match": true,
+    "saved_held_summary": {
+      "ALL": {
+        "e_T_fit": {
+          "n": 30,
+          "mean_ratio": 1.0006,
+          "sd_ratio": 0.0017,
+          "se_ratio": 0.0003,
+          "max_abs_err_pct": 0.51,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 33,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0081,
+          "se_ratio": 0.0014,
+          "max_abs_err_pct": 2.77,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 33,
+          "mean_ratio": 0.9995,
+          "sd_ratio": 0.0047,
+          "se_ratio": 0.0008,
+          "max_abs_err_pct": 2.45,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 31,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.002,
+          "se_ratio": 0.0004,
+          "max_abs_err_pct": 0.95,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 33,
+          "mean_ratio": 0.9715,
+          "sd_ratio": 0.0147,
+          "se_ratio": 0.0026,
+          "max_abs_err_pct": 6.23,
+          "within_5pct": 93.9
+        },
+        "g_fall": {
+          "n": 10,
+          "mean_ratio": 0.9832,
+          "sd_ratio": 0.0276,
+          "se_ratio": 0.0092,
+          "max_abs_err_pct": 6.46,
+          "within_5pct": 90.0
+        }
+      },
+      "A": {
+        "e_T_fit": {
+          "n": 6,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.11,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 7,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.08,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 7,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0001,
+          "se_ratio": 0.0,
+          "max_abs_err_pct": 0.02,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 7,
+          "mean_ratio": 0.9998,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.07,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 7,
+          "mean_ratio": 0.9736,
+          "sd_ratio": 0.0055,
+          "se_ratio": 0.0022,
+          "max_abs_err_pct": 3.63,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 8,
+          "mean_ratio": 0.9853,
+          "sd_ratio": 0.0304,
+          "se_ratio": 0.0115,
+          "max_abs_err_pct": 6.46,
+          "within_5pct": 87.5
+        }
+      },
+      "B": {
+        "e_T_fit": {
+          "n": 6,
+          "mean_ratio": 1.0019,
+          "sd_ratio": 0.002,
+          "se_ratio": 0.0009,
+          "max_abs_err_pct": 0.5,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 7,
+          "mean_ratio": 1.0001,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.06,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 7,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0003,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.06,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 6,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0003,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.07,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 7,
+          "mean_ratio": 0.9675,
+          "sd_ratio": 0.0046,
+          "se_ratio": 0.0019,
+          "max_abs_err_pct": 3.77,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 0
+        }
+      },
+      "C": {
+        "e_T_fit": {
+          "n": 8,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0,
+          "se_ratio": 0.0,
+          "max_abs_err_pct": 0.01,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 8,
+          "mean_ratio": 1.0003,
+          "sd_ratio": 0.0013,
+          "se_ratio": 0.0005,
+          "max_abs_err_pct": 0.36,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 8,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0001,
+          "se_ratio": 0.0,
+          "max_abs_err_pct": 0.04,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 8,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0001,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.03,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 8,
+          "mean_ratio": 0.9716,
+          "sd_ratio": 0.0047,
+          "se_ratio": 0.0018,
+          "max_abs_err_pct": 3.54,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 0
+        }
+      },
+      "D": {
+        "e_T_fit": {
+          "n": 3,
+          "mean_ratio": 1.001,
+          "sd_ratio": 0.0014,
+          "se_ratio": 0.001,
+          "max_abs_err_pct": 0.28,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 4,
+          "mean_ratio": 1.0019,
+          "sd_ratio": 0.0229,
+          "se_ratio": 0.0132,
+          "max_abs_err_pct": 2.77,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 4,
+          "mean_ratio": 0.9959,
+          "sd_ratio": 0.0129,
+          "se_ratio": 0.0075,
+          "max_abs_err_pct": 2.45,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 3,
+          "mean_ratio": 0.9993,
+          "sd_ratio": 0.0014,
+          "se_ratio": 0.001,
+          "max_abs_err_pct": 0.24,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 4,
+          "mean_ratio": 0.9768,
+          "sd_ratio": 0.039,
+          "se_ratio": 0.0225,
+          "max_abs_err_pct": 6.23,
+          "within_5pct": 50.0
+        },
+        "g_fall": {
+          "n": 0
+        }
+      },
+      "E": {
+        "e_T_fit": {
+          "n": 7,
+          "mean_ratio": 1.0005,
+          "sd_ratio": 0.0025,
+          "se_ratio": 0.001,
+          "max_abs_err_pct": 0.51,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 7,
+          "mean_ratio": 0.9992,
+          "sd_ratio": 0.0014,
+          "se_ratio": 0.0006,
+          "max_abs_err_pct": 0.3,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 7,
+          "mean_ratio": 0.9997,
+          "sd_ratio": 0.001,
+          "se_ratio": 0.0004,
+          "max_abs_err_pct": 0.25,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 7,
+          "mean_ratio": 1.0005,
+          "sd_ratio": 0.0041,
+          "se_ratio": 0.0017,
+          "max_abs_err_pct": 0.95,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 7,
+          "mean_ratio": 0.9701,
+          "sd_ratio": 0.0059,
+          "se_ratio": 0.0024,
+          "max_abs_err_pct": 4.06,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 2,
+          "mean_ratio": 0.9746,
+          "sd_ratio": 0.0034,
+          "se_ratio": 0.0034,
+          "max_abs_err_pct": 2.88,
+          "within_5pct": 100.0
+        }
+      },
+      "still_bouncing_agree": "37/40",
+      "total_impacts_found_vs_true": [
+        216,
+        539
+      ]
+    },
+    "regenerated_held_summary": {
+      "ALL": {
+        "e_T_fit": {
+          "n": 30,
+          "mean_ratio": 1.0007,
+          "sd_ratio": 0.0015,
+          "se_ratio": 0.0003,
+          "max_abs_err_pct": 0.47,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 34,
+          "mean_ratio": 1.0006,
+          "sd_ratio": 0.0085,
+          "se_ratio": 0.0015,
+          "max_abs_err_pct": 2.74,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 34,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0056,
+          "se_ratio": 0.001,
+          "max_abs_err_pct": 2.44,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 31,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0024,
+          "se_ratio": 0.0004,
+          "max_abs_err_pct": 0.85,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 34,
+          "mean_ratio": 0.9732,
+          "sd_ratio": 0.0154,
+          "se_ratio": 0.0027,
+          "max_abs_err_pct": 6.21,
+          "within_5pct": 94.1
+        },
+        "g_fall": {
+          "n": 10,
+          "mean_ratio": 0.9837,
+          "sd_ratio": 0.0283,
+          "se_ratio": 0.0094,
+          "max_abs_err_pct": 6.7,
+          "within_5pct": 90.0
+        }
+      },
+      "A": {
+        "e_T_fit": {
+          "n": 6,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0006,
+          "se_ratio": 0.0003,
+          "max_abs_err_pct": 0.16,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 7,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.1,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 7,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0002,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.05,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 7,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0005,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.09,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 7,
+          "mean_ratio": 0.9741,
+          "sd_ratio": 0.0057,
+          "se_ratio": 0.0023,
+          "max_abs_err_pct": 3.61,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 8,
+          "mean_ratio": 0.9858,
+          "sd_ratio": 0.0312,
+          "se_ratio": 0.0118,
+          "max_abs_err_pct": 6.7,
+          "within_5pct": 87.5
+        }
+      },
+      "B": {
+        "e_T_fit": {
+          "n": 7,
+          "mean_ratio": 1.0015,
+          "sd_ratio": 0.002,
+          "se_ratio": 0.0008,
+          "max_abs_err_pct": 0.47,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 8,
+          "mean_ratio": 0.9998,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.08,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 8,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0004,
+          "se_ratio": 0.0002,
+          "max_abs_err_pct": 0.08,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 7,
+          "mean_ratio": 1.001,
+          "sd_ratio": 0.0023,
+          "se_ratio": 0.001,
+          "max_abs_err_pct": 0.67,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 8,
+          "mean_ratio": 0.969,
+          "sd_ratio": 0.0044,
+          "se_ratio": 0.0017,
+          "max_abs_err_pct": 3.58,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 0
+        }
+      },
+      "C": {
+        "e_T_fit": {
+          "n": 8,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0,
+          "se_ratio": 0.0,
+          "max_abs_err_pct": 0.01,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 8,
+          "mean_ratio": 1.0004,
+          "sd_ratio": 0.0014,
+          "se_ratio": 0.0005,
+          "max_abs_err_pct": 0.38,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 8,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0001,
+          "se_ratio": 0.0,
+          "max_abs_err_pct": 0.03,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 8,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0002,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.03,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 8,
+          "mean_ratio": 0.9724,
+          "sd_ratio": 0.0039,
+          "se_ratio": 0.0015,
+          "max_abs_err_pct": 3.53,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 0
+        }
+      },
+      "D": {
+        "e_T_fit": {
+          "n": 3,
+          "mean_ratio": 1.0012,
+          "sd_ratio": 0.0012,
+          "se_ratio": 0.0009,
+          "max_abs_err_pct": 0.27,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 5,
+          "mean_ratio": 1.005,
+          "sd_ratio": 0.0214,
+          "se_ratio": 0.0107,
+          "max_abs_err_pct": 2.74,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 5,
+          "mean_ratio": 1.0003,
+          "sd_ratio": 0.0144,
+          "se_ratio": 0.0072,
+          "max_abs_err_pct": 2.44,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 3,
+          "mean_ratio": 0.9998,
+          "sd_ratio": 0.0015,
+          "se_ratio": 0.0011,
+          "max_abs_err_pct": 0.23,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 5,
+          "mean_ratio": 0.9822,
+          "sd_ratio": 0.0371,
+          "se_ratio": 0.0185,
+          "max_abs_err_pct": 6.21,
+          "within_5pct": 60.0
+        },
+        "g_fall": {
+          "n": 0
+        }
+      },
+      "E": {
+        "e_T_fit": {
+          "n": 6,
+          "mean_ratio": 1.001,
+          "sd_ratio": 0.0019,
+          "se_ratio": 0.0009,
+          "max_abs_err_pct": 0.47,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 6,
+          "mean_ratio": 0.9991,
+          "sd_ratio": 0.0015,
+          "se_ratio": 0.0007,
+          "max_abs_err_pct": 0.32,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 6,
+          "mean_ratio": 1.0001,
+          "sd_ratio": 0.0013,
+          "se_ratio": 0.0006,
+          "max_abs_err_pct": 0.26,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 6,
+          "mean_ratio": 1.0001,
+          "sd_ratio": 0.0045,
+          "se_ratio": 0.002,
+          "max_abs_err_pct": 0.85,
+          "within_5pct": 100.0
+        },
+        "g_joint": {
+          "n": 6,
+          "mean_ratio": 0.9711,
+          "sd_ratio": 0.0045,
+          "se_ratio": 0.002,
+          "max_abs_err_pct": 3.56,
+          "within_5pct": 100.0
+        },
+        "g_fall": {
+          "n": 2,
+          "mean_ratio": 0.975,
+          "sd_ratio": 0.0052,
+          "se_ratio": 0.0052,
+          "max_abs_err_pct": 3.02,
+          "within_5pct": 100.0
+        }
+      },
+      "still_bouncing_agree": "36/40",
+      "total_impacts_found_vs_true": [
+        217,
+        539
+      ]
+    },
+    "indep_unshared_curvature_summary": {
+      "ALL": {
+        "e_T_fit": {
+          "n": 32,
+          "mean_ratio": 0.9939,
+          "sd_ratio": 0.0122,
+          "se_ratio": 0.0022,
+          "max_abs_err_pct": 5.12,
+          "within_5pct": 96.9
+        },
+        "e_v1": {
+          "n": 33,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0091,
+          "se_ratio": 0.0016,
+          "max_abs_err_pct": 2.69,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 33,
+          "mean_ratio": 0.9991,
+          "sd_ratio": 0.0085,
+          "se_ratio": 0.0015,
+          "max_abs_err_pct": 2.78,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 32,
+          "mean_ratio": 0.9915,
+          "sd_ratio": 0.0392,
+          "se_ratio": 0.007,
+          "max_abs_err_pct": 22.33,
+          "within_5pct": 96.9
+        }
+      },
+      "A": {
+        "e_T_fit": {
+          "n": 7,
+          "mean_ratio": 0.9893,
+          "sd_ratio": 0.0176,
+          "se_ratio": 0.0072,
+          "max_abs_err_pct": 5.12,
+          "within_5pct": 85.7
+        },
+        "e_v1": {
+          "n": 7,
+          "mean_ratio": 0.9991,
+          "sd_ratio": 0.0015,
+          "se_ratio": 0.0006,
+          "max_abs_err_pct": 0.27,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 7,
+          "mean_ratio": 0.9994,
+          "sd_ratio": 0.001,
+          "se_ratio": 0.0004,
+          "max_abs_err_pct": 0.17,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 7,
+          "mean_ratio": 0.9682,
+          "sd_ratio": 0.0782,
+          "se_ratio": 0.0319,
+          "max_abs_err_pct": 22.33,
+          "within_5pct": 85.7
+        }
+      },
+      "B": {
+        "e_T_fit": {
+          "n": 7,
+          "mean_ratio": 0.9932,
+          "sd_ratio": 0.0078,
+          "se_ratio": 0.0032,
+          "max_abs_err_pct": 1.83,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 8,
+          "mean_ratio": 1.0002,
+          "sd_ratio": 0.0019,
+          "se_ratio": 0.0007,
+          "max_abs_err_pct": 0.42,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 8,
+          "mean_ratio": 0.9991,
+          "sd_ratio": 0.002,
+          "se_ratio": 0.0007,
+          "max_abs_err_pct": 0.47,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 7,
+          "mean_ratio": 0.9959,
+          "sd_ratio": 0.0095,
+          "se_ratio": 0.0039,
+          "max_abs_err_pct": 2.72,
+          "within_5pct": 100.0
+        }
+      },
+      "C": {
+        "e_T_fit": {
+          "n": 8,
+          "mean_ratio": 1.0,
+          "sd_ratio": 0.0003,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.07,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 8,
+          "mean_ratio": 0.9984,
+          "sd_ratio": 0.003,
+          "se_ratio": 0.0011,
+          "max_abs_err_pct": 0.83,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 8,
+          "mean_ratio": 0.9995,
+          "sd_ratio": 0.0012,
+          "se_ratio": 0.0004,
+          "max_abs_err_pct": 0.34,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 8,
+          "mean_ratio": 0.9999,
+          "sd_ratio": 0.0003,
+          "se_ratio": 0.0001,
+          "max_abs_err_pct": 0.08,
+          "within_5pct": 100.0
+        }
+      },
+      "D": {
+        "e_T_fit": {
+          "n": 4,
+          "mean_ratio": 0.9946,
+          "sd_ratio": 0.009,
+          "se_ratio": 0.0052,
+          "max_abs_err_pct": 2.1,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 4,
+          "mean_ratio": 1.0013,
+          "sd_ratio": 0.0246,
+          "se_ratio": 0.0142,
+          "max_abs_err_pct": 2.69,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 4,
+          "mean_ratio": 0.9992,
+          "sd_ratio": 0.023,
+          "se_ratio": 0.0133,
+          "max_abs_err_pct": 2.78,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 4,
+          "mean_ratio": 0.9977,
+          "sd_ratio": 0.0128,
+          "se_ratio": 0.0074,
+          "max_abs_err_pct": 2.03,
+          "within_5pct": 100.0
+        }
+      },
+      "E": {
+        "e_T_fit": {
+          "n": 6,
+          "mean_ratio": 0.9916,
+          "sd_ratio": 0.0152,
+          "se_ratio": 0.0068,
+          "max_abs_err_pct": 3.18,
+          "within_5pct": 100.0
+        },
+        "e_v1": {
+          "n": 6,
+          "mean_ratio": 1.0029,
+          "sd_ratio": 0.0041,
+          "se_ratio": 0.0018,
+          "max_abs_err_pct": 0.88,
+          "within_5pct": 100.0
+        },
+        "e_v_med": {
+          "n": 6,
+          "mean_ratio": 0.9984,
+          "sd_ratio": 0.006,
+          "se_ratio": 0.0027,
+          "max_abs_err_pct": 1.3,
+          "within_5pct": 100.0
+        },
+        "e_h_med": {
+          "n": 6,
+          "mean_ratio": 0.998,
+          "sd_ratio": 0.0055,
+          "se_ratio": 0.0025,
+          "max_abs_err_pct": 1.04,
+          "within_5pct": 100.0
+        }
+      }
+    },
+    "nano_ballF_fps24_93f_s1_crosscheck": {
+      "bounce_decay_default_output": {
+        "n_tracked": 91,
+        "n_peaks": 13,
+        "peaks": [
+          2,
+          8,
+          17,
+          25,
+          34,
+          42,
+          48,
+          56,
+          64,
+          72,
+          78,
+          82,
+          86
+        ],
+        "n_fitted": 0,
+        "n_impacts": 0,
+        "e_T_fit": null,
+        "still_bouncing_at_end": true,
+        "failure_reason": "Pass-1 nearest-blob tracker has a false peak at frame 2 (y=180 -> f3 y=170 -> f4 NaN) so segment 0 (frames 0..1) has only 2 points (< min_pts=3), causing analyse() to stop at segment 0 (`if len(idx) < min_pts: break`) with n_fitted=0, n_impacts=0. Furthermore, even when frame 2 is skipped, Nano's depth/perspective drift and non-parabolic bounce shape give shared-a segment RMSE > 1.5 px (4.88-7.72 px)."
+      },
+      "bounce_decay_raw_peaks_after_f5": [
+        8,
+        17,
+        25,
+        34,
+        42,
+        48,
+        56,
+        64,
+        72,
+        78,
+        82,
+        86
+      ],
+      "bounce_decay_raw_intervals_after_f5": [
+        9,
+        8,
+        9,
+        8,
+        6,
+        8,
+        8,
+        8,
+        6,
+        8
+      ]
+    }
+  },
+  "part2_finding_674_seed2_midfall_ball": {
+    "bclock_s2_failure_verification": {
+      "flag": "no_track",
+      "track_x_range_f2_92": [
+        309.98,
+        312.13
+      ],
+      "track_y_range_f2_92": [
+        149.98,
+        151.22
+      ],
+      "explanation": "bclock v1 locked onto the stationary gripper/strap anchor at (x=310..312, y=150.0..151.2) from f2 to f92 (max excursion 1.2 px)."
+    },
+    "hallucinated_strap_detector_90pct_brightness_excess_f2_92": {
+      "ball_F_fps24_s1_true_bounces_mean_excess": 6.89,
+      "ball_F_fps24_s2_tether_yoyo_mean_excess": 36.56,
+      "ball_E_fps12_s2_low_bounces_mean_excess": 1.67
+    },
+    "ball_F_fps24_s1_control": {
+      "n_contacts": 11,
+      "contact_frames_int": [
+        7,
+        17,
+        25,
+        33,
+        41,
+        48,
+        56,
+        64,
+        71,
+        78,
+        85
+      ],
+      "contact_frames_sub": [
+        6.93,
+        16.68,
+        24.97,
+        32.97,
+        40.53,
+        48.25,
+        55.94,
+        63.68,
+        70.96,
+        77.86,
+        85.47
+      ],
+      "intervals_frames_sub": [
+        9.75,
+        8.3,
+        7.99,
+        7.56,
+        7.72,
+        7.69,
+        7.75,
+        7.28,
+        6.9,
+        7.61
+      ],
+      "mean_period_frames": 7.855,
+      "se_period_frames": 0.242,
+      "mean_period_conditioned_s": 0.3273,
+      "se_period_conditioned_s": 0.0101,
+      "e_T_loglinear": 0.9765,
+      "e_T_loglinear_se": 0.0065,
+      "e_T_ratio_mean": 0.9751,
+      "e_T_ratio_se": 0.0231,
+      "mean_rise_px": 57.7,
+      "first3_mean_rise_px": 82.0,
+      "last3_mean_rise_px": 40.5,
+      "cycles": [
+        {
+          "cycle": 1,
+          "imp1_f": 7,
+          "apex_f": 12,
+          "imp2_f": 17,
+          "period_f": 10,
+          "y_imp1_px": 342.0,
+          "y_apex_px": 232.1,
+          "rise_px": 105.1,
+          "rise_frames": 5,
+          "fall_frames": 5,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9941,
+          "parabola_g_mps2": 11.48
+        },
+        {
+          "cycle": 2,
+          "imp1_f": 17,
+          "apex_f": 21,
+          "imp2_f": 25,
+          "period_f": 8,
+          "y_imp1_px": 332.3,
+          "y_apex_px": 261.1,
+          "rise_px": 76.5,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9946,
+          "parabola_g_mps2": 12.95
+        },
+        {
+          "cycle": 3,
+          "imp1_f": 25,
+          "apex_f": 29,
+          "imp2_f": 33,
+          "period_f": 8,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 278.6,
+          "rise_px": 64.4,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.9892,
+          "parabola_g_mps2": 10.09
+        },
+        {
+          "cycle": 4,
+          "imp1_f": 33,
+          "apex_f": 37,
+          "imp2_f": 41,
+          "period_f": 8,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 281.0,
+          "rise_px": 57.4,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.9936,
+          "parabola_g_mps2": 10.63
+        },
+        {
+          "cycle": 5,
+          "imp1_f": 41,
+          "apex_f": 45,
+          "imp2_f": 48,
+          "period_f": 7,
+          "y_imp1_px": 333.9,
+          "y_apex_px": 282.6,
+          "rise_px": 51.6,
+          "rise_frames": 4,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.9861,
+          "parabola_g_mps2": 11.5
+        },
+        {
+          "cycle": 6,
+          "imp1_f": 48,
+          "apex_f": 52,
+          "imp2_f": 56,
+          "period_f": 8,
+          "y_imp1_px": 334.4,
+          "y_apex_px": 284.8,
+          "rise_px": 51.7,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.9901,
+          "parabola_g_mps2": 9.72
+        },
+        {
+          "cycle": 7,
+          "imp1_f": 56,
+          "apex_f": 60,
+          "imp2_f": 64,
+          "period_f": 8,
+          "y_imp1_px": 338.6,
+          "y_apex_px": 287.8,
+          "rise_px": 49.1,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.9985,
+          "parabola_g_mps2": 9.0
+        },
+        {
+          "cycle": 8,
+          "imp1_f": 64,
+          "apex_f": 67,
+          "imp2_f": 71,
+          "period_f": 7,
+          "y_imp1_px": 335.3,
+          "y_apex_px": 292.9,
+          "rise_px": 41.4,
+          "rise_frames": 3,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.9977,
+          "parabola_g_mps2": 9.03
+        },
+        {
+          "cycle": 9,
+          "imp1_f": 71,
+          "apex_f": 74,
+          "imp2_f": 78,
+          "period_f": 7,
+          "y_imp1_px": 333.4,
+          "y_apex_px": 297.7,
+          "rise_px": 38.5,
+          "rise_frames": 3,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.989,
+          "parabola_g_mps2": 8.62
+        },
+        {
+          "cycle": 10,
+          "imp1_f": 78,
+          "apex_f": 81,
+          "imp2_f": 85,
+          "period_f": 7,
+          "y_imp1_px": 339.1,
+          "y_apex_px": 297.8,
+          "rise_px": 41.5,
+          "rise_frames": 3,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 4,
+          "parabola_r2": 0.997,
+          "parabola_g_mps2": 7.8
+        }
+      ]
+    },
+    "ball_F_fps24_s2_tether_yoyo": {
+      "n_contacts": 11,
+      "contact_frames_int": [
+        6,
+        14,
+        22,
+        28,
+        37,
+        45,
+        53,
+        61,
+        69,
+        77,
+        85
+      ],
+      "contact_frames_sub": [
+        6.03,
+        13.98,
+        21.74,
+        28.07,
+        36.97,
+        45.1,
+        52.93,
+        60.98,
+        68.97,
+        77.07,
+        84.74
+      ],
+      "intervals_frames_sub": [
+        7.94,
+        7.76,
+        6.33,
+        8.9,
+        8.13,
+        7.83,
+        8.05,
+        7.99,
+        8.1,
+        7.68
+      ],
+      "mean_period_frames": 7.871,
+      "se_period_frames": 0.201,
+      "mean_period_conditioned_s": 0.328,
+      "se_period_conditioned_s": 0.0084,
+      "e_T_loglinear": 1.0049,
+      "e_T_loglinear_se": 0.0099,
+      "e_T_ratio_mean": 1.0063,
+      "e_T_ratio_se": 0.0542,
+      "mean_rise_px": 138.1,
+      "first3_mean_rise_px": 129.0,
+      "last3_mean_rise_px": 139.3,
+      "cycles": [
+        {
+          "cycle": 1,
+          "imp1_f": 6,
+          "apex_f": 11,
+          "imp2_f": 14,
+          "period_f": 8,
+          "y_imp1_px": 311.6,
+          "y_apex_px": 179.5,
+          "rise_px": 143.9,
+          "rise_frames": 5,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9764,
+          "parabola_g_mps2": 24.41
+        },
+        {
+          "cycle": 2,
+          "imp1_f": 14,
+          "apex_f": 17,
+          "imp2_f": 22,
+          "period_f": 8,
+          "y_imp1_px": 335.3,
+          "y_apex_px": 193.8,
+          "rise_px": 122.7,
+          "rise_frames": 3,
+          "fall_frames": 5,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9016,
+          "parabola_g_mps2": 19.52
+        },
+        {
+          "cycle": 3,
+          "imp1_f": 22,
+          "apex_f": 25,
+          "imp2_f": 28,
+          "period_f": 6,
+          "y_imp1_px": 297.6,
+          "y_apex_px": 192.8,
+          "rise_px": 120.4,
+          "rise_frames": 3,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": 0.9316,
+          "parabola_g_mps2": 33.02
+        },
+        {
+          "cycle": 4,
+          "imp1_f": 28,
+          "apex_f": 33,
+          "imp2_f": 37,
+          "period_f": 9,
+          "y_imp1_px": 328.9,
+          "y_apex_px": 190.1,
+          "rise_px": 143.4,
+          "rise_frames": 5,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.8006,
+          "parabola_g_mps2": 16.83
+        },
+        {
+          "cycle": 5,
+          "imp1_f": 37,
+          "apex_f": 41,
+          "imp2_f": 45,
+          "period_f": 8,
+          "y_imp1_px": 338.2,
+          "y_apex_px": 181.7,
+          "rise_px": 154.5,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": 0.9859,
+          "parabola_g_mps2": 25.28
+        },
+        {
+          "cycle": 6,
+          "imp1_f": 45,
+          "apex_f": 49,
+          "imp2_f": 53,
+          "period_f": 8,
+          "y_imp1_px": 334.2,
+          "y_apex_px": 189.4,
+          "rise_px": 144.1,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": 0.9846,
+          "parabola_g_mps2": 25.68
+        },
+        {
+          "cycle": 7,
+          "imp1_f": 53,
+          "apex_f": 57,
+          "imp2_f": 61,
+          "period_f": 8,
+          "y_imp1_px": 332.8,
+          "y_apex_px": 200.7,
+          "rise_px": 134.6,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9902,
+          "parabola_g_mps2": 23.45
+        },
+        {
+          "cycle": 8,
+          "imp1_f": 61,
+          "apex_f": 65,
+          "imp2_f": 69,
+          "period_f": 8,
+          "y_imp1_px": 337.9,
+          "y_apex_px": 197.9,
+          "rise_px": 139.0,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9917,
+          "parabola_g_mps2": 23.57
+        },
+        {
+          "cycle": 9,
+          "imp1_f": 69,
+          "apex_f": 73,
+          "imp2_f": 77,
+          "period_f": 8,
+          "y_imp1_px": 335.9,
+          "y_apex_px": 193.0,
+          "rise_px": 142.6,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9916,
+          "parabola_g_mps2": 23.5
+        },
+        {
+          "cycle": 10,
+          "imp1_f": 77,
+          "apex_f": 81,
+          "imp2_f": 85,
+          "period_f": 8,
+          "y_imp1_px": 335.4,
+          "y_apex_px": 193.9,
+          "rise_px": 136.2,
+          "rise_frames": 4,
+          "fall_frames": 4,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": 0.997,
+          "parabola_g_mps2": 25.1
+        }
+      ]
+    },
+    "ball_E_fps12_s2_first46f": {
+      "n_contacts": 9,
+      "contact_frames_int": [
+        3,
+        7,
+        11,
+        14,
+        18,
+        22,
+        25,
+        30,
+        33
+      ],
+      "contact_frames_sub": [
+        2.9,
+        6.84,
+        10.65,
+        13.96,
+        17.64,
+        21.86,
+        25.33,
+        29.99,
+        33.02
+      ],
+      "intervals_frames_sub": [
+        3.94,
+        3.8,
+        3.31,
+        3.68,
+        4.22,
+        3.47,
+        4.66,
+        3.04
+      ],
+      "mean_period_frames": 3.765,
+      "se_period_frames": 0.183,
+      "mean_period_conditioned_s": 0.3138,
+      "se_period_conditioned_s": 0.0152,
+      "e_T_loglinear": 0.9937,
+      "e_T_loglinear_se": 0.0224,
+      "e_T_ratio_mean": 0.9873,
+      "e_T_ratio_se": 0.0876,
+      "mean_rise_px": 51.5,
+      "first3_mean_rise_px": 51.3,
+      "last3_mean_rise_px": 51.2,
+      "cycles": [
+        {
+          "cycle": 1,
+          "imp1_f": 3,
+          "apex_f": 4,
+          "imp2_f": 7,
+          "period_f": 4,
+          "y_imp1_px": 313.6,
+          "y_apex_px": 269.5,
+          "rise_px": 53.4,
+          "rise_frames": 1,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 2,
+          "imp1_f": 7,
+          "apex_f": 8,
+          "imp2_f": 11,
+          "period_f": 4,
+          "y_imp1_px": 332.1,
+          "y_apex_px": 284.6,
+          "rise_px": 53.0,
+          "rise_frames": 1,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 3,
+          "imp1_f": 11,
+          "apex_f": 12,
+          "imp2_f": 14,
+          "period_f": 3,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 292.7,
+          "rise_px": 47.4,
+          "rise_frames": 1,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 4,
+          "imp1_f": 14,
+          "apex_f": 16,
+          "imp2_f": 18,
+          "period_f": 4,
+          "y_imp1_px": 337.2,
+          "y_apex_px": 284.9,
+          "rise_px": 55.2,
+          "rise_frames": 2,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 5,
+          "imp1_f": 18,
+          "apex_f": 19,
+          "imp2_f": 22,
+          "period_f": 4,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 272.8,
+          "rise_px": 49.2,
+          "rise_frames": 1,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 6,
+          "imp1_f": 22,
+          "apex_f": 23,
+          "imp2_f": 25,
+          "period_f": 3,
+          "y_imp1_px": 300.9,
+          "y_apex_px": 273.2,
+          "rise_px": 35.1,
+          "rise_frames": 1,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 7,
+          "imp1_f": 25,
+          "apex_f": 28,
+          "imp2_f": 30,
+          "period_f": 5,
+          "y_imp1_px": 315.7,
+          "y_apex_px": 277.6,
+          "rise_px": 51.7,
+          "rise_frames": 3,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9413,
+          "parabola_g_mps2": 4.28
+        },
+        {
+          "cycle": 8,
+          "imp1_f": 30,
+          "apex_f": 31,
+          "imp2_f": 33,
+          "period_f": 3,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 276.2,
+          "rise_px": 66.8,
+          "rise_frames": 1,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        }
+      ]
+    },
+    "ball_E_fps12_s2_full93f": {
+      "n_contacts": 18,
+      "contact_frames_int": [
+        3,
+        7,
+        11,
+        14,
+        18,
+        22,
+        25,
+        30,
+        33,
+        49,
+        57,
+        61,
+        65,
+        70,
+        74,
+        78,
+        83,
+        87
+      ],
+      "contact_frames_sub": [
+        2.9,
+        6.84,
+        10.65,
+        13.96,
+        17.64,
+        21.86,
+        25.33,
+        29.99,
+        33.02,
+        48.91,
+        57.03,
+        61.0,
+        65.11,
+        70.05,
+        73.71,
+        78.02,
+        83.07,
+        87.1
+      ],
+      "intervals_frames_sub": [
+        3.94,
+        3.8,
+        3.31,
+        3.68,
+        4.22,
+        3.47,
+        4.66,
+        3.04,
+        15.88,
+        8.12,
+        3.97,
+        4.11,
+        4.94,
+        3.66,
+        4.32,
+        5.04,
+        4.04
+      ],
+      "mean_period_frames": 4.953,
+      "se_period_frames": 0.736,
+      "mean_period_conditioned_s": 0.4128,
+      "se_period_conditioned_s": 0.0613,
+      "e_T_loglinear": 1.0136,
+      "e_T_loglinear_se": 0.02,
+      "e_T_ratio_mean": 1.2043,
+      "e_T_ratio_se": 0.2759,
+      "mean_rise_px": 52.8,
+      "first3_mean_rise_px": 51.3,
+      "last3_mean_rise_px": 44.8,
+      "cycles": [
+        {
+          "cycle": 1,
+          "imp1_f": 3,
+          "apex_f": 4,
+          "imp2_f": 7,
+          "period_f": 4,
+          "y_imp1_px": 313.6,
+          "y_apex_px": 269.5,
+          "rise_px": 53.4,
+          "rise_frames": 1,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 2,
+          "imp1_f": 7,
+          "apex_f": 8,
+          "imp2_f": 11,
+          "period_f": 4,
+          "y_imp1_px": 332.1,
+          "y_apex_px": 284.6,
+          "rise_px": 53.0,
+          "rise_frames": 1,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 3,
+          "imp1_f": 11,
+          "apex_f": 12,
+          "imp2_f": 14,
+          "period_f": 3,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 292.7,
+          "rise_px": 47.4,
+          "rise_frames": 1,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 4,
+          "imp1_f": 14,
+          "apex_f": 16,
+          "imp2_f": 18,
+          "period_f": 4,
+          "y_imp1_px": 337.2,
+          "y_apex_px": 284.9,
+          "rise_px": 55.2,
+          "rise_frames": 2,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 5,
+          "imp1_f": 18,
+          "apex_f": 19,
+          "imp2_f": 22,
+          "period_f": 4,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 272.8,
+          "rise_px": 49.2,
+          "rise_frames": 1,
+          "fall_frames": 3,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 6,
+          "imp1_f": 22,
+          "apex_f": 23,
+          "imp2_f": 25,
+          "period_f": 3,
+          "y_imp1_px": 300.9,
+          "y_apex_px": 273.2,
+          "rise_px": 35.1,
+          "rise_frames": 1,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 7,
+          "imp1_f": 25,
+          "apex_f": 28,
+          "imp2_f": 30,
+          "period_f": 5,
+          "y_imp1_px": 315.7,
+          "y_apex_px": 277.6,
+          "rise_px": 51.7,
+          "rise_frames": 3,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.9413,
+          "parabola_g_mps2": 4.28
+        },
+        {
+          "cycle": 8,
+          "imp1_f": 30,
+          "apex_f": 31,
+          "imp2_f": 33,
+          "period_f": 3,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 276.2,
+          "rise_px": 66.8,
+          "rise_frames": 1,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 9,
+          "imp1_f": 33,
+          "apex_f": 36,
+          "imp2_f": 49,
+          "period_f": 16,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 281.1,
+          "rise_px": 60.6,
+          "rise_frames": 3,
+          "fall_frames": 13,
+          "hang_frames_within_18px_of_apex": 14,
+          "parabola_r2": 0.5546,
+          "parabola_g_mps2": 0.08
+        },
+        {
+          "cycle": 10,
+          "imp1_f": 49,
+          "apex_f": 55,
+          "imp2_f": 57,
+          "period_f": 8,
+          "y_imp1_px": 340.3,
+          "y_apex_px": 278.9,
+          "rise_px": 62.7,
+          "rise_frames": 6,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 6,
+          "parabola_r2": 0.317,
+          "parabola_g_mps2": 0.46
+        },
+        {
+          "cycle": 11,
+          "imp1_f": 57,
+          "apex_f": 59,
+          "imp2_f": 61,
+          "period_f": 4,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 279.6,
+          "rise_px": 63.4,
+          "rise_frames": 2,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 12,
+          "imp1_f": 61,
+          "apex_f": 63,
+          "imp2_f": 65,
+          "period_f": 4,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 281.2,
+          "rise_px": 61.8,
+          "rise_frames": 2,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 13,
+          "imp1_f": 65,
+          "apex_f": 69,
+          "imp2_f": 70,
+          "period_f": 5,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 281.8,
+          "rise_px": 52.1,
+          "rise_frames": 4,
+          "fall_frames": 1,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": 0.6398,
+          "parabola_g_mps2": 0.92
+        },
+        {
+          "cycle": 14,
+          "imp1_f": 70,
+          "apex_f": 72,
+          "imp2_f": 74,
+          "period_f": 4,
+          "y_imp1_px": 324.6,
+          "y_apex_px": 283.6,
+          "rise_px": 50.2,
+          "rise_frames": 2,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 15,
+          "imp1_f": 74,
+          "apex_f": 76,
+          "imp2_f": 78,
+          "period_f": 4,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 288.6,
+          "rise_px": 54.4,
+          "rise_frames": 2,
+          "fall_frames": 2,
+          "hang_frames_within_18px_of_apex": 3,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        },
+        {
+          "cycle": 16,
+          "imp1_f": 78,
+          "apex_f": 82,
+          "imp2_f": 83,
+          "period_f": 5,
+          "y_imp1_px": 343.0,
+          "y_apex_px": 281.9,
+          "rise_px": 44.9,
+          "rise_frames": 4,
+          "fall_frames": 1,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": 0.5408,
+          "parabola_g_mps2": -0.34
+        },
+        {
+          "cycle": 17,
+          "imp1_f": 83,
+          "apex_f": 86,
+          "imp2_f": 87,
+          "period_f": 4,
+          "y_imp1_px": 310.6,
+          "y_apex_px": 282.1,
+          "rise_px": 35.0,
+          "rise_frames": 3,
+          "fall_frames": 1,
+          "hang_frames_within_18px_of_apex": 2,
+          "parabola_r2": null,
+          "parabola_g_mps2": null
+        }
+      ]
+    }
+  },
+  "part3_finding_601_hue_judge_8b_32f": {
+    "2b_f16": {
+      "n_clips": 12,
+      "n_records": 144,
+      "judge_noise_offset": {
+        "overall": {
+          "sd_diff_ddof1": 0.024161,
+          "rms_diff_over_sqrt2": 0.016656,
+          "rms_diff": 0.023555
+        },
+        "Physical Laws": {
+          "sd_diff_ddof1": 0.030431,
+          "rms_diff_over_sqrt2": 0.020639,
+          "rms_diff": 0.029188
+        },
+        "Visual Integrity": {
+          "sd_diff_ddof1": 0.011228,
+          "rms_diff_over_sqrt2": 0.007675,
+          "rms_diff": 0.010853
+        },
+        "Geometric Reasoning": {
+          "sd_diff_ddof1": 0.018847,
+          "rms_diff_over_sqrt2": 0.012828,
+          "rms_diff": 0.018141
+        },
+        "Semantic Alignment": {
+          "sd_diff_ddof1": 0.200635,
+          "rms_diff_over_sqrt2": 0.142755,
+          "rms_diff": 0.201886
+        }
+      },
+      "drops": {
+        "freeze": {
+          "overall": {
+            "mean": 0.067015,
+            "se": 0.008153,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0813,
+              "pend": 0.0823,
+              "slope": 0.0375
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.083915,
+            "se": 0.01371,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0832,
+              "pend": 0.1121,
+              "slope": 0.0565
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.006947,
+            "se": 0.004163,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0063,
+              "pend": -0.006,
+              "slope": 0.0205
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.06258,
+            "se": 0.01004,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.1057,
+              "pend": 0.0411,
+              "slope": 0.041
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.243584,
+            "se": 0.054919,
+            "n": 12,
+            "frac_orig_higher": 0.8333,
+            "by_scene_mean": {
+              "ball": 0.321,
+              "pend": 0.4098,
+              "slope": -0.0
+            }
+          }
+        },
+        "noise": {
+          "overall": {
+            "mean": 0.071449,
+            "se": 0.009471,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0393,
+              "pend": 0.1076,
+              "slope": 0.0674
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.0438,
+            "se": 0.009887,
+            "n": 12,
+            "frac_orig_higher": 0.9167,
+            "by_scene_mean": {
+              "ball": 0.0082,
+              "pend": 0.06,
+              "slope": 0.0632
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.126069,
+            "se": 0.006042,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.1076,
+              "pend": 0.1463,
+              "slope": 0.1243
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.019509,
+            "se": 0.003077,
+            "n": 12,
+            "frac_orig_higher": 0.9167,
+            "by_scene_mean": {
+              "ball": 0.0116,
+              "pend": 0.0258,
+              "slope": 0.0212
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.148158,
+            "se": 0.067853,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0084,
+              "pend": 0.4361,
+              "slope": -0.0001
+            }
+          }
+        },
+        "reverse": {
+          "overall": {
+            "mean": 0.004938,
+            "se": 0.002731,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0096,
+              "pend": 0.003,
+              "slope": 0.0022
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.000746,
+            "se": 0.004371,
+            "n": 12,
+            "frac_orig_higher": 0.5,
+            "by_scene_mean": {
+              "ball": 0.0008,
+              "pend": -0.0057,
+              "slope": 0.0027
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.002555,
+            "se": 0.00321,
+            "n": 12,
+            "frac_orig_higher": 0.5833,
+            "by_scene_mean": {
+              "ball": 0.0059,
+              "pend": 0.0013,
+              "slope": 0.0005
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.00835,
+            "se": 0.005058,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0196,
+              "pend": 0.001,
+              "slope": 0.0044
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.038949,
+            "se": 0.021124,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0577,
+              "pend": 0.0591,
+              "slope": 0.0
+            }
+          }
+        },
+        "shuffle": {
+          "overall": {
+            "mean": 0.00476,
+            "se": 0.008463,
+            "n": 12,
+            "frac_orig_higher": 0.4167,
+            "by_scene_mean": {
+              "ball": 0.0291,
+              "pend": -0.0101,
+              "slope": -0.0047
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.01656,
+            "se": 0.012393,
+            "n": 12,
+            "frac_orig_higher": 0.5833,
+            "by_scene_mean": {
+              "ball": 0.0462,
+              "pend": 0.0062,
+              "slope": -0.0027
+            }
+          },
+          "Visual Integrity": {
+            "mean": -0.001756,
+            "se": 0.002806,
+            "n": 12,
+            "frac_orig_higher": 0.5,
+            "by_scene_mean": {
+              "ball": 0.0046,
+              "pend": -0.008,
+              "slope": -0.0018
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": -0.002762,
+            "se": 0.003615,
+            "n": 12,
+            "frac_orig_higher": 0.5,
+            "by_scene_mean": {
+              "ball": 0.0088,
+              "pend": -0.0036,
+              "slope": -0.0135
+            }
+          },
+          "Semantic Alignment": {
+            "mean": -0.01807,
+            "se": 0.042879,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.065,
+              "pend": -0.1193,
+              "slope": 0.0001
+            }
+          }
+        },
+        "splice": {
+          "overall": {
+            "mean": 0.033367,
+            "se": 0.013839,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0013,
+              "pend": 0.0969,
+              "slope": 0.002
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.039439,
+            "se": 0.016435,
+            "n": 12,
+            "frac_orig_higher": 0.5833,
+            "by_scene_mean": {
+              "ball": 0.0254,
+              "pend": 0.1096,
+              "slope": -0.0167
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.027039,
+            "se": 0.00365,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0296,
+              "pend": 0.0383,
+              "slope": 0.0132
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.009678,
+            "se": 0.005748,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": -0.0095,
+              "pend": 0.0199,
+              "slope": 0.0187
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.087747,
+            "se": 0.094731,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": -0.2352,
+              "pend": 0.4982,
+              "slope": 0.0002
+            }
+          }
+        }
+      },
+      "ball_reverse_per_question": {
+        "q1": {
+          "category": "Semantic Alignment",
+          "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+          "orig_mean_p_yes": 0.3407,
+          "reverse_mean_p_yes": 0.283,
+          "diff_orig_minus_rev": 0.0577,
+          "n_orig_higher": 2
+        },
+        "q2": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, after the ball is released, does it fall downward?",
+          "orig_mean_p_yes": 0.6698,
+          "reverse_mean_p_yes": 0.6735,
+          "diff_orig_minus_rev": -0.0037,
+          "n_orig_higher": 1
+        },
+        "q3": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, does the ball speed up as it falls?",
+          "orig_mean_p_yes": 0.2053,
+          "reverse_mean_p_yes": 0.2011,
+          "diff_orig_minus_rev": 0.0042,
+          "n_orig_higher": 2
+        },
+        "q4": {
+          "category": "Physical Laws",
+          "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+          "orig_mean_p_yes": 0.138,
+          "reverse_mean_p_yes": 0.1317,
+          "diff_orig_minus_rev": 0.0063,
+          "n_orig_higher": 3
+        },
+        "q5": {
+          "category": "Physical Laws",
+          "text": "Does the ball start falling only after the gripper releases it?",
+          "orig_mean_p_yes": 0.2985,
+          "reverse_mean_p_yes": 0.2873,
+          "diff_orig_minus_rev": 0.0112,
+          "n_orig_higher": 3
+        },
+        "q6": {
+          "category": "Physical Laws",
+          "text": "Do the ball's bounces get lower each time until it comes to rest?",
+          "orig_mean_p_yes": 0.8905,
+          "reverse_mean_p_yes": 0.8968,
+          "diff_orig_minus_rev": -0.0063,
+          "n_orig_higher": 1
+        },
+        "q7": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the ball keep a round shape?",
+          "orig_mean_p_yes": 0.9816,
+          "reverse_mean_p_yes": 0.9704,
+          "diff_orig_minus_rev": 0.0111,
+          "n_orig_higher": 4
+        },
+        "q8": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay free of unnatural flickering?",
+          "orig_mean_p_yes": 0.4557,
+          "reverse_mean_p_yes": 0.4558,
+          "diff_orig_minus_rev": -0.0,
+          "n_orig_higher": 2
+        },
+        "q9": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+          "orig_mean_p_yes": 0.7507,
+          "reverse_mean_p_yes": 0.7416,
+          "diff_orig_minus_rev": 0.0091,
+          "n_orig_higher": 3
+        },
+        "q10": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+          "orig_mean_p_yes": 0.959,
+          "reverse_mean_p_yes": 0.9557,
+          "diff_orig_minus_rev": 0.0033,
+          "n_orig_higher": 2
+        },
+        "q11": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, does the camera stay static?",
+          "orig_mean_p_yes": 0.909,
+          "reverse_mean_p_yes": 0.9092,
+          "diff_orig_minus_rev": -0.0002,
+          "n_orig_higher": 1
+        },
+        "q12": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+          "orig_mean_p_yes": 0.3887,
+          "reverse_mean_p_yes": 0.3492,
+          "diff_orig_minus_rev": 0.0395,
+          "n_orig_higher": 3
+        },
+        "q13": {
+          "category": "Physical Laws",
+          "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+          "orig_mean_p_yes": 0.927,
+          "reverse_mean_p_yes": 0.9341,
+          "diff_orig_minus_rev": -0.0071,
+          "n_orig_higher": 0
+        }
+      }
+    },
+    "2b_f32": {
+      "n_clips": 12,
+      "n_records": 144,
+      "judge_noise_offset": {
+        "overall": {
+          "sd_diff_ddof1": 0.021122,
+          "rms_diff_over_sqrt2": 0.014312,
+          "rms_diff": 0.02024
+        },
+        "Physical Laws": {
+          "sd_diff_ddof1": 0.024547,
+          "rms_diff_over_sqrt2": 0.01775,
+          "rms_diff": 0.025102
+        },
+        "Visual Integrity": {
+          "sd_diff_ddof1": 0.014178,
+          "rms_diff_over_sqrt2": 0.01014,
+          "rms_diff": 0.01434
+        },
+        "Geometric Reasoning": {
+          "sd_diff_ddof1": 0.01605,
+          "rms_diff_over_sqrt2": 0.010873,
+          "rms_diff": 0.015377
+        },
+        "Semantic Alignment": {
+          "sd_diff_ddof1": 0.19112,
+          "rms_diff_over_sqrt2": 0.130132,
+          "rms_diff": 0.184034
+        }
+      },
+      "drops": {
+        "freeze": {
+          "overall": {
+            "mean": 0.071487,
+            "se": 0.009056,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0794,
+              "pend": 0.0965,
+              "slope": 0.0386
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.080501,
+            "se": 0.012497,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0719,
+              "pend": 0.108,
+              "slope": 0.0616
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.006443,
+            "se": 0.003483,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0061,
+              "pend": -0.0036,
+              "slope": 0.0168
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.073917,
+            "se": 0.008909,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.1102,
+              "pend": 0.0694,
+              "slope": 0.0422
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.292062,
+            "se": 0.067229,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.3562,
+              "pend": 0.52,
+              "slope": 0.0
+            }
+          }
+        },
+        "noise": {
+          "overall": {
+            "mean": 0.071269,
+            "se": 0.010139,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0322,
+              "pend": 0.1089,
+              "slope": 0.0726
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.040323,
+            "se": 0.011071,
+            "n": 12,
+            "frac_orig_higher": 0.8333,
+            "by_scene_mean": {
+              "ball": -0.002,
+              "pend": 0.0495,
+              "slope": 0.0735
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.124473,
+            "se": 0.007099,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0964,
+              "pend": 0.1504,
+              "slope": 0.1266
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.01181,
+            "se": 0.007793,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": -0.0211,
+              "pend": 0.0332,
+              "slope": 0.0234
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.185176,
+            "se": 0.06877,
+            "n": 12,
+            "frac_orig_higher": 0.9167,
+            "by_scene_mean": {
+              "ball": 0.0876,
+              "pend": 0.4679,
+              "slope": 0.0
+            }
+          }
+        },
+        "reverse": {
+          "overall": {
+            "mean": 0.000669,
+            "se": 0.004082,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0034,
+              "pend": -0.0082,
+              "slope": 0.0067
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.003185,
+            "se": 0.006794,
+            "n": 12,
+            "frac_orig_higher": 0.4167,
+            "by_scene_mean": {
+              "ball": -0.016,
+              "pend": -0.0109,
+              "slope": 0.0173
+            }
+          },
+          "Visual Integrity": {
+            "mean": -0.00158,
+            "se": 0.002658,
+            "n": 12,
+            "frac_orig_higher": 0.4167,
+            "by_scene_mean": {
+              "ball": 0.0029,
+              "pend": -0.0069,
+              "slope": -0.0007
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.012327,
+            "se": 0.005678,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0353,
+              "pend": 0.0004,
+              "slope": 0.0013
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.011041,
+            "se": 0.03298,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.0584,
+              "pend": -0.0254,
+              "slope": 0.0001
+            }
+          }
+        },
+        "shuffle": {
+          "overall": {
+            "mean": -0.008165,
+            "se": 0.0072,
+            "n": 12,
+            "frac_orig_higher": 0.25,
+            "by_scene_mean": {
+              "ball": 0.0014,
+              "pend": -0.0137,
+              "slope": -0.0122
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.013013,
+            "se": 0.009963,
+            "n": 12,
+            "frac_orig_higher": 0.3333,
+            "by_scene_mean": {
+              "ball": -0.0087,
+              "pend": -0.0134,
+              "slope": -0.0169
+            }
+          },
+          "Visual Integrity": {
+            "mean": -0.009735,
+            "se": 0.002523,
+            "n": 12,
+            "frac_orig_higher": 0.1667,
+            "by_scene_mean": {
+              "ball": -0.004,
+              "pend": -0.0176,
+              "slope": -0.0076
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": -0.00665,
+            "se": 0.003601,
+            "n": 12,
+            "frac_orig_higher": 0.25,
+            "by_scene_mean": {
+              "ball": 0.0027,
+              "pend": -0.0078,
+              "slope": -0.0148
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.021615,
+            "se": 0.041728,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0811,
+              "pend": -0.0164,
+              "slope": 0.0001
+            }
+          }
+        },
+        "splice": {
+          "overall": {
+            "mean": 0.027402,
+            "se": 0.013469,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": -0.0136,
+              "pend": 0.0884,
+              "slope": 0.0074
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.027922,
+            "se": 0.014168,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0135,
+              "pend": 0.0892,
+              "slope": -0.0189
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.030852,
+            "se": 0.005383,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0166,
+              "pend": 0.0525,
+              "slope": 0.0234
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.011257,
+            "se": 0.008881,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": -0.0281,
+              "pend": 0.0294,
+              "slope": 0.0324
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.045597,
+            "se": 0.086041,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": -0.2681,
+              "pend": 0.4046,
+              "slope": 0.0003
+            }
+          }
+        }
+      },
+      "ball_reverse_per_question": {
+        "q1": {
+          "category": "Semantic Alignment",
+          "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+          "orig_mean_p_yes": 0.3851,
+          "reverse_mean_p_yes": 0.3267,
+          "diff_orig_minus_rev": 0.0584,
+          "n_orig_higher": 3
+        },
+        "q2": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, after the ball is released, does it fall downward?",
+          "orig_mean_p_yes": 0.4523,
+          "reverse_mean_p_yes": 0.6057,
+          "diff_orig_minus_rev": -0.1533,
+          "n_orig_higher": 0
+        },
+        "q3": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, does the ball speed up as it falls?",
+          "orig_mean_p_yes": 0.1895,
+          "reverse_mean_p_yes": 0.1507,
+          "diff_orig_minus_rev": 0.0388,
+          "n_orig_higher": 4
+        },
+        "q4": {
+          "category": "Physical Laws",
+          "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+          "orig_mean_p_yes": 0.1115,
+          "reverse_mean_p_yes": 0.1265,
+          "diff_orig_minus_rev": -0.0151,
+          "n_orig_higher": 1
+        },
+        "q5": {
+          "category": "Physical Laws",
+          "text": "Does the ball start falling only after the gripper releases it?",
+          "orig_mean_p_yes": 0.2721,
+          "reverse_mean_p_yes": 0.2576,
+          "diff_orig_minus_rev": 0.0145,
+          "n_orig_higher": 2
+        },
+        "q6": {
+          "category": "Physical Laws",
+          "text": "Do the ball's bounces get lower each time until it comes to rest?",
+          "orig_mean_p_yes": 0.8608,
+          "reverse_mean_p_yes": 0.8416,
+          "diff_orig_minus_rev": 0.0192,
+          "n_orig_higher": 3
+        },
+        "q7": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the ball keep a round shape?",
+          "orig_mean_p_yes": 0.984,
+          "reverse_mean_p_yes": 0.976,
+          "diff_orig_minus_rev": 0.008,
+          "n_orig_higher": 4
+        },
+        "q8": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay free of unnatural flickering?",
+          "orig_mean_p_yes": 0.4253,
+          "reverse_mean_p_yes": 0.4329,
+          "diff_orig_minus_rev": -0.0077,
+          "n_orig_higher": 1
+        },
+        "q9": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+          "orig_mean_p_yes": 0.721,
+          "reverse_mean_p_yes": 0.7112,
+          "diff_orig_minus_rev": 0.0098,
+          "n_orig_higher": 3
+        },
+        "q10": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+          "orig_mean_p_yes": 0.963,
+          "reverse_mean_p_yes": 0.9614,
+          "diff_orig_minus_rev": 0.0016,
+          "n_orig_higher": 2
+        },
+        "q11": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, does the camera stay static?",
+          "orig_mean_p_yes": 0.8898,
+          "reverse_mean_p_yes": 0.8956,
+          "diff_orig_minus_rev": -0.0058,
+          "n_orig_higher": 1
+        },
+        "q12": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+          "orig_mean_p_yes": 0.3776,
+          "reverse_mean_p_yes": 0.3012,
+          "diff_orig_minus_rev": 0.0764,
+          "n_orig_higher": 4
+        },
+        "q13": {
+          "category": "Physical Laws",
+          "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+          "orig_mean_p_yes": 0.9369,
+          "reverse_mean_p_yes": 0.9369,
+          "diff_orig_minus_rev": 0.0,
+          "n_orig_higher": 2
+        }
+      }
+    },
+    "8b_f16": {
+      "n_clips": 12,
+      "n_records": 144,
+      "judge_noise_offset": {
+        "overall": {
+          "sd_diff_ddof1": 0.028302,
+          "rms_diff_over_sqrt2": 0.01974,
+          "rms_diff": 0.027917
+        },
+        "Physical Laws": {
+          "sd_diff_ddof1": 0.026872,
+          "rms_diff_over_sqrt2": 0.018667,
+          "rms_diff": 0.026399
+        },
+        "Visual Integrity": {
+          "sd_diff_ddof1": 0.028018,
+          "rms_diff_over_sqrt2": 0.018981,
+          "rms_diff": 0.026843
+        },
+        "Geometric Reasoning": {
+          "sd_diff_ddof1": 0.025436,
+          "rms_diff_over_sqrt2": 0.018115,
+          "rms_diff": 0.025618
+        },
+        "Semantic Alignment": {
+          "sd_diff_ddof1": 0.238856,
+          "rms_diff_over_sqrt2": 0.177847,
+          "rms_diff": 0.251514
+        }
+      },
+      "drops": {
+        "freeze": {
+          "overall": {
+            "mean": 0.099777,
+            "se": 0.012213,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0927,
+              "pend": 0.149,
+              "slope": 0.0576
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.117245,
+            "se": 0.033279,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": -0.0073,
+              "pend": 0.2535,
+              "slope": 0.1056
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.007036,
+            "se": 0.011536,
+            "n": 12,
+            "frac_orig_higher": 0.3333,
+            "by_scene_mean": {
+              "ball": -0.0008,
+              "pend": 0.0223,
+              "slope": -0.0004
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.186884,
+            "se": 0.028343,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.2981,
+              "pend": 0.1882,
+              "slope": 0.0743
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.22388,
+            "se": 0.095179,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.6561,
+              "pend": 0.0156,
+              "slope": 0.0
+            }
+          }
+        },
+        "noise": {
+          "overall": {
+            "mean": 0.151283,
+            "se": 0.010688,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.1685,
+              "pend": 0.1805,
+              "slope": 0.1048
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.017017,
+            "se": 0.00644,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0248,
+              "pend": 0.0338,
+              "slope": -0.0076
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.373373,
+            "se": 0.029207,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.2899,
+              "pend": 0.5036,
+              "slope": 0.3266
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.065998,
+            "se": 0.012643,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.1145,
+              "pend": 0.052,
+              "slope": 0.0316
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.219986,
+            "se": 0.095289,
+            "n": 12,
+            "frac_orig_higher": 0.9167,
+            "by_scene_mean": {
+              "ball": 0.6529,
+              "pend": 0.007,
+              "slope": 0.0001
+            }
+          }
+        },
+        "reverse": {
+          "overall": {
+            "mean": -0.001886,
+            "se": 0.007587,
+            "n": 12,
+            "frac_orig_higher": 0.3333,
+            "by_scene_mean": {
+              "ball": 0.002,
+              "pend": -0.0003,
+              "slope": -0.0074
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.026046,
+            "se": 0.009937,
+            "n": 12,
+            "frac_orig_higher": 0.1667,
+            "by_scene_mean": {
+              "ball": -0.0624,
+              "pend": -0.0009,
+              "slope": -0.0149
+            }
+          },
+          "Visual Integrity": {
+            "mean": -0.000175,
+            "se": 0.001164,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.001,
+              "pend": -0.0015,
+              "slope": -0.0
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.01927,
+            "se": 0.018312,
+            "n": 12,
+            "frac_orig_higher": 0.4167,
+            "by_scene_mean": {
+              "ball": 0.0625,
+              "pend": 0.0023,
+              "slope": -0.007
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.090223,
+            "se": 0.060425,
+            "n": 12,
+            "frac_orig_higher": 0.5,
+            "by_scene_mean": {
+              "ball": 0.2718,
+              "pend": -0.0011,
+              "slope": -0.0
+            }
+          }
+        },
+        "shuffle": {
+          "overall": {
+            "mean": 0.007049,
+            "se": 0.004266,
+            "n": 12,
+            "frac_orig_higher": 0.5,
+            "by_scene_mean": {
+              "ball": 0.0124,
+              "pend": -0.0021,
+              "slope": 0.0109
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.002668,
+            "se": 0.006751,
+            "n": 12,
+            "frac_orig_higher": 0.5,
+            "by_scene_mean": {
+              "ball": 0.0039,
+              "pend": 0.0051,
+              "slope": -0.0011
+            }
+          },
+          "Visual Integrity": {
+            "mean": -0.0028,
+            "se": 0.002551,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0008,
+              "pend": -0.0113,
+              "slope": 0.002
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.019308,
+            "se": 0.007901,
+            "n": 12,
+            "frac_orig_higher": 0.5833,
+            "by_scene_mean": {
+              "ball": 0.0158,
+              "pend": -0.0042,
+              "slope": 0.0464
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.035512,
+            "se": 0.034871,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": 0.1022,
+              "pend": 0.0043,
+              "slope": 0.0
+            }
+          }
+        },
+        "splice": {
+          "overall": {
+            "mean": 0.075087,
+            "se": 0.023053,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": -0.0145,
+              "pend": 0.1576,
+              "slope": 0.0821
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.069337,
+            "se": 0.019795,
+            "n": 12,
+            "frac_orig_higher": 0.3333,
+            "by_scene_mean": {
+              "ball": -0.0909,
+              "pend": 0.017,
+              "slope": -0.1341
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.151005,
+            "se": 0.023491,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0529,
+              "pend": 0.216,
+              "slope": 0.1841
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.30007,
+            "se": 0.03201,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.2021,
+              "pend": 0.3643,
+              "slope": 0.3339
+            }
+          },
+          "Semantic Alignment": {
+            "mean": -0.083745,
+            "se": 0.044492,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": -0.2579,
+              "pend": 0.0066,
+              "slope": 0.0001
+            }
+          }
+        }
+      },
+      "ball_reverse_per_question": {
+        "q1": {
+          "category": "Semantic Alignment",
+          "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+          "orig_mean_p_yes": 0.6569,
+          "reverse_mean_p_yes": 0.3851,
+          "diff_orig_minus_rev": 0.2718,
+          "n_orig_higher": 3
+        },
+        "q2": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, after the ball is released, does it fall downward?",
+          "orig_mean_p_yes": 0.0252,
+          "reverse_mean_p_yes": 0.2494,
+          "diff_orig_minus_rev": -0.2241,
+          "n_orig_higher": 0
+        },
+        "q3": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, does the ball speed up as it falls?",
+          "orig_mean_p_yes": 0.0271,
+          "reverse_mean_p_yes": 0.0849,
+          "diff_orig_minus_rev": -0.0578,
+          "n_orig_higher": 0
+        },
+        "q4": {
+          "category": "Physical Laws",
+          "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+          "orig_mean_p_yes": 0.3867,
+          "reverse_mean_p_yes": 0.4658,
+          "diff_orig_minus_rev": -0.0791,
+          "n_orig_higher": 2
+        },
+        "q5": {
+          "category": "Physical Laws",
+          "text": "Does the ball start falling only after the gripper releases it?",
+          "orig_mean_p_yes": 0.2532,
+          "reverse_mean_p_yes": 0.2648,
+          "diff_orig_minus_rev": -0.0116,
+          "n_orig_higher": 2
+        },
+        "q6": {
+          "category": "Physical Laws",
+          "text": "Do the ball's bounces get lower each time until it comes to rest?",
+          "orig_mean_p_yes": 0.9885,
+          "reverse_mean_p_yes": 0.9902,
+          "diff_orig_minus_rev": -0.0017,
+          "n_orig_higher": 0
+        },
+        "q7": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the ball keep a round shape?",
+          "orig_mean_p_yes": 0.9989,
+          "reverse_mean_p_yes": 0.9989,
+          "diff_orig_minus_rev": -0.0,
+          "n_orig_higher": 2
+        },
+        "q8": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay free of unnatural flickering?",
+          "orig_mean_p_yes": 0.99,
+          "reverse_mean_p_yes": 0.9867,
+          "diff_orig_minus_rev": 0.0033,
+          "n_orig_higher": 4
+        },
+        "q9": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+          "orig_mean_p_yes": 0.999,
+          "reverse_mean_p_yes": 0.9989,
+          "diff_orig_minus_rev": 0.0001,
+          "n_orig_higher": 3
+        },
+        "q10": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+          "orig_mean_p_yes": 0.9976,
+          "reverse_mean_p_yes": 0.9971,
+          "diff_orig_minus_rev": 0.0005,
+          "n_orig_higher": 2
+        },
+        "q11": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, does the camera stay static?",
+          "orig_mean_p_yes": 0.9986,
+          "reverse_mean_p_yes": 0.9976,
+          "diff_orig_minus_rev": 0.001,
+          "n_orig_higher": 4
+        },
+        "q12": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+          "orig_mean_p_yes": 0.8158,
+          "reverse_mean_p_yes": 0.6917,
+          "diff_orig_minus_rev": 0.1241,
+          "n_orig_higher": 2
+        },
+        "q13": {
+          "category": "Physical Laws",
+          "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+          "orig_mean_p_yes": 0.9996,
+          "reverse_mean_p_yes": 0.9995,
+          "diff_orig_minus_rev": 0.0001,
+          "n_orig_higher": 3
+        }
+      }
+    },
+    "8b_f32": {
+      "n_clips": 12,
+      "n_records": 144,
+      "judge_noise_offset": {
+        "overall": {
+          "sd_diff_ddof1": 0.020088,
+          "rms_diff_over_sqrt2": 0.013634,
+          "rms_diff": 0.019282
+        },
+        "Physical Laws": {
+          "sd_diff_ddof1": 0.020189,
+          "rms_diff_over_sqrt2": 0.014004,
+          "rms_diff": 0.019804
+        },
+        "Visual Integrity": {
+          "sd_diff_ddof1": 0.004687,
+          "rms_diff_over_sqrt2": 0.003769,
+          "rms_diff": 0.005331
+        },
+        "Geometric Reasoning": {
+          "sd_diff_ddof1": 0.032749,
+          "rms_diff_over_sqrt2": 0.024049,
+          "rms_diff": 0.034011
+        },
+        "Semantic Alignment": {
+          "sd_diff_ddof1": 0.181554,
+          "rms_diff_over_sqrt2": 0.123069,
+          "rms_diff": 0.174046
+        }
+      },
+      "drops": {
+        "freeze": {
+          "overall": {
+            "mean": 0.099685,
+            "se": 0.012057,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0875,
+              "pend": 0.1516,
+              "slope": 0.06
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.11312,
+            "se": 0.034626,
+            "n": 12,
+            "frac_orig_higher": 0.6667,
+            "by_scene_mean": {
+              "ball": -0.023,
+              "pend": 0.2488,
+              "slope": 0.1135
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.018944,
+            "se": 0.011487,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": -0.0007,
+              "pend": 0.0567,
+              "slope": 0.0008
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.1577,
+            "se": 0.022515,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.2447,
+              "pend": 0.1586,
+              "slope": 0.0697
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.270661,
+            "se": 0.111479,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.7888,
+              "pend": 0.0232,
+              "slope": 0.0001
+            }
+          }
+        },
+        "noise": {
+          "overall": {
+            "mean": 0.155722,
+            "se": 0.010754,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.1747,
+              "pend": 0.184,
+              "slope": 0.1085
+            }
+          },
+          "Physical Laws": {
+            "mean": 0.02497,
+            "se": 0.005208,
+            "n": 12,
+            "frac_orig_higher": 0.9167,
+            "by_scene_mean": {
+              "ball": 0.0272,
+              "pend": 0.0351,
+              "slope": 0.0125
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.384329,
+            "se": 0.030307,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.3009,
+              "pend": 0.5214,
+              "slope": 0.3307
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.044182,
+            "se": 0.011955,
+            "n": 12,
+            "frac_orig_higher": 0.8333,
+            "by_scene_mean": {
+              "ball": 0.0833,
+              "pend": 0.041,
+              "slope": 0.0082
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.248373,
+            "se": 0.104543,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.7368,
+              "pend": 0.0082,
+              "slope": 0.0001
+            }
+          }
+        },
+        "reverse": {
+          "overall": {
+            "mean": -0.009234,
+            "se": 0.004739,
+            "n": 12,
+            "frac_orig_higher": 0.1667,
+            "by_scene_mean": {
+              "ball": -0.0196,
+              "pend": -0.0004,
+              "slope": -0.0077
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.054664,
+            "se": 0.019902,
+            "n": 12,
+            "frac_orig_higher": 0.0833,
+            "by_scene_mean": {
+              "ball": -0.1407,
+              "pend": -0.0068,
+              "slope": -0.0165
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.002153,
+            "se": 0.001197,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0003,
+              "pend": 0.0059,
+              "slope": 0.0003
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.00866,
+            "se": 0.007788,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0303,
+              "pend": 0.0018,
+              "slope": -0.0062
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.175679,
+            "se": 0.082298,
+            "n": 12,
+            "frac_orig_higher": 0.4167,
+            "by_scene_mean": {
+              "ball": 0.5269,
+              "pend": 0.0002,
+              "slope": -0.0
+            }
+          }
+        },
+        "shuffle": {
+          "overall": {
+            "mean": 0.014351,
+            "se": 0.004993,
+            "n": 12,
+            "frac_orig_higher": 0.8333,
+            "by_scene_mean": {
+              "ball": 0.0251,
+              "pend": 0.002,
+              "slope": 0.016
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.004716,
+            "se": 0.006665,
+            "n": 12,
+            "frac_orig_higher": 0.5833,
+            "by_scene_mean": {
+              "ball": -0.0115,
+              "pend": 0.0007,
+              "slope": -0.0034
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.003454,
+            "se": 0.001699,
+            "n": 12,
+            "frac_orig_higher": 0.9167,
+            "by_scene_mean": {
+              "ball": 0.0015,
+              "pend": 0.0042,
+              "slope": 0.0046
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.035637,
+            "se": 0.010485,
+            "n": 12,
+            "frac_orig_higher": 0.75,
+            "by_scene_mean": {
+              "ball": 0.0367,
+              "pend": 0.0015,
+              "slope": 0.0687
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.105457,
+            "se": 0.048319,
+            "n": 12,
+            "frac_orig_higher": 0.8333,
+            "by_scene_mean": {
+              "ball": 0.3158,
+              "pend": 0.0005,
+              "slope": 0.0001
+            }
+          }
+        },
+        "splice": {
+          "overall": {
+            "mean": 0.104728,
+            "se": 0.011832,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0692,
+              "pend": 0.1536,
+              "slope": 0.0913
+            }
+          },
+          "Physical Laws": {
+            "mean": -0.070292,
+            "se": 0.019761,
+            "n": 12,
+            "frac_orig_higher": 0.1667,
+            "by_scene_mean": {
+              "ball": -0.0564,
+              "pend": -0.0019,
+              "slope": -0.1525
+            }
+          },
+          "Visual Integrity": {
+            "mean": 0.176055,
+            "se": 0.025241,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.0612,
+              "pend": 0.2296,
+              "slope": 0.2373
+            }
+          },
+          "Geometric Reasoning": {
+            "mean": 0.395764,
+            "se": 0.02187,
+            "n": 12,
+            "frac_orig_higher": 1.0,
+            "by_scene_mean": {
+              "ball": 0.4916,
+              "pend": 0.3622,
+              "slope": 0.3334
+            }
+          },
+          "Semantic Alignment": {
+            "mean": 0.004115,
+            "se": 0.014874,
+            "n": 12,
+            "frac_orig_higher": 0.8333,
+            "by_scene_mean": {
+              "ball": 0.0105,
+              "pend": 0.0018,
+              "slope": 0.0
+            }
+          }
+        }
+      },
+      "ball_reverse_per_question": {
+        "q1": {
+          "category": "Semantic Alignment",
+          "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+          "orig_mean_p_yes": 0.7895,
+          "reverse_mean_p_yes": 0.2627,
+          "diff_orig_minus_rev": 0.5269,
+          "n_orig_higher": 4
+        },
+        "q2": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, after the ball is released, does it fall downward?",
+          "orig_mean_p_yes": 0.0069,
+          "reverse_mean_p_yes": 0.4844,
+          "diff_orig_minus_rev": -0.4776,
+          "n_orig_higher": 0
+        },
+        "q3": {
+          "category": "Physical Laws",
+          "text": "In the middle of the video, does the ball speed up as it falls?",
+          "orig_mean_p_yes": 0.0205,
+          "reverse_mean_p_yes": 0.0842,
+          "diff_orig_minus_rev": -0.0637,
+          "n_orig_higher": 0
+        },
+        "q4": {
+          "category": "Physical Laws",
+          "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+          "orig_mean_p_yes": 0.2813,
+          "reverse_mean_p_yes": 0.4905,
+          "diff_orig_minus_rev": -0.2093,
+          "n_orig_higher": 0
+        },
+        "q5": {
+          "category": "Physical Laws",
+          "text": "Does the ball start falling only after the gripper releases it?",
+          "orig_mean_p_yes": 0.2997,
+          "reverse_mean_p_yes": 0.3947,
+          "diff_orig_minus_rev": -0.095,
+          "n_orig_higher": 1
+        },
+        "q6": {
+          "category": "Physical Laws",
+          "text": "Do the ball's bounces get lower each time until it comes to rest?",
+          "orig_mean_p_yes": 0.9897,
+          "reverse_mean_p_yes": 0.9882,
+          "diff_orig_minus_rev": 0.0015,
+          "n_orig_higher": 2
+        },
+        "q7": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the ball keep a round shape?",
+          "orig_mean_p_yes": 0.999,
+          "reverse_mean_p_yes": 0.999,
+          "diff_orig_minus_rev": 0.0,
+          "n_orig_higher": 1
+        },
+        "q8": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay free of unnatural flickering?",
+          "orig_mean_p_yes": 0.9879,
+          "reverse_mean_p_yes": 0.9874,
+          "diff_orig_minus_rev": 0.0006,
+          "n_orig_higher": 2
+        },
+        "q9": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+          "orig_mean_p_yes": 0.9987,
+          "reverse_mean_p_yes": 0.9986,
+          "diff_orig_minus_rev": 0.0001,
+          "n_orig_higher": 2
+        },
+        "q10": {
+          "category": "Visual Integrity",
+          "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+          "orig_mean_p_yes": 0.998,
+          "reverse_mean_p_yes": 0.9976,
+          "diff_orig_minus_rev": 0.0004,
+          "n_orig_higher": 3
+        },
+        "q11": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, does the camera stay static?",
+          "orig_mean_p_yes": 0.9988,
+          "reverse_mean_p_yes": 0.9983,
+          "diff_orig_minus_rev": 0.0005,
+          "n_orig_higher": 4
+        },
+        "q12": {
+          "category": "Geometric Reasoning",
+          "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+          "orig_mean_p_yes": 0.8443,
+          "reverse_mean_p_yes": 0.7841,
+          "diff_orig_minus_rev": 0.0602,
+          "n_orig_higher": 3
+        },
+        "q13": {
+          "category": "Physical Laws",
+          "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+          "orig_mean_p_yes": 0.9995,
+          "reverse_mean_p_yes": 0.9993,
+          "diff_orig_minus_rev": 0.0002,
+          "n_orig_higher": 3
+        }
+      }
+    }
+  }
+}
