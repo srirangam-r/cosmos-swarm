@@ -1,0 +1,9 @@
+{
+  "source_frames": 93,
+  "continuation_frames": 93,
+  "source_last_to_tail_first_mae_0_255": 2.116577386856079,
+  "source_last_to_tail_second_mae_0_255": 2.4485418796539307,
+  "source_previous_to_last_mae_0_255": 1.0427709817886353,
+  "tail_first_to_second_mae_0_255": 1.4622496366500854,
+  "note": "Full-frame MAE includes codec differences and background; inspect identity, ball motion and seam manually. No pass threshold."
+}

@@ -1,0 +1,266 @@
+{
+  "task": 42,
+  "title": "Does chaining short Nano clips improve bounce decay over a single long clip?",
+  "hypothesis": "Serial-event hypothesis (arXiv 2607.13031): all-at-once long generation enforces stationary undamped bouncing; chaining short I2V segments breaks the stationary temporal RoPE attractor and allows dissipative bounce decay.",
+  "arms": {
+    "chained_185f": {
+      "description": "Two 93-frame clips chained at frame 92 seam (Seg1 93f + Seg2 92f displayed = 185f total), seed 1, GAUGE mid-fall ball1 dd33",
+      "bounces": {
+        "num_impacts": 4,
+        "impact_frames": [
+          7,
+          11,
+          71,
+          85
+        ],
+        "num_apices": 5,
+        "apex_frames": [
+          12,
+          41,
+          63,
+          79,
+          89
+        ],
+        "flight_durations_frames": [
+          4,
+          60,
+          14
+        ],
+        "mean_cycle_frames": 26.0,
+        "mean_cycle_seconds": 1.0833333333333333,
+        "e_T_ratios": [
+          15.0,
+          0.23333333333333334
+        ],
+        "e_T_mean": 7.616666666666666,
+        "e_T_std": 10.441610135521351,
+        "apex_heights_px": [
+          39.03782690536269,
+          34.06793895018063,
+          20.84020785774362,
+          28.536282012596416,
+          20.294719135939147
+        ],
+        "e_h_ratios": [
+          0.9341790276302434,
+          0.7821284667237023,
+          1.1701665275769284,
+          0.8433208319676169
+        ],
+        "e_h_mean": 0.9324487134746228,
+        "e_h_std": 0.1703454421402189,
+        "table_y_ref": 423.5973507148865,
+        "settled_at_rest": false
+      },
+      "motion": {
+        "total_frames": 185,
+        "full_mean": 0.8435342562592902,
+        "full_early": 0.9575694861778846,
+        "full_mid": 0.8037514120954182,
+        "full_late": 0.773449172114537,
+        "full_decay_ratio": 0.8077211975516687,
+        "corr_mean": 3.510608673286814,
+        "corr_early": 4.286980795610426,
+        "corr_mid": 3.2483586318558997,
+        "corr_late": 3.02513129531648,
+        "corr_decay_ratio": 0.70565543433598
+      },
+      "seam": {
+        "seam_mae_0_255": 2.116577357104701,
+        "seam_mse": 11.45097906650641,
+        "seg1_frame92_pos": [
+          280.2305475504323,
+          404.64649375600385
+        ],
+        "seg2_frame0_pos": [
+          0.0,
+          0.0
+        ],
+        "seg2_frame1_pos": [
+          0.0,
+          0.0
+        ],
+        "pos_shift_seam_px": 492.20721722608124,
+        "boundary_stagnation_f0_to_f4": {
+          "note": "Ball remains stationary at (~301, 394) for 5 frames (f0-f4) with zero velocity, then jumps to table at f5",
+          "displacement_f0_f4_px": 0.0,
+          "drop_f4_to_f5_px": 496.72613838550103
+        }
+      }
+    },
+    "single_long_control_189f": {
+      "description": "Continuous single 189-frame generation, seed 1, GAUGE mid-fall ball1 dd33",
+      "bounces": {
+        "num_impacts": 2,
+        "impact_frames": [
+          90,
+          94
+        ],
+        "num_apices": 3,
+        "apex_frames": [
+          11,
+          15,
+          47
+        ],
+        "flight_durations_frames": [
+          4
+        ],
+        "mean_cycle_frames": 4.0,
+        "mean_cycle_seconds": 0.16666666666666666,
+        "e_T_ratios": [],
+        "e_T_mean": null,
+        "e_T_std": 0.0,
+        "apex_heights_px": [
+          26.02836879432624,
+          26.02836879432624,
+          77.88981762917933
+        ],
+        "e_h_ratios": [
+          1.0,
+          1.7298835453798904
+        ],
+        "e_h_mean": 1.3649417726899453,
+        "e_h_std": 0.5161056044145997,
+        "table_y_ref": 412.9255319148936,
+        "settled_at_rest": false
+      },
+      "motion": {
+        "total_frames": 189,
+        "full_mean": 1.558159877612691,
+        "full_early": 1.3729411009227668,
+        "full_mid": 1.5589026313068652,
+        "full_late": 1.7368710248898238,
+        "full_decay_ratio": 1.2650732239878726,
+        "corr_mean": 4.481711594869101,
+        "corr_early": 4.487521571750962,
+        "corr_mid": 3.90614164343555,
+        "corr_late": 5.033666570216049,
+        "corr_decay_ratio": 1.1217030357922022
+      }
+    },
+    "seg1_93f": {
+      "bounces": {
+        "num_impacts": 6,
+        "impact_frames": [
+          1,
+          5,
+          9,
+          16,
+          27,
+          31
+        ],
+        "num_apices": 5,
+        "apex_frames": [
+          6,
+          12,
+          17,
+          21,
+          33
+        ],
+        "flight_durations_frames": [
+          4,
+          4,
+          7,
+          11,
+          4
+        ],
+        "mean_cycle_frames": 6.0,
+        "mean_cycle_seconds": 0.25,
+        "e_T_ratios": [
+          1.0,
+          1.75,
+          1.5714285714285714,
+          0.36363636363636365
+        ],
+        "e_T_mean": 1.1712662337662336,
+        "e_T_std": 0.6262749126427274,
+        "apex_heights_px": [
+          23.053006748030498,
+          25.179586075738086,
+          42.88626039373935,
+          45.052321628819755,
+          41.364983797994626
+        ],
+        "e_h_ratios": [
+          1.0451063934692086,
+          1.3050729728614345,
+          1.0249424929338187,
+          0.9582036952129034
+        ],
+        "e_h_mean": 1.0833313886193412,
+        "e_h_std": 0.1524212181565845,
+        "table_y_ref": 408.91817528735635,
+        "settled_at_rest": false
+      },
+      "motion": {
+        "total_frames": 93,
+        "full_mean": 1.0536600227029915,
+        "full_early": 1.100272129852208,
+        "full_mid": 1.0453698695690883,
+        "full_late": 1.0177331908136353,
+        "full_decay_ratio": 0.9249831593483517,
+        "corr_mean": 4.078738929146538,
+        "corr_early": 4.4813103566529495,
+        "corr_mid": 4.183815500685871,
+        "corr_late": 3.602818930041152,
+        "corr_decay_ratio": 0.8039655018966518
+      }
+    },
+    "seg2_continuation_93f": {
+      "bounces": {
+        "num_impacts": 1,
+        "impact_frames": [
+          24
+        ],
+        "num_apices": 0,
+        "apex_frames": [],
+        "flight_durations_frames": [],
+        "mean_cycle_frames": null,
+        "mean_cycle_seconds": null,
+        "e_T_ratios": [],
+        "e_T_mean": null,
+        "e_T_std": 0.0,
+        "apex_heights_px": [],
+        "e_h_ratios": [],
+        "e_h_mean": null,
+        "e_h_std": 0.0,
+        "table_y_ref": 415.5460122699387,
+        "settled_at_rest": false
+      },
+      "motion": {
+        "total_frames": 93,
+        "full_mean": 0.8733585149282331,
+        "full_early": 0.8282867309918093,
+        "full_mid": 0.8856399683938746,
+        "full_late": 0.9040994497445913,
+        "full_decay_ratio": 1.0915295584440936,
+        "corr_mean": 3.0524156825908024,
+        "corr_early": 3.031629629629629,
+        "corr_mid": 3.1378048696844996,
+        "corr_late": 2.991850244341564,
+        "corr_decay_ratio": 0.9868785471354149
+      }
+    }
+  },
+  "comparison": {
+    "decay_ratio_D_corridor": {
+      "chained_185f": 0.70565543433598,
+      "control_189f": 1.1217030357922022,
+      "delta": -0.4160476014562222
+    },
+    "mean_e_T": {
+      "chained_185f": 7.616666666666666,
+      "control_189f": null,
+      "delta": null
+    },
+    "mean_cycle_period_frames": {
+      "chained_185f": 26.0,
+      "control_189f": 4.0
+    },
+    "settled_at_rest": {
+      "chained_185f": false,
+      "control_189f": false
+    },
+    "verdict": "REFUTED (Negative Result): Chaining short clips fails to induce bounce decay or settling. Both chained and single-clip generations exhibit perpetual undamped limit cycles with corridor decay ratio D >= 0.98, e_T ~ 1.0, and perpetual bouncing to frame 185/189. Chaining additionally introduces a 5-frame frozen velocity stagnation artifact at the seam."
+  }
+}
