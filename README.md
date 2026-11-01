@@ -40,10 +40,10 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
    Physics: Free-Fall g       -0.19 m/s² (held) ──►  9.73 ± 1.91 m/s²         9.81 m/s² Earth g (B1S1)
    Physics: Clone Spawning    100.0% (Seed 1)   ──►  0.0% (Extinguished)     0.0% Single Identity
    Physics: Pendulum Period   3.77 s (bifurc)   ──►  2.65 s (single bob)      1.05 s Mocap
-   NVIDIA: DOVER Technical   -0.0407           ──► -0.0395 (+0.0012)         No detectable drop (n.s.)
-   NVIDIA: DOVER Fused        0.5645           ──►  0.5482 (-0.0114 corr)    Within seed noise (σ=0.03)
+   NVIDIA: DOVER Technical   -0.0407           ──► -0.0369 (+0.0038 3-draw)  Resolved gain (LB +0.0019)
+   NVIDIA: DOVER Fused        0.5640           ──►  0.5544 (-0.0096 3-draw)  Inconclusive vs -0.020 (CI crosses 0)
    NVIDIA: Motion Fidelity    0.1389           ──►  0.2222 (+60.0% gain)     16/16 Triplets Superior
-   NVIDIA: Dynamic Degree     0.875 (Arm flail) ──►  0.375 (-0.500 drop)      Collapses spurious flow
+   NVIDIA: Dynamic Degree     0.875 (Arm flail) ──►  0.375 (-0.500 drop)      Collapses spurious flow (closer to real)
    NVIDIA: Plausibility Judge 0.6583 (Neutral)  ──►  0.6565 (PREREG A3)       Non-inferior (No-reg check)
    NVIDIA: Robot Wrist PSNR   15.96 dB (Frozen) ──►  19.02 dB (Gen future)    +3.06 dB (7/7 better)
   ──────────────────────────────────────────────────────────────────────────────────────────────────
@@ -63,12 +63,13 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | **Bounce Restitution ($e_T$)** | $-$ | $0.989 \pm 0.011$ | Undefined ($0/66$) | $0.989 \pm 0.011$ | $0.693 \pm 0.020$ | $0.018$ | Perpetual limit cycle |
 | **Time to Complete Rest** | $\text{s}$ | Never settles | Never settles | $>7.9$ ($100\%$ active)| $1.40\text{--}2.60$ | $0.15$ | DiT prior bottleneck |
 | **II. NVIDIA SCOREBOARD (4 PILLARS)** | | | | | | | |
-| **Pillar 1: DOVER Technical** | score | $-0.0407 \pm 0.0013$ | Not run | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0012 \pm 0.0009$ (n.s., $p=0.232$)** |
-| **Pillar 1: DOVER Fused (Raw)** | score | $0.5645 \pm 0.0069$ | Not run | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0163 \pm 0.0059$ ($95\%\text{ LB: } -0.0275$)** |
-| **Pillar 1: DOVER Fused (Corrected)**| score | $0.5645 \pm 0.0069$ | Not run | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0114 \pm 0.0060$ (within seed noise)** |
-| **Pillar 1: DOVER Aesthetic (Corr)**| score | $0.0641 \pm 0.0021$ | Not run | **$0.0567 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0049 \pm 0.0020$ (within seed noise)** |
-| **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | Not run | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$)** |
-| **Pillar 2: Dynamic Degree Norm** | flow | $7.642 \pm 1.392$ | Not run | **$5.645 \pm 1.548$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-1.997 \pm 2.054$ ($26\%$ drop) |
+| **Pillar 1: DOVER Technical (3 reps)**| score | $-0.0407 \pm 0.0013$ | $-0.0593$ (Degraded) | **$-0.0369 \pm 0.0010$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0038 \pm 0.0010$ (Statistically Resolved Gain, LB $+0.0019$)** |
+| **Pillar 1: DOVER Technical (1 rep)** | score | $-0.0407 \pm 0.0013$ | Not run | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | $+0.0012 \pm 0.0009$ (n.s., $p=0.232$) |
+| **Pillar 1: DOVER Fused (3 reps)** | score | $0.5640 \pm 0.0058$ | $0.5509$ (Arm C drop $-0.048$) | **$0.5544 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0096 \pm 0.0058$ ($95\%\text{ CI: } [-0.021, +0.001]$, Inconclusive vs $-0.020$)** |
+| **Pillar 1: DOVER Fused (1 rep)** | score | $0.5645 \pm 0.0069$ | Arms A/B drop $-0.035$ | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | $-0.0163 \pm 0.0059$ ($95\%\text{ LB: } -0.0275$; corr $-0.0114$) |
+| **Pillar 1: DOVER Aesthetic (3 reps)**| score | $0.0638 \pm 0.0020$ | $0.0747$ (Degraded) | **$0.0570 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0068 \pm 0.0020$ (LB $-0.0105$; real control $\Delta=-0.0008$)** |
+| **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | $0.469$ (Task 24) | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$, closer to real)** |
+| **Pillar 2: Dynamic Degree Norm** | flow | $7.64 \pm 1.39$ | $6.04$ (Task 24) | **$5.62 \pm 2.05$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-2.02 \pm 2.05$ ($26\%$ drop, n.s.) |
 | **Pillar 2: Motion Fidelity (MF)** | score | $0.1389$ (mean $0.104$) | Not run | **$0.2222$ (mean $0.316$)**| $1.000$ (Ideal) | $0.083$ | **$+60.0\%$ (16/16 triplets gain)** |
 | **Pillar 2: Motion Control (MC)** | penalty | $0.1667$ (mean $0.125$) | Not run | **$0.6667$ (mean $0.500$)**| $0.000$ (Ideal) | $0.125$ | Variance penalty (3/4 seeds still) |
 | **Pillar 3: HUE Overall Plausibility**| score | $0.6583 \pm 0.0063$ | Not run | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; Non-inferior vs $\delta=0.030$; Qwen3-VL-2B no-regression check #1871)** |

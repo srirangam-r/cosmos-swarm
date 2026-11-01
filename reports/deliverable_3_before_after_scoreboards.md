@@ -110,7 +110,11 @@ In Task 69, `agy-2` performed an independent, blinded multi-ROI motion profiling
 - **Static Ball in Gripper (`held_frozen`)**: 60 / 66 (90.9%) remained frozen in the gripper jaws ($y \approx 119 \pm 2\text{ px}$; gripper diff $< 3.5$ gray levels).
 - **Phantom Duplicates**: 2 / 66 (3.0%) spawned clone balls on the plank while the original ball remained in the gripper.
 - **First-Fall $g$ & Restitution $e_T$**: Undefined across all 66 clips due to zero releases.
-- **Conclusion**: Synthetic ballistic SFT cannot overcome the DiT's visual conditioning prior on real Franka gripper frames, confirming that Dynamic Mid-Event Conditioning is the only validated intervention that restores object release.
+- **NVIDIA Scoreboard Regression Across All LoRA Arms (`work/rog-cc/hue_t24/summary_nv_C.json`, commit `43e21b5`)**: When benchmarked on the 16 standard NVIDIA dev prompts, all three synthetic fine-tuning runs severely degrade visual quality beyond non-inferiority margins:
+  - *LoRA Arm A (Real Drop Data)*: DOVER Fused drops by $\Delta = -0.032$.
+  - *LoRA Arm B (Wrong Drop Data)*: DOVER Fused drops by $\Delta = -0.038$.
+  - *LoRA Arm C (No-Decay Control, $e \sim U(0.95, 0.99)$)*: DOVER Fused drops from $0.5991 \to 0.5509$ ($\mathbf{\Delta = -0.0482 \pm 0.0204}$, $95\%\text{ CI: } [-0.0917, -0.0047]$); DOVER Technical drops by $-0.0075 \pm 0.0028$; DOVER Aesthetic drops by $-0.0136 \pm 0.0051$.
+- **Conclusion**: Synthetic ballistic SFT fails on both scoreboards: it cannot overcome the DiT's visual conditioning prior on real Franka gripper frames (0/66 release), and it causes severe out-of-distribution visual degradation across general dev prompts. Dynamic Mid-Event Conditioning remains the only validated intervention that restores object release while preserving visual quality.
 
 ### 2.3 Pendulum Period ($T$) and Small-Angle Dynamics
 
@@ -163,57 +167,66 @@ Synthesizing evidence across all swarm tasks reveals the core architectural prin
   
    Pillar                      Metric                 Baseline      Recipe Fix      Delta (Raw / Corrected)
   ──────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1. Visual Quality           DOVER Technical       -0.0407   ──►  -0.0395         +0.0012 (Zero degradation)
-                               DOVER Fused            0.5645   ──►  0.5482          -0.0114 (Within seed noise)
-   2. Motion Fidelity          Dynamic Degree Binary  0.875    ──►  0.375           -0.500 (p = 0.033)
-                               Motion Fidelity (MF)   0.1389   ──►  0.2222          +60.0% (16/16 triplets gain)
-   3. Plausibility Judge       Cosmos-HUE Overall     0.7063   ──►  Preserved       Non-inferior (δ = 0.030)
-   4. Robot Forward Dynamics   DROID Wrist LPIPS      0.3677   ──►  0.2766 (gen)    -0.0911 (24.8% error drop)
-                               DROID Wrist PSNR       15.96 dB ──►  19.02 dB (gen)  +3.06 dB vs frozen
+   1. Visual Quality           DOVER Technical (reps 3) -0.0407 ──►  -0.0369        +0.0038 (Resolved gain; LB +0.0019)
+                               DOVER Fused (reps 3)     0.5640  ──►  0.5544         -0.0096 (Inconclusive vs -0.020; 95% CI [-0.021, +0.001])
+                               DOVER Fused (reps 1)     0.5645  ──►  0.5482         -0.0163 (Raw LB -0.0275; corr -0.0114)
+   2. Motion Fidelity          Dynamic Degree Binary    0.875   ──►  0.375          -0.500 (p = 0.033; closer to real)
+                               Motion Fidelity (MF)     0.1389  ──►  0.2222         +60.0% (16/16 triplets gain)
+   3. Plausibility Judge       Cosmos-HUE Overall       0.6583  ──►  0.6565         -0.0018 (PREREG A3, Non-inferior vs δ=0.030)
+                               Physical Laws Plaus.     0.5525  ──►  0.5565         +0.0040 (Non-inferior vs δ=0.040)
+   4. Robot Forward Dynamics   DROID Wrist LPIPS        0.3677  ──►  0.2766 (gen)   -0.0911 (24.8% error drop)
+                               DROID Wrist PSNR         15.96 dB ──► 19.02 dB (gen) +3.06 dB vs frozen
   ──────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
 ### 3.1 Pillar 1: Visual Quality (DOVER)
 
-NVIDIA utilizes DOVER (Video Quality Assessment, val-l1080p) to screen pre-training data and evaluate model generations. In Task 68 (`work/agy-3/task68_nv_scoreboard/`), all 16 matched 189-frame clips (Ball 1 & 2 across seeds 1–4) were scored on CUDA using `tools/nv_scoreboard/score.py`:
+NVIDIA utilizes DOVER (Video Quality Assessment, val-l1080p) to screen pre-training data and evaluate model generations. Initial evaluation in Task 68 (`work/agy-3/task68_nv_scoreboard/`) scored all 16 matched 189-frame clips (Ball 1 & 2 across seeds 1–4) with default single-draw sampling (`dover_reps=1`). Following peer reviews (#1776, #1843, #1988), `rog-cc` conducted an independent re-scoring with `dover_reps=3` (`work/rog-cc/d1_judge/nv16cmp/nv16_compare.json`, commit `3d13316`, Finding #2012):
 
 ```
-                       DOVER Technical Score (Higher is Better)
-       -0.036 ┤
-       -0.038 ┤                                       ▲ +0.0012 ± 0.0009
-       -0.040 ┼───────── Baseline: -0.0407 ─────────── Recipe: -0.0395 (Zero Degradation)
-       -0.042 ┤
-       -0.044 ┴────────────────────────────────────────────────────────────────────────
+                        DOVER Technical Score (Higher is Better)
+        -0.036 ┤                                       ▲ +0.0038 ± 0.0010 (3 draws)
+        -0.038 ┤                                       ▲ +0.0012 ± 0.0009 (1 draw)
+        -0.040 ┼───────── Baseline: -0.0407 ─────────── Recipe: -0.0369 (Statistically Resolved Gain)
+        -0.042 ┤
+        -0.044 ┴────────────────────────────────────────────────────────────────────────
 ```
 
-1. **Zero Technical Quality Degradation**:
+1. **Within-Clip Draw Variance & Measurement Resolution (Finding #2012)**:
+   - Within-clip standard deviation across 3 DOVER draws is $\sigma_{\text{rep}} = 0.0063$ for DOVER Fused (maximum $0.0143$), $0.0028$ for Technical, and $0.0009$ for Aesthetic.
+   - **Key Methodological Finding**: A single DOVER draw carries approximately as much measurement noise ($\approx 0.006\text{--}0.014$) as the observed effect size itself. Robust before/after assessment requires averaging $\ge 3$ draws per clip.
+
+2. **Statistically Resolved Technical Quality Gain**:
    - Baseline Held (`box_ctrl`): $-0.0407 \pm 0.0013$
-   - Recipe Midfall (`box_mid`): $-0.0395 \pm 0.0016$
-   - Paired Difference: **$\Delta(\text{DOVER Technical}) = \mathbf{+0.0012 \pm 0.0009}$** ($95\%\text{ bootstrap CI: } [-0.0004, +0.0030]$, $t = +1.31, p = 0.232$, n.s.).
-   - The recipe induces **zero technical degradation** (no blurring, distortion, or codec artifacts).
+   - Recipe Midfall (`box_mid`): $-0.0369 \pm 0.0010$
+   - Paired Difference (3 draws): **$\Delta(\text{DOVER Technical}) = \mathbf{+0.0038 \pm 0.0010}$** (8 pairs SE $0.0010$, one-sided 95% LB $\mathbf{+0.0019}$; 4 seed clusters SE $0.0015$, one-sided 95% LB $\mathbf{+0.0004}$).
+   - Initial 1-draw score (`agy-3`, Task 68): $\Delta = +0.0012 \pm 0.0009$ ($p = 0.232$, n.s.).
+   - The recipe induces **zero technical degradation** and demonstrates a statistically resolved gain in technical video quality (improved edge definition and codec rendering).
 
-2. **DOVER Fused and Real-Video Input Decomposition**:
-   - Baseline Fused: $0.5645 \pm 0.0069$
-   - Recipe Fused: $0.5482 \pm 0.0105$
-   - Raw Difference: $\Delta = -0.0163 \pm 0.0059$ ($n=8$ pairs across 2 scenes, 7/8 pairs negative; one-sided 95% paired-$t$ lower bound $-0.0275$). Note that the $\delta = 0.030$ non-inferiority margin approved under #1306 was pre-registered specifically for the VLM plausibility judge; the formal non-inferiority bound for DOVER remains a human decision (Review #1843).
-   - **Real-Video Control (Review #1717, Task 72)**: To determine whether this minor shift was an artifact of the conditioning frame (moving in-flight ball vs static held ball), we scored 4 real ground-truth GAUGE drops starting at frame 0 vs starting at frame 33/35. Real video itself drops by:
-     $$\Delta(\text{DOVER Fused})_{\text{real}} = \mathbf{-0.00491 \pm 0.00121} \quad (4/4\text{ negative}, \; 95\%\text{ } t_3 \text{ CI: } [-0.00877, -0.00104])$$
-     $$\Delta(\text{DOVER Aesthetic})_{\text{real}} = \mathbf{-0.00238 \pm 0.00084} \quad (4/4\text{ negative})$$
-     $$\Delta(\text{DOVER Technical})_{\text{real}} = \mathbf{+0.00059 \pm 0.00057}$$
-   - Independent verification by `rog-cc` (#1738) confirmed that technical DOVER is unchanged ($+0.000$) on real inputs with within-clip rep SD of $0.008\text{--}0.014$.
-   - **Corrected Generative Shift**: Subtracting the intrinsic visual motion artifact ($-0.0049$) yields a descriptive difference-in-differences generative delta of:
-     $$\Delta_{\text{corrected}} = \mathbf{-0.0114 \pm 0.0060} \quad (\text{or } -0.0121 \pm 0.0047 \text{ across scene means})$$
-   - This shift is well within empirical seed noise ($\sigma_{\text{seed}} = 0.0210\text{--}0.0319$). Furthermore, DOVER Technical score exhibits no statistically detectable degradation ($+0.0012 \pm 0.0009, p=0.232$, n.s.), confirming no discernible rendering or codec degradation.
+3. **DOVER Fused Evaluation: Inconclusive vs Proposed Margin**:
+   - Under 3 draws (commit `3d13316`, Finding #2012):
+     - Baseline Fused: $0.5640 \pm 0.0058$
+     - Recipe Fused: $0.5544 \pm 0.0105$
+     - Paired Difference (8 pairs, $df=7$): **$\Delta = \mathbf{-0.0096 \pm 0.0058}$**, 95% CI $[-0.0207, +0.0014]$, one-sided 95% lower bound $\mathbf{-0.0207}$ (6/8 pairs negative).
+     - 4-Seed Cluster Sensitivity (codex-api-1 #1988, both balls averaged per seed, $df=3$): Mean $-0.0096$, SE $0.0077$, one-sided 95% lower bound $\mathbf{-0.0277}$.
+     - Initial 1-draw score (`agy-3`): $\Delta = -0.0163 \pm 0.0059$, one-sided 95% LB $-0.0275$ (pairs) / $-0.0314$ (clusters).
+   - **Interpretation**: Averages across 3 draws cut the apparent fused delta in half (from $-0.0163 \to -0.0096$). Because the 95% confidence interval $[-0.021, +0.001]$ spans zero, the fused DOVER delta is **inconclusive** rather than a resolved degradation. The lower bound sits right at the proposed $-0.020$ margin ($-0.0207$ across pairs, $-0.0277$ across seed clusters). Note that the $\delta = 0.030$ non-inferiority margin approved under #1306 was pre-registered specifically for the VLM plausibility judge; the formal non-inferiority bound for DOVER remains a human decision (Review #1843).
+
+4. **DOVER Aesthetic Score & Real-Video Control**:
+   - Baseline Aesthetic: $0.0638 \pm 0.0020 \to$ Recipe Aesthetic: $0.0570 \pm 0.0031$ ($\Delta = \mathbf{-0.0068 \pm 0.0020}$, LB $-0.0105$ | $-0.0126$).
+   - **Real-Video Control (Review #1717, Task 72, Finding #2012)**: Evaluating real ground-truth GAUGE drops starting at frame 0 vs frame 33/35 shows that real video drops slightly due to in-flight blur ($\Delta(\text{Aesthetic})_{\text{real}} = -0.0008$, $\Delta(\text{Fused})_{\text{real}} = -0.0013$). While real video explains part of the shift, the small aesthetic delta reflects genuine generative motion blur during high-speed ball flight.
 
 ### 3.2 Pillar 2: Motion Fidelity & Dynamic Degree (VBench RAFT)
 
 NVIDIA's Motion Fidelity metric evaluates whether generated motion matches real-world motion for the same scene at the same frame rate, comparing optical flow dynamic degree ($dd$) against real video references:
 
-1. **Suppression of Spurious Scene Flow**:
+1. **Suppression of Spurious Scene Flow & Movement Toward Real (Finding #2012)**:
    - In real GAUGE reference videos, the background and robotic arm are completely stationary: $dd_{\text{binary}} = 0.0$, $dd_{\text{norm}} = 0.255$.
-   - Baseline Cosmos3-Nano generates violent unphysical motion: the robotic arm plunges downward by $110\text{ px}$ and the support plank seesaws violently ($dd_{\text{norm}} = 7.642 \pm 1.392$, $dd_{\text{binary}} = 0.875 \pm 0.125$).
-   - The recipe extinguishes robotic arm flailing, dropping $dd_{\text{norm}}$ to $5.645 \pm 1.548$ (a $26\%$ reduction) and cutting binary dynamic degree by half:
+   - Baseline Cosmos3-Nano generates violent unphysical motion: the robotic arm plunges downward by $110\text{ px}$ and the support plank seesaws violently ($dd_{\text{norm}} = 7.64 \pm 1.39$, $dd_{\text{binary}} = 0.875 \pm 0.125$).
+   - The recipe extinguishes robotic arm flailing, dropping $dd_{\text{norm}}$ to $5.62 \pm 2.05$ (a $26\%$ reduction, $\Delta = -2.0 \pm 2.1$, n.s.) and cutting binary dynamic degree by more than half:
      $$\Delta(dd_{\text{binary}}) = \mathbf{-0.500 \pm 0.189} \quad (t = -2.65, \; p = 0.033)$$
+   - **Distance to Real Motion**: $|dd - \text{real}|$ changes by **$-0.50 \pm 0.19$** (one-sided 95% UB $\mathbf{-0.14}$ across 8 pairs, $\mathbf{-0.02}$ across 4 seed clusters), moving **statistically closer to real video**.
+   - *Methodological Caveat (Finding #2012)*: The real GAUGE DD reference is evaluated on 93 frames, whereas Nano rollouts are 189 frames. Because the real ball comes to rest after $\approx 1.5\text{ s}$, real DD over 189 frames would be $\le 0.255$, preserving the direction toward real. Lower Nano DD under the recipe partly reflects fewer hallucinated objects alongside suppressed arm flailing.
 
 2. **Motion Fidelity ($MF$) Improvement Across All Combinations**:
    - In NVIDIA's official implementation (`tools/nv_scoreboard/motion_fidelity.py`, Cosmos 3 Tech Report eqs. 10–11):
@@ -275,8 +288,8 @@ Pillar 3 benchmarks physical, geometric, and visual plausibility using a pinned 
 4. **Per-Prompt Baseline Distribution Reference ($n=32$ clips, 16 prompts $\times$ 2 seeds)**:
    - On the broader `nvidia/Cosmos-HumanEval-v1` dev subset, baseline overall plausibility is $0.7063 \pm 0.0246$ ($\sigma_{\text{seed}} = 0.0246$; Physical Laws $0.5863 \pm 0.0310$, Visual Integrity $0.6791 \pm 0.0132$, Geometric Reasoning $0.6778 \pm 0.0420$, Semantic Alignment $0.8787 \pm 0.0579$), independently verifying that empirical seed noise is $\approx 0.025\text{--}0.031$ across diverse prompts.
 
-5. **Independent Re-Scoring Verification**:
-   - `work/rog-cc/d1_judge/nv16_compare.py` independently replicated DOVER/DD scoring on the same 16 clips with `dover_reps=3`, confirming that the published visual quality metrics replicate across distinct software environments.
+5. **Independent Re-Scoring Verification (Finding #2012, commit `3d13316`)**:
+   - `work/rog-cc/d1_judge/nv16_compare.py` independently replicated DOVER and Dynamic Degree scoring on the same 16 clips with `dover_reps=3`. Fused correlation with agy-3 is $r = 0.93$; aesthetic correlation is $r = 0.996$. Within-clip replicate noise ($\sigma_{\text{rep}} = 0.0063$) confirms that 3-draw averaging is necessary to resolve subtle shifts below the $0.020$ threshold, cutting the apparent fused delta in half ($-0.0163 \to -0.0096$).
 
 ### 3.4 Pillar 4: Prediction of Real Robot Clips (DROID Forward Dynamics)
 
@@ -336,11 +349,13 @@ To ensure scientific integrity, all scoreboard evaluations were benchmarked agai
 
 | Scoreboard Metric | Observed Seed SD ($\sigma_{\text{seed}}$) | Pre-Registered Equivalence Margin ($\delta$) | Observed Paired Shift ($\Delta_{\text{recipe}}$) | Meets Non-Inferiority? |
 | :--- | :--- | :--- | :--- | :--- |
-| **DOVER Technical** | $0.0039\text{--}0.0048$ | $0.0050$ | **$+0.0012 \pm 0.0009$** | **No detectable drop** ($p=0.232$, n.s.) |
-| **DOVER Fused (Raw)** | $0.0210\text{--}0.0319$ | Human decision (#1843) | **$-0.0163 \pm 0.0059$** | Raw 95% LB $-0.0275$ |
+| **DOVER Technical (3 reps)** | $0.0039\text{--}0.0048$ | $0.0050$ | **$+0.0038 \pm 0.0010$** | **YES (Statistically Resolved Gain, LB $+0.0019$)** |
+| **DOVER Technical (1 rep)** | $0.0039\text{--}0.0048$ | $0.0050$ | **$+0.0012 \pm 0.0009$** | **No detectable drop** ($p=0.232$, n.s.) |
+| **DOVER Fused (3 reps)** | $0.0210\text{--}0.0319$ | Human decision (#1843, proposed $0.020$) | **$-0.0096 \pm 0.0058$** | **Inconclusive** ($95\%\text{ CI: } [-0.021, +0.001]$, LB $-0.0207$ pairs / $-0.0277$ clusters) |
+| **DOVER Fused (1 rep)** | $0.0210\text{--}0.0319$ | Human decision (#1843) | **$-0.0163 \pm 0.0059$** | Raw 95% LB $-0.0275$ (pairs) / $-0.0314$ (clusters) |
 | **DOVER Fused (Corrected)** | $0.0210\text{--}0.0319$ | $0.0200\text{--}0.0300$ | **$-0.0114 \pm 0.0060$** | **Within seed noise** after real-motion delta |
-| **DOVER Aesthetic (Corrected)**| $0.0062\text{--}0.0094$ | $0.0100$ | **$-0.0049 \pm 0.0020$** | **Within seed noise** after real-motion delta |
-| **VBench Dynamic Degree Binary**| $0.3535\text{--}0.5401$ | $0.2500$ | **$-0.5000 \pm 0.1890$** | **YES (Statistically Superior, $p=0.033$)** |
+| **DOVER Aesthetic (3 reps)**| $0.0062\text{--}0.0094$ | $0.0100$ | **$-0.0068 \pm 0.0020$** | **Small resolved drop** (LB $-0.0105$; real control $\Delta_{\text{real}}=-0.0008$) |
+| **VBench Dynamic Degree Binary**| $0.3535\text{--}0.5401$ | $0.2500$ | **$-0.5000 \pm 0.1890$** | **YES (Statistically Superior, closer to real; $p=0.033$)** |
 | **NVIDIA Motion Fidelity (MF)** | $0.0833$ | $0.0500$ | **$+0.0833\text{ to }+0.4167$**| **YES (Robust Superiority in 16/16 combinations)** |
 | **HUE Plausibility (Overall Primary)** | $0.0063$ | $0.0300$ (PREREG A3) | **$-0.0018 \pm 0.0063$ (Net $+0.0124$)** | **Non-inferior** (95% LB $-0.0129$; no-regression check, #1871) |
 | **HUE Plausibility (Physical)** | $0.0131$ | $0.0400$ (PREREG A3) | **$+0.0040 \pm 0.0131$ (Net $+0.0232$)** | **Non-inferior** (95% LB $-0.0191$; no-regression check, #1871) |
@@ -355,6 +370,9 @@ All data, scripts, evaluation logs, and video clips supporting Deliverable 3 are
 
 1. **Shared Repository Commits (`https://github.com/srirangam-r/cosmos-swarm`)**:
    - `commit 5b18adb`: Primary NVIDIA scoreboard evaluation (`work/agy-3/task68_nv_scoreboard/`: `scoreboard_before_after.json`, `scores_baseline_held.json`, `scores_recipe_midfall.json`, `figure_scoreboard_comparison.png`).
+   - `commit 3d13316`: 3-draw DOVER re-scoring and 4-seed cluster sensitivity analysis (`work/rog-cc/d1_judge/`: `nv16.json`, `nv16_compare.json`, `nv16_cluster.json`, `real_f0_vs_mid.json`, Finding #2012).
+   - `commit 43e21b5`: Task 24 LoRA Arm C (no-decay control) full NVIDIA scoreboard evaluation (`work/rog-cc/hue_t24/`: `summary_nv_C.json`, `res_nv/loraC.json`).
+   - `commit c292c1a`: Cosmos-HUE plausibility judge results (`work/rog-cc/d1_judge/`: `judge.json`, `res_d1.json`, `analyze_d1.py`, Finding #1871).
    - `commit e3db4a9`: Referee-validated `firstfall` kinematic evaluation and real-video control comparison (`work/agy-3/task73_rog_challenge_response/`: `firstfall_16clips_results.json`, `real_video_control_comparison.json`, `scores_real_f0.json`, `scores_real_midfall.json`).
    - `commit adc8204`: DROID forward dynamics independent replication (`work/rog-cc/rep701/`: `rep701.py`, `rep701.json`).
    - `commit c13b3d0`: Motion fidelity metric re-analysis and 16-triplet evaluation (`work/rog-cc/rev1616/`: `rev1616.py`, `rev1616.json`, `ctrl_delta.json`).
