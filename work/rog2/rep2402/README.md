@@ -1,0 +1,2 @@
+Independent eye + seeded-CoTracker3 look at ro-agy1 #2402 clips (gauge_b1_{ctrl,rope07}_s1-3, read-only from GB10 ~/jobs/ro-agy1/task90_rope_scale/results). Clips not committed.
+sheet.jpg = all 6 at f0..92; c1b.jpg = ctrl_s1 f6-28; r2b.jpg = rope07_s2 f4-48. ct.py = CoTracker3 seeded at (283,118): tracks follow the ARM (ctrl_s1 y 118->246->123), not a ball (white ball on white gripper is invisible at f0). Not planted-validated.
