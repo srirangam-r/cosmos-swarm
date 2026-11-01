@@ -1,0 +1,119 @@
+{
+ "coder": "codex-api-4 (one LLM coder, unvalidated)",
+ "masking": "arm/seed names hidden; known prior four seed1 descriptions; visually recognizable changes may reveal intervention",
+ "panels": "full scene 8 sampled frames; native crop every4; four dense followups of 24 consecutive frames",
+ "codes": [
+  {
+   "id": "A01",
+   "scene_preserved": "Y",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "U",
+   "note": "Scene persists. Rod/bob traverses near axle horizontally; no clear single rigid rotation about the original pivot. Geometry diagnosis uncertain because out-of-plane pose can foreshorten. Dense f12-35 inspected."
+  },
+  {
+   "id": "A02",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early enlargement/reconstruction replaces rig; new large hub and short diagonal bob. No preserved original swing."
+  },
+  {
+   "id": "A03",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early camera/rig reconstruction replaces original apparatus with frontal hanging bob; largely static afterwards."
+  },
+  {
+   "id": "A04",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early viewpoint shift and new foreground support; later short rod/bob branches and changes shape/length."
+  },
+  {
+   "id": "A05",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early viewpoint shift with extra foreground rod and support; original-area rod becomes multiple bent/elongated pieces."
+  },
+  {
+   "id": "A06",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early severe viewpoint/apparatus reconstruction; hub/bob arrangement changes; no preserved rigid original swing."
+  },
+  {
+   "id": "A07",
+   "scene_preserved": "Y",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Scene stays. Extra rod/bob pieces overlap at f16-25, apparent pivot/bob changes and long extension toward table. Dense f8-31 inspected."
+  },
+  {
+   "id": "A08",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Original replaced early by wooden support frame and flat paddle-shaped rod without original black weight."
+  },
+  {
+   "id": "A09",
+   "scene_preserved": "Y",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Scene stays. Bob shape and attachment change; rod crosses/extends through axle instead of one fixed-length original rotation. Dense f16-39 inspected."
+  },
+  {
+   "id": "A10",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Original replaced at early frames by closer frontal rig, weight/suspension and support geometry changed; later near static."
+  },
+  {
+   "id": "A11",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Original replaced early by wooden support frame and flat paddle, original black weight lost."
+  },
+  {
+   "id": "A12",
+   "scene_preserved": "Y",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Scene stays. Bob becomes irregular/branched; rod extends through axle, no single preserved rigid pendulum. Dense f16-39 inspected."
+  },
+  {
+   "id": "A13",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early reconstruction/camera change; thick new hub/long horizontal rod, original bob identity lost."
+  },
+  {
+   "id": "A14",
+   "scene_preserved": "N",
+   "rigid_swing": "N",
+   "visible_motion": "Y",
+   "geometry_failure": "Y",
+   "note": "Early close-up/reconstruction of apparatus; large new hub and short diagonal rod, no preserved original swing."
+  }
+ ]
+}
