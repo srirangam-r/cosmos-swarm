@@ -1,0 +1,15 @@
+--- a/tools/cosmos_local/noise.py	2026-11-01 10:00:49.138438449 -0500
++++ b/tools/cosmos_local/noise.py	2026-11-01 11:27:30.465993302 -0500
+@@ -98,6 +98,12 @@
+     a, b = a.float(), b.float()
+     if mix["band"] in ("all", "region"):
+         return mask * b + (1 - mask) * a
++    if mix["band"].startswith("temporal") and mix.get("skip_slot0") and a.shape[2] > 1:
++        # latent frame 0 is the I2V conditioning slot; in an inverted latent it holds the clean image latent, whose
++        # channel offsets a temporal FFT would spread over every frame (Dirichlet ringing, E6 tlo washout, dk2 #5600).
++        # Filter frames 1..T-1 only; slot 0 comes from a (it is overwritten by the condition mask anyway).
++        rest = mix_noise(a[:, :, 1:], b[:, :, 1:], {k: v for k, v in mix.items() if k != "skip_slot0"})
++        return torch.cat([a[:, :, :1].float(), rest], dim=2)
+     dims = (2,) if mix["band"].startswith("temporal") else (3, 4)
+     fa, fb = torch.fft.fftn(a, dim=dims), torch.fft.fftn(b, dim=dims)
+     return torch.fft.ifftn(mask * fb + (1 - mask) * fa, dim=dims).real
