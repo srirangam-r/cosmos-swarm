@@ -1,0 +1,15 @@
+{
+  "scope": "Node mock media-event/control checks; no browser execution",
+  "checks_passed": 9,
+  "checks": [
+    "paired autoplay and shared loop boundaries",
+    "pause both from pair control",
+    "paused variant change keeps pause, resets both, restores speed after load",
+    "playing variant change waits for metadata then restarts both",
+    "first clip ended resets and resumes both",
+    "variant load error leaves both paused",
+    "autoplay rejection pauses both and offers Play",
+    "restart recovers paired playback",
+    "tested JS equals embedded release copy; old unsupported headlines and dead anchors removed"
+  ]
+}

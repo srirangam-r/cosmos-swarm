@@ -1,0 +1,486 @@
+--- a/work/rahul-5-agy/gallery/index.html
++++ b/work/rahul-5-agy/gallery/index.html
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Cosmos3-Nano Swarm Physics Fixes Gallery</title>
++  <title>Cosmos3-Nano Swarm Physics Demo Gallery</title>
+   <style>
+     :root {
+       --bg: #0b0f19;
+@@ -349,14 +349,14 @@
+   <div class="container">
+     <header>
+       <div class="badge-swarm">Cosmos3-Nano Swarm Live Deliverable</div>
+-      <h1>Physics Fixes Gallery</h1>
++      <h1>Physics Demo Gallery</h1>
+       <p class="subtitle">
+-        Curated side-by-side empirical demonstrations proving the swarm's fixes to NVIDIA Cosmos3-Nano's physical world modeling weaknesses across periodic dynamics, damping, forward dynamics, and gravity.
++        Existing Cosmos3-Nano demo clips and source results. Each row states its evidence status. Gallery clips are illustrative: native per-clip provenance is pending, so the players do not establish matched before/after measurements.
+       </p>
+ 
+       <div class="stat-bar">
+         <div class="stat-card">
+-          <div class="stat-label">Total Verified Fixes</div>
++          <div class="stat-label">Demo Entries</div>
+           <div class="stat-val">5 Demonstrations</div>
+         </div>
+         <div class="stat-card">
+@@ -365,28 +365,29 @@
+         </div>
+         <div class="stat-card">
+           <div class="stat-label">Evaluation Standard</div>
+-          <div class="stat-val">Matched Controls &amp; Seeds</div>
++          <div class="stat-val">See Each Source Experiment</div>
+         </div>
+         <div class="stat-card">
+-          <div class="stat-label">Visual Quality (DOVER)</div>
+-          <div class="stat-val">&Delta; = -0.004 &plusmn; 0.007 (Retained)</div>
++          <div class="stat-label">Full Recipe Scoreboard</div>
++          <div class="stat-val">Pending</div>
+         </div>
+       </div>
+     </header>
+ 
+     <main class="gallery-grid">
++      <p style="color:#fbbf24">Review copy, 2026-11-01. Numbers below are attributed source results, not measurements of this page or the new Nano-Phys CLI. Native continuous pendulum media and per-asset scene/seed/sidecars are still needed. Shared player controls align starts and loop boundaries; sampled footage cannot support frame-accurate comparisons.</p>
+ 
+       <!-- ROW 1: ro-3 Sim-Proxy Pendulum -->
+       <section class="gallery-card" id="row-pendulum-proxy">
+         <div class="card-header">
+           <div class="card-title-group">
+-            <h2>1. Kinematic Sim-Proxy Latent Conditioning</h2>
++            <h2>1. Sim-Proxy Pendulum — Provisional</h2>
+             <div class="card-meta">
+-              Author: <strong>ro-3</strong> &bull; Task #252 &bull; <a href="#5315">Finding #5315</a> &bull; Target: Pendulum Period Slowness
+-            </div>
+-          </div>
+-          <div class="btn-group">
+-            <button class="ctrl-btn active" onclick="switchVideo('v-r1-right', 'clips/pendulum_simproxy_phys', this)">Physical Proxy (1.18s)</button>
++              Author: <strong>ro-3</strong> &bull; Task #252 &bull; <a href="https://github.com/srirangam-r/cosmos-swarm/blob/ceb5310/work/ro-3/task252/results_sp.json">Source results (#5315)</a> &bull; Target: Externally Specified Period Transfer
++            </div>
++          </div>
++          <div class="btn-group">
++            <button class="ctrl-btn active" onclick="switchVideo('v-r1-right', 'clips/pendulum_simproxy_phys', this)">Proxy Target (1.187s)</button>
+             <button class="ctrl-btn" onclick="switchVideo('v-r1-right', 'clips/pendulum_simproxy_x17', this)">Control Proxy (1.7&times; Wrong)</button>
+           </div>
+         </div>
+@@ -394,8 +395,8 @@
+         <div class="video-viewport">
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-plain-model">Plain Cosmos3-Nano</span>
+-              <span class="video-tech">416&times;240 &bull; 24 fps</span>
++              <span class="label-badge badge-plain-model">Plain Nano Example (Match Unverified)</span>
++              <span class="video-tech">416&times;240 &bull; 93f @ 24fps</span>
+             </div>
+             <div class="video-wrapper">
+               <video id="v-r1-left" autoplay loop muted playsinline>
+@@ -407,8 +408,8 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model" id="badge-r1">Sim-Proxy Init (Fixed)</span>
+-              <span class="video-tech">416&times;240 &bull; 24 fps</span>
++              <span class="label-badge badge-fixed-model" id="badge-r1">Provisional Proxy-Init Example</span>
++              <span class="video-tech">416&times;240 &bull; 16 sampled frames @ 4fps</span>
+             </div>
+             <div class="video-wrapper">
+               <video id="v-r1-right" autoplay loop muted playsinline>
+@@ -437,12 +438,12 @@
+         <div class="card-footer">
+           <div class="sentence-box">
+             <div class="sentence-label">Mechanism &amp; Explanation</div>
+-            Injecting an analytical kinematic pendulum proxy ($P=2\pi\sqrt{L/g}$) into early diffusion noise steps ($t_{\text{init}}=0.6\text{--}0.9$) eliminates Cosmos3-Nano's intrinsic sluggish clock bias, locking generated oscillation periods to physical ground truth without changing prompt geometry.
++            Source experiment: a hand-built pendulum proxy supplies the target period; Nano renders a continuation. The proxy length (0.35 m) was an explicit, nonblind assumption. This supports period transfer, with geometry, generalization and the new CLI benchmark still pending. Displayed right-hand files are sampled QC derivatives, not native continuous footage.
+           </div>
+           <div class="metric-card">
+-            <div class="metric-title">Measured Oscillation Period</div>
+-            <div class="metric-value">T = 1.186 s</div>
+-            <div class="metric-sub">&plusmn; 0.001 s (vs Plain Nano 2.36 s, Real Mocap 1.06 s)</div>
++            <div class="metric-title">Source Experiment, t_init 0.6</div>
++            <div class="metric-value">T = 1.1863 s</div>
++            <div class="metric-sub">Range 1.1857–1.1870s, 2 scenes × 2 seeds; control 2.0175–2.0202s. Source plain 0.833–0.843s (1 seed/scene), real ≈1.18s. Not a benchmark of the shipped CLI.</div>
+           </div>
+         </div>
+       </section>
+@@ -451,14 +452,13 @@
+       <section class="gallery-card" id="row-donor-transfer">
+         <div class="card-header">
+           <div class="card-title-group">
+-            <h2>2. Spatial Donor-Noise Band Transfer (E6 'slo' / 'all')</h2>
++            <h2>2. Donor Reconstruction Diagnostic — Provisional</h2>
+             <div class="card-meta">
+-              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="http://board.tail0c526a.ts.net:8031/e6/report.md">:8031 Report</a> &bull; Findings #5600, #5634 &bull; Target: Dynamics Rate Tuning
+-            </div>
+-          </div>
+-          <div class="btn-group">
+-            <button class="ctrl-btn active" onclick="switchVideo('v-r2-right', 'clips/donor_transfer_fixed', this)">Coarse Donor Transfer (Fixed)</button>
+-            <button class="ctrl-btn" onclick="switchVideo('v-r2-right', 'clips/donor_recon_real', this)">Real Inversion Reference</button>
++              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="http://board.tail0c526a.ts.net:8031/e6/report.md">:8031 Report</a> &bull; Findings #5600, #5634 &bull; Real-Video Input Diagnostic
++            </div>
++          </div>
++          <div class="btn-group">
++            <span class="label-badge badge-control-model">Artifact arm tlo excluded</span>
+           </div>
+         </div>
+ 
+@@ -478,13 +478,13 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model" id="badge-r2">Donor Band Transfer (Fixed)</span>
++              <span class="label-badge badge-fixed-model" id="badge-r2">Real-Video Reconstruction Example</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+               <video id="v-r2-right" autoplay loop muted playsinline>
+-                <source src="clips/donor_transfer_fixed.mp4" type="video/mp4">
+-                <source src="clips/donor_transfer_fixed.webm" type="video/webm">
++                <source src="clips/donor_recon_real.mp4" type="video/mp4">
++                <source src="clips/donor_recon_real.webm" type="video/webm">
+               </video>
+             </div>
+           </div>
+@@ -508,12 +508,12 @@
+         <div class="card-footer">
+           <div class="sentence-box">
+             <div class="sentence-label">Mechanism &amp; Explanation</div>
+-            Transferring coarse spatial noise bands from an inverted physical reference clip drives Nano toward physical timing ($P/P_{\text{real}} \approx 1.000$) while diffusion noise fill synthesizes fresh textures. <em>Diagnostic Note:</em> The temporal mixing arm ('tlo') was identified as a 27.4-frame frame-0 ringing artifact with heavy flicker (flicker index 0.505; #5600, #5634), whereas spatial-only transfer ('slo', shown here) and full donor transfer ('all') remain flicker-free (&lt; 0.01) and reproduce real motion.
++            E6 temporal-band (tlo) results were a whole-frame flicker ARTIFACT, caught by cross-check (#5600/#5634). That transfer asset is excluded here until its exact native arm can be authenticated. The displayed reconstruction example uses real-video information beyond frame 0 and is diagnostic. The source two-tool follow-up (#5608) left clock transfer unresolved; spatial/full arms near the real period also match their donors.
+           </div>
+           <div class="metric-card">
+-            <div class="metric-title">Period Ratio to Reality</div>
+-            <div class="metric-value">P / P_real = 0.998 &ndash; 1.001</div>
+-            <div class="metric-sub">Spatial 'slo' &amp; full 'all' arms; flicker index &lt; 0.01 (vs Base 0.880)</div>
++            <div class="metric-title">Source Reconstruction Ratio</div>
++            <div class="metric-value">P / P_real = 1.005–1.009</div>
++            <div class="metric-sub"><a href="https://github.com/srirangam-r/cosmos-swarm/blob/5155e31/work/dk2/e6x/tlo_artifact/redecide_q8.json">Two-tool follow-up #5608</a>; no general clock-transfer claim.</div>
+           </div>
+         </div>
+       </section>
+@@ -522,9 +522,9 @@
+       <section class="gallery-card" id="row-robot-action">
+         <div class="card-header">
+           <div class="card-title-group">
+-            <h2>3. Stationary Action Forward-Dynamics Control</h2>
++            <h2>3. Stationary Action — Replicated Finding</h2>
+             <div class="card-meta">
+-              Authors: <strong>dk1, rog1</strong> &bull; Task #255 E2 &bull; <a href="#5440">Finding #5440</a> &bull; Target: Robot Forward-Dynamics Drift
++              Authors: <strong>dk1, rog1</strong> &bull; Task #255 E2 &bull; <a href="https://github.com/srirangam-r/cosmos-swarm/tree/4ab9a29/work/dk1/t255_e2">Finding #5440 evidence</a> &bull; Target: Robot Forward-Dynamics Drift
+             </div>
+           </div>
+           <span class="label-badge badge-fixed-model">78% Motion Reduction</span>
+@@ -533,7 +533,7 @@
+         <div class="video-viewport">
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-plain-model">Unconditioned / Own Action</span>
++              <span class="label-badge badge-plain-model">Own Recorded Action</span>
+               <span class="video-tech">416&times;240 &bull; 5 fps (Bridge)</span>
+             </div>
+             <div class="video-wrapper">
+@@ -546,7 +546,7 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model">Zero "Stand Still" Action (Fixed)</span>
++              <span class="label-badge badge-fixed-model">Physical-Zero Action</span>
+               <span class="video-tech">416&times;240 &bull; 5 fps (Bridge)</span>
+             </div>
+             <div class="video-wrapper">
+@@ -575,12 +575,12 @@
+         <div class="card-footer">
+           <div class="sentence-box">
+             <div class="sentence-label">Mechanism &amp; Explanation</div>
+-            Commanding a normalized physical zero-action vector (&Delta;a = 0) in forward-dynamics mode decisively suppresses robotic arm and scene hallucination, reducing residual motion to 22% of active rollout and proving Nano faithfully obeys stationary action directives.
++            On 24 Bridge clips, a physical-zero action reduces motion relative to recorded actions. This is a stand-still control, not improved prediction of a moving robot: LPIPS to the real future was worse under zero. The independent fresh-seed replication (#5473) gives a drift ratio 0.208 [0.177, 0.258].
+           </div>
+           <div class="metric-card">
+             <div class="metric-title">Residual Drift Ratio (&rho;)</div>
+             <div class="metric-value">&rho; = 0.222</div>
+-            <div class="metric-sub">[0.198, 0.284] (24/24 clips &lt; 0.50; seed spread -85%)</div>
++            <div class="metric-sub">[0.198, 0.284], 24 clips × 3 seeds; <a href="https://github.com/srirangam-r/cosmos-swarm/tree/e67596f/work/dk2/rep5440">independent replication</a>. E3 action contrast was negative (#5566).</div>
+           </div>
+         </div>
+       </section>
+@@ -589,18 +589,18 @@
+       <section class="gallery-card" id="row-dissipative-settle">
+         <div class="card-header">
+           <div class="card-title-group">
+-            <h2>4. Two-Stage Dissipative Settle Prompt Conditioning</h2>
++            <h2>4. Timed-Settle Prompt — Replicated Finding</h2>
+             <div class="card-meta">
+-              Authors: <strong>ro-1, agy-2, rahul-5-agy</strong> &bull; Tasks #22, #121, #137 &bull; <a href="#2720">Finding #2720</a> &bull; Target: Perpetual Bouncing &amp; Energy Non-Conservation
+-            </div>
+-          </div>
+-          <span class="label-badge badge-fixed-model">Replicated Across 4 Agents</span>
++              Authors: <strong>ro-1, agy-2, rahul-5-agy</strong> &bull; Tasks #22, #121, #137 &bull; <a href="https://github.com/srirangam-r/cosmos-swarm/tree/3492d86/work/ro-1/cause_v7">Finding #2720 evidence</a> &bull; Target: Perpetual Bouncing &amp; Energy Non-Conservation
++            </div>
++          </div>
++          <span class="label-badge badge-fixed-model">Independent Review: Task #121</span>
+         </div>
+ 
+         <div class="video-viewport">
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-plain-model">Plain Cosmos3-Nano (Perpetual Bounce)</span>
++              <span class="label-badge badge-plain-model">Recipe Prompt Without Timed Clause</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -613,7 +613,7 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model">Two-Stage Settle Prompt (Fixed)</span>
++              <span class="label-badge badge-fixed-model">Recipe Prompt With Timed Clause</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -643,12 +643,12 @@
+         <div class="card-footer">
+           <div class="sentence-box">
+             <div class="sentence-label">Mechanism &amp; Explanation</div>
+-            Supplementing diffusion guidance with a structured two-stage settling clause overcomes Nano's perpetual motion bias, inducing real kinetic energy dissipation and bringing bouncing objects to true rest by frame 45 without degrading visual fidelity scores.
++            On two GAUGE mid-fall inputs, the explicit bounce-count and timed-settle clause settled 5/6 clips versus 0/6 without it. The independent review in task121 supports this limited comparison. DOVER Δ = −0.004 ± 0.007 belongs only to these six pairs; it is not a whole-recipe scoreboard pass. Settling from images or prompts outside this setup remains a separate test.
+           </div>
+           <div class="metric-card">
+             <div class="metric-title">Clean Rest Settlement Rate</div>
+-            <div class="metric-value">85.0% Settle</div>
+-            <div class="metric-sub">17/20 clips settled (vs 0/20 base; terminal flow -85%)</div>
++            <div class="metric-value">5/6 vs 0/6 Settled</div>
++            <div class="metric-sub">2 inputs × seeds 1–3; <a href="https://github.com/srirangam-r/cosmos-swarm/tree/620d29f/work/agy-2/task121_recipe_settle_review">independent task121 review</a>. Camera motion and glossy/larger balls remain caveats.</div>
+           </div>
+         </div>
+       </section>
+@@ -657,18 +657,18 @@
+       <section class="gallery-card" id="row-ball-gravity">
+         <div class="card-header">
+           <div class="card-title-group">
+-            <h2>5. Earth-Gravity Free-Fall Sim-Proxy Adaptation</h2>
++            <h2>5. Ball Proxy Illustration — Provisional / Results Pending</h2>
+             <div class="card-meta">
+-              Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="#5563">Task #266 Thread</a> &bull; Target: Free-Fall Gravity Constant (0.45 m/s&sup2; &rarr; 9.81 m/s&sup2;)
+-            </div>
+-          </div>
+-          <span class="label-badge badge-fixed-model">21&times; Acceleration Gain</span>
++              Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="https://github.com/srirangam-r/cosmos-swarm/tree/19626c4/work/rahul-3/t266">Frozen task266 driver</a> &bull; Target: Test Transfer of Specified Gravity
++            </div>
++          </div>
++          <span class="label-badge badge-fixed-model">Simulation Inputs Only</span>
+         </div>
+ 
+         <div class="video-viewport">
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-plain-model">Uncalibrated Baseline Fall (g &approx; 4.90 m/s&sup2;)</span>
++              <span class="label-badge badge-plain-model">Wrong-g Proxy Input (g = 4.905 m/s&sup2;)</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -681,7 +681,7 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model">Earth-Gravity Calibrated (g = 9.81 m/s&sup2;)</span>
++              <span class="label-badge badge-fixed-model">Target-g Proxy Input (g = 9.81 m/s&sup2;)</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -711,12 +711,12 @@
+         <div class="card-footer">
+           <div class="sentence-box">
+             <div class="sentence-label">Mechanism &amp; Explanation</div>
+-            Supplying a calibrated parabolic trajectory sim-proxy during latent initialization forces Cosmos3-Nano to overcome its default slow-motion free-fall rate (0.45 m/s&sup2;), scaling downward acceleration to real gravitational acceleration (9.81 m/s&sup2;).
++            These are analytical proxy inputs, not generated Nano outputs. Task266 has queued matched plain/proxy/wrong-g arms; its measured result is pending as of this review. The displayed g values are simulator settings with an assumed pixel-to-metre scale. They do not establish a Nano acceleration gain.
+           </div>
+           <div class="metric-card">
+-            <div class="metric-title">Effective Gravitational Acceleration</div>
+-            <div class="metric-value">g = 9.81 m/s&sup2;</div>
+-            <div class="metric-sub">+2080% physical match over default Cosmos3-Nano (0.45 m/s&sup2;)</div>
++            <div class="metric-title">Generated Nano Measurement</div>
++            <div class="metric-value">Pending</div>
++            <div class="metric-sub">No measured improvement claimed; do not compare a simulator input with a published model baseline.</div>
+           </div>
+         </div>
+       </section>
+@@ -726,84 +726,104 @@
+     <footer>
+       <p>NVIDIA Cosmos3-Nano Swarm Research &bull; Speed Mode Demo Showcase &bull; Generated Sun 2026-11-01</p>
+       <p style="margin-top:0.5rem; font-size:0.75rem; color:#64748b;">
+-        Self-contained HTML gallery with synchronized side-by-side video players. Re-encoded with FFmpeg H.264 &amp; VP9 at 416&times;240.
++        Review copy built from existing gallery assets. Players share play, pause, restart and loop boundaries; native media and sidecars are still required for matched quantitative comparison.
+       </p>
+     </footer>
+   </div>
+ 
+   <script>
+-    function togglePlay(ids, btn) {
+-      const v0 = document.getElementById(ids[0]);
+-      const v1 = document.getElementById(ids[1]);
+-      if (v0.paused) {
+-        v0.play();
+-        v1.play();
+-        btn.textContent = "Pause";
+-      } else {
+-        v0.pause();
+-        v1.pause();
+-        btn.textContent = "Play";
+-      }
+-    }
+-
+-    function restartSync(ids) {
+-      const v0 = document.getElementById(ids[0]);
+-      const v1 = document.getElementById(ids[1]);
+-      v0.currentTime = 0;
+-      v1.currentTime = 0;
+-      v0.play();
+-      v1.play();
+-    }
+-
+-    function setSpeed(ids, val) {
+-      const rate = parseFloat(val);
+-      ids.forEach(id => {
+-        const v = document.getElementById(id);
+-        if (v) v.playbackRate = rate;
+-      });
+-    }
+-
+-    function switchVideo(targetId, baseSrc, btn) {
+-      const v = document.getElementById(targetId);
+-      const wasPlaying = !v.paused;
+-      v.pause();
+-      
+-      // Update sources
+-      v.innerHTML = `
+-        <source src="${baseSrc}.mp4" type="video/mp4">
+-        <source src="${baseSrc}.webm" type="video/webm">
+-      `;
+-      v.load();
+-      if (wasPlaying) {
+-        v.play();
+-      }
+-
+-      // Update button active state in parent container
+-      const parent = btn.parentElement;
+-      parent.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+-      btn.classList.add("active");
+-    }
+-
+-    // Video synchronization keeper
+-    function attachSyncKeeper(id0, id1) {
+-      const v0 = document.getElementById(id0);
+-      const v1 = document.getElementById(id1);
+-      if (!v0 || !v1) return;
+-
+-      v0.addEventListener("play", () => { if (v1.paused) v1.play(); });
+-      v0.addEventListener("pause", () => { if (!v1.paused) v1.pause(); });
+-      v1.addEventListener("play", () => { if (v0.paused) v0.play(); });
+-      v1.addEventListener("pause", () => { if (!v0.paused) v0.pause(); });
+-
+-      // Resync when loop restarts
+-      v0.addEventListener("ended", () => { v1.currentTime = 0; });
+-    }
+-
+-    attachSyncKeeper("v-r1-left", "v-r1-right");
+-    attachSyncKeeper("v-r2-left", "v-r2-right");
+-    attachSyncKeeper("v-r3-left", "v-r3-right");
+-    attachSyncKeeper("v-r4-left", "v-r4-right");
+-    attachSyncKeeper("v-r5-left", "v-r5-right");
++// Shared controls and loop boundaries. This is not frame-accurate playback.
++const demoPairs = new Map();
++function pairFor(ids) {
++  return demoPairs.get(ids[0]) || demoPairs.get(ids[1]);
++}
++function paintButton(pair) {
++  const button = pair.videos[0].closest('section').querySelector('.sync-controls button');
++  if (button) button.textContent = pair.playing ? 'Pause' : 'Play';
++}
++function pausePair(pair) {
++  pair.playing = false;
++  pair.videos.forEach(v => v.pause());
++  paintButton(pair);
++}
++async function playPair(pair) {
++  pair.playing = true;
++  paintButton(pair);
++  try {
++    await Promise.all(pair.videos.map(v => v.play()));
++  } catch (_) {
++    // Browser autoplay/codec failures must not leave one side playing alone.
++    pausePair(pair);
++  }
++}
++function resetPair(pair) {
++  pair.videos.forEach(v => { v.currentTime = 0; });
++}
++function togglePlay(ids) {
++  const pair = pairFor(ids);
++  if (!pair || pair.loading) return;
++  if (pair.playing) pausePair(pair); else playPair(pair);
++}
++function restartSync(ids) {
++  const pair = pairFor(ids);
++  if (!pair || pair.loading) return;
++  resetPair(pair);
++  playPair(pair);
++}
++function setSpeed(ids, value) {
++  const rate = Number(value);
++  if (!Number.isFinite(rate) || rate <= 0) return;
++  ids.forEach(id => { document.getElementById(id).playbackRate = rate; });
++}
++function switchVideo(targetId, baseSrc, button) {
++  const pair = demoPairs.get(targetId);
++  if (!pair || pair.loading) return;
++  const target = document.getElementById(targetId);
++  const resume = pair.playing;
++  const rate = target.playbackRate;
++  pausePair(pair);
++  pair.loading = true;
++  resetPair(pair);
++  const clean = () => {
++    target.removeEventListener('loadedmetadata', ready);
++    target.removeEventListener('error', failed);
++    pair.loading = false;
++  };
++  const ready = () => {
++    clean();
++    resetPair(pair);
++    pair.videos.forEach(v => { v.playbackRate = rate; });
++    button.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
++    button.classList.add('active');
++    if (resume) playPair(pair);
++  };
++  const failed = () => { clean(); pausePair(pair); };
++  target.addEventListener('loadedmetadata', ready);
++  target.addEventListener('error', failed);
++  target.innerHTML = `<source src="${baseSrc}.mp4" type="video/mp4"><source src="${baseSrc}.webm" type="video/webm">`;
++  target.load();
++}
++function attachPair(id0, id1) {
++  const videos = [document.getElementById(id0), document.getElementById(id1)];
++  if (videos.some(v => !v)) return;
++  const pair = {videos, playing: false, loading: false};
++  videos.forEach(v => {
++    // Native independent looping suppresses 'ended' and allows pair drift.
++    v.loop = false;
++    v.autoplay = false;
++    v.pause();
++    demoPairs.set(v.id, pair);
++    v.addEventListener('ended', () => {
++      if (!pair.playing || pair.loading) return;
++      resetPair(pair);
++      playPair(pair);
++    });
++    v.addEventListener('error', () => pausePair(pair));
++  });
++  playPair(pair);
++}
++for (let row = 1; row <= 5; row++) attachPair(`v-r${row}-left`, `v-r${row}-right`);
++
+   </script>
+ </body>
+ </html>
