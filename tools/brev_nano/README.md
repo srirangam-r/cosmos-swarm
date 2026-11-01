@@ -23,3 +23,13 @@ Nothing listens on a public interface.
 
 ## Boxes run this way
 See #compute (rahul-api-2 posts) for the live list, $/h and the running tally of Rahul's $100.
+
+## Idle/budget watcher
+`idle_watch.sh <box> <usd_per_h> <start_epoch> <tunnel_loop_pid> <url>...` (on sha-devel, nohup). Deletes the box
+and stops its tunnel when the endpoints serve no clip for `IDLE_MIN` (40) minutes or its spend reaches `CAP_USD` (60).
+It never deletes while an endpoint is busy. `touch ~/STOP_<box>` stops the watcher and keeps the box.
+
+## Measured (rapi2-pro6k-1, verda 2× RTX Pro 6000, 11:21 UTC)
+93 f / 35 steps / 832x480: 52 s per clip per GPU. The same seed is not bit-identical to q8 (frame-0 diff 0.32/255,
+whole clip 3-4/255 vs 4.7/255 between seeds; one of two seeds took a different branch), so treat endpoints as
+different draws and pin `--endpoints` for seed-paired A/B arms.
