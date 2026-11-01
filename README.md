@@ -13,8 +13,9 @@ GAUGE (arXiv:2608.05948) evaluated NVIDIA Cosmos3-Nano on real robotic drop scen
 Through multi-agent investigation across decentralized hardware nodes, referee-validated measurement tools, and matched controls, the swarm uncovered the underlying causal architecture:
 1. **Cosmos3-Nano does not have a "slow clock"**: Temporal RoPE spacing and text FPS conditioning exhibit strict $k = 1.000$ fixed-stride invariance (Finding #1448).
 2. **The 0.45 m/s² Free-Fall Anomaly is a Mechanical Grasp Deadlock**: Initialized from a static robotic gripper holding a ball at frame 0, Nano exhibits a **0.0% release rate (0/31 baseline rollouts)**. Constrained by web curation filters that excised static scenes (Cosmos 3 Tech Report §3.2.1), the diffusion backbone never learned topological detachment from a static grasp. Instead, it bifurcates into unphysical phantom duplicate cloning (100% on seed 1), downward arm plunging, or multi-second hovering. Automated ball trackers tracked these failure centroids, fitting the artifactual $0.45\text{ m/s}^2$.
-3. **Synthetic Fine-Tuning and Inference Tweaks Fail**: Supervised LoRA fine-tuning on 1,000 synthetic drops (`sim_drop v1`) yielded a **0.0% release rate across 66 blinded clips (Task 24/69, Finding #1661)**. CFG scale sweeps produced a mid-air levitation attractor at $\le 2.5$ (Finding #1721), while flow shift tuning induced phantom relaunches from rest.
-4. **The Solution: Dynamic Mid-Event Conditioning (The Detached-State Recipe)**: Bypassing the unphysical static holding seam by advancing conditioning $1\text{--}3$ frames post-release recovers Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$, $R^2 = 0.998$), achieves 100% release (16/16 clips), extinguishes phantom duplicates (0% vs 100%), and boosts NVIDIA Motion Fidelity by +60% with zero degradation on DOVER Technical.
+3. **Synthetic Fine-Tuning and Inference Tweaks Fail**: Supervised LoRA fine-tuning on 1,000 synthetic drops (`sim_drop v1`) yielded a **0.0% release rate across 66 blinded clips (Task 24/69, Finding #1661)**. CFG scale sweeps produced a mid-air levitation attractor at $\le 2.5$ (Finding #1721), while flow shift tuning is an operational no-op on the diffusers schedule (Task 75).
+4. **Architectural Mechanism — Contact Transitions vs Free Flight (Human Steering #1950)**: Free flight operates near true constants ($g \approx 8\text{--}10\text{ m/s}^2$). The fundamental failures are all **contact transitions** (gripper release, bounce dissipation, friction ceilings). The DiT operates at $\approx 6\text{ Hz}$ on 4x temporal latents where impacts are sub-latent, and bidirectional attention with relative RoPE favors time-stationary limit cycles ($e_T \approx 1.0$).
+5. **The Solution: Dynamic Mid-Event Conditioning (The Detached-State Recipe)**: Bypassing the static holding seam by advancing conditioning $1\text{--}3$ frames post-release recovers Earth gravity ($g = 9.73 \pm 1.91\text{ m/s}^2$ on Ball 1 Seed 1, $R^2 = 0.998$), achieves 100% initial detachment (16/16 clips), extinguishes phantom duplicates (0% vs 100%), and boosts NVIDIA Motion Fidelity by +60% with no detectable degradation on DOVER Technical. Status is **provisional** per human steering #1825 (whether mid-event conditioning qualifies as a fix is a human decision; qualified on kinematic onset and full-clip visual QC).
 
 ---
 
@@ -22,9 +23,9 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 
 | Deliverable | Authoritative Report | Code / Tools | Key Empirical Outcomes |
 | :--- | :--- | :--- | :--- |
-| **Deliverable 1: The Improved Nano Recipe** | [`reports/deliverable_1_improved_nano_recipe.md`](reports/deliverable_1_improved_nano_recipe.md)<br>*(Sibling: [`deliverable_1_recipe.md`](reports/deliverable_1_recipe.md))* | [`tools/recipe/run_recipe.py`](tools/recipe/run_recipe.py)<br>[`tools/recipe_detached_state/run_recipe.py`](tools/recipe_detached_state/run_recipe.py) | **Detached-State Dynamics Protocol**: Restores true Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$); release rate increases from $0.0\% \to 100.0\%$; phantom duplicates eliminated ($100\% \to 0\%$); runnable CLI script supporting diffusers and vLLM. |
+| **Deliverable 1: The Improved Nano Recipe** | [`reports/deliverable_1_improved_nano_recipe.md`](reports/deliverable_1_improved_nano_recipe.md)<br>*(Consolidated per #1825)* | [`tools/recipe/run_recipe.py`](tools/recipe/run_recipe.py) | **Detached-State Dynamics Protocol**: Restores true Earth gravity ($g = 9.73 \pm 1.91\text{ m/s}^2$ on Ball 1 Seed 1); initial release rate increases from $0.0\% \to 100.0\%$; phantom duplicates eliminated ($100\% \to 0\%$); turnkey CLI script supporting diffusers and vLLM. |
 | **Deliverable 2: What Was Wrong and Why** | [`reports/deliverable_2_what_was_wrong_and_why.md`](reports/deliverable_2_what_was_wrong_and_why.md) | Multi-agent diagnostic scripts in `work/` | **8 Replicated Findings with Causal Mechanisms**: (1) Gripper Release Deadlock; (2) Mid-Event Gravity Recovery; (3) Perpetual Limit Cycles vs VAE Representational Sufficiency; (4) Anomalous Energy Creation ($5.8\times$ gain); (5) RoPE/FPS Invariance; (6) Slope Terminal Speed Ceilings; (7) Pendulum Bob Bifurcation; (8) Ballistic LoRA Sim-to-Real Failure (0/66 release). |
-| **Deliverable 3: Before/After on Both Scoreboards** | [`reports/deliverable_3_before_after_scoreboards.md`](reports/deliverable_3_before_after_scoreboards.md) | [`tools/nv_scoreboard/score.py`](tools/nv_scoreboard/score.py)<br>[`tools/realball/firstfall.py`](tools/realball/firstfall.py) | **Dual Scoreboard Master Synthesis (Dev Sets)**: Physics Scoreboard: $g = -0.19 \to 9.73\text{ m/s}^2$, release $0\% \to 100\%$; NVIDIA Scoreboard: DOVER Technical $+0.0012$ (zero drop), DOVER Fused corrected $-0.0114 \pm 0.0060$ (within seed noise), Motion Fidelity $+60.0\%$ to $+300\%$ (16/16 seed triplets gain), DROID robot prediction $+3.06\text{ dB}$ PSNR. |
+| **Deliverable 3: Before/After on Both Scoreboards** | [`reports/deliverable_3_before_after_scoreboards.md`](reports/deliverable_3_before_after_scoreboards.md) | [`tools/nv_scoreboard/score.py`](tools/nv_scoreboard/score.py)<br>[`tools/realball/firstfall.py`](tools/realball/firstfall.py) | **Dual Scoreboard Master Synthesis (Dev Sets)**: Physics Scoreboard: $g = -0.19 \to 9.73\text{ m/s}^2$, release $0\% \to 100\%$; NVIDIA Scoreboard: DOVER Technical $+0.0012$ (no detectable drop), DOVER Fused raw 95% LB $-0.0275$ (corrected $-0.0114 \pm 0.0060$ within seed noise), Motion Fidelity $+60.0\%$ to $+300\%$ (16/16 triplets gain), DROID robot prediction $+3.06\text{ dB}$ PSNR. |
 
 ---
 
@@ -36,14 +37,14 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
    Scoreboard / Metric        Baseline (Stock)       Recipe Fix (Mid-Event)   Ground Truth / Status
   ──────────────────────────────────────────────────────────────────────────────────────────────────
    Physics: Release Rate      0.0% (0/31 clips) ──►  100.0% (16/16 clips)     100.0% Real Mocap
-   Physics: Free-Fall g       -0.19 m/s² (held) ──►  9.73 ± 1.91 m/s²         9.81 m/s² Earth g
+   Physics: Free-Fall g       -0.19 m/s² (held) ──►  9.73 ± 1.91 m/s²         9.81 m/s² Earth g (B1S1)
    Physics: Clone Spawning    100.0% (Seed 1)   ──►  0.0% (Extinguished)     0.0% Single Identity
    Physics: Pendulum Period   3.77 s (bifurc)   ──►  2.65 s (single bob)      1.05 s Mocap
-   NVIDIA: DOVER Technical   -0.0407           ──► -0.0395 (+0.0012)         Zero degradation
+   NVIDIA: DOVER Technical   -0.0407           ──► -0.0395 (+0.0012)         No detectable drop (n.s.)
    NVIDIA: DOVER Fused        0.5645           ──►  0.5482 (-0.0114 corr)    Within seed noise (σ=0.03)
    NVIDIA: Motion Fidelity    0.1389           ──►  0.2222 (+60.0% gain)     16/16 Triplets Superior
    NVIDIA: Dynamic Degree     0.875 (Arm flail) ──►  0.375 (-0.500 drop)      Collapses spurious flow
-   NVIDIA: Plausibility Judge 0.6583 (Neutral)  ──►  0.6565 (PREREG A3)       PASS non-inferior (δ=0.03)
+   NVIDIA: Plausibility Judge 0.6583 (Neutral)  ──►  0.6565 (PREREG A3)       Non-inferior (No-reg check)
    NVIDIA: Robot Wrist PSNR   15.96 dB (Frozen) ──►  19.02 dB (Gen future)    +3.06 dB (7/7 better)
   ──────────────────────────────────────────────────────────────────────────────────────────────────
 ```
@@ -70,8 +71,8 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | **Pillar 2: Dynamic Degree Norm** | flow | $7.642 \pm 1.392$ | Not run | **$5.645 \pm 1.548$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-1.997 \pm 2.054$ ($26\%$ drop) |
 | **Pillar 2: Motion Fidelity (MF)** | score | $0.1389$ (mean $0.104$) | Not run | **$0.2222$ (mean $0.316$)**| $1.000$ (Ideal) | $0.083$ | **$+60.0\%$ (16/16 triplets gain)** |
 | **Pillar 2: Motion Control (MC)** | penalty | $0.1667$ (mean $0.125$) | Not run | **$0.6667$ (mean $0.500$)**| $0.000$ (Ideal) | $0.125$ | Variance penalty (3/4 seeds still) |
-| **Pillar 3: HUE Overall Plausibility**| score | $0.6583 \pm 0.0063$ | Not run | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; PASS vs $\delta=0.030$)** |
-| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | Not run | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; PASS vs $\delta=0.040$)** |
+| **Pillar 3: HUE Overall Plausibility**| score | $0.6583 \pm 0.0063$ | Not run | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; Non-inferior vs $\delta=0.030$; Qwen3-VL-2B no-regression check #1871)** |
+| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | Not run | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; Non-inferior vs $\delta=0.040$; Qwen3-VL-2B no-regression check #1871)** |
 | **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | Preserved | Real Future | $0.013$ | **$-0.0645 \pm 0.0179$ vs frozen** |
 | **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | Preserved | Real Future | $1.10$ | **$+3.06 \pm 0.64\text{ dB}$ vs frozen** |
 
