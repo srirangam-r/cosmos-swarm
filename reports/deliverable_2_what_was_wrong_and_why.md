@@ -20,7 +20,7 @@ Through exhaustive multi-agent experiments across independent hardware stacks, r
 5. **Anomalous Energy Creation & Limit Cycles**: On low drop heights ($5.3\text{ cm}$), Nano exhibits anomalous energy creation, rebounding to a $30.8\text{ cm}$ apex (**$+580\%$ height increase**, apparent $e_v = 2.41$), or freezing in a proximity-induced levitation attractor (66.7% rate), proving that Nano operates as a kinematic pattern generator with a preferred limit-cycle amplitude and period ($\approx 0.33\text{ s}$) rather than an energy-conserving physical simulator.
 6. **Temporal Conditioning is Invariant (FPS is Not a Clock)**: Neither prompt text ("12 FPS" vs "24 FPS") nor RoPE positional temporal spacing ($fps \in \{6, 12, 24\}$) acts as a physical clock ($k = 1.000$ fixed stride). Halving RoPE fps triggers catastrophic late-frame hallucinations (duplicate balls, arm swings, 100% anomaly rate at RoPE 6).
 7. **Terminal Velocity Ceilings**: On 30° slopes across materials, Nano does not integrate Newton-Coulomb acceleration ($a \approx 2.57\text{ m/s}^2$); instead, it glides at a constant terminal velocity ceiling ($v \le 0.40\text{ m/s}$ on plastic, $v \le 0.70\text{ m/s}$ on wood), exhibiting zero quadratic acceleration on 189-frame rollouts ($a = 0.00 \pm 0.01\text{ m/s}^2$).
-8. **Sim-to-Real Generalization Failure of Synthetic SFT (LoRA)**: Adapting Nano via Low-Rank Adaptation (LoRA rank 16 on `moe_gen`, 300 iterations) on 1,000 synthetic ball drops (`sim_drop v1`) completely fails to induce gravitational release on real Franka gripper conditioning frames (**0/66 releases, 0.0% release rate** across Base, real-$g$ LoRA A, wrong-$g$ LoRA B, and no-decay LoRA C). In $90.9\%$ of clips the ball remains bit-identically clamped in the gripper jaws, proving that ballistic-only synthetic SFT cannot overcome the DiT's visual conditioning prior.
+8. **Sim-to-Real Generalization of Synthetic SFT (LoRA) & Scoreboard Regressions**: An initial report that synthetic ballistic LoRA failed to release on 0/66 clips (Finding #1661) was refuted by ro-1 (#2211, #2200): automated trackers tracked blank wall at (281, 119) because the evaluation clips used a robot-free frame with ball at (529, 46). Re-coding shows the ball falls in 72/84 clips (53/84 clean falls, though 28 clips suffer physical hallucinations). However, synthetic LoRA is decisively refuted as a shippable fix on NVIDIA's scoreboard benchmarks: real-physics LoRA Arm A causes severe, statistically resolved regressions on DOVER Fused (−0.0767 ± 0.0211) and HUE Plausibility (−0.0280 ± 0.0090 overall, −0.0347 ± 0.0142 physical laws), while cutting motion by 55% (dd_norm −4.3 ± 1.2), failing the charter's no-regression mandate (#2168, #2201).
 
 ---
 
@@ -38,7 +38,7 @@ The table below contrasts physical reality against Cosmos3-Nano's stock behavior
 | **Bounces to Complete Rest** | $4\text{--}5$ bounces | N/A | $4\text{--}5$ bounces | $>25$ bounces (Undamped) |
 | **Time to Complete Rest** | $1.40\text{--}2.60\text{ s}$ | Never Settles | $2.55\text{--}2.61\text{ s}$ | $>7.9\text{ s}$ (100% Active) |
 | **Impact Timing Paired Discrepancy** | Zero (Self) | N/A | **$3.76 \pm 2.75\text{ ms}$** (detected tracks) | N/A |
-| **SFT Synthetic LoRA Release Rate** | $100\%$ | $0.0\%$ ($0/16$ base) | N/A | **$0.0\%$ ($0/66$ blinded clips)** |
+| **SFT Synthetic LoRA Falling Rate** | $100\%$ | $0.0\%$ ($0/16$ base) | N/A | **$85.7\%$ ($72/84$ clips fall; 0/66 refuted #2211)** |
 | **Low Drop Energy ($5.3\text{ cm}$)** | Dissipates in $<0.3\text{ s}$ | N/A | Dissipates in $<0.3\text{ s}$ | **$+580\%$ Energy Gain** |
 | **FPS RoPE Time Scaling $k$** | $k = 2.0\text{ (12 fps)}$ | $k = 1.000$ (Stride Invariant) | N/A | $k = 1.000$ |
 | **Plastic Slope Slide** | $a = 2.57\text{ m/s}^2$ | $v \le 0.402\text{ m/s}$ ($a = 0$) | $a = 2.57\text{ m/s}^2$ | $v \le 0.402\text{ m/s}$ ($a = 0$) |
@@ -208,27 +208,32 @@ FINDING: Cosmos3-Nano dilates the pendulum period by 2.25× to 3.59× (measured 
 
 ---
 
-### Finding 8: Sim-to-Real Generalization Failure of Ballistic Fine-Tuning (Task 24 LoRA Blind Audit)
+### Finding 8: Sim-to-Real Generalization of Ballistic Fine-Tuning & Retraction of '0/66 Release' Artifact (Task 24 Audit)
 
 ```
-FINDING: Fine-tuning Cosmos3-Nano on 1,000 synthetic ball drops (sim_drop LoRA) completely fails to induce gravitational object release from real GAUGE held-ball frames across all blinded arms (release rate 0.0%, 0/66 clips).
+FINDING: Synthetic ballistic fine-tuning (Task 24 LoRA) does not produce bit-level immobility on robot-free frames (72/84 balls fall, refuting the automated '0/66 release' artifact; ro-1 #2211), but fails to generalize clean physics (28/84 hallucination artifacts) and severely degrades visual quality and plausibility on NVIDIA's official scoreboard (DOVER fused drop -0.077 ± 0.021, motion cut by 55%, HUE plausibility drop -0.028 ± 0.012; rog-cc #2168, #2201).
 ```
 
 - **Quantitative Value**:
-  - Genuine Gravitational Release Rate: **$0.0\%$ ($0 / 66\text{ clips}$)**; 95% Wilson binomial CI: **$[0.0\%, 5.4\%]$** across blinded Base, LoRA Arm A (real $g=9.81$), LoRA Arm B (wrong $g \sim U(1.5, 4.0)$ control), and LoRA Arm C (no-decay $e \sim U(0.95, 0.99)$ control).
-  - Behavioral Breakdown across all 66 clips:
-    - `held_frozen`: **$60 / 66$ ($90.9\%$)** — ball remains bit-identical static in gripper jaws ($y \approx 119 \pm 2\text{ px}$; gripper diff $<3.5\text{ gray levels}$, corridor/plank diff $<5.0$).
-    - `held_minor_noise`: **$3 / 66$ ($4.5\%$)** (`213cda`, `714e0d`, `f2abd9`) — minor background latent flicker, ball remains trapped in gripper.
-    - `phantom_duplicate`: **$2 / 66$ ($3.0\%$)** (`808ef1` and `f690ef`) — ball remains clamped in gripper while an unphysical clone ball spawns on the plank ($y \approx 365$, plank diff up to $55.5$).
-    - `gripper_arm_twitch`: **$1 / 66$ ($1.5\%$)** (`c99152`) — mechanical gripper base twitches $\approx 50\text{ px}$ vertically at f30–45, but fingers never open and ball returns to rest in gripper at f92 (end gripper diff $1.33$).
-  - First-Fall $g$ & Bounce Restitution $e_T$: **Undefined** across all 66 clips due to zero free-fall releases.
-  - At Rest at Frame 92: **$66 / 66$ ($100.0\%$)** at rest (ball statically trapped in gripper).
-- **Setup**: `nvidia/Cosmos3-Nano` (Base & LoRA A/B/C, rank 16, alpha 32 on `q/k/v/o_moe_gen`, 300 iterations, H100 PCIe), $832\times 480$, $93\text{ frames}$, $24\text{ fps}$, 35 steps, guidance 6.0, flow shift 10, official GAUGE bouncing-ball frame 0, no negative prompt.
-- **Method**: Dual independent blind evaluation: frozen `gauge_blind.py` (commit `6a68264`, bclock `3cde5a0351a0`, referee PASS msg 593) and independent multi-ROI motion profiling & 24-panel contact sheets.
-- **Control**: Matched comparison across Base, LoRA A (real $g$), LoRA B (wrong $g$ control), and LoRA C (no-decay control) on identical seeds (1–16) and prompts.
-- **Replication History**:
-  - Finding `#1661` (agy-2, commit `0d0fbf3`, Task 69), evaluating clips generated in Task 24 (`#496`, `#582`, `#613`, `#776`, `#874`, rahul-3).
-- **Causal Mechanism**: Supervised fine-tuning on synthetic ballistic drops (`sim_drop v1`) trains the model on balls already falling or releasing from simple geometric hands on synthetic backgrounds. However, it fails to bridge the sim-to-real gap to complex real-world robotic manipulators (the Franka Emika Panda gripper). The pre-trained DiT's visual conditioning prior firmly anchors the ball to the gripper geometry via spatial self-attention, treating the ball as an immutable part of the static manipulator assembly.
+  - *Retraction of '0/66 Release' Claim (ro-1 Review `#2211`, Status `#2200`)*: Finding `#1661` originally reported that 60/66 clips were bit-frozen in gripper jaws. In Review `#2211`, ro-1 discovered that `gauge_blind v1.1` and agy-2's Task 69 evaluator tracked `SEED (281, 119)`—the Franka gripper coordinates on the official GAUGE frame. The Task 24 eval clips, however, started from a robot-free image with a black ball against a white wall at `(529, 46)`. The trackers monitored blank wall, creating the artifactual "0/66 release" result.
+  - *Blind Visual Re-Code of all 84 Eval Clips (ro-1 `#2211`, commit `682e5e6`)*:
+    - Falling rate: The ball detaches from its f0 position and falls in **$72 / 84$ ($85.7\%$)** clips.
+    - Clean falls: **$53 / 84$ ($63.1\%$)** are clean falls to the plank without structural artifacts ($43$ settle to rest by frame 92, $10$ remain in the air).
+    - Hallucinations / Physical Artifacts: Present in **$28 / 84$ ($33.3\%$)** clips (8 ball size jumps, 8 duplicate clone balls, 5 tether/pendulum bifurcations, 3 re-spawns at top, 2 plank morphs into ramps, 3 frozen in place).
+    - Quantitative Acceleration ($g$): Retained as **OPEN** because pixel-to-meter scaling for this uncalibrated robot-free view is unestablished.
+  - *DOVER Blindness to Physics Hallucinations (rog-cc Finding `#2249`, commit `a5d291e`)*:
+    - On the 84 Task 24 GAUGE-eval clips, DOVER does not penalize physical hallucinations: clips with duplicate balls, size jumps, or tethers score slightly HIGHER than clean falls (DOVER Fused $0.328$ vs $0.304$, $\Delta = -0.024 \; [-0.038, -0.011]$, $\text{AUC} = 0.25$).
+    - VBench Dynamic Degree rewards the energy-keeping bounce ($dd_{\text{norm}} = 2.56$ for balls in air vs $1.33$ for settled balls, $\Delta = -1.23$).
+  - *NVIDIA Scoreboard Regressions on Standard T2V Dev Prompts (rog-cc Status `#2168`, `#2201`, commits `1527bbf`, `d01c9a4`)*:
+    - **DOVER Fused (3 draws)**: Drops by **$-0.0767 \pm 0.0211$** ($df=15$, CI90 $[-0.114, -0.040]$, verdict: **REGRESSION**; arm means $0.599 \to 0.523$, 4/16 prompts up).
+    - **DOVER Technical**: Drops by **$-0.0129 \pm 0.0041$** (CI90 $[-0.020, -0.006]$). Aesthetic drops by **$-0.0204 \pm 0.0063$**.
+    - **Dynamic Degree (Motion)**: Binary DD collapses $0.66 \to 0.25$ ($\Delta = -0.41 \pm 0.12$); normalized DD drops $7.89 \to 3.55$ ($\mathbf{-55\%}$ motion reduction).
+    - **Cosmos-HUE Plausibility (PREREG A3)**: Overall Plausibility drops by **$-0.0280 \pm 0.0120$** (CI90 $[-0.049, -0.007]$, significant drop beyond approved margin $\delta=0.030$); Physical Laws drops by **$-0.0347 \pm 0.0142$** (CI90 $[-0.060, -0.010]$, significant drop beyond margin $\delta=0.040$).
+    - **Physics Contrast (Arm A real-$g$ vs Arm C no-decay control)**: $\Delta_{\text{overall}} = -0.014 \pm 0.013$, $\Delta_{\text{physical}} = -0.018 \pm 0.016$, demonstrating **no detectable physical gain** from the real-physics data over the control.
+- **Setup**: `nvidia/Cosmos3-Nano` (Base, LoRA A real-$g$, LoRA B wrong-$g$, LoRA C no-decay control; rank 16, alpha 32 on `q/k/v/o_moe_gen`, 300 iterations, H100 PCIe), $832\times 480$, $93\text{ frames}$, $24\text{ fps}$, 35 steps, guidance 6.0, flow shift 10.
+- **Method**: ro-1 blind visual and dark-pixel persistence audit (`work/ro-1/task24_eye/eye_codes.csv`, commit `682e5e6`); rog-cc paired NVIDIA scoreboard and HUE plausibility judge evaluation (`work/rog-cc/hue_t24/`, commits `1527bbf`, `d01c9a4`, `a5d291e`).
+- **Control**: Matched comparisons across Base, Arm A (real $g$), Arm B (wrong $g$), and Arm C (no-decay control) on identical seeds and prompts.
+- **Causal Mechanism**: While supervised fine-tuning on synthetic drops does not freeze motion on robot-free frames, it fails to induce clean, generalizable physical laws. The LoRA overfits to synthetic ballistic trajectories, generating high rates of topological glitches (size jumps, duplicates, tethers) on real textures, while severely degrading the model's general visual quality, motion generation capacity ($-55\%$), and plausibility on out-of-distribution prompts.
 
 ---
 
@@ -249,7 +254,7 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 |                                                                                   |
 |  2. DiT Backbone Prior: CAUSAL LOCUS OF PHYSICAL GLITCHES                        |
 |     - Lacks mechanical release dynamics (0% release from stationary grip).        |
-|     - Visual conditioning anchor overrides SFT LoRA (0/66 releases, Finding 8).   |
+|     - SFT LoRA causes severe scoreboard regressions (DOVER -0.077, HUE -0.028 #2201). |
 |     - Embodies an undamped, driven-bounce prior (e_T = 0.989, Countix keepy-uppy). |
 |     - Operates on a fixed token stride (k = 1.000; ignores text & RoPE fps dials).|
 |     - Imposes preferred limit cycles (~30 cm / ~0.33 s; +580% low-drop energy).   |
@@ -269,7 +274,7 @@ Integrating the replicated evidence across all experimental axes yields a unifie
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
   - Tuning inference sampler hyperparameters (CFG scale $\in [1.0, 6.0]$ or flow shift $\in [3.0, 10.0]$): Flow shift is an operational no-op on the diffusers UniPC schedule, low CFG ($\le 2.5$) induces mid-air levitation/reversal rather than dissipation, and CFG 4–6 preserves perpetual bouncing invariant to scale (Task 71, Task 75, commit `a1fb2e3`).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
-  - Supervised LoRA fine-tuning trained only on isolated synthetic drops without manipulator grasp actuation (Finding 8 proves a 0.0% release rate; synthetic ballistic-only data cannot break the real Franka gripper visual anchor).
+  - Supervised LoRA fine-tuning trained on synthetic drops without matched general-domain regularization (Task 24 LoRA induces severe out-of-distribution visual degradation, dropping DOVER fused by $-0.077 \pm 0.021$ and HUE plausibility by $-0.028 \pm 0.012$, while physical hallucinations like size jumps and clones persist in 28/84 clips; #2168, #2201, #2211).
 - **What DOES work / Open Fix Directions**:
   - **Dynamic Conditioning**: Initializing I2V from a mid-event frame where the object is already detached (mid-fall conditioning) completely bypasses the release deadlock and restores true Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$).
   - **Visual Gripper-Opening Training Data**: To fix the release deadlock from frame 0, fine-tuning requires paired sequences of robotic grippers visibly opening, rather than synthetic balls dropping in isolation.
