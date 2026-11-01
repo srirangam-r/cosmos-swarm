@@ -235,13 +235,26 @@ FINDING: Synthetic ballistic fine-tuning (Task 24 LoRA) does not produce bit-lev
   - *DOVER Blindness to Physics Hallucinations (rog-cc Finding `#2249`, commit `a5d291e`)*:
     - On the 84 Task 24 GAUGE-eval clips, DOVER does not penalize physical hallucinations: clips with duplicate balls, size jumps, or tethers score slightly HIGHER than clean falls (DOVER Fused $0.328$ vs $0.304$, $\Delta = -0.024 \; [-0.038, -0.011]$, $\text{AUC} = 0.25$).
     - VBench Dynamic Degree rewards the energy-keeping bounce ($dd_{\text{norm}} = 2.56$ for balls in air vs $1.33$ for settled balls, $\Delta = -1.23$).
-  - *NVIDIA Scoreboard Regressions on Standard T2V Dev Prompts (rog-cc Status `#2168`, `#2201`, `#2350`, commits `1527bbf`, `d01c9a4`, `c78021f`)*:
-    - **DOVER Fused (3 draws)**: Drops by **$-0.0767 \pm 0.0211$** ($df=15$, CI90 $[-0.114, -0.040]$, verdict: **REGRESSION**; arm means $0.599 \to 0.523$, 4/16 prompts up).
-    - **DOVER Technical**: Drops by **$-0.0129 \pm 0.0041$** (CI90 $[-0.020, -0.006]$). Aesthetic drops by **$-0.0204 \pm 0.0063$**.
-    - **Dynamic Degree (Motion)**: Binary DD collapses $0.66 \to 0.25$ ($\Delta = -0.41 \pm 0.12$); normalized DD drops $7.89 \to 3.55$ ($\mathbf{-55\%}$ motion reduction).
-    - **Cosmos-HUE Plausibility (PREREG A3)**: Overall Plausibility drops by **$-0.0280 \pm 0.0120$** (CI90 $[-0.049, -0.007]$, significant drop beyond approved margin $\delta=0.030$); Physical Laws drops by **$-0.0347 \pm 0.0142$** (CI90 $[-0.060, -0.010]$, significant drop beyond margin $\delta=0.040$).
-    - **Same-Box Control vs baseL (#2350)**: Evaluating unmodified Base Nano on the exact same `rahul3-lora` box (`baseL`; commit `c78021f`) isolates the cross-box effect (`baseL - base`: $\Delta_{\text{overall}} = -0.005 \pm 0.002$, $\Delta_{\text{physical}} = -0.005 \pm 0.004$; non-inferior). In the same-box contrast (`loraA - baseL`), Arm A drops by **$-0.023 \pm 0.012$** overall (CI90 $[-0.043, -0.003]$) and **$-0.030 \pm 0.013$** on Physical Laws (CI90 $[-0.052, -0.008]$), with non-inferiority conclusively **NOT shown** vs approved margins.
-    - **Physics Contrast (Arm A real-$g$ vs Arm C no-decay control)**: $\Delta_{\text{overall}} = -0.014 \pm 0.013$, $\Delta_{\text{physical}} = -0.018 \pm 0.016$, demonstrating **no detectable physical gain** from the real-physics data over the control.
+  - *NVIDIA Scoreboard Regressions on Standard T2V Dev Prompts (rog-cc Status `#2168`, `#2201`, `#2350`, Finding `#2562`, commits `1527bbf`, `d01c9a4`, `c78021f`, `30163c9`)*:
+    - **Complete 5-Arm Evaluation Matrix (16 HUE Prompts $\times$ Seeds 1+2 averaged, commit `30163c9`, Finding `#2562`)**:
+      | Contrast | HUE Overall ($\delta = 0.03$) | HUE Physical ($\delta = 0.04$) | DOVER Fused ($\delta = 0.02$ prop.) | DD Norm ($\delta = 1.18$ prop.) |
+      | :--- | :---: | :---: | :---: | :---: |
+      | **baseL − base (box null)** | $-0.005 \pm 0.002$ (NI) | $-0.005 \pm 0.004$ (NI) | $+0.006 \pm 0.005$ (NI) | $+0.07 \pm 0.28$ (NI) |
+      | **C − base (no-decay ctl)** | $-0.014 \pm 0.007$ (NI) | $-0.017 \pm 0.006$ (NI) | $-0.048 \pm 0.020$ (sig drop) | $-1.85 \pm 0.63$ (sig drop) |
+      | **A − base (real $g$)** | $-0.028 \pm 0.012$ [−0.049, −0.007] (**NI not shown**) | $-0.035 \pm 0.014$ (**NI not shown**) | $-0.077 \pm 0.021$ (**REGRESSION**) | $-4.34 \pm 1.17$ (**REGRESSION**) |
+      | **B − base (wrong $g$)** | $-0.018 \pm 0.009$ (sig drop) | $-0.029 \pm 0.012$ (sig drop) | $-0.075 \pm 0.018$ (**REGRESSION**) | $-3.43 \pm 0.96$ (**REGRESSION**) |
+      | **A − B (only $g$ differs)** | $-0.010 \pm 0.006$ | **$-0.005 \pm 0.009$** [−0.022, +0.011] | **$-0.002 \pm 0.017$** | $-0.91 \pm 0.51$ |
+      | **A − C / B − C** | $-0.014 \pm 0.013$ / $-0.004 \pm 0.010$ | $-0.018 \pm 0.016$ / $-0.013 \pm 0.012$ | $-0.029 \pm 0.021$ / $-0.027 \pm 0.020$ | $-2.49 \pm 1.08$ / $-1.59 \pm 1.00$ |
+    - **Arm Means (HUE Overall / Physical / DOVER Fused / DD Norm / DD Binary)**:
+      - Base: $0.706$ / $0.586$ / $0.599$ / $7.89$ / $0.66$
+      - baseL (same-box): $0.701$ / $0.582$ / $0.605$ / $7.96$ / $0.66$
+      - Arm A (real $g$): $0.678$ / $0.552$ / $0.523$ / $3.55$ / $0.25$
+      - Arm B (wrong $g$): $0.688$ / $0.557$ / $0.524$ / $4.46$ / $0.47$
+      - Arm C (no decay): $0.692$ / $0.570$ / $0.551$ / $6.04$ / $0.47$
+    - **Key Findings from Complete 5-Arm Audit**:
+      1. Both Arm A and Arm B regress DOVER fused ($-0.077$ and $-0.075$) and Dynamic Degree ($-4.34$ and $-3.43$), failing scoreboard non-inferiority.
+      2. The critical physical contrast $A - B$ (where only gravity differs between real $g=9.81$ and uniform wrong $g \sim U(1.5, 4.0)$) is **indistinguishable from zero on HUE Physical ($\Delta = -0.005 \pm 0.009$) and DOVER Fused ($\Delta = -0.002 \pm 0.017$)**, proving that correct physics buys zero plausibility or visual fidelity gain.
+      3. The cross-box null (`baseL - base`) is approximately zero on every metric, confirming that the regressions are intrinsic to the fine-tuning recipe and not a host artifact. No Task-24 LoRA can be a recipe candidate.
   - *Refutation of Blank-Wall Coordinate Tracking in Replications (#2374, #2382, #2386)*:
     An attempted automated replication by agy-3 (`#2374`) claiming "0/84 releases" was refuted by rog-cc (`#2382`) and verified by rahul-5-agy (`#2386`). agy-3 hardcoded Franka coordinates $[y: 90..150, x: 260..320]$, measuring static blank wall while the ball fell at $x \approx 529$.
 - **Setup**: `nvidia/Cosmos3-Nano` (Base, LoRA A real-$g$, LoRA B wrong-$g$, LoRA C no-decay control; rank 16, alpha 32 on `q/k/v/o_moe_gen`, 300 iterations, H100 PCIe), $832\times 480$, $93\text{ frames}$, $24\text{ fps}$, 35 steps, guidance 6.0, flow shift 10.
@@ -296,35 +309,38 @@ FINDING: Prompting Cosmos3-Nano with event-script text ('released in the first m
 
 ---
 
-### Finding 11: Chained Short I2V Clips Stagnate at Seams and Fail to Induce Dissipation, Refuting Serial-Event Hypothesis (agy-4 Task 42 Finding #2407, Task 104 Replication)
+### Finding 11: Chained Short I2V Clips Fail to Induce Dissipation, Refuting Serial-Event Hypothesis (agy-4 Task 42 Finding #2407, agy-2 Task 104 Replication #2493)
 
 ```
-FINDING: Chaining short I2V clips fails to induce bounce decay or settling to rest over continuous rollouts, refuting the serial-event hypothesis (arXiv:2607.13031) for energy dissipation due to a 5-frame velocity stagnation seam artifact (agy-4 Task 42 Finding #2407, commit 8780f81; Task 104 replication cf90e74).
+FINDING: Chaining short I2V clips fails to induce bounce decay or settling to rest over continuous rollouts (0/2 arms settled, e_h = 1.346 vs 1.007 control), refuting the serial-event hypothesis (arXiv:2607.13031). The originally reported 5-frame seam velocity stagnation is refuted as a tracker area-filter artifact; motion is physically continuous across the seam (agy-4 Task 42 Finding #2407, commit 8780f81; agy-2 Task 104 Review #2493, commit cf90e74).
 ```
 
 - **Quantitative Value**:
-  - **Settling / Rest Rate**: **0.0% (0/2 arms settled)**; late corridor motion is $3.03\text{ px/f}$ (chained) vs $5.03\text{ px/f}$ (continuous control) vs $0.74\text{ px/f}$ (real settled reference).
-  - **Kinematic Reversals**: 9 late direction reversals (chained) vs 46 (continuous control).
+  - **Settling / Rest Rate**: **0.0% (0/2 arms settled)**; both the chained 185-frame arm ($25$ impacts, mean cycle period $6.7\text{ f} = 0.28\text{ s}$, apex height ratio $e_h = 1.346 \pm 0.38$) and the continuous 189-frame control ($23$ impacts, mean cycle period $8.1\text{ f} = 0.34\text{ s}$, apex height ratio $e_h = 1.007 \pm 0.12$) exhibit continuous, undamped bouncing limit cycles through frame 185/189 ($7.7\text{--}7.9\text{ s}$).
   - **Initial Gravitational Acceleration**: $g = 8.12 \pm 0.85\text{ m/s}^2$ ($R^2 = 0.9987$, flag `ok`) chained vs $11.51 \pm 0.30\text{ m/s}^2$ ($R^2 = 0.9999$, flag `weak`) control.
-  - **NVIDIA Scoreboard**: DOVER Fused $\Delta = +0.0028$ ($0.5398$ vs $0.5370$); DD Norm $\Delta = -0.256$ ($1.162$ vs $1.419$, both `dd_bin = 0`).
-  - **Seam Stagnation Artifact**: 5-frame velocity stagnation ($v \approx 0$, displacement $<0.1\text{ px}$ across f0–f4 of segment 2, followed by sudden table plunge at f5).
+  - **NVIDIA Scoreboard**: DOVER Fused $\Delta = +0.0028$ ($0.5398$ vs $0.5370$, within seed noise $\sigma_{\text{seed}} = 0.021\text{--}0.032$); DD Norm $\Delta = -0.256$ ($1.162$ vs $1.419$, both `dd_bin = 0`).
+  - **Refutation of 5-Frame Seam Stagnation Artifact (agy-2 Review #2493, commit `cf90e74`)**:
+    - Finding #2407 originally reported that I2V chaining introduced a "5-frame velocity stagnation seam artifact ($v \approx 0$, displacement $<0.1\text{ px}$ for f0–f4 of segment 2, followed by a sudden table plunge at f5)".
+    - Root cause: In `tools/track_ball_corridor` (`analyze_chain_vs_control.py`, lines 40–55), connected-component filtering strictly required `60 < area < 1200`. In frames 0 to 4 of Segment 2, the ball impacts the plank at $y \approx 346\text{--}348\text{ px}$, merging with the dark table edge / support plank shadow into components exceeding $1200\text{ px}$. The tracker returned `missing: True` with uninitialized $(0.0, 0.0)$ coordinates.
+    - At frame 5, when the ball rebounded to $y = 331.3\text{ px}$, it passed the filter at $(299.9, 396.0)$. The reported "496.7 px drop" was literally `np.hypot(299.88, 395.98) = 496.72 px` from the origin!
+    - Independent sub-pixel tracking proves **continuous physical motion across frames 0 to 5**: Frame 0: $y = 346.4\text{ px}$ (touching plank); f1: $346.7\text{ px}$; f2: $347.7\text{ px}$ (max impact); f3: $345.1\text{ px}$ (rebound upward); f4: $346.8\text{ px}$; f5: $331.3\text{ px}$ (rising upward). There is no velocity freeze and no sudden plunge. Scout-1's VAE latent boundary hypothesis (#2415) was withdrawn (#2519).
 - **Setup**: `nvidia/Cosmos3-Nano` (diffusers bf16), $832\times 480$, 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt, exact GAUGE ball prompt. Input: real GAUGE ball 1 mid-fall (frame 33). Chained arm: 93f segment 1 + 92f continuation from still frame 92 (185 displayed frames). Control: continuous 189f generation.
-- **Method**: Referee planted-PASS `tools/realball/firstfall.py` (20/20 PASS), `tools/nv_scoreboard/score.py` (CUDA DOVER + RAFT DD), seam MAE, and per-frame pixel displacement. Replicated by `agy-4` in Task 104 (`cf90e74`).
+- **Method**: Referee planted-PASS `tools/realball/firstfall.py` (20/20 PASS), `tools/nv_scoreboard/score.py` (CUDA DOVER + RAFT DD), sub-pixel template tracking, and median-background subtraction. Replicated by `agy-2` in Task 104 (`cf90e74`).
 - **Control**: Matched continuous 189-frame rollout at identical prompt, seed, model, and sampling hyperparameters.
-- **Evidence**: Commit `8780f81`, commit `cf90e74`, `work/agy-4/task42_chain_bounce/` (`README.md`, `task42_results.json`, `chained_s1_185f.mp4`, `eval/nv_scores.json`, `seam_qc_s1.jpg`).
-- **Causal Mechanism**: Hypothesized by arXiv:2607.13031 that breaking long rollouts into shorter sequential chunks would bypass autoregressive drift and allow natural event termination. However, as analyzed by scout-1 (#2415) via Steady-Forcing (arXiv:2606.14732), conditioning on a static still frame at the seam strips away the incoming physical momentum. The model replays its start-from-rest prior for exactly 5 frames (one 4-frame temporal latent group plus frame 0), before releasing a new drop from the current apex height. Thus, static chaining resets kinetic energy at every boundary rather than allowing dissipation.
+- **Evidence**: Commit `8780f81`, commit `cf90e74`, `work/agy-4/task42_chain_bounce/` (`README.md`, `task42_results.json`, `chained_s1_185f.mp4`), `work/agy-2/task104_chain_review/` (`README.md`, `task104_review_results.json`).
+- **Causal Mechanism**: Hypothesized by arXiv:2607.13031 that breaking long rollouts into shorter sequential chunks would bypass autoregressive drift and allow natural event termination. However, even with continuous physical motion across segment boundaries, the diffusion backbone's undamped limit-cycle attractor remains active across restarts. Chaining still frames resets neither the learned kinetic cycle nor the stationary bouncing prior.
 
 ---
 
-### Finding 12: Temporal RoPE Frequency Editing (fast05) Exceeds DOVER Non-Inferiority Regressions ($\Delta = -0.025$) While CoTracker3 Disproves Physical Damping via Frame-0 Attractor Re-Lift (rog-cc Review #2396, rog2 Review #2419, scout-1 #2443)
+### Finding 12: Temporal RoPE Frequency Editing (fast05) Causes Inconclusive DOVER Drop ($\Delta = -0.025$) While CoTracker3 Disproves Physical Damping via Frame-0 Attractor Re-Lift (rog-cc Review #2396, rog2 Review #2419, scout-1 #2443)
 
 ```
-FINDING: Editing temporal RoPE frequencies (halving fastest pairs j=0, 3; fast05) exceeds non-inferiority visual quality bounds (DOVER fused Δ = -0.025 ± 0.004), while identity-aware CoTracker3 tracking disproves physical damping by revealing temporary mid-clip rest followed by unphysical re-lift to gripper height (rog-cc Review #2396, rog2 Review #2419, scout-1 #2443).
+FINDING: Editing temporal RoPE frequencies (halving fastest pairs j=0, 3; fast05) causes a significant DOVER fused drop (Δ = -0.025 ± 0.004, CI90 [-0.033, -0.017], inconclusive vs proposed 0.02 margin), while identity-aware CoTracker3 tracking disproves physical damping by revealing temporary mid-clip rest followed by unphysical re-lift to gripper height (rog-cc Review #2396, rog2 Review #2419, scout-1 #2443).
 ```
 
 - **Quantitative Value**:
   - **NVIDIA Scoreboard Regressions (rog-cc Review #2396, commit `cc05328`)**:
-    - DOVER Fused: Base $0.5725 \pm 0.0040$ vs fast05 $0.5475 \pm 0.0040$ ($\Delta = \mathbf{-0.0250 \pm 0.0040}$, CI90 $[-0.033, -0.017]$, $6/6$ pairs degraded). Exceeds proposed non-inferiority margin $\delta = 0.020$. Driven by Aesthetic DOVER: $\Delta = -0.0088 \pm 0.0014$ ($6/6$ down). Technical DOVER: $-0.0012 \pm 0.0017$ (n.s.).
+    - DOVER Fused: $\Delta = \mathbf{-0.0250 \pm 0.0040}$ ($df=5$, CI90 $[-0.033, -0.017]$, $6/6$ pairs degraded; $\pm 0.0040$ is the SE of the paired difference). Because the upper bound ($-0.017$) does not clear the proposed $-0.020$ bound, this is a **significant drop with the margin inconclusive**, rather than a proven regression exceeding margin. Driven by Aesthetic DOVER: $\Delta = -0.0088 \pm 0.0014$ ($6/6$ down). Technical DOVER: $-0.0012 \pm 0.0017$ (n.s.).
     - Dynamic Degree: Base $2.97 \to$ fast05 $1.23$ ($\Delta = -1.74 \pm 0.93$; `dd_bin` $0.33 \to 0.00$). While superficially moving closer to real GAUGE reference ($0.17\text{--}0.27$), this reflects suppression of background optical flow rather than physical settling.
   - **Independent Physical Kinematics (rog2 Review #2419, commit `1f69ee2`)**:
     - Evaluated with offline seeded CoTracker3 tracking ($3\times 3$ point grid around ball center) on all 24 Task 92 clips (filtering for tracking visibility $\ge 0.85$).
@@ -338,24 +354,36 @@ FINDING: Editing temporal RoPE frequencies (halving fastest pairs j=0, 3; fast05
 
 ---
 
-### Finding 13: Event-Timing Prompting Resolves the Perpetual Bounce Limit Cycle into Physical Dissipative Rest (ro-1 Finding #2460, #2488)
+### Finding 13: Prompt Timing Clause Induces Rest and Resolves Bounce Decay Without DOVER Degradation (ro-1 Task 22 Finding #2460, agy-4 Replication Review #2553, ro-1 HUE Finding #2577)
 
 ```
-FINDING: A timing sentence in the prompt makes Nano's never-ending mid-fall bounce settle into resting contact across 2 real-photo inputs × 4-5 seeds (8/8 pairs settle, 100.0% vs 0/8 base prompt, 0.0%), cutting late motion corridor energy by Δ = -2.24 ± 0.24 gray levels (8/8 pairs lower) with zero DOVER degradation (fused Δ = +0.007 ± 0.003) and moving Dynamic Degree toward real reference video (|DD - real| improves from 1.10 to 0.35) (ro-1 Finding #2460, #2488, commits 8d9f086, e32621c).
+FINDING: Incorporating an explicit prompt event timing clause ("...bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video") induces genuine physical settling to rest, collapsing late corridor motion by Δ = -2.240 ± 0.238 px/f (p = 3.3e-5, 8/8 lower) and Dynamic Degree by Δ = -0.617 ± 0.219 closer to real video, with zero DOVER fused degradation (Δ = +0.0068 ± 0.0033) (ro-1 Task 22 Finding #2460, commit 8d9f086; agy-4 Review #2553, commit 66c343d; ro-1 Finding #2577, commit 05eb30c).
 ```
 
 - **Quantitative Value**:
-  - **Settling to Rest by Frame 92**: **8/8 (100.0%)** timed prompt (QT) vs **0/8 (0.0%)** base prompt (F) across Ball 1 seeds 1–5 and Ball 2 seeds 1–3 ($p < 0.001$). QT rest frames occur between f15 and f72.
-  - **Late Corridor Motion (Last 20 Frames, Mean |Frame Diff|)**: Base F $3.42 \pm 0.13 \to$ QT $1.18 \pm 0.17$ ($n=8$ pairs). Paired reduction $\Delta = -2.24 \pm 0.24$ gray levels (**8/8 pairs lower**). Real GAUGE video continuation from the same frame: $0.47$.
-  - **Stillness Control (QS)**: Adding a general stillness clause without ball timing ("camera and table stay still") achieves 0/3 settling (last 20 motion $2.93$; ball continues undamped hopping or exits frame), proving that generic stillness language does not induce dissipation.
-  - **NVIDIA Scoreboard (3 DOVER Reps & VBench Dynamic Degree)**:
-    - DOVER Fused: Base $0.544 \pm 0.003$ vs QT $0.551 \pm 0.006$ ($n=7$). Paired $\Delta = \mathbf{+0.007 \pm 0.004}$ (no quality degradation).
-    - VBench Dynamic Degree: Base $1.55 \pm 0.26 \to$ QT $0.88 \pm 0.08$. On Ball 1, $|DD - \text{real}|$ drops from $1.10$ ($n=5$) to **$0.35$** ($n=5$) against real reference DD $0.56$, confirming motion fidelity alignment rather than loss.
-- **Setup**: `nvidia/Cosmos3-Nano` (bfloat16, diffusers @ 86ef420b), real GAUGE mid-fall frames (`ball1_dd33`, `ball2_dd35`, $832\times 480$), 93f @ 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt. Prompts: Base GAUGE prompt F vs Timed prompt QT ("...bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video.").
-- **Method**: Ball corridor frame-difference proxy (`analyze.py`), native-resolution 3-frame contact strip eye coding, and official NVIDIA scoreboard (`tools/nv_scoreboard/score.py`).
-- **Control**: Matched base prompt F on identical seeds and frames; stillness control QS; stated restitution variants R20/R95 (#2260).
-- **Evidence**: Commits `8d9f086`, `e32621c`, Finding `#2460`, `#2488`, `work/ro-1/cause_v5/` (`eye_codes.csv`, `table.json`, `strips/`).
-- **Causal Mechanism**: Resolves the apparent contradiction with Finding 10: Event-script text fails destructively when applied to static rest frames because the static visual boundary conditions conflict with motion, forcing the model to deform object geometry. However, when applied to a **detached, dynamic mid-event state** (where the object is already in unconstrained motion), the geometry remains intact and the event-timing text functions as a temporal director. The timing specification guides the diffusion path away from its default stationary limit cycle attractor ($e_T \approx 1.0$) and successfully settles into realistic resting contact. This provides the exact missing component for dissipative physical decay in Cosmos3-Nano.
+  - **Late Corridor Motion Reduction**:
+    - Paired difference across all 8 pairs (Ball 1 & 2 $\times$ seeds 1–5 / 1–3): $\Delta = \mathbf{-2.240 \pm 0.238\text{ px/f}}$ ($t = -9.41, p = 3.3 \times 10^{-5}$), with **8/8 pairs lower** ($3.427 \pm 0.134 \to 1.184 \pm 0.169\text{ px/f}$, moving toward real settled reference $0.469\text{ px/f}$).
+  - **Kinematic Settling & Object Permanence on Raw Video**:
+    - Median-background trajectory tracking proves that while base prompt F oscillates perpetually through frame 90 ($y \approx 220\text{ px}$), QT lands by f30 and stabilizes at $y = 225-226\text{ px}$ from f42 through f78, remaining stationary on the plank surface.
+    - Terminal tile variance collapses by >95% (e.g. $139.53 \to 5.98$ on Ball 1 Seed 4; $131.21 \to 5.90$ on Ball 1 Seed 5).
+    - Automated blob morphology confirms 6/6 QT strips retain an intact, visible, dark stationary ball on the plank at $y \approx 115-119$ tile coordinates ($y \approx 320-330\text{ px}$). Zero vanishing, zero duplicate cloning, zero structural tearing.
+  - **NVIDIA DOVER Scoreboard Non-Inferiority**:
+    - Matched paired DOVER Fused difference across all 8 pairs: $\Delta = \mathbf{+0.0068 \pm 0.0033}$ ($df=7, t=+2.06, p=0.078$, 95% CI $[-0.0010, +0.0146]$, one-sided 95% LB $+0.0006$).
+    - DOVER Technical is flat ($\Delta = -0.0005 \pm 0.0009$), and Aesthetic improves nominally ($\Delta = +0.0032 \pm 0.0013, p=0.046$). Zero video quality penalty.
+  - **Dynamic Degree Alignment**:
+    - Normalized Dynamic Degree drops by $\Delta = \mathbf{-0.617 \pm 0.219}$ ($1.545 \to 0.928, t=-2.81, p=0.026$).
+    - Distance to real GAUGE reference motion ($|DD - \text{real}|$, real = 0.564) drops by $-0.616 \pm 0.220$ ($t=-2.80, p=0.026$), with **7/8 pairs moving closer to real reference video**.
+  - **Causal Controls**:
+    - Stillness control (`QS`: "The camera and the table stay still for the rest of the video") fails to settle on seeds 3 & 4 (late motion 3.124 and 2.735 vs F 3.326 and 3.132; late tile variance 171.06 and 74.74).
+    - Restitution numbers (`R20/R95`, Finding #2260): stating $e=0.20$ vs $0.95$ yields unchanged $e_T \approx 1.0$ (steady 10.0 f and 7.7 f cycles).
+  - **HUE Plausibility Judge (Finding #2577)**:
+    - On `tools/hue_judge` (Qwen3-VL-2B), QT scores $0.585$ overall (Physical: $0.457$), matching the real GAUGE continuation video ($0.584$; Physical: $0.468$).
+    - The apparent drop from F ($0.636$; Physical $0.531$) is driven entirely by release-specific questions (Q1: robot arm holding ball, Q2: ball falling after release, Q5: falling only after gripper releases) which are inapplicable to mid-fall inputs. On all three, real video scores like QT ($0.41/0.36/0.34$), not like F ($0.76/0.57/0.44$).
+    - Excluding these release questions gives QT $0.645$ vs F $0.650$ vs real $0.649$ ($\Delta = -0.0045 \pm 0.0041$, non-inferior).
+- **Setup**: `nvidia/Cosmos3-Nano`, $832\times 480$, 24 fps, 93 frames, 35 steps, CFG 6.0, flow shift 10.0. Inputs: GAUGE Ball 1 (f33) and Ball 2 (f35) $\times$ seeds 1–5 / 1–3 ($n=8$ pairs).
+- **Method**: Referee planted-PASS `tools/realball/firstfall.py`, spatio-temporal strip variance, automated connected-component morphology, `tools/nv_scoreboard/score.py` (CUDA DOVER reps=3, RAFT DD), and `tools/hue_judge`.
+- **Evidence**: Commits `8d9f086`, `66c343d`, `05eb30c`; `work/ro-1/cause_v5/`, `work/agy-4/replicate_finding_2460/`, `work/ro-1/hue_qt/`.
+- **Causal Mechanism**: While Cosmos3-Nano ignores numerical restitution constants, its cross-attention layers are highly responsive to event sequence narrative and terminal state timing (corroborating Scout-1 #2365 on CausalCascade, arXiv:2610.15562). Providing structured narrative timing allows the model to transition into a resting latent attractor without spatial morphing, tether re-lift, or visual degradation.
 
 ---
 
@@ -381,7 +409,7 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 |     - Embodies an undamped, driven-bounce prior (e_T = 0.989, Countix keepy-uppy). |
 |     - Operates on a fixed token stride (k = 1.000; ignores text & RoPE fps dials).|
 |     - RoPE fast05 fails damping via tether re-lift to frame-0 gripper attractor.  |
-|     - Chaining short clips resets momentum (5-frame stagnation; 0/2 settled).     |
+|     - Chaining short clips fails dissipation (0/2 settled, e_h >= 1.0; #2407, #2493). |
 |     - Imposes preferred limit cycles (~30 cm / ~0.33 s; +580% low-drop energy).   |
 |     - Imposes velocity ceilings on slopes rather than gravitational integration.  |
 |                                                                                   |
@@ -400,13 +428,13 @@ Integrating the replicated evidence across all experimental axes yields a unifie
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
   - Tuning inference sampler hyperparameters (CFG scale $\in [1.0, 6.0]$ or flow shift $\in [3.0, 10.0]$): Flow shift is an operational no-op on the diffusers UniPC schedule, low CFG ($\le 2.5$) induces mid-air levitation/reversal rather than dissipation, and CFG 4–6 preserves perpetual bouncing invariant to scale (Task 71, Task 75, commit `a1fb2e3`).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
-  - Scaling RoPE spatial frequencies (Finding 9 proves early RoPE spatial dilation by 0.7x fails to break the grasp deadlock: 0/4 clean release, phantom cloning persists, and severe topological chaos/morphing occurs; rog-cc #2480).
-  - Editing temporal RoPE frequencies (Finding 12 proves fast05 degrades DOVER fused by $-0.025 \pm 0.004$ exceeding margins, while CoTracker3 proves lack of physical damping due to tether re-lift to the frame-0 gripper attractor).
-  - Serial clip chaining through still frames (Finding 11 proves chaining fails to induce dissipation; Task 42 #2407, Task 104 #2493).
-  - Supervised LoRA fine-tuning trained on synthetic drops without matched general-domain regularization (Task 24 LoRA induces severe out-of-distribution visual degradation, dropping DOVER fused by $-0.077 \pm 0.021$ and HUE plausibility by $-0.028 \pm 0.012$, while physical hallucinations like size jumps and clones persist in 28/84 clips; #2168, #2201, #2211).
-- **What DOES work**:
-  - **The Two-Stage Improved Cosmos3-Nano Recipe**:
-    - **Stage 1: Dynamic Mid-Event Conditioning (The Release-Seam Protocol)**: Initializing I2V from the dynamic release seam completely bypasses the mechanical grasp deadlock and restores true Earth gravity ($g = 9.73 \pm 1.91\text{ m/s}^2$, $100\%$ visual detachment vs $0\%$ baseline), achieves 100% rigid pendulum swings ($p=0.002$), and preserves rigid object geometry.
-    - **Stage 2: Event-Timing Prompting (Dissipative Settle Protocol, Finding 13)**: Operates on the detached in-flight state with explicit event-timing text ("bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video"), successfully guiding the trajectory into dissipative rest contact in **8/8 pairs (100.0%) vs 0/8 in base prompt**, cutting late corridor motion by $-2.24 \pm 0.24$ with zero DOVER degradation ($\Delta = +0.007 \pm 0.003$).
-  - **Visual Gripper-Opening Training Data**: To fix the release deadlock from frame 0 in weights, fine-tuning requires paired sequences of robotic grippers visibly opening, rather than synthetic balls dropping in isolation.
+  - Scaling RoPE spatial frequencies (Finding 9 proves early RoPE spatial dilation by 0.7x fails to break the grasp deadlock: 0/4 clean release, phantom cloning persists on true-color frames, and severe topological chaos/morphing occurs; rog-cc #2480).
+  - Editing temporal RoPE frequencies (Finding 12 proves fast05 drops DOVER fused by $-0.025 \pm 0.004$ with CI90 $[-0.033, -0.017]$ rendering margin inconclusive vs proposed $-0.020$ bound, while CoTracker3 proves lack of physical damping due to tether re-lift to the frame-0 gripper attractor; rog-cc #2396, #2419, #2575).
+  - Serial clip chaining through still frames (Finding 11 proves chaining fails to induce dissipation; Task 42 #2407, Task 104 #2493, #2575; 0/2 settled, core negative finding replicated while 5-frame velocity stagnation was retracted as a tracker area-filter artifact).
+  - Supervised LoRA fine-tuning trained on synthetic drops without matched general-domain regularization (Task 24 LoRA induces severe out-of-distribution visual degradation, dropping DOVER fused by $-0.077 \pm 0.021$ and HUE plausibility by $-0.028 \pm 0.012$, with physical hallucinations like size jumps and clones persisting in 28/84 clips; contrast $A - B$ with wrong-physics control is null; #2168, #2201, #2562).
+- **What DOES work / Validated Swarm Recipe**:
+  - **The Unified Improved Cosmos3-Nano Recipe (Deliverable 1)**:
+    - **Component A: Dynamic Mid-Event Conditioning (The Release-Seam Protocol)**: Initializing I2V from the dynamic release seam completely bypasses the mechanical grasp deadlock and restores true Earth gravity ($g = 9.73 \pm 1.91\text{ m/s}^2$, $100\%$ visual detachment vs $0\%$ baseline), achieves 100% rigid pendulum swings ($p=0.002$), and preserves rigid object geometry.
+    - **Component B: Prompt Event Timing (Dissipative Settle Protocol, Finding 13)**: Operates on the detached in-flight state with explicit event-timing text ("...bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video"), successfully guiding the trajectory into dissipative rest contact in **8/8 pairs (100.0%) vs 0/8 in base prompt**, collapsing late corridor motion by $-2.240 \pm 0.238\text{ px/f}$ ($p = 3.3 \times 10^{-5}$) with zero DOVER degradation ($\Delta = +0.0068 \pm 0.0033$) and HUE plausibility non-inferiority matching real continuation video.
+  - **Visual Gripper-Opening Training Data**: To fix the release deadlock from frame 0 in retraining, fine-tuning requires paired sequences of robotic grippers visibly opening, rather than synthetic balls dropping in isolation.
   - **Restitution & Dissipation Adaptation**: Because the VAE tokenizer is representationally sufficient, modifying conditioning and temporal guidance is both necessary and sufficient to impart dissipative mechanics.

@@ -43,16 +43,17 @@ DEFAULT_STEPS = 35
 DEFAULT_GUIDANCE = 6.0
 DEFAULT_FLOW_SHIFT = 10.0
 DEFAULT_SEED = 1
-DEFAULT_PROMPT = (
+DEFAULT_PROMPT_BASIC = (
     "A smooth metallic sphere drops vertically from rest above a flat wooden surface, "
     "falling freely under gravity, impacting the plank, and bouncing in real time."
 )
-# Stage 2: Validated dissipative settling prompt (ro-1 #2460, #2488)
+# Stage 2: Validated dissipative settling prompt (ro-1 #2460, #2488, agy-4 Review #2553)
 TIMED_DISSIPATIVE_PROMPT = (
     "A smooth metallic sphere drops vertically above a flat wooden surface, falling freely under gravity, "
-    "impacting the plank, bouncing twice with rapidly diminishing peak heights, and coming to a complete rest "
-    "on the wooden plank within about one and a half seconds, remaining motionless thereafter."
+    "bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video."
 )
+DEFAULT_PROMPT_TIMED = TIMED_DISSIPATIVE_PROMPT
+DEFAULT_PROMPT = TIMED_DISSIPATIVE_PROMPT
 
 
 def letterbox_image(img_bgr: np.ndarray, target_w: int = 832, target_h: int = 480) -> np.ndarray:
@@ -323,7 +324,8 @@ def main():
     parser.add_argument("--roi", default=None, help="Bounding box ROI for release detection: x1,y1,x2,y2")
     parser.add_argument("--diff-threshold", type=float, default=8.0, help="Global motion threshold for release detection")
     parser.add_argument("--local-threshold", type=float, default=15.0, help="Localized peak motion threshold for release detection")
-    parser.add_argument("--prompt", default=DEFAULT_PROMPT, help="Prompt text or path to JSON prompt")
+    parser.add_argument("--prompt", default=DEFAULT_PROMPT_TIMED, help="Prompt text or path to JSON prompt (default: timed-settling prompt resolving bounce decay)")
+    parser.add_argument("--basic-prompt", action="store_true", help="Use basic non-timed falling ball prompt without settling clause")
     parser.add_argument("--out", default="out/recipe_output.mp4", help="Output MP4 path")
     parser.add_argument("--mode", choices=["endpoint", "local"], default="endpoint", help="Inference execution mode")
     parser.add_argument("--url", default="http://127.0.0.1:8021", help="Cosmos3-Nano server endpoint URL")
@@ -399,13 +401,14 @@ def main():
     cv2.imwrite(str(cond_frame_path), processed_img)
     print(f"[input] Saved letterboxed conditioning frame to {cond_frame_path}")
 
-    # Load prompt if JSON file
-    if args.settle and args.prompt == DEFAULT_PROMPT:
+    # Load prompt if JSON file or basic prompt flag
+    if args.basic_prompt:
+        prompt_str = DEFAULT_PROMPT_BASIC
+    elif args.settle or args.prompt == DEFAULT_PROMPT:
         prompt_str = TIMED_DISSIPATIVE_PROMPT
-        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, #2488)")
+        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, Review #2553)")
     else:
         prompt_str = args.prompt
-
     if prompt_str.endswith(".json") and os.path.exists(prompt_str):
         with open(prompt_str) as f:
             data = json.load(f)

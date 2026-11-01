@@ -39,6 +39,7 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
    Physics: Release Rate      0.0% (0/31 clips) ──►  100.0% (16/16 clips)     100.0% Real Mocap
    Physics: Free-Fall g       -0.19 m/s² (held) ──►  9.73 ± 1.91 m/s²         9.81 m/s² Earth g (B1S1)
    Physics: Clone Spawning    100.0% (Seed 1)   ──►  0.0% (Extinguished)     0.0% Single Identity
+   Physics: Bounce Settling   Never settles     ──►  ~1.5 s (QT prompt)       1.4-2.6 s Real Ref (Δ -2.24 px/f)
    Physics: Pendulum Period   3.77 s (bifurc)   ──►  2.65 s (single bob)      1.05 s Mocap
    NVIDIA: DOVER Technical   -0.0407           ──► -0.0369 (+0.0038 3-draw)  Resolved gain (LB +0.0019)
    NVIDIA: DOVER Fused        0.5640           ──►  0.5544 (-0.0096 3-draw)  Inconclusive vs -0.020 (CI crosses 0)
@@ -61,10 +62,11 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | **Pendulum Period ($T$, $L=0.27\text{m}$)**| $\text{s}$ | $2.36\text{--}3.77$ (Rest: $0/6$ swing) | Unchanged | **$2.65$** (Mid: $6/6$ swing, $p=0.002$) | $1.05\text{--}1.23$ (Mocap/Real) | $0.24$ | Bifurcation & release resolved; period scattered ($0.4\text{--}1.9\text{s}$) |
 | **Pendulum Event-Script Rigid Swing** | $\%$ | $0.0\%$ ($0/6$ rigid; rod 2x elongates/fractures #2432) | Not run | **$100.0\%$ ($6/6$ rigid swings)** | $100.0\%$ | $0.0\%$ | Text forces motion ($6/6$) but fractures geometry; mid-swing preserves rigidity |
 | **Slope Slide Acceleration ($a$)** | $\text{m/s}^2$ | $0.58$ (prompt err) | Unchanged | $0.00 \pm 0.01$ (terminal) | $2.57$ (Mocap) | $0.03$ | Prompt mismatch resolved |
-| **Bounce Restitution ($e_T$)** | $-$ | $0.989 \pm 0.011$ | OPEN ($10/84$ active at f92 #2211) | $0.989 \pm 0.011$ | $0.693 \pm 0.020$ | $0.018$ | Perpetual limit cycle |
-| **Time to Complete Rest** | $\text{s}$ | Never settles | $43/84$ at rest by f92 (blind pooled #2211) | $>7.9$ ($100\%$ active)| $1.40\text{--}2.60$ | $0.15$ | DiT prior bottleneck |
-| **Serial Clip Chaining Settling** | $\%$ | Never settles ($0/2$) | Not run | $0/2$ settled (5-frame seam stagnation #2407) | $100\%$ | $0.0\%$ | Momentum resets to zero at seam |
-| **Temporal RoPE fast05 Damping** | score | Perpetual bounce | Not run | $0\%$ damping (tether re-lift #2419; DOVER $\Delta -0.025$ #2396) | Settles | $0.004$ | Exceeds proposed DOVER margin $\delta=0.020$ |
+| **Bounce Restitution ($e_T$)** | $-$ | $0.989 \pm 0.011$ | OPEN ($10/84$ active at f92 #2211) | $0.989 \pm 0.011$ (Standard F) | $0.693 \pm 0.020$ | $0.018$ | Perpetual limit cycle under standard prompt |
+| **Time to Complete Rest** | $\text{s}$ | Never settles | $43/84$ at rest by f92 (blind pooled #2211) | $>7.9$ (Standard F) | $1.40\text{--}2.60$ | $0.15$ | DiT prior bottleneck under standard prompt |
+| **Prompt-Timed Bounce Settling (QT)** | $\text{px/f}$ | $3.43 \pm 0.13$ (continuous bounce) | Not run | **$1.18 \pm 0.17$** ($\Delta -2.24 \pm 0.24, p=3.3\times 10^{-5}$) | $0.47$ (Real settled) | $0.24$ | **8/8 pairs lower; settles on plank at f42–f63 (~1.5 s); DOVER Fused $+0.0068 \pm 0.0033$ (PASS)** |
+| **Serial Clip Chaining Settling** | $\%$ | Never settles ($0/2$) | Not run | **$0/2$ settled** (seam stagnation refuted as tracker bug #2493) | $100\%$ | $0.0\%$ | Limit cycle persists across still-frame restarts |
+| **Temporal RoPE fast05 Damping** | score | Perpetual bounce | Not run | **$0\%$ damping** (tether re-lift #2419; DOVER $\Delta -0.025$ #2396) | Settles | $0.004$ | Margin inconclusive vs proposed $\delta=0.020$ |
 | **II. NVIDIA SCOREBOARD (4 PILLARS)** | | | | | | | |
 | **Pillar 1: DOVER Technical (3 reps)**| score | $-0.0407 \pm 0.0013$ | Arm A: $\Delta -0.013 \pm 0.004$ / Arm C: $\Delta -0.005$ | **$-0.0369 \pm 0.0010$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0038 \pm 0.0010$ (Statistically Resolved Gain, LB $+0.0019$)** |
 | **Pillar 1: DOVER Technical (1 rep)** | score | $-0.0407 \pm 0.0013$ | Not run | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | $+0.0012 \pm 0.0009$ (n.s., $p=0.232$) |
@@ -80,7 +82,7 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | **NOT MEASURED** | Real Future | $0.013$ | Base vs Frozen: **$-0.0645 \pm 0.0179$** (Recipe unmeasured) |
 | **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | **NOT MEASURED** | Real Future | $1.10$ | Base vs Frozen: **$+3.06 \pm 0.64\text{ dB}$** (Recipe unmeasured) |
 
-*\*Note on Task 24 LoRA Column: The Physics Scoreboard rows reflect ro-1's blind re-code of all 84 eval clips (#2211, #2200), refuting prior automated 0/66 release claims caused by tracking blank wall (re-verified in #2266, #2382, #2386). The NVIDIA Scoreboard rows reflect rog-cc's paired analyses on 16 HUE T2V prompts × 2 seeds (#2168, #2201, #2350), showing paired deltas ($\Delta$) against the matched unmodified base (Base means: DOVER Fused 0.599, DD Binary 0.66, DD Norm 7.89, HUE Overall 0.706, HUE Physical 0.586) and same-box baseL ($\Delta_{\text{overall}} = -0.023 \pm 0.012$, $\Delta_{\text{physical}} = -0.030 \pm 0.013$, CI90 LB past margins; #2350), NOT against the GAUGE ball scene baseline in Column 3. Arm A = real-g SFT LoRA; Arm C = no-decay control LoRA.*
+*\*Note on Task 24 LoRA Column: The Physics Scoreboard rows reflect ro-1's blind re-code of all 84 eval clips (#2211, #2200), refuting prior automated 0/66 release claims caused by tracking blank wall (re-verified in #2266, #2382, #2386). The NVIDIA Scoreboard rows reflect rog-cc's complete 5-arm evaluation on 16 HUE T2V prompts × 2 seeds (Finding #2562, commit `30163c9`), showing paired deltas ($\Delta$) against matched unmodified base (Base means: DOVER Fused 0.599, DD Binary 0.66, DD Norm 7.89, HUE Overall 0.706, HUE Physical 0.586) and same-box baseL ($\Delta_{\text{overall}} = -0.023 \pm 0.012$, $\Delta_{\text{physical}} = -0.030 \pm 0.013$, CI90 LB past margins; #2350), NOT against the GAUGE ball scene baseline in Column 3. Arm A (real-g SFT LoRA) drops DOVER fused by $-0.077 \pm 0.021$ and HUE physical by $-0.035 \pm 0.014$; Arm B (wrong-g SFT LoRA) drops DOVER fused by $-0.075 \pm 0.018$; Arm C (no-decay control LoRA) drops DOVER fused by $-0.048 \pm 0.020$. Crucially, Arm A − Arm B is $\Delta = -0.005 \pm 0.009$ on HUE physical and $-0.002 \pm 0.017$ on DOVER fused, proving that correct physics buys zero plausibility or quality gain.*
 
 ---
 
