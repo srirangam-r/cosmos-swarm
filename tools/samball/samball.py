@@ -6,7 +6,7 @@ v5 flag no_free_fall g=-0.007; realball g=0.65 on frames 1-4, while the ball vis
 
 Method:
 1. SAM2.1-hiera-small (transformers) video tracking from a point prompt on frame 0 (--point x,y; default: trk_ballfall
-   blob centroid on frame 0). Per frame: mask centroid y, area.
+   blob at its first detected frame, propagated forward and backward). Masks >5% of the frame are dropped. Per frame: mask centroid y, area.
 2. Fall segment: y_top = median y of the first 5 tracked frames; y_bot = max y. First impact k = first frame with
    y >= y_bot - tol (tol = 0.15 * fall height in px). Window start = last frame before k with y <= y_top + tol, minus 6.
 3. g: trk_ballfall v5 fit_onset (hinge locates release t0; free-v0 quadratic from t0 + 1 frame) on [start, k-1].
@@ -17,6 +17,7 @@ import sys, json, argparse, numpy as np, cv2, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + '/../trk_ballfall')
 import measure_ball as mb
 VERSION = 'samball v1 (SAM2.1-small track + robust fall window + v5 fit_onset skip=1)'
+MAXFRAC = 0.05
 SAM = os.environ.get('SAMBALL_MODEL', 'facebook/sam2.1-hiera-small')
 
 def read(path):
@@ -27,12 +28,15 @@ def read(path):
         F.append(f)
     return np.array(F)
 
-def auto_point(F):
-    import trk
-    B = trk.blobs(F, mode='ball')
-    for b in B:
-        if b: return [float(b[0]), float(b[1])]
-    raise SystemExit('no blob on first frames; pass --point')
+def auto_point(F, frame=0):
+    """Ball on `frame`: |frame - temporal median| > 30 (sum over BGR), largest connected component centroid."""
+    bg = np.median(F[::max(1, len(F) // 30)].astype(np.float32), axis=0)
+    d = (np.abs(F[frame].astype(np.float32) - bg).sum(2) > 30).astype(np.uint8)
+    d = cv2.morphologyEx(d, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+    n, lab, st, cen = cv2.connectedComponentsWithStats(d)
+    if n < 2: raise SystemExit('no moving blob on frame %d; pass --point' % frame)
+    j = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+    return [float(cen[j][0]), float(cen[j][1])], frame
 
 def sam_track(F, point, device='cpu', pframe=0):
     import torch
@@ -49,12 +53,13 @@ def sam_track(F, point, device='cpu', pframe=0):
     out = {}
     with torch.inference_mode():
         model(inference_session=sess, frame_idx=pframe)
-        for o in model.propagate_in_video_iterator(sess, start_frame_idx=pframe):
-            m = proc.post_process_masks([o.pred_masks], original_sizes=[[H, W]], binarize=True)[0]
-            out[o.frame_idx] = m[0, 0].cpu().numpy().astype(bool)
+        for rev in ([False, True] if pframe > 0 else [False]):
+            for o in model.propagate_in_video_iterator(sess, start_frame_idx=pframe, reverse=rev):
+                m = proc.post_process_masks([o.pred_masks], original_sizes=[[H, W]], binarize=True)[0]
+                out[o.frame_idx] = m[0, 0].cpu().numpy().astype(bool)
     cy, cx, area = np.full(len(F), np.nan), np.full(len(F), np.nan), np.zeros(len(F))
     for i, m in out.items():
-        if m.sum() > 0:
+        if 0 < m.sum() < MAXFRAC * m.size:   # masks covering >5% of the frame are background, not a ball
             ys, xs = np.nonzero(m); cy[i], cx[i], area[i] = ys.mean(), xs.mean(), m.sum()
     return cx, cy, area
 
@@ -67,7 +72,8 @@ def fall_window(y, pre=6):
     return max(int(ok[0]), s - pre), k, yt, yb
 
 def measure(F, fps, ppm=None, diam=None, point=None, device='cpu', nboot=300, seed=0, skip=1, track=None, pframe=0):
-    cx, cy, area = track if track is not None else sam_track(F, point or auto_point(F), device, pframe)
+    if track is None and point is None: point, pframe = auto_point(F)
+    cx, cy, area = track if track is not None else sam_track(F, point, device, pframe)
     w0, k, yt, yb = fall_window(cy)
     idx = np.array([i for i in range(w0, k) if np.isfinite(cy[i]) and area[i] > 0])
     t = idx / fps
