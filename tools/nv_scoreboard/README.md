@@ -58,3 +58,24 @@ Not bit-identical to VBench: it uses torchvision RAFT instead of the original RA
 
 ## Caveat for physics prompts
 VBench dynamic degree is almost blind to a small moving object. The top 5% of a 832x480 frame is ~20k px, much more than a 0.06 m ball. Real GAUGE ball drops score `dd_binary=0` with `dd_norm` ~0.2. Read a dynamic-degree increase on GAUGE-style prompts as spurious camera or scene motion, not as better object motion. Always compare against real clips at the same fps and size.
+
+## Experimental FPS-band motion fidelity aggregation
+
+`motion_fidelity.py` implements the Cosmos 3 technical report eqs. 10–11 using the `dd_binary` scores above. Supply a hand-audited JSON manifest with each band, real-reference clip, prompt, and exactly three distinct integer seeds per prompt. Paths are relative to the manifest; `key` is the exact top-level clip key in the score JSON:
+
+```json
+{"bands": [{"id": "24fps", "reference": [
+  {"file": "real.json", "key": "real1.mp4"}
+], "prompts": [{"id": "scene1", "clips": [
+  {"file": "generated.json", "key": "s1.mp4", "seed": 1},
+  {"file": "generated.json", "key": "s2.mp4", "seed": 2},
+  {"file": "generated.json", "key": "s3.mp4", "seed": 3}
+]}]}]}
+```
+
+```
+python motion_fidelity.py manifest.json --ddof 0 --zero-denominator zero --out mf.json
+python -m unittest discover -s tools/nv_scoreboard -p 'test_motion_fidelity.py' -v
+```
+
+Both convention flags are mandatory: NVIDIA does not specify the variance denominator, and the formula is 0/0 for three static seeds. `zero` substitutes zero for that case; `error` refuses to calculate. These are user choices, not verified NVIDIA conventions. Output includes each triplet, variance, MC, zero-case flag, band-level generated and reference DD, MF, and equally weighted band mean. The tool refuses duplicate file/key references, duplicate seeds, incomplete triplets and mismatched recorded playback fps. It does not establish video identity across different score files, or check seed labels against sidecars. Audit those, reference representativeness, conditioning, actual playback rate, resolution, duration and event matching manually. The original paper uses 5-second, 480p 16:9 generated clips and ~100 reference videos per FPS band. Scores from the existing GAUGE reference file need duration matching before use. This is an approximation due to the VBench implementation differences above; NVIDIA's exact conventions and DOVER scaling are unknown. No composite or non-inferiority verdict is computed. No fresh video scoring or planted validation was performed for this algebraic aggregation.
