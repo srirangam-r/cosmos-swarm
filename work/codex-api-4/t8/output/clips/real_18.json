@@ -1,0 +1,34 @@
+{
+  "kind": "real GAUGE development-video derivative, measurement only",
+  "source": {
+    "json": {
+      "id": 18,
+      "kind": "json",
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/18.json",
+      "bytes": 806270,
+      "sha256": "252aadc13e6c9b88584ffbbe8605dca29ef77866f888b8b919b04b4b8cb2ac35"
+    },
+    "video": {
+      "id": 18,
+      "kind": "video",
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/18.mp4",
+      "bytes": 76560238,
+      "sha256": "45933fc338d6caf648244a5557e2c405273120b4bf5ed3402dc76849549c18cc"
+    }
+  },
+  "dataset_revision": {
+    "id": "InternRobotics/GAUGE-Dataset",
+    "sha": "f95bb06e7d11142f88ffd3b6b56c7258deb8fff6",
+    "lastModified": "2026-11-01T08:09:11.000Z"
+  },
+  "transform": "first300containerframes; content-dedup by 0.1median pairMAE; nominal25Hz;832x468INTER_AREA+6pxblackpadding;distinct frames93:186",
+  "measurement_source": "unencoded BGR float32 frames; published mp4v is review derivative only",
+  "size": "832x480",
+  "num_frames": 93,
+  "fps": 25,
+  "last_minus_first_frame_s": 3.68,
+  "reference_window_s": [
+    1.7666666666666662,
+    5.366666666666667
+  ]
+}

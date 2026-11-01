@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/1.json",
+    "bytes": 697958,
+    "sha256": "c25e0963daf965ea3ba038552bc25088c5a28a3530714645b934e682ae88260a"
+  },
+  {
+    "id": 1,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/1.mp4",
+    "bytes": 66419873,
+    "sha256": "4a12ffdc69cba34b655823244b20d5259da4db607b669f6b9cfe83c7bf69834a"
+  },
+  {
+    "id": 2,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/2.json",
+    "bytes": 686311,
+    "sha256": "146bfc3cd3625c8fcfc4c8fea4d7ca0dc1558a7f1ba50721783967f6dece145e"
+  },
+  {
+    "id": 2,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/2.mp4",
+    "bytes": 65301591,
+    "sha256": "cad738f775eb3721b055092544e28027ce8f0e670b037af36a5d6410defe8b9a"
+  },
+  {
+    "id": 3,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/3.json",
+    "bytes": 729409,
+    "sha256": "18a6fa6f561440d845b144186a5c9ec5cd34bdf89c72b10d7fb33b690c983004"
+  },
+  {
+    "id": 3,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/3.mp4",
+    "bytes": 69523850,
+    "sha256": "3ce4e03702fae34b473a15d121b881a8121eaf57c0158efdbb11b2db5509516c"
+  },
+  {
+    "id": 4,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/4.json",
+    "bytes": 721230,
+    "sha256": "85dec48f32de193e4f777fbb7667fb5727afb712e9ba580f3247f9617cdc022b"
+  },
+  {
+    "id": 4,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/4.mp4",
+    "bytes": 68864736,
+    "sha256": "473f3d06e2c08db6ada3f647c0d9ef22c869fc105122a72be3badba356e7fd1d"
+  },
+  {
+    "id": 5,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/5.json",
+    "bytes": 730989,
+    "sha256": "fa3737d43b9707f1d9a71ee4216acd770bfc52ca02cfa880545fca194972f4f6"
+  },
+  {
+    "id": 5,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/5.mp4",
+    "bytes": 69490362,
+    "sha256": "78e2d43699cae8d289d7339a9be544454a704524323ac32b68eb246b408ced53"
+  },
+  {
+    "id": 6,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/6.json",
+    "bytes": 731505,
+    "sha256": "94cd8c48fd4b0e8b2ad3bda9e842ebe544bb7d826831de9a633eca756a691b47"
+  },
+  {
+    "id": 6,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/6.mp4",
+    "bytes": 69475046,
+    "sha256": "6d54f8ce8ec61df3704eda321c1033e76a06b39972847408681b8b940e6ba89a"
+  },
+  {
+    "id": 7,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/7.json",
+    "bytes": 749349,
+    "sha256": "bf76ec3c4a6c3e51a25eef63420e843e3ac249ec013fd3f2e831709f1045df0d"
+  },
+  {
+    "id": 7,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/7.mp4",
+    "bytes": 71695838,
+    "sha256": "415dabbaa07a38d6499a40d45162299b92bb9e8ab494be64c24f09ee5e19d836"
+  },
+  {
+    "id": 8,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/8.json",
+    "bytes": 743174,
+    "sha256": "205660a4962fb0e03e4a55205a1b27ee5ef0ae6d843209d04f57b73953daf0cb"
+  },
+  {
+    "id": 8,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/8.mp4",
+    "bytes": 70574467,
+    "sha256": "a75724c80115ae20d0e9247aafc1b3df9ed90df222a69d5232db937d4dd963ee"
+  },
+  {
+    "id": 9,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/9.json",
+    "bytes": 752629,
+    "sha256": "2f890360e2ab29bd88be43ef924cace5c0db2381dfe0082d06b88d5233fb6e35"
+  },
+  {
+    "id": 9,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/9.mp4",
+    "bytes": 71534124,
+    "sha256": "68d45bfeb01d5a9104b61f749b31ccbf37a6471e2b5cb7e562f92aefb31e76b2"
+  },
+  {
+    "id": 10,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/10.json",
+    "bytes": 747790,
+    "sha256": "10e9f1f44c8f5e7c15429ec6df2351a3e0cfc4e60000fe10437ccb04038e308c"
+  },
+  {
+    "id": 10,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/10.mp4",
+    "bytes": 71054323,
+    "sha256": "a57ba41fdc0113614235404f1c4b44b54b9d4f53b2ef36616849f5cc91a946cb"
+  },
+  {
+    "id": 11,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/11.json",
+    "bytes": 750849,
+    "sha256": "20a7ef9823d576423029066c1abf39ad36ee1b2dc27f9cc5c1b0dce33923e8ff"
+  },
+  {
+    "id": 11,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/11.mp4",
+    "bytes": 71322057,
+    "sha256": "1cdcb533c0fd16fb3eb3093258ddbd749100ebb86bb52742d324dc2f1c2355d3"
+  },
+  {
+    "id": 12,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/12.json",
+    "bytes": 743882,
+    "sha256": "b1ca9b2db023d1ddecbe5176e9b9510875c62c849e2f718754c7df220dfa3c19"
+  },
+  {
+    "id": 12,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/12.mp4",
+    "bytes": 70739652,
+    "sha256": "86b66441d604d62a2d9cf815541f4d3aeee65aed814f92728ab236297a573c84"
+  },
+  {
+    "id": 13,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/13.json",
+    "bytes": 755503,
+    "sha256": "4782e94c87a5276563540b4b954e4f6e202a80786e07f5adfe3d5606913ed58f"
+  },
+  {
+    "id": 13,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/13.mp4",
+    "bytes": 71968105,
+    "sha256": "bf2dda6b0ba6181caaaebfc5641d2b6b7eb6b492f7544f995b46501cb8edc4fb"
+  },
+  {
+    "id": 14,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/14.json",
+    "bytes": 767556,
+    "sha256": "40cef71c28fc85744e10b9539d751b194dee11ca8aeabfc41fa844b20372a95e"
+  },
+  {
+    "id": 14,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/14.mp4",
+    "bytes": 72709258,
+    "sha256": "db3d57dbed02ef2f71a893a6561af3f27f529b0b736494b18326d3870301e1d6"
+  },
+  {
+    "id": 15,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/15.json",
+    "bytes": 760757,
+    "sha256": "d9ae3eb86ad70f3096fcdf34a4bcc5edde2403ddee30e1b079ad0d53b9e22de3"
+  },
+  {
+    "id": 15,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/15.mp4",
+    "bytes": 72269632,
+    "sha256": "83ecb67b7de61c4250edb5ef55396278a1c561d72c22069c5db61771225299bd"
+  },
+  {
+    "id": 16,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/16.json",
+    "bytes": 768722,
+    "sha256": "16effceaeb41178c072a1c7f42efca197c5ae211848b1f75b42783d3a8c0ea4f"
+  },
+  {
+    "id": 16,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/16.mp4",
+    "bytes": 73042847,
+    "sha256": "2ea68b9397b6653f9376757e2b8c09cc85946a057425f97bdb43f3dfd7363959"
+  },
+  {
+    "id": 17,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/17.json",
+    "bytes": 782709,
+    "sha256": "8a4d467f017fa1810f0143736682fd0d35b0f0dde643827d9a045239d4bc0710"
+  },
+  {
+    "id": 17,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/17.mp4",
+    "bytes": 74397701,
+    "sha256": "dbd23e8a57d5aa09783480b7a1a1a50f5d4df593766eb40fa32f86752ef4743d"
+  },
+  {
+    "id": 18,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/18.json",
+    "bytes": 806270,
+    "sha256": "252aadc13e6c9b88584ffbbe8605dca29ef77866f888b8b919b04b4b8cb2ac35"
+  },
+  {
+    "id": 18,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/18.mp4",
+    "bytes": 76560238,
+    "sha256": "45933fc338d6caf648244a5557e2c405273120b4bf5ed3402dc76849549c18cc"
+  },
+  {
+    "id": 19,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/19.json",
+    "bytes": 794432,
+    "sha256": "3c6b79f60a69f4d810e23fb39ed67f923c9165623983700db23254ccb47e1d5a"
+  },
+  {
+    "id": 19,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/19.mp4",
+    "bytes": 75643718,
+    "sha256": "256550d161a3e2e9d8d55d67098148ccd4f42d284e030f980048a2d4757a4b6c"
+  },
+  {
+    "id": 20,
+    "kind": "json",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/json/20.json",
+    "bytes": 851342,
+    "sha256": "c4289397f621e9dbbf98e45b637b562f9aaca0ad90fdddb8a5106905d66ee05b"
+  },
+  {
+    "id": 20,
+    "kind": "video",
+    "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/20.mp4",
+    "bytes": 80738636,
+    "sha256": "6bba84f4bbaec771cc528b08d6cf8c29d57ae300f5c679023a4ebb6313387df3"
+  }
+]

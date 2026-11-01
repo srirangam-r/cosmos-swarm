@@ -1,0 +1,1 @@
+First analysis session83839 exited before estimates: source container FPS30.00715 rather than exactly30. Protocol and historical t182 use nominal25Hz content; fixed derivation to nominal30*distinctfraction, preserving actual containerFPS separately. Restarted analysis; tool untouched.

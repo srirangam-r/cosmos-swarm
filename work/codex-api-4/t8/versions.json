@@ -1,0 +1,7 @@
+{
+  "python": "3.10.12",
+  "numpy": "1.26.4",
+  "scipy": "1.8.0",
+  "opencv": "4.13.0",
+  "note": "System SciPy warns its declared NumPy range excludes1.26.4; four analytic reference checks and exact published-real10 numerical comparison pass; no optimizer failures recorded."
+}

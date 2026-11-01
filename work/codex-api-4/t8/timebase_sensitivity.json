@@ -1,0 +1,205 @@
+{
+  "status": "post hoc timebase diagnostic only; primary results unchanged",
+  "records": {
+    "1": {
+      "nominal_zc_ratio": 1.001417032874041,
+      "container_timestamp_zc_ratio": 0.99056752310898,
+      "container_timestamp_zc_period_s": 1.1613480773585096,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.665793096145701,
+      "n_distinct_prefix": 250
+    },
+    "2": {
+      "nominal_zc_ratio": 1.000012335335754,
+      "container_timestamp_zc_ratio": 1.002743352176956,
+      "container_timestamp_zc_period_s": 1.1815731968191026,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.665458643177526,
+      "n_distinct_prefix": 251
+    },
+    "3": {
+      "nominal_zc_ratio": 1.0186496067120219,
+      "container_timestamp_zc_ratio": 1.000954971448594,
+      "container_timestamp_zc_period_s": 1.1775208798467252,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.631855858964248,
+      "n_distinct_prefix": 252
+    },
+    "4": {
+      "nominal_zc_ratio": 0.9999622260279201,
+      "container_timestamp_zc_ratio": 1.0025802854170947,
+      "container_timestamp_zc_period_s": 1.1814848968285925,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.66601275627295,
+      "n_distinct_prefix": 250
+    },
+    "5": {
+      "nominal_zc_ratio": 1.002575389019951,
+      "container_timestamp_zc_ratio": 1.0057896030190314,
+      "container_timestamp_zc_period_s": 1.1785838213079924,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6653272634806897,
+      "n_distinct_prefix": 250
+    },
+    "6": {
+      "nominal_zc_ratio": 1.017531891208621,
+      "container_timestamp_zc_ratio": 1.000046129552347,
+      "container_timestamp_zc_period_s": 1.1780164355025389,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6320130012245975,
+      "n_distinct_prefix": 252
+    },
+    "7": {
+      "nominal_zc_ratio": 1.0169802627816311,
+      "container_timestamp_zc_ratio": 1.0031096296572022,
+      "container_timestamp_zc_period_s": 1.1788143083321865,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.631953673180779,
+      "n_distinct_prefix": 252
+    },
+    "8": {
+      "nominal_zc_ratio": 1.0082401018872775,
+      "container_timestamp_zc_ratio": 1.007042939415236,
+      "container_timestamp_zc_period_s": 1.1796921084065657,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6327629086921847,
+      "n_distinct_prefix": 252
+    },
+    "9": {
+      "nominal_zc_ratio": 1.0001858655092732,
+      "container_timestamp_zc_ratio": 0.9916548270972871,
+      "container_timestamp_zc_period_s": 1.1618052848026221,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.665266542306935,
+      "n_distinct_prefix": 250
+    },
+    "10": {
+      "nominal_zc_ratio": 1.0000426632152675,
+      "container_timestamp_zc_ratio": 1.0000660561367078,
+      "container_timestamp_zc_period_s": 1.173526412063227,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.665371382724108,
+      "n_distinct_prefix": 250
+    },
+    "11": {
+      "nominal_zc_ratio": 1.0013782393734005,
+      "container_timestamp_zc_ratio": 1.0030241382766507,
+      "container_timestamp_zc_period_s": 1.175590468788804,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.699183545638915,
+      "n_distinct_prefix": 250
+    },
+    "12": {
+      "nominal_zc_ratio": 1.0170576043691537,
+      "container_timestamp_zc_ratio": 1.003301403589891,
+      "container_timestamp_zc_period_s": 1.1785425130630913,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.632176539660788,
+      "n_distinct_prefix": 251
+    },
+    "13": {
+      "nominal_zc_ratio": 0.8022851156562865,
+      "container_timestamp_zc_ratio": 0.8099646209617041,
+      "container_timestamp_zc_period_s": 0.9535846280437899,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.699218109631148,
+      "n_distinct_prefix": 252
+    },
+    "14": {
+      "nominal_zc_ratio": 1.0014438663703584,
+      "container_timestamp_zc_ratio": 0.9997975513239291,
+      "container_timestamp_zc_period_s": 1.1697669537598232,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6320438356975706,
+      "n_distinct_prefix": 252
+    },
+    "15": {
+      "nominal_zc_ratio": 1.0061312512170857,
+      "container_timestamp_zc_ratio": 0.9998998475396089,
+      "container_timestamp_zc_period_s": 1.1721944585460262,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.632125478514865,
+      "n_distinct_prefix": 252
+    },
+    "16": {
+      "nominal_zc_ratio": 1.0045807953526684,
+      "container_timestamp_zc_ratio": 1.0035302063058495,
+      "container_timestamp_zc_period_s": 1.1786820284546664,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6318933982840305,
+      "n_distinct_prefix": 255
+    },
+    "17": {
+      "nominal_zc_ratio": 0.9994807681887645,
+      "container_timestamp_zc_ratio": 1.0027806949810292,
+      "container_timestamp_zc_period_s": 1.17951047596289,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6994344001673096,
+      "n_distinct_prefix": 251
+    },
+    "18": {
+      "nominal_zc_ratio": 0.9999398635842419,
+      "container_timestamp_zc_ratio": 1.0028394753463667,
+      "container_timestamp_zc_period_s": 1.1819752054165358,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6995112239066974,
+      "n_distinct_prefix": 251
+    },
+    "19": {
+      "nominal_zc_ratio": 0.9992911492741835,
+      "container_timestamp_zc_ratio": 1.0018820021714758,
+      "container_timestamp_zc_period_s": 1.1828192245925129,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6990164651662205,
+      "n_distinct_prefix": 250
+    },
+    "20": {
+      "nominal_zc_ratio": 1.0002569240722337,
+      "container_timestamp_zc_ratio": 1.0036014058436469,
+      "container_timestamp_zc_period_s": 1.1796993066086316,
+      "nominal_window_elapsed_s": 3.68,
+      "container_window_elapsed_s": 3.6663330537131813,
+      "n_distinct_prefix": 250
+    }
+  },
+  "summary": {
+    "nominal_zc_ratio": {
+      "mean": 0.9948721476015067,
+      "se": 0.010252050381741056,
+      "min": 0.8022851156562865,
+      "max": 1.0186496067120219
+    },
+    "container_timestamp_zc_ratio": {
+      "mean": 0.9917588331684793,
+      "se": 0.009608998223310156,
+      "min": 0.8099646209617041,
+      "max": 1.007042939415236
+    },
+    "container_window_elapsed_s": {
+      "mean": 3.660637558827523,
+      "se": 0.0061032437419191,
+      "min": 3.631855858964248,
+      "max": 3.6995112239066974
+    },
+    "flag_ok": {
+      "nominal_zc_ratio": {
+        "mean": 1.0050083071775706,
+        "se": 0.0016202901243359013,
+        "min": 0.9992911492741835,
+        "max": 1.0186496067120219
+      },
+      "container_timestamp_zc_ratio": {
+        "mean": 1.001326949600415,
+        "se": 0.0009333302383893658,
+        "min": 0.99056752310898,
+        "max": 1.007042939415236
+      },
+      "container_window_elapsed_s": {
+        "mean": 3.658607003522069,
+        "se": 0.006066889128225925,
+        "min": 3.631855858964248,
+        "max": 3.6995112239066974
+      }
+    }
+  }
+}
