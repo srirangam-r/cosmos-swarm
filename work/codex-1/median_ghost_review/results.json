@@ -1,0 +1,29 @@
+[
+  {
+    "rest_frames": 0,
+    "total_frames": 21,
+    "n_sequences": 100,
+    "n_motion_frames": 1900,
+    "ghost_fraction_mean": 0.0,
+    "track_error_px_mean": 0.0,
+    "track_error_gt_12px_fraction": 0.0
+  },
+  {
+    "rest_frames": 10,
+    "total_frames": 31,
+    "n_sequences": 100,
+    "n_motion_frames": 1900,
+    "ghost_fraction_mean": 0.0,
+    "track_error_px_mean": 0.0,
+    "track_error_gt_12px_fraction": 0.0
+  },
+  {
+    "rest_frames": 40,
+    "total_frames": 61,
+    "n_sequences": 100,
+    "n_motion_frames": 1900,
+    "ghost_fraction_mean": 1.0,
+    "track_error_px_mean": 33.0,
+    "track_error_gt_12px_fraction": 0.47368421052631576
+  }
+]
