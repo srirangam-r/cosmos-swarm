@@ -1,0 +1,94 @@
+{
+  "slope_wood": {
+    "base": {
+      "n": 3,
+      "rest_rate_f92": 0.667,
+      "v_peak_mean": 0.687,
+      "v_late_mean": 0.063,
+      "slide_m_mean": 0.463
+    },
+    "r": {
+      "n": 3,
+      "rest_rate_f92": 1.0,
+      "v_peak_mean": 0.772,
+      "v_late_mean": -0.0,
+      "slide_m_mean": 0.465
+    },
+    "n": {
+      "n": 3,
+      "rest_rate_f92": 0.667,
+      "v_peak_mean": 0.673,
+      "v_late_mean": 0.071,
+      "slide_m_mean": 0.466
+    }
+  },
+  "slope_plastic": {
+    "base": {
+      "n": 3,
+      "rest_rate_f92": 1.0,
+      "v_peak_mean": 0.33,
+      "v_late_mean": 0.014,
+      "slide_m_mean": 0.372
+    },
+    "r": {
+      "n": 3,
+      "rest_rate_f92": 1.0,
+      "v_peak_mean": 0.494,
+      "v_late_mean": 0.001,
+      "slide_m_mean": 0.383
+    },
+    "n": {
+      "n": 3,
+      "rest_rate_f92": 0.667,
+      "v_peak_mean": 0.37,
+      "v_late_mean": 0.019,
+      "slide_m_mean": 0.417
+    }
+  },
+  "pend_rest": {
+    "base": {
+      "n": 3,
+      "release_rate": 0.333,
+      "still_rest_rate": 0.667,
+      "early_energy_mean": 0.767,
+      "late_energy_mean": 0.94
+    },
+    "r": {
+      "n": 3,
+      "release_rate": 0.0,
+      "still_rest_rate": 1.0,
+      "early_energy_mean": 0.843,
+      "late_energy_mean": 0.77
+    },
+    "n": {
+      "n": 3,
+      "release_rate": 0.0,
+      "still_rest_rate": 1.0,
+      "early_energy_mean": 0.667,
+      "late_energy_mean": 1.197
+    }
+  },
+  "pend_mid": {
+    "base": {
+      "n": 3,
+      "rest_rate_f92": 0.0,
+      "decay_ratio_mean": 0.972,
+      "early_energy_mean": 1.63,
+      "late_energy_mean": 1.61
+    },
+    "r": {
+      "n": 3,
+      "rest_rate_f92": 0.0,
+      "decay_ratio_mean": 1.142,
+      "early_energy_mean": 1.527,
+      "late_energy_mean": 1.767
+    },
+    "n": {
+      "n": 3,
+      "rest_rate_f92": 0.0,
+      "decay_ratio_mean": 1.033,
+      "early_energy_mean": 1.317,
+      "late_energy_mean": 1.367
+    }
+  }
+}
