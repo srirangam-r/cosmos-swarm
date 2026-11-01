@@ -1,0 +1,138 @@
+{
+  "scope": "manufactured arrays only; no Cosmos outcomes or referee clips",
+  "passed_checks": 33,
+  "checks": [
+    {
+      "name": "pure seed",
+      "passed": true
+    },
+    {
+      "name": "pure prompt",
+      "passed": true
+    },
+    {
+      "name": "pure input",
+      "passed": true
+    },
+    {
+      "name": "seed prompt interaction",
+      "passed": true
+    },
+    {
+      "name": "seed input interaction",
+      "passed": true
+    },
+    {
+      "name": "prompt input interaction",
+      "passed": true
+    },
+    {
+      "name": "three-way interaction",
+      "passed": true
+    },
+    {
+      "name": "orthogonal fractions sum one",
+      "passed": true
+    },
+    {
+      "name": "constant outcome undefined shares",
+      "passed": true
+    },
+    {
+      "name": "constant bootstrap explicitly counted",
+      "passed": true
+    },
+    {
+      "name": "missing cube rejected",
+      "passed": true
+    },
+    {
+      "name": "seed bootstrap retains whole cube",
+      "passed": true
+    },
+    {
+      "name": "E0 exact correspondence advantage",
+      "passed": true
+    },
+    {
+      "name": "E0 exact matching probability",
+      "passed": true
+    },
+    {
+      "name": "static background creates no advantage",
+      "passed": true
+    },
+    {
+      "name": "zero null distance has no ratio",
+      "passed": true
+    },
+    {
+      "name": "resampled duplicate original seeds excluded",
+      "passed": true
+    },
+    {
+      "name": "inverse correspondence not a win",
+      "passed": true
+    },
+    {
+      "name": "prompt test uses four seeds not twenty clips",
+      "passed": true
+    },
+    {
+      "name": "prompt cluster CI constant paired effect",
+      "passed": true
+    },
+    {
+      "name": "cancelling prompt effect not significant",
+      "passed": true
+    },
+    {
+      "name": "training-only top bank",
+      "passed": true
+    },
+    {
+      "name": "heldout random-pool expectation",
+      "passed": true
+    },
+    {
+      "name": "top bottom contrast",
+      "passed": true
+    },
+    {
+      "name": "heldout input clusters not prompt cells",
+      "passed": true
+    },
+    {
+      "name": "seed rank transfer correlation",
+      "passed": true
+    },
+    {
+      "name": "bad heldout outcome cannot change selected bank",
+      "passed": true
+    },
+    {
+      "name": "all-tied training has no ranking signal",
+      "passed": true
+    },
+    {
+      "name": "banks disjoint on ties",
+      "passed": true
+    },
+    {
+      "name": "Holm retains original order",
+      "passed": true
+    },
+    {
+      "name": "CLI one exits zero",
+      "passed": true
+    },
+    {
+      "name": "CLI two exits zero",
+      "passed": true
+    },
+    {
+      "name": "CLI deterministic replay",
+      "passed": true
+    }
+  ]
+}
