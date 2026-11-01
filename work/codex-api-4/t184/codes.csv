@@ -1,0 +1,13 @@
+id,motion,rigid,scene,notes
+Q01,Y,N,Y,"Dense f44-67: rod shortens/bends near f48-50 and f53; repeated bob/rod shape changes."
+Q02,Y,U,Y,"Dense f24-47: apparent right-side shortening and bob connection changes; projection/blur ambiguous so rigidity unconfirmed."
+Q03,Y,N,Y,"Dense f44-67: rod shortens strongly at f48 and bends f63-65; bob/connection changes."
+Q04,Y,N,Y,"Sampled f4 has separate dark bob-like objects; later f12-20 and f36-40 bob becomes broad ring/flat shape."
+Q05,Y,U,Y,"Dense f24-47: visible repeatable excursion but shorter right projection and size/attachment changes; blur/projection unresolved."
+Q06,Y,N,Y,"Sampled f32-40 and f76-84: isolated black ball visibly separated from rod tip; rod bends/changes."
+Q07,Y,N,Y,"Sampled f28-44 and f76-84: detached ball with rod extending toward it; extra dark objects/size changes."
+Q08,Y,N,Y,"Sampled f20-28 pivot slides along axle; f40 visible gap to bob and f80 bent rod."
+Q09,Y,N,Y,"Dense f20-43: two distinct parallel rod branches persist f22-28 around left turning point."
+Q10,Y,N,Y,"Dense f4-27: rod bends f7-11 and strongly shortens; pivot/bob forms change; sampled f60 also shortens."
+Q11,Y,U,Y,"Dense f69-92: single visible end object with apparent shortening/shape change on right; projection/identity ambiguous."
+Q12,Y,U,Y,"Dense f48-71: thin changing rod-bob attachment near left turn; sampled right-side shortening; cannot confirm invariant rigid apparatus."
