@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; media-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Cosmos3-Nano — two provisional demos</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10131a;color:#edf1f8;font:17px/1.5 system-ui,sans-serif}main{max-width:1220px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:18px}h1{font-size:27px;letter-spacing:-.02em;margin:0}h2{font-size:23px;margin:0 0 8px}p{margin:8px 0}.badge{color:#ffdf9f;border:1px solid #745c31;padding:5px 12px;border-radius:20px;font-size:13px;white-space:nowrap}nav,.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}button,select{font:inherit;padding:8px 15px;border-radius:7px;background:#252c3a;border:1px solid #58647b;color:inherit;cursor:pointer}button[aria-pressed=true]{background:#254f46;border-color:#79dac0}button:hover{background:#3a4559}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #8be1cb;outline-offset:3px}article{border:1px solid #3c4557;border-radius:12px;padding:20px;background:#171c26}article:fullscreen{overflow:auto;display:flex;flex-direction:column;justify-content:center;padding:28px;background:#10131a}article:fullscreen video{max-height:66vh}video{display:block;width:100%;max-height:55vh;background:#000;border-radius:6px}small,.muted{color:#b3c0d4}small{font-size:13px}.note{border-left:3px solid #e0b45e;padding-left:14px;margin-top:15px}.error{color:#ffb9b9}details{margin-top:16px}a{color:#8be1cb}footer{margin-top:18px;font-size:13px;color:#b3c0d4}[hidden]{display:none!important}@media(max-width:640px){main{padding:14px}header{display:block}.badge{display:inline-block;margin-top:10px}article{padding:14px}h1{font-size:23px}h2{font-size:20px}}
+</style>
+<main>
+<header><h1>Cosmos3-Nano: motion guidance</h1><span class="badge">Demo · provisional</span></header>
+<p class="muted">Two selected comparisons. Clips are embedded in this file for offline playback.</p>
+<nav aria-label="Choose a demo">
+<button type="button" id="choose-pendulum" aria-controls="pendulum" aria-pressed="true">1 · Pendulum</button>
+<button type="button" id="choose-ball" aria-controls="ball" aria-pressed="false">2 · Ball settling</button>
+</nav>
+<article id="pendulum" aria-labelledby="pendulum-title">
+<h2 id="pendulum-title">Guide the swing with a simulated start</h2>
+<p>Real recording → original Nano → Nano with a physics start</p>
+<video id="pendulum-video" controls muted loop playsinline preload="auto" aria-label="Real pendulum, original Nano, and Nano with a physics start" src="@@PENDULUM_PHYSICS_START@@"></video>
+<div class="controls"><button type="button" data-play>Play</button><button type="button" data-restart>Restart</button><label>Speed <select aria-label="Pendulum playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><button type="button" data-fullscreen>Full screen</button></div>
+<p class="error" role="status" hidden></p>
+<p class="note">This demo supplies the real recording’s measured period (1.216 s) to the simulation. Nano follows the supplied motion; this does not show it discovering the correct period from frame 0.</p>
+<small>The displayed physics-start seed 1 gives 1.213 / 1.217 s in the two source tools. Original seed 1 gives 0.929 / 0.863 s, both flagged “check”; that pair is not a reliable baseline period. These are source-reported values, not new measurements.</small>
+</article>
+<article id="ball" aria-labelledby="ball-title" hidden>
+<h2 id="ball-title">Ask the ball to come to rest</h2>
+<p>Original prompt → prompt with a timed-settle sentence</p>
+<video id="ball-video" controls muted loop playsinline preload="auto" aria-label="Original ball prompt and prompt with timed settling" src="@@BALL_SETTLE@@"></video>
+<div class="controls"><button type="button" data-play>Play</button><button type="button" data-restart>Restart</button><label>Speed <select aria-label="Ball playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><button type="button" data-fullscreen>Full screen</button></div>
+<p class="error" role="status" hidden></p>
+<p class="note">This selected seed-3 original also has a gross visual artifact. The visible change includes artifact removal as well as settling.</p>
+<small>Source report: 0/6 originals settle versus 5/6 with the sentence, from unblinded eye coding. Gross artifacts: 4/6 versus 0/6. This selected clip does not establish general physics improvement or the full NVIDIA scoreboard.</small>
+</article>
+<details><summary>Source and scope</summary><p>Unchanged task #281 MP4s from shared-repo commit <code>a597e6f</code>. Both are 93 frames at 24 fps (3.875 s). Only the presentation wrapper is new. Current claim/provenance review is task #285.</p><p><a href="https://github.com/srirangam-r/cosmos-swarm/tree/a597e6f/work/raj-demos" target="_blank" rel="noopener">Original clips, code and source-reported results</a> (opens online when clicked).</p></details>
+<footer>Keys: 1 / 2 switch demos · Space plays or pauses · R restarts · F opens full screen. Switching pauses the previous demo. No autoplay.</footer>
+</main>
+<script>
+const cards=[...document.querySelectorAll('article')];
+function current(){return cards.find(card=>!card.hidden)}
+function error(card,message){const p=card.querySelector('.error');p.textContent=message;p.hidden=!message}
+async function play(card){try{await card.querySelector('video').play();error(card,'')}catch(e){error(card,'Playback could not start. Use the video’s native controls. '+e.message)}}
+async function toggle(card){const v=card.querySelector('video');if(v.paused)await play(card);else v.pause()}
+function restart(card){card.querySelector('video').currentTime=0;play(card)}
+async function fullscreen(card){try{if(document.fullscreenElement)await document.exitFullscreen();else await card.requestFullscreen()}catch(e){error(card,'Full screen is unavailable. '+e.message)}}
+function choose(id){for(const card of cards){const selected=card.id===id;if(!selected)card.querySelector('video').pause();card.hidden=!selected;document.getElementById('choose-'+card.id).setAttribute('aria-pressed',String(selected))}}
+for(const card of cards){const v=card.querySelector('video');for(const name of ['play','pause','ended'])v.addEventListener(name,()=>{card.querySelector('[data-play]').textContent=v.paused?'Play':'Pause'});v.addEventListener('error',()=>error(card,'Video decode failed in this browser. Try a browser with H.264 playback.'));card.querySelector('[data-play]').onclick=()=>toggle(card);card.querySelector('[data-restart]').onclick=()=>restart(card);card.querySelector('[data-fullscreen]').onclick=()=>fullscreen(card);card.querySelector('select').onchange=e=>{v.playbackRate=Number(e.target.value)};document.getElementById('choose-'+card.id).onclick=()=>choose(card.id)}
+document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.target.closest('button,select,input,textarea,a,video,summary'))return;const key=e.key.toLowerCase();if(['1','2',' ','r','f'].includes(key)){e.preventDefault();if(key==='1'||key==='2')choose(key==='1'?'pendulum':'ball');else if(key===' ')toggle(current());else if(key==='r')restart(current());else fullscreen(current())}});
+</script>
+</html>

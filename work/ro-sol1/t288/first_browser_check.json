@@ -1,0 +1,165 @@
+{
+  "utc": "2026-11-01T17:10:48.175Z",
+  "preview_sha256": "7178f28457dbfd15c61f1903eb202066f56896ce35a92216ff9899a7b0f325d2",
+  "mode": "headless installed Brave, anonymous CDP pipes, file URL, default muted autoplay policy",
+  "checks": [
+    {
+      "name": "embedded bytes equal both pinned source MP4s",
+      "pass": true,
+      "detail": [
+        {
+          "id": "pendulum-video",
+          "sha256": "fd724670aab40fd348fe5dfcd11e7996a62a13cb96b0fb9ec1a302d12cb84e99",
+          "bytes": 416202,
+          "width": 1264,
+          "height": 354,
+          "duration": 3.875,
+          "paused": true,
+          "ready": 4
+        },
+        {
+          "id": "ball-video",
+          "sha256": "6ba3af0a67bf3d3ee5497e22bdbfac6a58eaac2d88ad95aadce3e31df962ea86",
+          "bytes": 264206,
+          "width": 840,
+          "height": 354,
+          "duration": 3.875,
+          "paused": true,
+          "ready": 4
+        }
+      ]
+    },
+    {
+      "name": "both embedded MP4s decode and start paused offline",
+      "pass": true,
+      "detail": {
+        "pass": true
+      }
+    },
+    {
+      "name": "pendulum: seek to 1s works offline",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "actual": 1,
+        "seekable": [
+          [
+            0,
+            3.875
+          ]
+        ]
+      }
+    },
+    {
+      "name": "pendulum: Play advances actual decoded frames",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "frames": 11,
+        "time": 1.45262
+      }
+    },
+    {
+      "name": "pendulum: Pause stops the video",
+      "pass": true,
+      "detail": {
+        "pass": true
+      }
+    },
+    {
+      "name": "pendulum: speed control sets half speed",
+      "pass": true,
+      "detail": {
+        "pass": true
+      }
+    },
+    {
+      "name": "pendulum: Restart resets and plays",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "time": 0.120431
+      }
+    },
+    {
+      "name": "pendulum: actual playback wraps end to start",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "peak": 3.650257,
+        "time": 0.009349
+      }
+    },
+    {
+      "name": "pendulum: Full screen keeps the caption card",
+      "pass": true,
+      "detail": {
+        "pass": true
+      }
+    },
+    {
+      "name": "ball: seek to 1s works offline",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "actual": 1,
+        "seekable": [
+          [
+            0,
+            3.875
+          ]
+        ]
+      }
+    },
+    {
+      "name": "ball: Play advances actual decoded frames",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "frames": 11,
+        "time": 1.452573
+      }
+    },
+    {
+      "name": "ball: Pause stops the video",
+      "pass": true,
+      "detail": {
+        "pass": true
+      }
+    }
+  ],
+  "exceptions": [],
+  "external_requests": [],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  },
+  "media": [
+    {
+      "id": "pendulum-video",
+      "sha256": "fd724670aab40fd348fe5dfcd11e7996a62a13cb96b0fb9ec1a302d12cb84e99",
+      "bytes": 416202,
+      "width": 1264,
+      "height": 354,
+      "duration": 3.875,
+      "paused": true,
+      "ready": 4
+    },
+    {
+      "id": "ball-video",
+      "sha256": "6ba3af0a67bf3d3ee5497e22bdbfac6a58eaac2d88ad95aadce3e31df962ea86",
+      "bytes": 264206,
+      "width": 840,
+      "height": 354,
+      "duration": 3.875,
+      "paused": true,
+      "ready": 4
+    }
+  ],
+  "fatal": "Error: {\"exceptionId\":1,\"text\":\"Uncaught\",\"lineNumber\":0,\"columnNumber\":0,\"scriptId\":\"35\",\"exception\":{\"type\":\"object\",\"subtype\":\"error\",\"className\":\"SyntaxError\",\"description\":\"SyntaxError: Identifier 'select' has already been declared\",\"objectId\":\"-1969933639097075024.2.2\"}}\n    at evaluate (/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t288/browser_check.cjs:47:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async /home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t288/browser_check.cjs:95:7",
+  "passed": 12,
+  "failed": 0
+}

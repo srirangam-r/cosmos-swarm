@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-01T17:11:15.700189+00:00",
+  "checks": [
+    {
+      "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+      "status": 200,
+      "sha256": "9a880513ca80eea475261f9a53f543786362b33deff7e833d5cb1f1b4550ef95"
+    },
+    {
+      "url": "http://board.tail0c526a.ts.net:8031/demos/",
+      "status": 200,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
+    }
+  ]
+}

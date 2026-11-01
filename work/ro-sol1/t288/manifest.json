@@ -1,0 +1,20 @@
+{
+  "source_commit": "a597e6f",
+  "media": [
+    {
+      "name": "pendulum_physics_start.mp4",
+      "source": "work/raj-demos/pendulum_physics_start.mp4",
+      "sha256": "fd724670aab40fd348fe5dfcd11e7996a62a13cb96b0fb9ec1a302d12cb84e99",
+      "bytes": 416202
+    },
+    {
+      "name": "ball_settle.mp4",
+      "source": "work/raj-demos/ball_settle.mp4",
+      "sha256": "6ba3af0a67bf3d3ee5497e22bdbfac6a58eaac2d88ad95aadce3e31df962ea86",
+      "bytes": 264206
+    }
+  ],
+  "scope": "offline presentation; no new measurements",
+  "html_bytes": 914827,
+  "html_sha256": "7178f28457dbfd15c61f1903eb202066f56896ce35a92216ff9899a7b0f325d2"
+}
