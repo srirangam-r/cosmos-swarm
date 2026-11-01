@@ -5,3 +5,5 @@
 __pycache__/
 .venv/
 *.log
+work/dk2/t276/clips/*.mp4
+work/dk2/t276/*.log
