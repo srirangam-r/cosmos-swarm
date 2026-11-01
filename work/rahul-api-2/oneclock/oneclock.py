@@ -50,11 +50,13 @@ def analyse(cy, prom=8.0):
     pk, _ = find_peaks(yi, prominence=prom)
     imp = [int(p + off) for p in pk if on is not None and p + off > on]
     out = dict(flag='ok', y0=y0, onset=on, impacts=imp, n_tracked=int(len(idx)), last_tracked=int(idx[-1]))
-    if on is None or not imp:
-        out['flag'] = 'no_fall_or_no_impact'; return out
     def seg(a, b):
         tt = np.array([t for t in range(a, b + 1) if 0 <= t < T and np.isfinite(cy[t])])
         return fit_seg(tt.astype(float), cy[tt]) if len(tt) else None
+    if on is None:
+        out['flag'] = 'no_fall'; return out
+    if not imp:                                                            # fall-only clip: onset .. last tracked frame
+        out['flag'] = 'no_impact'; out['fall'] = seg(on, int(idx[-1])); out['flights'] = []; return out
     out['fall'] = seg(on, imp[0] - 1)
     out['flights'] = []
     for k in range(len(imp) - 1):
