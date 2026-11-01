@@ -1,0 +1,7 @@
+# Ball 2, seed 2: held-frame control, partial visual QC
+
+Unblinded, qualitative and not planted validated. Control original SHA-256 `1df5b2f61747a741ea1c77bfd8ee777f95d5fc4192ad4ee5a239e65de353bab9`; 189 frames. Sheets show every sixth frame and selected native-resolution frames, including consecutive transition frames. Sidecar accompanies this note. The matched mid-event clip was reviewed in #4295 and is documented in `clip04/`.
+
+The initial object is difficult to distinguish from the gripper and dark background. A large ball-like form is visible by frame 36, near the plank through frame 64. It is blurred but still within the picture at frame 64, and is no longer visible at frame 65. A similar form appears again by frame 120 and is visible near the plank at frame 144, fades to a partial blur at 145, and is no longer visible at 146. This is an apparent in-frame disappearance twice; identity through low-contrast intervals, the physical contact, and relationship to the original held object are unresolved. The arm also moves, and the scene appears to repeat, but this inspection does not establish an exact loop. Sparse sampling can miss other events.
+
+The mid clip shows a dark form changing apparent height through frame 188 (#4295), but identity and contact there are unresolved. These are selected observations on one pair, not a rate or a causal arm comparison. A later real conditioning frame is diagnostic only and cannot be a first-frame-only recipe.
