@@ -51,5 +51,29 @@
  "ms_pend11_mid_s3": {
   "code": "swing",
   "note": "fast, large, chaotic swing incl. near-horizontal excursions, ~0.4 s"
+ },
+ "ms_pend10_restev_s1": {
+  "code": "moves_broken",
+  "note": "leaves axle by ~f16 but rod grows to ~2x length spanning axle-to-table, bob vanishes/teleports; no rigid swing"
+ },
+ "ms_pend10_restev_s2": {
+  "code": "delayed_morph",
+  "note": "held at axle to ~f32, then a T-shaped multi-rod object with duplicate bobs dangles and wobbles"
+ },
+ "ms_pend10_restev_s3": {
+  "code": "moves_broken",
+  "note": "drops by f12 but rod becomes table-length stick with bob ABOVE the axle region, slow lean; not a pendulum"
+ },
+ "ms_pend11_restev_s1": {
+  "code": "detached",
+  "note": "explodes into tangled rods by f12, falls to table and leaves frame by f24-28; nothing on axle after"
+ },
+ "ms_pend11_restev_s2": {
+  "code": "delayed_morph",
+  "note": "held to ~f32, then T-shaped object with duplicate bobs dangles below axle"
+ },
+ "ms_pend11_restev_s3": {
+  "code": "moves_broken",
+  "note": "drops by f8; rod length morphs (to table-length), swings below axle with changing length; closest to a swing but not rigid"
  }
 }
