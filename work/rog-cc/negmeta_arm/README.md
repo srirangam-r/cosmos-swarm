@@ -21,3 +21,8 @@ GAUGE ball1/ball2 frame 0, 832x480, exact GAUGE prompt, 93 f @ 24 fps, 35 steps,
 - firstfall g values (meas/) mostly track arm-carried motion here (e.g. same_nvneg_ball1_s2 g=0.11 is the gripper lowering
   the ball). Do not read them as free-fall gravity. The hypothesis "SAME metadata shortens the fall" is not supported:
   the metadata does not change the outcome at this n.
+
+## Dynamic degree (tools/nv_scoreboard/score.py --no_dover, RAFT on the 4060; dd_negmeta.json)
+- dd_norm per arm (mean +- SE, n=4): inv_empty 6.99+-0.45, same_empty 7.06+-0.53, inv_nvneg 4.17+-0.50, same_nvneg 4.31+-0.41.
+- Paired empty - nvneg: 2.79 +- 0.61 (8/8 positive; seed 1 ~1.1-1.35, seed 2 ~3.9-4.8). dd_binary 8/8 (empty) vs 5/8 (nvneg).
+- Paired SAME - INV: +0.10 +- 0.09 (no effect).
