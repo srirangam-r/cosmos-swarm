@@ -1,0 +1,1022 @@
+{
+  "clips": {
+    "gauge_b1_ctrl_s1.mp4": {
+      "tracking": {
+        "n_frames": 93,
+        "max_grip_diff": 158.32722222222222,
+        "end_grip_diff": 18.87880555555555,
+        "max_corr_diff": 79.56859375,
+        "max_plank_diff": 70.679,
+        "y_start": 114.2,
+        "y_final": 114.06666666666666,
+        "y_range": 59.0,
+        "dy_net": -0.13333333333333997,
+        "final_min_v": 33.53333333333333,
+        "released": false,
+        "phantom_clone": true,
+        "arm": "ctrl",
+        "seed": 1
+      },
+      "firstfall": {
+        "g": -0.27687298593250415,
+        "g_ci95": [
+          -0.48877144501122194,
+          -0.10735421866994245
+        ],
+        "g_sd": 0.09527775697064998,
+        "r2": 0.8510564724924085,
+        "dAIC_quad_vs_lin": 2.5693733417202225,
+        "flag": "weak",
+        "n_fit": 4,
+        "t0": 3.749999987964416,
+        "fit_frames": [
+          87,
+          90
+        ],
+        "motion_frame": 92,
+        "impact_frame": 92,
+        "fall_time_s": 0.08333334536891757,
+        "fall_px": 32.05882352941177,
+        "fall_m": 0.059390188087091095,
+        "g_from_h_T": 17.10436922841604,
+        "d_seed_px": 7.312732791431452,
+        "d_impact_px": 6.180387232371033,
+        "d_ratio": 0.8451542547285165,
+        "d_fallstart_px": 10.464157913908982,
+        "d_growth": 0.5906244232186183,
+        "e": null,
+        "m_per_px": 0.0018525379770285293,
+        "fps_true": 24.0,
+        "n_tracked": 92,
+        "track_info": {
+          "point": [
+            638.3667736757625,
+            3.197431781701445
+          ],
+          "pframe": 0,
+          "ctol": 25.0,
+          "seed_area": 42
+        },
+        "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+      },
+      "nv_scoreboard": {
+        "clip": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_ctrl_s1.mp4",
+        "fps": 24.0,
+        "fps_source": "container",
+        "sidecar": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_ctrl_s1.json",
+        "metadata": {
+          "clip": "gauge_b1_ctrl_s1.mp4",
+          "seed": 1,
+          "early_scale": 1.0,
+          "num_frames": 93,
+          "fps": 24,
+          "steps": 35,
+          "guidance": 6.0,
+          "flow_shift": 10.0,
+          "wall_sec": 257.32,
+          "step_log_sample": [
+            [
+              995.0,
+              1.0
+            ],
+            [
+              995.0,
+              1.0
+            ],
+            [
+              994.0,
+              1.0
+            ],
+            [
+              994.0,
+              1.0
+            ],
+            [
+              993.0,
+              1.0
+            ],
+            [
+              993.0,
+              1.0
+            ]
+          ]
+        },
+        "dd_binary": 1,
+        "dd_norm": 5.490985567569733,
+        "dd_frac": 0.4,
+        "dd_pairs": 30,
+        "dd_interval": 3,
+        "dd_thres_px": 11.25,
+        "dd_count_num": 8,
+        "dd_maxrad": [
+          2.955,
+          9.619,
+          14.372,
+          14.613,
+          6.701,
+          4.747,
+          16.925,
+          23.553,
+          23.632,
+          10.196,
+          10.198,
+          13.31,
+          8.541,
+          6.686,
+          16.167,
+          20.59,
+          17.435,
+          17.006,
+          20.556,
+          15.598,
+          11.078,
+          8.803,
+          6.756,
+          4.153,
+          1.464,
+          0.262,
+          0.266,
+          0.225,
+          0.208,
+          2.252
+        ],
+        "sec": 27.3,
+        "dover_technical": -0.06946935877203941,
+        "dover_aesthetic": 0.03709286451339722,
+        "dover_fused": 0.4362111248897838,
+        "dover_fused_sd": 0.02656211893775981,
+        "dover_technical_sd": 0.013019648183125225,
+        "dover_aesthetic_sd": 0.0,
+        "dover_reps": 3
+      }
+    },
+    "gauge_b1_ctrl_s2.mp4": {
+      "tracking": {
+        "n_frames": 93,
+        "max_grip_diff": 51.53388888888889,
+        "end_grip_diff": 39.916472222222225,
+        "max_corr_diff": 18.74,
+        "max_plank_diff": 62.2265,
+        "y_start": 112.0,
+        "y_final": 127.46666666666667,
+        "y_range": 52.0,
+        "dy_net": 15.466666666666669,
+        "final_min_v": 9.0,
+        "released": false,
+        "phantom_clone": true,
+        "arm": "ctrl",
+        "seed": 2
+      },
+      "firstfall": {
+        "g": 8.67134732455635,
+        "g_ci95": [
+          4.152658444018298,
+          14.319708425228944
+        ],
+        "g_sd": 2.539721990299719,
+        "r2": 0.9255601720996309,
+        "dAIC_quad_vs_lin": 3.4908476385503775,
+        "flag": "weak",
+        "n_fit": 4,
+        "t0": 0.37583620614380886,
+        "fit_frames": [
+          7,
+          10
+        ],
+        "motion_frame": 12,
+        "impact_frame": 6,
+        "fall_time_s": -0.12583620614380886,
+        "fall_px": -14.564848195282984,
+        "fall_m": -0.026981934411417163,
+        "g_from_h_T": null,
+        "d_seed_px": 7.312732791431452,
+        "d_impact_px": 14.317526556719258,
+        "d_ratio": 1.9578900207451218,
+        "d_fallstart_px": 8.214724333230155,
+        "d_growth": 1.742910166662816,
+        "e": null,
+        "m_per_px": 0.0018525379770285293,
+        "fps_true": 24.0,
+        "n_tracked": 93,
+        "track_info": {
+          "point": [
+            288.74100882153357,
+            53.005881022393126
+          ],
+          "pframe": 0,
+          "ctol": 25.0,
+          "seed_area": 42
+        },
+        "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+      },
+      "nv_scoreboard": {
+        "clip": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_ctrl_s2.mp4",
+        "fps": 24.0,
+        "fps_source": "container",
+        "sidecar": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_ctrl_s2.json",
+        "metadata": {
+          "clip": "gauge_b1_ctrl_s2.mp4",
+          "seed": 2,
+          "early_scale": 1.0,
+          "num_frames": 93,
+          "fps": 24,
+          "steps": 35,
+          "guidance": 6.0,
+          "flow_shift": 10.0,
+          "wall_sec": 255.58,
+          "step_log_sample": [
+            [
+              995.0,
+              1.0
+            ],
+            [
+              995.0,
+              1.0
+            ],
+            [
+              994.0,
+              1.0
+            ],
+            [
+              994.0,
+              1.0
+            ],
+            [
+              993.0,
+              1.0
+            ],
+            [
+              993.0,
+              1.0
+            ]
+          ]
+        },
+        "dd_binary": 0,
+        "dd_norm": 1.172236589855618,
+        "dd_frac": 0.06666666666666667,
+        "dd_pairs": 30,
+        "dd_interval": 3,
+        "dd_thres_px": 11.25,
+        "dd_count_num": 8,
+        "dd_maxrad": [
+          2.408,
+          8.555,
+          11.659,
+          11.462,
+          0.439,
+          5.826,
+          5.979,
+          1.482,
+          6.772,
+          2.407,
+          2.262,
+          3.168,
+          0.442,
+          0.167,
+          0.175,
+          0.198,
+          0.22,
+          0.167,
+          0.139,
+          0.168,
+          0.222,
+          0.214,
+          0.122,
+          0.146,
+          0.181,
+          0.152,
+          0.205,
+          0.175,
+          0.223,
+          0.202
+        ],
+        "sec": 17.7,
+        "dover_technical": -0.08133649577697118,
+        "dover_aesthetic": 0.0249582938849926,
+        "dover_fused": 0.38210025757249094,
+        "dover_fused_sd": 0.010561799894353038,
+        "dover_technical_sd": 0.005387002269857512,
+        "dover_aesthetic_sd": 0.0,
+        "dover_reps": 3
+      }
+    },
+    "gauge_b1_ctrl_s3.mp4": {
+      "tracking": {
+        "n_frames": 93,
+        "max_grip_diff": 66.21333333333334,
+        "end_grip_diff": 40.15401388888888,
+        "max_corr_diff": 40.716171875,
+        "max_plank_diff": 102.50325,
+        "y_start": 111.8,
+        "y_final": 143.53333333333333,
+        "y_range": 58.0,
+        "dy_net": 31.733333333333334,
+        "final_min_v": 23.466666666666665,
+        "released": false,
+        "phantom_clone": true,
+        "arm": "ctrl",
+        "seed": 3
+      },
+      "firstfall": {
+        "g": 1.1831384795489053,
+        "g_ci95": [
+          0.9259377111348367,
+          1.5046394400664886
+        ],
+        "g_sd": 0.1445592880440639,
+        "r2": 0.9628645232247688,
+        "dAIC_quad_vs_lin": 9.545550362312746,
+        "flag": "weak",
+        "n_fit": 4,
+        "t0": 0.12502191814251815,
+        "fit_frames": [
+          1,
+          4
+        ],
+        "motion_frame": 6,
+        "impact_frame": 6,
+        "fall_time_s": 0.12497808185748185,
+        "fall_px": 9.097478650436187,
+        "fall_m": 0.01685342469513929,
+        "g_from_h_T": 2.157995082528646,
+        "d_seed_px": 10.464157913908982,
+        "d_impact_px": 8.058239062071396,
+        "d_ratio": 0.7700800320836487,
+        "d_fallstart_px": 9.772050238058398,
+        "d_growth": 0.824621125123532,
+        "e": null,
+        "m_per_px": 0.0018525379770285293,
+        "fps_true": 24.0,
+        "n_tracked": 93,
+        "track_info": {
+          "point": [
+            292.38424721673084,
+            49.650192487774426
+          ],
+          "pframe": 0,
+          "ctol": 25.0,
+          "seed_area": 86
+        },
+        "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+      },
+      "nv_scoreboard": {
+        "clip": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_ctrl_s3.mp4",
+        "fps": 24.0,
+        "fps_source": "container",
+        "sidecar": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_ctrl_s3.json",
+        "metadata": {
+          "clip": "gauge_b1_ctrl_s3.mp4",
+          "seed": 3,
+          "early_scale": 1.0,
+          "num_frames": 93,
+          "fps": 24,
+          "steps": 35,
+          "guidance": 6.0,
+          "flow_shift": 10.0,
+          "wall_sec": 584.52,
+          "step_log_sample": [
+            [
+              995.0,
+              1.0
+            ],
+            [
+              995.0,
+              1.0
+            ],
+            [
+              994.0,
+              1.0
+            ],
+            [
+              994.0,
+              1.0
+            ],
+            [
+              993.0,
+              1.0
+            ],
+            [
+              993.0,
+              1.0
+            ]
+          ]
+        },
+        "dd_binary": 0,
+        "dd_norm": 2.409200605816311,
+        "dd_frac": 0.06666666666666667,
+        "dd_pairs": 30,
+        "dd_interval": 3,
+        "dd_thres_px": 11.25,
+        "dd_count_num": 8,
+        "dd_maxrad": [
+          0.945,
+          1.326,
+          6.582,
+          6.903,
+          17.28,
+          6.557,
+          24.096,
+          1.657,
+          5.062,
+          6.057,
+          7.011,
+          7.497,
+          7.436,
+          6.632,
+          6.324,
+          5.809,
+          4.89,
+          3.717,
+          1.804,
+          0.901,
+          1.42,
+          0.758,
+          0.675,
+          0.634,
+          0.27,
+          0.455,
+          0.81,
+          0.805,
+          0.61,
+          0.593
+        ],
+        "sec": 18.3,
+        "dover_technical": -0.06149842838446299,
+        "dover_aesthetic": 0.0393209345638752,
+        "dover_fused": 0.4581546382486783,
+        "dover_fused_sd": 0.01578084767931268,
+        "dover_technical_sd": 0.007669575929885328,
+        "dover_aesthetic_sd": 0.0,
+        "dover_reps": 3
+      }
+    },
+    "gauge_b1_rope07_s1.mp4": {
+      "tracking": {
+        "n_frames": 93,
+        "max_grip_diff": 158.0675,
+        "end_grip_diff": 52.09018055555556,
+        "max_corr_diff": 141.00453125,
+        "max_plank_diff": 142.0305,
+        "y_start": 119.0,
+        "y_final": 114.0,
+        "y_range": 59.0,
+        "dy_net": -5.0,
+        "final_min_v": 23.533333333333335,
+        "released": false,
+        "phantom_clone": true,
+        "arm": "rope07",
+        "seed": 1
+      },
+      "firstfall": {
+        "g": 1.1766808103589539,
+        "g_ci95": [
+          0.7730089601504552,
+          1.6242453402640633
+        ],
+        "g_sd": 0.21762698964577984,
+        "r2": 0.9663210685101389,
+        "dAIC_quad_vs_lin": 11.573774197066541,
+        "flag": "weak",
+        "n_fit": 10,
+        "t0": 1.6969248424904804,
+        "fit_frames": [
+          42,
+          51
+        ],
+        "motion_frame": 50,
+        "impact_frame": 53,
+        "fall_time_s": 0.5114084908428531,
+        "fall_px": 37.79782082324455,
+        "fall_m": 0.07002189852398027,
+        "g_from_h_T": 0.5354612023488546,
+        "d_seed_px": 4.370193722368317,
+        "d_impact_px": 8.667244841319219,
+        "d_ratio": 1.9832633040858023,
+        "d_fallstart_px": 12.257335203001883,
+        "d_growth": 0.7071067811865476,
+        "e": 0.7166296424714285,
+        "m_per_px": 0.0018525379770285293,
+        "fps_true": 24.0,
+        "n_tracked": 92,
+        "track_info": {
+          "point": [
+            290.7007111202721,
+            50.415335463258785
+          ],
+          "pframe": 0,
+          "ctol": 25.0,
+          "seed_area": 15
+        },
+        "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+      },
+      "nv_scoreboard": {
+        "clip": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_rope07_s1.mp4",
+        "fps": 24.0,
+        "fps_source": "container",
+        "sidecar": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_rope07_s1.json",
+        "metadata": {
+          "clip": "gauge_b1_rope07_s1.mp4",
+          "seed": 1,
+          "early_scale": 0.7,
+          "num_frames": 93,
+          "fps": 24,
+          "steps": 35,
+          "guidance": 6.0,
+          "flow_shift": 10.0,
+          "wall_sec": 253.31,
+          "step_log_sample": [
+            [
+              995.0,
+              0.7
+            ],
+            [
+              995.0,
+              0.7
+            ],
+            [
+              994.0,
+              0.7
+            ],
+            [
+              994.0,
+              0.7
+            ],
+            [
+              993.0,
+              0.7
+            ],
+            [
+              993.0,
+              0.7
+            ]
+          ]
+        },
+        "dd_binary": 1,
+        "dd_norm": 11.09727113087972,
+        "dd_frac": 0.6333333333333333,
+        "dd_pairs": 30,
+        "dd_interval": 3,
+        "dd_thres_px": 11.25,
+        "dd_count_num": 8,
+        "dd_maxrad": [
+          0.783,
+          32.847,
+          0.789,
+          1.063,
+          7.986,
+          22.645,
+          17.266,
+          22.816,
+          14.582,
+          3.093,
+          7.563,
+          77.928,
+          13.324,
+          3.266,
+          1.333,
+          24.832,
+          21.618,
+          48.325,
+          61.483,
+          15.776,
+          106.95,
+          17.57,
+          0.503,
+          22.609,
+          2.356,
+          16.884,
+          13.922,
+          3.115,
+          15.892,
+          25.101
+        ],
+        "sec": 18.8,
+        "dover_technical": -0.06886261701583862,
+        "dover_aesthetic": 0.025376392528414726,
+        "dover_fused": 0.40784580926902875,
+        "dover_fused_sd": 0.008861919149041437,
+        "dover_technical_sd": 0.0044256605623068344,
+        "dover_aesthetic_sd": 0.0,
+        "dover_reps": 3
+      }
+    },
+    "gauge_b1_rope07_s2.mp4": {
+      "tracking": {
+        "n_frames": 93,
+        "max_grip_diff": 57.272777777777776,
+        "end_grip_diff": 43.562124999999995,
+        "max_corr_diff": 43.770703125,
+        "max_plank_diff": 92.7775,
+        "y_start": 112.8,
+        "y_final": 131.46666666666667,
+        "y_range": 59.0,
+        "dy_net": 18.66666666666667,
+        "final_min_v": 17.6,
+        "released": false,
+        "phantom_clone": true,
+        "arm": "rope07",
+        "seed": 2
+      },
+      "firstfall": {
+        "g": 10.41417702004089,
+        "g_ci95": [
+          6.852073408681528,
+          14.866806534240213
+        ],
+        "g_sd": 2.0020747417375384,
+        "r2": 0.940610396431079,
+        "dAIC_quad_vs_lin": 6.235916368018984,
+        "flag": "weak",
+        "n_fit": 4,
+        "t0": 0.3751488143698176,
+        "fit_frames": [
+          7,
+          10
+        ],
+        "motion_frame": 12,
+        "impact_frame": 6,
+        "fall_time_s": -0.12514881436981762,
+        "fall_px": -5.25,
+        "fall_m": -0.009725824379399778,
+        "g_from_h_T": null,
+        "d_seed_px": 10.02925341359355,
+        "d_impact_px": 3.9088200952233594,
+        "d_ratio": 0.3897418814769785,
+        "d_fallstart_px": 4.918490759365935,
+        "d_growth": 0.7947194142390263,
+        "e": null,
+        "m_per_px": 0.0018525379770285293,
+        "fps_true": 24.0,
+        "n_tracked": 92,
+        "track_info": {
+          "point": [
+            289.82200908632007,
+            46.7680969207471
+          ],
+          "pframe": 0,
+          "ctol": 25.0,
+          "seed_area": 79
+        },
+        "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+      },
+      "nv_scoreboard": {
+        "clip": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_rope07_s2.mp4",
+        "fps": 24.0,
+        "fps_source": "container",
+        "sidecar": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_rope07_s2.json",
+        "metadata": {
+          "clip": "gauge_b1_rope07_s2.mp4",
+          "seed": 2,
+          "early_scale": 0.7,
+          "num_frames": 93,
+          "fps": 24,
+          "steps": 35,
+          "guidance": 6.0,
+          "flow_shift": 10.0,
+          "wall_sec": 338.67,
+          "step_log_sample": [
+            [
+              995.0,
+              0.7
+            ],
+            [
+              995.0,
+              0.7
+            ],
+            [
+              994.0,
+              0.7
+            ],
+            [
+              994.0,
+              0.7
+            ],
+            [
+              993.0,
+              0.7
+            ],
+            [
+              993.0,
+              0.7
+            ]
+          ]
+        },
+        "dd_binary": 0,
+        "dd_norm": 2.1373071286413405,
+        "dd_frac": 0.1,
+        "dd_pairs": 30,
+        "dd_interval": 3,
+        "dd_thres_px": 11.25,
+        "dd_count_num": 8,
+        "dd_maxrad": [
+          0.708,
+          6.719,
+          9.977,
+          14.353,
+          1.029,
+          1.053,
+          0.693,
+          2.294,
+          0.75,
+          0.622,
+          0.229,
+          0.266,
+          0.386,
+          1.99,
+          1.282,
+          0.836,
+          41.427,
+          0.463,
+          22.617,
+          2.083,
+          6.38,
+          0.306,
+          0.242,
+          0.293,
+          0.287,
+          0.606,
+          0.495,
+          0.508,
+          0.737,
+          0.59
+        ],
+        "sec": 18.3,
+        "dover_technical": -0.07586350291967392,
+        "dover_aesthetic": 0.03053058125078678,
+        "dover_fused": 0.40665798743990417,
+        "dover_fused_sd": 0.007200723713370442,
+        "dover_technical_sd": 0.0035996961380551857,
+        "dover_aesthetic_sd": 0.0,
+        "dover_reps": 3
+      }
+    },
+    "gauge_b1_rope07_s3.mp4": {
+      "tracking": {
+        "n_frames": 93,
+        "max_grip_diff": 134.53055555555557,
+        "end_grip_diff": 42.006888888888895,
+        "max_corr_diff": 82.116328125,
+        "max_plank_diff": 108.789,
+        "y_start": 123.2,
+        "y_final": 149.0,
+        "y_range": 59.0,
+        "dy_net": 25.799999999999997,
+        "final_min_v": 9.6,
+        "released": false,
+        "phantom_clone": true,
+        "arm": "rope07",
+        "seed": 3
+      },
+      "firstfall": {
+        "g": 14.452221361447018,
+        "g_ci95": [
+          11.30729899962952,
+          18.383374313718917
+        ],
+        "g_sd": 1.7675986754684985,
+        "r2": 0.9510291085188597,
+        "dAIC_quad_vs_lin": 9.537921408753455,
+        "flag": "weak",
+        "n_fit": 4,
+        "t0": 0.12518264237389365,
+        "fit_frames": [
+          1,
+          4
+        ],
+        "motion_frame": 0,
+        "impact_frame": 0,
+        "fall_time_s": -0.12518264237389365,
+        "fall_px": 0.0,
+        "fall_m": 0.0,
+        "g_from_h_T": null,
+        "d_seed_px": 4.370193722368317,
+        "d_impact_px": 4.370193722368317,
+        "d_ratio": 1.0,
+        "d_fallstart_px": 4.787307364817192,
+        "d_growth": 0.912870929175277,
+        "e": null,
+        "m_per_px": 0.0018525379770285293,
+        "fps_true": 24.0,
+        "n_tracked": 92,
+        "track_info": {
+          "point": [
+            281.55729221670714,
+            49.21121554546415
+          ],
+          "pframe": 0,
+          "ctol": 25.0,
+          "seed_area": 15
+        },
+        "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+      },
+      "nv_scoreboard": {
+        "clip": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_rope07_s3.mp4",
+        "fps": 24.0,
+        "fps_source": "container",
+        "sidecar": "/home/nail/swarm-work/agy-3/task103_rope_scale_review/clips/gauge_b1_rope07_s3.json",
+        "metadata": {
+          "clip": "gauge_b1_rope07_s3.mp4",
+          "seed": 3,
+          "early_scale": 0.7,
+          "num_frames": 93,
+          "fps": 24,
+          "steps": 35,
+          "guidance": 6.0,
+          "flow_shift": 10.0,
+          "wall_sec": 575.29,
+          "step_log_sample": [
+            [
+              995.0,
+              0.7
+            ],
+            [
+              995.0,
+              0.7
+            ],
+            [
+              994.0,
+              0.7
+            ],
+            [
+              994.0,
+              0.7
+            ],
+            [
+              993.0,
+              0.7
+            ],
+            [
+              993.0,
+              0.7
+            ]
+          ]
+        },
+        "dd_binary": 1,
+        "dd_norm": 5.1246556674109565,
+        "dd_frac": 0.3333333333333333,
+        "dd_pairs": 30,
+        "dd_interval": 3,
+        "dd_thres_px": 11.25,
+        "dd_count_num": 8,
+        "dd_maxrad": [
+          8.636,
+          7.471,
+          1.73,
+          9.05,
+          18.262,
+          17.347,
+          23.841,
+          2.768,
+          16.054,
+          32.471,
+          26.727,
+          31.829,
+          25.306,
+          25.07,
+          23.855,
+          9.928,
+          0.733,
+          0.315,
+          0.38,
+          0.298,
+          0.696,
+          0.261,
+          0.267,
+          0.236,
+          0.497,
+          0.975,
+          0.562,
+          0.617,
+          0.869,
+          1.21
+        ],
+        "sec": 15.9,
+        "dover_technical": -0.05933899929126104,
+        "dover_aesthetic": 0.04209807887673378,
+        "dover_fused": 0.469715143150166,
+        "dover_fused_sd": 0.006514680742249234,
+        "dover_technical_sd": 0.003150821464145137,
+        "dover_aesthetic_sd": 0.0,
+        "dover_reps": 3
+      }
+    }
+  },
+  "summary": {
+    "ctrl": {
+      "dover_fused": [
+        0.4362111248897838,
+        0.38210025757249094,
+        0.4581546382486783
+      ],
+      "dover_tech": [
+        -0.06946935877203941,
+        -0.08133649577697118,
+        -0.06149842838446299
+      ],
+      "dover_aest": [
+        0.03709286451339722,
+        0.0249582938849926,
+        0.0393209345638752
+      ],
+      "dd_norm": [
+        5.490985567569733,
+        1.172236589855618,
+        2.409200605816311
+      ],
+      "releases": 0,
+      "clones": 3
+    },
+    "rope07": {
+      "dover_fused": [
+        0.40784580926902875,
+        0.40665798743990417,
+        0.469715143150166
+      ],
+      "dover_tech": [
+        -0.06886261701583862,
+        -0.07586350291967392,
+        -0.05933899929126104
+      ],
+      "dover_aest": [
+        0.025376392528414726,
+        0.03053058125078678,
+        0.04209807887673378
+      ],
+      "dd_norm": [
+        11.09727113087972,
+        2.1373071286413405,
+        5.1246556674109565
+      ],
+      "releases": 0,
+      "clones": 3
+    },
+    "paired_deltas": {
+      "dover_fused": [
+        -0.02836531562075506,
+        0.024557729867413225,
+        0.01156050490148769
+      ],
+      "dover_tech": [
+        0.0006067417562007904,
+        0.005472992857297257,
+        0.0021594290932019505
+      ],
+      "dover_aest": [
+        -0.01171647198498249,
+        0.005572287365794182,
+        0.0027771443128585815
+      ],
+      "dd_norm": [
+        5.606285563309988,
+        0.9650705387857226,
+        2.7154550615946453
+      ]
+    }
+  },
+  "stats": {
+    "dover_fused": {
+      "ctrl": "0.4255 \u00b1 0.0226",
+      "rope07": "0.4281 \u00b1 0.0208",
+      "delta": "+0.0026 \u00b1 0.0159",
+      "raw_ctrl_mean": 0.42548867357031767,
+      "raw_ctrl_se": 0.022600113766183764,
+      "raw_rope_mean": 0.42807297995303295,
+      "raw_rope_se": 0.020823904908997666,
+      "raw_delta_mean": 0.0025843063827152846,
+      "raw_delta_se": 0.015923162278287054
+    },
+    "dover_tech": {
+      "ctrl": "-0.0708 \u00b1 0.0058",
+      "rope07": "-0.0680 \u00b1 0.0048",
+      "delta": "+0.0027 \u00b1 0.0014",
+      "raw_ctrl_mean": -0.07076809431115785,
+      "raw_ctrl_se": 0.0057634557043453,
+      "raw_rope_mean": -0.06802170640892453,
+      "raw_rope_se": 0.004788707307404686,
+      "raw_delta_mean": 0.0027463879022333326,
+      "raw_delta_se": 0.0014350947038848803
+    },
+    "dover_aest": {
+      "ctrl": "0.0338 \u00b1 0.0045",
+      "rope07": "0.0327 \u00b1 0.0049",
+      "delta": "-0.0011 \u00b1 0.0054",
+      "raw_ctrl_mean": 0.03379069765408834,
+      "raw_ctrl_se": 0.004462794016185813,
+      "raw_rope_mean": 0.03266835088531176,
+      "raw_rope_se": 0.00494406185373298,
+      "raw_delta_mean": -0.0011223467687765758,
+      "raw_delta_se": 0.005358165824050897
+    },
+    "dd_norm": {
+      "ctrl": "3.0241 \u00b1 1.2841",
+      "rope07": "6.1197 \u00b1 2.6339",
+      "delta": "+3.0956 \u00b1 1.3532",
+      "raw_ctrl_mean": 3.0241409210805537,
+      "raw_ctrl_se": 1.2840705947142785,
+      "raw_rope_mean": 6.119744642310672,
+      "raw_rope_se": 2.6339381340068924,
+      "raw_delta_mean": 3.0956037212301184,
+      "raw_delta_se": 1.3532188759318071
+    }
+  }
+}
