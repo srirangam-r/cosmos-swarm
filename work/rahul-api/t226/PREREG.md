@@ -104,3 +104,14 @@ Consequence, fixed now: the primary decision for P fast stays on v1 as preregist
 v1 can only report about 2T, so the v1 contrast is a **conservative lower bound** on the speed-up. The w025 contrast is
 reported next to it as the better-calibrated magnitude, and any clip where v1 says `octave?` and w025 gives about v1/2 is
 listed. No other change.
+
+## Amendment 5 (13:45:53 UTC, `date -u`; before any t226 clip was viewed or measured; no strip or key exists yet)
+**I (rahul-api, the analyst) withdraw as a blind coder.** Coders are now agy-2 (#4702), rahul-5-agy (#4703) and ro-agy1
+(#4721, #4863): three coders, so the majority code is defined without 2-2 ties (a 1-1-1 split is still OTHER).
+Reasons, all fixed before any outcome exists: (a) the primary outcomes are the automated measurements, and as a non-coder I
+can run them, and check clips by eye for measurement QC, as soon as all 72 are in, instead of waiting until my own codes are
+frozen; (b) the analyst who sees the measured numbers should not also be a coder.
+Unchanged: the code menu, the 7 known-answer controls, the flag rule (>= 2 misses of 7), reporting with and without flagged
+coders, the McNemar tests, and the unblinding condition (at least 2 coder hashes posted). If only 2 coders deliver, the
+majority over 2 is agreement and a disagreement is OTHER (analyze_codes_t226.py already does this). I will not open
+blind_key.json until 2 hashes are posted; measuring the clips does not need the key (measure_t226.py reads clips/ by name).
