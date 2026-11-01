@@ -1,0 +1,267 @@
+{
+ "note": "Descriptive cross-method check, computed post hoc (not preregistered): measure_pend v1 (planted-PASS) vs kiro-1 rodtrack (unvalidated) on the same 24 t226 P clips.",
+ "rows": [
+  {
+   "clip": "t226_P_base_s101",
+   "arm": "base",
+   "seed": 101,
+   "T_measure_pend": 1.2056867562764,
+   "mp_flag": "ok",
+   "T_rodtrack": 1.22,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.0118714447588397
+  },
+  {
+   "clip": "t226_P_base_s102",
+   "arm": "base",
+   "seed": 102,
+   "T_measure_pend": 0.9245655605062338,
+   "mp_flag": "ok",
+   "T_rodtrack": null,
+   "rt_gate": false,
+   "ratio_rt_over_mp": null
+  },
+  {
+   "clip": "t226_P_base_s103",
+   "arm": "base",
+   "seed": 103,
+   "T_measure_pend": 0.8429344154130866,
+   "mp_flag": "check",
+   "T_rodtrack": 0.8400000000000001,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 0.996518809340999
+  },
+  {
+   "clip": "t226_P_base_s104",
+   "arm": "base",
+   "seed": 104,
+   "T_measure_pend": 2.855380404962955,
+   "mp_flag": "check",
+   "T_rodtrack": 2.8699999999999997,
+   "rt_gate": true,
+   "ratio_rt_over_mp": 1.0051200165875043
+  },
+  {
+   "clip": "t226_P_base_s105",
+   "arm": "base",
+   "seed": 105,
+   "T_measure_pend": 1.044443734486852,
+   "mp_flag": "check",
+   "T_rodtrack": 2.4899999999999998,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 2.3840441737374847
+  },
+  {
+   "clip": "t226_P_base_s106",
+   "arm": "base",
+   "seed": 106,
+   "T_measure_pend": 1.6908597175913935,
+   "mp_flag": "check",
+   "T_rodtrack": 1.72,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.0172340035695666
+  },
+  {
+   "clip": "t226_P_fast_s101",
+   "arm": "fast",
+   "seed": 101,
+   "T_measure_pend": 1.1863775837523056,
+   "mp_flag": "ok",
+   "T_rodtrack": null,
+   "rt_gate": false,
+   "ratio_rt_over_mp": null
+  },
+  {
+   "clip": "t226_P_fast_s102",
+   "arm": "fast",
+   "seed": 102,
+   "T_measure_pend": 0.8978284951291928,
+   "mp_flag": "ok",
+   "T_rodtrack": 0.8899999999999999,
+   "rt_gate": true,
+   "ratio_rt_over_mp": 0.9912806341393002
+  },
+  {
+   "clip": "t226_P_fast_s103",
+   "arm": "fast",
+   "seed": 103,
+   "T_measure_pend": 0.8018872758722032,
+   "mp_flag": "check",
+   "T_rodtrack": 0.8300000000000001,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.0350581995420978
+  },
+  {
+   "clip": "t226_P_fast_s104",
+   "arm": "fast",
+   "seed": 104,
+   "T_measure_pend": 2.818773434940518,
+   "mp_flag": "check",
+   "T_rodtrack": 2.9,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.028816280177976
+  },
+  {
+   "clip": "t226_P_fast_s105",
+   "arm": "fast",
+   "seed": 105,
+   "T_measure_pend": 1.3331983318157066,
+   "mp_flag": "check",
+   "T_rodtrack": null,
+   "rt_gate": false,
+   "ratio_rt_over_mp": null
+  },
+  {
+   "clip": "t226_P_fast_s106",
+   "arm": "fast",
+   "seed": 106,
+   "T_measure_pend": 0.7735835968886245,
+   "mp_flag": "check",
+   "T_rodtrack": 0.8200000000000001,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.060001793339548
+  },
+  {
+   "clip": "t226_P_neutral_s101",
+   "arm": "neutral",
+   "seed": 101,
+   "T_measure_pend": 0.16547478422101372,
+   "mp_flag": "check",
+   "T_rodtrack": 0.7,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 4.230251777002207
+  },
+  {
+   "clip": "t226_P_neutral_s102",
+   "arm": "neutral",
+   "seed": 102,
+   "T_measure_pend": 0.21995727264714843,
+   "mp_flag": "check",
+   "T_rodtrack": 0.37,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.6821448799901582
+  },
+  {
+   "clip": "t226_P_neutral_s103",
+   "arm": "neutral",
+   "seed": 103,
+   "T_measure_pend": 59.99999999983884,
+   "mp_flag": "check",
+   "T_rodtrack": 5.0,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 0.08333333333355716
+  },
+  {
+   "clip": "t226_P_neutral_s104",
+   "arm": "neutral",
+   "seed": 104,
+   "T_measure_pend": 2.798589203208314,
+   "mp_flag": "check",
+   "T_rodtrack": 2.84,
+   "rt_gate": true,
+   "ratio_rt_over_mp": 1.0147970258529593
+  },
+  {
+   "clip": "t226_P_neutral_s105",
+   "arm": "neutral",
+   "seed": 105,
+   "T_measure_pend": 0.7131460390547698,
+   "mp_flag": "check",
+   "T_rodtrack": 0.6599999999999999,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 0.9254766399246757
+  },
+  {
+   "clip": "t226_P_neutral_s106",
+   "arm": "neutral",
+   "seed": 106,
+   "T_measure_pend": 2.8112723356774083,
+   "mp_flag": "check",
+   "T_rodtrack": 0.33999999999999997,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 0.12094168027946431
+  },
+  {
+   "clip": "t226_P_still_s101",
+   "arm": "still",
+   "seed": 101,
+   "T_measure_pend": 1.29256203637794,
+   "mp_flag": "ok",
+   "T_rodtrack": 1.3,
+   "rt_gate": true,
+   "ratio_rt_over_mp": 1.0057544345360034
+  },
+  {
+   "clip": "t226_P_still_s102",
+   "arm": "still",
+   "seed": 102,
+   "T_measure_pend": 0.953432374953677,
+   "mp_flag": "check",
+   "T_rodtrack": 0.9099999999999999,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 0.954446297299494
+  },
+  {
+   "clip": "t226_P_still_s103",
+   "arm": "still",
+   "seed": 103,
+   "T_measure_pend": 1.5496260045749548,
+   "mp_flag": "check",
+   "T_rodtrack": 2.11,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 1.3616188640166433
+  },
+  {
+   "clip": "t226_P_still_s104",
+   "arm": "still",
+   "seed": 104,
+   "T_measure_pend": 2.841373038424286,
+   "mp_flag": "check",
+   "T_rodtrack": 2.86,
+   "rt_gate": true,
+   "ratio_rt_over_mp": 1.0065556198794805
+  },
+  {
+   "clip": "t226_P_still_s105",
+   "arm": "still",
+   "seed": 105,
+   "T_measure_pend": 1.0525699439808887,
+   "mp_flag": "check",
+   "T_rodtrack": 3.48,
+   "rt_gate": false,
+   "ratio_rt_over_mp": 3.3061935882744393
+  },
+  {
+   "clip": "t226_P_still_s106",
+   "arm": "still",
+   "seed": 106,
+   "T_measure_pend": 1.6921414800459518,
+   "mp_flag": "ok",
+   "T_rodtrack": 1.7000000000000002,
+   "rt_gate": true,
+   "ratio_rt_over_mp": 1.0046441270110789
+  }
+ ],
+ "summary": {
+  "all": {
+   "n": 21,
+   "within_10pct": 14,
+   "max_abs_dev": 3.2302517770022066
+  },
+  "mp_ok": {
+   "n": 4,
+   "within_10pct": 4,
+   "max_abs_dev": 0.011871444758839722
+  },
+  "rt_gate": {
+   "n": 6,
+   "within_10pct": 6,
+   "max_abs_dev": 0.014797025852959278
+  },
+  "neither": {
+   "n": 14,
+   "within_10pct": 7,
+   "max_abs_dev": 3.2302517770022066
+  }
+ }
+}
