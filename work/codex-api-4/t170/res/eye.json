@@ -1,0 +1,146 @@
+{
+ "t170_L10_ball1_s10": {
+  "artifact": "N",
+  "id": "C21",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L10_ball1_s11": {
+  "artifact": "N",
+  "id": "C11",
+  "note": "Dense f72-92: ball shifts downward; no stationary full window.",
+  "rest": "N"
+ },
+ "t170_L10_ball1_s12": {
+  "artifact": "N",
+  "id": "C16",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L10_ball1_s13": {
+  "artifact": "N",
+  "id": "C19",
+  "note": "Dense f72-92: continued down/right shift before nearly still late.",
+  "rest": "N"
+ },
+ "t170_L10_ball2_s10": {
+  "artifact": "N",
+  "id": "C08",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L10_ball2_s11": {
+  "artifact": "N",
+  "id": "C01",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L10_ball2_s12": {
+  "artifact": "N",
+  "id": "C02",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L10_ball2_s13": {
+  "artifact": "N",
+  "id": "C14",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L20_ball1_s10": {
+  "artifact": "N",
+  "id": "C12",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L20_ball1_s11": {
+  "artifact": "Y",
+  "id": "C10",
+  "note": "Large stationary-looking ball f48-84; second ball visible f88; then moves.",
+  "rest": "N"
+ },
+ "t170_L20_ball1_s12": {
+  "artifact": "N",
+  "id": "C18",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L20_ball1_s13": {
+  "artifact": "N",
+  "id": "C09",
+  "note": "Dense f72-92: ball continues down/right before becoming nearly still; no stationary full window.",
+  "rest": "N"
+ },
+ "t170_L20_ball2_s10": {
+  "artifact": "N",
+  "id": "C13",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L20_ball2_s11": {
+  "artifact": "N",
+  "id": "C06",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L20_ball2_s12": {
+  "artifact": "N",
+  "id": "C04",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_L20_ball2_s13": {
+  "artifact": "N",
+  "id": "C23",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_RL10_ball1_s10": {
+  "artifact": "N",
+  "id": "C24",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_RL10_ball1_s11": {
+  "artifact": "Y",
+  "id": "C05",
+  "note": "Large ball present f48-84; second ball appears f88, then motion f92.",
+  "rest": "N"
+ },
+ "t170_RL10_ball1_s12": {
+  "artifact": "N",
+  "id": "C22",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_RL10_ball1_s13": {
+  "artifact": "N",
+  "id": "C17",
+  "note": "Dense f72-92: continued down/right shift before nearly still late.",
+  "rest": "N"
+ },
+ "t170_RL10_ball2_s10": {
+  "artifact": "N",
+  "id": "C15",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_RL10_ball2_s11": {
+  "artifact": "Y",
+  "id": "C20",
+  "note": "Object visibly block-like/deformed f56,68,80,84; continues moving.",
+  "rest": "N"
+ },
+ "t170_RL10_ball2_s12": {
+  "artifact": "N",
+  "id": "C03",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ },
+ "t170_RL10_ball2_s13": {
+  "artifact": "N",
+  "id": "C07",
+  "note": "Visible ball position changes across f72/76/80/84/88/92; no gross late artifact identified in sparse crop.",
+  "rest": "N"
+ }
+}

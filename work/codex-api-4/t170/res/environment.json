@@ -1,0 +1,13 @@
+{
+ "cv2": "4.13.0",
+ "numpy": "1.26.4",
+ "scipy": "1.8.0",
+ "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers",
+ "source_hashes": {
+  "make_late_crops.py": "076b716e2168f19dd7e5d9d7b4ef8220ac789847a10ea54b0906f7ae0e6320eb",
+  "prepare_qc.py": "b24400a9058a15834c315ab2fb5d739ad198c613c9da5808e6f7fd1b369bbc2b",
+  "fetch_references.py": "4604aeb967dd204df537660c48ad697285bad9b48e36404984ea4f857062feeb",
+  "verify.py": "35a70116dd3225bb370fdfa74f460cbc7a883c6e76a5b68c725123942867dd74",
+  "analyze.py": "6326f09a93eebb70969e317e49a639cc9e3a326a4dcb618e827996823c8478b8"
+ }
+}

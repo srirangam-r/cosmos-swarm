@@ -1,0 +1,4 @@
+PASS: constant contrast, known SE/t quantile, and two independent ffmpeg decodes (all 92 trace values each).
+Source 40 rounded metrics reproduced within 4.46e-7 gray levels.
+All 64 video/request contracts pass.
+No planted-case physics validation or NVIDIA scoreboard comparison.
