@@ -950,6 +950,7 @@
         </div>
 
         <div class="evidence-card" id="5566">
+          <a id="5666"></a><a id="5718"></a>
           <div class="evidence-title">
             <span>Finding #5566 / #5666: E3 Guidance Negative</span>
             <span class="label-badge badge-negative">Negative Result</span>
@@ -961,6 +962,7 @@
         </div>
 
         <div class="evidence-card" id="5600">
+          <a id="5634"></a>
           <div class="evidence-title">
             <span>Finding #5600 / #5634: E6 tlo Artifact</span>
             <span class="label-badge badge-artifact">Artifact</span>
@@ -972,6 +974,7 @@
         </div>
 
         <div class="evidence-card" id="5563">
+          <a id="5785"></a>
           <div class="evidence-title">
             <span>Finding #5563 / #5785: Task 266 Gravity</span>
             <span class="label-badge badge-provisional">Provisional</span>
@@ -1007,7 +1010,7 @@
     // --- Single-Video Controls (Featured Presentation Demos) ---
     function toggleSinglePlay(id, btn) {
       const v = document.getElementById(id);
-      if (!v) return;
+      if (!v || v.style.display === 'none') return;
       if (v.paused) {
         v.play();
         btn.textContent = "Pause";
@@ -1019,9 +1022,14 @@
 
     function restartSingle(id) {
       const v = document.getElementById(id);
-      if (!v) return;
+      if (!v || v.style.display === 'none') return;
       v.currentTime = 0;
       v.play();
+      const section = v.closest('section');
+      if (section) {
+        const playBtn = section.querySelector('.sync-controls .btn-group button');
+        if (playBtn) playBtn.textContent = "Pause";
+      }
     }
 
     function setSingleSpeed(id, val) {
@@ -1038,14 +1046,41 @@
       parent.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
+      const section = v ? v.closest('section') : btn.closest('section');
+      const syncControls = section ? section.querySelector('.sync-controls') : null;
+
       if (fmt === 'gif') {
         if (v) { v.pause(); v.style.display = 'none'; }
         if (img) img.style.display = 'block';
+        if (syncControls) {
+          syncControls.style.opacity = '0.35';
+          syncControls.style.pointerEvents = 'none';
+          const playBtn = syncControls.querySelector('.btn-group button');
+          if (playBtn) playBtn.textContent = "Play";
+        }
       } else {
         if (img) img.style.display = 'none';
         if (v) { v.style.display = 'block'; v.play(); }
+        if (syncControls) {
+          syncControls.style.opacity = '1';
+          syncControls.style.pointerEvents = 'auto';
+          const playBtn = syncControls.querySelector('.btn-group button');
+          if (playBtn) playBtn.textContent = "Pause";
+        }
       }
     }
+
+    // Attach play/pause state synchronization for featured players
+    ['v-demo-pendulum', 'v-demo-ball'].forEach(id => {
+      const v = document.getElementById(id);
+      if (!v) return;
+      const section = v.closest('section');
+      const playBtn = section ? section.querySelector('.sync-controls .btn-group button') : null;
+      if (playBtn) {
+        v.addEventListener('play', () => { if (v.style.display !== 'none') playBtn.textContent = "Pause"; });
+        v.addEventListener('pause', () => { if (v.style.display !== 'none') playBtn.textContent = "Play"; });
+      }
+    });
 
     // --- Paired Dual-Video Synchronization Keeper (ro-sol1 t283 engine) ---
     const demoPairs = new Map();

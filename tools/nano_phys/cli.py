@@ -80,7 +80,7 @@ def main():
     proxy_mp4 = out_p.parent / f"{out_p.stem}_proxy.mp4"
 
     # Step 1: Generate analytical physics proxy
-    print(f"[Nano-Phys] Generating analytical {args.physics} proxy video...")
+    print(f"[Nano-Phys] Generating analytical {args.physics} proxy video...", file=sys.stderr)
     if args.physics == "pendulum":
         if args.pivot is None or args.bob is None:
             parser.error("--pivot X,Y and --bob X,Y are required for pendulum physics")
@@ -116,7 +116,7 @@ def main():
             height=args.height,
         )
 
-    print(f"[Nano-Phys] Saved proxy video to {proxy_mp4}")
+    print(f"[Nano-Phys] Saved proxy video to {proxy_mp4}", file=sys.stderr)
 
     # Determine effective start step
     from .runner import NATIVE_SIGMAS_35, sigma_to_step
@@ -132,6 +132,7 @@ def main():
             "name": out_p.stem,
             "prompt": args.prompt,
             "image": str(Path(args.image).resolve()),
+            "files": [str(proxy_mp4.resolve())],
             "width": args.width,
             "height": args.height,
             "num_frames": num_frames,
@@ -145,16 +146,16 @@ def main():
                 "client": "nano_phys",
                 "noise": {"device": "cpu"},
                 "latent": {
-                    "ref": str(proxy_mp4.resolve()),
+                    "ref": proxy_mp4.name,
                     "start_step": start_step,
                     "init": "noised",
                 },
             },
         }
-        print(f"\n[QUEUE_JOB_JSONL]\n{json.dumps(job)}\n[/QUEUE_JOB_JSONL]")
+        print(json.dumps(job))
 
     if args.proxy_only or args.emit_queue_job:
-        print("[Nano-Phys] Exiting after proxy/job generation.")
+        print("[Nano-Phys] Exiting after proxy/job generation.", file=sys.stderr)
         return
 
     # Step 2: Denoise with Cosmos3-Nano via Latent SDEdit Start
