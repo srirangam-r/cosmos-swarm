@@ -55,7 +55,7 @@ for name, comp in pipe.components.items():
             comp.to("cuda")
 BASE_SCHED = dict(pipe.scheduler.config)
 # COSMOS_VAE_SWAP=1 (48 GB cards without offload): the DiT (~30 GB) moves to CPU RAM while the VAE encodes or
-# decodes, and back to the GPU at its next call. Same ops on the same device, so outputs are unchanged; it costs
+# decodes, and straight back to the GPU after it. Same ops on the same device, so outputs are unchanged; it costs
 # a few seconds of PCIe copies per request. Needs ~30 GB of free CPU RAM per server.
 VAE_SWAP = os.environ.get("COSMOS_VAE_SWAP", "0") == "1" and not OFFLOAD
 if VAE_SWAP:
@@ -63,11 +63,16 @@ if VAE_SWAP:
         return next(pipe.transformer.parameters()).device.type == "cuda"
 
     def _vae_alone(fn):
+        # The DiT goes back right after the VAE call: the pipeline picks its device from where its modules are,
+        # so leaving the DiT on the CPU between requests would build the next request's tensors on the CPU.
         def run(*a, **k):
             if _dit_on_gpu():
                 pipe.transformer.to("cpu")
                 torch.cuda.empty_cache()
-            return fn(*a, **k)
+            try:
+                return fn(*a, **k)
+            finally:
+                pipe.transformer.to("cuda")
         return run
 
     pipe.vae.encode, pipe.vae.decode = _vae_alone(pipe.vae.encode), _vae_alone(pipe.vae.decode)
