@@ -14,3 +14,36 @@ Coded so far: 01bf80, 0499e0 (both all-N). 46 cells left.
 - 79ac41: forest/light-ray scene, no moving object (uninformative, all N).
 Coded through 86bd22 (18/48) at 10:37 UTC shift 30. Order = sorted hex list; continue from 8bbd93.
 - 7a3fe8: identical in all 3 rows: ball enters from left edge f10, rolls out right edge ~f60 (gone Y,Y,Y = rolled out of frame, physically fine).
+(shift 31, 10:4x UTC; pairs of cells stacked in endstate/spawnA2_pairs/pNN.jpg, still blind)
+- 8bbd93: microwave/drumstick robot scene. C: orange item visible at the top of the cavity from f0 (zoom z_8bbd93.jpg), so no spawn; camera viewpoint jumps f18-30 in C. A: drumstick visible in the cavity f68-92 (zoom) -> gone N.
+- 8bfc60: pyrotechnic on a post; explosion + smoke f56-92 in all rows. Post still there; gone uninformative (N). No spawn.
+- 93df48: forest/light-ray scene, no moving object (uninformative, all N).
+- 9926d7: turntable with a blue block; block present f0-92 in all rows (all N).
+- 9f5206: ice cubes in a glass, camera pulls back f18-30; ice shrinks/fades f56-92 in ALL rows (melt, possibly prompt content); small pieces still visible at f92 -> gone N.
+- a14e0e: jar of orange liquid under a dispenser, nearly static in all rows (all N).
+- a40b4c: blue ball enters at the right edge f2-4 and rolls left in all rows. A: at f12-14 a second ball splits off below the shelf edge while one stays on the shelf -> spawn Y (low confidence, clone split); ball out at the left edge ~f18 -> gone Y. B, C: ball exits left ~f18, re-enters from the left edge f20-30 (edge entry, spawn N), drops off the front ~f56, gone f60-92 -> gone Y.
+- b4f921: melting popsicle; drips present from f0; all N.
+- b5adc8: ice in a glass. C: a white piece enters from the TOP EDGE at f14 (zoom z_b5adc8.jpg); the ice drops into the glass and becomes a larger cube by f20 (edge entry -> spawn N by rule; morph noted). A/B: ice turns to shards f72-92 but is present -> gone N.
+- b998ca: popsicle close-up, all N.
+- b9b15d: domino line with a rubber duck; a dark object at top-right present from f0 (B: handle moving f0-16); dominoes topple f56-92 in all rows, still visible -> all N. A dark object swings/flies in at the right f68-92 in all rows (not coded).
+- ba2762: bimanual robot with a book; the book is opened or laid on the table f56-92 and visible at f92 in all rows -> all N.
+- c058ca: robot arms at a cluttered grocery shelf (chocolate boxes); too cluttered at tile size to see spawns or track the manipulated item. Coded N for all, LOW CONFIDENCE.
+- c76add: pyrotechnic on a post (like 8bfc60); explosion f56-92, post present -> all N.
+- c939ff: robot at a cluttered shelf (same scene family as c058ca); not codable at tile size. N for all, LOW CONFIDENCE.
+- cfbc3f: balloon inflated by a pump on a green box; the balloon grows through f92 in all rows; all N.
+- d69c6c: domino line + duck + black disc at right; thin sticks swing in at the top-right edge (A from f2, B f30, A/B again f56-92) -> edge entries, spawn N; dominoes topple and stay visible -> all N.
+- e40314: robot at a cluttered chocolate shelf; a box is pulled out and waved f56-92 in all rows. Not codable for spawn at tile size. N for all, LOW CONFIDENCE.
+- e937a8: balloon on a green box inflated by a pump. A: no balloon visible f0-12, a nub appears f12-14 and grows; C: nub appears on the tube ~f10. Inflation from a flat balloon is prompt content (same rule as 107310) -> spawn N; NOTE A could be read as a pop-in. Gone N.
+- eab5a9: bimanual robot over a wide table with small objects; not codable at tile size. N for all, LOW CONFIDENCE.
+- ec9c42: bimanual robot, red object in/at a green bowl. A and B: red object held f56-76, then no red visible anywhere at f80-92 and the bowl is empty -> gone Y (vanish or carried out of view). C: red items in the bowl at f92 -> N. No spawns.
+- ee11eb: turntable with a blue block and a dark panel. B: dark specks and a blue fragment appear mid-air above the block f14-30 (not from an edge) -> spawn Y. Block present at f92 in all rows.
+- CORRECTION (still blind, before commit): ee11eb B -> spawn N. The zoom (z_ee11eb_f16791.jpg) shows the specks and the blue fragment falling in from the TOP EDGE f14-30 (edge entry rule).
+- f16791: turntable + blue block. C: dark debris present from f0; blue fragments enter from the top edge f10-14 and a brown object from the left edge ~f18 (edge entries -> spawn N; gross debris noted). Block present at f92 in all rows -> all N.
+- f1c8c5: bimanual robot picks a framed picture off a chair; the picture is visible held or near the chair f56-92 in all rows (A f92 is low confidence) -> all N.
+- f405fc: giant soap bubbles in a field; bubbles forming and growing is prompt content (rule as in 107310) -> all N.
+- f7de87: bimanual robot over a box with small items; not codable at tile size. N for all, LOW CONFIDENCE.
+- f8474d: giant soap bubbles (prompt content) -> all N.
+- fa37fe: pyrotechnic on a post, ignites f22-30, smoke f56-92, post present -> all N.
+- fc15bf: robot lifts an orange cone out of a sink; the cone is visible at f92 in all rows (C: the cone grows larger f72-92, morph) -> all N.
+- fc1641: popsicle close-up -> all N.
+All 48 coded at ~10:46 UTC shift 31, before unblinding.
