@@ -1,0 +1,194 @@
+{
+  "c02": {
+    "rigid": "N",
+    "notes": "Final stride-four check of every provisional Y found a curved/bowed rod at f32/f44; initial coarse sheet missed it."
+  },
+  "c03": {
+    "rigid": "N",
+    "notes": "Rod visibly kinks/bends near lower end at f32 and f92 in native crops; one bob remains."
+  },
+  "c04": {
+    "rigid": "N",
+    "notes": "Rod lower segment bends at f32 and curves at f64 in native crops; pivot joint deforms."
+  },
+  "c05": {
+    "rigid": "N",
+    "notes": "Rod clearly curves/bends into bob at f92 in native crop; joint/topology reshapes at f32/f48."
+  },
+  "c06": {
+    "rigid": "N",
+    "notes": "Rod bows/changes curvature at f48 and f72; bob shape changes."
+  },
+  "c07": {
+    "rigid": "N",
+    "notes": "Rod bends/changes shape at f24/f48; not a fixed rigid lever."
+  },
+  "c08": {
+    "rigid": "N",
+    "notes": "Rod visibly wavy at f32 and bent at f80; bob/pivot morphology changes."
+  },
+  "c10": {
+    "rigid": "U",
+    "notes": "Final stride-four check of every provisional Y leaves slight rod curvature at f32 ambiguous against blur. Other sampled positions look straight; conservative exclusion."
+  },
+  "c11": {
+    "rigid": "N",
+    "notes": "Native f64/f92 show a visibly bent rod and bob morphology changes."
+  },
+  "c12": {
+    "rigid": "N",
+    "notes": "Stride-four native follow-up resolves ambiguity: rod visibly bends at f76/f84/f92; f84 is especially clear."
+  },
+  "c16": {
+    "rigid": "N",
+    "notes": "Pivot shifts visibly right at f24/f64/f92 and rod appears to reattach beside robot; no fixed-pivot planar swing."
+  },
+  "c17": {
+    "rigid": "N",
+    "notes": "Native f32/f92 show wavy or kinked rod; attached joint changes topology."
+  },
+  "c18": {
+    "rigid": "N",
+    "notes": "Native f92 lower rod has a sharp bend; f64 bowed curve confirms nonrigid geometry."
+  },
+  "c19": {
+    "rigid": "N",
+    "notes": "Rod bows at f24/f56 and appears kinked at f80; deforms rather than a single straight lever."
+  },
+  "c20": {
+    "rigid": "Y",
+    "notes": "Native f0/16/32/48/64/80/92 show a straight rod oscillating about the same bar joint, single bob; blurred bob but no clear fork or bend. Final stride-four native check retained Y."
+  },
+  "c21": {
+    "rigid": "N",
+    "notes": "Rod/bob topology forks and gains extra structure at f56/f72/f80; rod length/pivot geometry changes."
+  },
+  "c22": {
+    "rigid": "N",
+    "notes": "Stride-four native follow-up: rod bows markedly at f52 with changing support geometry; not a straight lever."
+  },
+  "c23": {
+    "rigid": "N",
+    "notes": "Native f16/f64 show bowed, S-shaped rod instead of straight rigid lever."
+  },
+  "c25": {
+    "rigid": "N",
+    "notes": "Native f80 shows strongly curved/S-shaped rod; f48 changing rod/bob geometry."
+  },
+  "c26": {
+    "rigid": "N",
+    "notes": "Rod visibly curves at f56 and f92 in full sheets; cannot count as rigid."
+  },
+  "c27": {
+    "rigid": "N",
+    "notes": "Pivot shifts to right of bar at f24/f56/f92 and rod foreshortens/reattaches near robot; not stable support."
+  },
+  "c28": {
+    "rigid": "N",
+    "notes": "Rod bends into curved/rope-like segment at f72 instead of rotating as straight lever."
+  },
+  "c32": {
+    "rigid": "N",
+    "notes": "Stride-four native follow-up shows distinct rod bend at f32 and curvature f68; resolves prior ambiguity."
+  },
+  "c33": {
+    "rigid": "N",
+    "notes": "Rod bends near lower portion at f24/f48/f92; full sheet visibly nonrigid."
+  },
+  "c34": {
+    "rigid": "N",
+    "notes": "Rod curves and changes shape at f72/f88; visible bob reshaping."
+  },
+  "c36": {
+    "rigid": "N",
+    "notes": "Rod visibly bows or kinks at f16/f72/f80 instead of constant straight geometry."
+  },
+  "c37": {
+    "rigid": "Y",
+    "notes": "Native crops show straight rod and single bob about stable bar attachment across f0/16/32/48/64/80/92; joint appearance changes without clear support displacement. Final stride-four native check retained Y."
+  },
+  "c38": {
+    "rigid": "N",
+    "notes": "Native f32/f48/f92 show a clear elbow in rod near the bob; not straight rigid geometry."
+  },
+  "c39": {
+    "rigid": "N",
+    "notes": "Two rods/bobs coexist from f8, clearly f40/f48/f56 and late; clone/branching."
+  },
+  "c40": {
+    "rigid": "N",
+    "notes": "Two rods/bobs coexist at f32 and f40 onward, clear duplication."
+  },
+  "c42": {
+    "rigid": "N",
+    "notes": "Native f92 shows lower rod elbow/bend; f64 also curved."
+  },
+  "c43": {
+    "rigid": "N",
+    "notes": "Rod conspicuously bows/kinks at f24/f64/f88; geometry not rigid."
+  },
+  "c44": {
+    "rigid": "N",
+    "notes": "Additional rod/bob structure at f16/f24/f48; changing topology and bent lever."
+  },
+  "c45": {
+    "rigid": "N",
+    "notes": "New horizontal wooden bar appears at bob at f24; rod kinks and duplicate structure at f72."
+  },
+  "c47": {
+    "rigid": "N",
+    "notes": "Stride-four native follow-up shows pronounced lower-rod hook/bend at f40 and bow at f76/f92; resolves ambiguity."
+  },
+  "c48": {
+    "rigid": "N",
+    "notes": "Pivot migrates onto robot side at f24/f56/f92 and rod projection changes radically; not fixed support."
+  },
+  "c14": {
+    "rigid": "N",
+    "notes": "Rod bends strongly at f40/f48/f72/f80, with hook-like or flexible shape."
+  },
+  "c24": {
+    "rigid": "N",
+    "notes": "Native f64 shows clearly curved/bowed rod rather than straight lever; f92 also curved."
+  },
+  "c31": {
+    "rigid": "N",
+    "notes": "Rod visibly curves at f64/f80; long lever changes shape."
+  },
+  "c41": {
+    "rigid": "U",
+    "notes": "Stride-four native follow-up still cannot distinguish mild rod bow at f32/f40/f64 from blur; no clear gross violation. Exclude conservatively, not counted as N."
+  },
+  "c01": {
+    "rigid": "N",
+    "notes": "Rod becomes distinctly curved at f80 and changes length/thickness around f48/f56."
+  },
+  "c09": {
+    "rigid": "U",
+    "notes": "Final stride-four check of every provisional Y leaves mild lower bow at f32/f40/f64 ambiguous against motion blur. No clear gross violation; conservative exclusion."
+  },
+  "c13": {
+    "rigid": "N",
+    "notes": "Rod bows with strong shape/size changes at f48/f80 and bob morphology changes dramatically."
+  },
+  "c15": {
+    "rigid": "N",
+    "notes": "Native f64 shows curved/bowed rod rather than straight lever; f48/f92 also changing geometry."
+  },
+  "c29": {
+    "rigid": "N",
+    "notes": "Rod visibly bows/kinks at f80 and changes shape versus f40; pivot/lever morphing."
+  },
+  "c30": {
+    "rigid": "N",
+    "notes": "Native f16/f64 show bowed rod; not constant straight geometry."
+  },
+  "c35": {
+    "rigid": "N",
+    "notes": "Rod is visibly curved/S-shaped at f8/f16/f72/f80; nonrigid shape."
+  },
+  "c46": {
+    "rigid": "U",
+    "notes": "Stride-four native follow-up still ambiguous: mild rod bow at f32/f40/f64 versus blur. Exclude conservatively, not counted as N."
+  }
+}
