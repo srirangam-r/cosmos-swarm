@@ -1,0 +1,5 @@
+# Real-reference duration sensitivity
+
+Run `python3 work/codex-1/reference_duration/analyze.py`. It recomputes approximate `dd_norm` from the first 30 saved, rounded RAFT pair magnitudes: at 24 fps the scorer samples indices 0,3,...,90 in 93 frames, giving 30 pairs. The full scores use all available frames (up to 189). Means and paired SEs are descriptive over four source clips per task, not independent scenes or population confidence intervals. Full flow inference and video decoding are not repeated; rounding bounds the short score error by 0.00027. These comparisons say nothing about DOVER or a Cosmos fix. Ball reference clips are shorter than 189 frames, but all contain at least 93.
+
+The first 93 frames need not be event-aligned across sources. Matching duration alone does not validate the real-reference design. Reference construction and after/before comparisons should explicitly match playback fps, frame count and event protocol; recompute DOVER for the matched clips. The comparator currently does not enforce this.
