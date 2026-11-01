@@ -9,3 +9,7 @@ Motion proxy: late_chg_px = mean over the last 24 frame pairs of #pixels with |g
 The p99 metric in the same script is blind to the small ball, so it isn't used.
 Results: summary_noNV.json (per clip + per arm + paired). Sheets: sheets/*_b.jpg (f48-92, every 2 f, native plank crop).
 DOVER/DD: pending (CPU scoring is running; follow-up).
+
+## Native clips + DOVER/DD (added 2026-11-01 12:40 UTC)
+- `clips/r60_<hex>.mp4` + sidecar json: all 12 native 832x480, 93 f, 24 fps clips (unblinding key: `KEY.json`).
+- `nv.json`: per-clip DOVER (fused/technical/aesthetic) and VBench-style dynamic degree; `summary_nv.json`: unblind.py output with paired QT−F.
