@@ -1,0 +1,82 @@
+{
+ "prompt": "put the cube with a hole on top of the yellow cube",
+ "negative_prompt": null,
+ "size": "256x256",
+ "num_frames": 17,
+ "fps": 5.0,
+ "num_inference_steps": 30,
+ "guidance_scale": 1.0,
+ "flow_shift": 10.0,
+ "seed": 3,
+ "negative_metadata_mode": "inverse",
+ "extra_params": {
+  "client": "raj-1",
+  "action_mode": "forward_dynamics",
+  "domain_name": "bridge_orig_lerobot",
+  "action_chunk_size": 16,
+  "image_size": 256,
+  "view_point": "ego_view",
+  "guardrails": true,
+  "noise": {
+   "device": "cpu"
+  }
+ },
+ "has_action": true,
+ "input_image": "20261101T162554_0811_raj-1_input.png",
+ "frames_out": 17,
+ "out_hw": [
+  256,
+  256
+ ],
+ "seconds": 1.6,
+ "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, dk1-e3, safety check off)",
+ "scheduler": "UniPCMultistepScheduler",
+ "torch": "2.11.0+cu128",
+ "server": "raj-1 server.py",
+ "server_rev": {
+  "server.py": "a7515c52f2",
+  "noise.py": "a5aef0fbe3",
+  "internals.py": "75dc2bebac",
+  "neg_meta.py": "3e82bf1434",
+  "action_cfg.py": "95938a400c"
+ },
+ "sigmas_used": [
+  0.99502,
+  0.99418,
+  0.99318,
+  0.99197,
+  0.99051,
+  0.98874,
+  0.98659,
+  0.98397,
+  0.98075,
+  0.97679,
+  0.97188,
+  0.96579,
+  0.95819,
+  0.94868,
+  0.93675,
+  0.92175,
+  0.90289,
+  0.87919,
+  0.84954,
+  0.81269,
+  0.76744,
+  0.71282,
+  0.64845,
+  0.57498,
+  0.49444,
+  0.41038,
+  0.3274,
+  0.25034,
+  0.18317,
+  0.12816,
+  0.0
+ ],
+ "noise": {
+  "spec": {
+   "device": "cpu"
+  },
+  "mixed": false
+ }
+}

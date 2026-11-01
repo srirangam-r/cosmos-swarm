@@ -20,3 +20,20 @@ ctrl == plain, had been seen). Purpose: charter requirement (8): a recipe must w
   If E3 has none, E3b is reported descriptively (all arms, Bonferroni CIs) as a second dev sample.
 - **Run:** on the same on-box 127.0.0.1 server as E3 (run_onbox.sh reuses a healthy server with action_cfg),
   started automatically after E3 prints E3_DONE (chain_after_e3.sh).
+
+## Result (2026-11-01 16:33 UTC): E3 had no fix candidate, so E3b is descriptive. It reproduces E3 on held-out episodes.
+Analysis: ../t255_e3/analyze.py with Amendment 1 (sidecar parse fix, 55349f4; no statistic changed). The server was the
+same 127.0.0.1:8012 server on dk2-e6b (H100) as E3. Run on 456/456 clips with 456 server sidecars. ctrl == plain bit-identical 24/24 (S4).
+
+| arm | ΔLPIPS median [98.33% CI] | n worse | ΔRMSE (n worse) | ΔDSSIM (n worse) | DE/DE_real | decision |
+|---|---|---|---|---|---|---|
+| neg1 (a′=−a, s=1) | +0.0003 [−0.0039, +0.0022] | 12/24 | +0.0018 (16/24) | +0.0005 (13/24) | 1.23 | no detectable change |
+| neg3 (a′=−a, s=3) | +0.0074 [−0.0021, +0.0123] | 16/24 | +0.0071 (19/24) | +0.0051 (19/24) | 1.33 | no detectable change (G1, G2 fail) |
+| zero1 (a′=0, s=1) | +0.0016 [+0.0003, +0.0066] | 19/24 | +0.0029 (20/24) | +0.0019 (17/24) | 1.24 | **hurts** |
+| plain | (mean LPIPS 0.110, static floor 0.128) | | | | 1.09 | |
+
+S1 (action sensitivity): the own-vs-swap LPIPS gap grows under neg3 by +0.019 [0.003, 0.028] (18/24, sign-flip p 0.0007),
+and D_action/D_seed goes from 1.17 to 2.10 (E3: 1.40 to 2.38). E3 replicates on all points: guidance strengthens action control,
+overshoots the real motion, and does not move the rollout closer to the real future. A zero contrast hurts.
+Files: results/e3b.json, results/sidecars (client + server JSON for all 456), results/E3B_CLIPS_SHA256SUMS (456 mp4s),
+clips_s1/ (plain/neg3/zero1 at seed 1, 72 mp4s). The other mp4s are kept locally by dk1 (hashes above).
