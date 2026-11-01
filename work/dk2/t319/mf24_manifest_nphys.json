@@ -1,0 +1,155 @@
+{
+ "bands": [
+  {
+   "id": "24fps_pend_heldout",
+   "reference": [
+    {
+     "file": "scores_real24.json",
+     "key": "pend_real_09.mp4"
+    },
+    {
+     "file": "scores_real24.json",
+     "key": "pend_real_12.mp4"
+    },
+    {
+     "file": "scores_real24.json",
+     "key": "pend_real_16.mp4"
+    },
+    {
+     "file": "scores_real24.json",
+     "key": "pend_real_17.mp4"
+    },
+    {
+     "file": "scores_real24.json",
+     "key": "pend_real_18.mp4"
+    },
+    {
+     "file": "scores_real24.json",
+     "key": "pend_real_19.mp4"
+    }
+   ],
+   "prompts": [
+    {
+     "id": "real_09_nphys",
+     "clips": [
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_09_nphys_s1.mp4",
+       "seed": 1
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_09_nphys_s2.mp4",
+       "seed": 2
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_09_nphys_s3.mp4",
+       "seed": 3
+      }
+     ]
+    },
+    {
+     "id": "real_12_nphys",
+     "clips": [
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_12_nphys_s1.mp4",
+       "seed": 1
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_12_nphys_s2.mp4",
+       "seed": 2
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_12_nphys_s3.mp4",
+       "seed": 3
+      }
+     ]
+    },
+    {
+     "id": "real_16_nphys",
+     "clips": [
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_16_nphys_s1.mp4",
+       "seed": 1
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_16_nphys_s2.mp4",
+       "seed": 2
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_16_nphys_s3.mp4",
+       "seed": 3
+      }
+     ]
+    },
+    {
+     "id": "real_17_nphys",
+     "clips": [
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_17_nphys_s1.mp4",
+       "seed": 1
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_17_nphys_s2.mp4",
+       "seed": 2
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_17_nphys_s3.mp4",
+       "seed": 3
+      }
+     ]
+    },
+    {
+     "id": "real_18_nphys",
+     "clips": [
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_18_nphys_s1.mp4",
+       "seed": 1
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_18_nphys_s2.mp4",
+       "seed": 2
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_18_nphys_s3.mp4",
+       "seed": 3
+      }
+     ]
+    },
+    {
+     "id": "real_19_nphys",
+     "clips": [
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_19_nphys_s1.mp4",
+       "seed": 1
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_19_nphys_s2.mp4",
+       "seed": 2
+      },
+      {
+       "file": "scores_gen.json",
+       "key": "t276_real_19_nphys_s3.mp4",
+       "seed": 3
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
