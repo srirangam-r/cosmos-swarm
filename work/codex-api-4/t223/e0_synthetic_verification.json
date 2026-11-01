@@ -1,0 +1,158 @@
+{
+  "scope": "Manufactured FFV1 videos only; no Cosmos results or referee clips.",
+  "passed_checks": 38,
+  "checks": [
+    {
+      "name": "matched lossless clips distance zero",
+      "passed": true
+    },
+    {
+      "name": "different synthetic motion gives positive null",
+      "passed": true
+    },
+    {
+      "name": "all-pairs matrix keeps frozen seed order",
+      "passed": true
+    },
+    {
+      "name": "all planned clips audited",
+      "passed": true
+    },
+    {
+      "name": "per-seed contributions average to primary",
+      "passed": true
+    },
+    {
+      "name": "declared CPU noise remains unverified",
+      "passed": true
+    },
+    {
+      "name": "artifact order cannot permute seeds",
+      "passed": true
+    },
+    {
+      "name": "FFV1 fixture exactly preserves RGB bytes",
+      "passed": true
+    },
+    {
+      "name": "independent decode and hand area average agree",
+      "passed": true
+    },
+    {
+      "name": "f0-to-f1 transition retained",
+      "passed": true
+    },
+    {
+      "name": "six frames give exactly five changes",
+      "passed": true
+    },
+    {
+      "name": "initial pulse included once",
+      "passed": true
+    },
+    {
+      "name": "static clips create zero correspondence advantage",
+      "passed": true
+    },
+    {
+      "name": "constant background offset cancels in changes",
+      "passed": true
+    },
+    {
+      "name": "wrong seed mapping loses correspondence",
+      "passed": true
+    },
+    {
+      "name": "duplicate seed rejected",
+      "passed": true
+    },
+    {
+      "name": "one seed rejected",
+      "passed": true
+    },
+    {
+      "name": "missing planned cell rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate planned run rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate factorial cell rejected",
+      "passed": true
+    },
+    {
+      "name": "unplanned seed rejected",
+      "passed": true
+    },
+    {
+      "name": "missing stack declaration rejected",
+      "passed": true
+    },
+    {
+      "name": "missing settings declaration rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid fps rejected",
+      "passed": true
+    },
+    {
+      "name": "upsampling geometry rejected",
+      "passed": true
+    },
+    {
+      "name": "missing artifact rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate artifact rejected",
+      "passed": true
+    },
+    {
+      "name": "extra artifact rejected",
+      "passed": true
+    },
+    {
+      "name": "changed artifact hash rejected",
+      "passed": true
+    },
+    {
+      "name": "native fps mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "native num_frames mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "native width mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "native height mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "unequal feature dimensions rejected",
+      "passed": true
+    },
+    {
+      "name": "CLI one succeeds",
+      "passed": true
+    },
+    {
+      "name": "CLI two succeeds",
+      "passed": true
+    },
+    {
+      "name": "CLI replay byte-identical",
+      "passed": true
+    },
+    {
+      "name": "CLI hashes design and artifact index",
+      "passed": true
+    }
+  ]
+}

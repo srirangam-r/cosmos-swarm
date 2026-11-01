@@ -51,9 +51,16 @@ The protocol defaults to 2,000 bootstrap draws and 9,999 randomization draws
 periods/unknown labels cannot be supplied as zero. They require a separate
 missingness/eligibility report before a clearly labelled conditional sensitivity.
 
+The outcome-blind [E0 video adapter](E0_ADAPTER.md) now implements the frozen
+primary temporal-change metric, strict planned-run/artifact joins, clip hashes
+and native-video contracts. It passes 38 checks on manufactured lossless videos,
+including an independent FFmpeg decode and hand area averaging. Its declared
+GPU/stack/noise provenance explicitly stays pending until native-record audit.
+The protocol and statistical core are unchanged.
+
 This is **not yet the complete data adapter**. The real-job manifest, sidecar
 audit, validated outcome registry (including task 222), native-video E0 distance
-extraction, classifier validity gates, three-valued missingness tables,
+secondary measurements, classifier validity gates, three-valued missingness tables,
 experiment-wide multiplicity and provenance joins will be added without changing
 the frozen estimands. Multilevel joint prompt-label tests and optional secondary
 E0 measures are specified in the protocol and not implemented by this core.
