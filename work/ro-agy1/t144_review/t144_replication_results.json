@@ -1,0 +1,152 @@
+{
+  "key_sha256": "bc804e86c4e449662564d6216614d74467a5d10db4c252298556b85434cdc3f8",
+  "n_clips": 50,
+  "primary": {
+    "counts": {
+      "A": "3/10",
+      "VD": "3/10",
+      "VU": "4/10",
+      "VI": "7/10",
+      "VB": "4/10"
+    },
+    "contrasts": {
+      "VD_vs_VU": {
+        "vd_only": 1,
+        "vu_only": 2,
+        "ties": 7,
+        "p_one_sided": 0.875
+      },
+      "VD_vs_VI": {
+        "vd_only": 0,
+        "vi_only": 4,
+        "ties": 6,
+        "p_one_sided": 1.0
+      },
+      "VD_vs_VB": {
+        "vd_only": 1,
+        "vb_only": 2,
+        "ties": 7,
+        "p_one_sided": 0.875
+      },
+      "VD_vs_A": {
+        "vd_only": 2,
+        "a_only": 2,
+        "ties": 6,
+        "p_one_sided": 0.6875
+      },
+      "holm_adjustment_primary": {
+        "VU": 1.0,
+        "VI": 1.0
+      }
+    }
+  },
+  "strict": {
+    "counts": {
+      "A": "1/10",
+      "VD": "2/10",
+      "VU": "2/10",
+      "VI": "3/10",
+      "VB": "3/10"
+    },
+    "contrasts": {
+      "VD_vs_VU": {
+        "vd_only": 1,
+        "vu_only": 1,
+        "ties": 8,
+        "p_one_sided": 0.75
+      },
+      "VD_vs_VI": {
+        "vd_only": 0,
+        "vi_only": 1,
+        "ties": 9,
+        "p_one_sided": 1.0
+      },
+      "VD_vs_VB": {
+        "vd_only": 1,
+        "vb_only": 2,
+        "ties": 7,
+        "p_one_sided": 0.875
+      },
+      "VD_vs_A": {
+        "vd_only": 1,
+        "a_only": 0,
+        "ties": 9,
+        "p_one_sided": 0.5
+      },
+      "holm_adjustment_primary": {
+        "VU": 1.0,
+        "VI": 1.0
+      }
+    }
+  },
+  "secondary": {
+    "first_disp": {
+      "A": {
+        "none": 4,
+        "down": 6
+      },
+      "VD": {
+        "none": 6,
+        "down": 4
+      },
+      "VU": {
+        "none": 3,
+        "down": 6,
+        "up": 1
+      },
+      "VI": {
+        "down": 7,
+        "none": 3
+      },
+      "VB": {
+        "none": 5,
+        "down": 4,
+        "up": 1
+      }
+    },
+    "holder_redrawn": {
+      "A": {
+        "Y": 5,
+        "N": 5
+      },
+      "VD": {
+        "Y": 6,
+        "N": 4
+      },
+      "VU": {
+        "Y": 4,
+        "N": 6
+      },
+      "VI": {
+        "Y": 6,
+        "N": 4
+      },
+      "VB": {
+        "Y": 3,
+        "N": 7
+      }
+    },
+    "clone": {
+      "A": {
+        "Y": 6,
+        "N": 4
+      },
+      "VD": {
+        "Y": 6,
+        "N": 4
+      },
+      "VU": {
+        "Y": 5,
+        "N": 5
+      },
+      "VI": {
+        "N": 7,
+        "Y": 3
+      },
+      "VB": {
+        "Y": 5,
+        "N": 5
+      }
+    }
+  }
+}
