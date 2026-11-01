@@ -1,0 +1,128 @@
+[
+ {
+  "id": "real_09",
+  "image": "inputs/f0_real_09.png",
+  "pivot": [
+   323,
+   121
+  ],
+  "bob": [
+   325,
+   255
+  ],
+  "gauge_source": "GAUGE-Dataset@f95bb06 data/rigid/pendulum/video/9.mp4 (codex-api-4 t8 real_09.mp4 frame 0)",
+  "P_real_frames_acf": 29.14695981754951,
+  "P_real_frames_mp": 29.31786678038355,
+  "flags": [
+   "ok",
+   "ok"
+  ],
+  "P_real_s": 1.1727,
+  "note": "real clip is nominal 25 Hz; P_real_s = P_mp/25"
+ },
+ {
+  "id": "real_12",
+  "image": "inputs/f0_real_12.png",
+  "pivot": [
+   322,
+   121
+  ],
+  "bob": [
+   307,
+   256
+  ],
+  "gauge_source": "GAUGE-Dataset@f95bb06 data/rigid/pendulum/video/12.mp4 (codex-api-4 t8 real_12.mp4 frame 0)",
+  "P_real_frames_acf": 29.618478396256137,
+  "P_real_frames_mp": 29.954808246851826,
+  "flags": [
+   "ok",
+   "ok"
+  ],
+  "P_real_s": 1.1982,
+  "note": "real clip is nominal 25 Hz; P_real_s = P_mp/25"
+ },
+ {
+  "id": "real_16",
+  "image": "inputs/f0_real_16.png",
+  "pivot": [
+   322,
+   121
+  ],
+  "bob": [
+   322,
+   255
+  ],
+  "gauge_source": "GAUGE-Dataset@f95bb06 data/rigid/pendulum/video/16.mp4 (codex-api-4 t8 real_16.mp4 frame 0)",
+  "P_real_frames_acf": 29.53095733332382,
+  "P_real_frames_mp": 29.683905859385256,
+  "flags": [
+   "ok",
+   "ok"
+  ],
+  "P_real_s": 1.1874,
+  "note": "real clip is nominal 25 Hz; P_real_s = P_mp/25"
+ },
+ {
+  "id": "real_17",
+  "image": "inputs/f0_real_17.png",
+  "pivot": [
+   320,
+   121
+  ],
+  "bob": [
+   297,
+   255
+  ],
+  "gauge_source": "GAUGE-Dataset@f95bb06 data/rigid/pendulum/video/17.mp4 (codex-api-4 t8 real_17.mp4 frame 0)",
+  "P_real_frames_acf": 29.27175681164803,
+  "P_real_frames_mp": 29.484139502696518,
+  "flags": [
+   "ok",
+   "ok"
+  ],
+  "P_real_s": 1.1794,
+  "note": "real clip is nominal 25 Hz; P_real_s = P_mp/25"
+ },
+ {
+  "id": "real_18",
+  "image": "inputs/f0_real_18.png",
+  "pivot": [
+   320,
+   121
+  ],
+  "bob": [
+   300,
+   257
+  ],
+  "gauge_source": "GAUGE-Dataset@f95bb06 data/rigid/pendulum/video/18.mp4 (codex-api-4 t8 real_18.mp4 frame 0)",
+  "P_real_frames_acf": 29.397729486704385,
+  "P_real_frames_mp": 29.613346364268168,
+  "flags": [
+   "ok",
+   "ok"
+  ],
+  "P_real_s": 1.1845,
+  "note": "real clip is nominal 25 Hz; P_real_s = P_mp/25"
+ },
+ {
+  "id": "real_19",
+  "image": "inputs/f0_real_19.png",
+  "pivot": [
+   325,
+   121
+  ],
+  "bob": [
+   338,
+   250
+  ],
+  "gauge_source": "GAUGE-Dataset@f95bb06 data/rigid/pendulum/video/19.mp4 (codex-api-4 t8 real_19.mp4 frame 0)",
+  "P_real_frames_acf": 29.53518821087805,
+  "P_real_frames_mp": 29.58630600918034,
+  "flags": [
+   "ok",
+   "ok"
+  ],
+  "P_real_s": 1.1835,
+  "note": "real clip is nominal 25 Hz; P_real_s = P_mp/25"
+ }
+]
