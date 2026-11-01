@@ -12,17 +12,28 @@ import time
 import requests
 
 
-# Native 35-step UniPC Karras flow sigmas schedule from tools/cosmos_local/server.py
+# Full native 35-step UniPC schedule (35 steps + terminal 0.0) from tools/cosmos_local
+# Note: step 19 corresponds to sigma ~ 0.896-0.898 (Raj #281 / ro-3 #5315 recipe)
 NATIVE_SIGMAS_35 = [
-    0.99502, 0.99418, 0.99318, 0.99197, 0.99051, 0.98874, 0.98659, 0.98397,
-    0.98075, 0.97679, 0.97188, 0.96579, 0.95819, 0.94868, 0.93675, 0.92175,
-    0.90289, 0.87919, 0.84954, 0.81269, 0.76744, 0.71282, 0.64845, 0.57498,
-    0.49444, 0.41038, 0.32740, 0.25034, 0.18317, 0.12816, 0.00000
+    14.61465, 12.93308, 11.42015, 10.06153, 8.84388, 7.75478, 6.78273, 5.91705,
+    5.14784, 4.46600, 3.86307, 3.33130, 2.86356, 2.45327, 2.09444, 1.78157,
+    1.50965, 1.27411, 1.07079, 0.89595, 0.74617, 0.61838, 0.50983, 0.41805,
+    0.34080, 0.27613, 0.22228, 0.17769, 0.14100, 0.11100, 0.08665, 0.06703,
+    0.05135, 0.03892, 0.02917, 0.00000
 ]
 
 
 def sigma_to_step(target_sigma: float) -> int:
-    """Find the step index in native 35-step UniPC schedule closest to target_sigma."""
+    """Find the step index in native 35-step UniPC schedule closest to target_sigma.
+    
+    If target_sigma is normalized in [0, 1] (e.g. 0.90 for Raj's recipe), maps directly
+    to step 19 (sigma ~ 0.896) or step 14 (sigma ~ 2.094).
+    """
+    if target_sigma <= 1.0:
+        # Search among steps with sigma <= 1.5 or normalized scale
+        sub_indices = [i for i, s in enumerate(NATIVE_SIGMAS_35) if s <= 2.0]
+        if sub_indices:
+            return min(sub_indices, key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
     return min(range(len(NATIVE_SIGMAS_35)), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
 
 
@@ -136,8 +147,17 @@ def run_remote_nanophys(
         "wall_seconds": round(elapsed, 2),
     }
 
-    if server_sidecar and "sigmas_used" in server_sidecar:
-        sidecar["sigmas_used"] = server_sidecar["sigmas_used"]
+    if server_sidecar:
+        if "sigmas_used" in server_sidecar:
+            sidecar["sigmas_used"] = server_sidecar["sigmas_used"]
+        if "summary" in server_sidecar and isinstance(server_sidecar["summary"], dict):
+            sidecar["server_summary"] = server_sidecar["summary"]
+            if "sigma_start" in server_sidecar["summary"]:
+                sidecar["actual_sigma_start"] = server_sidecar["summary"]["sigma_start"]
+        elif "latent" in server_sidecar and isinstance(server_sidecar["latent"], dict):
+            sidecar["server_latent"] = server_sidecar["latent"]
+            if "sigma_start" in server_sidecar["latent"]:
+                sidecar["actual_sigma_start"] = server_sidecar["latent"]["sigma_start"]
 
     sidecar_p = out_p.with_suffix(".json")
     sidecar_p.write_text(json.dumps(sidecar, indent=2))
