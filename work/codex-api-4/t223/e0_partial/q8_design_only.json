@@ -1,0 +1,402 @@
+{
+  "source_url": "http://100.111.167.68:8030/jobs?owner=raj-noise",
+  "scope": "request metadata only; no native sidecar/outcome fields",
+  "runs": [
+    {
+      "id": "131114-eb67dc",
+      "name": "N_E0_q8_cpu_s101",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 101,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-a98437",
+      "name": "N_E0_q8_cpu_s102",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 102,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-5c404b",
+      "name": "N_E0_q8_cpu_s103",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 103,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-58560e",
+      "name": "N_E0_q8_cpu_s104",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 104,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-9442e8",
+      "name": "N_E0_q8_cpu_s105",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 105,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-71dd2f",
+      "name": "N_E0_q8_cpu_s106",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 106,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-d04b78",
+      "name": "N_E0_q8_cpu_s107",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 107,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-a09478",
+      "name": "N_E0_q8_cpu_s108",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 108,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-6dddb4",
+      "name": "N_E0_q8_cuda_s101",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 101,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cuda"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-5d1eec",
+      "name": "N_E0_q8_cuda_s102",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 102,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cuda"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-c18676",
+      "name": "N_E0_q8_cuda_s103",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 103,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cuda"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    },
+    {
+      "id": "131114-f67093",
+      "name": "N_E0_q8_cuda_s104",
+      "owner": "raj-noise",
+      "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "ball1_dd33.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 104,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cuda"
+          },
+          "prog": "N",
+          "exp": "E0",
+          "cls": "q8"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3"
+      ]
+    }
+  ]
+}

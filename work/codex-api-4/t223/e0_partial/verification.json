@@ -1,0 +1,9 @@
+{
+  "source_queue_server_sha256": "77394532b7e941deeaf51229c4f1eccbd19c117aee078534eccb395572742f89",
+  "source_scope": "read-only snapshot of announced shared queue implementation; no live source edited",
+  "native_contracts_passed": 12,
+  "independent_decode_checks_passed": 2,
+  "frozen_original_files_unchanged": 5,
+  "primary_tests_executed": 0,
+  "note": "Numerical/contract audit, not planted-case validation or cross-GPU replication"
+}

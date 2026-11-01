@@ -1,0 +1,442 @@
+{
+  "scope": "Partial actual E0 artifact audit, not a cross-GPU replication or physical finding.",
+  "design_freeze_board": 4818,
+  "design_sha256": "053e6db3fcb2e081558f74992dad76601b99750c53188189738daf6f02cc838c",
+  "protocol_sha256": "5088aba754bc45d31c013e858f89801f6d30a9c061206751ea91bce74ad26396",
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "run_id": "131114-eb67dc",
+      "name": "N_E0_q8_cpu_s101",
+      "device_requested": "cpu",
+      "seed": 101,
+      "clip_sha256": "3a660c1d83f0937ea1f082f9bc19dbe9a220fd92c7a1641942204ad70c134bdd",
+      "queue_record_sha256": "5916a42c4c5cb33804bdf09ce40498113e6f1b4688cef7b960794157c231655e",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131233_0002_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-a98437",
+      "name": "N_E0_q8_cpu_s102",
+      "device_requested": "cpu",
+      "seed": 102,
+      "clip_sha256": "f2cb01beab558acf4837e78bffb1d20802339f37e60fc040c58d1143d37eaa32",
+      "queue_record_sha256": "fb3eaedc173716f4cb1c970fde8fba2265a9db3f82a880610fa5fa6905c1e0aa",
+      "endpoint": "q8-0",
+      "server_clip_id": "20261101T131323_0003_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-5c404b",
+      "name": "N_E0_q8_cpu_s103",
+      "device_requested": "cpu",
+      "seed": 103,
+      "clip_sha256": "b5478ee143eacb425ebbbe7d558361149eda8a3b530ecf79a4ed330d0534cc07",
+      "queue_record_sha256": "2d06043cac73b0104ea030608cd8b95076e6894bee4e0dca15a15ac6d950e76c",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131332_0003_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-58560e",
+      "name": "N_E0_q8_cpu_s104",
+      "device_requested": "cpu",
+      "seed": 104,
+      "clip_sha256": "b383b82c0282b66afc70eac2aa6b3c721ac0f57f8ee6024b0b23f94fb8a29930",
+      "queue_record_sha256": "abae4e36af68642f0df3d953286fdccf7e76c4c5f4f00aa98a886e8dc0f93eb0",
+      "endpoint": "q8-0",
+      "server_clip_id": "20261101T131423_0004_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-9442e8",
+      "name": "N_E0_q8_cpu_s105",
+      "device_requested": "cpu",
+      "seed": 105,
+      "clip_sha256": "f5437f1e866857062a18646f3e5c9f282d693f0580f88f62a90c5ddef0b5fca6",
+      "queue_record_sha256": "c7917496efe369e2fe6fc992769221bbebc215a33b9d688521ac8343714e8d46",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131432_0004_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-71dd2f",
+      "name": "N_E0_q8_cpu_s106",
+      "device_requested": "cpu",
+      "seed": 106,
+      "clip_sha256": "2bb621d7b7842d515a87c302a89faaf5735b1f5955ed8c1f74a538d464951bf1",
+      "queue_record_sha256": "ed0091765c158a5a2e6a223c9aca1a8bc689bf1387860646f6cbc47a59a6277d",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131532_0005_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-d04b78",
+      "name": "N_E0_q8_cpu_s107",
+      "device_requested": "cpu",
+      "seed": 107,
+      "clip_sha256": "f3011b2c945a9374611f0fe7a56d19aa6f20117a2506db823d004030b88aea64",
+      "queue_record_sha256": "b23f581ae692d1372597d7b76544a1b322613a484e3e90367061446dcb82967b",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131631_0006_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-a09478",
+      "name": "N_E0_q8_cpu_s108",
+      "device_requested": "cpu",
+      "seed": 108,
+      "clip_sha256": "c2fc26c106429dd3efe4d0a20810f85b45f04e1a2aa1fa898793c76bcf4eaf6f",
+      "queue_record_sha256": "36615f40910575072e87cf86fa48d85dfcb5a47ba9b5597355d10a0e7670ceb2",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131730_0007_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-6dddb4",
+      "name": "N_E0_q8_cuda_s101",
+      "device_requested": "cuda",
+      "seed": 101,
+      "clip_sha256": "6b551923bb4da3271e31821808ad73592065e4ca4b8fbca900ad122122b16809",
+      "queue_record_sha256": "25dbe932b900d787d373c23e07c7a565cd5f88c2cd0c78163d878c7f1bd2816d",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131830_0008_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-5d1eec",
+      "name": "N_E0_q8_cuda_s102",
+      "device_requested": "cuda",
+      "seed": 102,
+      "clip_sha256": "0438de68dc90fada666b2fde8c0dcc793b7d62f3c172a5a2e728d62a81c2f209",
+      "queue_record_sha256": "e9818dc8f68a123e48c765c2a2b974f4fe323cbee0c3477f2abe8400de69f058",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T131929_0009_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-c18676",
+      "name": "N_E0_q8_cuda_s103",
+      "device_requested": "cuda",
+      "seed": 103,
+      "clip_sha256": "4c371df04001b4b31aea74bb8cdfaa0d6a30461b2f3d6a525ed33723d580cc88",
+      "queue_record_sha256": "0d6f08ba5ef9c48c07fd7116ad22aa3a7f6c6abb1abcdcaf2d5536256bc184cf",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T132028_0010_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    },
+    {
+      "run_id": "131114-f67093",
+      "name": "N_E0_q8_cuda_s104",
+      "device_requested": "cuda",
+      "seed": 104,
+      "clip_sha256": "02ba3f283d9c0c2ae3e11a0cb53df1822152db680fd57a17bdce36e39565e370",
+      "queue_record_sha256": "7721d982196fb78664d1e12d87033d75455bb7cc56504bc893a7cdc9c8011655",
+      "endpoint": "q8-2",
+      "server_clip_id": "20261101T132127_0011_raj-noise",
+      "native_video": {
+        "decoded_frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480
+      }
+    }
+  ],
+  "independent_decode_checks": [
+    {
+      "name": "N_E0_q8_cpu_s101",
+      "independent_ffmpeg_block_area_max_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "N_E0_q8_cuda_s101",
+      "independent_ffmpeg_block_area_max_error": 4.440892098500626e-16
+    }
+  ],
+  "registered_primary_family": [
+    {
+      "noise_device": "cpu",
+      "reference": "q8",
+      "target": "l40s",
+      "planned_seed_count": 8,
+      "reference_available": 8,
+      "target_available": 0,
+      "p_value": null,
+      "holm_internal_p": 1,
+      "status": "untested: required target artifacts unavailable"
+    },
+    {
+      "noise_device": "cpu",
+      "reference": "q8",
+      "target": "a6k",
+      "planned_seed_count": 8,
+      "reference_available": 8,
+      "target_available": 0,
+      "p_value": null,
+      "holm_internal_p": 1,
+      "status": "untested: required target artifacts unavailable"
+    },
+    {
+      "noise_device": "cpu",
+      "reference": "l40s",
+      "target": "a6k",
+      "planned_seed_count": 8,
+      "reference_available": 0,
+      "target_available": 0,
+      "p_value": null,
+      "holm_internal_p": 1,
+      "status": "untested: required target artifacts unavailable"
+    },
+    {
+      "noise_device": "cuda",
+      "reference": "q8",
+      "target": "l40s",
+      "planned_seed_count": 4,
+      "reference_available": 4,
+      "target_available": 0,
+      "p_value": null,
+      "holm_internal_p": 1,
+      "status": "untested: required target artifacts unavailable"
+    },
+    {
+      "noise_device": "cuda",
+      "reference": "q8",
+      "target": "a6k",
+      "planned_seed_count": 4,
+      "reference_available": 4,
+      "target_available": 0,
+      "p_value": null,
+      "holm_internal_p": 1,
+      "status": "untested: required target artifacts unavailable"
+    },
+    {
+      "noise_device": "cuda",
+      "reference": "l40s",
+      "target": "a6k",
+      "planned_seed_count": 4,
+      "reference_available": 0,
+      "target_available": 0,
+      "p_value": null,
+      "holm_internal_p": 1,
+      "status": "untested: required target artifacts unavailable"
+    }
+  ],
+  "q8_cpu_seed_order": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ],
+  "q8_cpu_within_gpu_distance_matrix": [
+    [
+      0.0,
+      0.003723866753941856,
+      0.0030858537989427565,
+      0.004321343176682868,
+      0.0033286247569854293,
+      0.006806849781261267,
+      0.004832333325712441,
+      0.007921383995296136
+    ],
+    [
+      0.003723866753941856,
+      0.0,
+      0.0031141045948453565,
+      0.004250091756251605,
+      0.0032825522468515685,
+      0.006705578589852887,
+      0.005023711047543929,
+      0.007986487497002875
+    ],
+    [
+      0.0030858537989427565,
+      0.0031141045948453565,
+      0.0,
+      0.0037372785394183964,
+      0.0026825217628683325,
+      0.006271994633655966,
+      0.004372859519498033,
+      0.007454580415834988
+    ],
+    [
+      0.004321343176682868,
+      0.004250091756251605,
+      0.0037372785394183964,
+      0.0,
+      0.0038461209432321033,
+      0.0072890374196967495,
+      0.0055363395194032525,
+      0.008639464189271466
+    ],
+    [
+      0.0033286247569854293,
+      0.0032825522468515685,
+      0.0026825217628683325,
+      0.0038461209432321033,
+      0.0,
+      0.006448523807102448,
+      0.004558027246727756,
+      0.007635485142596438
+    ],
+    [
+      0.006806849781261267,
+      0.006705578589852887,
+      0.006271994633655966,
+      0.0072890374196967495,
+      0.006448523807102448,
+      0.0,
+      0.008079239739785705,
+      0.01062656999707631
+    ],
+    [
+      0.004832333325712441,
+      0.005023711047543929,
+      0.004372859519498033,
+      0.0055363395194032525,
+      0.004558027246727756,
+      0.008079239739785705,
+      0.0,
+      0.008784606335289918
+    ],
+    [
+      0.007921383995296136,
+      0.007986487497002875,
+      0.007454580415834988,
+      0.008639464189271466,
+      0.007635485142596438,
+      0.01062656999707631,
+      0.008784606335289918,
+      0.0
+    ]
+  ],
+  "q8_cpu_different_seed_mean": 0.0057266225190224585,
+  "within_file_self_distance": 0,
+  "self_control_limit": "Same file compared with itself, not independently generated same-host repeats.",
+  "device_switch_seed_order": [
+    101,
+    102,
+    103,
+    104
+  ],
+  "device_switch_distance_matrix": [
+    [
+      0.007113558446711668,
+      0.003500827719278382,
+      0.006512335106054596,
+      0.003833980335928789
+    ],
+    [
+      0.007212824775822054,
+      0.003604591107707541,
+      0.0066001081994405035,
+      0.003848223875378782
+    ],
+    [
+      0.0066587147870096,
+      0.0029422855244862368,
+      0.006022537541417505,
+      0.003263244658205044
+    ],
+    [
+      0.007734945206127756,
+      0.004109909785857709,
+      0.00716988389586168,
+      0.004485486407301126
+    ]
+  ],
+  "device_switch_diagnostic": {
+    "n_seeds": 4,
+    "same_seed_distance": 0.00530654337578446,
+    "different_seed_distance": 0.005282273655787594,
+    "different_minus_same": -2.426971999686632e-05,
+    "same_divided_by_different": 1.0045945593845322,
+    "seed_cluster_bootstrap": {
+      "ci95": [
+        -0.0006720776658307603,
+        0.0006419583538745111
+      ],
+      "defined_draws": 1963,
+      "undefined_draws": 37
+    },
+    "permutation": {
+      "p_one_sided": 0.875,
+      "exact": true,
+      "permutations": 24,
+      "exceedances": 21
+    },
+    "scope": "Exploratory same-GPU CPU-versus-CUDA device-switch diagnostic; not a registered cross-GPU test or an equivalence test. Aggregate #4786 was known."
+  },
+  "provenance": {
+    "queue_request_and_video_contract": "verified on 12 artifacts",
+    "original_input_bytes": "unavailable; basename alone does not establish image equality",
+    "native_server_sidecars": "not provided; queue sidecars contain request parameters",
+    "executed_noise_shape_dtype_hash": "not provided",
+    "actual_sampler_sigmas": "not provided; source default Karras, requested flow_shift=10 ignored",
+    "checkpoint_and_runtime_revisions": "not provided",
+    "cross_gpu_execution": "unverified"
+  },
+  "units": "Distances are fractions of full grayscale range; multiply by 255 for gray levels.",
+  "versions": {
+    "numpy": "1.26.4",
+    "opencv": "4.13.0"
+  }
+}

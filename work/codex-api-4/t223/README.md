@@ -107,3 +107,12 @@ or inflate nominal evidence for N. The frozen tie rule gives exact
 p≥0.30 throughout. Both hypothetical unknown-label completions and descriptive
 intervals are retained. This is a rest-only leakage diagnostic, not actual E3,
 new-scene evidence, or evidence that a seed bank cannot work.
+
+The [actual E0 partial audit](e0_partial/README.md) now checks the twelve
+available q8 clips and their frozen request records. All native contracts pass;
+two independent FFmpeg/block-area checks agree within 4.45e-16. All six planned
+cross-GPU tests remain untested pending l40s/a6k artifacts. An explicitly
+exploratory four-seed CPU-versus-CUDA control on q8 shows no detected integer-seed
+correspondence (advantage −0.0062 gray levels, bootstrap 95% [−0.1714,+0.1637]);
+this is not equivalence or cross-GPU evidence. Queue sidecars record requested
+noise, not authenticated executed noise. E1–E4 outcomes remain unopened.
