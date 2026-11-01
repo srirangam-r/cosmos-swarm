@@ -1,0 +1,8 @@
+# Qualitative review: ball 2, seed 3, held vs mid-event frame
+
+Unblinded, selected pair; not a planted-validated measurement. Original 189-frame clips were sampled every 6 frames, with native-size sheets showing frames 0, 12, 18, 24, 30, 36, 90 and 188. Full native frames retain 832×480 pixels. Sidecars are included. SHA-256: control `6fe9e3192c4cfc9945cb076f4fd2b1c81ceb6c25d77e1f14ded58c0443a22959`; mid `97287026c6306af1da1444d2ab44c4fbbd043c737bfaba58a35c6eadc7a9b897`.
+
+- Control: the dark form near the gripper is difficult to distinguish in frames 0–18. A much larger, dark ball-like object is visible near the plank at frame 24 and repeatedly changes apparent height through frame 188. Its connection to the original object is unresolved; its apparent size and appearance differ substantially from the mid-event input. The near-surface passes alone do not establish contact or bounce.
+- Mid: a small dark object is visible below the gripper at frame 0, becomes indistinct near the plank in frames 12–24, then a ball-like form repeatedly changes height through frame 188. Continuity through the indistinct interval, physical contact and rebound are uncertain. No clear conclusion on reattachment or clone incidence.
+
+The matched seed is only one pair, with different conditioning frames and times. The mid input comes from a later real frame and is a diagnostic, not an admissible first-frame-only final recipe. This observation does not estimate an effect, artifact rate, physics, or generalize across seeds. Sparse samples can miss events; inspect original full videos for definitive coding.
