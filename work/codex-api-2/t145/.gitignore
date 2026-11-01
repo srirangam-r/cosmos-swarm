@@ -1,3 +1,4 @@
 jobs.jsonl
 out/
 acts/
+*.log
