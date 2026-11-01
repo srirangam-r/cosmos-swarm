@@ -1,0 +1,1022 @@
+{
+ "1": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.443,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 13.74712610244751,
+  "impact_frames": [
+   37,
+   48,
+   55,
+   61,
+   121
+  ],
+  "g": 9.627096239430182,
+  "g_ci95": [
+   9.362408229651932,
+   9.956139297890035
+  ],
+  "g_sd": 0.15313705139242575,
+  "r2": 0.9976431673198988,
+  "n_flights": 4,
+  "n_frames": 10,
+  "g_pooled": -0.01661930821007731,
+  "g_per_flight": [
+   9.627096239429694,
+   8.27326740753624,
+   21.42350773318895,
+   -0.018056875484456808
+  ],
+  "flight_frames": [
+   [
+    38,
+    47
+   ],
+   [
+    49,
+    54
+   ],
+   [
+    56,
+    60
+   ],
+   [
+    62,
+    120
+   ]
+  ],
+  "flight_rise_px": [
+   119.63163729076598,
+   58.44308474476071,
+   36.100719196527564,
+   22.616615384615386
+  ],
+  "flag": "ok"
+ },
+ "2": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.03,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 13.741456031799316,
+  "impact_frames": [
+   39,
+   49,
+   57,
+   63
+  ],
+  "g": 9.573141619765716,
+  "g_ci95": [
+   8.90957772824521,
+   10.31300451669961
+  ],
+  "g_sd": 0.3590158456048183,
+  "r2": 0.9879741181238834,
+  "n_flights": 3,
+  "n_frames": 9,
+  "g_pooled": 9.47257375004538,
+  "g_per_flight": [
+   9.573141619764474,
+   8.36466380729183,
+   13.907540272708133
+  ],
+  "flight_frames": [
+   [
+    40,
+    48
+   ],
+   [
+    50,
+    56
+   ],
+   [
+    58,
+    62
+   ]
+  ],
+  "flight_rise_px": [
+   122.08102615694165,
+   63.29576376004951,
+   38.99624060150376
+  ],
+  "flag": "ok"
+ },
+ "3": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 24.942,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 17.6732177734375,
+  "impact_frames": [
+   38,
+   49,
+   56,
+   62
+  ],
+  "g": 9.074830122523938,
+  "g_ci95": [
+   8.539426331487434,
+   9.590391338238538
+  ],
+  "g_sd": 0.27447305647558856,
+  "r2": 0.9900297240784557,
+  "n_flights": 3,
+  "n_frames": 10,
+  "g_pooled": 9.31452737183982,
+  "g_per_flight": [
+   9.074830122523547,
+   7.927890197476076,
+   22.05223704916151
+  ],
+  "flight_frames": [
+   [
+    39,
+    48
+   ],
+   [
+    50,
+    55
+   ],
+   [
+    57,
+    61
+   ]
+  ],
+  "flight_rise_px": [
+   87.59254201680673,
+   63.53389505361781,
+   36.86238859180037
+  ],
+  "flag": "ok"
+ },
+ "4": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.213,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 30.0,
+  "impact_frames": [
+   45,
+   61,
+   64,
+   154
+  ],
+  "g": -1.1240826775243309,
+  "g_ci95": [
+   -6.620823157003484,
+   3.623734542497173
+  ],
+  "g_sd": 2.580461913011123,
+  "r2": 0.12091162481596551,
+  "n_flights": 2,
+  "n_frames": 15,
+  "g_pooled": -0.001070725778652847,
+  "g_per_flight": [
+   -1.1240826775243102,
+   -0.0009212949873637165
+  ],
+  "flight_frames": [
+   [
+    46,
+    60
+   ],
+   [
+    65,
+    153
+   ]
+  ],
+  "flight_rise_px": [
+   281.40884179532856,
+   6.125752508361209
+  ],
+  "flag": "weak"
+ },
+ "5": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.12,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 14.0,
+  "impact_frames": [
+   49,
+   59,
+   67,
+   72,
+   77
+  ],
+  "g": 9.751158786124007,
+  "g_ci95": [
+   9.038552960603443,
+   10.483590989417559
+  ],
+  "g_sd": 0.37023357892177944,
+  "r2": 0.9880721961135396,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 10.281968727650531,
+  "g_per_flight": [
+   9.751158786124268,
+   12.228271846576595
+  ],
+  "flight_frames": [
+   [
+    50,
+    58
+   ],
+   [
+    60,
+    66
+   ]
+  ],
+  "flight_rise_px": [
+   94.50220443206865,
+   60.5029957984238
+  ],
+  "flag": "ok"
+ },
+ "6": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.183,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 14.66993236541748,
+  "impact_frames": [
+   51,
+   62,
+   69,
+   74,
+   79
+  ],
+  "g": 9.40154741119144,
+  "g_ci95": [
+   8.966619677301862,
+   9.915632687002692
+  ],
+  "g_sd": 0.258633151612134,
+  "r2": 0.9927939042108226,
+  "n_flights": 2,
+  "n_frames": 10,
+  "g_pooled": 9.308170486165432,
+  "g_per_flight": [
+   9.401547411189753,
+   7.987553975131254
+  ],
+  "flight_frames": [
+   [
+    52,
+    61
+   ],
+   [
+    63,
+    68
+   ]
+  ],
+  "flight_rise_px": [
+   123.64341692789966,
+   63.377112920140064
+  ],
+  "flag": "ok"
+ },
+ "7": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.03,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 23.0,
+  "impact_frames": [
+   40,
+   50,
+   58,
+   64,
+   68
+  ],
+  "g": 9.690563205016083,
+  "g_ci95": [
+   8.968647772576492,
+   10.45520436430756
+  ],
+  "g_sd": 0.37486914039674957,
+  "r2": 0.9871255828718005,
+  "n_flights": 3,
+  "n_frames": 9,
+  "g_pooled": 9.51017361882142,
+  "g_per_flight": [
+   9.690563205015795,
+   8.091704514558907,
+   14.052417348085672
+  ],
+  "flight_frames": [
+   [
+    41,
+    49
+   ],
+   [
+    51,
+    57
+   ],
+   [
+    59,
+    63
+   ]
+  ],
+  "flight_rise_px": [
+   125.86130202367318,
+   62.85878648769818,
+   39.70339864747706
+  ],
+  "flag": "ok"
+ },
+ "8": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.085,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 16.063807487487793,
+  "impact_frames": [
+   40,
+   50,
+   58,
+   63,
+   134,
+   143
+  ],
+  "g": 9.756817266606372,
+  "g_ci95": [
+   9.070148177039716,
+   10.498525071532688
+  ],
+  "g_sd": 0.37295325942352187,
+  "r2": 0.9875157587437496,
+  "n_flights": 4,
+  "n_frames": 9,
+  "g_pooled": -0.0037756287182560844,
+  "g_per_flight": [
+   9.756817266605454,
+   8.358477790945313,
+   -0.004246822927072081,
+   4.082322215249434
+  ],
+  "flight_frames": [
+   [
+    41,
+    49
+   ],
+   [
+    51,
+    57
+   ],
+   [
+    64,
+    133
+   ],
+   [
+    135,
+    142
+   ]
+  ],
+  "flight_rise_px": [
+   94.13702623906707,
+   59.73087431693989,
+   27.121148459383733,
+   155.66729675553205
+  ],
+  "flag": "ok"
+ },
+ "9": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.399,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 17.04357624053955,
+  "impact_frames": [
+   43,
+   55,
+   62,
+   68
+  ],
+  "g": 7.546468887902975,
+  "g_ci95": [
+   6.5743820009800595,
+   8.73988915324503
+  ],
+  "g_sd": 0.5624610240925968,
+  "r2": 0.9440879717068645,
+  "n_flights": 3,
+  "n_frames": 11,
+  "g_pooled": 7.776909811464963,
+  "g_per_flight": [
+   7.546468887902615,
+   8.061889009878568,
+   21.139701883501793
+  ],
+  "flight_frames": [
+   [
+    44,
+    54
+   ],
+   [
+    56,
+    61
+   ],
+   [
+    63,
+    67
+   ]
+  ],
+  "flight_rise_px": [
+   89.38560212660735,
+   61.40281375334223,
+   37.085457310677555
+  ],
+  "flag": "weak"
+ },
+ "10": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.207,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 20.0,
+  "impact_frames": [
+   44,
+   54,
+   62,
+   67
+  ],
+  "g": 9.917106454183505,
+  "g_ci95": [
+   9.096856992861191,
+   10.757676030488035
+  ],
+  "g_sd": 0.42461095814656735,
+  "r2": 0.9844373671686525,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 9.598389934544608,
+  "g_per_flight": [
+   9.91710645418272,
+   8.429762695870071
+  ],
+  "flight_frames": [
+   [
+    45,
+    53
+   ],
+   [
+    55,
+    61
+   ]
+  ],
+  "flight_rise_px": [
+   123.23812452475735,
+   62.969908730630664
+  ],
+  "flag": "ok"
+ },
+ "11": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 24.873,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 13.435029029846191,
+  "impact_frames": [
+   40,
+   51,
+   59,
+   65,
+   122
+  ],
+  "g": 9.579196801720084,
+  "g_ci95": [
+   9.294169345784901,
+   9.91556255884014
+  ],
+  "g_sd": 0.15124483966793342,
+  "r2": 0.9979361265805026,
+  "n_flights": 4,
+  "n_frames": 10,
+  "g_pooled": -0.014908490036322941,
+  "g_per_flight": [
+   9.579196801719792,
+   8.200964943901802,
+   16.21245243289092,
+   -0.016867084280362373
+  ],
+  "flight_frames": [
+   [
+    41,
+    50
+   ],
+   [
+    52,
+    58
+   ],
+   [
+    60,
+    64
+   ],
+   [
+    66,
+    121
+   ]
+  ],
+  "flight_rise_px": [
+   126.66384130821467,
+   67.55201855690456,
+   47.475658221559854,
+   19.111637931034466
+  ],
+  "flag": "ok"
+ },
+ "12": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 24.935,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 12.263676643371582,
+  "impact_frames": [
+   39,
+   49,
+   57,
+   62
+  ],
+  "g": 9.492024255495737,
+  "g_ci95": [
+   8.896470851534875,
+   10.21105895398003
+  ],
+  "g_sd": 0.34833533227302493,
+  "r2": 0.9896540206891355,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 9.159210842391516,
+  "g_per_flight": [
+   9.492024255495929,
+   7.938894994343313
+  ],
+  "flight_frames": [
+   [
+    40,
+    48
+   ],
+   [
+    50,
+    56
+   ]
+  ],
+  "flight_rise_px": [
+   125.77415995765904,
+   59.46853387863888
+  ],
+  "flag": "ok"
+ },
+ "13": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.345,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 15.17893123626709,
+  "impact_frames": [
+   42,
+   52,
+   60,
+   66,
+   69
+  ],
+  "g": 9.802876779525644,
+  "g_ci95": [
+   9.093075613753566,
+   10.605245140574718
+  ],
+  "g_sd": 0.3827906514069919,
+  "r2": 0.9869140457645071,
+  "n_flights": 3,
+  "n_frames": 9,
+  "g_pooled": 10.313070994123123,
+  "g_per_flight": [
+   9.802876779524873,
+   11.403007040990579,
+   14.997727434070969
+  ],
+  "flight_frames": [
+   [
+    43,
+    51
+   ],
+   [
+    53,
+    59
+   ],
+   [
+    61,
+    65
+   ]
+  ],
+  "flight_rise_px": [
+   118.03364741015343,
+   59.61099349172747,
+   39.568765893503894
+  ],
+  "flag": "ok"
+ },
+ "14": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.49,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 17.0,
+  "impact_frames": [
+   43,
+   54,
+   62,
+   67
+  ],
+  "g": 7.68790952292377,
+  "g_ci95": [
+   7.002566662789571,
+   8.432611781673332
+  ],
+  "g_sd": 0.39213370575293627,
+  "r2": 0.973795740371389,
+  "n_flights": 2,
+  "n_frames": 10,
+  "g_pooled": 7.779122469058269,
+  "g_per_flight": [
+   7.6879095229236984,
+   8.352460987619793
+  ],
+  "flight_frames": [
+   [
+    44,
+    53
+   ],
+   [
+    55,
+    61
+   ]
+  ],
+  "flight_rise_px": [
+   124.3728875291375,
+   61.264750899427895
+  ],
+  "flag": "weak"
+ },
+ "15": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.253,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 17.0,
+  "impact_frames": [
+   39,
+   49,
+   57,
+   62
+  ],
+  "g": 9.829607262748763,
+  "g_ci95": [
+   9.070669432476173,
+   10.635971887834428
+  ],
+  "g_sd": 0.3964744572044477,
+  "r2": 0.986038631667373,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 9.54243056489752,
+  "g_per_flight": [
+   9.82960726274876,
+   8.489449339443267
+  ],
+  "flight_frames": [
+   [
+    40,
+    48
+   ],
+   [
+    50,
+    56
+   ]
+  ],
+  "flight_rise_px": [
+   94.8283464318404,
+   62.2788171743868
+  ],
+  "flag": "ok"
+ },
+ "16": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.206,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 17.81116485595703,
+  "impact_frames": [
+   63,
+   73,
+   81,
+   87,
+   90
+  ],
+  "g": 9.726133112352306,
+  "g_ci95": [
+   8.927484845258205,
+   10.571506918671059
+  ],
+  "g_sd": 0.41467977348158624,
+  "r2": 0.9849879233660251,
+  "n_flights": 3,
+  "n_frames": 9,
+  "g_pooled": 10.557454267383793,
+  "g_per_flight": [
+   9.726133112349494,
+   12.31882165257415,
+   18.27831536694504
+  ],
+  "flight_frames": [
+   [
+    64,
+    72
+   ],
+   [
+    74,
+    80
+   ],
+   [
+    82,
+    86
+   ]
+  ],
+  "flight_rise_px": [
+   128.59096486335747,
+   64.978835978836,
+   37.72867300433825
+  ],
+  "flag": "ok"
+ },
+ "17": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.14,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 18.0,
+  "impact_frames": [
+   52,
+   62,
+   70,
+   75
+  ],
+  "g": 9.801083837322974,
+  "g_ci95": [
+   9.131144597710813,
+   10.513934746445948
+  ],
+  "g_sd": 0.3617427292882206,
+  "r2": 0.9888662936919708,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 9.490468105282407,
+  "g_per_flight": [
+   9.801083837321345,
+   8.35154375446868
+  ],
+  "flight_frames": [
+   [
+    53,
+    61
+   ],
+   [
+    63,
+    69
+   ]
+  ],
+  "flight_rise_px": [
+   93.1591399333897,
+   63.36925832895224
+  ],
+  "flag": "ok"
+ },
+ "18": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 24.966,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 16.732192039489746,
+  "impact_frames": [
+   45,
+   56,
+   63,
+   69,
+   72
+  ],
+  "g": 9.376941408363617,
+  "g_ci95": [
+   9.072196310479333,
+   9.738917343546188
+  ],
+  "g_sd": 0.17435198310343894,
+  "r2": 0.9968005236081636,
+  "n_flights": 3,
+  "n_frames": 10,
+  "g_pooled": 9.426447293889488,
+  "g_per_flight": [
+   9.376941408364223,
+   7.316057822421181,
+   16.92123166233743
+  ],
+  "flight_frames": [
+   [
+    46,
+    55
+   ],
+   [
+    57,
+    62
+   ],
+   [
+    64,
+    68
+   ]
+  ],
+  "flight_rise_px": [
+   124.72674966987361,
+   63.19374283134442,
+   40.39435234209998
+  ],
+  "flag": "ok"
+ },
+ "19": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.135,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 14.03546142578125,
+  "impact_frames": [
+   46,
+   56,
+   59,
+   64,
+   70
+  ],
+  "g": 9.723848638087826,
+  "g_ci95": [
+   9.021852213321768,
+   10.448115586305867
+  ],
+  "g_sd": 0.3539774741278292,
+  "r2": 0.9884210536954029,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 12.53107035702036,
+  "g_per_flight": [
+   9.723848638088473,
+   74.28994817347842
+  ],
+  "flight_frames": [
+   [
+    47,
+    55
+   ],
+   [
+    65,
+    69
+   ]
+  ],
+  "flight_rise_px": [
+   125.97185174510008,
+   223.36650442477873
+  ],
+  "flag": "ok"
+ },
+ "20": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.223,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 19.803061485290527,
+  "impact_frames": [
+   44,
+   55,
+   63,
+   68
+  ],
+  "g": 9.384618871379681,
+  "g_ci95": [
+   8.99623127974082,
+   9.86104644266073
+  ],
+  "g_sd": 0.21657898425884417,
+  "r2": 0.9951498915921531,
+  "n_flights": 2,
+  "n_frames": 10,
+  "g_pooled": 9.624625207639157,
+  "g_per_flight": [
+   9.38461887137857,
+   11.133236464127082
+  ],
+  "flight_frames": [
+   [
+    45,
+    54
+   ],
+   [
+    56,
+    62
+   ]
+  ],
+  "flight_rise_px": [
+   126.90675353038074,
+   61.816220365000845
+  ],
+  "flag": "ok"
+ },
+ "21": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.217,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 20.899999618530273,
+  "impact_frames": [
+   42,
+   52,
+   60,
+   65
+  ],
+  "g": 9.787624501395486,
+  "g_ci95": [
+   9.074883613600202,
+   10.545457013761443
+  ],
+  "g_sd": 0.37120836352719777,
+  "r2": 0.9877346941490776,
+  "n_flights": 2,
+  "n_frames": 9,
+  "g_pooled": 10.113225303837522,
+  "g_per_flight": [
+   9.787624501395795,
+   11.307094912794128
+  ],
+  "flight_frames": [
+   [
+    43,
+    51
+   ],
+   [
+    53,
+    59
+   ]
+  ],
+  "flight_rise_px": [
+   124.01607142857145,
+   62.80921503942534
+  ],
+  "flag": "ok"
+ },
+ "22": {
+  "method": "measure_bounce v1 (curvature of the first rebound flight, residual bootstrap; pooled all-flight value as g_pooled)",
+  "tracker": "ball",
+  "fps": 25.338,
+  "m_per_px": 0.0018525379770285293,
+  "d_px": 13.761432647705078,
+  "impact_frames": [
+   43,
+   54,
+   62,
+   67,
+   73
+  ],
+  "g": 9.574780220917868,
+  "g_ci95": [
+   9.261925296700952,
+   9.976811907604555
+  ],
+  "g_sd": 0.1872943751865474,
+  "r2": 0.9966339463060395,
+  "n_flights": 3,
+  "n_frames": 10,
+  "g_pooled": 9.558017585990315,
+  "g_per_flight": [
+   9.574780220917964,
+   8.112014236472824,
+   17.60184688012504
+  ],
+  "flight_frames": [
+   [
+    44,
+    53
+   ],
+   [
+    55,
+    61
+   ],
+   [
+    68,
+    72
+   ]
+  ],
+  "flight_rise_px": [
+   128.58334143968872,
+   72.89333880229697,
+   37.6348946986202
+  ],
+  "flag": "ok"
+ }
+}
