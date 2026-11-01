@@ -1,0 +1,23 @@
+{
+  "scope": "input identity only; no physics validation",
+  "results": [
+    {
+      "id": 6,
+      "published_images": "PASS",
+      "source_reproduction": "PASS",
+      "indices": [
+        0,
+        186
+      ]
+    },
+    {
+      "id": 14,
+      "published_images": "PASS",
+      "source_reproduction": "PASS",
+      "indices": [
+        0,
+        186
+      ]
+    }
+  ]
+}

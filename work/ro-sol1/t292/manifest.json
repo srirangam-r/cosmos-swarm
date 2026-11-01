@@ -1,0 +1,138 @@
+{
+  "schema": "t277-input-candidate-v1",
+  "status": "INPUTS_PINNED; NOT_QUEUE_READY",
+  "task_id": 292,
+  "parent_task": 277,
+  "pre_decode_rule_message": 5966,
+  "provenance_metadata_commit": "0f135ad5fd299994cbc61eb374c379dc7452b0bf",
+  "provenance_metadata_paths": [
+    "work/codex-api-4/t8/output/clips/real_06.json",
+    "work/codex-api-4/t8/output/clips/real_14.json"
+  ],
+  "dataset_revision": "f95bb06e7d11142f88ffd3b6b56c7258deb8fff6",
+  "transform": {
+    "decode": "OpenCV VideoCapture seek to fixed container index, one read; no frame scan or time/phase fitting",
+    "input_size": [
+      1280,
+      720
+    ],
+    "resize": [
+      832,
+      468
+    ],
+    "interpolation": "cv2.INTER_AREA",
+    "pad_ltrb": [
+      0,
+      6,
+      0,
+      6
+    ],
+    "output_size": [
+      832,
+      480
+    ]
+  },
+  "decoded_indices": [
+    0,
+    186
+  ],
+  "records": [
+    {
+      "id": 6,
+      "source_url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/6.mp4",
+      "source_sha256": "6d54f8ce8ec61df3704eda321c1033e76a06b39972847408681b8b940e6ba89a",
+      "source_bytes": 69475046,
+      "source_size": [
+        1280,
+        720
+      ],
+      "frame_index": 186,
+      "rejected_frame0": {
+        "frame_index": 0,
+        "image": "real06_frame0.png",
+        "image_sha256": "3413d4fc5bc6b9106f494b8b613f5f0d97ce7ee9ff342299777a9bcb780ba4d9",
+        "pivot": null,
+        "bob": null,
+        "reason": "Suspended bob not clearly identifiable in literal frame0; do not infer geometry."
+      },
+      "image": "real06_f186.png",
+      "image_sha256": "fe4953ddd9971a798f95003c23fbc08d3d432e8acda2477e39c3cce6c655ec6e",
+      "geometry": {
+        "pivot_xy": [
+          322,
+          121
+        ],
+        "bob_xy": [
+          207,
+          154
+        ],
+        "coordinate_system": "832x480 image pixels; origin top-left; x right; y down",
+        "manual_location_tolerance_px": 6,
+        "theta0_deg_left_positive": 73.98882252119154,
+        "rod_length_px": 119.64113005150027,
+        "status": "Manual single-image geometry; motion-blurred bob. Not metric calibration or referee-validated measurement."
+      }
+    },
+    {
+      "id": 14,
+      "source_url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/f95bb06e7d11142f88ffd3b6b56c7258deb8fff6/data/rigid/pendulum/video/14.mp4",
+      "source_sha256": "db3d57dbed02ef2f71a893a6561af3f27f529b0b736494b18326d3870301e1d6",
+      "source_bytes": 72709258,
+      "source_size": [
+        1280,
+        720
+      ],
+      "frame_index": 186,
+      "rejected_frame0": {
+        "frame_index": 0,
+        "image": "real14_frame0.png",
+        "image_sha256": "06978db88819395f61229c4f0e239a0c656d9e2706edaa8b61d6a7c5a6d60908",
+        "pivot": null,
+        "bob": null,
+        "reason": "Suspended bob not clearly identifiable in literal frame0; do not infer geometry."
+      },
+      "image": "real14_f186.png",
+      "image_sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2",
+      "geometry": {
+        "pivot_xy": [
+          324,
+          122
+        ],
+        "bob_xy": [
+          333,
+          252
+        ],
+        "coordinate_system": "832x480 image pixels; origin top-left; x right; y down",
+        "manual_location_tolerance_px": 5,
+        "theta0_deg_left_positive": -3.9603118304583846,
+        "rod_length_px": 130.31116606031887,
+        "status": "Manual single-image geometry; motion-blurred bob. Not metric calibration or referee-validated measurement."
+      }
+    }
+  ],
+  "candidate_proxy_contract": {
+    "periods_s": {
+      "proxy": 1.186,
+      "wrong": 2.0162
+    },
+    "period_source": "Prescribed interventions from parent277/5833; no real-video period measured",
+    "num_frames": 93,
+    "fps": 24,
+    "amplitude_deg": 85,
+    "amplitude_source": "Prescribed shared demo setting, not estimated from continuation",
+    "release_from_rest": false,
+    "direction": "inward",
+    "state_status": "Explicit harmonic initial-state assumption; velocity cannot be recovered from a still image. This is not measured real motion. Executor must adopt or replace explicitly before generation.",
+    "metric_length_m": null,
+    "g_m_s2": null,
+    "builder_generated": false
+  },
+  "remaining_gates": [
+    "executor adoption of these input images and state assumptions",
+    "exact shared prompt/negative/guidance and frozen proxy builder",
+    "native sampler/full sigma/stack freeze + actual-start verification (291)",
+    "referee-owner resolution5939; crossing reader remains UNVALIDATED",
+    "no queue submission until all parent277 execution gates met"
+  ],
+  "queue_job_ids": []
+}
