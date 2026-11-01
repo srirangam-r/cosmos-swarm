@@ -51,6 +51,14 @@ def main():
             if a == "base": continue
             A = prompt_scores(arms[a])
             R["paired_vs_base"][a] = {x: paired(A, B, x, rng, MARGIN_ABS.get(x, MARGIN_REL[x] * R["arms"]["base"][x] if x in MARGIN_REL else None)) for x in METRICS}
+    # --ref ARM (added shift 12, before any loraA/B result exists): paired test vs a control arm (e.g. A - loraC), CI only, no margin.
+    if "--ref" in sys.argv:
+        ref = sys.argv[sys.argv.index("--ref") + 1]
+        if ref in arms:
+            Rf = prompt_scores(arms[ref]); R[f"paired_vs_{ref}"] = {}
+            for a in arms:
+                if a in (ref, "base"): continue
+                R[f"paired_vs_{ref}"][a] = {x: paired(prompt_scores(arms[a]), Rf, x, rng, None) for x in METRICS}
     s = json.dumps(R, indent=1, default=float); print(s)
     if out: open(out, "w").write(s)
 if __name__ == "__main__": main()

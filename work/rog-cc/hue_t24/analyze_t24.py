@@ -51,6 +51,15 @@ def main():
             if a == "base": continue
             A = prompt_scores(arms[a])
             R["paired_vs_base"][a] = {c: paired(A, B, c, rng) for c in CATS}
+    # --ref ARM (added shift 12, before any loraA/B result exists): same paired test vs a control arm, e.g. A - loraC
+    # (PREREG: "if A's Physical gain is matched by B/C, it is not physics"). Reported as a CI; margin verdicts apply only vs base.
+    if "--ref" in sys.argv:
+        ref = sys.argv[sys.argv.index("--ref") + 1]
+        if ref in arms:
+            Rf = prompt_scores(arms[ref]); R[f"paired_vs_{ref}"] = {}
+            for a in arms:
+                if a in (ref, "base"): continue
+                R[f"paired_vs_{ref}"][a] = {c: paired(prompt_scores(arms[a]), Rf, c, rng) for c in CATS}
     s = json.dumps(R, indent=1, default=float); print(s)
     if out: open(out, "w").write(s)
 if __name__ == "__main__": main()
