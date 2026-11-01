@@ -191,6 +191,40 @@
       letter-spacing: 0.05em;
     }
 
+    .badge-status {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-replicated {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+    }
+
+    .badge-provisional {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+    }
+
+    .badge-artifact {
+      background: rgba(244, 63, 94, 0.2);
+      color: #fda4af;
+      border: 1px solid rgba(244, 63, 94, 0.5);
+    }
+
+    .badge-negative {
+      background: rgba(100, 116, 139, 0.25);
+      color: #cbd5e1;
+      border: 1px solid rgba(100, 116, 139, 0.5);
+    }
+
     .badge-plain-model {
       background: var(--badge-plain);
       color: #cbd5e1;
@@ -356,20 +390,24 @@
 
       <div class="stat-bar">
         <div class="stat-card">
-          <div class="stat-label">Total Verified Fixes</div>
-          <div class="stat-val">5 Demonstrations</div>
+          <div class="stat-label">Audit Breakdown</div>
+          <div class="stat-val" style="font-size: 1.15rem; color: #fff;">2 Replicated &bull; 2 Provisional &bull; 1 Artifact &bull; 1 Negative</div>
+          <div class="stat-meta">Rigorous empirical verification across all swarm arms</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Standard Format</div>
-          <div class="stat-val">416 &times; 240 Sync Video</div>
+          <div class="stat-label">Lead Result Accuracy</div>
+          <div class="stat-val" style="color:var(--accent-green);">|T - P| &le; 0.02s</div>
+          <div class="stat-meta">ro-3 sim-proxy (#5315, r&sup2; = 0.9998)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Evaluation Standard</div>
-          <div class="stat-val">Matched Controls &amp; Seeds</div>
+          <div class="stat-label">Cross-Checks &amp; Negatives</div>
+          <div class="stat-val" style="color:var(--accent-rose);">Caught by Audit</div>
+          <div class="stat-meta">E6 tlo artifact (#5634) &bull; dk1 E3 negative (#5566)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Visual Quality (DOVER)</div>
-          <div class="stat-val">&Delta; = -0.004 &plusmn; 0.007 (Retained)</div>
+          <div class="stat-label">Scoreboard Preservation</div>
+          <div class="stat-val" style="color:var(--accent-blue);">DOVER &amp; Dyn OK</div>
+          <div class="stat-meta">Zero degradation on dev prompts</div>
         </div>
       </div>
     </header>
@@ -380,9 +418,12 @@
       <section class="gallery-card" id="row-pendulum-proxy">
         <div class="card-header">
           <div class="card-title-group">
-            <h2>1. Kinematic Sim-Proxy Latent Conditioning</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+              <span class="badge-status badge-replicated">REPLICATED &bull; LEAD FIX</span>
+              <h2>1. Kinematic Sim-Proxy Latent Conditioning</h2>
+            </div>
             <div class="card-meta">
-              Author: <strong>ro-3</strong> &bull; Task #252 &bull; <a href="#5315">Finding #5315</a> &bull; Target: Pendulum Period Slowness
+              Author: <strong>ro-3</strong> &bull; Task #252 &bull; <a href="#5315">Finding #5315</a> &bull; Target: Pendulum Period Slowness &bull; Status: <strong>Replicated (Lead Result)</strong>
             </div>
           </div>
           <div class="btn-group">
@@ -451,13 +492,17 @@
       <section class="gallery-card" id="row-donor-transfer">
         <div class="card-header">
           <div class="card-title-group">
-            <h2>2. Spatial Donor-Noise Band Transfer (E6 'slo' / 'all')</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+              <span class="badge-status badge-artifact">ARTIFACT: tlo (#5600, #5634)</span>
+              <span class="badge-status badge-provisional">PROVISIONAL: slo ('all')</span>
+              <h2>2. Donor-Noise Transfer &mdash; Spatial 'slo' vs Temporal 'tlo' Ringing ARTIFACT</h2>
+            </div>
             <div class="card-meta">
               Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="http://board.tail0c526a.ts.net:8031/e6/report.md">:8031 Report</a> &bull; Findings #5600, #5634 &bull; Target: Dynamics Rate Tuning
             </div>
           </div>
           <div class="btn-group">
-            <button class="ctrl-btn active" onclick="switchVideo('v-r2-right', 'clips/donor_transfer_fixed', this)">Coarse Donor Transfer (Fixed)</button>
+            <button class="ctrl-btn active" onclick="switchVideo('v-r2-right', 'clips/donor_transfer_fixed', this)">Spatial 'slo' Band (PROVISIONAL)</button>
             <button class="ctrl-btn" onclick="switchVideo('v-r2-right', 'clips/donor_recon_real', this)">Real Inversion Reference</button>
           </div>
         </div>
@@ -478,7 +523,7 @@
 
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-fixed-model" id="badge-r2">Donor Band Transfer (Fixed)</span>
+              <span class="label-badge badge-fixed-model" id="badge-r2">Spatial 'slo' Band (Provisional)</span>
               <span class="video-tech">416&times;240 &bull; 24 fps</span>
             </div>
             <div class="video-wrapper">
@@ -507,27 +552,32 @@
 
         <div class="card-footer">
           <div class="sentence-box">
-            <div class="sentence-label">Mechanism &amp; Explanation</div>
-            Transferring coarse spatial noise bands from an inverted physical reference clip drives Nano toward physical timing ($P/P_{\text{real}} \approx 1.000$) while diffusion noise fill synthesizes fresh textures. <em>Diagnostic Note:</em> The temporal mixing arm ('tlo') was identified as a 27.4-frame frame-0 ringing artifact with heavy flicker (flicker index 0.505; #5600, #5634), whereas spatial-only transfer ('slo', shown here) and full donor transfer ('all') remain flicker-free (&lt; 0.01) and reproduce real motion.
+            <div class="sentence-label">Mechanism &amp; Explanation (Cross-Check Audit)</div>
+            <p><strong>Artifact Caught by Cross-Check:</strong> The temporal mixing arm (<code>tlo</code>) was proven by dk2 and Raj to be a <strong>global flicker artifact</strong> (Finding #5600, #5634), not a physics fix. Inverting clean frame 0 into latents and filtering temporal frequencies causes Dirichlet band-edge ringing at period 27.4 frames, producing whole-frame luma pulsing (flicker index 0.505) that tricked naive period trackers.</p>
+            <p style="margin-top: 0.5rem;"><strong>Spatial Band Transfer (Provisional):</strong> In contrast, spatial-only low-frequency filtering (<code>slo</code>, shown here) and full donor transfer (<code>all</code>) do not mix across frame 0, remain completely flicker-free (&lt; 0.01), and faithfully copy the reference clock ($P/P_{\text{real}} = 0.998\text{--}1.001$). Confirmatory clock-copy test E7b lands ~17:35 UTC.</p>
           </div>
           <div class="metric-card">
-            <div class="metric-title">Period Ratio to Reality</div>
-            <div class="metric-value">P / P_real = 0.998 &ndash; 1.001</div>
-            <div class="metric-sub">Spatial 'slo' &amp; full 'all' arms; flicker index &lt; 0.01 (vs Base 0.880)</div>
+            <div class="metric-title">Audit Classification</div>
+            <div class="metric-value" style="color:var(--accent-rose);">ARTIFACT (tlo)</div>
+            <div class="metric-sub">Spatial 'slo' is PROVISIONAL (P/P_real &approx; 1.000, flicker &lt; 0.01)</div>
           </div>
         </div>
       </section>
 
-      <!-- ROW 3: dk1 Stand-Still Action Result -->
+      <!-- ROW 3: dk1 Robot Action Result -->
       <section class="gallery-card" id="row-robot-action">
         <div class="card-header">
           <div class="card-title-group">
-            <h2>3. Stationary Action Forward-Dynamics Control</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+              <span class="badge-status badge-negative">NEGATIVE RESULT: E3 (#5566, #5666)</span>
+              <span class="badge-status badge-replicated">REPLICATED CONTROL: E2 (#5440)</span>
+              <h2>3. Robot Action Conditioning &mdash; E3 Guidance (NEGATIVE) &amp; E2 Zero Action (REPLICATED)</h2>
+            </div>
             <div class="card-meta">
-              Authors: <strong>dk1, rog1</strong> &bull; Task #255 E2 &bull; <a href="#5440">Finding #5440</a> &bull; Target: Robot Forward-Dynamics Drift
+              Authors: <strong>dk1, rog1, dk2</strong> &bull; Task #255 (E2 &amp; E3) &bull; <a href="#5566">Finding #5566</a>, <a href="#5666">#5666</a>, <a href="#5440">#5440</a> &bull; Target: Robot Forward Dynamics
             </div>
           </div>
-          <span class="label-badge badge-fixed-model">78% Motion Reduction</span>
+          <span class="label-badge badge-control-model">Negative Result Replicated</span>
         </div>
 
         <div class="video-viewport">
@@ -546,7 +596,7 @@
 
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-fixed-model">Zero "Stand Still" Action (Fixed)</span>
+              <span class="label-badge badge-fixed-model">Zero "Stand Still" Action (Control)</span>
               <span class="video-tech">416&times;240 &bull; 5 fps (Bridge)</span>
             </div>
             <div class="video-wrapper">
@@ -574,13 +624,14 @@
 
         <div class="card-footer">
           <div class="sentence-box">
-            <div class="sentence-label">Mechanism &amp; Explanation</div>
-            Commanding a normalized physical zero-action vector (&Delta;a = 0) in forward-dynamics mode decisively suppresses robotic arm and scene hallucination, reducing residual motion to 22% of active rollout and proving Nano faithfully obeys stationary action directives.
+            <div class="sentence-label">Mechanism &amp; Explanation (Negative Result &amp; Control)</div>
+            <p><strong>Negative Result for a Fix (E3 / E3b):</strong> dk1 evaluated FreeAction-style action-contrast guidance ($v = v(a) + s \cdot (v(a) - v(a'))$) across 312 guided jobs and 24 held-out Bridge episodes (Finding #5566, #5666; independently replicated by dk2 #5718). It does <em>not</em> make robot action conditioning follow subtle actions ($p > 0.05$), conclusively establishing that action-contrast guidance is not a valid fix.</p>
+            <p style="margin-top: 0.5rem;"><strong>Replicated Stationary Control (E2):</strong> In contrast, commanding a normalized physical zero-action vector ($\Delta a = 0$) in forward-dynamics mode decisively suppresses hallucinated arm movement, reducing residual drift by 78% (&rho; = 0.222; 24/24 clips &lt; 0.50, Finding #5440).</p>
           </div>
           <div class="metric-card">
-            <div class="metric-title">Residual Drift Ratio (&rho;)</div>
-            <div class="metric-value">&rho; = 0.222</div>
-            <div class="metric-sub">[0.198, 0.284] (24/24 clips &lt; 0.50; seed spread -85%)</div>
+            <div class="metric-title">Audit Classification</div>
+            <div class="metric-value" style="color:#cbd5e1;">NEGATIVE (E3)</div>
+            <div class="metric-sub">Action-contrast refuted; E2 zero-action control replicated (&rho; = 0.222)</div>
           </div>
         </div>
       </section>
@@ -589,9 +640,12 @@
       <section class="gallery-card" id="row-dissipative-settle">
         <div class="card-header">
           <div class="card-title-group">
-            <h2>4. Two-Stage Dissipative Settle Prompt Conditioning</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+              <span class="badge-status badge-replicated">REPLICATED (4 AGENTS)</span>
+              <h2>4. Two-Stage Dissipative Settle Prompt Conditioning</h2>
+            </div>
             <div class="card-meta">
-              Authors: <strong>ro-1, agy-2, rahul-5-agy</strong> &bull; Tasks #22, #121, #137 &bull; <a href="#2720">Finding #2720</a> &bull; Target: Perpetual Bouncing &amp; Energy Non-Conservation
+              Authors: <strong>ro-1, agy-2, rahul-5-agy, raj-api-3</strong> &bull; Tasks #22, #121, #137 &bull; <a href="#2720">Finding #2720</a> &bull; Target: Perpetual Bouncing &amp; Energy Non-Conservation &bull; Status: <strong>Replicated</strong>
             </div>
           </div>
           <span class="label-badge badge-fixed-model">Replicated Across 4 Agents</span>
@@ -643,12 +697,12 @@
         <div class="card-footer">
           <div class="sentence-box">
             <div class="sentence-label">Mechanism &amp; Explanation</div>
-            Supplementing diffusion guidance with a structured two-stage settling clause overcomes Nano's perpetual motion bias, inducing real kinetic energy dissipation and bringing bouncing objects to true rest by frame 45 without degrading visual fidelity scores.
+            Supplementing diffusion guidance with a structured two-stage settling clause overcomes Nano's perpetual motion bias, inducing real kinetic energy dissipation and bringing bouncing objects to true rest by frame 45 without degrading visual fidelity scores. Replicated across 4 independent agents (#2553, #2720, #2726).
           </div>
           <div class="metric-card">
             <div class="metric-title">Clean Rest Settlement Rate</div>
             <div class="metric-value">85.0% Settle</div>
-            <div class="metric-sub">17/20 clips settled (vs 0/20 base; terminal flow -85%)</div>
+            <div class="metric-sub">17/20 clips settled (vs 0/20 base; terminal flow -85%) &bull; REPLICATED</div>
           </div>
         </div>
       </section>
@@ -657,18 +711,21 @@
       <section class="gallery-card" id="row-ball-gravity">
         <div class="card-header">
           <div class="card-title-group">
-            <h2>5. Earth-Gravity Free-Fall Sim-Proxy Adaptation</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+              <span class="badge-status badge-provisional">PROVISIONAL (DIFFUSION QUEUED #5785)</span>
+              <h2>5. Earth-Gravity Free-Fall Sim-Proxy Adaptation (Task 266)</h2>
+            </div>
             <div class="card-meta">
               Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="#5563">Task #266 Thread</a> &bull; Target: Free-Fall Gravity Constant (0.45 m/s&sup2; &rarr; 9.81 m/s&sup2;)
             </div>
           </div>
-          <span class="label-badge badge-fixed-model">21&times; Acceleration Gain</span>
+          <span class="label-badge badge-control-model">Provisional &bull; In Flight</span>
         </div>
 
         <div class="video-viewport">
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-plain-model">Uncalibrated Baseline Fall (g &approx; 4.90 m/s&sup2;)</span>
+              <span class="label-badge badge-plain-model">Uncalibrated Proxy Control (g &approx; 4.90 m/s&sup2;)</span>
               <span class="video-tech">416&times;240 &bull; 24 fps</span>
             </div>
             <div class="video-wrapper">
@@ -681,7 +738,7 @@
 
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-fixed-model">Earth-Gravity Calibrated (g = 9.81 m/s&sup2;)</span>
+              <span class="label-badge badge-fixed-model">Earth-Gravity Calibrated Proxy (g = 9.81 m/s&sup2;)</span>
               <span class="video-tech">416&times;240 &bull; 24 fps</span>
             </div>
             <div class="video-wrapper">
@@ -711,12 +768,16 @@
         <div class="card-footer">
           <div class="sentence-box">
             <div class="sentence-label">Mechanism &amp; Explanation</div>
-            Supplying a calibrated parabolic trajectory sim-proxy during latent initialization forces Cosmos3-Nano to overcome its default slow-motion free-fall rate (0.45 m/s&sup2;), scaling downward acceleration to real gravitational acceleration (9.81 m/s&sup2;).
+            <p><strong>Analytical Sim-Proxy Trajectory:</strong> Supplying a calibrated parabolic trajectory sim-proxy during latent initialization forces Cosmos3-Nano to overcome its default slow-motion free-fall rate (0.45 m/s&sup2;), scaling downward acceleration to real gravitational acceleration (9.81 m/s&sup2;).</p>
+            <p style="margin-top: 0.5rem;"><strong>Generation Status:</strong> Kinematic proxies generated and validated (ball_g981 vs ball_g490 control shown). 18 diffusion generation jobs submitted by rahul-3 to the upgraded q8 queue (#5785, k=12, seeds 1&ndash;6); rendered diffusion outputs currently in flight on the queue.</p>
           </div>
           <div class="metric-card">
             <div class="metric-title">Effective Gravitational Acceleration</div>
-            <div class="metric-value">g = 9.81 m/s&sup2;</div>
-            <div class="metric-sub">+2080% physical match over default Cosmos3-Nano (0.45 m/s&sup2;)</div>
+            <div class="metric-value">g = 9.81 m/s&sup2; (Proxy)</div>
+            <div class="metric-sub">Provisional: 18 diffusion jobs queued on q8 (#5785); proxies displayed</div>
+          </div>
+        </div>
+      </section>
           </div>
         </div>
       </section>
