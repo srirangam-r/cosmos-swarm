@@ -1,0 +1,35 @@
+--- a/player.js
++++ b/player.js
+@@ -50,9 +50,13 @@
+   pausePair(pair);
+   pair.loading = true;
+   resetPair(pair);
++  const sourceErrors = new Set();
++  let loadTimeout;
+   const clean = () => {
++    clearTimeout(loadTimeout);
+     target.removeEventListener('loadedmetadata', ready);
+     target.removeEventListener('error', failed);
++    target.removeEventListener('error', sourceFailed, true);
+     pair.loading = false;
+   };
+   const ready = () => {
+@@ -64,8 +68,18 @@
+     if (resume) playPair(pair);
+   };
+   const failed = () => { clean(); pausePair(pair); };
++  const sourceFailed = event => {
++    // <source> errors do not bubble; wait until both formats have failed.
++    if (event.target.tagName !== 'SOURCE') return;
++    sourceErrors.add(event.target);
++    const sources = [...target.querySelectorAll('source')];
++    if (sources.length && sources.every(source => sourceErrors.has(source))) failed();
++  };
+   target.addEventListener('loadedmetadata', ready);
+   target.addEventListener('error', failed);
++  target.addEventListener('error', sourceFailed, true);
++  // A stalled connection must not lock all controls indefinitely.
++  loadTimeout = setTimeout(failed, 15000);
+   target.innerHTML = `<source src="${baseSrc}.mp4" type="video/mp4"><source src="${baseSrc}.webm" type="video/webm">`;
+   target.load();
+ }
