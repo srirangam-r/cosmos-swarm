@@ -47,6 +47,8 @@ DEFAULT_PROMPT_BASIC = (
     "A smooth metallic sphere drops vertically from rest above a flat wooden surface, "
     "falling freely under gravity, impacting the plank, and bouncing in real time."
 )
+DEFAULT_PROMPT_REC = DEFAULT_PROMPT_BASIC
+
 # Stage 2: Validated dissipative settling prompt (ro-1 #2460, #2488, Review #2553, #2606)
 TIMED_DISSIPATIVE_PROMPT = (
     "A smooth metallic sphere drops vertically from rest above a flat wooden surface, falling freely under gravity, "
@@ -326,7 +328,14 @@ def main():
     parser.add_argument("--diff-threshold", type=float, default=8.0, help="Global motion threshold for release detection")
     parser.add_argument("--local-threshold", type=float, default=15.0, help="Localized peak motion threshold for release detection")
     parser.add_argument("--prompt", default=DEFAULT_PROMPT_TIMED, help="Prompt text or path to JSON prompt (default: timed-settling prompt resolving bounce decay)")
-    parser.add_argument("--basic-prompt", action="store_true", help="Use basic non-timed falling ball prompt without settling clause")
+    parser.add_argument(
+        "--basic-prompt",
+        "--stage1-only",
+        "--rec-prompt",
+        dest="basic_prompt",
+        action="store_true",
+        help="Use basic non-timed falling ball prompt without Stage 2 settling clause (the REC baseline from Finding #2720)",
+    )
     parser.add_argument("--out", default="out/recipe_output.mp4", help="Output MP4 path")
     parser.add_argument("--mode", choices=["endpoint", "local"], default="endpoint", help="Inference execution mode")
     parser.add_argument("--url", default="http://127.0.0.1:8021", help="Cosmos3-Nano server endpoint URL")
@@ -477,11 +486,19 @@ def main():
     print(f"[output] Successfully wrote generated video: {out_path} ({out_path.stat().st_size / 1e6:.2f} MB)")
 
     # 3. Create JSON sidecar with exact recipe parameters and provenance
+    is_stage_2 = bool(
+        not args.basic_prompt
+        and (
+            args.settle
+            or prompt_str == TIMED_DISSIPATIVE_PROMPT
+            or "comes to rest on the plank" in prompt_str
+        )
+    )
     sidecar = {
         "recipe_name": "Dynamic Mid-Event Conditioning (Release-Seam Protocol)",
         "charter_deliverable": 1,
         "stage_1_release_seam": True,
-        "stage_2_dissipative_settle": bool(args.settle),
+        "stage_2_dissipative_settle": is_stage_2,
         "clip_file": str(out_path.name),
         "conditioning_image": str(cond_frame_path.name),
         "prompt": prompt_str,

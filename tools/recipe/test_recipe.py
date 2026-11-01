@@ -29,9 +29,14 @@ from unittest import mock
 import cv2
 import numpy as np
 
-# Ensure tools/recipe can be imported
-REPO_ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(REPO_ROOT / "tools" / "recipe"))
+# Ensure tools/recipe can be imported whether run from repo root, tests/, or tools/recipe/
+_this_dir = Path(__file__).resolve().parent
+if (_this_dir / "run_recipe.py").exists():
+    REPO_ROOT = _this_dir.parent.parent
+    sys.path.insert(0, str(_this_dir))
+else:
+    REPO_ROOT = _this_dir.parent
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "recipe"))
 import run_recipe
 
 
@@ -267,6 +272,138 @@ class TestRecipeRunner(unittest.TestCase):
             self.assertEqual(sidecar["height"], 480)
             self.assertEqual(sidecar["fps"], 24)
             self.assertEqual(sidecar["provenance"]["mode"], "dry-run")
+
+    def test_settle_prompt_flag(self):
+        """--settle activates Stage 2 event-timing dissipative settle prompt in sidecar."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            input_img = Path(tmpdir) / "test_input.png"
+            cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_video = Path(tmpdir) / "out_settle.mp4"
+            args = [
+                "run_recipe.py",
+                "--image", str(input_img),
+                "--out", str(out_video),
+                "--dry-run",
+                "--settle",
+            ]
+
+            with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            sidecar_path = out_video.with_suffix(".json")
+            self.assertTrue(sidecar_path.exists())
+            with open(sidecar_path) as f:
+                sidecar = json.load(f)
+
+            self.assertTrue(sidecar["stage_2_dissipative_settle"])
+            self.assertIn("bounces only twice with rapidly diminishing heights", sidecar["prompt"])
+            self.assertIn("comes to rest on the plank within about one and a half seconds", sidecar["prompt"])
+
+    def test_settle_custom_prompt_substitution(self):
+        """--settle with custom prompt containing 'and bouncing in real time.' substitutes timing clause."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            input_img = Path(tmpdir) / "test_input.png"
+            cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_video = Path(tmpdir) / "out_settle_custom.mp4"
+            custom_prompt = "A red ball dropping from above and bouncing in real time."
+            args = [
+                "run_recipe.py",
+                "--image", str(input_img),
+                "--out", str(out_video),
+                "--dry-run",
+                "--settle",
+                "--prompt", custom_prompt,
+            ]
+
+            with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            sidecar_path = out_video.with_suffix(".json")
+            self.assertTrue(sidecar_path.exists())
+            with open(sidecar_path) as f:
+                sidecar = json.load(f)
+
+            self.assertTrue(sidecar["stage_2_dissipative_settle"])
+            self.assertIn("A red ball dropping from above", sidecar["prompt"])
+            self.assertIn("bounces only twice with rapidly diminishing heights", sidecar["prompt"])
+            self.assertIn("comes to rest on the plank within about one and a half seconds", sidecar["prompt"])
+            self.assertNotIn("and bouncing in real time.", sidecar["prompt"])
+
+    def test_default_run_has_stage2_settle_in_sidecar(self):
+        """Regression test for rog-cc #2775: default run must record stage_2_dissipative_settle: True in sidecar."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            input_img = Path(tmpdir) / "test_input.png"
+            cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_video = Path(tmpdir) / "out_default.mp4"
+            args = [
+                "run_recipe.py",
+                "--image", str(input_img),
+                "--out", str(out_video),
+                "--dry-run",
+            ]
+
+            with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            sidecar_path = out_video.with_suffix(".json")
+            self.assertTrue(sidecar_path.exists())
+            with open(sidecar_path) as f:
+                sidecar = json.load(f)
+
+            self.assertTrue(sidecar["stage_2_dissipative_settle"])
+            self.assertEqual(sidecar["prompt"], run_recipe.TIMED_DISSIPATIVE_PROMPT)
+
+    def test_stage1_only_flag_sets_stage2_false(self):
+        """Regression test for rog-cc #2775: --stage1-only / --rec-prompt uses REC prompt and sets stage_2: False."""
+        for flag in ["--stage1-only", "--rec-prompt", "--basic-prompt"]:
+            with self.subTest(flag=flag), tempfile.TemporaryDirectory() as tmpdir:
+                input_img = Path(tmpdir) / "test_input.png"
+                cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+                out_video = Path(tmpdir) / f"out_stage1_{flag.strip('-')}.mp4"
+                args = [
+                    "run_recipe.py",
+                    "--image", str(input_img),
+                    "--out", str(out_video),
+                    "--dry-run",
+                    flag,
+                ]
+
+                with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                    run_recipe.main()
+
+                sidecar_path = out_video.with_suffix(".json")
+                self.assertTrue(sidecar_path.exists())
+                with open(sidecar_path) as f:
+                    sidecar = json.load(f)
+
+                self.assertFalse(sidecar["stage_2_dissipative_settle"])
+                self.assertEqual(sidecar["prompt"], run_recipe.DEFAULT_PROMPT_REC)
+                self.assertIn("bouncing in real time.", sidecar["prompt"])
+
+    def test_custom_prompt_without_settle_sets_stage2_false(self):
+        """Custom prompt without settle clause sets stage_2_dissipative_settle: False in sidecar."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            input_img = Path(tmpdir) / "test_input.png"
+            cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_video = Path(tmpdir) / "out_custom_plain.mp4"
+            args = [
+                "run_recipe.py",
+                "--image", str(input_img),
+                "--out", str(out_video),
+                "--dry-run",
+                "--prompt", "A smooth metal sphere falling vertically and bouncing.",
+            ]
+
+            with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            sidecar_path = out_video.with_suffix(".json")
+            self.assertTrue(sidecar_path.exists())
+            with open(sidecar_path) as f:
+                sidecar = json.load(f)
+
+            self.assertFalse(sidecar["stage_2_dissipative_settle"])
+            self.assertEqual(sidecar["prompt"], "A smooth metal sphere falling vertically and bouncing.")
 
 
 if __name__ == "__main__":

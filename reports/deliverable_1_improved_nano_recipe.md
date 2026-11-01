@@ -133,7 +133,7 @@ git clone https://github.com/srirangam-r/cosmos-swarm.git
 cd cosmos-swarm
 pip install torch torchvision diffusers opencv-python requests numpy scipy
 
-# 2. Execute recipe runner on conditioning image (via local endpoint or in-process)
+# 2. Execute recipe runner on conditioning image (runs full Two-Stage recipe by default; pass --stage1-only for ballistic baseline)
 python3 tools/recipe/run_recipe.py \
   --image work/raj-3/midfall/inputs/gauge_ball1_dd33_832x480.png \
   --out out/recipe_ball1.mp4 \
@@ -148,6 +148,8 @@ python3 tools/recipe/run_recipe.py \
   --seed 1 \
   --settle \
   --verify
+
+# (Optional: to evaluate Stage 1 only without Stage 2 timed-settling, add --stage1-only or --rec-prompt)
 
 # 3. Dry-run execution on CPU (validates conditioning, letterboxing, payload, mock output, and sidecar without GPU)
 python3 tools/recipe/run_recipe.py \

@@ -74,7 +74,8 @@ python3 tools/recipe/run_recipe.py \
 | `--diff-threshold`| float| 8.0 | Global frame difference threshold for release detection |
 | `--local-threshold`| float| 15.0| Localized window difference threshold for release detection |
 | `--frame-idx` | int | None | Explicit frame index to extract from video |
-| `--prompt` | str | Ballistic prompt | Text prompt or path to JSON prompt |
+| `--prompt` | str | Timed settle prompt | Text prompt or path to JSON prompt (default: `TIMED_DISSIPATIVE_PROMPT`, the full Two-Stage recipe) |
+| `--stage1-only` | flag | False | Use Stage 1 ballistic bouncing baseline prompt (`DEFAULT_PROMPT_REC`) without Stage 2 settling clause (aliases: `--rec-prompt`, `--basic-prompt`) |
 | `--out` | path | `out/recipe_output.mp4` | Destination MP4 output path |
 | `--mode` | choice | `endpoint` | Execution mode: `endpoint` or `local` |
 | `--url` | str | `http://127.0.0.1:8021` | Cosmos3-Nano endpoint URL |
@@ -90,7 +91,7 @@ python3 tools/recipe/run_recipe.py \
 | `--verify` | flag | False | Automatically run referee-validated `firstfall.py` |
 | `--point` | str | None | Initial ball tracking point `x,y` for firstfall verification |
 | `--ppm` | float | 539.8 | Pixels-per-meter scale for verification |
-| `--settle` | flag | False | Stage 2: Use event-timing prompt to induce dissipative settling to rest (ro-1 #2460, #2488) |
+| `--settle` | flag | False | Stage 2: Substitute event-timing dissipative clause into custom prompts (ro-1 #2460, #2720; active by default on standard prompt) |
 
 ---
 
@@ -109,6 +110,11 @@ Test coverage includes:
 6. `test_endpoint_payload_validation`: Ensures non-video payloads raise `ValueError`.
 7. `test_diffusers_pipeline_no_unsupported_kwargs`: AST check ensuring `flow_shift` is not passed to `pipe(...)`.
 8. `test_dry_run_end_to_end`: Exercises full CPU generation of playable MP4, conditioning PNG, and JSON sidecar.
+9. `test_settle_prompt_flag`: Verifies `--settle` flag activates Stage 2 timed dissipative prompt.
+10. `test_settle_custom_prompt_substitution`: Verifies `--settle` substitutes timing clause into custom prompts.
+11. `test_default_run_has_stage2_settle_in_sidecar`: Verifies default run activates Stage 2 and sets `stage_2_dissipative_settle: True` (rog-cc audit #2775).
+12. `test_stage1_only_flag_sets_stage2_false`: Verifies `--stage1-only` / `--rec-prompt` selects `DEFAULT_PROMPT_REC` and sets `stage_2_dissipative_settle: False` (rog-cc audit #2775).
+13. `test_custom_prompt_without_settle_sets_stage2_false`: Verifies custom non-settle prompt sets `stage_2_dissipative_settle: False`.
 
 ---
 
@@ -119,6 +125,8 @@ Every run generates `<name>.json` containing exact provenance and reproduction m
 {
   "recipe_name": "Dynamic Mid-Event Conditioning (Release-Seam Protocol)",
   "charter_deliverable": 1,
+  "stage_1_release_seam": true,
+  "stage_2_dissipative_settle": true,
   "clip_file": "recipe_ball1.mp4",
   "conditioning_image": "recipe_ball1.conditioning.png",
   "prompt": "A smooth metallic sphere drops vertically from rest...",
