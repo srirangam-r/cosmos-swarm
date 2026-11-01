@@ -24,15 +24,20 @@ NATIVE_SIGMAS_35 = [
 ]
 
 
-def sigma_to_step(target_sigma: float) -> int:
-    """Find the step index in native 35-step UniPC schedule closest to target_sigma.
+def sigma_to_step(target_sigma: float, steps: int = 35) -> int:
+    """Find the step index in native schedule closest to target_sigma.
     
-    Target sigma is in [0, 1] (e.g. 0.90 for Raj's lead recipe, which maps directly
-    to step 19 with sigma = 0.89844).
+    Target sigma must be a finite number in [0, 1] (e.g. 0.90 for Raj's lead recipe,
+    which maps directly to step 19 with sigma = 0.89844).
     """
+    if not isinstance(target_sigma, (int, float)) or isinstance(target_sigma, bool):
+        raise TypeError(f"target_sigma must be a float or int, got {type(target_sigma).__name__}")
     if target_sigma < 0.0 or target_sigma > 1.0:
         raise ValueError(f"target_sigma must be in [0, 1], got {target_sigma}")
-    return min(range(35), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
+    if steps < 1 or steps > len(NATIVE_SIGMAS_35) - 1:
+        raise ValueError(f"steps must be between 1 and {len(NATIVE_SIGMAS_35) - 1}, got {steps}")
+    # Selection candidates are strictly the non-terminal steps [0, steps - 1]
+    return min(range(steps), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
 
 
 def run_remote_nanophys(
@@ -62,9 +67,12 @@ def run_remote_nanophys(
 
     # Determine start step: explicit sigma overrides or maps to step index
     if sigma is not None:
-        start_step = sigma_to_step(sigma)
+        start_step = sigma_to_step(sigma, steps=steps)
     elif start_step is None:
-        start_step = 14  # Default: step 14 (sigma = 0.93675; ro-3 t_init=0.6 arm)
+        start_step = 14  # Default: step 14 (sigma = 0.95868; ro-3 t_init=0.6 arm)
+
+    if not (0 <= start_step < steps):
+        raise ValueError(f"start_step must be in [0, {steps - 1}], got {start_step}")
 
     effective_sigma = NATIVE_SIGMAS_35[start_step] if start_step < len(NATIVE_SIGMAS_35) else None
 
@@ -148,14 +156,31 @@ def run_remote_nanophys(
     if server_sidecar:
         if "sigmas_used" in server_sidecar:
             sidecar["sigmas_used"] = server_sidecar["sigmas_used"]
+
+        # Capture native latent schedule and executed start
+        if "latent" in server_sidecar and isinstance(server_sidecar["latent"], dict):
+            sidecar["server_latent"] = server_sidecar["latent"]
+            if "sigmas_request" in server_sidecar["latent"]:
+                sidecar["sigmas_request"] = server_sidecar["latent"]["sigmas_request"]
+            if "sigma_start" in server_sidecar["latent"]:
+                sidecar["actual_sigma_start"] = server_sidecar["latent"]["sigma_start"]
+            if "start_step" in server_sidecar["latent"]:
+                sidecar["actual_start_step"] = server_sidecar["latent"]["start_step"]
+
+        # Capture summary metadata if present, checking for conflicts rather than silent override
         if "summary" in server_sidecar and isinstance(server_sidecar["summary"], dict):
             sidecar["server_summary"] = server_sidecar["summary"]
             if "sigma_start" in server_sidecar["summary"]:
-                sidecar["actual_sigma_start"] = server_sidecar["summary"]["sigma_start"]
-        elif "latent" in server_sidecar and isinstance(server_sidecar["latent"], dict):
-            sidecar["server_latent"] = server_sidecar["latent"]
-            if "sigma_start" in server_sidecar["latent"]:
-                sidecar["actual_sigma_start"] = server_sidecar["latent"]["sigma_start"]
+                summary_sigma = server_sidecar["summary"]["sigma_start"]
+                if "actual_sigma_start" in sidecar and sidecar["actual_sigma_start"] != summary_sigma:
+                    sidecar["summary_sigma_start_conflict"] = summary_sigma
+                elif "actual_sigma_start" not in sidecar:
+                    sidecar["actual_sigma_start"] = summary_sigma
+
+        # Capture server and scheduler identity
+        for k in ["model", "scheduler", "torch", "server", "server_rev"]:
+            if k in server_sidecar:
+                sidecar[k] = server_sidecar[k]
 
     sidecar_p = out_p.with_suffix(".json")
     sidecar_p.write_text(json.dumps(sidecar, indent=2))

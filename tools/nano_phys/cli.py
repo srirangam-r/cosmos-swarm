@@ -52,8 +52,8 @@ def main():
     parser.add_argument("--g", type=float, default=9.81, help="Gravitational acceleration in m/s^2 (default: 9.81)")
 
     # Generation & sampling parameters
-    parser.add_argument("--start-step", type=int, default=None, help="Diffusion start step index out of 35 (SDEdit t_init; default: 14 = t_init 0.6)")
-    parser.add_argument("--sigma", type=float, default=None, help="Target noise level sigma in [0, 1] (e.g. 0.90 maps to step 16; overrides --start-step)")
+    parser.add_argument("--start-step", type=int, default=None, help="Diffusion start step index out of 35 (SDEdit t_init; default: 14 = sigma 0.95868)")
+    parser.add_argument("--sigma", type=float, default=None, help="Target noise level sigma in [0, 1] (e.g. 0.90 maps to step 19 / sigma 0.89844; overrides --start-step)")
     parser.add_argument("--seed", type=int, default=1, help="RNG seed for CPU noise draws (default: 1)")
     parser.add_argument("--steps", type=int, default=35, help="Total inference steps (default: 35)")
     parser.add_argument("--guidance", type=float, default=6.0, help="Classifier-free guidance scale (default: 6.0)")
@@ -70,6 +70,11 @@ def main():
     parser.add_argument("--emit-queue-job", action="store_true", help="Output JSONL job line for cosmos_queue.py submission")
 
     args = parser.parse_args()
+
+    if args.sigma is not None and not (0.0 <= args.sigma <= 1.0):
+        parser.error(f"--sigma must be in [0, 1], got {args.sigma}")
+    if args.start_step is not None and not (0 <= args.start_step < args.steps):
+        parser.error(f"--start-step must be an integer in [0, {args.steps - 1}], got {args.start_step}")
 
     # Determine default frame count based on physics if not set
     num_frames = args.num_frames
@@ -121,11 +126,11 @@ def main():
     # Determine effective start step
     from .runner import NATIVE_SIGMAS_35, sigma_to_step
     if args.sigma is not None:
-        start_step = sigma_to_step(args.sigma)
+        start_step = sigma_to_step(args.sigma, steps=args.steps)
     elif args.start_step is not None:
         start_step = args.start_step
     else:
-        start_step = 14  # default: step 14 (sigma = 0.93675)
+        start_step = 14  # default: step 14 (sigma = 0.95868)
 
     if args.emit_queue_job:
         job = {
