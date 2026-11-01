@@ -68,7 +68,13 @@ def g_mid(cy, fps, s, flights, nboot=500, seed=0):
 
 
 def run(F, fps, ppm, point, nboot=200):
-    out, tr, r = seeded.measure(F, fps, ppm, None, point, 0, None, nboot=nboot)
+    try:
+        out, tr, r = seeded.measure(F, fps, ppm, None, point, 0, None, nboot=nboot)
+    except Exception as ex:                       # firstfall's fit crashes on very short tracks (ball lost); keep the raw track
+        cx, cy, area, info = ff.track(F, point, 0)
+        tr, r = (cx, cy, area), None
+        out = dict(method=seeded.VERSION + ' [seeded readouts failed]', err=repr(ex), m_per_px=1.0 / ppm, fps_true=fps,
+                   n_tracked=int(np.isfinite(cy).sum()), g_bounce=None, bounce_flag='err', bounce_flight_frames=None)
     cy = np.asarray(tr[1], float)
     m = g_mid(cy, out['fps_true'], out['m_per_px'], out.get('bounce_flight_frames'))
     out.update(m)
@@ -108,6 +114,6 @@ if __name__ == '__main__':
     if o.save_track:
         out['track_cy'] = [None if not np.isfinite(v) else float(v) for v in np.asarray(tr[1], float)]
         out['track_cx'] = [None if not np.isfinite(v) else float(v) for v in np.asarray(tr[0], float)]
-    if o.qc:
+    if o.qc and r is not None:
         ff.qc_png(o.qc, F, tr, r)
     print(json.dumps(out, indent=1, default=float))
