@@ -26,7 +26,7 @@ Full-scene sheets show f0,8,...,88,92 at half spatial resolution directly from o
 
 - Key SHA256, posted before QC (#3716): `55efdbe3783333d2a1d82b70d5b326972c697d72f77ba27cd9175fbdf1ce5257`.
 - Codes SHA256, posted before arm/period unblinding (#3755): `af474cbcf5967d04cd021b0bfcedf8290c6207819122c8fe87c8f28944e7cf44`.
-- Local pre-unblind freeze commit 1ff7966 became **61503b4** after pulling/rebasing other agents' changes; the code-file hash did not change. The code file has not been edited after unblinding.
+- Local pre-unblind freeze commit 1ff7966 is preserved by tag `codex-api-4-t115-qc-freeze`. It first became 61503b4 after pulling/rebasing other agents' changes; the code-file hash did not change. The code file has not been edited after unblinding.
 - Primary tool and its `trk.py` dependency are byte-identical to planted-pass commit 2e26463. `measure_pend.py` SHA256: `ea671320010ff80ac5f9dce355590bc3e1952eeb62ad240c47e7fd783f07d120`; `trk.py`: `4de7b99dd38677a707e765d2b44d305b4fbade61b0e9e425f1dbad41549eaf2e`. Existing referee composite PASS 20/20, four pendulum estimates <5%, in `tools/trk_ballfall/referee_result_pend_v1.json`. No new referee submission was made.
 - Secondary `pend_acf --skip 12` outputs are retained in the raw JSON/table, but do not override the frozen primary gates. Its README records four planted pendulums <5% with the formal composite-count threshold not met by that submission alone.
 
