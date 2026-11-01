@@ -1,0 +1,289 @@
+{
+  "psnr_summary": {
+    "base (sigma_0)": {
+      "n": 3,
+      "f0_psnr_mean": 35.20666666666666,
+      "f0_psnr_se": 0.15695009822657907,
+      "f0_psnr_raw": [
+        35.26,
+        35.03,
+        35.33
+      ],
+      "f14_psnr_mean": 32.03333333333333,
+      "f14_psnr_se": 4.631158962218133,
+      "f14_psnr_raw": [
+        34.89,
+        26.69,
+        34.52
+      ],
+      "plank_dark_frames_mean": 66.66666666666667,
+      "plank_dark_frames_se": 22.233608194203057,
+      "plank_dark_frames_raw": [
+        79,
+        80,
+        41
+      ]
+    },
+    "s005t (sigma_0.05 tagged)": {
+      "n": 3,
+      "f0_psnr_mean": 34.92666666666667,
+      "f0_psnr_se": 0.15502687938977738,
+      "f0_psnr_raw": [
+        35.08,
+        34.77,
+        34.93
+      ],
+      "f14_psnr_mean": 27.8,
+      "f14_psnr_se": 2.3457834512162448,
+      "f14_psnr_raw": [
+        30.49,
+        26.18,
+        26.73
+      ],
+      "plank_dark_frames_mean": 76.33333333333333,
+      "plank_dark_frames_se": 18.717193521821944,
+      "plank_dark_frames_raw": [
+        90,
+        55,
+        84
+      ]
+    },
+    "s010t (sigma_0.10 tagged)": {
+      "n": 3,
+      "f0_psnr_mean": 34.56666666666667,
+      "f0_psnr_se": 0.16802777548171327,
+      "f0_psnr_raw": [
+        34.75,
+        34.42,
+        34.53
+      ],
+      "f14_psnr_mean": 22.03,
+      "f14_psnr_se": 1.542335890783845,
+      "f14_psnr_raw": [
+        23.81,
+        21.19,
+        21.09
+      ],
+      "plank_dark_frames_mean": 72.66666666666667,
+      "plank_dark_frames_se": 23.15887159024233,
+      "plank_dark_frames_raw": [
+        92,
+        47,
+        79
+      ]
+    },
+    "s015t (sigma_0.15 tagged)": {
+      "n": 3,
+      "f0_psnr_mean": 34.21333333333333,
+      "f0_psnr_se": 0.06429100507328574,
+      "f0_psnr_raw": [
+        34.26,
+        34.24,
+        34.14
+      ],
+      "f14_psnr_mean": 19.203333333333337,
+      "f14_psnr_se": 1.1157658057734767,
+      "f14_psnr_raw": [
+        20.01,
+        19.67,
+        17.93
+      ],
+      "plank_dark_frames_mean": 90.33333333333333,
+      "plank_dark_frames_se": 2.8867513459481287,
+      "plank_dark_frames_raw": [
+        92,
+        87,
+        92
+      ]
+    },
+    "s03t (sigma_0.30 tagged)": {
+      "n": 3,
+      "f0_psnr_mean": 33.666666666666664,
+      "f0_psnr_se": 0.14433756729740646,
+      "f0_psnr_raw": [
+        33.75,
+        33.75,
+        33.5
+      ],
+      "f14_psnr_mean": 13.806666666666667,
+      "f14_psnr_se": 0.3601851375797363,
+      "f14_psnr_raw": [
+        14.16,
+        13.82,
+        13.44
+      ],
+      "plank_dark_frames_mean": 92.0,
+      "plank_dark_frames_se": 0.0,
+      "plank_dark_frames_raw": [
+        92,
+        92,
+        92
+      ]
+    },
+    "s03u (sigma_0.30 untagged)": {
+      "n": 3,
+      "f0_psnr_mean": 34.22,
+      "f0_psnr_se": 0.3899999999999984,
+      "f0_psnr_raw": [
+        34.43,
+        33.77,
+        34.46
+      ],
+      "f14_psnr_mean": 20.52,
+      "f14_psnr_se": 1.7672294701028481,
+      "f14_psnr_raw": [
+        21.83,
+        18.51,
+        21.22
+      ],
+      "plank_dark_frames_mean": 72.0,
+      "plank_dark_frames_se": 14.730919862656235,
+      "plank_dark_frames_raw": [
+        64,
+        89,
+        63
+      ]
+    },
+    "s06t (sigma_0.60 tagged)": {
+      "n": 3,
+      "f0_psnr_mean": 33.416666666666664,
+      "f0_psnr_se": 0.06350852961085851,
+      "f0_psnr_raw": [
+        33.38,
+        33.49,
+        33.38
+      ],
+      "f14_psnr_mean": 10.056666666666667,
+      "f14_psnr_se": 1.0094718090830137,
+      "f14_psnr_raw": [
+        10.51,
+        8.9,
+        10.76
+      ],
+      "plank_dark_frames_mean": 91.33333333333333,
+      "plank_dark_frames_se": 1.1547005383792517,
+      "plank_dark_frames_raw": [
+        92,
+        90,
+        92
+      ]
+    }
+  },
+  "eye_tally": {
+    "total_low_sigma_clips": 9,
+    "genuine_release_count": 0,
+    "duplicate_count": 4,
+    "scene_corrupt_phantom_count": 4,
+    "giant_phantom_count": 2
+  },
+  "eye_records": [
+    {
+      "clip": "s005t_s1",
+      "sigma_c": "0.05",
+      "seed": "1",
+      "gripper_kept": "yes",
+      "ball_in_jaws_after_f3": "yes (to f92)",
+      "new_ball_first_seen": "f3 mid-air below gripper",
+      "new_ball_size_vs_real": "~3x",
+      "code": "DUPLICATE",
+      "notes": "real ball stays in jaws; large ball bounces to f92 without settling"
+    },
+    {
+      "clip": "s005t_s2",
+      "sigma_c": "0.05",
+      "seed": "2",
+      "gripper_kept": "partly",
+      "ball_in_jaws_after_f3": "unclear",
+      "new_ball_first_seen": "f6 from top",
+      "new_ball_size_vs_real": "~10x",
+      "code": "GIANT_PHANTOM",
+      "notes": "giant sphere drops from frame top and bounces on plank"
+    },
+    {
+      "clip": "s005t_s3",
+      "sigma_c": "0.05",
+      "seed": "3",
+      "gripper_kept": "yes",
+      "ball_in_jaws_after_f3": "yes",
+      "new_ball_first_seen": "f3 on plank",
+      "new_ball_size_vs_real": "~4x",
+      "code": "DUPLICATE",
+      "notes": "ball materialises at plank level and bounces"
+    },
+    {
+      "clip": "s010t_s1",
+      "sigma_c": "0.10",
+      "seed": "1",
+      "gripper_kept": "yes",
+      "ball_in_jaws_after_f3": "yes",
+      "new_ball_first_seen": "f3 mid-air below gripper",
+      "new_ball_size_vs_real": "~3x",
+      "code": "DUPLICATE",
+      "notes": "same pattern as s005t_s1"
+    },
+    {
+      "clip": "s010t_s2",
+      "sigma_c": "0.10",
+      "seed": "2",
+      "gripper_kept": "no (gone f3)",
+      "ball_in_jaws_after_f3": "n/a",
+      "new_ball_first_seen": "f3 on plank",
+      "new_ball_size_vs_real": "~4x",
+      "code": "SCENE_CORRUPT+PHANTOM",
+      "notes": "gripper erased; ball vanishes f12-30 then re-enters from top f33"
+    },
+    {
+      "clip": "s010t_s3",
+      "sigma_c": "0.10",
+      "seed": "3",
+      "gripper_kept": "no (gone f3)",
+      "ball_in_jaws_after_f3": "n/a",
+      "new_ball_first_seen": "f3 near frame top",
+      "new_ball_size_vs_real": "~4x",
+      "code": "SCENE_CORRUPT+PHANTOM",
+      "notes": "gripper erased; ball falls from top"
+    },
+    {
+      "clip": "s015t_s1",
+      "sigma_c": "0.15",
+      "seed": "1",
+      "gripper_kept": "yes (arm repainted)",
+      "ball_in_jaws_after_f3": "yes",
+      "new_ball_first_seen": "f3 mid-air",
+      "new_ball_size_vs_real": "~4x",
+      "code": "DUPLICATE+ARM_CHANGED",
+      "notes": "arm becomes a different dotted robot"
+    },
+    {
+      "clip": "s015t_s2",
+      "sigma_c": "0.15",
+      "seed": "2",
+      "gripper_kept": "no (gone f6)",
+      "ball_in_jaws_after_f3": "n/a",
+      "new_ball_first_seen": "f3 from top",
+      "new_ball_size_vs_real": "~10x",
+      "code": "SCENE_CORRUPT+GIANT_PHANTOM",
+      "notes": "giant ball lands f9 and hovers on plank f12-45"
+    },
+    {
+      "clip": "s015t_s3",
+      "sigma_c": "0.15",
+      "seed": "3",
+      "gripper_kept": "no (gone f3)",
+      "ball_in_jaws_after_f3": "n/a",
+      "new_ball_first_seen": "f3 from top",
+      "new_ball_size_vs_real": "~4x",
+      "code": "SCENE_CORRUPT+PHANTOM",
+      "notes": "arm repainted and gripper erased"
+    }
+  ],
+  "methodological_conclusions": {
+    "finding_2475_psnr_decay_replicated": true,
+    "finding_2475_hardcut_replicated": true,
+    "finding_2499_zero_release_replicated": true,
+    "finding_2499_duplicate_rate": "4/9 (44.4%)",
+    "finding_2499_scene_corrupt_rate": "4/9 (44.4%)",
+    "finding_2499_giant_phantom_rate": "1/9 (11.1%)",
+    "analyze_py_flaw": "analyze.py marks released=True whenever plank_dark >= 40 px for >= 3 frames, which triggers on phantom clones, erased grippers, and total scene collapse, giving a 100% false positive release rate (21/21)."
+  }
+}
