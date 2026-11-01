@@ -1,0 +1,73 @@
+task_index: int64
+__index_level_0__: string
+-- schema metadata --
+pandas: '{"index_columns": ["__index_level_0__"], "column_indexes": [{"na' + 449
+n task strings 49630 col __index_level_0__ sample ['', 'Put the blue block in the green bowl', 'Move the bottom right tip of the duvet to the left', 'Pick up the longer upright white container from the table and put it in the orange plastic bag', 'Move the tile letter s to the left']
+{
+ "drop": 115,
+ "release/let go": 18,
+ "throw/toss": 128,
+ "put": 22504,
+ "place": 4934,
+ "put/place any": 27160,
+ "pick": 7980,
+ "move": 7843,
+ "ball": 311
+}
+drop examples 115
+Drop the cloth from the stand onto the table
+Pick the cloth on the line and drop it in the sink
+Pick up the orange dice and drop it in the middle of the worktop
+Drop the plush toy on the counter
+Remove the light green ring from the tray and drop it on the table
+Pick up the block with an owl image and drop it into the wooden tray
+Pick up the bear plush toy and drop it on the stove
+Pick the ball on the racket and drop it on the floor
+Drop the towel from the black stand to the table
+Pick the cloth and drop it in the opening on the left on the counter
+Drop the coat onto the seat of the chair
+Pick up the green ring and drop it in the wooden tray
+Pick the red object and drop it in the sink
+Pick up the red toy apple from the table and drop it into the tray
+Pick the cloth and drop it on the table
+Lift and drop the paper towels
+Remove the mulberry pink block from the wooden bowl and place drop it on the table
+pick up an object and drop it on another position
+Pick up the black pen from the blue cup and drop it into the brown bowl on the oven
+Drop socks and a tank top in the laundry basket
+Drop the blinds
+Drop all the cans on the table
+Put the brown item in the scoop, then drop it into the tin
+Pick up the lime green block and drop it onto the tray
+Pick up the purple marker and drop it in the cardboard box
+Pick up the light blue toy that is on top of the blue block and drop it in the green bowl
+Pick up the banana and drop it in the wooden tray
+Pick up the orange dice on the bed and drop it on the bed
+Pick up the orange dice and drop it on the blue book
+Pick the black object on the paper and drop it in the wine glass inside the clear jar
+Remove the navy blue block from the green bowl and drop it on the worktop
+Slide the green bowl slightly to the right, Remove the green block from the stacks top and drop it on the worktop, move the light green block onto the green block top, Pick up the navy blue block from the neon blue block and put it on the light green block top
+Pick the green bowl the drop it on the desk
+Take the straw out of the sink and put it in the cutlery compartment, pick the lid on the tray, place it on the cup in the sink, lift the cup, drop it in the sink then move the pan in the sink to the left
+Drop the glue stick into the open drawer
+Pick up the plush toy and drop it in the sink
+Remove the white bottle from the sink and drop it on the table
+Pick up the plush toy from the bowl and drop it in the sink
+Remove an orange block from the blocks stack on the left and drop it in the green bowl
+Pick up then drop the tennis ball back on the table
+release examples 18
+Press a button on the bottom right side of the toaster to release the lever upwards
+Press a button on the toaster to release the lever upwards
+Release the lever on the toaster upwards
+Release the lever on the toaster upwards.
+Press the button to release the lever on the toaster upwards
+Press the right button on the toaster to release the lever
+Release the left lever of the toaster
+Press the bottle pump to release some liquid object from the bottle
+Push the car backwards then release it.
+Press on top of the bottle to release some liquid
+Release the chips from the blue gameboard.
+Push the button to release the toaster lever
+Release the lever upwards
+Press the first button from the left on the toaster to release the lever upwards
+Press a button on the right side of the toaster to release the right lever upwards
