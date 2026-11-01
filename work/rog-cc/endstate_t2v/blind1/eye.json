@@ -1,0 +1,500 @@
+{
+ "summary": {
+  "base": {
+   "n": 25,
+   "rest_Y": 3,
+   "rest_N": 15,
+   "rest_U": 7,
+   "art_Y": 3
+  },
+  "N": {
+   "n": 25,
+   "rest_Y": 3,
+   "rest_N": 13,
+   "rest_U": 9,
+   "art_Y": 3
+  },
+  "R": {
+   "n": 25,
+   "rest_Y": 6,
+   "rest_N": 11,
+   "rest_U": 8,
+   "art_Y": 3
+  },
+  "pairs": {
+   "R_vs_base": {
+    "n": 17,
+    "a_only_rest": 3,
+    "b_only_rest": 0
+   },
+   "R_vs_N": {
+    "n": 16,
+    "a_only_rest": 2,
+    "b_only_rest": 0
+   },
+   "N_vs_base": {
+    "n": 16,
+    "a_only_rest": 0,
+    "b_only_rest": 0
+   }
+  }
+ },
+ "codes": {
+  "base": [
+   {
+    "prompt": "physics_200",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_200",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_116",
+    "seed": 1,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 3,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_169",
+    "seed": 2,
+    "rest": "N",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_126",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 1,
+    "rest": "U",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 1,
+    "rest": "N",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_163",
+    "seed": 1,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 1,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_163",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 3,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_126",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_169",
+    "seed": 1,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_116",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   }
+  ],
+  "N": [
+   {
+    "prompt": "physics_200",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_200",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_116",
+    "seed": 1,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 3,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_169",
+    "seed": 2,
+    "rest": "U",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_126",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 1,
+    "rest": "U",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_163",
+    "seed": 1,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 1,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_163",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 3,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 2,
+    "rest": "U",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_126",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_169",
+    "seed": 1,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_116",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   }
+  ],
+  "R": [
+   {
+    "prompt": "physics_200",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_200",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_116",
+    "seed": 1,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 3,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_169",
+    "seed": 2,
+    "rest": "Y",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_126",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 1,
+    "rest": "U",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 3,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 3,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_163",
+    "seed": 1,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_057",
+    "seed": 1,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_163",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 3,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_049",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_017",
+    "seed": 2,
+    "rest": "U",
+    "art": "Y"
+   },
+   {
+    "prompt": "physics_016",
+    "seed": 2,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_126",
+    "seed": 1,
+    "rest": "N",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_169",
+    "seed": 1,
+    "rest": "Y",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_116",
+    "seed": 2,
+    "rest": "U",
+    "art": "N"
+   },
+   {
+    "prompt": "physics_042",
+    "seed": 3,
+    "rest": "N",
+    "art": "N"
+   }
+  ]
+ }
+}

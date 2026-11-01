@@ -1,0 +1,227 @@
+{
+ "20a34b": {
+  "prompt": "physics_016",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "cd1de8": {
+  "prompt": "physics_016",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "3b4d2f": {
+  "prompt": "physics_016",
+  "seed": 3,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "55fa26": {
+  "prompt": "physics_017",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "b805c2": {
+  "prompt": "physics_017",
+  "seed": 2,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "9c8337": {
+  "prompt": "physics_017",
+  "seed": 3,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "78eb2b": {
+  "prompt": "physics_042",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "a4e1a0": {
+  "prompt": "physics_042",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "e6b86e": {
+  "prompt": "physics_042",
+  "seed": 3,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "600edb": {
+  "prompt": "physics_049",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "b138eb": {
+  "prompt": "physics_049",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "567377": {
+  "prompt": "physics_049",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "8fac85": {
+  "prompt": "physics_057",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "1c5df2": {
+  "prompt": "physics_057",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "77f41a": {
+  "prompt": "physics_057",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "275bb7": {
+  "prompt": "physics_116",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "de099b": {
+  "prompt": "physics_116",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "d00c3f": {
+  "prompt": "physics_126",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "4f924e": {
+  "prompt": "physics_126",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "8cc488": {
+  "prompt": "physics_163",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "970adb": {
+  "prompt": "physics_163",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "d4c249": {
+  "prompt": "physics_169",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "44bf72": {
+  "prompt": "physics_169",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "18c38a": {
+  "prompt": "physics_200",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "11d0b0": {
+  "prompt": "physics_200",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ }
+}
