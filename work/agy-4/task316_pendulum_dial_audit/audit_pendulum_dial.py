@@ -146,16 +146,15 @@ def audit_dial(task265_dir, output_dir):
         acf_s = float(r.get("acf_T", 0.0))
         acf_flag = str(r.get("acf_flag", "ok"))
 
-        # Look for qc.json for flicker
+        # Fail-closed QC flicker file check (strictly asserting presence and validity per codex-1 #6398)
         qc_file = os.path.join(dial_out_dir, f"{clip_name}.qc.json")
-        flicker = 0.0
-        if os.path.exists(qc_file):
-            try:
-                with open(qc_file, "r") as qcf:
-                    qc_obj = json.load(qcf)
-                    flicker = float(qc_obj.get("flicker", 0.0))
-            except Exception:
-                pass
+        if not os.path.exists(qc_file):
+            raise FileNotFoundError(f"Missing required QC file: {qc_file}")
+        with open(qc_file, "r") as qcf:
+            qc_obj = json.load(qcf)
+        if "flicker" not in qc_obj or qc_obj["flicker"] is None:
+            raise KeyError(f"'flicker' key missing or null in QC file: {qc_file}")
+        flicker = float(qc_obj["flicker"])
 
         # Check gates (Task 290 / 301 rules)
         tool_gap = 2.0 * abs(acf_s - mp_s) / (acf_s + mp_s) if (acf_s + mp_s) > 0 else 999.0
