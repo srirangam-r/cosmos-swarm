@@ -39,6 +39,8 @@ def main():
     parser.add_argument("--bob", type=parse_coords, default=None, help="Pendulum bob tip pixel coords 'X,Y'")
     parser.add_argument("--period", type=float, default=None, help="Oscillation period in seconds (default: derived from length or 1.18s)")
     parser.add_argument("--amplitude", type=float, default=18.0, help="Initial swing semi-amplitude in degrees (default: 18.0)")
+    parser.add_argument("--direction", choices=["inward", "outward"], default="inward", help="Initial swing direction (default: inward)")
+    parser.add_argument("--no-release-from-rest", action="store_true", help="Do not enforce initial velocity zero at t=0")
 
     # Ball drop parameters
     parser.add_argument("--center", type=parse_coords, default=None, help="Ball center pixel coords 'X,Y'")
@@ -50,7 +52,8 @@ def main():
     parser.add_argument("--g", type=float, default=9.81, help="Gravitational acceleration in m/s^2 (default: 9.81)")
 
     # Generation & sampling parameters
-    parser.add_argument("--start-step", type=int, default=14, help="Diffusion start step index out of 35 (SDEdit t_init; default: 14 = t_init 0.6)")
+    parser.add_argument("--start-step", type=int, default=None, help="Diffusion start step index out of 35 (SDEdit t_init; default: 14 = t_init 0.6)")
+    parser.add_argument("--sigma", type=float, default=None, help="Target noise level sigma in [0, 1] (e.g. 0.90 maps to step 16; overrides --start-step)")
     parser.add_argument("--seed", type=int, default=1, help="RNG seed for CPU noise draws (default: 1)")
     parser.add_argument("--steps", type=int, default=35, help="Total inference steps (default: 35)")
     parser.add_argument("--guidance", type=float, default=6.0, help="Classifier-free guidance scale (default: 6.0)")
@@ -64,6 +67,7 @@ def main():
     # Backend selection
     parser.add_argument("--server", default=None, help="URL of remote Cosmos3-Nano endpoint (e.g. http://board.tail0c526a.ts.net:8011)")
     parser.add_argument("--proxy-only", action="store_true", help="Generate and output only the analytical proxy video")
+    parser.add_argument("--emit-queue-job", action="store_true", help="Output JSONL job line for cosmos_queue.py submission")
 
     args = parser.parse_args()
 
@@ -88,6 +92,8 @@ def main():
             period=args.period,
             g=args.g,
             amplitude_deg=args.amplitude,
+            release_from_rest=not args.no_release_from_rest,
+            direction=args.direction,
             num_frames=num_frames,
             fps=args.fps,
             width=args.width,
@@ -111,12 +117,48 @@ def main():
         )
 
     print(f"[Nano-Phys] Saved proxy video to {proxy_mp4}")
-    if args.proxy_only:
-        print("[Nano-Phys] --proxy-only flag specified; skipping diffusion model rollout.")
+
+    # Determine effective start step
+    from .runner import NATIVE_SIGMAS_35, sigma_to_step
+    if args.sigma is not None:
+        start_step = sigma_to_step(args.sigma)
+    elif args.start_step is not None:
+        start_step = args.start_step
+    else:
+        start_step = 14  # default: step 14 (sigma = 0.93675)
+
+    if args.emit_queue_job:
+        job = {
+            "name": out_p.stem,
+            "prompt": args.prompt,
+            "image": str(Path(args.image).resolve()),
+            "width": args.width,
+            "height": args.height,
+            "num_frames": num_frames,
+            "fps": args.fps,
+            "steps": args.steps,
+            "guidance": args.guidance,
+            "flow_shift": args.flow_shift,
+            "seed": args.seed,
+            "negative_prompt": args.negative_prompt,
+            "extra_params": {
+                "client": "nano_phys",
+                "noise": {"device": "cpu"},
+                "latent": {
+                    "ref": str(proxy_mp4.resolve()),
+                    "start_step": start_step,
+                    "init": "noised",
+                },
+            },
+        }
+        print(f"\n[QUEUE_JOB_JSONL]\n{json.dumps(job)}\n[/QUEUE_JOB_JSONL]")
+
+    if args.proxy_only or args.emit_queue_job:
+        print("[Nano-Phys] Exiting after proxy/job generation.")
         return
 
     # Step 2: Denoise with Cosmos3-Nano via Latent SDEdit Start
-    print(f"[Nano-Phys] Starting diffusion from VAE latent of proxy (start_step={args.start_step}/35, noise.device=cpu)...")
+    print(f"[Nano-Phys] Starting diffusion from VAE latent of proxy (start_step={start_step}/35, noise.device=cpu)...")
     if args.server:
         print(f"[Nano-Phys] Dispatching to remote server: {args.server}")
         res = run_remote_nanophys(
@@ -134,7 +176,8 @@ def main():
             guidance=args.guidance,
             flow_shift=args.flow_shift,
             seed=args.seed,
-            start_step=args.start_step,
+            start_step=start_step,
+            sigma=args.sigma,
         )
     else:
         print(f"[Nano-Phys] Running with local diffusers pipeline...")
@@ -152,7 +195,8 @@ def main():
             guidance=args.guidance,
             flow_shift=args.flow_shift,
             seed=args.seed,
-            start_step=args.start_step,
+            start_step=start_step,
+            sigma=args.sigma,
         )
 
     print(f"[Nano-Phys] Generation complete! Output saved to: {args.out}")

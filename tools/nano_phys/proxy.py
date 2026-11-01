@@ -18,6 +18,8 @@ def generate_pendulum_proxy(
     period: float | None = None,
     g: float = 9.81,
     amplitude_deg: float = 18.0,
+    release_from_rest: bool = True,
+    direction: str = "inward",
     num_frames: int = 93,
     fps: int = 24,
     width: int = 832,
@@ -59,7 +61,6 @@ def generate_pendulum_proxy(
     bg = cv2.inpaint(im, cv2.dilate(mask, np.ones((5, 5), np.uint8)), 5, cv2.INPAINT_TELEA)
     malpha = cv2.GaussianBlur(mask, (0, 0), 2).astype(np.float32)[..., None] / 255.0
 
-    phi = math.asin(max(-1.0, min(1.0, th_cur / amplitude_deg)))
     w = 2.0 * math.pi / period
 
     out_p = Path(out_path)
@@ -68,7 +69,20 @@ def generate_pendulum_proxy(
 
     for i in range(num_frames):
         t = i / fps
-        th = amplitude_deg * math.sin(-w * t + phi)
+        if release_from_rest:
+            # Releasing from rest: initial velocity is zero, swings inward toward vertical
+            # th(0) = th_cur, th'(0) = 0
+            th = th_cur * math.cos(w * t)
+        else:
+            # General harmonic motion with explicit inward direction
+            A = max(abs(th_cur), amplitude_deg)
+            phi = math.asin(max(-1.0, min(1.0, th_cur / A)))
+            # If direction is inward, sign depends on initial position
+            sgn = -1.0 if th_cur >= 0 else 1.0
+            if direction == "outward":
+                sgn = -sgn
+            th = A * math.sin(sgn * w * t + phi)
+
         d = th - th_cur
         M = cv2.getRotationMatrix2D((px, py), -d, 1.0)
         rot = cv2.warpAffine(im, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
@@ -86,6 +100,7 @@ def generate_pendulum_proxy(
         "period": period,
         "g": g,
         "amplitude_deg": amplitude_deg,
+        "release_from_rest": release_from_rest,
         "L_px": L_px,
         "th_cur_deg": th_cur,
         "num_frames": num_frames,

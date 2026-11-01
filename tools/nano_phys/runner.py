@@ -12,6 +12,20 @@ import time
 import requests
 
 
+# Native 35-step UniPC Karras flow sigmas schedule from tools/cosmos_local/server.py
+NATIVE_SIGMAS_35 = [
+    0.99502, 0.99418, 0.99318, 0.99197, 0.99051, 0.98874, 0.98659, 0.98397,
+    0.98075, 0.97679, 0.97188, 0.96579, 0.95819, 0.94868, 0.93675, 0.92175,
+    0.90289, 0.87919, 0.84954, 0.81269, 0.76744, 0.71282, 0.64845, 0.57498,
+    0.49444, 0.41038, 0.32740, 0.25034, 0.18317, 0.12816, 0.00000
+]
+
+
+def sigma_to_step(target_sigma: float) -> int:
+    """Find the step index in native 35-step UniPC schedule closest to target_sigma."""
+    return min(range(len(NATIVE_SIGMAS_35)), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
+
+
 def run_remote_nanophys(
     server_url: str,
     image_path: str | Path,
@@ -27,8 +41,8 @@ def run_remote_nanophys(
     guidance: float = 6.0,
     flow_shift: float = 10.0,
     seed: int = 1,
-    start_step: int = 14,
-    sampler: str = "nv",
+    start_step: int | None = None,
+    sigma: float | None = None,
     timeout: int = 3600,
 ) -> dict:
     """Run Nano-Phys via HTTP POST to a tools/cosmos_local server endpoint."""
@@ -37,10 +51,17 @@ def run_remote_nanophys(
     out_p = Path(out_mp4)
     out_p.parent.mkdir(parents=True, exist_ok=True)
 
+    # Determine start step: explicit sigma overrides or maps to step index
+    if sigma is not None:
+        start_step = sigma_to_step(sigma)
+    elif start_step is None:
+        start_step = 14  # Default: step 14 (sigma = 0.93675; ro-3 t_init=0.6 arm)
+
+    effective_sigma = NATIVE_SIGMAS_35[start_step] if start_step < len(NATIVE_SIGMAS_35) else None
+
     extra_params = {
         "client": "nano_phys",
         "noise": {"device": "cpu"},
-        "sampler": sampler,
         "latent": {
             "ref": proxy_p.name,
             "start_step": start_step,
@@ -75,6 +96,22 @@ def run_remote_nanophys(
     out_p.write_bytes(resp.content)
     elapsed = time.time() - t0
 
+    clip_id = resp.headers.get("X-Clip-Id")
+    x_secs = resp.headers.get("X-Seconds")
+
+    # Fetch native server sidecar if endpoint provides /v1/sidecars
+    server_sidecar = None
+    if clip_id:
+        try:
+            side_url = f"{server_url.rstrip('/')}/v1/sidecars/{clip_id}"
+            s_resp = requests.get(side_url, timeout=10)
+            if s_resp.status_code == 200:
+                server_sidecar = s_resp.json()
+                server_sidecar_p = out_p.with_suffix(".server.json")
+                server_sidecar_p.write_text(json.dumps(server_sidecar, indent=2))
+        except Exception:
+            pass
+
     sidecar = {
         "tool": "nano_phys",
         "method": "Analytical Sim-Proxy + SDEdit Latent Start",
@@ -92,10 +129,15 @@ def run_remote_nanophys(
         "flow_shift": flow_shift,
         "seed": seed,
         "start_step": start_step,
-        "sampler": sampler,
+        "nominal_sigma": effective_sigma,
         "server_url": server_url,
+        "server_clip_id": clip_id,
+        "server_seconds": float(x_secs) if x_secs else None,
         "wall_seconds": round(elapsed, 2),
     }
+
+    if server_sidecar and "sigmas_used" in server_sidecar:
+        sidecar["sigmas_used"] = server_sidecar["sigmas_used"]
 
     sidecar_p = out_p.with_suffix(".json")
     sidecar_p.write_text(json.dumps(sidecar, indent=2))
@@ -110,13 +152,8 @@ def run_local_nanophys(
     out_mp4: str | Path,
     **kwargs
 ) -> dict:
-    """Run Nano-Phys via local in-process diffusers pipeline."""
-    # Attempt importing cosmos_local pipeline if available in workspace
-    try:
-        from tools.cosmos_local.server import generate_video_local
-        return generate_video_local(image_path=image_path, proxy_path=proxy_path, prompt=prompt, out_mp4=out_mp4, **kwargs)
-    except Exception as e:
-        raise RuntimeError(
-            f"Local in-process pipeline requires local GPU with Cosmos3-Nano weights loaded: {e}. "
-            f"Specify --server http://HOST:PORT to dispatch to an active swarm endpoint."
-        )
+    """Run Nano-Phys via local in-process pipeline or local dispatch."""
+    raise NotImplementedError(
+        "Local in-process pipeline without endpoint is disabled on laptop host; "
+        "pass --server http://HOST:PORT (e.g. q8 / Brev) to execute via tools/cosmos_local endpoint."
+    )
