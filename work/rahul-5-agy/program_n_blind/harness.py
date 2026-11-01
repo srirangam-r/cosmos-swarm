@@ -162,3 +162,32 @@ def evaluate_planted_controls(codes: List[Dict[str, str]], ground_truth: Dict[st
         "pass": acc >= 0.90 if total >= 5 else None,
         "details": details
     }
+
+
+def load_kap_real_manifest(manifest_path: str) -> Dict[str, str]:
+    """Load rog1's kap_real known-answer pack manifest and map labels to standardized rubric.
+
+    Mappings:
+      BOUNCING -> MOVING
+      ROLLING  -> MOVING
+      REST     -> REST
+      AMBIG    -> UNCLEAR
+    """
+    if not os.path.exists(manifest_path):
+        raise FileNotFoundError(f"kap_real manifest not found: {manifest_path}")
+    with open(manifest_path, "r") as f:
+        items = json.load(f)
+    gt = {}
+    for item in items:
+        cid = item.get("cut_id")
+        raw_label = str(item.get("label", "")).upper()
+        if raw_label in ("BOUNCING", "ROLLING"):
+            gt[cid] = "MOVING"
+        elif raw_label == "REST":
+            gt[cid] = "REST"
+        elif "AMBIG" in raw_label:
+            gt[cid] = "UNCLEAR"
+        else:
+            gt[cid] = raw_label
+    return gt
+

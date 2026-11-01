@@ -12,6 +12,7 @@ from harness import (
     validate_motion_row,
     compute_cohen_kappa,
     evaluate_planted_controls,
+    load_kap_real_manifest,
 )
 
 
@@ -101,6 +102,20 @@ class TestHarness(unittest.TestCase):
         self.assertEqual(res["total_controls"], 2)
         self.assertEqual(res["correct"], 2)
         self.assertEqual(res["accuracy"], 1.0)
+
+
+    def test_load_kap_real_manifest(self):
+        # Test on the live staged kap_real manifest if present
+        manifest_path = os.path.abspath(os.path.join(
+            os.path.dirname(__file__), "..", "..", "rog1", "kap_real", "manifest.json"
+        ))
+        if os.path.exists(manifest_path):
+            gt = load_kap_real_manifest(manifest_path)
+            self.assertEqual(len(gt), 66)
+            self.assertEqual(gt.get("g01_bouncing"), "MOVING")
+            self.assertEqual(gt.get("g01_rolling"), "MOVING")
+            self.assertEqual(gt.get("g04_rest"), "REST")
+            self.assertEqual(gt.get("g01_ambig_settle"), "UNCLEAR")
 
 
 if __name__ == "__main__":
