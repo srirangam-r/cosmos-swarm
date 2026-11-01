@@ -105,7 +105,10 @@ def sidecar(name):
                 d = json.load(open(p))
             except Exception:
                 continue
-            a = d.get("action_cfg") or d.get("server", {}).get("action_cfg") if isinstance(d, dict) else None
+            # AMENDMENT 1 (post-run bug fix, no statistic changed): the server sidecar's "server" key is a str label,
+            # so the old fallback crashed on unguided arms (no action_cfg key). Only dict values are searched now.
+            srv = d.get("server") if isinstance(d, dict) else None
+            a = (d.get("action_cfg") or (srv.get("action_cfg") if isinstance(srv, dict) else None)) if isinstance(d, dict) else None
             if a is not None:
                 return a
     return None
