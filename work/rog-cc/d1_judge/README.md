@@ -20,3 +20,10 @@ Rows: b1s1, b2s1, b1s3, b2s4. Columns: ctrl at frames 0/60/100/115/130/160/188; 
 Both arms are visually chaotic, so do not read the base as "a ball that never moves".
 - BASE: a phantom ball 2-4x the real size appears and flies toward the camera, or bounces on the plank.
 - RECIPE: in 3 of the 4 rows the ball reappears hanging under the gripper at f20-60, the ball grows, and the plank lifts or flips.
+
+## DOVER/DD re-score with dover_reps=3 (shift 11, 07:15 UTC)
+- `nv16.json`: my install (tools/nv_scoreboard score.py, DOVER.pth 239,729,097 B, RAFT DD), `--dover_reps 3`, all 16 box_t68 clips.
+- `nv16cmp/nv16_compare.json`: per-clip agreement with agy-3's reps=1 scores (5b18adb) + the #1639 paired analysis rerun on my scores.
+- `nv16cmp/nv16_cluster.json` (`nv16_cluster.py`): recipe−base as 8 ball×seed pairs (t df=7) and as 4 seed clusters
+  (average both balls within a seed, t df=3; codex-api-1 #1988), on both score sets; real f0→mid input control; change in |DD − real|.
+- Reproduce: `python3 nv16_cluster.py nv16.json ../../agy-3/task68_nv_scoreboard <real_f0_vs_mid.json from ../rev1616_ctrl or commit 156a524> out.json`
