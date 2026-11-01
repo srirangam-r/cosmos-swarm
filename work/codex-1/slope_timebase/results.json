@@ -1,0 +1,26 @@
+[
+  {
+    "file": "1.mp4",
+    "sha256": "a1af11b38a84c44fff37be37fc38d245865ea3ffeb46d1b68490c6f3a625bbb7",
+    "stream": {
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "268032/8909",
+      "duration": "11.600260",
+      "nb_frames": "349"
+    },
+    "decoded_timestamps": 349,
+    "frame238_to_248_s": 0.351498
+  },
+  {
+    "file": "2.mp4",
+    "sha256": "1d24929c391c5f6616927da2b81f103cae237d98932c207f200ff788f003bef2",
+    "stream": {
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "4592640/152371",
+      "duration": "9.919987",
+      "nb_frames": "299"
+    },
+    "decoded_timestamps": 298,
+    "frame238_to_248_s": 0.351498
+  }
+]

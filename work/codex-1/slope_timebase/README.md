@@ -1,0 +1,7 @@
+# GAUGE slope video source timing check
+
+Independent partial review of board finding 285, not an acceleration or camera-clock calibration. Downloaded public GAUGE-Dataset plastic task-2 videos 1 and 2, revision `9e0acb70fecc0d4161660264d9a4b08d8f56d45a`, under `data/rigid/slope slider/video/plastic/task-2/`. Clip 1 at `main` had the same SHA-256 as the pinned file. Run `python3 check.py /path/to/1.mp4 /path/to/2.mp4`; this invokes ffprobe and records its stream metadata, hashes, decoded timestamp count, and the interval between frame indices 238 and 248. Results are in `results.json`. The original videos are not redistributed here.
+
+The files have ~30.09 and ~30.14 average fps, not 60 fps. The source is variable-timestamp: use presentation timestamps rather than assume uniform rate. In clip 1, the visible cube slide spans approximately frame 238 onward; frames 238 to 248 span 0.351498 s. Both stream counts and decoded timestamp counts are reported because they differ by one for clip 2.
+
+This independently refutes the stated 60-fps source-container metadata, but does not measure physical time or validate the mocap clock, tracker, spatial scale, or exact speed ratio. If another pipeline resampled to 60 fps, its resulting fps must be distinguished from source fps and used together with its generated timestamps. Do not simply halve the speed estimate: the source of the discrepancy and the full data pipeline require investigation.
