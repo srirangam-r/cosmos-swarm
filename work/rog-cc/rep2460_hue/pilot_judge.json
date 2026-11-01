@@ -1,0 +1,647 @@
+{
+ "meta": {
+  "judge": "Qwen/Qwen3-VL-2B-Instruct",
+  "frames": 16,
+  "short": 256,
+  "questions_file": "gauge_questions.json",
+  "questions_sha1": "f936b87df6af"
+ },
+ "results": [
+  {
+   "clip": "pilot/cause5_F_ball1_fps24_93f_s3.mp4",
+   "sample": "gauge_ball",
+   "offset": 0.0,
+   "n_frames_src": 93,
+   "summary": {
+    "Geometric Reasoning": 0.6915074586868286,
+    "Physical Laws": 0.5954074586431185,
+    "Semantic Alignment": 0.5594554543495178,
+    "Visual Integrity": 0.7799156531691551,
+    "overall": 0.6641982874045005,
+    "yes_rate": 0.6923076923076923
+   },
+   "rows": [
+    {
+     "id": 1,
+     "category": "Semantic Alignment",
+     "sub": "prompt attributes",
+     "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+     "p_yes": 0.5594554543495178,
+     "p_no": 0.4357043206691742,
+     "p_unclear": 0.004840238019824028,
+     "mass3": 0.9996814131736755,
+     "answer": "Yes"
+    },
+    {
+     "id": 2,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, after the ball is released, does it fall downward?",
+     "p_yes": 0.8154525756835938,
+     "p_no": 0.1819520741701126,
+     "p_unclear": 0.0025954069569706917,
+     "mass3": 0.9996979236602783,
+     "answer": "Yes"
+    },
+    {
+     "id": 3,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, does the ball speed up as it falls?",
+     "p_yes": 0.23237726092338562,
+     "p_no": 0.7157723903656006,
+     "p_unclear": 0.05185037851333618,
+     "mass3": 0.9992761611938477,
+     "answer": "No"
+    },
+    {
+     "id": 4,
+     "category": "Physical Laws",
+     "sub": "collision/momentum",
+     "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+     "p_yes": 0.1473882645368576,
+     "p_no": 0.848160982131958,
+     "p_unclear": 0.004450740292668343,
+     "mass3": 0.9995376467704773,
+     "answer": "No"
+    },
+    {
+     "id": 5,
+     "category": "Physical Laws",
+     "sub": "causal order",
+     "text": "Does the ball start falling only after the gripper releases it?",
+     "p_yes": 0.5217260122299194,
+     "p_no": 0.4604215621948242,
+     "p_unclear": 0.017852481454610825,
+     "mass3": 0.9993283152580261,
+     "answer": "Yes"
+    },
+    {
+     "id": 6,
+     "category": "Physical Laws",
+     "sub": "behavioral realism",
+     "text": "Do the ball's bounces get lower each time until it comes to rest?",
+     "p_yes": 0.9315556883811951,
+     "p_no": 0.06748167425394058,
+     "p_unclear": 0.0009625743259675801,
+     "mass3": 0.9997552633285522,
+     "answer": "Yes"
+    },
+    {
+     "id": 7,
+     "category": "Visual Integrity",
+     "sub": "deformation",
+     "text": "Throughout the video, does the ball keep a round shape?",
+     "p_yes": 0.9463315010070801,
+     "p_no": 0.05338837206363678,
+     "p_unclear": 0.0002801564696710557,
+     "mass3": 0.9999169707298279,
+     "answer": "Yes"
+    },
+    {
+     "id": 8,
+     "category": "Visual Integrity",
+     "sub": "temporal stability",
+     "text": "Throughout the video, does the video stay free of unnatural flickering?",
+     "p_yes": 0.4671187102794647,
+     "p_no": 0.5293148159980774,
+     "p_unclear": 0.0035664953757077456,
+     "mass3": 0.9996588230133057,
+     "answer": "No"
+    },
+    {
+     "id": 9,
+     "category": "Visual Integrity",
+     "sub": "artifacts",
+     "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+     "p_yes": 0.7536703944206238,
+     "p_no": 0.2446809560060501,
+     "p_unclear": 0.0016486473614349961,
+     "mass3": 0.9997575879096985,
+     "answer": "Yes"
+    },
+    {
+     "id": 10,
+     "category": "Visual Integrity",
+     "sub": "shot change",
+     "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+     "p_yes": 0.9525420069694519,
+     "p_no": 0.04742427170276642,
+     "p_unclear": 3.367950557731092e-05,
+     "mass3": 0.9999580979347229,
+     "answer": "Yes"
+    },
+    {
+     "id": 11,
+     "category": "Geometric Reasoning",
+     "sub": "camera stability",
+     "text": "Throughout the video, does the camera stay static?",
+     "p_yes": 0.914768397808075,
+     "p_no": 0.08508671075105667,
+     "p_unclear": 0.00014495539653580636,
+     "mass3": 0.9998723268508911,
+     "answer": "Yes"
+    },
+    {
+     "id": 12,
+     "category": "Geometric Reasoning",
+     "sub": "position/motion",
+     "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+     "p_yes": 0.4682465195655823,
+     "p_no": 0.5305928587913513,
+     "p_unclear": 0.0011606671614572406,
+     "mass3": 0.9998364448547363,
+     "answer": "No"
+    },
+    {
+     "id": 13,
+     "category": "Physical Laws",
+     "sub": "object permanence",
+     "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+     "p_yes": 0.9239449501037598,
+     "p_no": 0.07584202289581299,
+     "p_unclear": 0.00021302461391314864,
+     "mass3": 0.9999179840087891,
+     "answer": "Yes"
+    }
+   ]
+  },
+  {
+   "clip": "pilot/cause5_F_ball1_fps24_93f_s3.mp4",
+   "sample": "gauge_ball",
+   "offset": 0.5,
+   "n_frames_src": 93,
+   "summary": {
+    "Geometric Reasoning": 0.6556710451841354,
+    "Physical Laws": 0.5027521153291067,
+    "Semantic Alignment": 0.7753815650939941,
+    "Visual Integrity": 0.7894832119345665,
+    "overall": 0.6354745534750131,
+    "yes_rate": 0.5384615384615384
+   },
+   "rows": [
+    {
+     "id": 1,
+     "category": "Semantic Alignment",
+     "sub": "prompt attributes",
+     "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+     "p_yes": 0.7753815650939941,
+     "p_no": 0.2221505343914032,
+     "p_unclear": 0.002467869548127055,
+     "mass3": 0.9997760057449341,
+     "answer": "Yes"
+    },
+    {
+     "id": 2,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, after the ball is released, does it fall downward?",
+     "p_yes": 0.43277406692504883,
+     "p_no": 0.5556929111480713,
+     "p_unclear": 0.011533037759363651,
+     "mass3": 0.999435305595398,
+     "answer": "No"
+    },
+    {
+     "id": 3,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, does the ball speed up as it falls?",
+     "p_yes": 0.1920153796672821,
+     "p_no": 0.7594355344772339,
+     "p_unclear": 0.04854908958077431,
+     "mass3": 0.9993604421615601,
+     "answer": "No"
+    },
+    {
+     "id": 4,
+     "category": "Physical Laws",
+     "sub": "collision/momentum",
+     "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+     "p_yes": 0.18142607808113098,
+     "p_no": 0.8130952715873718,
+     "p_unclear": 0.0054785930551588535,
+     "mass3": 0.9995030760765076,
+     "answer": "No"
+    },
+    {
+     "id": 5,
+     "category": "Physical Laws",
+     "sub": "causal order",
+     "text": "Does the ball start falling only after the gripper releases it?",
+     "p_yes": 0.3674902319908142,
+     "p_no": 0.6058889031410217,
+     "p_unclear": 0.026620900258421898,
+     "mass3": 0.9992490410804749,
+     "answer": "No"
+    },
+    {
+     "id": 6,
+     "category": "Physical Laws",
+     "sub": "behavioral realism",
+     "text": "Do the ball's bounces get lower each time until it comes to rest?",
+     "p_yes": 0.9030733704566956,
+     "p_no": 0.09518323093652725,
+     "p_unclear": 0.0017433417961001396,
+     "mass3": 0.9996939897537231,
+     "answer": "Yes"
+    },
+    {
+     "id": 7,
+     "category": "Visual Integrity",
+     "sub": "deformation",
+     "text": "Throughout the video, does the ball keep a round shape?",
+     "p_yes": 0.9524112939834595,
+     "p_no": 0.047417763620615005,
+     "p_unclear": 0.00017101515550166368,
+     "mass3": 0.9999406933784485,
+     "answer": "Yes"
+    },
+    {
+     "id": 8,
+     "category": "Visual Integrity",
+     "sub": "temporal stability",
+     "text": "Throughout the video, does the video stay free of unnatural flickering?",
+     "p_yes": 0.46689698100090027,
+     "p_no": 0.5290635824203491,
+     "p_unclear": 0.004039450082927942,
+     "mass3": 0.9996113181114197,
+     "answer": "No"
+    },
+    {
+     "id": 9,
+     "category": "Visual Integrity",
+     "sub": "artifacts",
+     "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+     "p_yes": 0.7759804725646973,
+     "p_no": 0.22232213616371155,
+     "p_unclear": 0.0016974504105746746,
+     "mass3": 0.9997372627258301,
+     "answer": "Yes"
+    },
+    {
+     "id": 10,
+     "category": "Visual Integrity",
+     "sub": "shot change",
+     "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+     "p_yes": 0.962644100189209,
+     "p_no": 0.03732576221227646,
+     "p_unclear": 3.003727579198312e-05,
+     "mass3": 0.9999629855155945,
+     "answer": "Yes"
+    },
+    {
+     "id": 11,
+     "category": "Geometric Reasoning",
+     "sub": "camera stability",
+     "text": "Throughout the video, does the camera stay static?",
+     "p_yes": 0.9045360684394836,
+     "p_no": 0.0953373983502388,
+     "p_unclear": 0.00012649181007873267,
+     "mass3": 0.999859094619751,
+     "answer": "Yes"
+    },
+    {
+     "id": 12,
+     "category": "Geometric Reasoning",
+     "sub": "position/motion",
+     "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+     "p_yes": 0.40680602192878723,
+     "p_no": 0.5918992161750793,
+     "p_unclear": 0.0012947743525728583,
+     "mass3": 0.9998511075973511,
+     "answer": "No"
+    },
+    {
+     "id": 13,
+     "category": "Physical Laws",
+     "sub": "object permanence",
+     "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+     "p_yes": 0.9397335648536682,
+     "p_no": 0.06007515639066696,
+     "p_unclear": 0.00019120606884825975,
+     "mass3": 0.9999247193336487,
+     "answer": "Yes"
+    }
+   ]
+  },
+  {
+   "clip": "pilot/cause5_QT_ball1_fps24_93f_s3.mp4",
+   "sample": "gauge_ball",
+   "offset": 0.0,
+   "n_frames_src": 93,
+   "summary": {
+    "Geometric Reasoning": 0.6144127696752548,
+    "Physical Laws": 0.5186980788906416,
+    "Semantic Alignment": 0.34669142961502075,
+    "Visual Integrity": 0.7875241711735725,
+    "overall": 0.6029078559233592,
+    "yes_rate": 0.5384615384615384
+   },
+   "rows": [
+    {
+     "id": 1,
+     "category": "Semantic Alignment",
+     "sub": "prompt attributes",
+     "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+     "p_yes": 0.34669142961502075,
+     "p_no": 0.6477048397064209,
+     "p_unclear": 0.005603744648396969,
+     "mass3": 0.999681830406189,
+     "answer": "No"
+    },
+    {
+     "id": 2,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, after the ball is released, does it fall downward?",
+     "p_yes": 0.6176198720932007,
+     "p_no": 0.3746054172515869,
+     "p_unclear": 0.007774687372148037,
+     "mass3": 0.999497652053833,
+     "answer": "Yes"
+    },
+    {
+     "id": 3,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, does the ball speed up as it falls?",
+     "p_yes": 0.23078398406505585,
+     "p_no": 0.7108647227287292,
+     "p_unclear": 0.05835132673382759,
+     "mass3": 0.9991593956947327,
+     "answer": "No"
+    },
+    {
+     "id": 4,
+     "category": "Physical Laws",
+     "sub": "collision/momentum",
+     "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+     "p_yes": 0.14720219373703003,
+     "p_no": 0.8470901846885681,
+     "p_unclear": 0.005707649048417807,
+     "mass3": 0.9995080232620239,
+     "answer": "No"
+    },
+    {
+     "id": 5,
+     "category": "Physical Laws",
+     "sub": "causal order",
+     "text": "Does the ball start falling only after the gripper releases it?",
+     "p_yes": 0.28294864296913147,
+     "p_no": 0.678758442401886,
+     "p_unclear": 0.038292933255434036,
+     "mass3": 0.999129056930542,
+     "answer": "No"
+    },
+    {
+     "id": 6,
+     "category": "Physical Laws",
+     "sub": "behavioral realism",
+     "text": "Do the ball's bounces get lower each time until it comes to rest?",
+     "p_yes": 0.9013182520866394,
+     "p_no": 0.09499824792146683,
+     "p_unclear": 0.0036834818311035633,
+     "mass3": 0.9996093511581421,
+     "answer": "Yes"
+    },
+    {
+     "id": 7,
+     "category": "Visual Integrity",
+     "sub": "deformation",
+     "text": "Throughout the video, does the ball keep a round shape?",
+     "p_yes": 0.9769309163093567,
+     "p_no": 0.022975213825702667,
+     "p_unclear": 9.389445040142164e-05,
+     "mass3": 0.9999613761901855,
+     "answer": "Yes"
+    },
+    {
+     "id": 8,
+     "category": "Visual Integrity",
+     "sub": "temporal stability",
+     "text": "Throughout the video, does the video stay free of unnatural flickering?",
+     "p_yes": 0.4671187102794647,
+     "p_no": 0.5293148159980774,
+     "p_unclear": 0.0035664953757077456,
+     "mass3": 0.9997025728225708,
+     "answer": "No"
+    },
+    {
+     "id": 9,
+     "category": "Visual Integrity",
+     "sub": "artifacts",
+     "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+     "p_yes": 0.7535050511360168,
+     "p_no": 0.24462726712226868,
+     "p_unclear": 0.0018677522893995047,
+     "mass3": 0.9997272491455078,
+     "answer": "Yes"
+    },
+    {
+     "id": 10,
+     "category": "Visual Integrity",
+     "sub": "shot change",
+     "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+     "p_yes": 0.9525420069694519,
+     "p_no": 0.04742427170276642,
+     "p_unclear": 3.367950557731092e-05,
+     "mass3": 0.9999557137489319,
+     "answer": "Yes"
+    },
+    {
+     "id": 11,
+     "category": "Geometric Reasoning",
+     "sub": "camera stability",
+     "text": "Throughout the video, does the camera stay static?",
+     "p_yes": 0.8806182146072388,
+     "p_no": 0.11917871236801147,
+     "p_unclear": 0.00020303521887399256,
+     "mass3": 0.9998446702957153,
+     "answer": "Yes"
+    },
+    {
+     "id": 12,
+     "category": "Geometric Reasoning",
+     "sub": "position/motion",
+     "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+     "p_yes": 0.3482073247432709,
+     "p_no": 0.6505368947982788,
+     "p_unclear": 0.0012558316811919212,
+     "mass3": 0.9998728036880493,
+     "answer": "No"
+    },
+    {
+     "id": 13,
+     "category": "Physical Laws",
+     "sub": "object permanence",
+     "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+     "p_yes": 0.9323155283927917,
+     "p_no": 0.06753671169281006,
+     "p_unclear": 0.00014773594739381224,
+     "mass3": 0.9999387860298157,
+     "answer": "Yes"
+    }
+   ]
+  },
+  {
+   "clip": "pilot/cause5_QT_ball1_fps24_93f_s3.mp4",
+   "sample": "gauge_ball",
+   "offset": 0.5,
+   "n_frames_src": 93,
+   "summary": {
+    "Geometric Reasoning": 0.5935043692588806,
+    "Physical Laws": 0.4651533787449201,
+    "Semantic Alignment": 0.7295604348182678,
+    "Visual Integrity": 0.7881495729088783,
+    "overall": 0.6046221336493125,
+    "yes_rate": 0.6153846153846154
+   },
+   "rows": [
+    {
+     "id": 1,
+     "category": "Semantic Alignment",
+     "sub": "prompt attributes",
+     "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+     "p_yes": 0.7295604348182678,
+     "p_no": 0.26839032769203186,
+     "p_unclear": 0.002049185335636139,
+     "mass3": 0.9997658729553223,
+     "answer": "Yes"
+    },
+    {
+     "id": 2,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, after the ball is released, does it fall downward?",
+     "p_yes": 0.49486470222473145,
+     "p_no": 0.49486470222473145,
+     "p_unclear": 0.010270591825246811,
+     "mass3": 0.9994274377822876,
+     "answer": "Yes"
+    },
+    {
+     "id": 3,
+     "category": "Physical Laws",
+     "sub": "physics",
+     "text": "In the middle of the video, does the ball speed up as it falls?",
+     "p_yes": 0.11284869909286499,
+     "p_no": 0.8338453769683838,
+     "p_unclear": 0.05330595001578331,
+     "mass3": 0.9994256496429443,
+     "answer": "No"
+    },
+    {
+     "id": 4,
+     "category": "Physical Laws",
+     "sub": "collision/momentum",
+     "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+     "p_yes": 0.13208980858325958,
+     "p_no": 0.8613338470458984,
+     "p_unclear": 0.0065763648599386215,
+     "mass3": 0.9995145201683044,
+     "answer": "No"
+    },
+    {
+     "id": 5,
+     "category": "Physical Laws",
+     "sub": "causal order",
+     "text": "Does the ball start falling only after the gripper releases it?",
+     "p_yes": 0.23507338762283325,
+     "p_no": 0.7240769863128662,
+     "p_unclear": 0.040849629789590836,
+     "mass3": 0.999183714389801,
+     "answer": "No"
+    },
+    {
+     "id": 6,
+     "category": "Physical Laws",
+     "sub": "behavioral realism",
+     "text": "Do the ball's bounces get lower each time until it comes to rest?",
+     "p_yes": 0.8635683655738831,
+     "p_no": 0.13243252038955688,
+     "p_unclear": 0.003999114967882633,
+     "mass3": 0.9995341300964355,
+     "answer": "Yes"
+    },
+    {
+     "id": 7,
+     "category": "Visual Integrity",
+     "sub": "deformation",
+     "text": "Throughout the video, does the ball keep a round shape?",
+     "p_yes": 0.9739255905151367,
+     "p_no": 0.025954237207770348,
+     "p_unclear": 0.00012019196583423764,
+     "mass3": 0.9999520778656006,
+     "answer": "Yes"
+    },
+    {
+     "id": 8,
+     "category": "Visual Integrity",
+     "sub": "temporal stability",
+     "text": "Throughout the video, does the video stay free of unnatural flickering?",
+     "p_yes": 0.4671187102794647,
+     "p_no": 0.5293148159980774,
+     "p_unclear": 0.0035664953757077456,
+     "mass3": 0.9996627569198608,
+     "answer": "No"
+    },
+    {
+     "id": 9,
+     "category": "Visual Integrity",
+     "sub": "artifacts",
+     "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+     "p_yes": 0.7536703944206238,
+     "p_no": 0.2446809560060501,
+     "p_unclear": 0.0016486473614349961,
+     "mass3": 0.9997296333312988,
+     "answer": "Yes"
+    },
+    {
+     "id": 10,
+     "category": "Visual Integrity",
+     "sub": "shot change",
+     "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+     "p_yes": 0.9578835964202881,
+     "p_no": 0.042086467146873474,
+     "p_unclear": 2.9888731660321355e-05,
+     "mass3": 0.9999632239341736,
+     "answer": "Yes"
+    },
+    {
+     "id": 11,
+     "category": "Geometric Reasoning",
+     "sub": "camera stability",
+     "text": "Throughout the video, does the camera stay static?",
+     "p_yes": 0.8931471109390259,
+     "p_no": 0.10667120665311813,
+     "p_unclear": 0.00018172718409914523,
+     "mass3": 0.9998512268066406,
+     "answer": "Yes"
+    },
+    {
+     "id": 12,
+     "category": "Geometric Reasoning",
+     "sub": "position/motion",
+     "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+     "p_yes": 0.29386162757873535,
+     "p_no": 0.7049373984336853,
+     "p_unclear": 0.001200945465825498,
+     "mass3": 0.9998799562454224,
+     "answer": "No"
+    },
+    {
+     "id": 13,
+     "category": "Physical Laws",
+     "sub": "object permanence",
+     "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+     "p_yes": 0.9524753093719482,
+     "p_no": 0.04742095246911049,
+     "p_unclear": 0.00010373292025178671,
+     "mass3": 0.9999536275863647,
+     "answer": "Yes"
+    }
+   ]
+  }
+ ]
+}
