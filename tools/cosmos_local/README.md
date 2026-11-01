@@ -37,6 +37,19 @@ By default diffusers builds the CFG negative as `"" + INVERSE metadata` ("The vi
 ## 48 GB GPUs without offload (`COSMOS_VAE_SWAP=1`)
 With `COSMOS_OFFLOAD=0` on a 48 GB card the DiT (~30 GB) plus the Wan VAE's decode runs out of memory. `COSMOS_VAE_SWAP=1` moves the DiT to CPU RAM while the VAE encodes or decodes and back at its next call: the same ops on the same device, so outputs are unchanged, for a few seconds of PCIe copies. Needs ~30 GB free CPU RAM per server. Measured (832x480, 35 steps): L40S 129 s per 93-frame clip, 260 s per 189-frame clip; A6000 224 s / 457 s; for comparison RTX Pro 6000 (96 GB, no swap) 56 s / 133 s.
 
+## Initial noise (`extra_params.noise`, `noise.py`)
+By default the server draws the seed's noise with a CUDA generator. torch maps a seed to different numbers on GPUs with
+different SM counts, so **the same seed is a different noise on q8, a6k, l40s and A100**. That is why same-seed clips
+agree within a GPU type but not across types.
+- `{"noise": {"device": "cpu"}}`: draw the noise (and the VAE sample) on the CPU, so a seed is the same noise on every GPU type.
+- `{"noise": {"device": "cpu", "mix": {"seed": B, "band": ..., "cut": c}}}`: take one part of the noise from seed B, the rest
+  from the request's seed. `band` is `temporal_low`/`temporal_high` (latent-time frequencies with |f| <= or > c*0.5),
+  `spatial_low`/`spatial_high` (square spatial band), `region` (`"box": [x0, y0, x1, y1]` as fractions; B inside the box)
+  or `all` (all of B, the comparison arm). Complementary bands of two white noises are white noise again, and an empty band
+  reproduces the plain request exactly.
+- The sidecar records `noise.spec` and whether the mix was applied (`noise.mixed`). Requests without `noise` are unchanged.
+- Tests: `test_noise.py` (CPU only).
+
 ## Internals hooks (`extra_params.internals`) and the loss probe
 Opt-in, per request. A request without `internals` runs exactly the old code path. Every hook is installed around `pipe(**call)` and removed in a `finally` (hook handles, the attention function swap, the RoPE forward), so one server process can serve many agents in turn. The sidecar gets `internals`: the spec as parsed (vectors replaced by shape + sha256), `artifact_id`, and a summary of what fired. Bad specs return **HTTP 400** with the expected shapes/ranges in the message; nothing runs on the GPU first. Through the job queue use `extra_params` as usual; steering vectors must then be `artifact` references or inline `values` (the queue cannot upload files), and the artifact ids come back in the queue sidecar's `artifact_ids`.
 

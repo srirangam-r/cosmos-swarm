@@ -29,6 +29,7 @@ import cosmos_patch  # chunked attention (display watchdog)
 import neg_meta  # negative_metadata_mode / negative_preset (NVIDIA reference CFG text)
 import internals  # optional per-request hooks: temporal RoPE, conditioning frame, capture, steering
 import loss_probe  # POST /v1/probe/loss
+import noise  # optional per-request initial noise: CPU-drawn (portable seeds) or mixed from two seeds
 from diffusers.pipelines.cosmos.pipeline_cosmos3_omni import CosmosActionCondition
 from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
 
@@ -157,6 +158,10 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
         call.update(num_frames=num_frames, height=H, width=W)
         if img is not None:
             call["image"] = img
+    try:
+        nspec = noise.parse(extra)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
     spec = parse_internals(extra, num_frames, num_inference_steps,
                            {Path(f.filename or "").name: f.file.read() for f in internals_files or []})
     if spec and spec.prompt_switch and float(guidance_scale) <= 1.0:
@@ -172,9 +177,9 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
                 with neg_meta.negative_metadata(pipe, neg_mode):
                     spec.prompt_switch["pack"] = internals.capture_text_pack(pipe, call, spec.prompt_switch["prompt"])
                 pipe.scheduler = UniPCMultistepScheduler.from_config(BASE_SCHED, flow_shift=float(flow_shift))
-            call["generator"] = torch.Generator(device="cuda").manual_seed(int(seed))
+            call["generator"] = noise.generator(nspec, seed)
             t1 = time.time()
-            with neg_meta.negative_metadata(pipe, neg_mode), \
+            with neg_meta.negative_metadata(pipe, neg_mode), noise.installed(pipe, nspec), \
                     (internals.installed(pipe, spec) if spec else contextlib.nullcontext()) as rec:
                 res = pipe(**call)
             dt = time.time() - t1
@@ -204,6 +209,8 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
                 model="nvidia/Cosmos3-Nano (local diffusers bf16, " + ("group offload" if OFFLOAD else "no offload" + (", VAE swap" if VAE_SWAP else "")) + (", " + os.environ["COSMOS_LABEL"] if os.environ.get("COSMOS_LABEL") else "") + ", safety check off)",
                 scheduler="UniPCMultistepScheduler", torch=torch.__version__, server="raj-1 server.py")
     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
+    if nspec:
+        side["noise"] = dict(spec=nspec.raw, mixed=nspec.used)
     if spec:
         side["internals"] = dict(spec=spec.raw, artifact_id=artifact_id, **rec.summary())
         if artifact_id:
