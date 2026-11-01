@@ -1,0 +1,2900 @@
+[
+  {
+    "cut_id": "g01_bouncing",
+    "clip": "1",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 54,
+    "n_out_frames": 22,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      9,
+      15,
+      21
+    ]
+  },
+  {
+    "cut_id": "g01_rolling",
+    "clip": "1",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 122,
+    "n_out_frames": 80,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 10.51189802081432,
+    "median_box_diameter_px": 23.5,
+    "shift_ratio": 0.44731480939635404,
+    "boxes": [
+      [
+        [
+          311,
+          317,
+          26,
+          22,
+          327
+        ]
+      ],
+      [
+        [
+          306,
+          317,
+          26,
+          21,
+          245
+        ]
+      ],
+      [
+        [
+          302,
+          318,
+          23,
+          19,
+          195
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      67,
+      73,
+      79
+    ]
+  },
+  {
+    "cut_id": "g01_ambig_settle",
+    "clip": "1",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 74,
+    "n_out_frames": 39,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      [
+        [
+          308,
+          319,
+          28,
+          19,
+          301
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      26,
+      32,
+      38
+    ]
+  },
+  {
+    "cut_id": "g02_bouncing",
+    "clip": "2",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 58,
+    "n_out_frames": 24,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      11,
+      17,
+      23
+    ]
+  },
+  {
+    "cut_id": "g02_rolling",
+    "clip": "2",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 129,
+    "n_out_frames": 83,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 4.031128874149275,
+    "median_box_diameter_px": 21.0,
+    "shift_ratio": 0.19195851781663212,
+    "boxes": [
+      [
+        [
+          305,
+          320,
+          26,
+          20,
+          296
+        ]
+      ],
+      [
+        [
+          304,
+          320,
+          24,
+          18,
+          231
+        ]
+      ],
+      [
+        [
+          303,
+          319,
+          23,
+          18,
+          189
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      70,
+      76,
+      82
+    ]
+  },
+  {
+    "cut_id": "g02_ambig_settle",
+    "clip": "2",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 78,
+    "n_out_frames": 41,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          311,
+          309,
+          15,
+          13,
+          98
+        ]
+      ],
+      [
+        [
+          303,
+          321,
+          29,
+          21,
+          349
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      28,
+      34,
+      40
+    ]
+  },
+  {
+    "cut_id": "g03_bouncing",
+    "clip": "3",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 60,
+    "n_out_frames": 26,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      13,
+      19,
+      25
+    ]
+  },
+  {
+    "cut_id": "g03_rolling",
+    "clip": "3",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 102,
+    "n_out_frames": 61,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 5.70087712549569,
+    "median_box_diameter_px": 29.5,
+    "shift_ratio": 0.19325007205070135,
+    "boxes": [
+      [
+        [
+          311,
+          320,
+          30,
+          31,
+          642
+        ]
+      ],
+      [
+        [
+          315,
+          319,
+          30,
+          29,
+          617
+        ]
+      ],
+      [
+        [
+          316,
+          318,
+          29,
+          28,
+          564
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      48,
+      54,
+      60
+    ]
+  },
+  {
+    "cut_id": "g03_ambig_settle",
+    "clip": "3",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 82,
+    "n_out_frames": 45,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 11.180339887498949,
+    "median_box_diameter_px": 25.0,
+    "shift_ratio": 0.447213595499958,
+    "boxes": [
+      [
+        [
+          296,
+          322,
+          31,
+          19,
+          278
+        ]
+      ],
+      [
+        [
+          303,
+          321,
+          30,
+          20,
+          352
+        ]
+      ],
+      [
+        [
+          305,
+          321,
+          33,
+          31,
+          626
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      32,
+      38,
+      44
+    ]
+  },
+  {
+    "cut_id": "g04_rolling",
+    "clip": "4",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 101,
+    "n_out_frames": 61,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 7.433034373659253,
+    "median_box_diameter_px": 29.0,
+    "shift_ratio": 0.25631153012618113,
+    "boxes": [
+      [
+        [
+          306,
+          321,
+          30,
+          27,
+          558
+        ]
+      ],
+      [
+        [
+          308,
+          320,
+          33,
+          26,
+          549
+        ]
+      ],
+      [
+        [
+          313,
+          318,
+          30,
+          28,
+          553
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      48,
+      54,
+      60
+    ]
+  },
+  {
+    "cut_id": "g04_rest",
+    "clip": "4",
+    "true_label": "REST",
+    "start_f": 30,
+    "end_f": 173,
+    "n_out_frames": 121,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 2.0615528128088303,
+    "median_box_diameter_px": 28.5,
+    "shift_ratio": 0.07233518641434493,
+    "boxes": [
+      [
+        [
+          308,
+          320,
+          31,
+          27,
+          542
+        ]
+      ],
+      [
+        [
+          306,
+          321,
+          31,
+          26,
+          518
+        ]
+      ],
+      [
+        [
+          306,
+          321,
+          31,
+          26,
+          515
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      108,
+      114,
+      120
+    ]
+  },
+  {
+    "cut_id": "g04_ambig_settle",
+    "clip": "4",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 68,
+    "n_out_frames": 33,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [
+        [
+          289,
+          328,
+          27,
+          16,
+          240
+        ]
+      ],
+      [],
+      [
+        [
+          304,
+          318,
+          21,
+          16,
+          168
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      20,
+      26,
+      32
+    ]
+  },
+  {
+    "cut_id": "g05_bouncing",
+    "clip": "5",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 68,
+    "n_out_frames": 33,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      20,
+      26,
+      32
+    ]
+  },
+  {
+    "cut_id": "g05_rolling",
+    "clip": "5",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 107,
+    "n_out_frames": 66,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 4.6097722286464435,
+    "median_box_diameter_px": 29.5,
+    "shift_ratio": 0.15626346537784555,
+    "boxes": [
+      [
+        [
+          303,
+          322,
+          31,
+          28,
+          568
+        ]
+      ],
+      [
+        [
+          303,
+          321,
+          33,
+          27,
+          548
+        ]
+      ],
+      [
+        [
+          306,
+          320,
+          31,
+          25,
+          477
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      53,
+      59,
+      65
+    ]
+  },
+  {
+    "cut_id": "g05_ambig_settle",
+    "clip": "5",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 87,
+    "n_out_frames": 49,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          296,
+          324,
+          30,
+          20,
+          328
+        ]
+      ],
+      [
+        [
+          302,
+          320,
+          29,
+          19,
+          299
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      36,
+      42,
+      48
+    ]
+  },
+  {
+    "cut_id": "g06_bouncing",
+    "clip": "6",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 72,
+    "n_out_frames": 35,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      22,
+      28,
+      34
+    ]
+  },
+  {
+    "cut_id": "g06_rolling",
+    "clip": "6",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 167,
+    "n_out_frames": 116,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 6.576473218982953,
+    "median_box_diameter_px": 23.0,
+    "shift_ratio": 0.28593361821665014,
+    "boxes": [
+      [
+        [
+          304,
+          319,
+          26,
+          21,
+          297
+        ]
+      ],
+      [
+        [
+          301,
+          318,
+          24,
+          22,
+          285
+        ]
+      ],
+      [
+        [
+          299,
+          321,
+          23,
+          19,
+          245
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      103,
+      109,
+      115
+    ]
+  },
+  {
+    "cut_id": "g06_ambig_settle",
+    "clip": "6",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 91,
+    "n_out_frames": 51,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          301,
+          320,
+          22,
+          15,
+          173
+        ]
+      ],
+      [
+        [
+          303,
+          319,
+          26,
+          20,
+          286
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      38,
+      44,
+      50
+    ]
+  },
+  {
+    "cut_id": "g07_bouncing",
+    "clip": "7",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 62,
+    "n_out_frames": 27,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      14,
+      20,
+      26
+    ]
+  },
+  {
+    "cut_id": "g07_rolling",
+    "clip": "7",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 148,
+    "n_out_frames": 99,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 6.082762530298219,
+    "median_box_diameter_px": 27.0,
+    "shift_ratio": 0.22528750112215626,
+    "boxes": [
+      [
+        [
+          322,
+          315,
+          28,
+          24,
+          448
+        ]
+      ],
+      [
+        [
+          326,
+          314,
+          28,
+          26,
+          484
+        ]
+      ],
+      [
+        [
+          328,
+          313,
+          28,
+          26,
+          485
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      86,
+      92,
+      98
+    ]
+  },
+  {
+    "cut_id": "g07_ambig_settle",
+    "clip": "7",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 84,
+    "n_out_frames": 46,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 12.020815280171307,
+    "median_box_diameter_px": 28.5,
+    "shift_ratio": 0.4217829922867125,
+    "boxes": [
+      [
+        [
+          296,
+          324,
+          29,
+          28,
+          452
+        ]
+      ],
+      [
+        [
+          303,
+          320,
+          29,
+          20,
+          312
+        ]
+      ],
+      [
+        [
+          306,
+          321,
+          32,
+          27,
+          546
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      33,
+      39,
+      45
+    ]
+  },
+  {
+    "cut_id": "g08_bouncing",
+    "clip": "8",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 60,
+    "n_out_frames": 26,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      [
+        [
+          291,
+          326,
+          30,
+          18,
+          261
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      13,
+      19,
+      25
+    ]
+  },
+  {
+    "cut_id": "g08_rolling",
+    "clip": "8",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 98,
+    "n_out_frames": 58,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 5.408326913195984,
+    "median_box_diameter_px": 29.0,
+    "shift_ratio": 0.1864940314895167,
+    "boxes": [
+      [
+        [
+          308,
+          320,
+          31,
+          30,
+          618
+        ]
+      ],
+      [
+        [
+          312,
+          320,
+          31,
+          27,
+          584
+        ]
+      ],
+      [
+        [
+          313,
+          319,
+          30,
+          26,
+          534
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      45,
+      51,
+      57
+    ]
+  },
+  {
+    "cut_id": "g08_ambig_settle",
+    "clip": "8",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 79,
+    "n_out_frames": 42,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          317,
+          310,
+          14,
+          12,
+          108
+        ]
+      ],
+      [
+        [
+          306,
+          321,
+          31,
+          30,
+          511
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      29,
+      35,
+      41
+    ]
+  },
+  {
+    "cut_id": "g09_bouncing",
+    "clip": "9",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 66,
+    "n_out_frames": 33,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      20,
+      26,
+      32
+    ]
+  },
+  {
+    "cut_id": "g09_rolling",
+    "clip": "9",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 155,
+    "n_out_frames": 107,
+    "predicted_state": "MOVING_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 11.672617529928752,
+    "median_box_diameter_px": 21.0,
+    "shift_ratio": 0.5558389299966072,
+    "boxes": [
+      [
+        [
+          320,
+          314,
+          24,
+          19,
+          255
+        ]
+      ],
+      [
+        [
+          324,
+          313,
+          24,
+          17,
+          227
+        ]
+      ],
+      [
+        [
+          331,
+          313,
+          25,
+          17,
+          278
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      94,
+      100,
+      106
+    ]
+  },
+  {
+    "cut_id": "g09_ambig_settle",
+    "clip": "9",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 89,
+    "n_out_frames": 52,
+    "predicted_state": "MOVING_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 14.577379737113251,
+    "median_box_diameter_px": 24.5,
+    "shift_ratio": 0.5949950913107449,
+    "boxes": [
+      [
+        [
+          316,
+          313,
+          14,
+          15,
+          115
+        ]
+      ],
+      [
+        [
+          309,
+          319,
+          30,
+          19,
+          351
+        ]
+      ],
+      [
+        [
+          313,
+          319,
+          31,
+          30,
+          638
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      39,
+      45,
+      51
+    ]
+  },
+  {
+    "cut_id": "g10_bouncing",
+    "clip": "10",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 66,
+    "n_out_frames": 30,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      17,
+      23,
+      29
+    ]
+  },
+  {
+    "cut_id": "g10_rolling",
+    "clip": "10",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 116,
+    "n_out_frames": 72,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 3.5355339059327378,
+    "median_box_diameter_px": 29.0,
+    "shift_ratio": 0.12191496227354268,
+    "boxes": [
+      [
+        [
+          320,
+          315,
+          30,
+          32,
+          619
+        ]
+      ],
+      [
+        [
+          323,
+          317,
+          29,
+          29,
+          610
+        ]
+      ],
+      [
+        [
+          324,
+          316,
+          29,
+          29,
+          603
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      59,
+      65,
+      71
+    ]
+  },
+  {
+    "cut_id": "g10_ambig_settle",
+    "clip": "10",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 92,
+    "n_out_frames": 52,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          305,
+          320,
+          33,
+          33,
+          615
+        ]
+      ],
+      [
+        [
+          313,
+          317,
+          31,
+          34,
+          662
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      39,
+      45,
+      51
+    ]
+  },
+  {
+    "cut_id": "g11_bouncing",
+    "clip": "11",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 63,
+    "n_out_frames": 28,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      15,
+      21,
+      27
+    ]
+  },
+  {
+    "cut_id": "g11_rolling",
+    "clip": "11",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 112,
+    "n_out_frames": 69,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 8.902246907382429,
+    "median_box_diameter_px": 23.5,
+    "shift_ratio": 0.3788190173354225,
+    "boxes": [
+      [
+        [
+          308,
+          318,
+          28,
+          21,
+          327
+        ]
+      ],
+      [
+        [
+          313,
+          317,
+          27,
+          20,
+          302
+        ]
+      ],
+      [
+        [
+          317,
+          312,
+          24,
+          22,
+          266
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      56,
+      62,
+      68
+    ]
+  },
+  {
+    "cut_id": "g11_ambig_settle",
+    "clip": "11",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 84,
+    "n_out_frames": 46,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          296,
+          321,
+          32,
+          19,
+          244
+        ]
+      ],
+      [
+        [
+          304,
+          318,
+          25,
+          18,
+          212
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      33,
+      39,
+      45
+    ]
+  },
+  {
+    "cut_id": "g12_bouncing",
+    "clip": "12",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 58,
+    "n_out_frames": 24,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      11,
+      17,
+      23
+    ]
+  },
+  {
+    "cut_id": "g12_rolling",
+    "clip": "12",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 118,
+    "n_out_frames": 74,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 8.514693182963201,
+    "median_box_diameter_px": 22.5,
+    "shift_ratio": 0.3784308081316978,
+    "boxes": [
+      [
+        [
+          313,
+          316,
+          27,
+          22,
+          334
+        ]
+      ],
+      [
+        [
+          311,
+          317,
+          25,
+          20,
+          256
+        ]
+      ],
+      [
+        [
+          307,
+          317,
+          22,
+          19,
+          183
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      61,
+      67,
+      73
+    ]
+  },
+  {
+    "cut_id": "g12_rest",
+    "clip": "12",
+    "true_label": "REST",
+    "start_f": 30,
+    "end_f": 108,
+    "n_out_frames": 66,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 1.8027756377319946,
+    "median_box_diameter_px": 24.5,
+    "shift_ratio": 0.07358267909110182,
+    "boxes": [
+      [
+        [
+          313,
+          316,
+          28,
+          25,
+          411
+        ]
+      ],
+      [
+        [
+          313,
+          317,
+          27,
+          22,
+          351
+        ]
+      ],
+      [
+        [
+          313,
+          317,
+          26,
+          20,
+          300
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      53,
+      59,
+      65
+    ]
+  },
+  {
+    "cut_id": "g12_ambig_settle",
+    "clip": "12",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 78,
+    "n_out_frames": 41,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      [
+        [
+          312,
+          316,
+          27,
+          20,
+          277
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      28,
+      34,
+      40
+    ]
+  },
+  {
+    "cut_id": "g13_bouncing",
+    "clip": "13",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 63,
+    "n_out_frames": 28,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      [
+        [
+          301,
+          321,
+          17,
+          13,
+          104
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      15,
+      21,
+      27
+    ]
+  },
+  {
+    "cut_id": "g13_rolling",
+    "clip": "13",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 102,
+    "n_out_frames": 60,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 5.70087712549569,
+    "median_box_diameter_px": 29.5,
+    "shift_ratio": 0.19325007205070135,
+    "boxes": [
+      [
+        [
+          306,
+          321,
+          31,
+          29,
+          594
+        ]
+      ],
+      [
+        [
+          309,
+          320,
+          31,
+          28,
+          580
+        ]
+      ],
+      [
+        [
+          311,
+          319,
+          30,
+          26,
+          519
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      47,
+      53,
+      59
+    ]
+  },
+  {
+    "cut_id": "g13_ambig_settle",
+    "clip": "13",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 82,
+    "n_out_frames": 44,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          313,
+          307,
+          14,
+          12,
+          94
+        ]
+      ],
+      [
+        [
+          303,
+          322,
+          31,
+          30,
+          586
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      31,
+      37,
+      43
+    ]
+  },
+  {
+    "cut_id": "g14_bouncing",
+    "clip": "14",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 65,
+    "n_out_frames": 30,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      17,
+      23,
+      29
+    ]
+  },
+  {
+    "cut_id": "g14_rolling",
+    "clip": "14",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 102,
+    "n_out_frames": 60,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 5.70087712549569,
+    "median_box_diameter_px": 30.0,
+    "shift_ratio": 0.19002923751652298,
+    "boxes": [
+      [
+        [
+          313,
+          319,
+          30,
+          30,
+          620
+        ]
+      ],
+      [
+        [
+          313,
+          319,
+          34,
+          28,
+          619
+        ]
+      ],
+      [
+        [
+          318,
+          317,
+          29,
+          27,
+          550
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      47,
+      53,
+      59
+    ]
+  },
+  {
+    "cut_id": "g14_ambig_settle",
+    "clip": "14",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 86,
+    "n_out_frames": 47,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          306,
+          321,
+          32,
+          31,
+          527
+        ]
+      ],
+      [
+        [
+          312,
+          320,
+          31,
+          30,
+          611
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      34,
+      40,
+      46
+    ]
+  },
+  {
+    "cut_id": "g15_bouncing",
+    "clip": "15",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 62,
+    "n_out_frames": 28,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      15,
+      21,
+      27
+    ]
+  },
+  {
+    "cut_id": "g15_rolling",
+    "clip": "15",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 104,
+    "n_out_frames": 64,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 2.9154759474226504,
+    "median_box_diameter_px": 29.0,
+    "shift_ratio": 0.10053365335940173,
+    "boxes": [
+      [
+        [
+          313,
+          317,
+          30,
+          31,
+          613
+        ]
+      ],
+      [
+        [
+          315,
+          318,
+          30,
+          28,
+          558
+        ]
+      ],
+      [
+        [
+          315,
+          316,
+          29,
+          28,
+          509
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      51,
+      57,
+      63
+    ]
+  },
+  {
+    "cut_id": "g15_ambig_settle",
+    "clip": "15",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 85,
+    "n_out_frames": 47,
+    "predicted_state": "MOVING_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 22.94558781116753,
+    "median_box_diameter_px": 27.5,
+    "shift_ratio": 0.834385011315183,
+    "boxes": [
+      [
+        [
+          313,
+          306,
+          16,
+          14,
+          110
+        ]
+      ],
+      [
+        [
+          305,
+          320,
+          31,
+          24,
+          439
+        ]
+      ],
+      [
+        [
+          310,
+          320,
+          31,
+          31,
+          627
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      34,
+      40,
+      46
+    ]
+  },
+  {
+    "cut_id": "g16_rolling",
+    "clip": "16",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 135,
+    "n_out_frames": 88,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 5.315072906367325,
+    "median_box_diameter_px": 30.5,
+    "shift_ratio": 0.1742646854546664,
+    "boxes": [
+      [
+        [
+          314,
+          319,
+          32,
+          30,
+          638
+        ]
+      ],
+      [
+        [
+          319,
+          315,
+          30,
+          31,
+          600
+        ]
+      ],
+      [
+        [
+          319,
+          316,
+          30,
+          29,
+          564
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      75,
+      81,
+      87
+    ]
+  },
+  {
+    "cut_id": "g16_ambig_settle",
+    "clip": "16",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 118,
+    "n_out_frames": 74,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 10.111874208078342,
+    "median_box_diameter_px": 30.0,
+    "shift_ratio": 0.33706247360261143,
+    "boxes": [
+      [
+        [
+          304,
+          321,
+          30,
+          23,
+          439
+        ]
+      ],
+      [
+        [
+          309,
+          320,
+          31,
+          31,
+          637
+        ]
+      ],
+      [
+        [
+          314,
+          319,
+          30,
+          30,
+          610
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      61,
+      67,
+      73
+    ]
+  },
+  {
+    "cut_id": "g17_bouncing",
+    "clip": "17",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 76,
+    "n_out_frames": 40,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      27,
+      33,
+      39
+    ]
+  },
+  {
+    "cut_id": "g17_rolling",
+    "clip": "17",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 128,
+    "n_out_frames": 83,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 3.1622776601683795,
+    "median_box_diameter_px": 29.5,
+    "shift_ratio": 0.10719585288706371,
+    "boxes": [
+      [
+        [
+          324,
+          316,
+          29,
+          30,
+          614
+        ]
+      ],
+      [
+        [
+          325,
+          315,
+          30,
+          29,
+          594
+        ]
+      ],
+      [
+        [
+          325,
+          314,
+          29,
+          28,
+          545
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      70,
+      76,
+      82
+    ]
+  },
+  {
+    "cut_id": "g17_ambig_settle",
+    "clip": "17",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 104,
+    "n_out_frames": 63,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 14.396180048887969,
+    "median_box_diameter_px": 32.0,
+    "shift_ratio": 0.449880626527749,
+    "boxes": [
+      [
+        [
+          304,
+          323,
+          31,
+          30,
+          578
+        ]
+      ],
+      [
+        [
+          310,
+          320,
+          32,
+          32,
+          658
+        ]
+      ],
+      [
+        [
+          318,
+          316,
+          30,
+          34,
+          647
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      50,
+      56,
+      62
+    ]
+  },
+  {
+    "cut_id": "g18_bouncing",
+    "clip": "18",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 69,
+    "n_out_frames": 33,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      20,
+      26,
+      32
+    ]
+  },
+  {
+    "cut_id": "g18_rolling",
+    "clip": "18",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 139,
+    "n_out_frames": 91,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 7.158910531638177,
+    "median_box_diameter_px": 22.5,
+    "shift_ratio": 0.3181738014061412,
+    "boxes": [
+      [
+        [
+          321,
+          313,
+          24,
+          21,
+          283
+        ]
+      ],
+      [
+        [
+          323,
+          311,
+          24,
+          21,
+          264
+        ]
+      ],
+      [
+        [
+          328,
+          311,
+          23,
+          19,
+          255
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      78,
+      84,
+      90
+    ]
+  },
+  {
+    "cut_id": "g18_ambig_settle",
+    "clip": "18",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 91,
+    "n_out_frames": 51,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 10.547511554864494,
+    "median_box_diameter_px": 28.5,
+    "shift_ratio": 0.3700881247320875,
+    "boxes": [
+      [
+        [
+          304,
+          320,
+          24,
+          14,
+          144
+        ]
+      ],
+      [
+        [
+          306,
+          321,
+          30,
+          27,
+          533
+        ]
+      ],
+      [
+        [
+          309,
+          319,
+          32,
+          27,
+          509
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      38,
+      44,
+      50
+    ]
+  },
+  {
+    "cut_id": "g19_bouncing",
+    "clip": "19",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 68,
+    "n_out_frames": 33,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      20,
+      26,
+      32
+    ]
+  },
+  {
+    "cut_id": "g19_rolling",
+    "clip": "19",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 112,
+    "n_out_frames": 70,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 3.8078865529319543,
+    "median_box_diameter_px": 28.0,
+    "shift_ratio": 0.13599594831899836,
+    "boxes": [
+      [
+        [
+          318,
+          318,
+          29,
+          28,
+          585
+        ]
+      ],
+      [
+        [
+          320,
+          316,
+          29,
+          27,
+          537
+        ]
+      ],
+      [
+        [
+          320,
+          316,
+          28,
+          25,
+          471
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      57,
+      63,
+      69
+    ]
+  },
+  {
+    "cut_id": "g19_ambig_settle",
+    "clip": "19",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 88,
+    "n_out_frames": 50,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          318,
+          310,
+          15,
+          17,
+          130
+        ]
+      ],
+      [
+        [
+          311,
+          319,
+          30,
+          24,
+          459
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      37,
+      43,
+      49
+    ]
+  },
+  {
+    "cut_id": "g20_bouncing",
+    "clip": "20",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 66,
+    "n_out_frames": 32,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      19,
+      25,
+      31
+    ]
+  },
+  {
+    "cut_id": "g20_rolling",
+    "clip": "20",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 114,
+    "n_out_frames": 72,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 4.272001872658765,
+    "median_box_diameter_px": 31.0,
+    "shift_ratio": 0.1378065120212505,
+    "boxes": [
+      [
+        [
+          321,
+          317,
+          31,
+          33,
+          714
+        ]
+      ],
+      [
+        [
+          323,
+          316,
+          31,
+          31,
+          648
+        ]
+      ],
+      [
+        [
+          323,
+          314,
+          30,
+          31,
+          606
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      59,
+      65,
+      71
+    ]
+  },
+  {
+    "cut_id": "g20_ambig_settle",
+    "clip": "20",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 91,
+    "n_out_frames": 53,
+    "predicted_state": "MOVING_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 24.520399670478458,
+    "median_box_diameter_px": 28.0,
+    "shift_ratio": 0.8757285596599449,
+    "boxes": [
+      [
+        [
+          315,
+          308,
+          15,
+          11,
+          90
+        ]
+      ],
+      [
+        [
+          308,
+          321,
+          31,
+          25,
+          532
+        ]
+      ],
+      [
+        [
+          316,
+          320,
+          30,
+          33,
+          700
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      40,
+      46,
+      52
+    ]
+  },
+  {
+    "cut_id": "g21_bouncing",
+    "clip": "21",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 63,
+    "n_out_frames": 29,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      [
+        [
+          304,
+          320,
+          17,
+          14,
+          98
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      16,
+      22,
+      28
+    ]
+  },
+  {
+    "cut_id": "g21_rolling",
+    "clip": "21",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 105,
+    "n_out_frames": 64,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 7.106335201775948,
+    "median_box_diameter_px": 30.0,
+    "shift_ratio": 0.23687784005919826,
+    "boxes": [
+      [
+        [
+          315,
+          320,
+          30,
+          30,
+          648
+        ]
+      ],
+      [
+        [
+          318,
+          317,
+          30,
+          30,
+          609
+        ]
+      ],
+      [
+        [
+          320,
+          313,
+          29,
+          33,
+          585
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      51,
+      57,
+      63
+    ]
+  },
+  {
+    "cut_id": "g21_ambig_settle",
+    "clip": "21",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 83,
+    "n_out_frames": 46,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [
+        [
+          311,
+          315,
+          23,
+          16,
+          171
+        ]
+      ],
+      [
+        [
+          308,
+          320,
+          32,
+          25,
+          518
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      33,
+      39,
+      45
+    ]
+  },
+  {
+    "cut_id": "g22_bouncing",
+    "clip": "22",
+    "true_label": "BOUNCING",
+    "start_f": 30,
+    "end_f": 59,
+    "n_out_frames": 25,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      12,
+      18,
+      24
+    ]
+  },
+  {
+    "cut_id": "g22_rolling",
+    "clip": "22",
+    "true_label": "ROLLING",
+    "start_f": 30,
+    "end_f": 112,
+    "n_out_frames": 70,
+    "predicted_state": "REST_CANDIDATE",
+    "reason": "changed_dark_component_track_only",
+    "max_shift_px": 3.2015621187164243,
+    "median_box_diameter_px": 22.0,
+    "shift_ratio": 0.14552555085074656,
+    "boxes": [
+      [
+        [
+          296,
+          324,
+          29,
+          21,
+          344
+        ]
+      ],
+      [
+        [
+          299,
+          324,
+          26,
+          18,
+          278
+        ]
+      ],
+      [
+        [
+          301,
+          324,
+          24,
+          17,
+          239
+        ]
+      ]
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      57,
+      63,
+      69
+    ]
+  },
+  {
+    "cut_id": "g22_ambig_settle",
+    "clip": "22",
+    "true_label": "AMBIG",
+    "start_f": 30,
+    "end_f": 85,
+    "n_out_frames": 47,
+    "predicted_state": "UNKNOWN",
+    "reason": "candidate_absent_or_ambiguous",
+    "max_shift_px": null,
+    "median_box_diameter_px": null,
+    "shift_ratio": null,
+    "boxes": [
+      [],
+      [],
+      []
+    ],
+    "edge_counts": [
+      0,
+      0,
+      0
+    ],
+    "frame_indices": [
+      0,
+      34,
+      40,
+      46
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "dataset": "work/rog1/kap_real",
+  "classifier_commit": "ef3a6acb",
+  "total_cuts": 66,
+  "total_classified": 32,
+  "total_coverage": 0.48484848484848486,
+  "category_counts": {
+    "BOUNCING": 20,
+    "ROLLING": 22,
+    "REST": 2,
+    "AMBIG": 22
+  },
+  "category_classified": {
+    "BOUNCING": 0,
+    "ROLLING": 22,
+    "REST": 2,
+    "AMBIG": 8
+  },
+  "predictions_table": {
+    "BOUNCING": {
+      "REST_CANDIDATE": 0,
+      "MOVING_CANDIDATE": 0,
+      "UNKNOWN": 20
+    },
+    "ROLLING": {
+      "REST_CANDIDATE": 21,
+      "MOVING_CANDIDATE": 1,
+      "UNKNOWN": 0
+    },
+    "REST": {
+      "REST_CANDIDATE": 2,
+      "MOVING_CANDIDATE": 0,
+      "UNKNOWN": 0
+    },
+    "AMBIG": {
+      "REST_CANDIDATE": 5,
+      "MOVING_CANDIDATE": 3,
+      "UNKNOWN": 14
+    }
+  },
+  "unknown_reasons": {
+    "candidate_absent_or_ambiguous": 34
+  },
+  "key_metrics": {
+    "rolling_coverage": 1.0,
+    "rolling_false_rest_count": 21,
+    "rolling_false_rest_rate_among_classified": 0.9545454545454546,
+    "rolling_true_moving_count": 1,
+    "rolling_unknown_count": 0,
+    "bouncing_coverage": 0.0,
+    "bouncing_false_rest_count": 0,
+    "bouncing_true_moving_count": 0,
+    "rest_coverage": 1.0,
+    "rest_true_positive_count": 2,
+    "ambig_coverage": 0.36363636363636365,
+    "ambig_rest_count": 5,
+    "ambig_moving_count": 3
+  }
+}
