@@ -26,6 +26,13 @@ On rahul-3's sim_drop clips, the result on holder scenes was 0/15 usable for rea
 For GAUGE-style Cosmos clips with a gripper, use a seeded single-ball tracker (tools/realball/firstfall.py). Run `measure_bounce.fit_track` on its track for the first-rebound g.
 Evidence: work/raj-3/simdrop_check/.
 
+## seeded.py v1 (raj-3): use this on gripper/hand scenes (referee PASS 20/20, g 8/8 <5%, e 4/4 <5%)
+`python3 -I seeded.py clip.mp4 --fps 24 --ppm 539.8 --point x,y [--pframe N] [--tmax N] [--qc out.png]`
+- Track: raj-2's firstfall v1 seeded single-ball tracker (tools/realball/firstfall.py, which must sit next to this folder). Seed a point on the ball at frame `--pframe`.
+- Output: `g_fall` (firstfall first-fall g), `g_bounce` (measure_bounce fit_track on the same track, first rebound flight), and `g` = g_bounce if its flag is ok, else g_fall.
+- On sim_drop (work/raj-3/simdrop_check), measured/true is 0.996 ± 0.006 for the rebound and 1.003 ± 0.018 for the first fall (real g).
+- Planted results: planted/est in work/raj-3/simdrop_check/referee_seeded_v1.json.
+
 ## measure_ball.py v5 (referee PASS 20/20, msg 147, commit 3f6f104)
 Change from v4: the hinge fit only locates the release t0. g is a **free-v0 quadratic from the first frame ≥ t0 + 1 frame** up to the frame before
 first impact. That handles slow gripper releases. skip=1 was chosen on GAUGE real **mocap** (n=22): skip 0/1/2/3 give 9.742/9.815/9.828/9.831,
