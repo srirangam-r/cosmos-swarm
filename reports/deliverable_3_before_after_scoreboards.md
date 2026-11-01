@@ -44,9 +44,9 @@ The master table below contrasts the unmodified stock Cosmos3-Nano baseline agai
 | **Bounce Restitution ($e_T$)** | $-$ | $0.989 \pm 0.011$ | Undefined ($0/66$) | $0.989 \pm 0.011$ | $0.693 \pm 0.020$ | $0.018$ | Perpetual limit cycle |
 | **Time to Complete Rest** | $\text{s}$ | Never settles | Never settles | $>7.9$ ($100\%$ active)| $1.40\text{--}2.60$ | $0.15$ | DiT prior bottleneck |
 | **II. NVIDIA SCOREBOARD (4 PILLARS)** | | | | | | | |
-| **Pillar 1: DOVER Technical** | score | $-0.0407 \pm 0.0013$ | $-0.0593$ (Arm C drop $-0.0075$) | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0012 \pm 0.0009$ (n.s., $p=0.232$)** |
-| **Pillar 1: DOVER Fused** | score | $0.5645 \pm 0.0069$ | $0.5509$ (Arm C drop $-0.0482$) | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0114 \pm 0.0060$ (corrected)** |
-| **Pillar 1: DOVER Aesthetic** | score | $0.0641 \pm 0.0021$ | $0.0747$ (Arm C) | **$0.0567 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0049 \pm 0.0020$ (corrected)** |
+| **Pillar 1: DOVER Technical** | score | $-0.0407 \pm 0.0013$ | $-0.0647$ (Arm A drop $-0.0129$) / $-0.0593$ (Arm C drop $-0.0075$) | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0012 \pm 0.0009$ (n.s., $p=0.232$)** |
+| **Pillar 1: DOVER Fused** | score | $0.5645 \pm 0.0069$ | $0.5225$ (Arm A drop $-0.0767$) / $0.5509$ (Arm C drop $-0.0482$) | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0114 \pm 0.0060$ (corrected)** |
+| **Pillar 1: DOVER Aesthetic** | score | $0.0641 \pm 0.0021$ | $0.0679$ (Arm A drop $-0.0204$) / $0.0747$ (Arm C) | **$0.0567 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0049 \pm 0.0020$ (corrected)** |
 | **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | $0.469$ (Task 24) | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$)** |
 | **Pillar 2: Dynamic Degree Norm** | flow | $7.642 \pm 1.392$ | $6.04$ (Task 24) | **$5.645 \pm 1.548$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-1.997 \pm 2.054$ ($26\%$ drop) |
 | **Pillar 2: Motion Fidelity (MF)** | score | $0.1389$ (mean $0.104$) | Not run | **$0.2222$ (mean $0.316$)**| $1.000$ (Ideal) | $0.083$ | **$+60.0\%$ (16/16 triplets gain)** |
