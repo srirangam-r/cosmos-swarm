@@ -23,6 +23,25 @@ import numpy as np
 
 METRICS = ["dover_fused", "dover_technical", "dover_aesthetic", "dd_norm", "dd_frac", "dd_binary"]
 DD = ["dd_norm", "dd_frac", "dd_binary"]
+# Additional recorded generation context. An absent field is unknown, not an
+# asserted default. Never group an explicit value with an unknown value.
+NOISE_CONTEXT = ("model", "checkpoint", "inference_stack", "use_duration_template",
+                 "use_resolution_template", "use_system_prompt", "negative_metadata_mode",
+                 "noise_context")
+
+
+def noise_context(meta):
+    extra = meta.get("extra_params") or {}
+    if not isinstance(extra, dict):
+        sys.exit("extra_params must be an object when grouping seed noise")
+    result = []
+    for key in NOISE_CONTEXT:
+        values = [d[key] for d in (meta, extra) if key in d]
+        encoded = [json.dumps(v, sort_keys=True, separators=(",", ":")) for v in values]
+        if len(set(encoded)) > 1:
+            sys.exit(f"conflicting {key} in sidecar and extra_params")
+        result.append((key, encoded[0] if encoded else None))
+    return tuple(result)
 
 
 def load(path):
@@ -105,16 +124,19 @@ def cmd_noise(a):
     S = load(a.scores)
     groups = {}
     for name, r in S.items():
-        key = (field(r, "image"), field(r, "prompt"), field(r, "neg"), field(r, "settings"))
+        key = (field(r, "image"), field(r, "prompt"), field(r, "neg"), field(r, "settings"), noise_context(r["meta"]))
         if any(v is None for v in key[:3]) or any(v is None for v in key[3]) or field(r, "seed") is None:
             sys.exit(f"missing image, prompt, negative prompt, complete settings, or seed: {name}")
         groups.setdefault(key, []).append(r)
-    rep = dict(n_clips=len(S), n_groups=len(groups), groups=[], pooled_seed_sd={}, across_all_sd={})
+    rep = dict(n_clips=len(S), n_groups=len(groups), groups=[], pooled_seed_sd={}, across_all_sd={},
+               context_note="Unknown generation context is not proof of identical settings. Verify checkpoint, stack, templates and other conditioning before interpreting seed noise.")
     for key, rs in groups.items():
         seeds = [field(r, "seed") for r in rs]
         if len(set(seeds)) != len(seeds):
             sys.exit(f"duplicate seed within noise group: {key[0]}")
-        rep["groups"].append(dict(image=key[0], neg=key[2], n=len(rs), seeds=[field(r, "seed") for r in rs],
+        context = {k: json.loads(v) for k, v in key[4] if v is not None}
+        unknown = [k for k, v in key[4] if v is None]
+        rep["groups"].append(dict(image=key[0], neg=key[2], context=context, unknown_context=unknown, n=len(rs), seeds=[field(r, "seed") for r in rs],
                                   **{m: [round(r[m], 4) for r in rs] for m in METRICS if all(m in r for r in rs)}))
     for m in METRICS:
         num, df = 0.0, 0
