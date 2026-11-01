@@ -1,0 +1,37 @@
+{
+ "name": "dial_pend11_P1186_s1",
+ "width": 832,
+ "height": 480,
+ "num_frames": 93,
+ "fps": 24,
+ "steps": 35,
+ "guidance": 6.0,
+ "flow_shift": 10.0,
+ "seed": 1,
+ "negative_prompt": "",
+ "extra_params": {
+  "noise": {
+   "device": "cpu"
+  },
+  "latent": {
+   "ref": "dp_pend11_P1186.mp4",
+   "init": "noised",
+   "start_step": 19
+  }
+ },
+ "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt_text": "",
+ "image": "pend11_mid_f81.png",
+ "owner": "ro-3",
+ "queue_id": "175835-c58c85",
+ "endpoint": "q8-6",
+ "endpoint_url": "http://127.0.0.1:8047",
+ "server_clip_id": "20261101T180034_0118_ro-3",
+ "artifact_ids": [],
+ "seconds": 32.7,
+ "wall_seconds": 88.0,
+ "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+ "relayed": [
+  "server_sidecar.json"
+ ]
+}
