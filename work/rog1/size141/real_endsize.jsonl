@@ -1,0 +1,4 @@
+{"clip": "real_ball1.mp4", "nframes": 159, "n_cands": 0}
+{"clip": "real_ball2.mp4", "nframes": 169, "n_cands": 0}
+{"clip": "real_ball3.mp4", "nframes": 173, "n_cands": 1, "obj": {"x": 329, "y": 320, "w": 14, "h": 13, "area": 94, "fill": 0.516, "meanV": 58.0, "d_eq": 10.9}, "d_w": 14, "d_h": 13, "d_eq": 10.9, "others": []}
+{"clip": "real_ball4.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 307, "y": 319, "w": 29, "h": 33, "area": 692, "fill": 0.723, "meanV": 80.3, "d_eq": 29.7}, "d_w": 29, "d_h": 33, "d_eq": 29.7, "others": []}
