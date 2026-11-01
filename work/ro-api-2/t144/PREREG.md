@@ -39,3 +39,10 @@ Equal energy does not mean equal salience.
   the ball up. A null on all arms means a drawn trail is not a velocity signal Nano reads, which is not evidence against V itself.
 - **Side check**: A s1-8 vs t139 G_ball1 s1-8 (same image hash, same settings, q8) tests reproducibility across runs.
 No outcome-dependent seed extension.
+
+## Addendum 2026-11-01 ~11:05 UTC (board time), written before any t144 clip was fetched or viewed: extra secondary code for task 163
+- **absent_faint_frames**: during blind coding, list the native frame ranges (out of 0-92) in which the frame-0 ball is absent
+  from the corridor or visibly faint/ghosted (<~half its frame-0 contrast by eye), up to the first clean landing. Read at native
+  rate wherever the strip suggests absence. This code does not affect the t144 primary or tests.
+- Task 163 defines a vanish chunk as latent chunk k (frames 4k-3..4k) with >=2 of its 4 frames in absent_faint_frames.
+  The chunk list is committed with codes.csv, before any latent r_k/b_k is computed on these clips.
