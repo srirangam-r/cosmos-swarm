@@ -1,0 +1,90 @@
+{"clip": "t141_b1dd33_QT_s1.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 335, "y": 325, "w": 70, "h": 105, "area": 4548, "fill": 0.619, "meanV": 35.1, "d_eq": 76.1}, "d_w": 70, "d_h": 105, "d_eq": 76.1, "others": []}
+{"clip": "t141_b1dd33_N_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_F_s9.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_F_s10.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_F_s3.mp4", "nframes": 189, "n_cands": 2, "obj": {"x": 525, "y": 305, "w": 30, "h": 31, "area": 786, "fill": 0.845, "meanV": 50.7, "d_eq": 31.6}, "d_w": 30, "d_h": 31, "d_eq": 31.6, "others": [{"x": 305, "y": 462, "w": 11, "h": 11, "area": 91, "fill": 0.752, "meanV": 15.3, "d_eq": 10.8}]}
+{"clip": "t141_b1dd33_N_s2.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_N_s5.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 633, "y": 396, "w": 17, "h": 13, "area": 92, "fill": 0.416, "meanV": 198.7, "d_eq": 10.8}, "d_w": 17, "d_h": 13, "d_eq": 10.8, "others": []}
+{"clip": "t141_b1dd33_F_s6.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_QT_s2.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 274, "y": 325, "w": 37, "h": 42, "area": 960, "fill": 0.618, "meanV": 74.2, "d_eq": 35.0}, "d_w": 37, "d_h": 42, "d_eq": 35.0, "others": []}
+{"clip": "t141_b1dd33_N_s10.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_N_s9.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 152, "y": 392, "w": 17, "h": 11, "area": 117, "fill": 0.626, "meanV": 182.6, "d_eq": 12.2}, "d_w": 17, "d_h": 11, "d_eq": 12.2, "others": []}
+{"clip": "t141_b1dd33_F_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_N_s6.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 277, "y": 342, "w": 27, "h": 29, "area": 502, "fill": 0.641, "meanV": 30.6, "d_eq": 25.3}, "d_w": 27, "d_h": 29, "d_eq": 25.3, "others": []}
+{"clip": "t141_b1dd33_F_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_N_s3.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_F_s1.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 342, "y": 324, "w": 68, "h": 106, "area": 4255, "fill": 0.59, "meanV": 32.3, "d_eq": 73.6}, "d_w": 68, "d_h": 106, "d_eq": 73.6, "others": []}
+{"clip": "t141_b1dd33_QT_s3.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 274, "y": 331, "w": 42, "h": 46, "area": 1517, "fill": 0.785, "meanV": 71.1, "d_eq": 43.9}, "d_w": 42, "d_h": 46, "d_eq": 43.9, "others": []}
+{"clip": "t141_b1dd33_N_s1.mp4", "nframes": 189, "n_cands": 2, "obj": {"x": 342, "y": 351, "w": 62, "h": 64, "area": 2379, "fill": 0.6, "meanV": 23.0, "d_eq": 55.0}, "d_w": 62, "d_h": 64, "d_eq": 55.0, "others": [{"x": 341, "y": 326, "w": 49, "h": 32, "area": 709, "fill": 0.452, "meanV": 87.4, "d_eq": 30.0}]}
+{"clip": "t141_b1dd33_F_s2.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_QT_s10.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 276, "y": 320, "w": 39, "h": 46, "area": 1188, "fill": 0.662, "meanV": 78.4, "d_eq": 38.9}, "d_w": 39, "d_h": 46, "d_eq": 38.9, "others": []}
+{"clip": "t141_b1dd33_F_s5.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 282, "y": 327, "w": 40, "h": 42, "area": 1128, "fill": 0.671, "meanV": 94.3, "d_eq": 37.9}, "d_w": 40, "d_h": 42, "d_eq": 37.9, "others": []}
+{"clip": "t141_b1dd33_N_s7.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 294, "y": 328, "w": 28, "h": 30, "area": 432, "fill": 0.514, "meanV": 77.4, "d_eq": 23.5}, "d_w": 28, "d_h": 30, "d_eq": 23.5, "others": []}
+{"clip": "t141_b1dd33_F_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_N_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_QT_s4.mp4", "nframes": 189, "n_cands": 2, "obj": {"x": 287, "y": 347, "w": 14, "h": 12, "area": 95, "fill": 0.565, "meanV": 14.0, "d_eq": 11.0}, "d_w": 14, "d_h": 12, "d_eq": 11.0, "others": [{"x": 266, "y": 374, "w": 12, "h": 9, "area": 80, "fill": 0.741, "meanV": 190.1, "d_eq": 10.1}]}
+{"clip": "t141_b1dd33_QT_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s3.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s6.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s10.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s9.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s2.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s5.mp4", "nframes": 189, "n_cands": 2, "obj": {"x": 282, "y": 343, "w": 26, "h": 29, "area": 384, "fill": 0.509, "meanV": 67.2, "d_eq": 22.1}, "d_w": 26, "d_h": 29, "d_eq": 22.1, "others": [{"x": 195, "y": 408, "w": 25, "h": 16, "area": 221, "fill": 0.552, "meanV": 199.8, "d_eq": 16.8}]}
+{"clip": "t141_b1dd33_QT_s5.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 302, "y": 318, "w": 26, "h": 20, "area": 280, "fill": 0.538, "meanV": 31.6, "d_eq": 18.9}, "d_w": 26, "d_h": 20, "d_eq": 18.9, "others": []}
+{"clip": "t141_b1dd33_QT_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s7.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 266, "y": 334, "w": 38, "h": 46, "area": 906, "fill": 0.518, "meanV": 62.4, "d_eq": 34.0}, "d_w": 38, "d_h": 46, "d_eq": 34.0, "others": []}
+{"clip": "t141_b2dd35_F_s1.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s10.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s3.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 525, "y": 305, "w": 31, "h": 32, "area": 777, "fill": 0.783, "meanV": 48.2, "d_eq": 31.5}, "d_w": 31, "d_h": 32, "d_eq": 31.5, "others": []}
+{"clip": "t141_b2dd35_N_s6.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b1dd33_QT_s6.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 270, "y": 331, "w": 42, "h": 41, "area": 1146, "fill": 0.666, "meanV": 57.4, "d_eq": 38.2}, "d_w": 42, "d_h": 41, "d_eq": 38.2, "others": []}
+{"clip": "t141_b1dd33_QT_s9.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 300, "y": 327, "w": 24, "h": 38, "area": 463, "fill": 0.508, "meanV": 84.4, "d_eq": 24.3}, "d_w": 24, "d_h": 38, "d_eq": 24.3, "others": []}
+{"clip": "t141_b2dd35_F_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s2.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_F_s5.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s1.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_QT_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_QT_s1.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 331, "y": 325, "w": 69, "h": 84, "area": 3354, "fill": 0.579, "meanV": 34.8, "d_eq": 65.3}, "d_w": 69, "d_h": 84, "d_eq": 65.3, "others": []}
+{"clip": "t141_b2dd35_QT_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s10.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_N_s9.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s3.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s6.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s9.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 763, "y": 436, "w": 13, "h": 15, "area": 91, "fill": 0.467, "meanV": 30.2, "d_eq": 10.8}, "d_w": 13, "d_h": 15, "d_eq": 10.8, "others": []}
+{"clip": "t141_b2dd35_QT_s2.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 274, "y": 325, "w": 37, "h": 43, "area": 1036, "fill": 0.651, "meanV": 67.1, "d_eq": 36.3}, "d_w": 37, "d_h": 43, "d_eq": 36.3, "others": []}
+{"clip": "t141_b2dd35_QT_s5.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 263, "y": 338, "w": 45, "h": 39, "area": 900, "fill": 0.513, "meanV": 96.3, "d_eq": 33.9}, "d_w": 45, "d_h": 39, "d_eq": 33.9, "others": []}
+{"clip": "t141_b2dd35_QT_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_QT_s10.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 277, "y": 319, "w": 40, "h": 46, "area": 1167, "fill": 0.634, "meanV": 72.4, "d_eq": 38.5}, "d_w": 40, "d_h": 46, "d_eq": 38.5, "others": []}
+{"clip": "t141_b2dd37_F_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_N_s10.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s1.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 384, "y": 350, "w": 19, "h": 20, "area": 164, "fill": 0.432, "meanV": 38.1, "d_eq": 14.5}, "d_w": 19, "d_h": 20, "d_eq": 14.5, "others": []}
+{"clip": "t141_b2dd35_QT_s3.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_QT_s6.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 272, "y": 332, "w": 38, "h": 42, "area": 1209, "fill": 0.758, "meanV": 73.0, "d_eq": 39.2}, "d_w": 38, "d_h": 42, "d_eq": 39.2, "others": []}
+{"clip": "t141_b2dd37_F_s5.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd35_QT_s9.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 276, "y": 331, "w": 38, "h": 37, "area": 816, "fill": 0.58, "meanV": 57.9, "d_eq": 32.2}, "d_w": 38, "d_h": 37, "d_eq": 32.2, "others": []}
+{"clip": "t141_b2dd37_F_s2.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_F_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_N_s1.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 340, "y": 326, "w": 64, "h": 95, "area": 3373, "fill": 0.555, "meanV": 36.7, "d_eq": 65.5}, "d_w": 64, "d_h": 95, "d_eq": 65.5, "others": []}
+{"clip": "t141_b2dd37_N_s2.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 442, "y": 271, "w": 12, "h": 18, "area": 122, "fill": 0.565, "meanV": 189.7, "d_eq": 12.5}, "d_w": 12, "d_h": 18, "d_eq": 12.5, "others": []}
+{"clip": "t141_b2dd37_N_s5.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_N_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_QT_s1.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 337, "y": 326, "w": 68, "h": 103, "area": 4127, "fill": 0.589, "meanV": 35.6, "d_eq": 72.5}, "d_w": 68, "d_h": 103, "d_eq": 72.5, "others": []}
+{"clip": "t141_b2dd37_N_s3.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_QT_s4.mp4", "nframes": 189, "n_cands": 2, "obj": {"x": 265, "y": 333, "w": 39, "h": 46, "area": 873, "fill": 0.487, "meanV": 131.3, "d_eq": 33.3}, "d_w": 39, "d_h": 46, "d_eq": 33.3, "others": [{"x": 286, "y": 315, "w": 7, "h": 10, "area": 46, "fill": 0.657, "meanV": 96.1, "d_eq": 7.7}]}
+{"clip": "t141_b2dd37_N_s6.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_QT_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_N_s9.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 773, "y": 250, "w": 24, "h": 26, "area": 436, "fill": 0.699, "meanV": 64.3, "d_eq": 23.6}, "d_w": 24, "d_h": 26, "d_eq": 23.6, "others": []}
+{"clip": "t141_b2dd37_QT_s2.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 282, "y": 345, "w": 45, "h": 66, "area": 1969, "fill": 0.663, "meanV": 33.4, "d_eq": 50.1}, "d_w": 45, "d_h": 66, "d_eq": 50.1, "others": []}
+{"clip": "t141_b2dd37_N_s4.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_N_s7.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_QT_s5.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 279, "y": 325, "w": 48, "h": 42, "area": 1355, "fill": 0.672, "meanV": 73.2, "d_eq": 41.5}, "d_w": 48, "d_h": 42, "d_eq": 41.5, "others": []}
+{"clip": "t141_b2dd37_QT_s10.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 257, "y": 388, "w": 54, "h": 39, "area": 1240, "fill": 0.589, "meanV": 24.6, "d_eq": 39.7}, "d_w": 54, "d_h": 39, "d_eq": 39.7, "others": []}
+{"clip": "t141_b2dd37_QT_s8.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_QT_s3.mp4", "nframes": 189, "n_cands": 0}
+{"clip": "t141_b2dd37_QT_s6.mp4", "nframes": 189, "n_cands": 3, "obj": {"x": 289, "y": 319, "w": 41, "h": 32, "area": 766, "fill": 0.584, "meanV": 72.2, "d_eq": 31.2}, "d_w": 41, "d_h": 32, "d_eq": 31.2, "others": [{"x": 279, "y": 250, "w": 20, "h": 17, "area": 169, "fill": 0.497, "meanV": 63.2, "d_eq": 14.7}, {"x": 296, "y": 304, "w": 11, "h": 13, "area": 100, "fill": 0.699, "meanV": 103.4, "d_eq": 11.3}]}
+{"clip": "t141_b2dd37_QT_s9.mp4", "nframes": 189, "n_cands": 1, "obj": {"x": 287, "y": 323, "w": 26, "h": 38, "area": 719, "fill": 0.728, "meanV": 69.2, "d_eq": 30.3}, "d_w": 26, "d_h": 38, "d_eq": 30.3, "others": []}
