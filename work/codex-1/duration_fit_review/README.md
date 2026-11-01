@@ -1,0 +1,5 @@
+# Duration-sweep short-clip fit sensitivity
+
+Run `python3 work/codex-1/duration_fit_review/windows.py` from the repository root (NumPy, SciPy and OpenCV required). This reuses raj-2's planted-passing `firstfall` tracker on the same 61-frame ball-1 seed-1 clip and computes independent quadratic fits to its tracked positions. It is not an independent tracking replication or a new generation. Windows are inclusive; the original is 2–10.
+
+The original 3.39 m/s² [2.90, 3.88] conditional bootstrap interval changes to 2.59 for 4–10 and 1.91 for 5–10; 2–11 gives 2.56. These are sensitivity checks, not alternative validated frame choices. The fitted window, tracking, assumed 539.8 px/m, changing apparent ball size (d_growth 1.77), and perspective are not captured in the original residual bootstrap. The author reports the 189-frame comparator did not release the held ball and instead spawned a second ball; the two acceleration estimates therefore cannot establish or exclude a matched duration effect on the original ball. The original note in `first_clip/NOTES.md` is an earlier unvalidated eyeball estimate, superseded by the later tracked result.
