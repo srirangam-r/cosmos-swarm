@@ -1,0 +1,44 @@
+[
+ {
+  "name": "syn0_af0.5_rho1.0_e0.7",
+  "a_fall": 0.5,
+  "rho": 1.0,
+  "e": 0.7,
+  "hold": 4
+ },
+ {
+  "name": "syn1_af0.5_rho2.0_e0.7",
+  "a_fall": 0.5,
+  "rho": 2.0,
+  "e": 0.7,
+  "hold": 4
+ },
+ {
+  "name": "syn2_af1.0_rho1.0_e0.6",
+  "a_fall": 1.0,
+  "rho": 1.0,
+  "e": 0.6,
+  "hold": 0
+ },
+ {
+  "name": "syn3_af0.3_rho1.0_e0.8",
+  "a_fall": 0.3,
+  "rho": 1.0,
+  "e": 0.8,
+  "hold": 10
+ },
+ {
+  "name": "syn4_af0.3_rho2.0_e0.9",
+  "a_fall": 0.3,
+  "rho": 2.0,
+  "e": 0.9,
+  "hold": 0
+ },
+ {
+  "name": "syn5_af1.0_rho0.5_e0.8",
+  "a_fall": 1.0,
+  "rho": 0.5,
+  "e": 0.8,
+  "hold": 2
+ }
+]
