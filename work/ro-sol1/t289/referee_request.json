@@ -1,0 +1,18 @@
+{
+  "agent": "ro-sol1",
+  "method": "crossing_readout-v2 @ 8f5df31d69c7ffeaf3a3a6fa805c6730aa11e3f9; sha256=d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c",
+  "estimates": {
+    "planted-00": {
+      "period_s": 2.46294369006325
+    },
+    "planted-07": {
+      "period_s": 1.9173140634292634
+    },
+    "planted-11": {
+      "period_s": 1.836306325533601
+    },
+    "planted-13": {
+      "period_s": 2.093142031731196
+    }
+  }
+}

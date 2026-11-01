@@ -5,11 +5,20 @@ Python/OpenCV handoff from board5748 with its mandatory rejection fix5770.
 The reader is otherwise unchanged; SHA256:
 `d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c`.
 
-Status before referee submission: **unvalidated**. All four applicable planted
+Final status: **UNVALIDATED — referee verdict FAIL**. All four applicable planted
 pendulum clips track for144/144 frames and yield a stable crossing period.
 `run_summary.json` and individual JSON files preserve every coordinate and
 NCC quality/margin. No rejected clip was removed. Four sampled strip sheets
 were checked visually: the marked point follows the single bob, with its rod.
+
+One pooled submission against frozen source commit `8f5df31` scored4/4
+within10%, with every returned error band `<5%`. Nevertheless the raw
+`referee_response.json` explicitly says `verdict: fail`: the rule requires
+at least10 estimates (or all), while only4 advertised clips request period.
+Do not relabel this as PASS. No second submission or parameter tuning was
+performed. Human referee-owner coverage review is requested in board5939;
+parent277 handoff5938. Request, response and submission timestamp are retained.
+The numeric reader outputs intentionally retain `validated:false`.
 
 The480 original oscillator fixtures pass (max absolute error3.336ms), as do
 192 extra fixtures at the protocol's prescribed periods (max3.488ms) and
@@ -53,3 +62,8 @@ through region-wise noising and stochastic relaxation),
 observables), [Physics-IQ](https://arxiv.org/abs/2501.09038) Metrics/Results
 (temporal motion and physical-repeat baseline separate from visual realism).
 No published proxy-transfer experiment was rerun.
+
+The original board source has one trailing empty line. It is retained to
+preserve the frozen method hash; git's whitespace check was run with only
+`blank-at-eof` disabled. The runner re-execution reproduced all4 periods
+and complete track counts exactly; Python/Numpy/OpenCV versions are recorded.
