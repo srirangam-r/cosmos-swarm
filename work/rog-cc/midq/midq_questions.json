@@ -1,0 +1,140 @@
+{
+ "samples": [
+  {
+   "sample_name": "midq_combo",
+   "prompt": "",
+   "question_1": "[Semantic Alignment][prompt attributes] At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+   "question_1_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_2": "[Physical Laws][physics] In the middle of the video, after the ball is released, does it fall downward?",
+   "question_2_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_3": "[Physical Laws][physics] In the middle of the video, does the ball speed up as it falls?",
+   "question_3_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_4": "[Physical Laws][collision/momentum] When the ball hits the plank, does it bounce up instead of passing through it?",
+   "question_4_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_5": "[Physical Laws][causal order] Does the ball start falling only after the gripper releases it?",
+   "question_5_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_6": "[Physical Laws][behavioral realism] Do the ball's bounces get lower each time until it comes to rest?",
+   "question_6_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_7": "[Visual Integrity][deformation] Throughout the video, does the ball keep a round shape?",
+   "question_7_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_8": "[Visual Integrity][temporal stability] Throughout the video, does the video stay free of unnatural flickering?",
+   "question_8_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_9": "[Visual Integrity][artifacts] Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+   "question_9_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_10": "[Visual Integrity][shot change] Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+   "question_10_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_11": "[Geometric Reasoning][camera stability] Throughout the video, does the camera stay static?",
+   "question_11_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_12": "[Geometric Reasoning][position/motion] Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+   "question_12_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_13": "[Physical Laws][object permanence] Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+   "question_13_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_14": "[Semantic Alignment][scene] At the start of the video, is a black ball in the air between a robot gripper and a wooden plank?",
+   "question_14_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_15": "[Physical Laws][gravity] At the start of the video, does the ball move downward toward the plank?",
+   "question_15_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_16": "[Physical Laws][energy] Is each bounce of the ball lower than the one before it?",
+   "question_16_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_17": "[Physical Laws][energy-neg] Does the ball bounce back up to the same height or higher every time?",
+   "question_17_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_18": "[Physical Laws][rest] By the end of the video, has the ball come to rest on the plank?",
+   "question_18_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_19": "[Physical Laws][rest-neg] At the end of the video, is the ball still bouncing or moving?",
+   "question_19_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_20": "[Physical Laws][gravity-neg] Does the ball ever move upward on its own, without having just bounced off a surface?",
+   "question_20_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_21": "[Physical Laws][object permanence] Is there only one ball throughout the video, with no second ball appearing?",
+   "question_21_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ],
+   "question_22": "[Visual Integrity][size] Does the ball keep the same size throughout the video?",
+   "question_22_choices": [
+    "Yes",
+    "No",
+    "Unclear"
+   ]
+  }
+ ]
+}
