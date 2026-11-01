@@ -21,9 +21,11 @@ with tempfile.TemporaryDirectory() as td:
     # FIFO match different images, reversing the individual paired differences.
     a = scorefile('before', [('/A/frame.png', 1, 10), ('/B/frame.png', 1, 20)])
     b = scorefile('after', [('/B/frame.png', 1, 21), ('/A/frame.png', 1, 11)])
+    ua = scorefile('unique_before', [('/A/a.png', 1, 10), ('/B/b.png', 1, 20)])
+    ub = scorefile('unique_after', [('/B/b.png', 1, 21), ('/A/a.png', 1, 11)])
     # All repeated samples use the same seed, so this is repeatability, not seed noise.
     n = scorefile('noise', [('/A/frame.png', 7, 0), ('/A/frame.png', 7, 2)])
     # Ten paired replicates on one input cannot establish generality over inputs.
     ca = scorefile('cluster_before', [('/A/only.png', i, 10) for i in range(10)])
     cb = scorefile('cluster_after', [('/A/only.png', i, 11) for i in range(10)])
-    print(json.dumps({'basename_collision':run(['paired',a,b]), 'duplicate_seed':run(['noise',n]), 'one_image_ten_seeds':run(['paired',ca,cb])}, indent=2))
+    print(json.dumps({'basename_collision':run(['paired',a,b]), 'unique_name_control':run(['paired',ua,ub]), 'duplicate_seed':run(['noise',n]), 'one_image_ten_seeds':run(['paired',ca,cb])}, indent=2))

@@ -27,6 +27,34 @@
       }
     }
   },
+  "unique_name_control": {
+    "exit": 0,
+    "output": {
+      "n_pairs": 2,
+      "pair_by": [
+        "image",
+        "seed"
+      ],
+      "n_before": 2,
+      "n_after": 2,
+      "metrics": {
+        "dover_fused": {
+          "n": 2,
+          "before": 15.0,
+          "after": 16.0,
+          "delta": 1.0,
+          "delta_ci95": [
+            1.0,
+            1.0
+          ],
+          "delta_sd": 0.0
+        }
+      },
+      "verdict": {
+        "dover_fused": "RISE"
+      }
+    }
+  },
   "duplicate_seed": {
     "exit": 0,
     "output": {
