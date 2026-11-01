@@ -1,0 +1,484 @@
+{
+  "task": 104,
+  "target_finding_id": 2407,
+  "target_author": "agy-4",
+  "target_commit": "8780f81",
+  "verdict": "replicated (refuting bounce decay) & refuted (5-frame stagnation is tracker artifact)",
+  "summary": {
+    "core_negative_finding_status": "replicated",
+    "seam_stagnation_claim_status": "refuted (tracker area threshold failure)",
+    "scout1_vae_latent_stall_status": "refuted (ball moves continuously across frames 0-5 with v_y in [+8, +2, -4, -8, -8] px/f)"
+  },
+  "kinematics": {
+    "chained_185f": {
+      "total_frames": 185,
+      "impact_count": 25,
+      "mean_cycle_frames": 6.666666666666667,
+      "mean_cycle_seconds": 0.2777777777777778,
+      "apex_height_restitution_mean_e_h": 1.346202971858682,
+      "settled_at_rest": false,
+      "impact_frames": [
+        8,
+        12,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45,
+        49,
+        56,
+        61,
+        67,
+        71,
+        75,
+        81,
+        86,
+        90,
+        94,
+        106,
+        111,
+        122,
+        153,
+        168
+      ],
+      "apex_frames": [
+        10,
+        15,
+        19,
+        27,
+        31,
+        35,
+        42,
+        47,
+        54,
+        60,
+        66,
+        74,
+        80,
+        88,
+        92,
+        105,
+        109,
+        138,
+        143,
+        167
+      ]
+    },
+    "single_long_control_189f": {
+      "total_frames": 189,
+      "impact_count": 23,
+      "mean_cycle_frames": 8.136363636363637,
+      "mean_cycle_seconds": 0.33901515151515155,
+      "apex_height_restitution_mean_e_h": 1.0069106367928635,
+      "settled_at_rest": false,
+      "impact_frames": [
+        6,
+        15,
+        23,
+        33,
+        44,
+        54,
+        62,
+        68,
+        72,
+        82,
+        89,
+        97,
+        107,
+        116,
+        121,
+        126,
+        136,
+        146,
+        150,
+        155,
+        165,
+        174,
+        185
+      ],
+      "apex_frames": [
+        11,
+        19,
+        28,
+        39,
+        49,
+        58,
+        67,
+        77,
+        86,
+        94,
+        103,
+        109,
+        113,
+        120,
+        129,
+        142,
+        148,
+        159,
+        170,
+        180
+      ]
+    }
+  },
+  "seam_kinematics": [
+    {
+      "source": "seg1",
+      "local_frame": 85,
+      "chained_frame": 85,
+      "x": 297.81878209831257,
+      "y": 345.7732942039619,
+      "v_y": 0.3927655192719044
+    },
+    {
+      "source": "seg1",
+      "local_frame": 86,
+      "chained_frame": 86,
+      "x": 297.353969410051,
+      "y": 346.1660597232338,
+      "v_y": -6.030924588098685
+    },
+    {
+      "source": "seg1",
+      "local_frame": 87,
+      "chained_frame": 87,
+      "x": 299.3564189189189,
+      "y": 340.1351351351351,
+      "v_y": -13.446189119710937
+    },
+    {
+      "source": "seg1",
+      "local_frame": 88,
+      "chained_frame": 88,
+      "x": 301.1979434447301,
+      "y": 326.68894601542416,
+      "v_y": -7.250210837558541
+    },
+    {
+      "source": "seg1",
+      "local_frame": 89,
+      "chained_frame": 89,
+      "x": 303.3794466403162,
+      "y": 319.4387351778656,
+      "v_y": 2.463791897946635
+    },
+    {
+      "source": "seg1",
+      "local_frame": 90,
+      "chained_frame": 90,
+      "x": 303.32129963898916,
+      "y": 321.90252707581226,
+      "v_y": 10.444362876340847
+    },
+    {
+      "source": "seg1",
+      "local_frame": 91,
+      "chained_frame": 91,
+      "x": 303.03588516746413,
+      "y": 332.3468899521531,
+      "v_y": -10.354270025953838
+    },
+    {
+      "source": "seg1",
+      "local_frame": 92,
+      "chained_frame": 92,
+      "x": 296.50553505535055,
+      "y": 321.99261992619927,
+      "v_y": 0.23626484731641995
+    },
+    {
+      "source": "seg2",
+      "local_frame": 0,
+      "chained_frame": 92,
+      "x": 300.4780835881753,
+      "y": 346.4362895005097,
+      "v_y": 0.23626484731641995
+    },
+    {
+      "source": "seg2",
+      "local_frame": 1,
+      "chained_frame": 93,
+      "x": 299.82880434782606,
+      "y": 346.6725543478261,
+      "v_y": 0.9916498160422407
+    },
+    {
+      "source": "seg2",
+      "local_frame": 2,
+      "chained_frame": 94,
+      "x": 300.0839489590329,
+      "y": 347.66420416386836,
+      "v_y": -2.5387916226142124
+    },
+    {
+      "source": "seg2",
+      "local_frame": 3,
+      "chained_frame": 95,
+      "x": 299.6178217821782,
+      "y": 345.12541254125415,
+      "v_y": 1.7148778398710647
+    },
+    {
+      "source": "seg2",
+      "local_frame": 4,
+      "chained_frame": 96,
+      "x": 301.01179673321235,
+      "y": 346.8402903811252,
+      "v_y": -15.515290381125226
+    },
+    {
+      "source": "seg2",
+      "local_frame": 5,
+      "chained_frame": 97,
+      "x": 304.90666666666664,
+      "y": 331.325,
+      "v_y": -9.299299065420541
+    },
+    {
+      "source": "seg2",
+      "local_frame": 6,
+      "chained_frame": 98,
+      "x": 306.70093457943926,
+      "y": 322.02570093457945,
+      "v_y": -11.10458134170409
+    },
+    {
+      "source": "seg2",
+      "local_frame": 7,
+      "chained_frame": 99,
+      "x": 307.4732824427481,
+      "y": 310.92111959287536,
+      "v_y": -8.687690198062683
+    },
+    {
+      "source": "seg2",
+      "local_frame": 8,
+      "chained_frame": 100,
+      "x": 307.835734870317,
+      "y": 302.2334293948127,
+      "v_y": -6.648751975457799
+    },
+    {
+      "source": "seg2",
+      "local_frame": 9,
+      "chained_frame": 101,
+      "x": 306.6491935483871,
+      "y": 295.5846774193549,
+      "v_y": -3.91211104767342
+    },
+    {
+      "source": "seg2",
+      "local_frame": 10,
+      "chained_frame": 102,
+      "x": 304.20353982300884,
+      "y": 291.67256637168146,
+      "v_y": 0.019741320626224024
+    },
+    {
+      "source": "seg2",
+      "local_frame": 11,
+      "chained_frame": 103,
+      "x": 293.53846153846155,
+      "y": 291.6923076923077,
+      "v_y": -24.256738739783202
+    },
+    {
+      "source": "seg2",
+      "local_frame": 12,
+      "chained_frame": 104,
+      "x": 298.4431047475509,
+      "y": 267.4355689525245,
+      "v_y": -3.3064627645947553
+    },
+    {
+      "source": "seg2",
+      "local_frame": 13,
+      "chained_frame": 105,
+      "x": 297.7249809014515,
+      "y": 264.1291061879297,
+      "v_y": 9.073864109099986
+    },
+    {
+      "source": "seg2",
+      "local_frame": 14,
+      "chained_frame": 106,
+      "x": 298.957095709571,
+      "y": 273.2029702970297,
+      "v_y": -0.9982919344566312
+    },
+    {
+      "source": "seg2",
+      "local_frame": 15,
+      "chained_frame": 107,
+      "x": 298.52826510721246,
+      "y": 272.2046783625731,
+      "v_y": 0.0
+    }
+  ],
+  "tracker_bug_diagnosis": [
+    {
+      "frame": 0,
+      "true_bg_pos": [
+        300.4780835881753,
+        346.4362895005097
+      ],
+      "total_components": 64,
+      "passed_filter_count": 0,
+      "passed_components": [],
+      "tracker_returned_missing": true,
+      "tracker_reported_coord": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 1,
+      "true_bg_pos": [
+        299.82880434782606,
+        346.6725543478261
+      ],
+      "total_components": 65,
+      "passed_filter_count": 0,
+      "passed_components": [],
+      "tracker_returned_missing": true,
+      "tracker_reported_coord": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 2,
+      "true_bg_pos": [
+        300.0839489590329,
+        347.66420416386836
+      ],
+      "total_components": 59,
+      "passed_filter_count": 0,
+      "passed_components": [],
+      "tracker_returned_missing": true,
+      "tracker_reported_coord": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 3,
+      "true_bg_pos": [
+        299.6178217821782,
+        345.12541254125415
+      ],
+      "total_components": 63,
+      "passed_filter_count": 0,
+      "passed_components": [],
+      "tracker_returned_missing": true,
+      "tracker_reported_coord": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 4,
+      "true_bg_pos": [
+        301.01179673321235,
+        346.8402903811252
+      ],
+      "total_components": 58,
+      "passed_filter_count": 0,
+      "passed_components": [],
+      "tracker_returned_missing": true,
+      "tracker_reported_coord": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 5,
+      "true_bg_pos": [
+        304.90666666666664,
+        331.325
+      ],
+      "total_components": 54,
+      "passed_filter_count": 2,
+      "passed_components": [
+        {
+          "area": 275,
+          "gx": 299.8872727272727,
+          "gy": 395.98545454545456
+        },
+        {
+          "area": 101,
+          "gx": 343.7920792079208,
+          "gy": 407.7524752475247
+        }
+      ],
+      "tracker_returned_missing": false,
+      "tracker_reported_coord": [
+        299.8872727272727,
+        395.98545454545456
+      ]
+    },
+    {
+      "frame": 6,
+      "true_bg_pos": [
+        306.70093457943926,
+        322.02570093457945
+      ],
+      "total_components": 66,
+      "passed_filter_count": 2,
+      "passed_components": [
+        {
+          "area": 77,
+          "gx": 302.4025974025974,
+          "gy": 397.5974025974026
+        },
+        {
+          "area": 96,
+          "gx": 343.3541666666667,
+          "gy": 407.9270833333333
+        }
+      ],
+      "tracker_returned_missing": false,
+      "tracker_reported_coord": [
+        302.4025974025974,
+        397.5974025974026
+      ]
+    },
+    {
+      "frame": 7,
+      "true_bg_pos": [
+        307.4732824427481,
+        310.92111959287536
+      ],
+      "total_components": 66,
+      "passed_filter_count": 1,
+      "passed_components": [
+        {
+          "area": 122,
+          "gx": 342.11475409836066,
+          "gy": 408.2704918032787
+        }
+      ],
+      "tracker_returned_missing": false,
+      "tracker_reported_coord": [
+        342.11475409836066,
+        408.2704918032787
+      ]
+    }
+  ],
+  "scoreboard_deltas": {
+    "dover_fused": {
+      "chained": 0.5398,
+      "control": 0.537,
+      "delta": 0.0028,
+      "verdict": "within seed noise"
+    },
+    "dynamic_degree_norm": {
+      "chained": 1.1621,
+      "control": 1.4185,
+      "delta": -0.2564,
+      "verdict": "both dd_binary = 0"
+    }
+  }
+}
