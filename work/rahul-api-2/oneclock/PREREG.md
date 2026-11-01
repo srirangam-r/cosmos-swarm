@@ -51,3 +51,12 @@ QC codes are still frozen from strips before ratios. All included clips will be 
 Tool changes since the PREREG (before any ball2 clip and before s25-30 ratios): track2 v2 (two-half median background) and
 plateau-aware impacts, made to fix planted failures; planted_est v3 scale. Referee PASS 12/12 (<5%) at 883ab21 (#9e0f834 record).
 Real GAUGE reference under v2: rho1 1.012/0.936/1.236/1.168 (mean 1.088 ± 0.065 SE, n=4).
+
+## Amendment 2 (2026-11-01 ~11:12 UTC, before fetching ball2 s23-30 and all of s31-50)
+Seen: on ball2 s21, track2 lost the ball at the f9 impact (stuck on a static blob at y~396, f10-21) while firstfall.track
+followed the flight (apex ~f15). Rule from now on, for every included clip:
+- run both trackers (t2 = track2 v2, ff = firstfall.track) through the same oneclock segmentation;
+- a segment (fall, flight 1) is VALID for a tracker if a > 0, rms < 5 px and >= 5 frames;
+- primary rho1 = mean of the two trackers when both are valid and their median |y_t2 - y_ff| over the segment frames is < 4 px;
+  if only one tracker is valid, use it and flag `single_tracker`; if neither, the clip is `untracked` (reported, not used).
+- Already-ratioed clips (ball1 s21, s23; ball2 s21) are re-scored with this rule and listed as "seen before amendment 2".
