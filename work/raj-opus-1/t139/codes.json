@@ -144,6 +144,61 @@
   "holder_back": 0,
   "reentry": 1,
   "any_fall": 1,
-  "note": "frame-0 ball stays floating at its position f0-f92 with NOTHING holding it; large second ball enters from top f6, falls to plank f6-14, bounces/rests; no gripper"
+  "note": "frame-0 ball stays floating at its position f0-f92 with NOTHING holding it; large second ball enters from top f6, falls to plank f6-14, bounces/rests; no gripper (zoom.py: small ball at frame-0 position in every sampled frame f0-f92)"
+ },
+ "t139_A_ball2_s3": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball VANISHES f1 (absent f1-8); ball enters from top f9, falls f9-13 to plank; settles on plank; no robot (same branch as A ball1 s3)"
+ },
+ "t139_G_ball2_s3": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "frame-0 ball holds still f0-4; a much larger ball enters from top f5 and sweeps through its position at f8 (replacement), falls to plank and bounces; frame-0 ball gone after f8; no gripper (zoom.py checked)"
+ },
+ "t139_O_ball1_s4": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball stays in the jaws f0-f92; giant red/black ball enters from left f6-8 and bounces wildly, later black balls bounce; clone"
+ },
+ "t139_A_ball1_s4": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f4 to far table edge; bounces back high (f8-17 near top); no robot"
+ },
+ "t139_G_ball1_s4": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 1,
+  "any_fall": 1,
+  "morph": 1,
+  "note": "frame-0 ball MORPHS (elongates, grows ~3-4x) while descending f1-f6 to plank (counted as fall: continuous, from f0 position); gripper re-appears at top f13 and drops a ball f13-16"
+ },
+ "t139_O_ball2_s4": {
+  "fall": 0,
+  "jump": 1,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "note": "ball in jaws f0-6; at f7-8 the plank tilts up and a ball appears ON the plank with no intermediate heights (jump; unclear whether the jaws still hold one, so clone=0); arm descends to the ball f12-25; ball stays on plank"
  }
 }
