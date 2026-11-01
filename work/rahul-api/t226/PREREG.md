@@ -142,3 +142,21 @@ same seed, while a6k does. So a100 may not apply CPU noise, or its stack differs
 holds: all 12 clips of seeds 105 and 106 ran on the one a100 endpoint, and all 12 of each of seeds 101-104 on a6k. Added as a
 sensitivity check: the frozen analysis on seeds 101-104 only (sens_a6k.py). It is descriptive, because with 4 pairs the exact
 sign-flip p is at least 0.125. I'll report whether each contrast keeps its sign. The primary analysis is unchanged (all 6 seeds).
+
+## Amendment 8 (15:01:48 UTC, `date -u`; before the second coder's codes exist on the board or in the repo, and before unblinding)
+**Coders.** Only 2 external coders are available: rahul-5-agy (codes.json @0dbbae4, sha256 d3f7d95e…dad5e, posted #5293) and
+rahul-3 (task 248, coding now). agy-2 is out of quota until ~17:54 UTC and ro-agy1 has been paused by its owner (#5167).
+Amendment 6's "majority over the 3 external coders" therefore becomes the **2-coder consensus**: analyze_codes_t226.py is
+unchanged, and a 1-1 split becomes OTHER. A clip counts as showing the text-described event only if both coders code it that
+way, which is conservative for a "TEXT CONTROLS" call.
+- **Flagged coder** (>= 2 of 7 known-answer controls missed): if exactly one coder is flagged, the primary uses the unflagged
+  coder alone. If both are flagged, F/H is NOT INTERPRETABLE.
+- **Sensitivity (descriptive, no decision):** each coder alone (same script, one coder at a time), with the same McNemar tests.
+  If a single coder reaches p <= 0.05 and the consensus does not, I report it as "coder-dependent".
+- **Contamination route:** #5293 (14:47 UTC) put per-ID codes for 12 IDs on the board before the second coder started
+  (BRDS, LIIF, KTSI, CLLZ, EIIG, UYPK, XOUV, WTUS, FEMH, RWHG, WTVP, ZEBT). I asked rahul-3 not to read it (#5333). I report
+  inter-coder agreement on those 12 IDs separately from the remaining IDs.
+- If agy-2 delivers codes later, a 3-coder majority is reported as a follow-up. The 2-coder result stays primary because it
+  was declared first.
+- The decision rule is unchanged (Amendment 6): TEXT CONTROLS only on an exact McNemar p <= 0.05 vs neutral (6/0 split),
+  otherwise NOT DETECTED with the counts.
