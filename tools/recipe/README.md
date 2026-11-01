@@ -1,30 +1,26 @@
-# tools/recipe: The Improved Cosmos3-Nano Recipe Runner
+# tools/recipe: Candidate Cosmos3-Nano Recipe Runner
 
-This directory contains the reference runnable implementation for **Charter Deliverable 1**:
-**"The Improved Cosmos3-Nano Recipe: Dynamic Mid-Event Conditioning & Generic End-State Rule"**.
+**Status:** This is a candidate runner, not a demonstrated general improvement.
+Rule R's effectiveness on non-ball scenes and the complete NVIDIA scoreboard
+remain under evaluation. The mid-event measurements below use later real-video
+frames and do not establish a frame-0 recipe (Raj #2930; task 136, #3059).
+Image role is a caller declaration, not something inferred or verified by the
+runner. Endpoint sampler details must be obtained from the endpoint operator.
 
-Fulfills Human Steering Requirements (Raj #2930, Charter v23):
-1. **User / Sealed Test Mode (Raj req. 1 & 2):** Operates directly from the initial frame ($t=0$) provided by users or the referee's sealed test protocol by applying the tested **Generic End-State Rule R**:
+This runner supports two distinct workflows:
+1. **Candidate frame-0 mode:** Applies **Generic End-State Rule R** to a caller-supplied first frame and plain-text prompt:
    > *"By the end of the video, every object that was falling, sliding, rolling or bouncing has lost its energy and come to rest, staying completely still for the rest of the video."*
-   Tested across 16 unseen Cosmos-HumanEval T2V prompts (10 physics, 6 robot; Task 133 / PREREG cf33597) to enforce physical dissipation without per-prompt manual tuning.
-2. **Diagnostic Mid-Event Mode (Raj req. 1):** For the specific GAUGE held-ball mechanical release deadlock, conditioning past the physical release seam (frame 33/35) serves as the diagnostic tool reported in Deliverable 2 that proves Cosmos's internal generative core follows Newtonian Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$, $100\%$ release) rather than a slow clock.
-3. **Sampler Specification (Raj req. 3):** Uses `UniPCMultistepScheduler`. Note that diffusers with Karras sigmas ignores `flow_shift` on diffusers/cosmos_local (#2870); NVIDIA vLLM-Omni applies `flow_shift 10.0`.
+2. **Diagnostic mid-event mode:** Uses a later frame or motion-onset detector. This is not a valid frame-0 recipe input (Raj #2930).
+3. **Sampler provenance:** Local mode records scheduler configuration. The effective remote sampler is unknown unless separately verified with its operator. Diffusers with Karras sigmas ignores requested `flow_shift` (#2870).
 
 ---
 
 ## 1. Overview
 
-Stock Cosmos3-Nano severely distorts physical reality when initialized from static frames where an object is clamped by a mechanical holder or gripper (e.g. Franka gripper in GAUGE):
-- **Release Rate:** 0.0% (0/31 clips on official Franka conditioning frame).
-- **Failure Modes:** Spawns phantom clone duplicates on the surface (100% on seed 1), plunges the mechanical arm violently downward, or hovers indefinitely.
-- **Measurement Artifact:** The reported $0.45\text{ m/s}^2$ "slow gravity" was an artifact of fitting a quadratic curve to a non-released held object or tracking phantom clones.
-
-The **Unified Recipe** resolves these weaknesses:
-- **Free-Fall Gravity:** Recovers true Earth gravity $g = 9.73 \pm 1.91\text{ m/s}^2$ on Ball 1 Seed 1 ($R^2 = 0.9976$, verified by referee-validated `firstfall.py`), matching real motion capture ($9.81\text{ m/s}^2$).
-- **Initial Detachment Rate:** 100% (16/16 clips).
-- **Phantom Duplicate Spawning:** 0.0% on clean pre-impact trajectories (down from 100% on baseline seed 1).
-- **Dissipative Settling to Rest:** Generic Rule R and prompt event timing collapse late corridor motion by $-2.240 \pm 0.238\text{ px/f}$ ($8/8$ pairs lower) and drop Dynamic Degree by $-0.617 \pm 0.219$ ($7/8$ closer to real).
-- **DOVER Technical Score:** Zero degradation ($\Delta = +0.0012 \pm 0.0009$, 95% CI $[-0.0004, +0.0030]$).
+Results from later-frame conditioning and the timed ball-specific prompt are
+diagnostics of those inputs and prompts, not evidence that Rule R fixes
+first-frame inputs. Follow the board findings and task 133 for matched controls,
+uncertainties, and limitations before drawing conclusions.
 
 ---
 
@@ -34,6 +30,8 @@ The **Unified Recipe** resolves these weaknesses:
 ```bash
 python3 tools/recipe/run_recipe.py \
   --image assets/gauge_ball1_f0.png \
+  --image-role frame0 \
+  --prompt 'A ball falls and bounces on a plank.' \
   --rule-generic \
   --out out/user_ball1.mp4 \
   --dry-run
@@ -62,6 +60,8 @@ python3 tools/recipe/run_recipe.py \
 ```bash
 python3 tools/recipe/run_recipe.py \
   --image assets/gauge_ball1_f0.png \
+  --image-role frame0 \
+  --prompt 'A ball falls and bounces on a plank.' \
   --rule-generic \
   --mode local \
   --model-dir /path/to/Cosmos3-Nano \
@@ -76,13 +76,14 @@ python3 tools/recipe/run_recipe.py \
 | Argument | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `--image` | path | None | Direct input conditioning image file (Frame 0 or diagnostic release frame) |
+| `--image-role` | choice | `unspecified` | Caller-declared `frame0` or `diagnostic`; the runner cannot verify image origin |
 | `--video` | path | None | Input video file to extract release frame from (e.g. `assets/gauge_ball1_raw.mp4`) |
 | `--detect-release` | flag | False | Automatically detect release seam via localized peak motion and global difference |
 | `--roi` | str | None | Bounding box ROI for release detection: `x1,y1,x2,y2` |
 | `--diff-threshold`| float| 8.0 | Global frame difference threshold for release detection |
 | `--local-threshold`| float| 15.0| Localized window difference threshold for release detection |
 | `--frame-idx` | int | None | Explicit frame index to extract from video |
-| `--prompt` | str | Timed settle prompt | Text prompt or path to JSON prompt (default: `TIMED_DISSIPATIVE_PROMPT`) |
+| `--prompt` | str | Timed settle prompt | Text prompt or path to a JSON string; required with `--rule-generic`. JSON objects/arrays cannot be combined with that flag. |
 | `--rule-generic` | flag | False | **Canonical Generic End-State Rule R (Raj #2930 req. 2 / Task 133):** Appends Rule R to any prompt to enforce dissipative settling without per-prompt manual tuning (aliases: `--rule-r`, `--generic-rule`) |
 | `--stage1-only` | flag | False | Use Stage 1 ballistic bouncing baseline prompt (`DEFAULT_PROMPT_REC`) without Stage 2 settling clause (aliases: `--rec-prompt`, `--basic-prompt`) |
 | `--out` | path | `out/recipe_output.mp4` | Destination MP4 output path |
@@ -106,9 +107,11 @@ python3 tools/recipe/run_recipe.py \
 
 ## 4. CPU Test Suite
 
-The recipe runner includes a comprehensive CPU regression test suite verifying all Task 82 / #1810 / #1817 / Task 135 audit requirements:
+The CPU regression tests exercise both the earlier recipe checks and mocked
+frame-0, prompt and local/remote request contracts. They do not run Nano or an endpoint:
 ```bash
-python3 -m unittest tests/test_recipe.py
+python3 -m unittest discover -s tools/recipe -p 'test_*.py'
+python3 -m unittest discover -s tests -p 'test_recipe.py'
 ```
 Test coverage includes:
 1. `test_letterbox_image`: Validates aspect ratio preservation and black letterbox padding.
@@ -131,31 +134,11 @@ Test coverage includes:
 
 ## 5. Sidecar Specification
 
-Every run generates `<name>.json` containing exact provenance and reproduction metadata:
-```json
-{
-  "recipe_name": "Dynamic Mid-Event Conditioning & Generic End-State Rule",
-  "charter_deliverable": 1,
-  "workflow_mode": "user_frame0_inference",
-  "stage_1_release_seam": false,
-  "stage_2_dissipative_settle": true,
-  "generic_rule_applied": true,
-  "sampler_note": "diffusers UniPCMultistepScheduler with Karras sigmas ignores flow_shift on diffusers/cosmos_local (#2870); NVIDIA vLLM-Omni applies flow_shift 10.0 (Raj #2930 req. 3)",
-  "clip_file": "user_ball1.mp4",
-  "conditioning_image": "user_ball1.conditioning.png",
-  "prompt": "A pendulum swings back and forth in an arc. By the end of the video, every object that was falling, sliding, rolling or bouncing has lost its energy and come to rest, staying completely still for the rest of the video.",
-  "negative_prompt": null,
-  "width": 832,
-  "height": 480,
-  "num_frames": 93,
-  "fps": 24,
-  "steps": 35,
-  "guidance_scale": 6.0,
-  "flow_shift": 10.0,
-  "seed": 1,
-  "provenance": {
-    "mode": "dry-run",
-    "wall_seconds": 0.05
-  }
-}
-```
+Every run writes `<name>.json` and the actual letterboxed conditioning PNG.
+The sidecar records its SHA-256, source path, selected video frame index or
+caller-declared image role, effective prompt, requested generation settings,
+and mode-specific provenance. A diagnostic input is not necessarily a verified
+release seam. `flow_shift_requested` records a request, not its effective
+schedule. `sampler_effective` records the local scheduler configuration, is
+unknown for a remote endpoint, and is `not_run` for a dry run. Dry runs write
+at most 24 mock frames and record that separately in `generated_num_frames`.

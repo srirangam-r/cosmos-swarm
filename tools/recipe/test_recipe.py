@@ -419,6 +419,7 @@ class TestRecipeRunner(unittest.TestCase):
                     "--out", str(out_video),
                     "--dry-run",
                     flag,
+                    "--image-role", "frame0",
                     "--prompt", custom_prompt,
                 ]
 
@@ -445,7 +446,7 @@ class TestRecipeRunner(unittest.TestCase):
             img_frame0 = Path(tmpdir) / "input_frame0.png"
             cv2.imwrite(str(img_frame0), np.full((480, 832, 3), 128, dtype=np.uint8))
             out_user = Path(tmpdir) / "out_user.mp4"
-            args_user = ["run_recipe.py", "--image", str(img_frame0), "--out", str(out_user), "--dry-run"]
+            args_user = ["run_recipe.py", "--image", str(img_frame0), "--image-role", "frame0", "--out", str(out_user), "--dry-run"]
             with mock.patch.object(sys, "argv", args_user), contextlib.redirect_stdout(io.StringIO()):
                 run_recipe.main()
 
@@ -458,14 +459,14 @@ class TestRecipeRunner(unittest.TestCase):
             img_midfall = Path(tmpdir) / "gauge_ball1_midfall.png"
             cv2.imwrite(str(img_midfall), np.full((480, 832, 3), 128, dtype=np.uint8))
             out_diag = Path(tmpdir) / "out_diag.mp4"
-            args_diag = ["run_recipe.py", "--image", str(img_midfall), "--out", str(out_diag), "--dry-run"]
+            args_diag = ["run_recipe.py", "--image", str(img_midfall), "--image-role", "diagnostic", "--out", str(out_diag), "--dry-run"]
             with mock.patch.object(sys, "argv", args_diag), contextlib.redirect_stdout(io.StringIO()):
                 run_recipe.main()
 
             with open(out_diag.with_suffix(".json")) as f:
                 sidecar_diag = json.load(f)
             self.assertEqual(sidecar_diag["workflow_mode"], "diagnostic_mid_event_conditioning")
-            self.assertTrue(sidecar_diag["stage_1_release_seam"])
+            self.assertIsNone(sidecar_diag["stage_1_release_seam"])
 
 
 if __name__ == "__main__":

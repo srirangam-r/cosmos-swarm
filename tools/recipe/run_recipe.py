@@ -1,24 +1,17 @@
 #!/usr/bin/env python3
 """
-tools/recipe/run_recipe.py: The Improved Cosmos3-Nano Recipe Runner
+tools/recipe/run_recipe.py: Candidate Cosmos3-Nano recipe runner.
 
-Implements the Swarm Deliverable 1 Recipe:
-"Dynamic Mid-Event Conditioning & Generic End-State Rule" for NVIDIA Cosmos3-Nano.
-
-Fulfills Human Steering Requirements (Raj #2930, Charter v23):
-1. User / Sealed Test Mode: Runs from frame 0 (t=0) and arbitrary prompts by appending
-   the tested Generic End-State Rule R ("By the end of the video, every object that was falling,
-   sliding, rolling or bouncing has lost its energy and come to rest, staying completely still
-   for the rest of the video.") without per-prompt manual tuning (Task 133 / PREREG cf33597).
-2. Diagnostic Mid-Event Mode: Isolates the physics of the DiT generative core by conditioning
-   past the static-gripper grasping deadlock (frame 33/35), recovering true Earth gravitational
-   acceleration (g = 9.82 ± 0.35 m/s^2), 100% genuine release, and 0% phantom duplicates.
-3. Sampler Specification: Uses UniPCMultistepScheduler. Note that diffusers with Karras sigmas
-   ignores flow_shift on diffusers/cosmos_local (#2870); NVIDIA vLLM-Omni applies flow_shift 10.0.
+The frame-0 path appends Rule R to an explicit plain-text prompt; image origin
+is declared by the caller and cannot be verified. Release-frame extraction and
+later-frame inputs are diagnostics, not part of the frame-0 recipe. A general
+improvement and full NVIDIA non-regression have not been established. Local
+Diffusers with Karras sigmas ignores flow_shift (#2870); the remote endpoint's
+actual sampler must be verified separately.
 
 Usage Examples:
   # 1. Primary User / Sealed Test mode from Frame 0 with Generic Rule R:
-  python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_f0.png --rule-generic --out out/user_ball1.mp4 --dry-run
+  python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_f0.png --image-role frame0 --prompt 'A ball falls and bounces.' --rule-generic --out out/user_ball1.mp4 --dry-run
 
   # 2. Diagnostic Mid-Event mode from post-release frame:
   python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_midfall.png --out out/recipe_ball1.mp4 --url http://127.0.0.1:8021
@@ -33,6 +26,7 @@ Usage Examples:
 import os
 import sys
 import json
+import hashlib
 import time
 import argparse
 from pathlib import Path
@@ -177,7 +171,7 @@ def run_inference_endpoint(
         "guidance_scale": str(guidance),
         "flow_shift": str(flow_shift),
         "seed": str(seed),
-        "extra_params": json.dumps({"recipe": "dynamic_mid_event_conditioning", "deliverable": 1}),
+        "extra_params": json.dumps({"recipe": "cosmos_recipe_runner", "deliverable": 1}),
     }
     files = {"input_reference": ("input_conditioning.png", image_bytes, "image/png")}
 
@@ -295,7 +289,16 @@ def run_inference_local(
             v_arr = (np.clip(v_arr, 0, 1) * 255).round().astype(np.uint8)
         frames = [Image.fromarray(v_arr[i]) for i in range(len(v_arr))]
 
-    return frames, {"wall_seconds": round(wall_sec, 2)}
+    scheduler_config = dict(pipe.scheduler.config)
+    return frames, {
+        "wall_seconds": round(wall_sec, 2),
+        "sampler_effective": {
+            "scheduler": type(pipe.scheduler).__name__,
+            "use_karras_sigmas": scheduler_config.get("use_karras_sigmas"),
+            "use_flow_sigmas": scheduler_config.get("use_flow_sigmas"),
+            "flow_shift_config": scheduler_config.get("flow_shift"),
+        },
+    }
 
 
 def verify_with_firstfall(mp4_path: str, fps: int = 24, ppm: float = 539.8, point: str | None = None) -> dict:
@@ -336,12 +339,15 @@ def main():
     group.add_argument("--image", help="Path to input conditioning image (e.g. post-release frame)")
     group.add_argument("--video", help="Path to raw video clip for automated release detection")
 
-    parser.add_argument("--detect-release", action="store_true", help="Automatically detect release frame from video")
-    parser.add_argument("--frame-idx", type=int, default=None, help="Explicit frame index to extract from video")
+    extraction = parser.add_mutually_exclusive_group()
+    extraction.add_argument("--detect-release", action="store_true", help="Automatically detect release frame from video")
+    extraction.add_argument("--frame-idx", type=int, default=None, help="Explicit frame index to extract from video")
+    parser.add_argument("--image-role", choices=["frame0", "diagnostic", "unspecified"], default="unspecified",
+                        help="Caller-declared role of --image; the runner cannot infer its origin from its filename")
     parser.add_argument("--roi", default=None, help="Bounding box ROI for release detection: x1,y1,x2,y2")
     parser.add_argument("--diff-threshold", type=float, default=8.0, help="Global motion threshold for release detection")
     parser.add_argument("--local-threshold", type=float, default=15.0, help="Localized peak motion threshold for release detection")
-    parser.add_argument("--prompt", default=DEFAULT_PROMPT_TIMED, help="Prompt text or path to JSON prompt (default: timed-settling prompt resolving bounce decay)")
+    parser.add_argument("--prompt", default=None, help="Prompt text or path to JSON prompt (required with --rule-generic)")
     parser.add_argument(
         "--basic-prompt",
         "--stage1-only",
@@ -385,6 +391,18 @@ def main():
     )
 
     args = parser.parse_args()
+    if args.rule_generic and (args.prompt is None or not args.prompt.strip()):
+        parser.error("--rule-generic requires an explicit, non-empty --prompt")
+    if args.rule_generic and (args.basic_prompt or args.settle):
+        parser.error("--rule-generic cannot be combined with --basic-prompt or --settle, which replace the prompt")
+    if args.image and (args.detect_release or args.frame_idx is not None):
+        parser.error("--detect-release and --frame-idx require --video")
+    if args.video and args.image_role != "unspecified":
+        parser.error("--image-role applies only to --image")
+    if args.frame_idx is not None and args.frame_idx < 0:
+        parser.error("--frame-idx must be non-negative")
+    if args.prompt is None:
+        args.prompt = DEFAULT_PROMPT_TIMED
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -432,7 +450,7 @@ def main():
 
     # Save conditioning frame alongside output for full reproducibility
     cond_frame_path = out_path.with_suffix(".conditioning.png")
-    cv2.imwrite(str(cond_frame_path), processed_img)
+    cond_frame_path.write_bytes(img_bytes)
     print(f"[input] Saved letterboxed conditioning frame to {cond_frame_path}")
 
     # Load prompt if JSON file or basic prompt flag
@@ -452,11 +470,21 @@ def main():
     if prompt_str.endswith(".json") and os.path.exists(prompt_str):
         with open(prompt_str) as f:
             data = json.load(f)
+            if args.rule_generic and isinstance(data, (dict, list)):
+                parser.error("--rule-generic requires plain text or a JSON string, not a JSON object or array")
             prompt_str = json.dumps(data) if isinstance(data, (dict, list)) else str(data)
 
     if args.rule_generic:
+        if not prompt_str.strip():
+            parser.error("--rule-generic requires a non-empty resolved prompt")
+        try:
+            structured_prompt = json.loads(prompt_str)
+        except json.JSONDecodeError:
+            structured_prompt = None
+        if isinstance(structured_prompt, (dict, list)):
+            parser.error("--rule-generic requires plain text, not a JSON object or array")
         if GENERIC_END_STATE_RULE.strip() not in prompt_str:
-            prompt_str = prompt_str.rstrip() + (" " if not prompt_str.endswith(" ") else "") + GENERIC_END_STATE_RULE.strip()
+            prompt_str = prompt_str.rstrip() + " " + GENERIC_END_STATE_RULE.strip()
             print("[prompt] Applied canonical generic end-state rule R (Raj #2930 req. 2, Task 133 / PREREG cf33597)")
 
     # 2. Run inference
@@ -475,7 +503,7 @@ def main():
         sidecar_meta = {
             "mode": "dry-run",
             "wall_seconds": 0.05,
-            "note": "Dry run executed successfully. Verified conditioning frame, letterboxing, payload dictionary, and CLI parameters.",
+            "note": "Dry run generated a mock clip; no inference request was sent.",
         }
     elif args.mode == "endpoint":
         video_bytes, sidecar_meta = run_inference_endpoint(
@@ -515,10 +543,20 @@ def main():
     print(f"[output] Successfully wrote generated video: {out_path} ({out_path.stat().st_size / 1e6:.2f} MB)")
 
     # 3. Create JSON sidecar with exact recipe parameters and provenance
-    is_diagnostic_mid_event = bool(
-        args.detect_release or (args.image and ("midfall" in str(args.image) or "release" in str(args.image)))
-    )
-    workflow_mode = "diagnostic_mid_event_conditioning" if is_diagnostic_mid_event else "user_frame0_inference"
+    is_diagnostic_mid_event = bool(args.detect_release or (args.video and args.frame_idx != 0) or args.image_role == "diagnostic")
+    if is_diagnostic_mid_event:
+        workflow_mode = "diagnostic_mid_event_conditioning"
+    elif args.video or args.image_role == "frame0":
+        workflow_mode = "user_frame0_inference"
+    else:
+        workflow_mode = "provided_image_origin_unspecified"
+
+    if args.dry_run:
+        sampler_effective = {"status": "not_run"}
+    elif args.mode == "local":
+        sampler_effective = sidecar_meta.get("sampler_effective", {"status": "unknown"})
+    else:
+        sampler_effective = {"status": "unknown_remote_endpoint", "endpoint": args.url}
 
     is_stage_2 = bool(
         not args.basic_prompt
@@ -535,21 +573,29 @@ def main():
         "recipe_name": "Dynamic Mid-Event Conditioning & Generic End-State Rule",
         "charter_deliverable": 1,
         "workflow_mode": workflow_mode,
-        "stage_1_release_seam": is_diagnostic_mid_event,
+        "stage_1_release_seam": None if is_diagnostic_mid_event else False,
+        "release_frame_detection_requested": args.detect_release,
         "stage_2_dissipative_settle": is_stage_2,
         "generic_rule_applied": bool(args.rule_generic or GENERIC_END_STATE_RULE.strip() in prompt_str),
-        "sampler_note": "diffusers UniPCMultistepScheduler with Karras sigmas ignores flow_shift on diffusers/cosmos_local (#2870); NVIDIA vLLM-Omni applies flow_shift 10.0 (Raj #2930 req. 3)",
+        "sampler_note": "Effective endpoint sampler is not inferred from the URL. Diffusers UniPC with Karras sigmas ignores requested flow_shift (#2870); vLLM-Omni may use a different schedule.",
+        "sampler_effective": sampler_effective,
         "clip_file": str(out_path.name),
         "conditioning_image": str(cond_frame_path.name),
+        "conditioning_image_sha256": hashlib.sha256(img_bytes).hexdigest(),
+        "input_source": args.image if args.image else args.video,
+        "input_frame_index": args.frame_idx if args.video and not args.detect_release else None,
+        "input_image_role_declared": args.image_role if args.image else None,
         "prompt": prompt_str,
         "negative_prompt": None,
         "width": args.width,
         "height": args.height,
         "num_frames": args.num_frames,
+        "generated_num_frames": min(args.num_frames, 24) if args.dry_run else None,
         "fps": args.fps,
         "steps": args.steps,
         "guidance_scale": args.guidance,
         "flow_shift": args.flow_shift,
+        "flow_shift_requested": args.flow_shift,
         "seed": args.seed,
         "provenance": sidecar_meta,
     }
