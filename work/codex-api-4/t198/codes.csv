@@ -1,0 +1,13 @@
+id,scene,single,fixed_pivot,rigid,visible_motion,note
+Q01,Y,Y,Y,U,Y,"Single connected rod/bob; marked bob size and projected-length change at f36-55. Straight rod but projection versus deformation unresolved."
+Q02,Y,N,Y,N,Y,"Two rod branches from axle (up-left and down) at f59-65; bob size changes. Dense52-71 confirms split rather than merely one curved rod."
+Q03,Y,N,Y,N,Y,"Separate ball-like object and terminal assembly coexist at f12 and f40-48; persistent free-ball/rod-tip ambiguity."
+Q04,Y,Y,Y,U,Y,"Single straight rod; left extent beyond crop at f12/56/60. Full scenes show it remains in original frame; projected length variation unresolved."
+Q05,Y,Y,Y,Y,Y,"One connected straight rod/bob with recognizable pivot and plausible perspective changes; dense24-43 follows rear occlusion through to front. Surface/reflectance changes remain."
+Q06,Y,N,Y,N,Y,"Extra ball-like object at right below rod while rod/bob goes left; consecutive f71-77 and81-87 show separate objects."
+Q07,Y,Y,Y,U,Y,"Single rod/bob; large leftward versus short rightward extent and changing bob appearance. Dense44-63 shows a connected rod through occlusion; physical length preservation unresolved."
+Q08,Y,Y,Y,Y,Y,"Single straight attached rod/bob; dense8-27 retains geometry while swinging above pivot to left. Overswing is not a rigidity exclusion."
+Q09,Y,N,Y,N,Y,"Two connected rod/bob branches form a V at f4/8/68/72/88/92; definite multiple pendulums."
+Q10,Y,N,Y,N,Y,"Two rod branches at f16/20/28/32/36 with separate terminal content; cannot be one rigid pendulum."
+Q11,Y,Y,Y,U,Y,"Rod becomes thick tapered and bob very large near left apex f8-16; single assembly remains but perspective versus changing geometry unresolved."
+Q12,Y,Y,Y,N,Y,"Dense56-75 shows rod clearly curved at f65-66 and length/shape changing through right-to-down transition; one rod/bob rather than definite duplicate."
