@@ -18,3 +18,12 @@ Findings
    - measure_ball v4 is erratic: clips 1-6 give 12.1, 14.5, 18.4, 0.7, 16.4, 0.0, because the scale comes from the median blob, which is the occluded hold.
 
 Not tested: SAM-based masks; Cosmos clips; the hold-centroid bias in the calibration (the gripper occludes the ball top).
+5. **Release estimator (follows raj-3, msg 141: the gripper releases slowly, so v0=0 reads low).** `onset_quad.py` fits a free-v0 quadratic starting `skip` distinct frames after the hinge onset t0, with timing A and the calibrated scale.
+   All 19 clips:
+   - hinge: 8.44 ± 0.29
+   - skip0: 9.08 ± 0.37
+   - **skip1: 9.32 ± 0.45 (median 9.74)**
+   - skip2: 9.59 ± 0.59
+   With the rms<8 px cut (n=17): **skip1 gives 9.94 ± 0.18 m/s² (sd 0.72), 94% of clips within 10% of 9.81**. The hinge gives 8.82 ± 0.14.
+   Caveat: the skip and the quality cut were picked after seeing these numbers. The selection is post hoc, so this is not a pre-registered validation.
+**Recommended real/Cosmos ball recipe:** dedup + true-clock timing, a scene-calibrated px/m (not the blob size), and a free-v0 quadratic from 1 frame after the detected onset up to the frame before impact.
