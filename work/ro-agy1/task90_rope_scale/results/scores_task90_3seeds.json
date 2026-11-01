@@ -1,0 +1,459 @@
+{
+  "gauge_b1_ctrl_s1.mp4": {
+    "clip": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_ctrl_s1.mp4",
+    "fps": 24.0,
+    "fps_source": "container",
+    "sidecar": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_ctrl_s1.json",
+    "metadata": {
+      "clip": "gauge_b1_ctrl_s1.mp4",
+      "seed": 1,
+      "early_scale": 1.0,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "wall_sec": 257.32,
+      "step_log_sample": [
+        [
+          995.0,
+          1.0
+        ],
+        [
+          995.0,
+          1.0
+        ],
+        [
+          994.0,
+          1.0
+        ],
+        [
+          994.0,
+          1.0
+        ],
+        [
+          993.0,
+          1.0
+        ],
+        [
+          993.0,
+          1.0
+        ]
+      ]
+    },
+    "dd_binary": 1,
+    "dd_norm": 5.491348039309184,
+    "dd_frac": 0.4,
+    "dd_pairs": 30,
+    "dd_interval": 3,
+    "dd_thres_px": 11.25,
+    "dd_count_num": 8,
+    "dd_maxrad": [
+      2.955,
+      9.617,
+      14.37,
+      14.614,
+      6.71,
+      4.747,
+      16.923,
+      23.553,
+      23.632,
+      10.196,
+      10.198,
+      13.31,
+      8.54,
+      6.687,
+      16.168,
+      20.589,
+      17.439,
+      17.003,
+      20.555,
+      15.602,
+      11.091,
+      8.803,
+      6.756,
+      4.153,
+      1.464,
+      0.262,
+      0.266,
+      0.225,
+      0.208,
+      2.252
+    ],
+    "dover_technical": -0.06482361629605293,
+    "dover_aesthetic": 0.03709870204329491,
+    "dover_fused": 0.44562003586026155,
+    "dover_fused_sd": 0.008821440272689711,
+    "dover_technical_sd": 0.004299381569936497,
+    "dover_aesthetic_sd": 0.0,
+    "dover_reps": 3,
+    "sec": 12.3
+  },
+  "gauge_b1_ctrl_s2.mp4": {
+    "clip": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_ctrl_s2.mp4",
+    "fps": 24.0,
+    "fps_source": "container",
+    "sidecar": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_ctrl_s2.json",
+    "metadata": {
+      "clip": "gauge_b1_ctrl_s2.mp4",
+      "seed": 2,
+      "early_scale": 1.0,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "wall_sec": 255.58,
+      "step_log_sample": [
+        [
+          995.0,
+          1.0
+        ],
+        [
+          995.0,
+          1.0
+        ],
+        [
+          994.0,
+          1.0
+        ],
+        [
+          994.0,
+          1.0
+        ],
+        [
+          993.0,
+          1.0
+        ],
+        [
+          993.0,
+          1.0
+        ]
+      ]
+    },
+    "dd_binary": 0,
+    "dd_norm": 1.172318195634418,
+    "dd_frac": 0.06666666666666667,
+    "dd_pairs": 30,
+    "dd_interval": 3,
+    "dd_thres_px": 11.25,
+    "dd_count_num": 8,
+    "dd_maxrad": [
+      2.408,
+      8.556,
+      11.66,
+      11.464,
+      0.439,
+      5.826,
+      5.978,
+      1.482,
+      6.772,
+      2.407,
+      2.262,
+      3.169,
+      0.443,
+      0.167,
+      0.175,
+      0.198,
+      0.22,
+      0.167,
+      0.139,
+      0.168,
+      0.222,
+      0.214,
+      0.122,
+      0.146,
+      0.181,
+      0.152,
+      0.206,
+      0.175,
+      0.223,
+      0.202
+    ],
+    "dover_technical": -0.07249118387699127,
+    "dover_aesthetic": 0.024968460202217102,
+    "dover_fused": 0.39959547890263153,
+    "dover_fused_sd": 0.01091998091770318,
+    "dover_technical_sd": 0.005471817148080431,
+    "dover_aesthetic_sd": 0.0,
+    "dover_reps": 3,
+    "sec": 5.4
+  },
+  "gauge_b1_ctrl_s3.mp4": {
+    "clip": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_ctrl_s3.mp4",
+    "fps": 24.0,
+    "fps_source": "container",
+    "sidecar": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_ctrl_s3.json",
+    "metadata": {
+      "clip": "gauge_b1_ctrl_s3.mp4",
+      "seed": 3,
+      "early_scale": 1.0,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "wall_sec": 584.52,
+      "step_log_sample": [
+        [
+          995.0,
+          1.0
+        ],
+        [
+          995.0,
+          1.0
+        ],
+        [
+          994.0,
+          1.0
+        ],
+        [
+          994.0,
+          1.0
+        ],
+        [
+          993.0,
+          1.0
+        ],
+        [
+          993.0,
+          1.0
+        ]
+      ]
+    },
+    "dd_binary": 0,
+    "dd_norm": 2.4094593154059516,
+    "dd_frac": 0.06666666666666667,
+    "dd_pairs": 30,
+    "dd_interval": 3,
+    "dd_thres_px": 11.25,
+    "dd_count_num": 8,
+    "dd_maxrad": [
+      0.945,
+      1.325,
+      6.597,
+      6.904,
+      17.28,
+      6.558,
+      24.095,
+      1.656,
+      5.062,
+      6.057,
+      7.011,
+      7.497,
+      7.437,
+      6.631,
+      6.324,
+      5.808,
+      4.89,
+      3.717,
+      1.804,
+      0.901,
+      1.424,
+      0.758,
+      0.675,
+      0.634,
+      0.27,
+      0.455,
+      0.81,
+      0.805,
+      0.61,
+      0.593
+    ],
+    "dover_technical": -0.0629467914501826,
+    "dover_aesthetic": 0.03934840112924576,
+    "dover_fused": 0.45522569281508035,
+    "dover_fused_sd": 0.010260706298868036,
+    "dover_technical_sd": 0.00498411230959291,
+    "dover_aesthetic_sd": 0.0,
+    "dover_reps": 3,
+    "sec": 5.4
+  },
+  "gauge_b1_rope07_s1.mp4": {
+    "clip": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_rope07_s1.mp4",
+    "fps": 24.0,
+    "fps_source": "container",
+    "sidecar": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_rope07_s1.json",
+    "metadata": {
+      "clip": "gauge_b1_rope07_s1.mp4",
+      "seed": 1,
+      "early_scale": 0.7,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "wall_sec": 253.31,
+      "step_log_sample": [
+        [
+          995.0,
+          0.7
+        ],
+        [
+          995.0,
+          0.7
+        ],
+        [
+          994.0,
+          0.7
+        ],
+        [
+          994.0,
+          0.7
+        ],
+        [
+          993.0,
+          0.7
+        ],
+        [
+          993.0,
+          0.7
+        ]
+      ]
+    },
+    "dd_binary": 1,
+    "dd_norm": 11.3177976820204,
+    "dd_frac": 0.6333333333333333,
+    "dd_pairs": 30,
+    "dd_interval": 3,
+    "dd_thres_px": 11.25,
+    "dd_count_num": 8,
+    "dd_maxrad": [
+      0.783,
+      32.99,
+      0.78,
+      1.064,
+      7.987,
+      22.657,
+      17.267,
+      22.796,
+      14.576,
+      3.087,
+      7.548,
+      78.382,
+      13.323,
+      3.262,
+      1.333,
+      24.792,
+      21.618,
+      48.781,
+      61.315,
+      15.662,
+      117.667,
+      18.624,
+      0.504,
+      22.538,
+      2.36,
+      16.89,
+      13.931,
+      3.113,
+      15.893,
+      25.102
+    ],
+    "dover_technical": -0.06181562567750613,
+    "dover_aesthetic": 0.025377020239830017,
+    "dover_fused": 0.42202680620338384,
+    "dover_fused_sd": 0.0037833778901177513,
+    "dover_technical_sd": 0.0018681819595522456,
+    "dover_aesthetic_sd": 0.0,
+    "dover_reps": 3,
+    "sec": 5.4
+  },
+  "gauge_b1_rope07_s2.mp4": {
+    "clip": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_rope07_s2.mp4",
+    "fps": 24.0,
+    "fps_source": "container",
+    "sidecar": "/home/rohith/swarm-work/ro-agy1/cosmos-swarm/work/ro-agy1/task90_rope_scale/results/gauge_b1_rope07_s2.json",
+    "metadata": {
+      "clip": "gauge_b1_rope07_s2.mp4",
+      "seed": 2,
+      "early_scale": 0.7,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "wall_sec": 338.67,
+      "step_log_sample": [
+        [
+          995.0,
+          0.7
+        ],
+        [
+          995.0,
+          0.7
+        ],
+        [
+          994.0,
+          0.7
+        ],
+        [
+          994.0,
+          0.7
+        ],
+        [
+          993.0,
+          0.7
+        ],
+        [
+          993.0,
+          0.7
+        ]
+      ]
+    },
+    "dd_binary": 0,
+    "dd_norm": 2.136045010089874,
+    "dd_frac": 0.1,
+    "dd_pairs": 30,
+    "dd_interval": 3,
+    "dd_thres_px": 11.25,
+    "dd_count_num": 8,
+    "dd_maxrad": [
+      0.709,
+      6.719,
+      9.981,
+      14.345,
+      1.029,
+      1.053,
+      0.693,
+      2.294,
+      0.75,
+      0.619,
+      0.229,
+      0.267,
+      0.386,
+      2.008,
+      1.282,
+      0.836,
+      41.426,
+      0.462,
+      22.617,
+      1.996,
+      6.385,
+      0.304,
+      0.242,
+      0.293,
+      0.287,
+      0.607,
+      0.495,
+      0.508,
+      0.736,
+      0.59
+    ],
+    "dover_technical": -0.06477914998928706,
+    "dover_aesthetic": 0.030587809160351753,
+    "dover_fused": 0.4291825374650473,
+    "dover_fused_sd": 0.010503170935727729,
+    "dover_technical_sd": 0.0051647227707262685,
+    "dover_aesthetic_sd": 0.0,
+    "dover_reps": 3,
+    "sec": 5.3
+  },
+  "gauge_b1_rope07_s3.mp4": {
+    "dover_fused": 0.45902822538649657,
+    "dover_technical": -0.06455847124258678,
+    "dover_aesthetic": 0.04212724417448044,
+    "dd_norm": 5.124732800854577,
+    "dd_binary": 1
+  }
+}
