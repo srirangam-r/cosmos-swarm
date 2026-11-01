@@ -1,0 +1,73 @@
+--- a/work/rahul-5-agy/gallery/index.html
++++ b/work/rahul-5-agy/gallery/index.html
+@@ -692,16 +692,16 @@
+           <div class="card-title-group">
+             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+               <span class="badge-status badge-artifact">ARTIFACT: tlo (#5600, #5634)</span>
+-              <span class="badge-status badge-provisional">PROVISIONAL: slo ('all')</span>
+-              <h2>3. Donor-Noise Transfer &mdash; Spatial 'slo' vs Temporal 'tlo' Ringing ARTIFACT</h2>
++              <span class="badge-status badge-provisional">E7: PARTIAL DONOR-CLOCK TRANSFER</span>
++              <h2>3. Donor-Noise Transfer &mdash; Partial Clock Copying</h2>
+             </div>
+             <div class="card-meta">
+-              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="#5600">Finding #5600</a>, <a href="#5634">#5634</a> &bull; Target: Dynamics Rate Tuning
++              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="#5600">Finding #5600</a>, <a href="#5634">#5634</a> &bull; Human E7 report: <a href="#6167">#6167</a>
+             </div>
+           </div>
+           <div class="btn-group">
+-            <button class="ctrl-btn active" onclick="switchVideo('v-r3-right', 'clips/donor_transfer_fixed', this)">Spatial 'slo' Band (PROVISIONAL)</button>
+-            <button class="ctrl-btn" onclick="switchVideo('v-r3-right', 'clips/donor_recon_real', this)">Real Inversion Reference</button>
++            <button class="ctrl-btn active" onclick="switchVideo('v-r3-right', 'clips/donor_transfer_fixed', this)">E6 Spatial 'slo' Example</button>
++            <button class="ctrl-btn" onclick="switchVideo('v-r3-right', 'clips/donor_recon_real', this)">E6 Real Inversion Diagnostic</button>
+           </div>
+         </div>
+ 
+@@ -721,7 +721,7 @@
+ 
+           <div class="video-col">
+             <div class="video-label-row">
+-              <span class="label-badge badge-fixed-model" id="badge-r3">Spatial 'slo' Band (Provisional)</span>
++              <span class="label-badge badge-fixed-model" id="badge-r3">Historical E6 Illustration (Variant Above)</span>
+               <span class="video-tech">416&times;240 &bull; 24 fps</span>
+             </div>
+             <div class="video-wrapper">
+@@ -751,13 +751,14 @@
+         <div class="card-footer">
+           <div class="sentence-box">
+             <div class="sentence-label">Mechanism &amp; Explanation (Cross-Check Audit)</div>
+-            <p><strong>Artifact Caught by Cross-Check:</strong> The temporal mixing arm (<code>tlo</code>) was proven by dk2 and Raj to be a <strong>global flicker artifact</strong> (<a href="#5600">Finding #5600</a>, <a href="#5634">#5634</a>), not a physics fix. Inverting clean frame 0 into latents and filtering temporal frequencies causes Dirichlet band-edge ringing at period 27.4 frames, producing whole-frame luma pulsing (flicker index 0.505) that tricked naive period trackers.</p>
+-            <p style="margin-top: 0.5rem;"><strong>Spatial Band Transfer (Provisional):</strong> In contrast, spatial-only low-frequency filtering (<code>slo</code>, shown here) and full donor transfer (<code>all</code>) do not mix across frame 0, remain completely flicker-free (&lt; 0.01), and faithfully copy the reference clock ($P/P_{\text{real}} = 0.998\text{--}1.001$). Confirmatory clock-copy test E7b lands ~17:35 UTC.</p>
++            <p><strong>Shown: selected historical E6 media.</strong> These clips are illustrations, not the E7 benchmark grid. Earlier temporal mixing across clean frame 0 produced global luma ringing (27.4 frames; flicker index 0.505; <a href="#5634">#5634</a>). E7 corrected that boundary: its temporal donor arm had 8/16 clean clips, but 0/16 within 10% of the real period.</p>
++            <p style="margin-top: 0.5rem;"><strong>E7 spatial donor result:</strong> Raj reports 8 targets &times; 2 seeds per arm. Spatial <code>slo</code> transfer had 8/16 clean clips and 6/16 within 10% of the real period (median P/P_real 1.05); plain noise had 4/16 clean and 0/16 within 10% (median 0.47). Clean means <code>pend_acf</code> ok, flicker &lt; 0.08, and <code>measure_pend</code> agrees within 10%.</p>
++            <p style="margin-top: 0.5rem;"><strong>Partial clock copying:</strong> With a 10/7-sped-up donor, the median ratio fell to 0.68 (0.70 expected). The paired transfer fraction f = 0.93 uses only 3 targets, with CI [-2.2, 1.15]: underpowered. Raj reports no general noise-shaping fix; this route needs a matching real donor recording. <a href="#6167">Human report #6167</a>; no independent remeasurement or NVIDIA-scoreboard pass is claimed here.</p>
+           </div>
+           <div class="metric-card">
+-            <div class="metric-title">Audit Classification</div>
+-            <div class="metric-value" style="color:var(--accent-rose);">ARTIFACT (tlo)</div>
+-            <div class="metric-sub">Spatial 'slo' is PROVISIONAL (P/P_real &approx; 1.000, flicker &lt; 0.01)</div>
++            <div class="metric-title">E7 Spatial Donor Coverage</div>
++            <div class="metric-value" style="color:var(--accent-amber);">8/16 Clean</div>
++            <div class="metric-sub">6/16 within 10% of real; plain 4/16 clean, 0/16 within 10%. Historical E6 videos shown.</div>
+           </div>
+         </div>
+       </section>
+@@ -967,7 +968,18 @@
+           </div>
+           <div class="evidence-meta">Authors: dk2, Raj &bull; Task #258 &bull; Report :8031</div>
+           <div class="evidence-desc">
+-            Temporal low-pass mixing across clean frame 0 causes Dirichlet band-edge ringing at 27.4f, producing whole-frame luma pulsing (flicker index 0.505). Spatial band transfer (slo) avoids frame 0 mixing and remains flicker-free (&lt; 0.01).
++            Temporal low-pass mixing across clean frame 0 causes Dirichlet band-edge ringing at 27.4f, producing whole-frame luma pulsing (flicker index 0.505). This is the historical E6 artifact report; see E7 #6167 for the corrected boundary and full planned QC coverage.
++          </div>
++        </div>
++
++        <div class="evidence-card" id="6167">
++          <div class="evidence-title">
++            <span>Human Report #6167: E7 Donor-Clock Transfer</span>
++            <span class="label-badge badge-provisional">Partial / Underpowered</span>
++          </div>
++          <div class="evidence-meta">Raj &bull; Task #250 &bull; 224 generated clips; 8 targets &times; 2 seeds per arm &bull; Frozen 9dd4fc8 + f9e980e</div>
++          <div class="evidence-desc">
++            Spatial slo: 8/16 clean, 6/16 within 10% of real, median P/P_real 1.05. Plain: 4/16 clean, 0/16 within 10%, median 0.47. Sped-up donor median 0.68 (expected 0.70); paired f = 0.93 on only 3 targets, CI [-2.2, 1.15]. Temporal donor with frame 0 fixed: 8/16 clean, 0/16 within 10%. No general noise-shaping fix reported. This gallery quotes the human report; the existing E6 videos are not E7 benchmark clips, and no independent remeasurement or NVIDIA-scoreboard pass is claimed.
+           </div>
+         </div>
+ 

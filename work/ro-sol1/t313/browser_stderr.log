@@ -1,0 +1,48 @@
+[12:12:1101/125851.373604:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/nail/.config/BraveSoftware/Brave-Browser/Crash Reports/settings.dat: Read-only file system (30)
+[12:12:1101/125851.373687:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/nail/.config/BraveSoftware/Brave-Browser/Crash Reports/settings.dat: Read-only file system (30)
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.399: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.400: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.401: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.401: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.401: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.401: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.401: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+[12:27:1101/125851.401492:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/nail/.config/BraveSoftware/Brave-Browser/Crash Reports/settings.dat: Read-only file system (30)
+
+(process:12): dconf-CRITICAL **: 12:58:51.425: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.427: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:12): dconf-CRITICAL **: 12:58:51.428: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+[12:12:1101/125851.490087:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.systemd1.Manager.StartTransientUnit: object_path= /org/freedesktop/systemd1: org.freedesktop.DBus.Error.InvalidArgs: Process 12 is a kernel thread, refusing.
+[12:26:1101/125851.504844:ERROR:crypto/nss_util.cc:256] Error initializing NSS with a persistent database (sql:/home/nail/.pki/nssdb): NSS error code: -8126
+
+(ro-sol1-browser-CTXZtu --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:12): dconf-CRITICAL **: 12:58:51.676: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(ro-sol1-browser-CTXZtu --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:12): dconf-CRITICAL **: 12:58:51.678: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(ro-sol1-browser-CTXZtu --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:12): dconf-CRITICAL **: 12:58:51.678: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(ro-sol1-browser-CTXZtu --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:12): dconf-CRITICAL **: 12:58:51.685: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+[12:43:1101/125852.721469:ERROR:content/common/zygote/zygote_communication_linux.cc:218] Failed to send Reap message to zygote
+[12:12:1101/125852.724820:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote
+[12:12:1101/125852.731208:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote

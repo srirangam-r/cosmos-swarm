@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "ceb5a4e",
+  "baseline_sha256": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36",
+  "corrected_sha256": "984e3a66e491ae2dbcd030c9445bb66971b5ea54f3c7eaf4a8fb79897d4950f2",
+  "source_report": 6167,
+  "media_references": 18,
+  "checks": {
+    "all_script_bytes_unchanged": true,
+    "all_media_references_unchanged": true,
+    "other_rows_unchanged": true,
+    "source_file_untouched": true,
+    "awaiting_e7_claim_removed": true,
+    "universal_slo_flicker_claim_removed": true,
+    "e7_anchor_unique": true
+  }
+}

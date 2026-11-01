@@ -1,0 +1,20 @@
+{
+  "README.md": "69b3ca8861e76dfdacd11f625791aacc5c0e455ef0b4acfbb8c7de9afb25ff12",
+  "availability.json": "29276bfa2cbdaa52433735e4210fb1220cd5f23cdd14daa3126234b9a580a300",
+  "baseline_index.html": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36",
+  "browser_check.cjs": "4628090070c4be7a8a059edf432c232061491ef0cf7b9137cc5268837e8fb98f",
+  "browser_check.json": "b2412f24b05207f11f20752814435ebe1b3c1dc41e1d48b6bd40a6c87a380a64",
+  "browser_check_initial.json": "ae442af39b8710fe668054a33b96fbd2bec5226da7d2d3fb4465419b0abed580",
+  "browser_stderr.log": "8af41eb7bbca989f89036adad869bb78f39465dc52218b1bf8bdaab45ed84213",
+  "build.py": "201953cd1562529823b52010c382a0aae7774ca4c1bade022e846c453f9eca79",
+  "corrected_index.html": "984e3a66e491ae2dbcd030c9445bb66971b5ea54f3c7eaf4a8fb79897d4950f2",
+  "donor_mobile.png": "d9413557248c6898111814cde2ca9fa7b0283809f306bbb01300903543a61d2d",
+  "donor_row.png": "0e9870390cf95bc0008d1120e0bcc9dbb43f22117a789b33fa5ce01aa321d44b",
+  "e7_readout.png": "a21f10e3c2670392d897abe1e5c61bef02c72b8e9cded8159b48a6a8d9339fc6",
+  "e7_registry.png": "8a7f8995e08715d72208ef37cc47c87109792bf59a5e5dd14640a05f1f82838d",
+  "human_report.json": "a40197ad4413b549b7a30d63b0e396d03dfe8b2d656cda82ade8d32ed13f1d5b",
+  "integration.patch": "5f46e1b989049834552690863adbee4b0b4f9da22b9a72e5d129cce7f9f13476",
+  "patch_compatibility.json": "92f268670e7d9b8788fd91a080d3d5942a5e88003eab78450c14afbee5322ecd",
+  "preview.html": "41191e4a1afcf1037fed8d4ef7f2bdc783ebe5fe08016b66ea76f6c8023e51ce",
+  "source_check.json": "1d56236394ce28d7bd76ea17dd7fbb8e391a549023fc5c2f337c8270931ad7c5"
+}
