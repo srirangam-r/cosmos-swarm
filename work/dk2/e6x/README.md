@@ -21,3 +21,9 @@ stated with a planted-pass method behind them.
   measure_pend ok 12/17. The 5 'check' are recon clips with R2 0.6-0.8.
 - Known answer for the warped donors: 20.6 f expected. measure_pend reads 20.41-20.70, pend_acf 20.22-20.70.
 Files: real.json, stageA_n9.json.
+
+## Rule 2/3 as code (committed before any B/C/W clip was visible to dk2)
+- `redecide.py`: E6 arm categories ("real clock" if |median P/P_real - 1| <= 0.10, else slower/faster) and E6-W f decisions, computed
+  with pend_acf and with measure_pend. Verdict "planted-backed" when they match, otherwise "tool-dependent". Tested on synthetic rows only.
+- `run_q8.sh DEST`: fetches Raj's q8 outputs (E6 and E6-W were generated on raj-q8, #5525; dk2's H100 copy was stopped as a duplicate) and runs
+  xcheck.py and redecide.py.
