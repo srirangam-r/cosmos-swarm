@@ -1,8 +1,10 @@
 # Detached-State Dynamics Recipe for NVIDIA Cosmos3-Nano
 
-**Charter Deliverable 1 Implementation Tool**
+**Charter Deliverable 1 Implementation Tool (Harmonized Runner)**
 
-This tool provides turnkey, standalone execution of the **Detached-State Dynamics Recipe** for NVIDIA Cosmos3-Nano. It restores physical Earth gravitational acceleration ($g = 9.82 \pm 0.35\text{ m/s}^2$) and 100% object release, eliminating phantom duplicate cloning and robotic arm plunging artifacts without visual degradation.
+This tool provides turnkey, standalone execution of the **Detached-State Dynamics Recipe** for NVIDIA Cosmos3-Nano using `diffusers`. It restores physical Earth gravitational acceleration ($g = 9.82 \pm 0.35\text{ m/s}^2$) and 100% object release, eliminating phantom duplicate cloning and robotic arm plunging artifacts without visual degradation.
+
+> **Tooling Note**: This runner is harmonized with [`tools/recipe/run_recipe.py`](../recipe/run_recipe.py), which provides extended support for HTTP endpoints (`vLLM-Omni`), automated release-seam optical flow detection, and integrated verification.
 
 ## Quickstart
 

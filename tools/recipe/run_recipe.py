@@ -171,6 +171,12 @@ def run_inference_local(
     else:
         pipe.to("cuda")
 
+    # Disable duration and fps prompt template concatenation to prevent inverse contrast pushes
+    if hasattr(pipe, "use_duration_template"):
+        pipe.use_duration_template = False
+    if hasattr(pipe, "use_fps_template"):
+        pipe.use_fps_template = False
+
     generator = torch.Generator(device="cuda" if torch.cuda.is_available() else "cpu").manual_seed(seed)
     t0 = time.time()
     out = pipe(
