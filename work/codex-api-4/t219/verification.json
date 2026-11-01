@@ -1,0 +1,194 @@
+{
+  "scope": "software/source/model checks, not referee amplitude validation",
+  "passed_checks": 47,
+  "checks": [
+    {
+      "name": "source hash k191_fresh.json",
+      "passed": true
+    },
+    {
+      "name": "source hash k191_gates.json",
+      "passed": true
+    },
+    {
+      "name": "source hash k191_gates_fresh.json",
+      "passed": true
+    },
+    {
+      "name": "source hash k191_gates_fresh.py",
+      "passed": true
+    },
+    {
+      "name": "source hash k191_nano.json",
+      "passed": true
+    },
+    {
+      "name": "source hash k191_real.json",
+      "passed": true
+    },
+    {
+      "name": "source hash t198_measurement_results.json",
+      "passed": true
+    },
+    {
+      "name": "source hash t198_results.json",
+      "passed": true
+    },
+    {
+      "name": "source hash t205_amp_results.json",
+      "passed": true
+    },
+    {
+      "name": "source hash t206_results.json",
+      "passed": true
+    },
+    {
+      "name": "all analysis checks passed",
+      "passed": true
+    },
+    {
+      "name": "six unique selected seeds",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 1.0",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 30.0",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 60.0",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 90.0",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 120.0",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 150.0",
+      "passed": true
+    },
+    {
+      "name": "ODE vs independent quadrature 179.0",
+      "passed": true
+    },
+    {
+      "name": "sampled synthetic extrema 20.0",
+      "passed": true
+    },
+    {
+      "name": "sampled synthetic extrema 51.0",
+      "passed": true
+    },
+    {
+      "name": "sampled synthetic extrema 80.0",
+      "passed": true
+    },
+    {
+      "name": "projection conditional cap 0.001",
+      "passed": true
+    },
+    {
+      "name": "projection conditional cap 0.1",
+      "passed": true
+    },
+    {
+      "name": "projection conditional cap 0.5",
+      "passed": true
+    },
+    {
+      "name": "projection conditional cap 1.0",
+      "passed": true
+    },
+    {
+      "name": "previous native subset IDs",
+      "passed": true
+    },
+    {
+      "name": "13 broader seed means",
+      "passed": true
+    },
+    {
+      "name": "17 broader clips",
+      "passed": true
+    },
+    {
+      "name": "standalone replay exits zero",
+      "passed": true
+    },
+    {
+      "name": "standalone results byte identical",
+      "passed": true
+    },
+    {
+      "name": "manifest .gitignore",
+      "passed": true
+    },
+    {
+      "name": "manifest PREREG.md",
+      "passed": true
+    },
+    {
+      "name": "manifest README.md",
+      "passed": true
+    },
+    {
+      "name": "manifest audit.py",
+      "passed": true
+    },
+    {
+      "name": "manifest results.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/k191_fresh.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/k191_gates.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/k191_gates_fresh.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/k191_gates_fresh.py",
+      "passed": true
+    },
+    {
+      "name": "manifest source/k191_nano.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/k191_real.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/t198_measurement_results.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/t198_results.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/t205_amp_results.json",
+      "passed": true
+    },
+    {
+      "name": "manifest source/t206_results.json",
+      "passed": true
+    },
+    {
+      "name": "manifest verify.py",
+      "passed": true
+    }
+  ]
+}
