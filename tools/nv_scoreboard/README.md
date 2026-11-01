@@ -24,6 +24,17 @@ python score.py CLIPS_DIR [more clips] --dover_dir <DOVER_DIR> --device cuda|cpu
 
 **Speed** (832x480, 189 frames): on GPU, ~15-20 s per clip for everything. On CPU, DOVER is ~17 s per draw, but RAFT-large dynamic degree takes ~8 min per clip.
 
+## Before/after and seed noise: `compare.py` (numpy only, no GPU)
+```
+python compare.py noise  scores.json --real ../../work/raj-4/nv_scoreboard_real/gauge_real_matched.json
+python compare.py paired before.json after.json --real ../../work/raj-4/nv_scoreboard_real/gauge_real_matched.json [--pair_by image,seed]
+```
+- `noise` groups clips that differ only in seed (same input image, prompt, negative prompt, settings, read from sidecars). It reports the pooled within-group seed sd per metric and the overall sd.
+- `paired` matches clips across two score files. The default key is the same input image plus the same seed, because a fix may change the prompt, settings or checkpoint. Per metric it reports the paired mean AFTER−BEFORE with a bootstrap 95% CI over pairs. With `--real` it also gives the motion-fidelity gap |dd − dd_real(task)| before and after, and the CI of its change.
+- Verdict: DOVER "DROP" if the CI of the paired difference lies entirely below 0. Dynamic degree is "FURTHER from real" if the CI of the gap change lies entirely above 0.
+- The task (ball / pend / slope) comes from the clip basename via `--task_re`. Reference clips whose names match no task are ignored.
+- Tested only on synthetic score files so far. The Cosmos seed-noise baseline is pending (task 4).
+
 ## Definitions
 **Dynamic degree** is a re-implementation of VBench's `dynamic_degree.py`:
 - frames sampled every `round(fps/8)`;
