@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "source_commit": "5894541",
+  "primary_and_sensitivity": "exact structured equality from archived design/outcomes and frozen statistical code",
+  "verification": "byte-identical after independent scalar verification from archive",
+  "native_videos": "all127 decoded in original run; not redecoded in archive",
+  "native_ffmpeg_checks": "three full traces in original run; stored metadata checked in archive",
+  "source_result_sha256": "b12a16d67a6e7eeefdea1f27e0b7eb998e0adc963b5fbc016e7a21415b11a734"
+}
