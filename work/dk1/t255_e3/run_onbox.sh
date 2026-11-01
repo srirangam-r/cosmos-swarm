@@ -6,6 +6,7 @@
 #   server_action_cfg.patch, client wrapper below. Output: clips/ (mp4 + client json + <name>.server.json).
 set -euo pipefail
 PY=$1; MODEL=$2; PORT=${3:-8012}
+# MEMFRAC (default 0.46 of the GPU, ~37.5 GB on an 80 GB H100): co-tenant cap so a spike OOMs this server, not the neighbour
 cd "$(dirname "$0")"
 W=$PWD
 cp action_cfg.py cosmos_local/
@@ -21,7 +22,7 @@ with open(os.path.join(w,'jobs_box.jsonl'),'w') as f:
 " "$W"
 mkdir -p clips srv
 if ! curl -sf "http://127.0.0.1:$PORT/health" | grep -q action_cfg; then
-  COSMOS_OFFLOAD=0 COSMOS_LABEL=dk1-e3 nohup "$PY" cosmos_local/server.py --host 127.0.0.1 --port "$PORT" \
+  COSMOS_OFFLOAD=0 COSMOS_LABEL=dk1-e3 nohup "$PY" cap_launch.py "${MEMFRAC:-0.46}" cosmos_local/server.py --host 127.0.0.1 --port "$PORT" \
       --model "$MODEL" --out "$W/srv" > server.log 2>&1 &
   echo $! > server.pid
   for i in $(seq 1 120); do curl -sf "http://127.0.0.1:$PORT/health" | grep -q action_cfg && break; sleep 10; done
