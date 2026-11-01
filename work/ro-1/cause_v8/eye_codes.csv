@@ -9,3 +9,20 @@ v8_SWl7_ball1_fps24_93f_s3,7-35,3,Y,~48 (slow roll),1.79,
 v8_SWl7_ball1_fps24_93f_s5,7-35,5,Y,~60-72 (slow roll),0.57,near-identical to SWfull s5
 v8_SWl17_ball1_fps24_93f_s3,17-35,3,N,-,3.62,low hops to end
 v8_SWl17_ball1_fps24_93f_s5,17-35,5,N,-,3.63,high bounces to end (F-like)
+v9_SWe3_s1,0-3,1,N,-,-,still bouncing f90
+v9_SWe3_s2,0-3,2,N,-,-,bouncing to end
+v9_SWe3_s4,0-3,4,N,-,-,high bounces to end
+v9_SWe7_s1,0-7,1,N,-,-,low hops to end
+v9_SWe7_s2,0-7,2,N,-,-,rolling/hopping toward camera at f90
+v9_SWe7_s4,0-7,4,N,-,-,hops/rolls to end
+v9_SWl17_s1,17-35?,1,N,-,-,bounces to end
+v9_SWl17_s2,l17,2,N,-,-,bounces to end
+v9_SWl17_s4,l17,4,N,-,-,bounces to end
+v9_SWl7_s1,l7,1,Y,~60 slow roll,-,
+v9_SWl7_s2,l7,2,N?,-,-,hops f48-69 then slow roll/small hops; borderline
+v9_SWl7_s4,l7,4,Y,~50 slow roll,-,
+v9_SWm7_17_s1,m7-17,1,N?,-,-,small hops at f75-90 borderline
+v9_SWm7_17_s2,m7-17,2,N,-,-,hops to end
+v9_SWm7_17_s3,m7-17,3,Y,~48 roll,-,
+v9_SWm7_17_s4,m7-17,4,Y,~50 roll,-,
+v9_SWm7_17_s5,m7-17,5,Y,~50 roll,-,
