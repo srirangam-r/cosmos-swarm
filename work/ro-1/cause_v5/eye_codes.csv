@@ -1,0 +1,18 @@
+clip,input,arm,seed,settles_by_f92,approx_rest_frame,notes
+ball_F_ball1_fps24_93f_s1,ball1,F,1,N,,steady bounce to end (bclock e_T 0.975)
+ball_F_ball1_fps24_93f_s2,ball1,F,2,N,,tether yo-yo from gripper
+cause5_F_ball1_fps24_93f_s3,ball1,F,3,N,,bounces to f90
+cause5_F_ball1_fps24_93f_s4,ball1,F,4,N,,gripper appears; tether yo-yo
+cause5_F_ball1_fps24_93f_s5,ball1,F,5,N,,bounces to f90
+cause_QT_ball1_fps24_93f_s1,ball1,QT,1,Y,~20-45,rests (shift 67 eye read)
+cause_QT_ball1_fps24_93f_s2,ball1,QT,2,Y,~20-45,rests (shift 67 eye read)
+cause5_QT_ball1_fps24_93f_s3,ball1,QT,3,Y,~15,lands then slow roll right
+cause5_QT_ball1_fps24_93f_s4,ball1,QT,4,Y,~24,lands then slight roll
+cause5_QS_ball1_fps24_93f_s3,ball1,QS,3,N,,bounces to f90 (near-identical to F s3)
+cause5_QS_ball1_fps24_93f_s4,ball1,QS,4,N,,gripper; tether yo-yo (like F s4)
+ball_F_ball2_fps24_93f_s1,ball2,F,1,N,,bounces to end
+ball_F_ball2_fps24_93f_s2,ball2,F,2,N,,bounces to end (damps 130->65px but no rest)
+cause6_QT_ball2_fps24_93f_s1,ball2,QT,1,Y,~72,bounces ~4x then rests
+cause6_QT_ball2_fps24_93f_s2,ball2,QT,2,Y,~60,bounces then rolls to rest
+cause6_QT_ball2_fps24_93f_s3,ball2,QT,3,Y,~40,rests
+cause5_QT_ball1_fps24_93f_s5,ball1,QT,5,Y,~60-72,bounces/rolls to ~f57 then rests; mid-clip motion blur
