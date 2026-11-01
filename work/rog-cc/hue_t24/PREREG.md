@@ -60,3 +60,20 @@ Note: the robot prompts differ from rog1's #1178 subset (only robot_011 is share
   (gap_arm − gap_base) < 0.15 × base mean dd_norm; "regression" if the lower bound exceeds it.
 - **Noise**: per-clip seed SD of base (16 Pgauge seeds, SD across seeds), and the repeated-base cross-box clips as A/A.
 - **Caveat** (README): DD is nearly blind to a 6 cm ball; a DD change on this scene is camera/scene motion, not ball physics.
+
+## Addendum A3 (2026-11-01 06:53 UTC, written BEFORE any clip below was judged): plausibility judge on the Deliverable-1 "mid-fall / detached-state" recipe (#1616, reports/deliverable_1_recipe.md)
+- **Why**: Deliverable 3 needs the plausibility judge before/after for the recipe; DOVER/MF exist (#1616/#1639/#1747), the judge does not.
+- **Clips (Nano)**: raj-3/agy-3 box_t68 (GB10 ~/jobs/raj-3/box_t68/), 189 f @ 24 fps, 832x480, 35/6/10, no negative, exact GAUGE ball prompt.
+  BASE = box_ctrl_b{1,2}_noneg_s{1-4} (held frame 0); RECIPE = box_mid_b{1,2}_noneg_s{1-4} (mid-fall frame dd33/35). n = 8 + 8.
+- **Real input control**: real GAUGE ball1/2, 93 f @ 24 fps, same ffmpeg recipe, from f0 (realball_b) vs from mid-fall t=1.32/1.40 s (realmid_b)
+  — the clips already used for the DOVER control (#1738). Δ_real = mean(realmid − realball) over the 2 balls.
+- **Judge**: tools/hue_judge (Qwen3-VL-2B, 16 frames, P(Yes), offsets 0,0.5 averaged), rog1's `gauge_ball` question set (13 Qs, validated
+  real-vs-corruption #441; NOT NVIDIA's questions). One run, one model, same settings for every clip.
+- **Input-neutral question set (PRIMARY)**: drop Q1 (asks if the ball is held at the start) and Q5 (asks if falling starts after release) —
+  both presuppose the f0 input. Physical = Q2,Q3,Q4,Q6,Q13; Overall = mean of the 11 remaining Qs (Q2-4, Q6-13). All 13 Qs reported as secondary.
+- **Unit/test**: per-ball mean over seeds (and offsets) → d_b = RECIPE − BASE for b = 1,2; the clip-level Welch SE over 8 vs 8 clips is the
+  primary SE (seed noise; the 2 balls are too few for a t over balls). Net effect = Δ_nano − Δ_real (input-frame look alone).
+- **Margins (borrowed from the human-approved HUE margins #1306)**: non-inferior if the one-sided 95% lower bound of Δ_nano > −0.03 (Overall)
+  and > −0.04 (Physical). Improvement claimed only if the lower bound > 0 AND Δ_nano − Δ_real > 0.
+- **Caveats, declared now**: the judge is order-blind (#601), so it cannot see bounce decay or time direction; the inputs differ between arms
+  (not a same-fixed-input before/after, #1637/#1761); one scene, 2 balls; 2B judge has a yes-bias.
