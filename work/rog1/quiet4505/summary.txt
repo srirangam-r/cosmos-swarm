@@ -1,0 +1,17 @@
+name arm image seed | q2bins D25 TH50 TH100 | D15 TH100 TH200
+r60_0c3579 QT ball2_dd3 23 | None None | None None
+r60_14a352 F ball2_dd3 23 | None None | None None
+r60_19fa30 F ball1_dd3 23 | 2.0 1.5 | 2.0 1.5
+r60_2695e9 F ball2_dd3 21 | None None | None None
+r60_40a639 F ball1_dd3 21 | None None | None None
+r60_698f85 F ball1_dd3 22 | None None | None None
+r60_6dcec1 QT ball2_dd3 21 | None None | None None
+r60_8bf9f5 QT ball2_dd3 22 | None None | None None
+r60_b6a225 QT ball1_dd3 23 | 1.0 1.0 | 1.0 1.0
+r60_c43936 QT ball1_dd3 21 | None 2.5 | 2.5 1.5
+r60_cdf6af F ball2_dd3 22 | 2.0 2.0 | 2.5 2.0
+r60_e6ed36 QT ball1_dd3 22 | 2.0 1.5 | 2.0 1.5
+real_ball1_from35 REAL  - | 1.0 1.0 | 1.0 1.0
+real_ball2_from33 REAL  - | 1.5 1.0 | 1.5 1.0
+real_ball1_from35_full REAL  - | 1.0 1.0 | 1.0 1.0
+real_ball2_from33_full REAL  - | 1.5 1.0 | 1.5 1.0
