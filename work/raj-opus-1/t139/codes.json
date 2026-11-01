@@ -395,5 +395,66 @@
   "any_fall": 0,
   "carried": 1,
   "note": "ball FLOATS motionless and unsupported at its f0 position f0-f26; a gripper/arm descends from the top f26-35 to the ball and the ball moves down with it (firstfall onset f25)"
+ },
+ "t139_O_ball1_s8": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "morph": 1,
+  "note": "ball in jaws f0-43; at f44 a ~2.5x larger ball swells out beneath the jaws and descends continuously f45-52 to the plank, bounces/rolls; a smaller recoloured (light grey) ball stays in the jaws f49-92 (zoom). Swell + clone, not release of the held ball (cf. s5 where the jaws themselves vanish with the ball)"
+ },
+ "t139_O_ball2_s8": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "original marked ball stays in the jaws f0-92 (zoom: markers visible f10-92); a ~2x larger clone emerges beneath the jaws at f9 and falls f9-16 to the plank, bounces, rests. Clone, same branch as O s6"
+ },
+ "t139_A_ball1_s8": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "borderline": 1,
+  "note": "BORDERLINE: unsupported ball HOVERS at its f0 position f0-49 (no robot); descends f50-51 (2 sharp intermediate heights), motion smear at plank level f52-54, rests on far plank edge f55+; prereg needs 3 intermediate heights -> fall=0 (same rule as G_ball1_s7). A ball REAPPEARS at the f0 position f56-92 while the fallen one sits on the plank (regeneration/clone)"
+ },
+ "t139_A_ball2_s8": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "descent_artifact": 1,
+  "midair_reversal": 1,
+  "note": "descends continuously from f0 position f0-f6 (~5 diameters, >=4 intermediate heights) but REVERSES UPWARD in mid-air at f7, well above the plank, with no contact (invisible floor); yo-yos up/down through f92 and never reaches the plank. Counted fall=1 by the prereg letter; descent_artifact=1 (post-hoc) so not a clean fall"
+ },
+ "t139_G_ball1_s8": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "morph": 1,
+  "descent_artifact": 1,
+  "midair_reversal": 1,
+  "note": "same branch as A_ball2_s8: descends f0-6 from f0 position (texture morph at f5), reverses upward in mid-air at f7 above the plank, rises to the top f12-20 and swells ~2x; the swollen ball falls to the plank f24-28 and bounces high (e~1). No gripper holds the ball (arm visible at right as in the input)"
+ },
+ "t139_G_ball2_s8": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f5 to the plank (intermediate heights f2,f3,f4), ball grows ~2x by contact; e~1 bounce back to the top f12-14; repeated high bounces; arm visible as in input, no gripper holds the ball"
  }
 }

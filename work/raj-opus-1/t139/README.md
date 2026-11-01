@@ -40,3 +40,10 @@ Primary stays as pre-registered (a fall that starts from the frame-0 position).
 - `morph` / `descent_artifact`: the ball swells, morphs or duplicates during its descent. `clean_fall` = fall AND no descent artifact. This is post-hoc and secondary.
 - The two inputs are near-identical frames and outcomes cluster by seed, so `summarize.py` also reports a seed-level paired analysis (arm − O per seed, sign test). Treat that as the honest n.
 Interim status: see `summary.json` (regenerate with `python3 summarize.py codes.json ff_summary.json`).
+
+### Final, all 48 clips (seeds 1-8 × ball1/ball2 × O/A/G), coded 10:30-10:45 UTC
+- Seed-8 clips coded with `zc.py` zooms (frames listed in `zooms_s8/`). New post-hoc flag `midair_reversal`: the ball descends from its f0 position but turns upward in mid-air with no contact. Counted as `fall` by the prereg letter, and as `descent_artifact` (so not `clean_fall`). It occurs in A_ball2_s8 and G_ball1_s8 (same seed).
+- A_ball1_s8 is borderline. The ball hovers unsupported for 49 frames and then shows only 2 sharp intermediate heights, so `fall=0` under the same rule as G_ball1_s7.
+- Counts (n=16 per arm): fall O 2, A 12, G 8. clean_fall O 0, A 11, G 4. holder_back O 0, A 0, G 7. clone O 6, A 1, G 1. auto_fall O 6, A 14, G 7.
+- A−O fall: +0.625, Fisher p=0.001 at clip level. At seed level: 6 up / 1 down / 1 tie, sign p=0.125. A−O clean_fall at seed level: 6 up / 0 down, sign p=0.031.
+- Full output: `summary.json`.
