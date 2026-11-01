@@ -1,0 +1,30 @@
+{
+ "name": "cfg3p0_shift5p0_s1",
+ "width": 832,
+ "height": 480,
+ "num_frames": 93,
+ "fps": 24,
+ "steps": 35,
+ "guidance": 3.0,
+ "flow_shift": 5.0,
+ "seed": 1,
+ "negative_prompt": null,
+ "extra_params": {
+  "client": "rahul-5-agy",
+  "task": 71,
+  "arm": "cfg3p0_shift5p0",
+  "guidance_scale": 3.0,
+  "flow_shift": 5.0
+ },
+ "prompt_text": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt_text": null,
+ "image": "gauge_ball1_dd33_832x480.png",
+ "owner": "rahul-5-agy",
+ "queue_id": "062907-0122b2",
+ "endpoint": "gb10",
+ "endpoint_url": "http://100.122.219.51:8011",
+ "server_clip_id": "20261101T063745_0041_rahul-5-agy",
+ "seconds": 254.7,
+ "wall_seconds": 259.3,
+ "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+}
