@@ -38,6 +38,8 @@ python3 -I firstfall.py --planted planted.json clip_dir out.json
   On task-9 clip 1 it gave 3.39 [2.90, 3.88] with tmax=16 and 2.75 [1.77, 3.66] with no tmax. Report both.
 - Planted: referee PASS 20/20 within 10%, with g 8/8 and e 4/4 < 5% (ff_referee_v1.json, ff_planted_estimates_v1.json; sha256 c7a1033f616c).
   g/e are within 3% of realball v1.1 on every clip. period/a use the trk_ballfall v3 code. The d_growth addition leaves the planted estimates byte-identical.
-- Real footage: see work/raj-2/task9_duration/firstfall/firstfall_gauge_real.json (GAUGE real drops at Cosmos resolution, 539.8 px/m, vs mocap).
+- Real footage: GAUGE real drops 1-22 at Cosmos resolution (dedup, letterbox 832x480, 539.8 px/m, auto seed): g/mocap 1.017 ± 0.016 (SE; sd 0.066; median 0.995), n=18 of 22 flag=ok, 17/18 within 10%. The 4 non-ok clips are auto-seed misses (msg 323; work/raj-2/task9_duration/firstfall/firstfall_gauge_real.json and QC images).
+- Synthetic holder clips (rahul-3 sim_drop, seeded): 1.009 ± 0.010, n=18/21 ok. Blind realball on the same clips: 2/21 (work/raj-2/simdrop_check).
+- d_growth is noisy: on real drops (constant ball) it ranges 0.27-1.39 (median 0.71). Treat it only as a gross check.
 - Known failure: a black ball in front of the black curtain shows no change against the background, so the track is lost.
   Example: raj-1's spawned big ball, lost at frame 29. Use samball (SAM2.1) for those clips.
