@@ -9,7 +9,7 @@ from pathlib import Path
 import sys
 
 from .proxy import generate_pendulum_proxy, generate_ball_proxy
-from .runner import run_remote_nanophys, run_local_nanophys
+from .runner import run_remote_nanophys, run_local_nanophys, resolve_start_step
 
 
 def parse_coords(s: str) -> tuple[int, int]:
@@ -71,10 +71,10 @@ def main():
 
     args = parser.parse_args()
 
-    if args.sigma is not None and not (0.0 <= args.sigma <= 1.0):
-        parser.error(f"--sigma must be in [0, 1], got {args.sigma}")
-    if args.start_step is not None and not (0 <= args.start_step < args.steps):
-        parser.error(f"--start-step must be an integer in [0, {args.steps - 1}], got {args.start_step}")
+    try:
+        start_step = resolve_start_step(args.steps, args.start_step, args.sigma)
+    except (TypeError, ValueError) as exc:
+        parser.error(str(exc))
 
     # Determine default frame count based on physics if not set
     num_frames = args.num_frames
@@ -122,15 +122,6 @@ def main():
         )
 
     print(f"[Nano-Phys] Saved proxy video to {proxy_mp4}", file=sys.stderr)
-
-    # Determine effective start step
-    from .runner import NATIVE_SIGMAS_35, sigma_to_step
-    if args.sigma is not None:
-        start_step = sigma_to_step(args.sigma, steps=args.steps)
-    elif args.start_step is not None:
-        start_step = args.start_step
-    else:
-        start_step = 14  # default: step 14 (sigma = 0.95868)
 
     if args.emit_queue_job:
         job = {

@@ -66,7 +66,7 @@ physical calibration, or the endpoint's conditioning behavior.
 3. **SDEdit Latent Noising**:
    Following SDEdit and ProxyUp, the latent is forward-diffused to intermediate step $k$:
    $$x_k = (1 - s_k) x_{0,\text{ref}} + s_k \epsilon, \quad \epsilon \sim \mathcal{N}(0, I)_{\text{CPU}}$$
-   where $s_k$ is the exact sigma from Cosmos3-Nano's 35-step UniPC scheduler (e.g. step 16 for $\sigma \approx 0.90$; step 14 for $\sigma \approx 0.94$; step 4 for $\sigma \approx 0.99$). Noise is deterministically drawn on CPU for cross-platform pairing (Charter Rule 11).
+   where $s_k$ comes from the endpoint's native grid. The archived 35-step grid below has step 19 at 0.89844, step 14 at 0.95868 and step 4 at 0.99140. Noise is drawn on CPU for cross-platform pairing (Charter Rule 11).
 4. **Diffusion Denoising**:
    Cosmos3-Nano runs diffusion denoising from step $k$ to step 35. The intermediate noise level erases rough inpainting edges and synthetic proxy artifacts, while the underlying trajectory guide forces the attention layers into the correct physical temporal rhythm.
 
@@ -74,16 +74,16 @@ physical calibration, or the endpoint's conditioning behavior.
 
 ## Native Sigma Schedule Reference (35-step UniPC)
 
-To prevent step-index vs noise-level ambiguities, `nano_phys` maps directly to Cosmos3-Nano's pinned UniPC schedule:
+`nano_phys` selects `--sigma` from the 35-step grid recorded in the four task281 [native receipts](../../work/raj-demos/sidecars/). This is a reference for that archived deployment, not certification of a current endpoint. All four full grids match; only two `sigmas_used` arrays match their expected executed suffix. The other two contain a 1,000-entry training schedule. [Runtime evidence](../../work/ro-sol1/t303/README.md) preserves this inconsistency without inferring what the model executed.
 
 | Step $k$ | Sigma $s_k$ | Interpretation / Equivalent Arm |
 | :---: | :---: | :--- |
-| **4** | 0.9905 | $t_{\text{init}} \approx 0.90$ (ro-3 linear step fraction arm) |
-| **14** | 0.9368 | $t_{\text{init}} \approx 0.60$ (ro-3 linear step fraction arm) |
-| **16** | 0.9029 | Physical $\sigma \approx 0.90$ (Raj #5693 specification) |
-| **23** | 0.5750 | Physical $\sigma \approx 0.60$ |
+| **4** | 0.99140 | Recorded grid entry; step fractions are separate from sigma |
+| **14** | 0.95868 | Default start step |
+| **19** | 0.89844 | Nearest recorded entry to requested sigma 0.90 |
+| **27** | 0.57269 | Nearest recorded entry to requested sigma 0.60 |
 
-Users can supply either `--start-step <int>` or `--sigma <float>` (e.g. `--sigma 0.90`).
+Users can supply either `--start-step <int>` or `--sigma <float>` (e.g. `--sigma 0.90`, which overrides `--start-step`). Sigma must be finite in [0, 1] and requires `--steps 35`; other step counts require a valid step selection and do not receive a nominal sigma from this table. The CLI validates the selection before building a proxy. The runner retains returned metadata but does not certify grid, executed suffix or deployment identity; these remain executor acceptance checks. Historical benchmark rows below are not remapped or revalidated by this reference.
 
 ---
 
@@ -132,8 +132,8 @@ All measurements were conducted with referee-PASS measurement tools (`tools/trk_
 | `--floor-y` | int | `340` | Floor impact pixel level |
 | `--g` | float | `9.81` | Gravitational constant ($m/s^2$) |
 | `--e` | float | `0.58` | Coefficient of restitution |
-| `--start-step`| int | `14` | Intermediate diffusion step ($14 \implies \sigma = 0.9368$) |
-| `--sigma` | float | `None` | Target noise level $\sigma \in [0, 1]$ (e.g. `0.90` maps to step 16) |
+| `--start-step`| int | `14` | Intermediate diffusion step (archived 35-step grid: sigma 0.95868) |
+| `--sigma` | float | `None` | Finite sigma in [0, 1], requires 35 steps (`0.90` maps to step 19) |
 | `--seed` | int | `1` | CPU RNG seed |
 | `--proxy-only`| flag | `False` | Only generate and save the proxy video |
 | `--emit-queue-job` | flag | `False` | Output JSONL job line for `cosmos_queue.py` |

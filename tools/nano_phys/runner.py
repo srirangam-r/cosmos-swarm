@@ -6,14 +6,16 @@ Enforces CPU noise draws for cross-platform deterministic portability (Charter R
 
 import io
 import json
+import math
 import os
 from pathlib import Path
 import time
 import requests
 
 
-# Full native 35-step UniPC schedule (35 steps + terminal 0.0) from tools/cosmos_local server
-# Extracted directly from live queue sidecar (latent.sigmas_request, SHA256 4b48040e...)
+# Archived native 35-step UniPC schedule (35 steps + terminal 0.0).
+# Source: work/raj-demos/sidecars/sp_k19_s2.server.json, latent.sigmas_request.
+# This reference table does not certify a current endpoint or its executed suffix.
 # In normalized flow units [0, 1]: step 19 corresponds to sigma = 0.89844 (Raj #281 recipe target ~0.90)
 NATIVE_SIGMAS_35 = [
     0.99502, 0.99432, 0.99349, 0.99253, 0.99140, 0.99007, 0.98851, 0.98666,
@@ -27,17 +29,31 @@ NATIVE_SIGMAS_35 = [
 def sigma_to_step(target_sigma: float, steps: int = 35) -> int:
     """Find the step index in native schedule closest to target_sigma.
     
-    Target sigma must be a finite number in [0, 1] (e.g. 0.90 for Raj's lead recipe,
+    Only the archived 35-step grid is supported. Target sigma must be finite
+    in [0, 1] (e.g. 0.90 for Raj's lead recipe,
     which maps directly to step 19 with sigma = 0.89844).
     """
     if not isinstance(target_sigma, (int, float)) or isinstance(target_sigma, bool):
         raise TypeError(f"target_sigma must be a float or int, got {type(target_sigma).__name__}")
-    if target_sigma < 0.0 or target_sigma > 1.0:
+    if not math.isfinite(target_sigma) or target_sigma < 0.0 or target_sigma > 1.0:
         raise ValueError(f"target_sigma must be in [0, 1], got {target_sigma}")
-    if steps < 1 or steps > len(NATIVE_SIGMAS_35) - 1:
-        raise ValueError(f"steps must be between 1 and {len(NATIVE_SIGMAS_35) - 1}, got {steps}")
+    if not isinstance(steps, int) or isinstance(steps, bool) or steps != 35:
+        raise ValueError("sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts")
     # Selection candidates are strictly the non-terminal steps [0, steps - 1]
     return min(range(steps), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
+
+
+def resolve_start_step(steps: int, start_step: int | None = None, sigma: float | None = None) -> int:
+    """Resolve CLI and HTTP requests identically, before any proxy or network work."""
+    if not isinstance(steps, int) or isinstance(steps, bool) or steps < 1:
+        raise ValueError("steps must be a positive integer")
+    if sigma is not None:
+        return sigma_to_step(sigma, steps)
+    if start_step is None:
+        start_step = 14
+    if not isinstance(start_step, int) or isinstance(start_step, bool) or not 0 <= start_step < steps:
+        raise ValueError(f"start_step must be an integer in [0, {steps - 1}], got {start_step}")
+    return start_step
 
 
 def run_remote_nanophys(
@@ -65,16 +81,9 @@ def run_remote_nanophys(
     out_p = Path(out_mp4)
     out_p.parent.mkdir(parents=True, exist_ok=True)
 
-    # Determine start step: explicit sigma overrides or maps to step index
-    if sigma is not None:
-        start_step = sigma_to_step(sigma, steps=steps)
-    elif start_step is None:
-        start_step = 14  # Default: step 14 (sigma = 0.95868; ro-3 t_init=0.6 arm)
-
-    if not (0 <= start_step < steps):
-        raise ValueError(f"start_step must be in [0, {steps - 1}], got {start_step}")
-
-    effective_sigma = NATIVE_SIGMAS_35[start_step] if start_step < len(NATIVE_SIGMAS_35) else None
+    start_step = resolve_start_step(steps, start_step, sigma)
+    # The archived table does not establish a nominal sigma for other grids.
+    effective_sigma = NATIVE_SIGMAS_35[start_step] if steps == 35 else None
 
     extra_params = {
         "client": "nano_phys",

@@ -1,0 +1,808 @@
+{
+  "scope": "Python software and unchanged native receipt replay only; no HTTP requests, GPU execution, live deployment certification or physics claims",
+  "sources": {
+    "baseline_runner": "541bc25406a374e6233e1347c94d414a8036434e42f03968d6b76af5dec1bdf9",
+    "baseline_cli": "6f8a2e796de6842dfa7930d43cea630f3075410f7ec837dee5b929a539f500ac",
+    "current_runner": "5aa839febef24e411e7c9338edae6533cc5ada6405d4a0cfaafc7509a8c275a6",
+    "current_cli": "760e2ed889765a3495e8bddee1d54b7eef16d237e6bd68e69d3c5c2e684ce3ea"
+  },
+  "receipts": [
+    {
+      "name": "sp_k12_s1",
+      "sha256": "ab7e94658d17a4d7c1f276dfdd55f2ac78b21ea668a19b03776247a4a63ad9d4",
+      "start_step": 12,
+      "sigma_start": 0.97056,
+      "full_grid_match": true,
+      "executed_suffix_match": true,
+      "used_count": 24,
+      "expected_suffix_count": 24,
+      "used_first": 0.97056,
+      "used_last": 0.0,
+      "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, Brev brev-bhu5qgfem gpu2, safety check off)",
+      "scheduler": "UniPCMultistepScheduler",
+      "server_rev": {
+        "server.py": "04e8e0de81",
+        "noise.py": "a5aef0fbe3",
+        "internals.py": "75dc2bebac",
+        "neg_meta.py": "3e82bf1434"
+      }
+    },
+    {
+      "name": "sp_k12_s2",
+      "sha256": "d608a67786150243998fd59c7b4c162f2337a00cfa39e337d3183f421ddae00d",
+      "start_step": 12,
+      "sigma_start": 0.97056,
+      "full_grid_match": true,
+      "executed_suffix_match": false,
+      "used_count": 1000,
+      "expected_suffix_count": 24,
+      "used_first": 0.01,
+      "used_last": 157.40727,
+      "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, Brev brev-bhu5qgfem gpu3, safety check off)",
+      "scheduler": "UniPCMultistepScheduler",
+      "server_rev": {
+        "server.py": "04e8e0de81",
+        "noise.py": "a5aef0fbe3",
+        "internals.py": "75dc2bebac",
+        "neg_meta.py": "3e82bf1434"
+      }
+    },
+    {
+      "name": "sp_k19_s1",
+      "sha256": "055b5f4db2677bb9bb8db04a855449f09cd92f0ef3686a6af202ac217f8632cc",
+      "start_step": 19,
+      "sigma_start": 0.89844,
+      "full_grid_match": true,
+      "executed_suffix_match": false,
+      "used_count": 1000,
+      "expected_suffix_count": 17,
+      "used_first": 0.01,
+      "used_last": 157.40727,
+      "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, Brev brev-bhu5qgfem gpu0, safety check off)",
+      "scheduler": "UniPCMultistepScheduler",
+      "server_rev": {
+        "server.py": "04e8e0de81",
+        "noise.py": "a5aef0fbe3",
+        "internals.py": "75dc2bebac",
+        "neg_meta.py": "3e82bf1434"
+      }
+    },
+    {
+      "name": "sp_k19_s2",
+      "sha256": "c76ce9b3b73c41511cbf66a05c58e01bd10999824735cb79c23b35fbf281350c",
+      "start_step": 19,
+      "sigma_start": 0.89844,
+      "full_grid_match": true,
+      "executed_suffix_match": true,
+      "used_count": 17,
+      "expected_suffix_count": 17,
+      "used_first": 0.89844,
+      "used_last": 0.0,
+      "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, Brev brev-bhu5qgfem gpu1, safety check off)",
+      "scheduler": "UniPCMultistepScheduler",
+      "server_rev": {
+        "server.py": "04e8e0de81",
+        "noise.py": "a5aef0fbe3",
+        "internals.py": "75dc2bebac",
+        "neg_meta.py": "3e82bf1434"
+      }
+    }
+  ],
+  "selectors": [
+    {
+      "case": "nan",
+      "before": {
+        "accepted": true,
+        "value": 0
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got nan"
+      }
+    },
+    {
+      "case": "positive_inf",
+      "before": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got inf"
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got inf"
+      }
+    },
+    {
+      "case": "negative_inf",
+      "before": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got -inf"
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got -inf"
+      }
+    },
+    {
+      "case": "short20",
+      "before": {
+        "accepted": true,
+        "value": 19
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts"
+      }
+    },
+    {
+      "case": "short1",
+      "before": {
+        "accepted": true,
+        "value": 0
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts"
+      }
+    },
+    {
+      "case": "long36",
+      "before": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "steps must be between 1 and 35, got 36"
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts"
+      }
+    },
+    {
+      "case": "float_steps",
+      "before": {
+        "accepted": false,
+        "exception": "TypeError",
+        "message": "'float' object cannot be interpreted as an integer"
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts"
+      }
+    },
+    {
+      "case": "bool_steps",
+      "before": {
+        "accepted": true,
+        "value": 0
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts"
+      }
+    },
+    {
+      "case": "bool_sigma",
+      "before": {
+        "accepted": false,
+        "exception": "TypeError",
+        "message": "target_sigma must be a float or int, got bool"
+      },
+      "after": {
+        "accepted": false,
+        "exception": "TypeError",
+        "message": "target_sigma must be a float or int, got bool"
+      }
+    },
+    {
+      "case": "zero",
+      "before": {
+        "accepted": true,
+        "value": 34
+      },
+      "after": {
+        "accepted": true,
+        "value": 34
+      }
+    },
+    {
+      "case": "one",
+      "before": {
+        "accepted": true,
+        "value": 0
+      },
+      "after": {
+        "accepted": true,
+        "value": 0
+      }
+    },
+    {
+      "case": "lead",
+      "before": {
+        "accepted": true,
+        "value": 19
+      },
+      "after": {
+        "accepted": true,
+        "value": 19
+      }
+    },
+    {
+      "case": "lower",
+      "before": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got -0.1"
+      },
+      "after": {
+        "accepted": false,
+        "exception": "ValueError",
+        "message": "target_sigma must be in [0, 1], got -0.1"
+      }
+    }
+  ],
+  "cli": [
+    {
+      "args": [
+        "--sigma",
+        "nan"
+      ],
+      "before": {
+        "exit": 2,
+        "proxy_calls": 0,
+        "stdout": "",
+        "stderr": "usage: python -m nano_phys [-h] --image IMAGE --prompt PROMPT --physics\n                           {pendulum,ball} --out OUT [--pivot PIVOT]\n                           [--bob BOB] [--period PERIOD]\n                           [--amplitude AMPLITUDE]\n                           [--direction {inward,outward}]\n                           [--no-release-from-rest] [--center CENTER]\n                           [--radius RADIUS] [--floor-y FLOOR_Y] [--e E]\n                           [--g G] [--start-step START_STEP] [--sigma SIGMA]\n                           [--seed SEED] [--steps STEPS] [--guidance GUIDANCE]\n                           [--flow-shift FLOW_SHIFT] [--num-frames NUM_FRAMES]\n                           [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                           [--negative-prompt NEGATIVE_PROMPT]\n                           [--server SERVER] [--proxy-only] [--emit-queue-job]\npython -m nano_phys: error: --sigma must be in [0, 1], got nan\n"
+      },
+      "after": {
+        "exit": 2,
+        "proxy_calls": 0,
+        "stdout": "",
+        "stderr": "usage: python -m nano_phys [-h] --image IMAGE --prompt PROMPT --physics\n                           {pendulum,ball} --out OUT [--pivot PIVOT]\n                           [--bob BOB] [--period PERIOD]\n                           [--amplitude AMPLITUDE]\n                           [--direction {inward,outward}]\n                           [--no-release-from-rest] [--center CENTER]\n                           [--radius RADIUS] [--floor-y FLOOR_Y] [--e E]\n                           [--g G] [--start-step START_STEP] [--sigma SIGMA]\n                           [--seed SEED] [--steps STEPS] [--guidance GUIDANCE]\n                           [--flow-shift FLOW_SHIFT] [--num-frames NUM_FRAMES]\n                           [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                           [--negative-prompt NEGATIVE_PROMPT]\n                           [--server SERVER] [--proxy-only] [--emit-queue-job]\npython -m nano_phys: error: target_sigma must be in [0, 1], got nan\n"
+      }
+    },
+    {
+      "args": [
+        "--sigma",
+        ".9",
+        "--steps",
+        "20"
+      ],
+      "before": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 20, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 19, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      },
+      "after": {
+        "exit": 2,
+        "proxy_calls": 0,
+        "stdout": "",
+        "stderr": "usage: python -m nano_phys [-h] --image IMAGE --prompt PROMPT --physics\n                           {pendulum,ball} --out OUT [--pivot PIVOT]\n                           [--bob BOB] [--period PERIOD]\n                           [--amplitude AMPLITUDE]\n                           [--direction {inward,outward}]\n                           [--no-release-from-rest] [--center CENTER]\n                           [--radius RADIUS] [--floor-y FLOOR_Y] [--e E]\n                           [--g G] [--start-step START_STEP] [--sigma SIGMA]\n                           [--seed SEED] [--steps STEPS] [--guidance GUIDANCE]\n                           [--flow-shift FLOW_SHIFT] [--num-frames NUM_FRAMES]\n                           [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                           [--negative-prompt NEGATIVE_PROMPT]\n                           [--server SERVER] [--proxy-only] [--emit-queue-job]\npython -m nano_phys: error: sigma selection requires the recorded 35-step grid; use an explicit start_step for other step counts\n"
+      }
+    },
+    {
+      "args": [
+        "--steps",
+        "1"
+      ],
+      "before": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 1, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 14, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      },
+      "after": {
+        "exit": 2,
+        "proxy_calls": 0,
+        "stdout": "",
+        "stderr": "usage: python -m nano_phys [-h] --image IMAGE --prompt PROMPT --physics\n                           {pendulum,ball} --out OUT [--pivot PIVOT]\n                           [--bob BOB] [--period PERIOD]\n                           [--amplitude AMPLITUDE]\n                           [--direction {inward,outward}]\n                           [--no-release-from-rest] [--center CENTER]\n                           [--radius RADIUS] [--floor-y FLOOR_Y] [--e E]\n                           [--g G] [--start-step START_STEP] [--sigma SIGMA]\n                           [--seed SEED] [--steps STEPS] [--guidance GUIDANCE]\n                           [--flow-shift FLOW_SHIFT] [--num-frames NUM_FRAMES]\n                           [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                           [--negative-prompt NEGATIVE_PROMPT]\n                           [--server SERVER] [--proxy-only] [--emit-queue-job]\npython -m nano_phys: error: start_step must be an integer in [0, 0], got 14\n"
+      }
+    },
+    {
+      "args": [
+        "--steps",
+        "0",
+        "--start-step",
+        "0"
+      ],
+      "before": {
+        "exit": 2,
+        "proxy_calls": 0,
+        "stdout": "",
+        "stderr": "usage: python -m nano_phys [-h] --image IMAGE --prompt PROMPT --physics\n                           {pendulum,ball} --out OUT [--pivot PIVOT]\n                           [--bob BOB] [--period PERIOD]\n                           [--amplitude AMPLITUDE]\n                           [--direction {inward,outward}]\n                           [--no-release-from-rest] [--center CENTER]\n                           [--radius RADIUS] [--floor-y FLOOR_Y] [--e E]\n                           [--g G] [--start-step START_STEP] [--sigma SIGMA]\n                           [--seed SEED] [--steps STEPS] [--guidance GUIDANCE]\n                           [--flow-shift FLOW_SHIFT] [--num-frames NUM_FRAMES]\n                           [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                           [--negative-prompt NEGATIVE_PROMPT]\n                           [--server SERVER] [--proxy-only] [--emit-queue-job]\npython -m nano_phys: error: --start-step must be an integer in [0, -1], got 0\n"
+      },
+      "after": {
+        "exit": 2,
+        "proxy_calls": 0,
+        "stdout": "",
+        "stderr": "usage: python -m nano_phys [-h] --image IMAGE --prompt PROMPT --physics\n                           {pendulum,ball} --out OUT [--pivot PIVOT]\n                           [--bob BOB] [--period PERIOD]\n                           [--amplitude AMPLITUDE]\n                           [--direction {inward,outward}]\n                           [--no-release-from-rest] [--center CENTER]\n                           [--radius RADIUS] [--floor-y FLOOR_Y] [--e E]\n                           [--g G] [--start-step START_STEP] [--sigma SIGMA]\n                           [--seed SEED] [--steps STEPS] [--guidance GUIDANCE]\n                           [--flow-shift FLOW_SHIFT] [--num-frames NUM_FRAMES]\n                           [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                           [--negative-prompt NEGATIVE_PROMPT]\n                           [--server SERVER] [--proxy-only] [--emit-queue-job]\npython -m nano_phys: error: steps must be a positive integer\n"
+      }
+    },
+    {
+      "args": [
+        "--sigma",
+        ".9"
+      ],
+      "before": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 35, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 19, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      },
+      "after": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 35, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 19, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      }
+    },
+    {
+      "args": [],
+      "before": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 35, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 14, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      },
+      "after": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 35, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 14, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      }
+    },
+    {
+      "args": [
+        "--steps",
+        "20",
+        "--start-step",
+        "7"
+      ],
+      "before": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 20, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 7, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      },
+      "after": {
+        "exit": 0,
+        "proxy_calls": 1,
+        "stdout": "{\"name\": \"synthetic\", \"prompt\": \"synthetic fixture\", \"image\": \"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic.png\", \"files\": [\"/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/synthetic_proxy.mp4\"], \"width\": 832, \"height\": 480, \"num_frames\": 189, \"fps\": 24, \"steps\": 20, \"guidance\": 6.0, \"flow_shift\": 10.0, \"seed\": 1, \"negative_prompt\": \"\", \"extra_params\": {\"client\": \"nano_phys\", \"noise\": {\"device\": \"cpu\"}, \"latent\": {\"ref\": \"synthetic_proxy.mp4\", \"start_step\": 7, \"init\": \"noised\"}}}\n",
+        "stderr": "[Nano-Phys] Generating analytical ball proxy video...\n[Nano-Phys] Saved proxy video to synthetic_proxy.mp4\n[Nano-Phys] Exiting after proxy/job generation.\n"
+      }
+    }
+  ],
+  "transport_fixtures": [
+    {
+      "name": "empty_summary",
+      "actual_sigma_start": 0.89844,
+      "conflict_recorded": null
+    },
+    {
+      "name": "conflicting_summary",
+      "actual_sigma_start": 0.89844,
+      "conflict_recorded": 0.6
+    }
+  ],
+  "limits": [
+    "Both unchanged raw receipts and synthetic conflict fixtures still return normally: runner records metadata; it does not certify full grid/start/suffix/deployment.",
+    "Archived receipts bind the November 1 run only, not a currently live endpoint.",
+    "Two inconsistent sigmas_used arrays do not prove those values were executed; no inference about actual sampling or model quality."
+  ],
+  "checks": [
+    {
+      "name": "sp_k12_s1 exact published receipt bytes",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s1 full grid matches shipped table",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s1 full grid size/domain",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s1 returned start matches grid",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s1 pinned suffix observation",
+      "pass": true
+    },
+    {
+      "name": "before sp_k12_s1 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "before sp_k12_s1 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "before sp_k12_s1 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k12_s1 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "after sp_k12_s1 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k12_s1 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s2 exact published receipt bytes",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s2 full grid matches shipped table",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s2 full grid size/domain",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s2 returned start matches grid",
+      "pass": true
+    },
+    {
+      "name": "sp_k12_s2 pinned suffix observation",
+      "pass": true
+    },
+    {
+      "name": "before sp_k12_s2 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "before sp_k12_s2 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "before sp_k12_s2 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k12_s2 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "after sp_k12_s2 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k12_s2 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s1 exact published receipt bytes",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s1 full grid matches shipped table",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s1 full grid size/domain",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s1 returned start matches grid",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s1 pinned suffix observation",
+      "pass": true
+    },
+    {
+      "name": "before sp_k19_s1 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "before sp_k19_s1 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "before sp_k19_s1 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k19_s1 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "after sp_k19_s1 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k19_s1 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s2 exact published receipt bytes",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s2 full grid matches shipped table",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s2 full grid size/domain",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s2 returned start matches grid",
+      "pass": true
+    },
+    {
+      "name": "sp_k19_s2 pinned suffix observation",
+      "pass": true
+    },
+    {
+      "name": "before sp_k19_s2 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "before sp_k19_s2 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "before sp_k19_s2 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k19_s2 actual Python preserves raw grid/start/suffix",
+      "pass": true
+    },
+    {
+      "name": "after sp_k19_s2 actual Python extracts returned start",
+      "pass": true
+    },
+    {
+      "name": "after sp_k19_s2 actual request CPU noise/start",
+      "pass": true
+    },
+    {
+      "name": "selector nan acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector positive_inf acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector negative_inf acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector short20 acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector short1 acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector long36 acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector float_steps acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector bool_steps acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector bool_sigma acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector zero acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector zero unchanged valid selection",
+      "pass": true
+    },
+    {
+      "name": "selector one acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector one unchanged valid selection",
+      "pass": true
+    },
+    {
+      "name": "selector lead acceptance",
+      "pass": true
+    },
+    {
+      "name": "selector lead unchanged valid selection",
+      "pass": true
+    },
+    {
+      "name": "selector lower acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', 'nan'] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', 'nan'] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', '.9', '--steps', '20'] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', '.9', '--steps', '20'] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '1'] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '1'] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '0', '--start-step', '0'] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '0', '--start-step', '0'] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', '.9'] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', '.9'] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', '.9'] pure JSONL",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--sigma', '.9'] step",
+      "pass": true
+    },
+    {
+      "name": "CLI [] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI [] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI [] pure JSONL",
+      "pass": true
+    },
+    {
+      "name": "CLI [] step",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '20', '--start-step', '7'] acceptance",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '20', '--start-step', '7'] rejects before proxy build",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '20', '--start-step', '7'] pure JSONL",
+      "pass": true
+    },
+    {
+      "name": "CLI ['--steps', '20', '--start-step', '7'] step",
+      "pass": true
+    },
+    {
+      "name": "remote nan rejected",
+      "pass": true
+    },
+    {
+      "name": "remote nan rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote sigma_non35 rejected",
+      "pass": true
+    },
+    {
+      "name": "remote sigma_non35 rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote bool_start rejected",
+      "pass": true
+    },
+    {
+      "name": "remote bool_start rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote float_start rejected",
+      "pass": true
+    },
+    {
+      "name": "remote float_start rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote terminal rejected",
+      "pass": true
+    },
+    {
+      "name": "remote terminal rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote negative_start rejected",
+      "pass": true
+    },
+    {
+      "name": "remote negative_start rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote short_default rejected",
+      "pass": true
+    },
+    {
+      "name": "remote short_default rejected before HTTP",
+      "pass": true
+    },
+    {
+      "name": "remote sigma0.9 resolves recorded step19",
+      "pass": true
+    },
+    {
+      "name": "remote sigma0.9 actual request step19",
+      "pass": true
+    },
+    {
+      "name": "empty_summary latent retained",
+      "pass": true
+    },
+    {
+      "name": "empty_summary conflict recording",
+      "pass": true
+    },
+    {
+      "name": "conflicting_summary latent retained",
+      "pass": true
+    },
+    {
+      "name": "conflicting_summary conflict recording",
+      "pass": true
+    },
+    {
+      "name": "explicit non35 step has no invented nominal sigma",
+      "pass": true
+    }
+  ],
+  "pass": 101,
+  "fail": 0
+}

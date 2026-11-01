@@ -1,0 +1,7 @@
+[Nano-Phys] Generating analytical pendulum proxy video...
+[Nano-Phys] Saved proxy video to /tmp/ro-sol1-t303-queue-final/pendulum fixture/before output_proxy.mp4
+
+[QUEUE_JOB_JSONL]
+{"name": "before output", "prompt": "Queue fixture: \"quoted\" caption\nsecond line, \u03c0, and $literal", "image": "/tmp/ro-sol1-t303-queue-final/pendulum fixture/synthetic input.png", "width": 832, "height": 480, "num_frames": 93, "fps": 24, "steps": 35, "guidance": 4.25, "flow_shift": 8.5, "seed": 101, "negative_prompt": "No blur\nno duplication", "extra_params": {"client": "nano_phys", "noise": {"device": "cpu"}, "latent": {"ref": "/tmp/ro-sol1-t303-queue-final/pendulum fixture/before output_proxy.mp4", "start_step": 7, "init": "noised"}}}
+[/QUEUE_JOB_JSONL]
+[Nano-Phys] Exiting after proxy/job generation.
