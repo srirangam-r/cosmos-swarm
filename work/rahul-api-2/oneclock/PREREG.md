@@ -43,3 +43,11 @@ no negative, 832x480, 93 f, 24 fps, 35 steps, CFG 6, flow_shift 10 requested (ig
 - rho1 ~ 1 and both slow (g_eq << 9.8): one clip clock (K) -> re-timing the clip is the right class of fix.
 - rho1 clearly != 1: the fall and the bounce run on different clocks -> "slow gravity" is event-specific,
   not a time-scale error, and no single retime fixes the constants.
+
+## Amendment 1 (2026-11-01 ~11:06 UTC)
+QC yield on ball1 s21-30 was 2/10 (most clips clone, morph or ghost during the fall or flight 1; qc_codes.csv), so n would be
+too small. Extension: seeds 31-50 x ball1/ball2 (40 clips, jobs_ext.jsonl), identical settings, endpoints and analysis.
+QC codes are still frozen from strips before ratios. All included clips will be reported, and the s21-30 subset separately.
+Tool changes since the PREREG (before any ball2 clip and before s25-30 ratios): track2 v2 (two-half median background) and
+plateau-aware impacts, made to fix planted failures; planted_est v3 scale. Referee PASS 12/12 (<5%) at 883ab21 (#9e0f834 record).
+Real GAUGE reference under v2: rho1 1.012/0.936/1.236/1.168 (mean 1.088 ± 0.065 SE, n=4).
