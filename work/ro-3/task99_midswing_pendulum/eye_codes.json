@@ -1,0 +1,9 @@
+{"_note": "ro-3 eye codes from qc/roi_*.jpg (every 4th frame, ROI x240:420 y90:300). swing = rod+bob hangs below the axle and oscillates; held = rod stays at/near the horizontal axle line for all 93 f (no drop).",
+ "ms_pend10_rest_s1": {"code": "held", "note": "rod stays horizontal along axle, twitches/rotates in depth, never drops"},
+ "ms_pend10_rest_s2": {"code": "held", "note": "rod rises up and exits ROI top by f24, empty axle after; never drops"},
+ "ms_pend10_rest_s3": {"code": "held", "note": "rod stays horizontal along axle all 93 f"},
+ "ms_pend11_rest_s1": {"code": "held", "note": "rod stays horizontal along axle, small depth rotations"},
+ "ms_pend10_mid_s1": {"code": "swing", "note": "swings below axle, partly toward camera (bob grows), ~2 cycles"},
+ "ms_pend10_mid_s2": {"code": "swing", "note": "swings below axle, some depth wobble/bob deformation"},
+ "ms_pend10_mid_s3": {"code": "swing", "note": "fast large-amplitude swing, ~9 f per cycle"},
+ "real_pend10_rest": {"code": "swing", "note": "real GAUGE continuation from the rest frame: drops and swings"}}

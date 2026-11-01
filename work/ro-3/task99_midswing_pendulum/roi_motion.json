@@ -1,0 +1,44 @@
+{
+ "ms_pend10_mid_s1": {
+  "n": 93,
+  "motion_early": 4.053413800705467,
+  "motion_late": 6.305187757201646,
+  "motion_all": 5.138858791503719
+ },
+ "ms_pend10_mid_s2": {
+  "n": 93,
+  "motion_early": 7.288620664315109,
+  "motion_late": 5.776546884185772,
+  "motion_all": 6.137423989724713
+ },
+ "ms_pend10_mid_s3": {
+  "n": 93,
+  "motion_early": 7.649391901822457,
+  "motion_late": 8.10396017048795,
+  "motion_all": 7.981435089333641
+ },
+ "ms_pend10_rest_s1": {
+  "n": 93,
+  "motion_early": 2.1767045120517348,
+  "motion_late": 2.0131970164609054,
+  "motion_all": 2.0122129246223452
+ },
+ "ms_pend10_rest_s2": {
+  "n": 93,
+  "motion_early": 2.0655838477366255,
+  "motion_late": 0.8754412845385069,
+  "motion_all": 1.326180507629783
+ },
+ "ms_pend10_rest_s3": {
+  "n": 93,
+  "motion_early": 3.2990869341563784,
+  "motion_late": 0.7870653292181071,
+  "motion_all": 2.2691417452649336
+ },
+ "ms_pend11_rest_s1": {
+  "n": 93,
+  "motion_early": 1.8522424309229866,
+  "motion_late": 1.9538289976484424,
+  "motion_all": 1.9286368951767507
+ }
+}

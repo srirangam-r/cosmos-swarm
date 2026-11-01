@@ -1,0 +1,26 @@
+{
+ "real_pend10_mid": {
+  "n": 93,
+  "motion_early": 5.40936507936508,
+  "motion_late": 5.3611816578483245,
+  "motion_all": 5.29308124376965
+ },
+ "real_pend10_rest": {
+  "n": 93,
+  "motion_early": 5.718471487360376,
+  "motion_late": 5.360864197530863,
+  "motion_all": 5.061897381335787
+ },
+ "real_pend11_mid": {
+  "n": 93,
+  "motion_early": 5.641153365667255,
+  "motion_late": 5.392697310405644,
+  "motion_all": 5.395053293459092
+ },
+ "real_pend11_rest": {
+  "n": 93,
+  "motion_early": 5.811361331569664,
+  "motion_late": 5.3678508965314515,
+  "motion_all": 5.130977398205659
+ }
+}
