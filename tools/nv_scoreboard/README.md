@@ -51,7 +51,7 @@ Two continuous companions:
 
 Not bit-identical to VBench: it uses torchvision RAFT instead of the original RAFT repo, PyAV decoding instead of cv2, and removes padding from the flow before computing the top-5% statistic (VBench scores the padded flow). An independent comparison on 12 separately re-encoded 832x480 real clips agreed on all 12 binary scores; see `work/rog2/dd_replication/compare_raj4.txt`. This does not establish equivalence on other sizes or clips near the threshold.
 
-**DOVER** uses the `dover.yml` val-l1080p sampling and DOVER's own `fuse_results` for the fused score. Fragment sampling is random, so use `--dover_reps`.
+**DOVER** uses the `dover.yml` val-l1080p sampling and DOVER's own `fuse_results` for the fused score. Fragment sampling is random, so use `--dover_reps`. The RNG is seeded once per run, so without `--per_clip_seed` a clip's draws depend on its position in the batch: the same clip scored in a different batch can move by ~0.005-0.01 fused at 3 reps (per-draw fused SD ~0.007-0.008 on 832x480 Nano clips). For paired arms, use `--per_clip_seed` (reseeds from `--seed` + crc32(basename)) and/or `--dover_reps 20`.
 
 ## Real reference: GAUGE dev clips (measured only, never trained on)
 `results/gauge_real_matched.json`. The clips were matched to the Cosmos output format with ffmpeg: `scale=832:480,fps=24`, first 189 frames, libx264 crf 18. Per-task numbers are in `findings.md` and the board post.

@@ -23,7 +23,7 @@ DOVER (VQAssessment/DOVER, dover.yml, val-l1080p sampling): raw technical and
 aesthetic heads plus the fused overall score in [0,1] (DOVER's fuse_results).
 DOVER's fragment sampling is random; --dover_reps N averages N draws and reports sd.
 """
-import argparse, glob, json, math, os, sys, time
+import argparse, glob, json, math, os, sys, time, zlib
 import numpy as np
 import torch
 
@@ -91,7 +91,7 @@ def dynamic_degree(path, fps, device="cpu"):
 _DOVER = None
 
 
-def dover_scores(path, dover_dir, device="cpu", reps=1):
+def dover_scores(path, dover_dir, device="cpu", reps=1, rng_seed=None):
     global _DOVER
     import yaml
     if dover_dir not in sys.path:
@@ -103,6 +103,10 @@ def dover_scores(path, dover_dir, device="cpu", reps=1):
         ev = DOVER(**opt["model"]["args"]).to(device)
         ev.load_state_dict(torch.load(os.path.join(dover_dir, "pretrained_weights/DOVER.pth"), map_location=device))
         _DOVER = ev.eval()
+    if rng_seed is not None:
+        # Reseed AFTER the one-time model build (its random init consumes torch RNG on the first clip only).
+        import random
+        torch.manual_seed(rng_seed); np.random.seed(rng_seed); random.seed(rng_seed)
     dopt = opt["data"]["val-l1080p"]["args"]
     samplers = {}
     for st, so in dopt["sample_types"].items():
@@ -140,6 +144,8 @@ def main():
     ap.add_argument("--no_dd", action="store_true")
     ap.add_argument("--dover_reps", type=int, default=1)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--per_clip_seed", action="store_true",
+                    help="reseed RNGs per clip from --seed + crc32(basename), so a clip's DOVER draws do not depend on batch order")
     a = ap.parse_args()
     torch.manual_seed(a.seed); np.random.seed(a.seed)
     import random; random.seed(a.seed)
@@ -164,11 +170,16 @@ def main():
         if meta.get("play_fps") is not None and not math.isclose(float(meta["play_fps"]), fps, rel_tol=0.001, abs_tol=0.01):
             sys.exit(f"play_fps does not match container for {c}: {meta['play_fps']} vs {fps}")
         r = dict(clip=c, fps=fps, fps_source="container", sidecar=side if meta else None, metadata=meta)
+        s = None
+        if a.per_clip_seed:
+            # DOVER's fragment draws otherwise depend on the clip's position in the batch.
+            s = (a.seed + zlib.crc32(os.path.basename(c).encode())) % (2**32)
+            r["rng_seed"] = s
         t0 = time.time()
         if not a.no_dd:
             r.update(dynamic_degree(c, fps, a.device))
         if not a.no_dover:
-            r.update(dover_scores(c, a.dover_dir, a.device, a.dover_reps))
+            r.update(dover_scores(c, a.dover_dir, a.device, a.dover_reps, rng_seed=s))
         r["sec"] = round(time.time() - t0, 1)
         res[os.path.basename(c)] = r
         print(json.dumps({k: v for k, v in r.items() if k != "dd_maxrad"}), flush=True)

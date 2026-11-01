@@ -1,0 +1,302 @@
+{
+ "t276_real_12_plain_s1.mp4": {
+  "clip": "t319/gen/t276_real_12_plain_s1.mp4",
+  "fps": 24.0,
+  "fps_source": "container",
+  "sidecar": "t319/gen/t276_real_12_plain_s1.json",
+  "metadata": {
+   "name": "t276_real_12_plain_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": null,
+   "extra_params": {
+    "noise": {
+     "device": "cpu"
+    }
+   },
+   "prompt_text": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": null,
+   "image": "f0_real_12.png",
+   "owner": "dk2",
+   "queue_id": "164325-a267a3",
+   "endpoint": "q8-4",
+   "endpoint_url": "http://127.0.0.1:8045",
+   "server_clip_id": "20261101T164602_0095_dk2",
+   "artifact_ids": [],
+   "seconds": 56.0,
+   "wall_seconds": 201.1,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+   "relayed": [
+    "server_sidecar.json"
+   ]
+  },
+  "rng_seed": 2592563923,
+  "dover_technical": -0.04743263963609934,
+  "dover_aesthetic": 0.07686498761177063,
+  "dover_fused": 0.5832955866758562,
+  "dover_fused_sd": 0.008725732758511337,
+  "dover_technical_sd": 0.004326364025668337,
+  "dover_aesthetic_sd": 0.0,
+  "dover_reps": 20,
+  "sec": 14.6
+ },
+ "t276_real_12_plain_s2.mp4": {
+  "clip": "t319/gen/t276_real_12_plain_s2.mp4",
+  "fps": 24.0,
+  "fps_source": "container",
+  "sidecar": "t319/gen/t276_real_12_plain_s2.json",
+  "metadata": {
+   "name": "t276_real_12_plain_s2",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": null,
+   "extra_params": {
+    "noise": {
+     "device": "cpu"
+    }
+   },
+   "prompt_text": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": null,
+   "image": "f0_real_12.png",
+   "owner": "dk2",
+   "queue_id": "164326-c52d0f",
+   "endpoint": "q8-2",
+   "endpoint_url": "http://127.0.0.1:8043",
+   "server_clip_id": "20261101T164602_0083_dk2",
+   "artifact_ids": [],
+   "seconds": 55.7,
+   "wall_seconds": 189.6,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+   "relayed": [
+    "server_sidecar.json"
+   ]
+  },
+  "rng_seed": 3710326787,
+  "dover_technical": -0.0418929910287261,
+  "dover_aesthetic": 0.042442720383405685,
+  "dover_fused": 0.5067593427173526,
+  "dover_fused_sd": 0.00602294528673083,
+  "dover_technical_sd": 0.0029038337172298373,
+  "dover_aesthetic_sd": 0.0,
+  "dover_reps": 20,
+  "sec": 12.0
+ },
+ "t276_real_12_plain_s3.mp4": {
+  "clip": "t319/gen/t276_real_12_plain_s3.mp4",
+  "fps": 24.0,
+  "fps_source": "container",
+  "sidecar": "t319/gen/t276_real_12_plain_s3.json",
+  "metadata": {
+   "name": "t276_real_12_plain_s3",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": null,
+   "extra_params": {
+    "noise": {
+     "device": "cpu"
+    }
+   },
+   "prompt_text": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": null,
+   "image": "f0_real_12.png",
+   "owner": "dk2",
+   "queue_id": "164326-00be43",
+   "endpoint": "q8-7",
+   "endpoint_url": "http://127.0.0.1:8048",
+   "server_clip_id": "20261101T164612_0095_dk2",
+   "artifact_ids": [],
+   "seconds": 56.0,
+   "wall_seconds": 188.7,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+   "relayed": [
+    "server_sidecar.json"
+   ]
+  },
+  "rng_seed": 3762762163,
+  "dover_technical": -0.038646160438656804,
+  "dover_aesthetic": 0.05419369041919708,
+  "dover_fused": 0.543703239507828,
+  "dover_fused_sd": 0.007405171059776439,
+  "dover_technical_sd": 0.003596914328996004,
+  "dover_aesthetic_sd": 0.0,
+  "dover_reps": 20,
+  "sec": 12.0
+ },
+ "t276_real_12_nphys_s1.mp4": {
+  "clip": "t319/gen/t276_real_12_nphys_s1.mp4",
+  "fps": 24.0,
+  "fps_source": "container",
+  "sidecar": "t319/gen/t276_real_12_nphys_s1.json",
+  "metadata": {
+   "name": "t276_real_12_nphys_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": null,
+   "extra_params": {
+    "client": "nano_phys",
+    "noise": {
+     "device": "cpu"
+    },
+    "latent": {
+     "ref": "proxy_real_12_nphys.mp4",
+     "start_step": 19,
+     "init": "noised"
+    }
+   },
+   "prompt_text": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": null,
+   "image": "f0_real_12.png",
+   "owner": "rahul-5-agy",
+   "queue_id": "175032-e3f875",
+   "endpoint": "q8-4",
+   "endpoint_url": "http://127.0.0.1:8045",
+   "server_clip_id": "20261101T175106_0123_nano_phys",
+   "artifact_ids": [],
+   "seconds": 32.4,
+   "wall_seconds": 74.9,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+   "relayed": [
+    "server_sidecar.json"
+   ]
+  },
+  "rng_seed": 1814644604,
+  "dover_technical": -0.05233772583305836,
+  "dover_aesthetic": 0.05101758614182472,
+  "dover_fused": 0.5072168282261533,
+  "dover_fused_sd": 0.012542896737198104,
+  "dover_technical_sd": 0.0060497934847410706,
+  "dover_aesthetic_sd": 0.0,
+  "dover_reps": 20,
+  "sec": 12.0
+ },
+ "t276_real_12_nphys_s2.mp4": {
+  "clip": "t319/gen/t276_real_12_nphys_s2.mp4",
+  "fps": 24.0,
+  "fps_source": "container",
+  "sidecar": "t319/gen/t276_real_12_nphys_s2.json",
+  "metadata": {
+   "name": "t276_real_12_nphys_s2",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": null,
+   "extra_params": {
+    "client": "nano_phys",
+    "noise": {
+     "device": "cpu"
+    },
+    "latent": {
+     "ref": "proxy_real_12_nphys.mp4",
+     "start_step": 19,
+     "init": "noised"
+    }
+   },
+   "prompt_text": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": null,
+   "image": "f0_real_12.png",
+   "owner": "rahul-5-agy",
+   "queue_id": "175033-0de5a7",
+   "endpoint": "q8-6",
+   "endpoint_url": "http://127.0.0.1:8047",
+   "server_clip_id": "20261101T175108_0114_nano_phys",
+   "artifact_ids": [],
+   "seconds": 32.5,
+   "wall_seconds": 73.8,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+   "relayed": [
+    "server_sidecar.json"
+   ]
+  },
+  "rng_seed": 730414508,
+  "dover_technical": -0.05245658028870821,
+  "dover_aesthetic": 0.03784140571951866,
+  "dover_fused": 0.4730011178735216,
+  "dover_fused_sd": 0.007977893114264252,
+  "dover_technical_sd": 0.0038561925282506195,
+  "dover_aesthetic_sd": 0.0,
+  "dover_reps": 20,
+  "sec": 11.8
+ },
+ "t276_real_12_nphys_s3.mp4": {
+  "clip": "t319/gen/t276_real_12_nphys_s3.mp4",
+  "fps": 24.0,
+  "fps_source": "container",
+  "sidecar": "t319/gen/t276_real_12_nphys_s3.json",
+  "metadata": {
+   "name": "t276_real_12_nphys_s3",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": null,
+   "extra_params": {
+    "client": "nano_phys",
+    "noise": {
+     "device": "cpu"
+    },
+    "latent": {
+     "ref": "proxy_real_12_nphys.mp4",
+     "start_step": 19,
+     "init": "noised"
+    }
+   },
+   "prompt_text": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": null,
+   "image": "f0_real_12.png",
+   "owner": "rahul-5-agy",
+   "queue_id": "175033-b830ee",
+   "endpoint": "q8-0",
+   "endpoint_url": "http://127.0.0.1:8041",
+   "server_clip_id": "20261101T175108_0127_nano_phys",
+   "artifact_ids": [],
+   "seconds": 32.4,
+   "wall_seconds": 73.2,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack",
+   "relayed": [
+    "server_sidecar.json"
+   ]
+  },
+  "rng_seed": 384373788,
+  "dover_technical": -0.0502651808783412,
+  "dover_aesthetic": 0.04430127516388893,
+  "dover_fused": 0.4941888152444756,
+  "dover_fused_sd": 0.008305598332627584,
+  "dover_technical_sd": 0.004004677527120006,
+  "dover_aesthetic_sd": 0.0,
+  "dover_reps": 20,
+  "sec": 11.9
+ }
+}
