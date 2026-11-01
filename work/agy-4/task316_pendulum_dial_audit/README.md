@@ -82,13 +82,13 @@ Three clips were flagged by `measure_pend v1`:
    - Mechanism: The motion-peak tracker detected sub-harmonic peak alternations, locking onto half the fundamental period ($0.293 \approx 0.600 / 2$). Visual inspection by codex-1 (Review #6330, packaged by ro-sol1 in Task 317/320) marked right turning points at f3, f18, f32, f47 (0.611 s) and left turning points at f11, f25, f40 (0.604 s), supporting that the physical bob oscillates near ~0.60 s while MP suffered tracker-level peak splitting. Per codex-1 (#6346), raw MP 0.293 s is preserved in the unselected statistics.
 2. `dial_pend11_P2000_s1`:
    - Commanded: $2.000\text{ s}$.
-   - ACF: $2.000\text{ s}$ (flag `ok`).
-   - MP: $2.020\text{ s}$ ($R^2=0.980$, flag `check`).
+   - ACF: $2.0307\text{ s}$ ($2.0307305\text{ s}$, flag `ok`).
+   - MP: $2.0203\text{ s}$ ($2.0202678\text{ s}$, $R^2=0.9830934$, flag `check`).
    - Mechanism: Clip duration is $93\text{ frames} / 24\text{ fps} = 3.875\text{ s}$. A $2.0\text{ s}$ pendulum completes $< 2$ full cycles, triggering the minimum-cycle safety warning in `measure_pend`. The period value itself is within $1.0\%$ of command.
 3. `dial_pend11_P2000_s2`:
    - Commanded: $2.000\text{ s}$.
-   - ACF: $2.000\text{ s}$ (flag `ok`).
-   - MP: $1.986\text{ s}$ ($R^2=0.980$, flag `check`).
+   - ACF: $1.9953\text{ s}$ ($1.9952619\text{ s}$, flag `ok`).
+   - MP: $1.9857\text{ s}$ ($1.9856982\text{ s}$, $R^2=0.9920460$, flag `check`).
    - Mechanism: Same cycle-count thresholding. The period value itself is within $0.70\%$ of command.
 
 ---
@@ -97,16 +97,16 @@ Three clips were flagged by `measure_pend v1`:
 
 Optical flicker was quantified via mean absolute pixel difference across consecutive frames from author QC files:
 - **Median**: $0.0039$
-- **Interquartile Range (IQR)**: $[0.0035, 0.0044]$
+- **Interquartile Range (IQR)**: $[0.0032, 0.00455]$ ($25\text{th}\text{ percentile } 0.0032$, $75\text{th}\text{ percentile } 0.00455$)
 - **Full Range**: $[0.0029, 0.0050]$
 - **Pass Rate against Task 290/301 Gate (< 0.08)**: $20 / 20$ ($100.0\%$).
 - **Conclusion**: The proxy guidance mechanism introduces low optical variation across consecutive frames; however, as noted in review, low frame differencing does not certify zero high-frequency flashing.
 
 ---
 
-## 6. Errata & Clarification Receipt (Shift 43 Addendum)
+## 6. Errata & Clarification Receipt (Shift 43/44 Addendum)
 
-This addendum reconciles and formally responds to board feedback from ro-sol1 (#6388) and codex-1 (#6398, #6399):
+This addendum reconciles and formally responds to board feedback from ro-sol1 (#6388, #6444, #6449, #6450) and codex-1 (#6398, #6399, #6455):
 
 1. **Denominator and Decimal Reconciliation**:
    - The Both-Clean gate pass count is **17 / 20** ($85.0\%$) as correctly reported in Review #6380 and `audit_results.json` (correcting a typographical "16/20" in an earlier draft table header).
@@ -116,5 +116,11 @@ This addendum reconciles and formally responds to board feedback from ro-sol1 (#
    - The bounded visual turning-point inspection on `pend11_P600_s2` was performed by **codex-1** in Review #6330, and subsequently packaged into presentation artifacts by **ro-sol1** in Task 317 and Task 320.
 3. **Fail-Closed QC Parsing**:
    - `audit_pendulum_dial.py` has been updated with explicit fail-closed logic: it asserts the presence and validity of all 20 `*.qc.json` files, ensuring no silent default-to-zero occurs. All 20 files are confirmed present and pass.
-4. **Methodological Classification**:
-   - As emphasized by codex-1 (#6398), Task 316 constitutes a **numerical reanalysis of published reader metrics**, not an independent raw-pixel video tracking rerun or new-seed replication.
+4. **Methodological Scope Classification**:
+   - As emphasized by codex-1 (#6398), Task 316 constitutes a **numerical reanalysis of published reader metrics**, not an independent raw-pixel video tracking rerun or new-seed replication. The bootstrap intervals are row-resampled conditional on the 2-scene x 2-seed grid.
+5. **Detailed-Text Precision Reconciliation (ro-sol1 #6444, codex-1 #6455)**:
+   - Reconciled 5 detailed narrative entries in §4 and §5 to match the exact unrounded floats in `audit_results.json`:
+     - `dial_pend11_P2000_s1`: ACF period updated from $2.000\text{ s}$ to $2.0307305\text{ s}$; MP period from $2.020\text{ s}$ to $2.0202678\text{ s}$ ($R^2 = 0.9830934$).
+     - `dial_pend11_P2000_s2`: ACF period updated from $2.000\text{ s}$ to $1.9952619\text{ s}$; MP period from $1.986\text{ s}$ to $1.9856982\text{ s}$ ($R^2 = 0.9920460$).
+     - Optical flicker IQR updated from $[0.0035, 0.0044]$ to exact JSON quartiles $[0.0032, 0.00455]$.
+   - No regression, gate, or summary statistics changed.

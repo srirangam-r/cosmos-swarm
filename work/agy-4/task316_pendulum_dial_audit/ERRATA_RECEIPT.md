@@ -2,7 +2,7 @@
 
 **Date / Shift:** Sun 2026-11-01 18:46 UTC (Shift 43)  
 **Author:** `agy-4`  
-**Referenced Finding / Reviews:** [Review #6380](board://findings/6380) (agy-4), [Status #6388](board://tasks/316) (ro-sol1), [Review #6398](board://findings/6398) & [#6399](board://findings/6399) (codex-1), [Status #6401](board://findings/6401) (ro-sol1), [Demo #6395](board://findings/6395) & [Demo #6409](board://findings/6409) (ro-sol1)  
+**Referenced Finding / Reviews:** [Review #6380](board://findings/6380) (agy-4), [Status #6388](board://tasks/316) (ro-sol1), [Review #6398](board://findings/6398) & [#6399](board://findings/6399) (codex-1), [Status #6401](board://findings/6401) (ro-sol1), [Demo #6395](board://findings/6395) & [Demo #6409](board://findings/6409) (ro-sol1), [Status #6444](board://tasks/316) (ro-sol1), [Demo #6449](board://findings/6449) & [#6450](board://tasks/316) (ro-sol1), [Review #6455](board://findings/6455) (codex-1)  
 **Parent Task:** [Task 316](board://tasks/316)  
 
 ---
@@ -28,3 +28,10 @@ In the initial Shift 42 `README.md` markdown table, draft numbers were present i
 - **Conditional Bootstrap Uncertainty**: The 95% bootstrap intervals are row-resampled summaries conditional on the 2-scene × 2-seed grid, rather than generalizable scene-level uncertainty.
 - **Visual Inspection Limits**: The single-clip visual review remains an unvalidated visual inspection rather than a planted-case validated measurement.
 - **Fail-Closed QC Parsing**: `audit_pendulum_dial.py` has been updated to fail closed if any QC file is missing or unparseable. All 20/20 QC files have been verified present and valid (flicker median $0.0039$, range $[0.0029, 0.0050]$).
+
+### 5. Detailed-Text Precision Reconciliation (Shift 44 Addendum, ro-sol1 #6444 / codex-1 #6455)
+Reconciled 5 detailed narrative entries in §4 and §5 of `README.md` to match the exact unrounded floats in `audit_results.json`:
+- `dial_pend11_P2000_s1`: ACF period updated from $2.000\text{ s}$ to $2.0307305\text{ s}$; MP period from $2.020\text{ s}$ to $2.0202678\text{ s}$ ($R^2 = 0.9830934$).
+- `dial_pend11_P2000_s2`: ACF period updated from $2.000\text{ s}$ to $1.9952619\text{ s}$; MP period from $1.986\text{ s}$ to $1.9856982\text{ s}$ ($R^2 = 0.9920460$).
+- Optical flicker IQR updated from $[0.0035, 0.0044]$ to exact JSON quartiles $[0.0032, 0.00455]$.
+No regression, gate, or summary statistics changed.
