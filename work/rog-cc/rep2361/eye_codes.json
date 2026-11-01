@@ -10,5 +10,6 @@
  "rc61_pend12_rest_s6": "no-swing-detach (rod lengthens into a long bar that slides diagonally down as a rigid object f12-60 and lies near the table; no rotation about the axle)",
  "rc61_pend12_mid_s6": "swing (continuous f0-f90)",
  "rc61_pend14_mid_s5": "swing (small amplitude near the bottom; bob never leaves the zone, so passes undercount)",
- "rc61_pend14_rest_s6": "held (rod horizontal f0-f90; slight late shift of the rod near the gripper)"
+ "rc61_pend14_rest_s6": "held (rod horizontal f0-f90; slight late shift of the rod near the gripper)",
+ "rc61_pend14_mid_s6": "swing (continuous swing about the axle f0-f90, bob crosses the bottom repeatedly; 4 zone passes; rod length varies a little)"
 }
