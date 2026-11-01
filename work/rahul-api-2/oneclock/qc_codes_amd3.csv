@@ -31,3 +31,27 @@ oc_A_ball1_s65,0,"ball rises to top f2-8 and returns ~2.5x larger f10",2026-11-0
 oc_A_ball2_s65,0,"hover f0-10 then fall; morph at rail f18; ball ~2x larger on plank f20+ (toward camera)",2026-11-01T11:44
 oc_A_ball1_s66,0,"morph f2-6; ball rises to top, returns ~2.5x larger",2026-11-01T11:44
 oc_A_ball2_s66,0,"fall f0-4 then mid-air reversal f4-10 (rises to top), falls again f12-18",2026-11-01T11:44
+oc_A_ball1_s67,0,"ball rises f2-4 before falling; rolls toward camera and exits right by f22; no flight 1",2026-11-01T11:49
+oc_A_ball2_s67,0,"ball rises f2-4 before falling; grows ~2x, rolls toward camera and exits; no flight 1",2026-11-01T11:49
+oc_A_ball1_s68,0,"ball vanishes f2-8; giant ball from f10",2026-11-01T11:49
+oc_A_ball2_s68,0,"ball vanishes f2-6; giant ball with a hook/strap on top from f8",2026-11-01T11:49
+oc_A_ball1_s69,0,"ball faint/semi-transparent at end of fall f14-22 and in flight 1 f30-40",2026-11-01T11:49
+oc_A_ball2_s69,0,"ball faint at rail f16-18 and semi-transparent in flight 1 f30-40",2026-11-01T11:49
+oc_A_ball1_s70,0,"fall f0-22 continuous but squash-morph at impact f22 and ball ~2x larger in flight 1 f28-38 (toward camera)",2026-11-01T11:49
+oc_A_ball2_s70,0,"fall continuous but ball grows ~2.5x by flight 1 f30-38 (toward camera)",2026-11-01T11:49
+oc_A_ball1_s71,0,"ball morphs/fragments f2-20; strap/tether-like structure f22+",2026-11-01T11:49
+oc_A_ball2_s71,0,"ball rises f2-4 then morph f6",2026-11-01T11:49
+oc_A_ball1_s72,0,"fall f0-20 clean but ball turns glassy/semi-transparent (purple tint) in flight 1 f22-32",2026-11-01T11:49
+oc_A_ball2_s72,0,"ball doubles f4-14 (one goes up, one down: clone)",2026-11-01T11:49
+oc_A_ball1_s73,0,"ball fades f2-6; giant morphing ball f12-16",2026-11-01T11:55
+oc_A_ball2_s73,0,"ball grows ~3x by f4-6 and comes toward camera",2026-11-01T11:55
+oc_A_ball1_s74,0,"ball replaced by a large ball at f2; scene artifacts",2026-11-01T11:55
+oc_A_ball2_s74,0,"ball vanishes f2-6; scene artifacts (gripper-like object) f12-14",2026-11-01T11:55
+oc_A_ball1_s75,0,"second translucent ball appears f6-12 (clone)",2026-11-01T11:55
+oc_A_ball2_s75,0,"lands behind the rail f12-13, sits on/over the rail f15-18 then moves forward onto the plank f20-24 (depth motion; no clean flight 1; per-frame zoom f6-29)",2026-11-01T11:55
+oc_A_ball1_s76,0,"ghost/semi-transparent ball f12-14 and f24-26; morph f16-18; grows ~2x by f22",2026-11-01T11:55
+oc_A_ball2_s76,0,"ghost/semi-transparent ball after impact f12-14 and f24-26; grows ~2x by f22",2026-11-01T11:55
+oc_A_ball1_s77,0,"ball grows ~3x during fall f0-10 (toward camera)",2026-11-01T11:55
+oc_A_ball2_s77,0,"smear/ghost at impact f12-15; ball glassy/semi-transparent at flight-1 apex f20-25 (per-frame zoom f8-31)",2026-11-01T11:55
+oc_A_ball1_s78,0,"morph/streak f6-10; ball perched at rail f16-22; ghost f24-26",2026-11-01T11:55
+oc_A_ball2_s78,0,"morph f6-10; ball perched at rail f16-22; smear f26 and f34",2026-11-01T11:55
