@@ -131,12 +131,19 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
             call["image"] = img
     spec = parse_internals(extra, num_frames, num_inference_steps,
                            {Path(f.filename or "").name: f.file.read() for f in internals_files or []})
+    if spec and spec.prompt_switch and float(guidance_scale) <= 1.0:
+        raise HTTPException(400, "internals: prompt_switch changes the conditional CFG pass, so it needs guidance_scale > 1")
     rec, artifact_id = None, None
     STATE["waiting"] += 1
     with LOCK:
         STATE["waiting"] -= 1; STATE["busy"] = True
         try:
             pipe.scheduler = UniPCMultistepScheduler.from_config(BASE_SCHED, flow_shift=float(flow_shift))
+            if spec and spec.prompt_switch:  # the other prompt's packed text, from a 1-step dry run (no other hooks yet)
+                call["generator"] = torch.Generator(device="cuda").manual_seed(int(seed))
+                with neg_meta.negative_metadata(pipe, neg_mode):
+                    spec.prompt_switch["pack"] = internals.capture_text_pack(pipe, call, spec.prompt_switch["prompt"])
+                pipe.scheduler = UniPCMultistepScheduler.from_config(BASE_SCHED, flow_shift=float(flow_shift))
             call["generator"] = torch.Generator(device="cuda").manual_seed(int(seed))
             t1 = time.time()
             with neg_meta.negative_metadata(pipe, neg_mode), \

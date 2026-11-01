@@ -31,7 +31,7 @@ class InternalsError(ValueError):
 
 
 ARTIFACT_RE = re.compile(r"^[A-Za-z0-9_-]{1,64}$")
-KEYS = {"rope", "conditioning", "capture", "steer"}
+KEYS = {"rope", "conditioning", "capture", "steer", "prompt_switch"}
 PASSES = ("cond", "uncond")
 
 
@@ -82,6 +82,7 @@ class Spec:
     cond_attn: dict | None = None  # factor, range, layers
     capture: dict | None = None  # layers, range, every, passes, full
     steer: dict | None = None  # alpha, range, passes, profile, include_cond, vectors {layer: tensor}
+    prompt_switch: dict | None = None  # prompt, range; server.py adds "pack" (capture_text_pack) before the run
 
 
 # ----------------------------------------------------------------------------- parsing
@@ -297,6 +298,17 @@ def _parse_steer(v, env):
     return steer, {**v, "vectors": described}
 
 
+def _parse_prompt_switch(v, env):
+    v = _obj(v, "prompt_switch")
+    _unknown(v, {"prompt", "step_range"}, "prompt_switch")
+    p = v.get("prompt")
+    if not isinstance(p, str) or not p.strip():
+        raise InternalsError("prompt_switch.prompt must be a non-empty string (the prompt the conditional pass gets)")
+    if len(p) > 8000:
+        raise InternalsError("prompt_switch.prompt is longer than 8000 characters")
+    return dict(prompt=p, range=_step_range(v.get("step_range"), env, "prompt_switch"))
+
+
 def parse(raw, env: Env) -> Spec:
     """Validate `extra_params.internals`. Raises InternalsError (-> 400). No GPU, no model."""
     raw = _obj(raw, "internals")
@@ -310,9 +322,47 @@ def parse(raw, env: Env) -> Spec:
         spec.capture = _parse_capture(raw["capture"], env)
     if "steer" in raw:
         spec.steer, spec.raw["steer"] = _parse_steer(raw["steer"], env)
-    if not any((spec.rope, spec.cond_noise, spec.cond_attn, spec.capture, spec.steer)):
+    if "prompt_switch" in raw:
+        spec.prompt_switch = _parse_prompt_switch(raw["prompt_switch"], env)
+    if not any((spec.rope, spec.cond_noise, spec.cond_attn, spec.capture, spec.steer, spec.prompt_switch)):
         raise InternalsError("internals is empty; give one of " + ", ".join(sorted(KEYS)))
     return spec
+
+
+# ----------------------------------------------------------------------------- prompt switch
+# The transformer inputs that carry the packed text, and the sequence layout that depends on its length
+# (ro-1's server_prompt_switch.py, work/ro-1/switch_probe). The noisy latents (vision_tokens) are not among them.
+TEXT_PACK_KEYS = ("input_ids", "text_indexes", "position_ids", "und_len", "sequence_length", "vision_token_shapes",
+                  "vision_sequence_indexes", "vision_mse_loss_indexes", "vision_noisy_frame_indexes")
+
+
+class _PackCaptured(Exception):
+    pass
+
+
+def capture_text_pack(pipe, call: dict, prompt: str) -> dict:
+    """The conditional pass's packed text inputs for `prompt`: run the pipeline for one step with the same call and
+    stop at the first transformer call (the conditional pass of step 0). Install no other hooks while this runs."""
+    box = {}
+
+    def grab(module, args, kwargs):
+        box.update({k: kwargs[k] for k in TEXT_PACK_KEYS if k in kwargs})
+        raise _PackCaptured()
+
+    gen = call.get("generator")
+    dry = {**call, "prompt": prompt, "num_inference_steps": 1,
+           "generator": torch.Generator(device=gen.device if gen is not None else "cpu").manual_seed(0)}
+    h = pipe.transformer.register_forward_pre_hook(grab, with_kwargs=True)
+    try:
+        pipe(**dry)
+    except _PackCaptured:
+        pass
+    finally:
+        h.remove()
+    missing = [k for k in ("input_ids", "und_len", "sequence_length") if k not in box]
+    if missing:
+        raise RuntimeError(f"prompt_switch: the dry run did not reach the transformer with {missing}; diffusers changed?")
+    return box
 
 
 # ----------------------------------------------------------------------------- hooks
@@ -384,6 +434,7 @@ class Recorder:
         self.steered = []  # (step, pass, layer) triples
         self.attn_steps = set()
         self.noise_steps = set()
+        self.switch_steps = set()
 
     def summary(self):
         out = {}
@@ -396,6 +447,8 @@ class Recorder:
             out["attention_scale_steps"] = sorted(self.attn_steps)
         if self.noise_steps:
             out["conditioning_noise_steps"] = sorted(self.noise_steps)
+        if self.switch_steps:
+            out["prompt_switch_steps"] = sorted(self.switch_steps)
         return out
 
 
@@ -405,6 +458,13 @@ def _on_transformer_call(pipe, spec, st, rec, module, args, kwargs):
         st.step, st.calls = step, 0
     st.pass_name = "cond" if st.calls == 0 else "uncond"
     st.calls += 1
+    changed = False
+    ps = spec.prompt_switch
+    if ps and ps.get("pack") and st.pass_name == "cond" and _in(step, ps["range"]):
+        # Swap in the other prompt's packed text before anything below reads the sequence layout.
+        kwargs = {**kwargs, **ps["pack"]}
+        changed = True
+        rec.switch_steps.add(step)
     try:
         st.und_len = int(kwargs["und_len"])
         st.T, st.ph, st.pw = kwargs["vision_token_shapes"][0]
@@ -428,7 +488,7 @@ def _on_transformer_call(pipe, spec, st, rec, module, args, kwargs):
             y[:, :, f] = ((1 - n["level"]) * x[:, :, f].float() + n["level"] * eps[:, :, f]).to(x.dtype)
         rec.noise_steps.add(step)
         return args, {**kwargs, "vision_tokens": [y, *kwargs["vision_tokens"][1:]]}
-    return None
+    return (args, kwargs) if changed else None
 
 
 def _attn_wrapper(orig, spec, st, rec):
@@ -499,7 +559,7 @@ def installed(pipe, spec: Spec):
     with contextlib.ExitStack() as stack:
         if spec.rope:
             stack.enter_context(rope_scaled(tr, spec.rope))
-        if spec.cond_noise or spec.cond_attn or spec.capture or spec.steer:
+        if spec.cond_noise or spec.cond_attn or spec.capture or spec.steer or spec.prompt_switch:
             h = tr.register_forward_pre_hook(functools.partial(_on_transformer_call, pipe, spec, st, rec), with_kwargs=True)
             stack.callback(h.remove)
         if spec.cond_attn:
