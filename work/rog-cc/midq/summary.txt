@@ -1,0 +1,17 @@
+full:QT-F:gauge_overall                -0.049 ± 0.014  CI90 [-0.075,-0.023] n=8 up=1 NI not shown, sig drop
+full:QS-F:gauge_overall                +0.003 ± 0.002  CI90 [-0.003,+0.009] n=3 up=3 NI
+full:QT-F:gauge_physical               -0.067 ± 0.026  CI90 [-0.116,-0.017] n=8 up=1 NI not shown, sig drop
+full:QS-F:gauge_physical               -0.009 ± 0.004  CI90 [-0.020,+0.001] n=3 up=0 NI
+full:QT-F:gauge_Q125                   -0.201 ± 0.063  CI90 [-0.321,-0.081] n=8 up=1 
+full:QS-F:gauge_Q125                   -0.041 ± 0.014  CI90 [-0.082,+0.001] n=3 up=0 
+full:QT-F:mf_overall                   -0.006 ± 0.004  CI90 [-0.013,+0.001] n=8 up=3 NI
+full:QS-F:mf_overall                   +0.006 ± 0.005  CI90 [-0.008,+0.019] n=3 up=2 NI
+full:QT-F:mf_physical                  +0.005 ± 0.006  CI90 [-0.006,+0.016] n=8 up=6 NI
+full:QS-F:mf_physical                  +0.003 ± 0.001  CI90 [-0.001,+0.006] n=3 up=3 NI
+trunc36:QT-F:gauge_overall             -0.015 ± 0.009  CI90 [-0.032,+0.002] n=8 up=3 NI not shown
+trunc36:QT-F:gauge_physical            -0.025 ± 0.017  CI90 [-0.057,+0.007] n=8 up=3 NI not shown
+trunc36:QT-F:gauge_Q125                -0.099 ± 0.047  CI90 [-0.189,-0.009] n=8 up=2 
+trunc36:QT-F:mf_overall                +0.005 ± 0.003  CI90 [-0.002,+0.011] n=8 up=5 NI
+trunc36:QT-F:mf_physical               +0.010 ± 0.005  CI90 [+0.001,+0.018] n=8 up=6 NI, sig gain
+validity {"V1_real_minus_static_mf_physical": 0.04974521265054754, "V1_real_minus_static_gauge_physical": 0.08257187157869333, "V1_pass": false, "V2_twin_sum_bounce_lower(16+17)": 1.1226060660555959, "V2_twin_sum_rest(18+19)": 1.0930247763171792}
+real {"full:real_ball1_dd32_93f": {"gauge_overall": 0.6163863869240651, "gauge_physical": 0.5111629559348027, "gauge_Q125": 0.44696542620658875, "mf_overall": 0.6530021771064235, "mf_physical": 0.5962402169592679}, "trunc36:trunc36_real_ball1_dd32_93f": {"gauge_overall": 0.6595780081473864, "gauge_physical": 0.5644159590204557, "gauge_Q125": 0.5889211297035217, "mf_overall": 0.6631450152231587, "mf_physical": 0.6017088465392589}}
