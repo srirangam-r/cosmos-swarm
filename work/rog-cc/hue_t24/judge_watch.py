@@ -6,7 +6,9 @@ ARMS = ["base", "loraC", "loraA", "baseL", "loraB"]
 ROOT = os.path.expanduser("~/other_work/sclaw/swarm-work/rog-cc/hue_t24")
 JUDGE = os.path.expanduser("~/other_work/sclaw/swarm-work/rog-cc/cosmos-swarm/tools/hue_judge/hue_judge.py")
 QS = os.path.expanduser("~/other_work/sclaw/swarm-work/rog1/data/hue/hue-v1p2-t2v-public.json")
-NEED = 32; DEADLINE = time.time() + 6.5 * 3600
+NV = os.path.expanduser("~/other_work/sclaw/swarm-work/rog-cc/cosmos-swarm/tools/nv_scoreboard/score.py")
+DOVER = os.path.expanduser("~/other_work/sclaw/swarm-work/rog-cc/ext/DOVER")
+NEED = 32; DEADLINE = time.time() + 6.3 * 3600
 pat = re.compile(r"^((?:physics|robot)_\d+)_s(\d+)\.mp4$")
 last = {}; nstable = {}
 def listing(arm):
@@ -34,5 +36,12 @@ while time.time() < DEADLINE:
         rc = subprocess.run(["python3", JUDGE, "--questions", QS, "--offsets", "0,0.5", "--out", out] + args).returncode
         if rc == 0: open(out + ".done", "w").write(time.strftime("%FT%T"))
         else: print("judge failed", arm, rc, flush=True)
+        # NVIDIA-scoreboard items on the same clips (PREREG addendum A1): DOVER x3 draws + VBench DD, GPU, ~10 s/clip
+        os.makedirs(f"{ROOT}/res_nv", exist_ok=True); nvo = f"{ROOT}/res_nv/{arm}.json"
+        clips = [p for p in sorted(glob.glob(d + "/*.mp4")) if pat.match(os.path.basename(p))]
+        print("nv scoring", arm, len(clips), flush=True)
+        rc2 = subprocess.run(["python3", NV, *clips, "--dover_dir", DOVER, "--device", "cuda", "--dover_reps", "3", "--out", nvo]).returncode
+        if rc2 == 0: open(nvo + ".done", "w").write(time.strftime("%FT%T"))
+        else: print("nv failed", arm, rc2, flush=True)
     time.sleep(300)
 print("watcher exit", flush=True)

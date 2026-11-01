@@ -30,3 +30,16 @@ Note: the robot prompts differ from rog1's #1178 subset (only robot_011 is share
 **Seed noise**: base s1 vs s2 per-clip SD, for all 16 prompts (centred: sd(d)/√2).
 
 **Code**: analyze_t24.py (this folder); watcher judge_watch.py pulls GB10 ~/jobs/rahul-3/hue_clips/<arm>/ once 32 clips are stable.
+
+## Addendum A1 (2026-11-01 06:05 UTC, before any task-24 HUE clip exists): NVIDIA-scoreboard items on the same clips
+- **Human decision**: margins 0.03 overall / 0.04 Physical approved (poornimajd, #1306, option A of #1273).
+- **What**: tools/nv_scoreboard/score.py on every clip of all 5 arms (rog 4060, `--device cuda --dover_reps 3`, container fps 24):
+  DOVER fused/technical/aesthetic (mean of 3 random fragment draws) and VBench dynamic degree (dd_binary, dd_norm).
+  DOVER install: VQAssessment/DOVER git HEAD + DOVER.pth (239,729,097 bytes).
+- **Aggregation/test**: same as the primary HUE analysis (seeds averaged per prompt; paired d_p = arm − base over 16 prompts;
+  one-sided 95% t(15) LB; 10k prompt bootstrap as sensitivity). Code: analyze_nv.py. Output: res_nv/<arm>.json.
+- **Margins (PROPOSED, not human-approved)**: dover_fused δ = 0.02 (absolute, ≈4% of a ~0.5 score);
+  dd_binary (VBench set score) δ = 0.10; dd_norm δ = 15% of the base arm's mean. Same verdict rule as the HUE primary.
+- **Reading**: dynamic degree has no real reference for these T2V prompts, so an arm − base change is a motion-amount
+  change, not NVIDIA's motion-fidelity score (that needs real clips at the same fps). A large DD *increase* is flagged too.
+- baseL − base is the A/A null; B and C are the any-LoRA controls, as for HUE.
