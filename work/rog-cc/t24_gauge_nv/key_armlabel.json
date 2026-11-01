@@ -1,0 +1,590 @@
+{
+"00a475": {
+"arm": "loraB",
+"prompt": "Pjson",
+"seed": 4,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"0152b7": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 16,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"06809d": {
+"arm": "base_ctlbox",
+"prompt": "Pgauge",
+"seed": 2,
+"box": "rahul3-ctl",
+"set": "gaugeX_base"
+},
+"0780c6": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 6,
+"box": "rahul3-lora",
+"set": "gauge2_loraB"
+},
+"15ebd6": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 4,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"1ab545": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 11,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"20443e": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 10,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"213cda": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 4,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"2adddf": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 15,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"2b5a65": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 3,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"2c0f57": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 2,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"2e3db5": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 7,
+"box": "rahul3-lora",
+"set": "gauge2_base"
+},
+"2eecd3": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 1,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"35eda3": {
+"arm": "loraC",
+"prompt": "Pjson",
+"seed": 2,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"36e6bd": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 10,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"3caae8": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 14,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"3fc7f0": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 14,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"4120b2": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 4,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"413bf4": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 2,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"44bcfb": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 12,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"5ab7eb": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 12,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"5ed352": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 10,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"604902": {
+"arm": "loraC",
+"prompt": "Pjson",
+"seed": 1,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"635d5b": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 16,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"6361ab": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 11,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"6759fe": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 7,
+"box": "rahul3-lora",
+"set": "gauge2_loraA"
+},
+"6ab35c": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 5,
+"box": "rahul3-ctl",
+"set": "gauge2_loraC"
+},
+"6aff9b": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 2,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"6d3df5": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 8,
+"box": "rahul3-lora",
+"set": "gauge2_loraB"
+},
+"70f54c": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 5,
+"box": "rahul3-lora",
+"set": "gauge2_base"
+},
+"714e0d": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 15,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"720fbf": {
+"arm": "loraC",
+"prompt": "Pjson",
+"seed": 3,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"735b74": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 5,
+"box": "rahul3-lora",
+"set": "gauge2_loraB"
+},
+"7510f5": {
+"arm": "base_ctlbox",
+"prompt": "Pgauge",
+"seed": 1,
+"box": "rahul3-ctl",
+"set": "gaugeX_base"
+},
+"7882dd": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 15,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"7a02e8": {
+"arm": "loraA",
+"prompt": "Pjson",
+"seed": 3,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"7c0a8e": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 12,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"7e9000": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 1,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"7f3de9": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 4,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"7f7279": {
+"arm": "loraB",
+"prompt": "Pjson",
+"seed": 1,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"808ef1": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 3,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"85f0fe": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 9,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"86ecd1": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 16,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"8fef3c": {
+"arm": "loraA",
+"prompt": "Pjson",
+"seed": 2,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"910269": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 14,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"95920c": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 9,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"9a3268": {
+"arm": "base",
+"prompt": "Pjson",
+"seed": 4,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"9ebbaa": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 14,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"a018e3": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 11,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+},
+"a21c3b": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 3,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"a9e6ef": {
+"arm": "loraB",
+"prompt": "Pjson",
+"seed": 3,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"b2b61f": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 7,
+"box": "rahul3-ctl",
+"set": "gauge2_loraC"
+},
+"b5b1e0": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 6,
+"box": "rahul3-lora",
+"set": "gauge2_loraA"
+},
+"bdbc93": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 15,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"bf90a1": {
+"arm": "loraB",
+"prompt": "Pjson",
+"seed": 2,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"c0f94d": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 9,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"c1e599": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 3,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"c2cd86": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 16,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"c39911": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 6,
+"box": "rahul3-ctl",
+"set": "gauge2_loraC"
+},
+"c85e89": {
+"arm": "base_ctlbox",
+"prompt": "Pgauge",
+"seed": 3,
+"box": "rahul3-ctl",
+"set": "gaugeX_base"
+},
+"c99152": {
+"arm": "base_ctlbox",
+"prompt": "Pgauge",
+"seed": 4,
+"box": "rahul3-ctl",
+"set": "gaugeX_base"
+},
+"c9bb60": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 8,
+"box": "rahul3-lora",
+"set": "gauge2_base"
+},
+"cf499a": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 2,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"d0b29b": {
+"arm": "base",
+"prompt": "Pjson",
+"seed": 2,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"d46f3d": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 10,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"d79d8e": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 11,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"d8f3eb": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 12,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"d92193": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 9,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"dca858": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 1,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"dd1147": {
+"arm": "loraA",
+"prompt": "Pjson",
+"seed": 4,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"ddcc26": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 8,
+"box": "rahul3-ctl",
+"set": "gauge2_loraC"
+},
+"e51394": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 5,
+"box": "rahul3-lora",
+"set": "gauge2_loraA"
+},
+"e68855": {
+"arm": "loraA",
+"prompt": "Pjson",
+"seed": 1,
+"box": "rahul3-lora",
+"set": "gauge_loraA"
+},
+"e85fc7": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 1,
+"box": "rahul3-lora",
+"set": "gauge_loraB"
+},
+"e878ab": {
+"arm": "loraC",
+"prompt": "Pjson",
+"seed": 4,
+"box": "rahul3-ctl",
+"set": "gauge_loraC"
+},
+"eb93d4": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 13,
+"box": "rahul3-lora",
+"set": "gauge3_loraB"
+},
+"f25326": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 8,
+"box": "rahul3-lora",
+"set": "gauge2_loraA"
+},
+"f2abd9": {
+"arm": "base",
+"prompt": "Pjson",
+"seed": 3,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"f3b7ab": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 13,
+"box": "rahul3-lora",
+"set": "gauge3_base"
+},
+"f690ef": {
+"arm": "base",
+"prompt": "Pjson",
+"seed": 1,
+"box": "rahul3-lora",
+"set": "gauge_base"
+},
+"fc16d6": {
+"arm": "base",
+"prompt": "Pgauge",
+"seed": 6,
+"box": "rahul3-lora",
+"set": "gauge2_base"
+},
+"fdfbd8": {
+"arm": "loraC",
+"prompt": "Pgauge",
+"seed": 13,
+"box": "rahul3-ctl",
+"set": "gauge3_loraC"
+},
+"feae8b": {
+"arm": "loraB",
+"prompt": "Pgauge",
+"seed": 7,
+"box": "rahul3-lora",
+"set": "gauge2_loraB"
+},
+"fff2b9": {
+"arm": "loraA",
+"prompt": "Pgauge",
+"seed": 13,
+"box": "rahul3-lora",
+"set": "gauge3_loraA"
+}
+}
