@@ -1,0 +1,213 @@
+{
+ "pend_fps12_s1": {
+  "N": 189,
+  "fps": 12,
+  "seed": 1,
+  "arm": "base",
+  "P_frames": 66.55146560072899,
+  "P_over_N": 0.3521241566176137,
+  "cycles_after_skip": 2.6595958241085103,
+  "P_s": 5.545955466727416,
+  "flag": "check",
+  "raw": {
+   "clip": "clips/pend_fps12_s1.mp4",
+   "fps": 12.0,
+   "skip": 12,
+   "release_frame": 12,
+   "n_used": 177,
+   "period_frames": 66.55146560072899,
+   "period_s": 5.545955466727416,
+   "ci95_frames": [
+    45.47386724526684,
+    67.65792088930806
+   ],
+   "ci95_s": [
+    3.78948893710557,
+    5.638160074109005
+   ],
+   "prominence": 0.4619309604167938,
+   "P_from_2nd_min_frames": null,
+   "window_ests_frames": [
+    65.77922417223454,
+    66.67919567227364,
+    66.64578205347061,
+    66.67901140451431,
+    67.5193609893322,
+    46.766343489289284,
+    46.65700599551201,
+    46.78887438774109,
+    45.56132376194
+   ],
+   "window_spread": 0.15116320429528501,
+   "cycles_in_clip": 2.6595958241085103,
+   "flag": "check"
+  }
+ },
+ "pend_fps24_61f_s1": {
+  "N": 61,
+  "fps": 24,
+  "seed": 1,
+  "arm": "base",
+  "P_frames": null,
+  "P_over_N": null,
+  "cycles_after_skip": null,
+  "P_s": null,
+  "flag": "fail",
+  "raw": {
+   "clip": "clips/pend_fps24_61f_s1.mp4",
+   "fps": 24.0,
+   "skip": 12,
+   "release_frame": 12,
+   "n_used": 49,
+   "period_frames": null,
+   "period_s": null,
+   "flag": "fail"
+  }
+ },
+ "pend_fps24_nodur_s1": {
+  "N": 189,
+  "fps": 24,
+  "seed": 1,
+  "arm": "nodur",
+  "P_frames": 107.37559899687767,
+  "P_over_N": 0.5681248624173422,
+  "cycles_after_skip": 1.6484192093321586,
+  "P_s": 4.47398329153657,
+  "flag": "check",
+  "raw": {
+   "clip": "clips/pend_fps24_nodur_s1.mp4",
+   "fps": 24.0,
+   "skip": 12,
+   "release_frame": 12,
+   "n_used": 177,
+   "period_frames": 107.37559899687767,
+   "period_s": 4.47398329153657,
+   "ci95_frames": [
+    106.986162929518,
+    107.76503506423734
+   ],
+   "ci95_s": [
+    4.457756788729917,
+    4.490209794343222
+   ],
+   "prominence": 0.8425182700157166,
+   "P_from_2nd_min_frames": null,
+   "window_ests_frames": [],
+   "window_spread": NaN,
+   "cycles_in_clip": 1.6484192093321586,
+   "flag": "check"
+  }
+ },
+ "pend_fps24_s1": {
+  "N": 189,
+  "fps": 24,
+  "seed": 1,
+  "arm": "base",
+  "P_frames": 107.10480739176273,
+  "P_over_N": 0.5666921026019193,
+  "cycles_after_skip": 1.652586884849884,
+  "P_s": 4.462700307990114,
+  "flag": "check",
+  "raw": {
+   "clip": "clips/pend_fps24_s1.mp4",
+   "fps": 24.0,
+   "skip": 12,
+   "release_frame": 12,
+   "n_used": 177,
+   "period_frames": 107.10480739176273,
+   "period_s": 4.462700307990114,
+   "ci95_frames": [
+    106.71586269576851,
+    107.49375208775696
+   ],
+   "ci95_s": [
+    4.446494278990355,
+    4.478906336989874
+   ],
+   "prominence": 0.7455691695213318,
+   "P_from_2nd_min_frames": null,
+   "window_ests_frames": [],
+   "window_spread": NaN,
+   "cycles_in_clip": 1.652586884849884,
+   "flag": "check"
+  }
+ },
+ "pend_fps24_s2": {
+  "N": 189,
+  "fps": 24,
+  "seed": 2,
+  "arm": "base",
+  "P_frames": 56.65424546599388,
+  "P_over_N": 0.29975791251848616,
+  "cycles_after_skip": 3.1242142322104067,
+  "P_s": 2.3605935610830784,
+  "flag": "check",
+  "raw": {
+   "clip": "clips/pend_fps24_s2.mp4",
+   "fps": 24.0,
+   "skip": 12,
+   "release_frame": 12,
+   "n_used": 177,
+   "period_frames": 56.65424546599388,
+   "period_s": 2.3605935610830784,
+   "ci95_frames": [
+    45.6444059624948,
+    59.040309049221094
+   ],
+   "ci95_s": [
+    1.9018502484372835,
+    2.460012877050879
+   ],
+   "prominence": 0.38104334473609924,
+   "P_from_2nd_min_frames": 53.5,
+   "window_ests_frames": [
+    57.044903602451086,
+    56.881542563438416,
+    57.039712987840176,
+    59.05964144691825,
+    46.49742245674133,
+    47.32154244184494,
+    45.82667161524296
+   ],
+   "window_spread": 0.09672391755798475,
+   "cycles_in_clip": 3.1242142322104067,
+   "flag": "check"
+  }
+ },
+ "pend_fps48_s1": {
+  "N": 189,
+  "fps": 48,
+  "seed": 1,
+  "arm": "base",
+  "P_frames": 103.37457594275475,
+  "P_over_N": 0.5469554282685436,
+  "cycles_after_skip": 1.7122198411533651,
+  "P_s": 2.1536369988073907,
+  "flag": "check",
+  "raw": {
+   "clip": "clips/pend_fps48_s1.mp4",
+   "fps": 48.0,
+   "skip": 12,
+   "release_frame": 12,
+   "n_used": 177,
+   "period_frames": 103.37457594275475,
+   "period_s": 2.1536369988073907,
+   "ci95_frames": [
+    102.99246432548208,
+    103.75668756002742
+   ],
+   "ci95_s": [
+    2.14567634011421,
+    2.1615976575005713
+   ],
+   "prominence": 1.0,
+   "P_from_2nd_min_frames": null,
+   "window_ests_frames": [
+    103.37457594275475
+   ],
+   "window_spread": NaN,
+   "cycles_in_clip": 1.7122198411533651,
+   "flag": "check"
+  }
+ }
+}

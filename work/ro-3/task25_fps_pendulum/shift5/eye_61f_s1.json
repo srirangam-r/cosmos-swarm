@@ -1,0 +1,6 @@
+{"clip": "pend_fps24_61f_s1", "method": "by eye from qc_acf/sheet_61f_fine.jpg (2-frame steps), UNVALIDATED",
+ "pend_acf": "fail (fewer than 1 cycle after skip)",
+ "pillarbox": "NOT outpainted (unlike the 189f clips)",
+ "events": {"start_angle": "~15 deg right of vertical, moving right/up", "right_extreme_frame": [26, 34, "rod ~horizontal, peak ~30"], "vertical_crossing_frame": [52, 53], "left_extreme": "not reached by frame 60 (still rising, ~35 deg)"},
+ "P_frames_estimate": "~88 (4 x quarter of 22-23 f), hard lower bound 60 (half-swing 30->60+ not complete)",
+ "cycles_per_clip": "~0.6-0.7 (vs ~1.8 at 93f and 189f)"}
