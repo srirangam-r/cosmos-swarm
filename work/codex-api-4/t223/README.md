@@ -87,3 +87,14 @@ or scoreboard noninferiority margin is invented here.
 
 Evidence is self-contained. `SHA256SUMS` excludes itself and the generated
 `synthetic_verification.json`. Runtime: Python 3.10.12, NumPy 1.26.4.
+
+The [historical task-141 reference audit](reference_audit/README.md) exercises
+the unchanged adapter on existing public eye codes, separate from actual
+raj-noise E0-E3 data. It preserves the unknown rest label, blocks primary
+inference, and enumerates both hypothetical binary labels as a retrospective
+sensitivity. Prompt share spans 0.499–0.533, seed share 0.158–0.203; QT−F spans
++0.733–+0.767 with exact whole-seed p=0.00390625 in either case. Fifteen checks
+include independent exact-rational SS and scalar sign enumeration. These are
+same-label robustness results with unvalidated eye codes, not new physics or
+planted validation. Label-record hashes are explicitly distinct from video
+and noise provenance. Its own `SHA256SUMS` covers the reference package.

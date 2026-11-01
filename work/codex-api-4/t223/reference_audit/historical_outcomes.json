@@ -1,0 +1,723 @@
+[
+  {
+    "run_id": "t141q8_b2dd35_F_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=03ebba"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=0410bc"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=055634"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=08468f"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=089377"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=09661f"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=143271"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=15b07a"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=184928"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=18f92a"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=1933a0"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=1a4f9f"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=1befc9"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=1de170"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=20e747"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=21b4b9"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=252a4b"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=27a266"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=2932e3"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=2c780a"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=2e4725"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=353a6a"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=3a3e98"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=3f7136"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=424eea"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=4302cb"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=49413a"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=4ce827"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=4dcf99"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=50c276"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=50dcb9"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=50e54f"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=516fab"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=53495d"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=547e2f"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=54be79"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=5a245e"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=5b4040"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=5e80bc"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=607008"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=624537"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=6f5f92"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=713b6e"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=71d0e2"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=7baba6"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=7d3faa"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=80d51f"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=811e6f"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=828be7"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=8325b0"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=866ae9"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=8898d0"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=8aef28"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=8b1107"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=8ef576"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=8f374c"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=9699b0"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=9a571d"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=9fe337"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=a00be8"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s9",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=a15404"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=abfee5"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=b05d43"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=b20042"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=b23d6f"
+  },
+  {
+    "run_id": "t141q8_b1dd33_F_s1",
+    "outcome": "rest_eye_code",
+    "state": "unknown",
+    "value": null,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=b5d0e9",
+    "reason": "Frozen end_state=UNCLEAR; source settle blank"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=bc89d3"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=bd67e5"
+  },
+  {
+    "run_id": "t141q8_b2dd37_N_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=bd70db"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s5",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=c61eeb"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=c6cc25"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=c7d435"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=d148f8"
+  },
+  {
+    "run_id": "t141q8_b2dd35_QT_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=d1b531"
+  },
+  {
+    "run_id": "t141q8_b2dd35_F_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=d50d51"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=d6ee78"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s4",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=d94802"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=dc4e98"
+  },
+  {
+    "run_id": "t141q8_b1dd33_N_s7",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=e435be"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=e639d4"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=e6e40a"
+  },
+  {
+    "run_id": "t141q8_b2dd35_N_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=e9fc9b"
+  },
+  {
+    "run_id": "t141q8_b2dd37_QT_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=ea3d74"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s3",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=eb4dd3"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=f0de68"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s10",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=f1af21"
+  },
+  {
+    "run_id": "t141q8_b2dd37_F_s8",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 0,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=f354cf"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s6",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=f3be46"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s1",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=f63e13"
+  },
+  {
+    "run_id": "t141q8_b1dd33_QT_s2",
+    "outcome": "rest_eye_code",
+    "state": "valid",
+    "value": 1,
+    "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+    "evidence": "source/codes_named.csv: id=f7fe66"
+  }
+]

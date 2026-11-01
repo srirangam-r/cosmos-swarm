@@ -1,0 +1,553 @@
+{
+  "scope": "Retrospective same-label software/robustness audit, not a new model finding",
+  "source_commit": "028723bdbe6060d161be6849b849e965b4fa5dae",
+  "source_labels_sha256": "25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+  "missing_cell": "t141q8_b1dd33_F_s1",
+  "source_imputation": "source/analyze_grid.py: additive seed+image/prompt-cell fit, 50 iterations",
+  "published_imputed_shares": {
+    "seed": 0.18330234149605276,
+    "image": 0.00741326018560791,
+    "prompt": 0.5201691572920729,
+    "image\u00d7prompt": 0.009748370426638937,
+    "seed\u00d7image": 0.04475977434257115,
+    "seed\u00d7prompt": 0.1400093976273374,
+    "residual(S\u00d7I\u00d7P)": 0.094597698629719
+  },
+  "original_primary_status": "blocked:89 valid+1 unknown, all4 tests untested",
+  "hypothetical_completions": [
+    {
+      "unknown_value": 0,
+      "eta2": {
+        "seed": 0.15800984144341168,
+        "prompt": 0.532531437944232,
+        "input": 0.007654455986878084,
+        "seed:prompt": 0.14543466375068345,
+        "seed:input": 0.0470202296336796,
+        "prompt:input": 0.012028430836522688,
+        "seed:prompt:input_or_residual": 0.09732094040459267
+      },
+      "seed_cluster_bootstrap": {
+        "seed": {
+          "ci95": [
+            0.01939655172413793,
+            0.30875576036866365
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "prompt": {
+          "ci95": [
+            0.30875576036866365,
+            0.81573275862069
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "input": {
+          "ci95": [
+            0.0,
+            0.0424901185770751
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "seed:prompt": {
+          "ci95": [
+            0.03110599078341015,
+            0.2407425727027197
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "seed:input": {
+          "ci95": [
+            0.019692307692307693,
+            0.07801017524024871
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "prompt:input": {
+          "ci95": [
+            0.0026718447983287456,
+            0.05731775963974104
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "seed:prompt:input_or_residual": {
+          "ci95": [
+            0.04094827586206898,
+            0.14423611111111106
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        }
+      },
+      "tests": [
+        {
+          "id": "joint",
+          "kind": "omnibus",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.0003,
+          "holm_p": 0.0012,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "statistic": 1.1066666666666667,
+            "n_seeds": 10,
+            "n_prompts": 3,
+            "n_inputs": 3,
+            "randomization": {
+              "p_one_sided": 0.0003,
+              "exact": false,
+              "permutations": 9999,
+              "exceedances": 2
+            },
+            "null": "Prompt labels exchangeable within each seed, shared over inputs.",
+            "scope": "Consistent prompt differences within inputs; not all seed:prompt effects."
+          }
+        },
+        {
+          "id": "QT_minus_F",
+          "kind": "contrast",
+          "a": "QT",
+          "b": "F",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.00390625,
+          "holm_p": 0.01171875,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "n_seeds": 10,
+            "n_inputs": 3,
+            "mean_difference": 0.7666666666666666,
+            "seed_means": [
+              0.6666666666666666,
+              1.0,
+              0.6666666666666666,
+              1.0,
+              1.0,
+              0.6666666666666666,
+              0.0,
+              0.6666666666666666,
+              1.0,
+              1.0
+            ],
+            "seed_se": 0.10000000000000002,
+            "seed_cluster_bootstrap": {
+              "ci95": [
+                0.5666666666666667,
+                0.9333333333333332
+              ],
+              "defined_draws": 2000,
+              "undefined_draws": 0
+            },
+            "two_sided_sign_flip_p": 0.00390625,
+            "exact": true,
+            "permutations": 1024
+          }
+        },
+        {
+          "id": "QT_minus_N",
+          "kind": "contrast",
+          "a": "QT",
+          "b": "N",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.0078125,
+          "holm_p": 0.015625,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "n_seeds": 10,
+            "n_inputs": 3,
+            "mean_difference": 0.7,
+            "seed_means": [
+              0.0,
+              1.0,
+              0.6666666666666666,
+              1.0,
+              0.6666666666666666,
+              1.0,
+              0.0,
+              0.6666666666666666,
+              1.0,
+              1.0
+            ],
+            "seed_se": 0.1261979632400061,
+            "seed_cluster_bootstrap": {
+              "ci95": [
+                0.4666666666666666,
+                0.9
+              ],
+              "defined_draws": 2000,
+              "undefined_draws": 0
+            },
+            "two_sided_sign_flip_p": 0.0078125,
+            "exact": true,
+            "permutations": 1024
+          }
+        },
+        {
+          "id": "N_minus_F",
+          "kind": "contrast",
+          "a": "N",
+          "b": "F",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.75,
+          "holm_p": 0.75,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "n_seeds": 10,
+            "n_inputs": 3,
+            "mean_difference": 0.06666666666666667,
+            "seed_means": [
+              0.6666666666666666,
+              0.0,
+              0.0,
+              0.0,
+              0.3333333333333333,
+              -0.3333333333333333,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "seed_se": 0.08314794192830981,
+            "seed_cluster_bootstrap": {
+              "ci95": [
+                -0.06666666666666667,
+                0.2333333333333333
+              ],
+              "defined_draws": 2000,
+              "undefined_draws": 0
+            },
+            "two_sided_sign_flip_p": 0.75,
+            "exact": true,
+            "permutations": 1024
+          }
+        }
+      ],
+      "exact_fraction_ss": {
+        "seed": {
+          "ss": "289/90",
+          "eta2": 0.1580098414434117
+        },
+        "prompt": {
+          "ss": "487/45",
+          "eta2": 0.5325314379442319
+        },
+        "input": {
+          "ss": "7/45",
+          "eta2": 0.007654455986878075
+        },
+        "seed:prompt": {
+          "ss": "133/45",
+          "eta2": 0.14543466375068342
+        },
+        "seed:input": {
+          "ss": "43/45",
+          "eta2": 0.047020229633679606
+        },
+        "prompt:input": {
+          "ss": "11/45",
+          "eta2": 0.01202843083652269
+        },
+        "seed:prompt:input_or_residual": {
+          "ss": "89/45",
+          "eta2": 0.09732094040459267
+        }
+      }
+    },
+    {
+      "unknown_value": 1,
+      "eta2": {
+        "seed": 0.2025862068965517,
+        "prompt": 0.49892241379310354,
+        "input": 0.0075431034482758685,
+        "seed:prompt": 0.13685344827586207,
+        "seed:input": 0.046336206896551733,
+        "prompt:input": 0.008620689655172417,
+        "seed:prompt:input_or_residual": 0.09913793103448276
+      },
+      "seed_cluster_bootstrap": {
+        "seed": {
+          "ci95": [
+            0.01939655172413793,
+            0.40623453735774373
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "prompt": {
+          "ci95": [
+            0.23923315582443874,
+            0.813393318965517
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "input": {
+          "ci95": [
+            0.001038961038961042,
+            0.03844155844155844
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "seed:prompt": {
+          "ci95": [
+            0.03110599078341015,
+            0.23390654648956347
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "seed:input": {
+          "ci95": [
+            0.019230769230769232,
+            0.07555969551282048
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "prompt:input": {
+          "ci95": [
+            0.0025957170668397147,
+            0.049776007964161276
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        },
+        "seed:prompt:input_or_residual": {
+          "ci95": [
+            0.040932633481646274,
+            0.1469745305529619
+          ],
+          "defined_draws": 2000,
+          "undefined_draws": 0
+        }
+      },
+      "tests": [
+        {
+          "id": "joint",
+          "kind": "omnibus",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.0003,
+          "holm_p": 0.0012,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "statistic": 1.0466666666666669,
+            "n_seeds": 10,
+            "n_prompts": 3,
+            "n_inputs": 3,
+            "randomization": {
+              "p_one_sided": 0.0003,
+              "exact": false,
+              "permutations": 9999,
+              "exceedances": 2
+            },
+            "null": "Prompt labels exchangeable within each seed, shared over inputs.",
+            "scope": "Consistent prompt differences within inputs; not all seed:prompt effects."
+          }
+        },
+        {
+          "id": "QT_minus_F",
+          "kind": "contrast",
+          "a": "QT",
+          "b": "F",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.00390625,
+          "holm_p": 0.01171875,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "n_seeds": 10,
+            "n_inputs": 3,
+            "mean_difference": 0.7333333333333333,
+            "seed_means": [
+              0.3333333333333333,
+              1.0,
+              0.6666666666666666,
+              1.0,
+              1.0,
+              0.6666666666666666,
+              0.0,
+              0.6666666666666666,
+              1.0,
+              1.0
+            ],
+            "seed_se": 0.10886621079036346,
+            "seed_cluster_bootstrap": {
+              "ci95": [
+                0.5333333333333333,
+                0.9
+              ],
+              "defined_draws": 2000,
+              "undefined_draws": 0
+            },
+            "two_sided_sign_flip_p": 0.00390625,
+            "exact": true,
+            "permutations": 1024
+          }
+        },
+        {
+          "id": "QT_minus_N",
+          "kind": "contrast",
+          "a": "QT",
+          "b": "N",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 0.0078125,
+          "holm_p": 0.015625,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "n_seeds": 10,
+            "n_inputs": 3,
+            "mean_difference": 0.7,
+            "seed_means": [
+              0.0,
+              1.0,
+              0.6666666666666666,
+              1.0,
+              0.6666666666666666,
+              1.0,
+              0.0,
+              0.6666666666666666,
+              1.0,
+              1.0
+            ],
+            "seed_se": 0.1261979632400061,
+            "seed_cluster_bootstrap": {
+              "ci95": [
+                0.4666666666666666,
+                0.9
+              ],
+              "defined_draws": 2000,
+              "undefined_draws": 0
+            },
+            "two_sided_sign_flip_p": 0.0078125,
+            "exact": true,
+            "permutations": 1024
+          }
+        },
+        {
+          "id": "N_minus_F",
+          "kind": "contrast",
+          "a": "N",
+          "b": "F",
+          "stratum": "historical_q8_label_grid",
+          "outcome": "rest_eye_code",
+          "family": "retrospective_reference_only",
+          "raw_p": 1.0,
+          "holm_p": 1.0,
+          "status": "diagnostic_pending_validation_and_provenance_audit",
+          "result": {
+            "n_seeds": 10,
+            "n_inputs": 3,
+            "mean_difference": 0.03333333333333333,
+            "seed_means": [
+              0.3333333333333333,
+              0.0,
+              0.0,
+              0.0,
+              0.3333333333333333,
+              -0.3333333333333333,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "seed_se": 0.059835164523716705,
+            "seed_cluster_bootstrap": {
+              "ci95": [
+                -0.06666666666666667,
+                0.13333333333333333
+              ],
+              "defined_draws": 2000,
+              "undefined_draws": 0
+            },
+            "two_sided_sign_flip_p": 1.0,
+            "exact": true,
+            "permutations": 1024
+          }
+        }
+      ],
+      "exact_fraction_ss": {
+        "seed": {
+          "ss": "188/45",
+          "eta2": 0.2025862068965517
+        },
+        "prompt": {
+          "ss": "463/45",
+          "eta2": 0.4989224137931034
+        },
+        "input": {
+          "ss": "7/45",
+          "eta2": 0.007543103448275862
+        },
+        "seed:prompt": {
+          "ss": "127/45",
+          "eta2": 0.13685344827586207
+        },
+        "seed:input": {
+          "ss": "43/45",
+          "eta2": 0.04633620689655173
+        },
+        "prompt:input": {
+          "ss": "8/45",
+          "eta2": 0.008620689655172414
+        },
+        "seed:prompt:input_or_residual": {
+          "ss": "92/45",
+          "eta2": 0.09913793103448276
+        }
+      }
+    }
+  ],
+  "point_identification_ranges": {
+    "seed": [
+      0.15800984144341168,
+      0.2025862068965517
+    ],
+    "prompt": [
+      0.49892241379310354,
+      0.532531437944232
+    ],
+    "input": [
+      0.0075431034482758685,
+      0.007654455986878084
+    ],
+    "seed:prompt": [
+      0.13685344827586207,
+      0.14543466375068345
+    ],
+    "seed:input": [
+      0.046336206896551733,
+      0.0470202296336796
+    ],
+    "prompt:input": [
+      0.008620689655172417,
+      0.012028430836522688
+    ],
+    "seed:prompt:input_or_residual": [
+      0.09732094040459267,
+      0.09913793103448276
+    ]
+  },
+  "warnings": [
+    "No actual raj-noise outputs accessed.",
+    "Ranges enumerate labels only; conditional bootstrap intervals are not a joint coverage guarantee.",
+    "Reference prompt vocabulary and one GAUGE camera setup cannot establish general causality.",
+    "Artifact hashes identify CSV records, not clips, noise tensors or execution provenance."
+  ]
+}

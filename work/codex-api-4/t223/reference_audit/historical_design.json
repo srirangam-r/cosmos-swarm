@@ -1,0 +1,816 @@
+{
+  "version": 1,
+  "experiment": "E2",
+  "scope": "HISTORICAL t141 adapter integration; E2 is schema routing only. NOT raj-noise E2.",
+  "provenance": {
+    "status": "No native execution/noise/video audit; label-record hashes only",
+    "evidence": [
+      "028723bdbe6060d161be6849b849e965b4fa5dae",
+      "board4720"
+    ]
+  },
+  "strata": [
+    {
+      "id": "historical_q8_label_grid",
+      "levels": {
+        "seed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "prompt": [
+          "F",
+          "QT",
+          "N"
+        ],
+        "input": [
+          "b1dd33",
+          "b2dd35",
+          "b2dd37"
+        ]
+      },
+      "runs": [
+        {
+          "run_id": "t141q8_b2dd35_F_s6",
+          "seed": 6,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "a5f49807f1a1ec6cf2eef637d77414ee66f9e7589bac7579d456835eb052de5d",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s2",
+          "seed": 2,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "4604d6bac6063966e3bc10064d42f5530974b6f513d908991488a9894ea0b9ef",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s2",
+          "seed": 2,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "42091db46005256f5582feef98f3fc9184151572a9e9dd7e84dce749fd3132f4",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s7",
+          "seed": 7,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "a02052210c37a641673a16c319172c76f0d1a84c828cf6e38387551488038a2f",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s9",
+          "seed": 9,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "574d0033b01c1817715a1685dde9f34ab63d9321175f54056700665cb7947f8c",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s8",
+          "seed": 8,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "0932f7a0b252e83d2b2c8f1822ecfe4e83e0cdc0da3cde3e4062e5b6c5d6c4e6",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s2",
+          "seed": 2,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "a89ba4d6cb75697a8669435d0cbf70b9389a1ee74a7f3cbff9b468911a63a2ae",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s2",
+          "seed": 2,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "4de2c0eb43a2244deebba5d6665fe9a2c9c647e5b380e224aec9bd284c7b8124",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s1",
+          "seed": 1,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "0336b3a920e9179df42405f8e0cd331bc7daa0b6249c10352acdd572c9120c4b",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s5",
+          "seed": 5,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "95b4e785237c3b8341cc02c4356828b60fdf69105a385fc4d52f4bc3b5b533eb",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s8",
+          "seed": 8,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "cc26302b72303fc495e41d8e014719902db21cdcba574ffea1c8a2d62c5c7b2d",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s6",
+          "seed": 6,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "a7196a97b7a465281069d3fdb7f56cf9c8ba8c6f63982d1ee09e80e1af4447c2",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s6",
+          "seed": 6,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "fdf0d108c151647aa4a22c9c90182f02b4816abb63f98ef1d4d6bf51ee018f3b",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s9",
+          "seed": 9,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "0b315bc0bb3f993aea27cbc9eef427060a87e193bc03526b3544cead3110558c",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s3",
+          "seed": 3,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "96b5205ca4db0a30e094155c2aab5e87e1f5b1f3cf9d6449a5b41071b3deefd9",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s5",
+          "seed": 5,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "d54a36680ac5f18fb2825efa95eb44283a7741f83b3455c9953a8c39b8007a19",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s9",
+          "seed": 9,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "2285073a9017d71801e84bbc8dc761428b3395b526b32b61733e66b47020b2e6",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s4",
+          "seed": 4,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "fa8281f545a600465cf0c2f9f05d865f3aefd934e533d51928d575f1cd58de0d",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s6",
+          "seed": 6,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "07ab17ac76ea5bbe548040d472d365c2ee77d24af0cfa02af30bd5b3d8b38e6c",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s2",
+          "seed": 2,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "8066c0acc62ae963f81974542520a64da3fba7b2c17b06ef62a1d9ca5ea6bba6",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s7",
+          "seed": 7,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "cd4076c7e356712642664ace91061bcbea56c1521200c495479b124384e6e367",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s7",
+          "seed": 7,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "bb12eba02f2b71b52872feef48e049c3ab4a57c8c4392a9ab6179bb549070ed7",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s4",
+          "seed": 4,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "050f641005974741e8de58442ffae68dfacdfa73e507bcc4da472f092dfdb59a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s2",
+          "seed": 2,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "b40e4e0bdda7b8e61d9c440358f0300d0bb802effc974b4d88589838a8cde860",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s6",
+          "seed": 6,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "012812326c6a0cb4850e395096a4aff10c78f612f79b9d42f6d59c9afb7d77a7",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s7",
+          "seed": 7,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "9b457b3f3eee486b468bbff043ad25c433f403c362e74889be8fd3a260bab230",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s5",
+          "seed": 5,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "170daa4af731529a538854d44d2344bb8da279069ceb5eb6b18aa7c7a67ce995",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s7",
+          "seed": 7,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "103217d0a59bb86f780b084e765c19b4651a1d4a9337c1fbf46bd8418a467050",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s10",
+          "seed": 10,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "a96f52becb2d07b0164262ff4b52da2c313c44152bb7ce024a89810e280043aa",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s5",
+          "seed": 5,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "be2d98ff0189bcc2f6bc57b4fbed7e939a75f421ae9cecd179e5537d1defe0b0",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s10",
+          "seed": 10,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "afeddd011b2282e5e85f98c53e9e255d3bcd8f7dcc9d2e924362a3928427a619",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s1",
+          "seed": 1,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "b8b2cfeb98a7ae952f85910a89e5744551e064e6615075155da5781679d1c1e6",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s4",
+          "seed": 4,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "ffd8222f3828fe37657706a5abbaa7485c734e4c8a37fd58813f04ca5e62b304",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s2",
+          "seed": 2,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "87f54f003a1c2378533a932d1054e4bed02ec59f9bcaad7c28bd6cba388ccbcc",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s5",
+          "seed": 5,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "fee2be482adbe06779ef04af72c46c75cc9d4bbe54b863b7eefe1e1531e7c2ba",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s6",
+          "seed": 6,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "61c7bc27c8fb5393a4876bda9a30fc3762c626c49cfb487c14233a5ac647043a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s10",
+          "seed": 10,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "eb03aeb1b218213ff3ade81fb59c22b17fa722b55de9e745ed672fb1f29aedd5",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s9",
+          "seed": 9,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "83c598a5d2bdc6a96272591829435bd3ef1b23bbfd7108803b686487c4ae8b19",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s10",
+          "seed": 10,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "4ba9ffb4aadee0496463da89c89606386446b73ba2f60362fb40082a90e77dd6",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s8",
+          "seed": 8,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "ec6cf2c0eecb68f912ac5aab12fa05a413b85d2dde7b2fcfd2e59bc305bd312d",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s7",
+          "seed": 7,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "92e237e932b1aeaacd4e85fd40163f9069ae7a328cea8cce6358da1c1aad01f7",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s3",
+          "seed": 3,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "1b1161db0f165a68def8e04b2911880e7c0d5bac9bb28ec736c5f839af248bc4",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s5",
+          "seed": 5,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "e4e1936288f4b0e5de1bf44ccb7ff2b7ee48999c9fd011c2d14b0731f826cb9a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s9",
+          "seed": 9,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "f20686b6de77912ffe157134c60e4976985c90232ee4b74166f500e516379b63",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s3",
+          "seed": 3,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "6fb239841689a48886150ac39ed67e52e038ee5b4eeb92a9a637889b22c8a098",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s9",
+          "seed": 9,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "a08bcef2a0f6040a4d6f523adf2d849fe7ab664812112c7831c123f8555173c9",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s5",
+          "seed": 5,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "f65093d9c87d89fae1834ac474e38c4ad0b512311ab9c4bfcec68d16ab6fc138",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s5",
+          "seed": 5,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "2b4e0c447943c3270ac6853f7ef853b16e753889046926d8846b9524c5cd9f97",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s9",
+          "seed": 9,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "0e3a10212c9ffd72a3633f75615b921657708bb69f3564af45cd4eb67c5b2e7a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s8",
+          "seed": 8,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "a075c1e980c0044a544b4c7a12f857ed750ea55b2df301dd6b2872594a9c15a6",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s4",
+          "seed": 4,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "cee4649f7541d13c654df51a547aaa0d792c8bc815bee8643491e88a4996a56e",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s7",
+          "seed": 7,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "48bd256d10322d5998b37822abbf708b29ca71d28cac0c107c7eb6449c628a06",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s1",
+          "seed": 1,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "d20e143969bbc4c7d701f71623eea1d055b4023fd3378ba6c1c073448656b39a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s9",
+          "seed": 9,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "0d90723de56184b56dfde3296c723996261d0a2eeed5dbec43794bc1035f0250",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s6",
+          "seed": 6,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "e9d585e470b67284e5dd70d1b07afbb46067b8af87e8fab41ae9aa83b2bd0dd9",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s6",
+          "seed": 6,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "2211981e9219b3eb3cd50f647bb22dd9bff275021280af0d4162595ddae445b9",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s3",
+          "seed": 3,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "732364fd3c23d9536e3e4fda8f7681c19a26ca91aa28c4c2aee05945880840b8",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s4",
+          "seed": 4,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "c1c11124773782bb246aa0fcfafe22db1e31e3a78f24fd39137e4770b2a02c7f",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s10",
+          "seed": 10,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "d64da8f0ade783975b095fd0e6315645be73453cdb5eacb2a76e13756ca23ccd",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s10",
+          "seed": 10,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "4cd58ca5eba9a08d6ce1f15689ebde8af24dd5d3c1546944c5e3aac1f8a81662",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s9",
+          "seed": 9,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "6eb12b6c5bab1ee942079302e62f820817fbddc911aab0c5f8ead238e6b9b95a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s8",
+          "seed": 8,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "fa1ee13e433bee85913e44680ce85a776e0b1c1693fffb36e98c9c577963cc4e",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s4",
+          "seed": 4,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "70dcf014787a7b33f54932b083511bb338b56244f45a65f1624d1126a6fc1d67",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s1",
+          "seed": 1,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "3e58293c0b3a48a2267aef98f4affc1ae8d02ebfa685dc1bb0016b4709816663",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s3",
+          "seed": 3,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "20b05c44d965a52c6cf7d92c64ba20f5ea5f896d8f8342a8d3aa56856bf7e4fd",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_F_s1",
+          "seed": 1,
+          "prompt": "F",
+          "input": "b1dd33",
+          "artifact_sha256": "28f2580c651467ae23a443eb78b9700af1f75c5bf1bdefbdd0ac7ae10c7fb505",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s8",
+          "seed": 8,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "3122bb09172b86fe68c17d90daa02c8cfb437296f119a5fcb72e9a900e08f4d0",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s3",
+          "seed": 3,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "79c3aad9ea32c2920740a299be5c48f09a99f639be58a9cc2bd2ccae83748e5a",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_N_s7",
+          "seed": 7,
+          "prompt": "N",
+          "input": "b2dd37",
+          "artifact_sha256": "ee4a7a38417232db20b8acf35f925b9acf2b598882f5a3eecd1638a742194d25",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s5",
+          "seed": 5,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "02dee0335f54509da4e329293afa96c04e5243988410ea18618396b13153acf7",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s8",
+          "seed": 8,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "5395a13559bbb75892be3b89a33b4c7e4fe76732961c0aafe416792a4051ce91",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s3",
+          "seed": 3,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "99eae09fbb0a81b9e7fc3fb8ec5ebb86f0d79be71a817f7ac14e6e2b9c252620",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s1",
+          "seed": 1,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "9827da4025ab224371b25e4a003ff1c068dc6161c8ea7d6830fa72ae200e873b",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_QT_s4",
+          "seed": 4,
+          "prompt": "QT",
+          "input": "b2dd35",
+          "artifact_sha256": "a1f6176f02832ee110dfa91ab78f494667aa4f66f893f6d10bc393c4ee07ba07",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_F_s4",
+          "seed": 4,
+          "prompt": "F",
+          "input": "b2dd35",
+          "artifact_sha256": "e87761ad189c86dc0ee05ab55c73a41faf7ea2ebaae156c29398e4f9e1d5fad1",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s8",
+          "seed": 8,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "51013ac9ca0abf69d7473291d46ce260f54af2572433c866d228b11b1c962b77",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s4",
+          "seed": 4,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "0bd51a35bffd20bb0585fa4281a60a96a805a79451e2758588ee5f4b222c48df",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s2",
+          "seed": 2,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "5b9ff9387b83a23290e2c03b7a61a6f3cd62c24c6a06d40f2906e7352f663228",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_N_s7",
+          "seed": 7,
+          "prompt": "N",
+          "input": "b1dd33",
+          "artifact_sha256": "081c860ccb282db51e0dac4509516078193596715051e4236335ed694ebeaa47",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s3",
+          "seed": 3,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "9b7bc8b2de9ae2f6088cb089ecc499b5795b67fd6a73966ae610fa89b05792c0",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s10",
+          "seed": 10,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "46a46c06defa3d33f5c839008a73f7d1baa9ce3d6592e8b75fb7ef1f60764c39",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd35_N_s10",
+          "seed": 10,
+          "prompt": "N",
+          "input": "b2dd35",
+          "artifact_sha256": "764754efb852fa5887245b1cd3f058d66358f28a0b7b594ce413cf67fd573ca8",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_QT_s1",
+          "seed": 1,
+          "prompt": "QT",
+          "input": "b2dd37",
+          "artifact_sha256": "e3672f2446fcab67f7893e5c20df8e11ecd08dd1886b1d397ecfb837199c224c",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s3",
+          "seed": 3,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "1c77de4bb3e53f9e701fda86a9b796568a985aaada2793fe567280a6ac0f6189",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s1",
+          "seed": 1,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "b09d1a3204bbbf86389bc57e5cb403664212026b153bff418fd7d1ab3bcbfd0e",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s10",
+          "seed": 10,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "55807e1a0c49f6ab168df66de1df0057f37ab25ae56a6a3b77c8c81334dbfbca",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b2dd37_F_s8",
+          "seed": 8,
+          "prompt": "F",
+          "input": "b2dd37",
+          "artifact_sha256": "c15d16083b4a26c1de6d431a7c1c48ae1ab2f936377d5acf72596f28a6f82e65",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s6",
+          "seed": 6,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "6f8b36de8d8ab94ef09c03bf4435ad83109ef2bef2c3e392ce72a387e39e6a15",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s1",
+          "seed": 1,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "d3f98f1c08dbdd16df731b223f5900c1629e5ccc2355f6cf5049c27fe4217cac",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        },
+        {
+          "run_id": "t141q8_b1dd33_QT_s2",
+          "seed": 2,
+          "prompt": "QT",
+          "input": "b1dd33",
+          "artifact_sha256": "e759f8bdf7c11eaffa0b655abebbddbdb73645bd7d65ccfe1194acee477560f2",
+          "artifact_kind": "canonical source CSV label record; NOT video/noise"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "rest_eye_code",
+      "definition": "Frozen t141 settle column, unchanged",
+      "method": "t141_frozen_csv@25c6a1df113d8a73355fdc135b92ef6762a9e14f5760cb7fa05df2b96115a868",
+      "value_range": [
+        0,
+        1
+      ],
+      "validation": {
+        "status": "unvalidated eye codes; NOT planted-pass physics",
+        "evidence": [
+          "source/codes_named.csv"
+        ]
+      }
+    }
+  ],
+  "tests": [
+    {
+      "id": "joint",
+      "kind": "omnibus",
+      "stratum": "historical_q8_label_grid",
+      "outcome": "rest_eye_code",
+      "family": "retrospective_reference_only"
+    },
+    {
+      "id": "QT_minus_F",
+      "kind": "contrast",
+      "a": "QT",
+      "b": "F",
+      "stratum": "historical_q8_label_grid",
+      "outcome": "rest_eye_code",
+      "family": "retrospective_reference_only"
+    },
+    {
+      "id": "QT_minus_N",
+      "kind": "contrast",
+      "a": "QT",
+      "b": "N",
+      "stratum": "historical_q8_label_grid",
+      "outcome": "rest_eye_code",
+      "family": "retrospective_reference_only"
+    },
+    {
+      "id": "N_minus_F",
+      "kind": "contrast",
+      "a": "N",
+      "b": "F",
+      "stratum": "historical_q8_label_grid",
+      "outcome": "rest_eye_code",
+      "family": "retrospective_reference_only"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "name": "90 unique label records form exact declared grid",
+      "passed": true
+    },
+    {
+      "name": "89 observed plus one unknown, not missing or zero",
+      "passed": true
+    },
+    {
+      "name": "full cube primary inference blocked",
+      "passed": true
+    },
+    {
+      "name": "full four-test registry retained despite block",
+      "passed": true
+    },
+    {
+      "name": "exactly one unknown at the published cell",
+      "passed": true
+    },
+    {
+      "name": "completion0 exact Fraction SS agrees on all seven terms",
+      "passed": true
+    },
+    {
+      "name": "completion0 seven shares sum to one",
+      "passed": true
+    },
+    {
+      "name": "completion0 independent exact QT_minus_F",
+      "passed": true
+    },
+    {
+      "name": "completion0 independent exact QT_minus_N",
+      "passed": true
+    },
+    {
+      "name": "completion0 independent exact N_minus_F",
+      "passed": true
+    },
+    {
+      "name": "completion1 exact Fraction SS agrees on all seven terms",
+      "passed": true
+    },
+    {
+      "name": "completion1 seven shares sum to one",
+      "passed": true
+    },
+    {
+      "name": "completion1 independent exact QT_minus_F",
+      "passed": true
+    },
+    {
+      "name": "completion1 independent exact QT_minus_N",
+      "passed": true
+    },
+    {
+      "name": "completion1 independent exact N_minus_F",
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}
