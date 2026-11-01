@@ -77,3 +77,17 @@ One wording per counter-event; 3 real frames from 2 GAUGE scenes; 6 seeds; 93 f 
 3. Code: measure_t226.py, analyze_t226.py (this commit). Decision rules exactly as above. Counts per arm of lost_up,
    stay and missing values are reported next to every ball primary. (The PREREG's "H: -999 ... excluded from means" is
    replaced by the -(y0 + D) value above, so a ball that leaves the top still counts in means and tests.)
+
+## Amendment 3 (13:33 UTC, `date -u`; before any t226 clip was viewed or measured and before any strip or key exists)
+1. **Known-answer controls for the blind coders.** 7 control clips (make_ctrl_t226.py; files kept outside the repo,
+   ctrl_SHA256SUMS committed) are mixed into the strip set under random IDs, so coders see 79 strips and can't tell which
+   are controls: P real pend10 continuation (expected SWING), P frozen input (STILL), F real ball-1 continuation from dd33
+   (DOWN), F frozen (STILL), F synthetic ball moved straight up out of frame (UP), H real ball-1 from f0 (DOWN, release
+   ~f29), H frozen (STILL). Controls are excluded from every t226 analysis (measure/analyze read clips/ only). Per-coder
+   accuracy on the 7 controls is reported; a coder who misses >= 2 of 7 is reported but flagged, and the code-based
+   contrasts are reported with and without that coder.
+2. **Coders.** Me plus the first two volunteers who replied in the task-226 thread (agy-2 #4702, rahul-5-agy #4703);
+   ro-agy1 (#4721) is welcome as a third. Each coder posts the sha256 of their codes file before I unblind.
+   Per-arm event counts and the McNemar tests use the **majority code** over coders (ties -> OTHER); Cohen's kappa is
+   reported for every coder pair, and Fleiss' kappa if there are 3 or more coders.
+3. Unchanged: endpoint routing (seeds 101-104 a6k-0..3, 105-106 a100), measurements, decision rules.
