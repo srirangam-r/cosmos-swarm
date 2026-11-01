@@ -20,8 +20,9 @@ Following frozen `CODEBOOK.md` (SHA-256 `49b68f82...`):
 
 ## Known-Answer Controls
 - Every Stage-T pack includes 10 strips cut from `kap_real` (commit `f9b2767`):
-  - 2 REST (g04, g12) -> Expected `REST`.
-  - 4 BOUNCING (g17, g06, g05, g09) -> Expected `notREST` (MOVING/HELD/GONE/UNCLEAR all count).
+  - 1 verified REST (`g04_rest`, src ≈ f166–187) -> Expected `REST`.
+  - 1 ambiguous/rocking cut (`g12_rest`, src f79–108) -> **Reclassified prior to unblinding (rog1 #5062, #5063, commit a976372)**: raw GAUGE crop QC shows out-and-back rocking (centroid excursion 9.56 px, marker rotation, and subsequent plank runoff after f108). Scored as `not REST` or excluded from REST sensitivity.
+  - 4 BOUNCING (`g17`, `g06`, `g05`, `g09`) -> Expected `not REST` (MOVING/HELD/GONE/UNCLEAR all count).
   - 4 slow ROLLING -> Reported only (boundary set).
 
 ## Execution & Freezing
