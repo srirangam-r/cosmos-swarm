@@ -1,0 +1,67 @@
+{
+ "s24": {
+  "T": 1.75,
+  "left": 112,
+  "right": 50,
+  "note": "left above horizontal f12-16 (+102..+112) and f56 (+101); right side occluded by white robot, eye ~-50",
+  "R_raw": 1.4957264957264957,
+  "Rcorr_halfp2p_vs_real_Ahc67.9": 1.436,
+  "Rcorr_maxside_vs_real_Ahc67.9": 1.251,
+  "Rcorr_halfp2p_vs_real_halfp2p74.5": 1.464,
+  "Rcorr_maxside_vs_real_halfp2p74.5": 1.276,
+  "Rcorr_halfp2p_vs_real_maxside84": 1.512,
+  "Rcorr_maxside_vs_real_maxside84": 1.318
+ },
+ "s26": {
+  "T": 2.57,
+  "left": 78,
+  "right": 65,
+  "note": "left ~+78 with rod ~2x real length (G3 fail); right ~-65",
+  "R_raw": 2.1965811965811968,
+  "Rcorr_halfp2p_vs_real_Ahc67.9": 2.174,
+  "Rcorr_maxside_vs_real_Ahc67.9": 2.13,
+  "Rcorr_halfp2p_vs_real_halfp2p74.5": 2.217,
+  "Rcorr_maxside_vs_real_halfp2p74.5": 2.172,
+  "Rcorr_halfp2p_vs_real_maxside84": 2.289,
+  "Rcorr_maxside_vs_real_maxside84": 2.243
+ },
+ "s30": {
+  "T": 2.1,
+  "left": 90,
+  "right": 57,
+  "note": "left reaches horizontal f12, f60-64 (tracker loses rod on crossbar); right ~-57",
+  "R_raw": 1.7948717948717952,
+  "Rcorr_halfp2p_vs_real_Ahc67.9": 1.766,
+  "Rcorr_maxside_vs_real_Ahc67.9": 1.666,
+  "Rcorr_halfp2p_vs_real_halfp2p74.5": 1.8,
+  "Rcorr_maxside_vs_real_halfp2p74.5": 1.699,
+  "Rcorr_halfp2p_vs_real_maxside84": 1.859,
+  "Rcorr_maxside_vs_real_maxside84": 1.754
+ },
+ "s28": {
+  "T": 1.19,
+  "left": 25,
+  "right": 15,
+  "note": "small swing, tracker consistent",
+  "R_raw": 1.017094017094017,
+  "Rcorr_halfp2p_vs_real_Ahc67.9": 1.106,
+  "Rcorr_maxside_vs_real_Ahc67.9": 1.101,
+  "Rcorr_halfp2p_vs_real_halfp2p74.5": 1.128,
+  "Rcorr_maxside_vs_real_halfp2p74.5": 1.123,
+  "Rcorr_halfp2p_vs_real_maxside84": 1.164,
+  "Rcorr_maxside_vs_real_maxside84": 1.159
+ },
+ "s23": {
+  "T": 1.68,
+  "left": 55,
+  "right": 32,
+  "note": "tracker consistent",
+  "R_raw": 1.435897435897436,
+  "Rcorr_halfp2p_vs_real_Ahc67.9": 1.517,
+  "Rcorr_maxside_vs_real_Ahc67.9": 1.483,
+  "Rcorr_halfp2p_vs_real_halfp2p74.5": 1.547,
+  "Rcorr_maxside_vs_real_halfp2p74.5": 1.512,
+  "Rcorr_halfp2p_vs_real_maxside84": 1.597,
+  "Rcorr_maxside_vs_real_maxside84": 1.562
+ }
+}
