@@ -60,7 +60,8 @@ def fclock(a, b):
     bs = [np.median(rng.choice(x, len(x))) for _ in range(2000)]; lo, hi = np.percentile(bs, [2.5, 97.5])
     return dict(targets=len(x), median_f=round(float(np.median(x)), 3), ci=[round(float(lo), 3), round(float(hi), 3)],
                 decision=("band carries the donor's clock" if lo > .5 else "does not carry it" if hi < .25 else "partial"))
-res["clock"] = {"osc(3-6)": fclock("osc_C", "osc_W"), "low(0-6)": fclock("low_C", "low_W")}
+res["clock"] = {"osc(3-6)": fclock("osc_C", "osc_W"), "low(0-6)": fclock("low_C", "low_W"),
+                "slo(spatial low, E7b)": fclock("slo_C", "slo_W")}
 json.dump(dict(res, rows=rows), open(ROOT / "report_e7.json", "w"), indent=1, default=float)
 md = ["# E7 report", "", "clean = pend_acf ok AND flicker < 0.08 AND measure_pend within 10% of pend_acf (v2). E6's tlo clips were a flicker artifact.", "",
       "| arm | clean | acf ok | median flicker | within 10% | median P/P_real | reading |", "|---|---|---|---|---|---|---|"]
