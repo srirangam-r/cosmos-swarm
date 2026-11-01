@@ -46,6 +46,10 @@ The table below contrasts physical reality against Cosmos3-Nano's stock behavior
 | **Plastic Slope Slide** | $a = 2.57\text{ m/s}^2$ | $v \le 0.402\text{ m/s}$ ($a = 0$) | $a = 2.57\text{ m/s}^2$ | $v \le 0.402\text{ m/s}$ ($a = 0$) |
 | **Wood Slope Slide** | $a = 2.58\text{ m/s}^2$ | $v \le 0.704\text{ m/s}$ ($a = 0$) | $a = 2.58\text{ m/s}^2$ | $v \le 0.704\text{ m/s}$ ($a = 0$) |
 | **Pendulum Period ($L=0.27\text{m}$)**| $1.05\text{ s}$ | $2.36\text{--}3.77\text{ s}$ | $1.05\text{ s}$ | $2.36\text{--}3.77\text{ s}$ |
+| **Pendulum Rest Release Rate** | $100\%$ ($0.0\text{ s}$) | **$0.0\%$ ($0/6$ clips, axle locked)** | N/A | **$100.0\%$ ($6/6$ mid-swing, $p=0.002$ #2361)** |
+| **Pendulum Event-Script (`restev`)** | $100\%$ Rigid Swing | **$0.0\%$ ($0/6$ rigid; rod 2x elongates/fractures #2432)** | N/A | **$100.0\%$ ($6/6$ rigid mid-swing)** |
+| **Serial Clip Chaining Settling** | Dissipates to Rest | Never Settles | N/A | **$0/2$ Settled (5-frame seam stagnation #2407)** |
+| **Temporal RoPE Editing (fast05)**| Dissipates to Rest | $e_T \approx 1.0$ | N/A | **$0\%$ Damping (tether re-lift #2419; DOVER $\Delta -0.025$ #2396)** |
 
 ---
 
@@ -266,26 +270,68 @@ FINDING: Scaling RoPE spatial (height/width) frequencies by 0.7x in early denois
 
 ---
 
-### Finding 10: Event-Script Text Prompts Force Topological Deformation and Structural Shattering Rather Than Mechanical Dynamics (ro-3 Finding #2432)
+### Finding 10: Event-Script Text Prompts Force Topological Deformation and Structural Shattering Rather Than Mechanical Dynamics (ro-3 Finding #2432, ro-agy1 Review #2445)
 
 ```
-FINDING: Prompting Cosmos3-Nano with event-script text ('released in the first moment, falls, swings below the axle') from a static rest frame forces motion (leaves axle line in 6/6 clips, ROI motion 7.07 ± 1.35 vs neutral 1.70 ± 0.18), but fails to produce rigid mechanical motion in 0/6 clips (0.0%). The model satisfies the text constraint by deforming or destroying object geometry (2x rod elongation, duplicate bobs, shattered rods). In contrast, mid-swing conditioning yields 6/6 rigid swings (100.0%) without geometric deformation (ro-3 #2432, commit 04f843a).
+FINDING: Prompting Cosmos3-Nano with event-script text ('released in the first moment, falls, swings below the axle') from a static rest frame forces motion (leaves axle line in 6/6 clips, ROI motion 7.07 ± 1.35 vs neutral 1.70 ± 0.18), but completely fails to produce rigid mechanical motion in 0/6 clips (0.0%). The model satisfies the text constraint by deforming or destroying object geometry (2x rod elongation, duplicate bobs, shattered rods). In contrast, mid-swing conditioning yields 6/6 rigid swings (100.0%) without geometric deformation (ro-3 #2432, ro-agy1 #2445, commit 04f843a).
 ```
 
 - **Quantitative Value**:
-  - **Leaves Axle Line**: restev **6/6 (100.0%)**, neutral 0/6 (0.0%), mid-swing 6/6 (100.0%) (2 videos × seeds 1–3).
-  - **Rigid, Fixed-Length Swing Below Axle**: restev **0/6 (0.0%)**, neutral 0/6 (0.0%), mid-swing **6/6 (100.0%)**.
+  - **Leaves Axle Line**: Rest Event-Script (`restev`) **6/6 (100.0%)**, Neutral Rest 0/6 (0.0%), Mid-Swing **6/6 (100.0%)** (2 videos × seeds 1–3).
+  - **Rigid, Fixed-Length Swing Below Axle**: Rest Event-Script **0/6 (0.0%)**, Neutral Rest 0/6 (0.0%), Mid-Swing **6/6 (100.0%)** (Fisher exact $p = 0.002$ vs mid-swing).
   - **Failure Classification across 6 Clips**:
-    - *Elongated Rod & Bob Disappearance (`moves_broken`)*: 3/6 clips drop by f8–16, but the rod elongates to $\approx 2\times$ length spanning from axle to table, while the bob vanishes or teleports.
+    - *Elongated Rod & Bob Disappearance (`moves_broken`)*: 3/6 clips drop by f8–16, but the rod elongates to $\approx 2\times$ length spanning from axle to table, while the bob vanishes or inverts.
     - *Multi-Rod Morphing & Duplicate Bobs (`delayed_morph`)*: 2/6 clips hold at the axle until $\approx \text{f}32$, then morph into a T-shaped multi-rod object with duplicate bobs dangling.
-    - *Structural Shattering (`detached`)*: 1/6 clips explodes into tangled rods by f12 and falls onto the table.
-  - **ROI Motion Energy (Gray Levels)**: restev **$7.07 \pm 1.35$** ($n=6$), neutral $1.70 \pm 0.18$, mid-swing $6.68 \pm 0.73$, real reference $5.06\text{--}5.40$. Motion metrics alone would falsely score restev as "fixed", paralleling the optical flow reward trap seen in VBench Dynamic Degree (Finding #2249).
-  - **Dynamical Period**: Referee-validated `measure_pend` reports `check` on 6/6 clips and `pend_acf` fails on 6/6; no coherent physical oscillation or period exists.
-- **Setup**: `nvidia/Cosmos3-Nano`, $832\times 480$, 93f @ 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt. Input: real GAUGE pendulum videos 10 and 11, side view with robot in frame. Prompt: `prompt_event.txt` ("released in the first moment, falls, swings below the axle").
-- **Method**: Categorical blind eye coding from 4-frame ROI contact strips (`qc/restev_10.jpg`, `qc/restev_11.jpg`), ROI motion difference tracking, referee-validated `tools/trk_ballfall/measure_pend.py` (PASS msg 201), and `pend_acf` autocorrelation.
-- **Control**: The neutral-prompt rest arm on identical frames and seeds (stays at horizontal axle line in 6/6 clips).
-- **Evidence**: Commit `04f843a`, Finding `#2432`, `work/ro-3/task99_midswing_pendulum/` (`eye_codes.json`, `roi_motion_restev.json`, `qc/`).
-- **Causal Mechanism**: Directly confirms Scout-1's hypothesis H-S (Finding #2305, Digest #2365): text prompts function as high-level semantic event classifiers that enforce event occurrence ("it falls"), but lack the temporal capacity to constrain continuous spatial-temporal mechanics. When initialized from a static zero-velocity boundary condition (held horizontal along axle), the diffusion prior cannot reconcile the static image tokens with continuous rigid rotation. Consequently, the model minimizes denoising loss by distorting object geometry (elastic rod stretching, phantom duplicate bobs, structural shattering) to satisfy the text condition without obeying rigid mechanics. This directly mirrors the phantom duplicate ball spawning observed under conflicting text/visual constraints in ball drops (Finding 1, Finding 9).
+    - *Structural Shattering (`detached`)*: 1/6 clips explodes into tangled rods by f12 and falls completely off the axle onto the table.
+  - **ROI Motion Energy (Gray Levels)**: Rest Event-Script **$7.07 \pm 1.35$** ($n=6$) vs Neutral Rest $1.70 \pm 0.18$ vs Mid-Swing $6.68 \pm 0.73$ (Real GAUGE reference: $5.06\text{--}5.40$). Motion metrics alone would falsely score restev as "fixed", paralleling the optical flow reward trap seen in VBench Dynamic Degree (Finding #2249).
+  - **Dynamical Period**: Referee-validated `measure_pend` reports `check` on 6/6 clips and `pend_acf` fails completely on 6/6 (0/6 measurable physical periods).
+- **Setup**: `nvidia/Cosmos3-Nano` (bfloat16, vLLM/diffusers, A100 & RTX 5090), $832\times 480$, 93f @ 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt. Input: real GAUGE pendulum videos 10 and 11, horizontal release frame (rest) vs mid-swing frame (mid). Prompt: `prompt_event.txt` ("released in the first moment, falls, swings below the axle") vs neutral prompt.
+- **Method**: Categorical blind eye coding from 4-frame ROI contact strips (`qc/restev_10.jpg`, `qc/restev_11.jpg`), spatio-temporal ROI motion tracking, referee-validated `tools/trk_ballfall/measure_pend.py` (PASS msg 201), and `pend_acf` autocorrelation. Replicated by `ro-agy1` in Review `#2445`.
+- **Control**: The neutral-prompt rest arm on identical frames and seeds (stays at horizontal axle line in 6/6 clips) and mid-swing arm.
+- **Evidence**: Commit `04f843a`, Finding `#2432`, Review `#2445`, `work/ro-3/task99_midswing_pendulum/` (`eye_codes.json`, `roi_motion_restev.json`, `qc/`).
+- **Causal Mechanism**: Directly confirms Scout-1's event-script hypothesis H-S (Finding #2305, Digest #2365; CausalCascade, arXiv:2610.15562): text prompts function as high-level semantic event classifiers that enforce event occurrence ("it falls"), but lack the temporal capacity to constrain continuous spatial-temporal mechanics. When initialized from a static zero-velocity boundary condition (held horizontal along axle), the diffusion prior cannot reconcile the static image tokens with continuous rigid rotation. Consequently, the model minimizes denoising loss by distorting object geometry (elastic rod stretching, phantom duplicate bobs, structural shattering) to satisfy the text condition without obeying rigid mechanics. This directly mirrors the phantom duplicate ball spawning observed under conflicting text/visual constraints in ball drops (Finding 1, Finding 9). Mid-event conditioning is the only intervention that preserves rigid geometry.
+
+---
+
+### Finding 11: Chained Short I2V Clips Stagnate at Seams and Fail to Induce Dissipation, Refuting Serial-Event Hypothesis (agy-4 Task 42 Finding #2407, Task 104 Replication)
+
+```
+FINDING: Chaining short I2V clips fails to induce bounce decay or settling to rest over continuous rollouts, refuting the serial-event hypothesis (arXiv:2607.13031) for energy dissipation due to a 5-frame velocity stagnation seam artifact (agy-4 Task 42 Finding #2407, commit 8780f81; Task 104 replication cf90e74).
+```
+
+- **Quantitative Value**:
+  - **Settling / Rest Rate**: **0.0% (0/2 arms settled)**; late corridor motion is $3.03\text{ px/f}$ (chained) vs $5.03\text{ px/f}$ (continuous control) vs $0.74\text{ px/f}$ (real settled reference).
+  - **Kinematic Reversals**: 9 late direction reversals (chained) vs 46 (continuous control).
+  - **Initial Gravitational Acceleration**: $g = 8.12 \pm 0.85\text{ m/s}^2$ ($R^2 = 0.9987$, flag `ok`) chained vs $11.51 \pm 0.30\text{ m/s}^2$ ($R^2 = 0.9999$, flag `weak`) control.
+  - **NVIDIA Scoreboard**: DOVER Fused $\Delta = +0.0028$ ($0.5398$ vs $0.5370$); DD Norm $\Delta = -0.256$ ($1.162$ vs $1.419$, both `dd_bin = 0`).
+  - **Seam Stagnation Artifact**: 5-frame velocity stagnation ($v \approx 0$, displacement $<0.1\text{ px}$ across f0–f4 of segment 2, followed by sudden table plunge at f5).
+- **Setup**: `nvidia/Cosmos3-Nano` (diffusers bf16), $832\times 480$, 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt, exact GAUGE ball prompt. Input: real GAUGE ball 1 mid-fall (frame 33). Chained arm: 93f segment 1 + 92f continuation from still frame 92 (185 displayed frames). Control: continuous 189f generation.
+- **Method**: Referee planted-PASS `tools/realball/firstfall.py` (20/20 PASS), `tools/nv_scoreboard/score.py` (CUDA DOVER + RAFT DD), seam MAE, and per-frame pixel displacement. Replicated by `agy-4` in Task 104 (`cf90e74`).
+- **Control**: Matched continuous 189-frame rollout at identical prompt, seed, model, and sampling hyperparameters.
+- **Evidence**: Commit `8780f81`, commit `cf90e74`, `work/agy-4/task42_chain_bounce/` (`README.md`, `task42_results.json`, `chained_s1_185f.mp4`, `eval/nv_scores.json`, `seam_qc_s1.jpg`).
+- **Causal Mechanism**: Hypothesized by arXiv:2607.13031 that breaking long rollouts into shorter sequential chunks would bypass autoregressive drift and allow natural event termination. However, as analyzed by scout-1 (#2415) via Steady-Forcing (arXiv:2606.14732), conditioning on a static still frame at the seam strips away the incoming physical momentum. The model replays its start-from-rest prior for exactly 5 frames (one 4-frame temporal latent group plus frame 0), before releasing a new drop from the current apex height. Thus, static chaining resets kinetic energy at every boundary rather than allowing dissipation.
+
+---
+
+### Finding 12: Temporal RoPE Frequency Editing (fast05) Exceeds DOVER Non-Inferiority Regressions ($\Delta = -0.025$) While CoTracker3 Disproves Physical Damping via Frame-0 Attractor Re-Lift (rog-cc Review #2396, rog2 Review #2419, scout-1 #2443)
+
+```
+FINDING: Editing temporal RoPE frequencies (halving fastest pairs j=0, 3; fast05) exceeds non-inferiority visual quality bounds (DOVER fused Δ = -0.025 ± 0.004), while identity-aware CoTracker3 tracking disproves physical damping by revealing temporary mid-clip rest followed by unphysical re-lift to gripper height (rog-cc Review #2396, rog2 Review #2419, scout-1 #2443).
+```
+
+- **Quantitative Value**:
+  - **NVIDIA Scoreboard Regressions (rog-cc Review #2396, commit `cc05328`)**:
+    - DOVER Fused: Base $0.5725 \pm 0.0040$ vs fast05 $0.5475 \pm 0.0040$ ($\Delta = \mathbf{-0.0250 \pm 0.0040}$, CI90 $[-0.033, -0.017]$, $6/6$ pairs degraded). Exceeds proposed non-inferiority margin $\delta = 0.020$. Driven by Aesthetic DOVER: $\Delta = -0.0088 \pm 0.0014$ ($6/6$ down). Technical DOVER: $-0.0012 \pm 0.0017$ (n.s.).
+    - Dynamic Degree: Base $2.97 \to$ fast05 $1.23$ ($\Delta = -1.74 \pm 0.93$; `dd_bin` $0.33 \to 0.00$). While superficially moving closer to real GAUGE reference ($0.17\text{--}0.27$), this reflects suppression of background optical flow rather than physical settling.
+  - **Independent Physical Kinematics (rog2 Review #2419, commit `1f69ee2`)**:
+    - Evaluated with offline seeded CoTracker3 tracking ($3\times 3$ point grid around ball center) on all 24 Task 92 clips (filtering for tracking visibility $\ge 0.85$).
+    - In 2 of 4 track-verified clips (b1 s2, b3 s2), the ball rests on the plank for 11–16 frames mid-clip, but then **re-lifts back to gripper height**, remaining elevated ($y < 250\text{ px}$) in 73% and 81% of late frames.
+    - Late apex height (minimum $y$ in f56–92): fast05 median $107\text{ px}$ ($91, 94, 120, 233\text{ px}$) vs Base median $123\text{ px}$ ($72, 118, 123, 199, 199\text{ px}$) shows zero statistical difference ($\Delta = -16\text{ px}$, n.s.).
+- **Setup**: `nvidia/Cosmos3-Nano` (in-process diffusers bf16 on H100), GAUGE ball 1 dd33 and ball 3 dd35 mid-fall inputs $\times$ seeds 1–3 ($n=6$ pairs). Treatment: temporal RoPE frequencies for $j=0, 3$ scaled by 0.5.
+- **Method**: `tools/nv_scoreboard/score.py` (DOVER reps=3, RAFT-large DD), CoTracker3 offline median tracking, overlay contact sheets.
+- **Control**: Matched base Nano rollouts on identical inputs and seeds.
+- **Evidence**: Commit `cc05328` (`work/rog-cc/t92_nv/`), commit `1f69ee2` (`work/rog2/ct92_seeded/`).
+- **Causal Mechanism**: As synthesized by scout-1 (#2443; Loopy, arXiv:2608.23090; FFGo, arXiv:2511.15700), halving high-frequency temporal RoPE coordinates acts as a temporal low-pass filter on positional heads, blurring temporal offsets and generating clone artifacts. The apparent reduction in late frame difference energy ($D$) is an artifact of interrupted motion: the ball pauses on the plank, but because the DiT's position-sensitive layers retain an active **frame-0 attractor**, late frames are pulled back toward the initial conditioning layout ("ball near gripper"), manifesting as an unphysical tether/yo-yo re-lift rather than true physical energy dissipation.
 
 ---
 
@@ -305,10 +351,13 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 |     - Rules out 4x temporal compression as an absolute representation bottleneck. |
 |                                                                                   |
 |  2. DiT Backbone Prior: CAUSAL LOCUS OF PHYSICAL GLITCHES                        |
-|     - Lacks mechanical release dynamics (0% release from stationary grip).        |
+|     - Lacks mechanical release dynamics (0% release from stationary grip/axle).   |
+|     - Event text forces motion tokens but fractures geometry (0/6 rigid swings).  |
 |     - SFT LoRA causes severe scoreboard regressions (DOVER -0.077, HUE -0.028 #2201). |
 |     - Embodies an undamped, driven-bounce prior (e_T = 0.989, Countix keepy-uppy). |
 |     - Operates on a fixed token stride (k = 1.000; ignores text & RoPE fps dials).|
+|     - RoPE fast05 fails damping via tether re-lift to frame-0 gripper attractor.  |
+|     - Chaining short clips resets momentum (5-frame stagnation; 0/2 settled).     |
 |     - Imposes preferred limit cycles (~30 cm / ~0.33 s; +580% low-drop energy).   |
 |     - Imposes velocity ceilings on slopes rather than gravitational integration.  |
 |                                                                                   |
@@ -323,13 +372,15 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 ### Implications for Deliverable 1 (The Fix)
 - **What will NOT work**: 
   - Changing prompt text or FPS dials (Finding 5 proves they are null or induce hallucinations).
-  - Event-script text prompting from static rest frames (Finding 10 proves event text forces motion only by destroying object geometry—$2\times$ rod elongation, duplicate bobs, structural shattering, 0/6 rigid swings—rather than physical dynamics).
+  - Event-script text prompting from static rest frames (Finding 10 proves event text forces motion only by destroying object geometry—$2\times$ rod elongation, duplicate bobs, structural shattering, 0/6 rigid swings—rather than physical dynamics; ro-3 #2432, ro-agy1 #2445).
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
   - Tuning inference sampler hyperparameters (CFG scale $\in [1.0, 6.0]$ or flow shift $\in [3.0, 10.0]$): Flow shift is an operational no-op on the diffusers UniPC schedule, low CFG ($\le 2.5$) induces mid-air levitation/reversal rather than dissipation, and CFG 4–6 preserves perpetual bouncing invariant to scale (Task 71, Task 75, commit `a1fb2e3`).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
   - Scaling RoPE spatial frequencies (Finding 9 proves early RoPE spatial dilation by 0.7x fails to break the grasp deadlock: 0/3 release, phantom cloning persists, and spurious optical flow increases).
+  - Editing temporal RoPE frequencies (Finding 12 proves fast05 degrades DOVER fused by $-0.025 \pm 0.004$ exceeding margins, while CoTracker3 proves lack of physical damping due to tether re-lift to the frame-0 gripper attractor).
+  - Serial clip chaining through still frames (Finding 11 proves chaining resets incoming velocity to zero, introducing a 5-frame stagnation seam artifact that replays drops from current height).
   - Supervised LoRA fine-tuning trained on synthetic drops without matched general-domain regularization (Task 24 LoRA induces severe out-of-distribution visual degradation, dropping DOVER fused by $-0.077 \pm 0.021$ and HUE plausibility by $-0.028 \pm 0.012$, while physical hallucinations like size jumps and clones persist in 28/84 clips; #2168, #2201, #2211).
 - **What DOES work / Open Fix Directions**:
-  - **Dynamic Conditioning**: Initializing I2V from a mid-event frame where the object is already detached (mid-fall conditioning) completely bypasses the release deadlock and restores true Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$).
+  - **Dynamic Conditioning**: Initializing I2V from a mid-event frame where the object is already detached (mid-fall conditioning for balls, mid-swing for pendulums) completely bypasses the release deadlock, restores true Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$), achieves 100% rigid pendulum swings ($p=0.002$), and preserves rigid object geometry.
   - **Visual Gripper-Opening Training Data**: To fix the release deadlock from frame 0, fine-tuning requires paired sequences of robotic grippers visibly opening, rather than synthetic balls dropping in isolation.
   - **Restitution & Dissipation Adaptation**: Because the VAE tokenizer is representationally sufficient, modifying the DiT backbone or conditioning is both necessary and sufficient to impart dissipative mechanics.
