@@ -1,0 +1,4 @@
+# Native QC freeze
+All14 stride3 sheets, all14 consecutive80–92 sheets and all14 full-scene sheets viewed, via scene composites where appropriate. Q05 stride and Q13 late required lossless PNG re-encodings/splits because the image renderer showed only the JPG header; actual source dimensions were correct. No new video frames chosen. No key or source per-clip eye codes or motion values opened before this freeze.
+
+late_rest Y3/N9/U2 across14 movies (includes repeated control identities; not independent n14). unique_ball Y14, stable_size Y13/N1, present_end Y14. These are one partially masked, unvalidated LLM coder's visual assessments; stable_size Y means no obvious doubling/gross deformation, not equal measured radius. Rest U reflects ambiguity about small late motions; never convert U to N or Y. No numerical physical measurement is inferred.

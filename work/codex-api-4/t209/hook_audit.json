@@ -1,0 +1,314 @@
+{
+  "source_sha256": "6d58dc0674ca3ae2846aaab0c9d3393b627b19641dde852fd7299821b71743e8",
+  "jobs_sha256": "0fb8067feba3678f19e691d68f11c2bbd136aad6bbcddf5eec7de313f9e3bdc5",
+  "checks": [
+    "capture aborts before underlying forward",
+    "capture contains static fields only",
+    "v8_SWfull_ball1_fps24_93f_s3 paired-call window+dynamic invariance",
+    "v8_SWe3_ball1_fps24_93f_s3 paired-call window+dynamic invariance",
+    "v8_SWe7_ball1_fps24_93f_s3 paired-call window+dynamic invariance",
+    "v8_SWl7_ball1_fps24_93f_s3 paired-call window+dynamic invariance",
+    "v8_SWl17_ball1_fps24_93f_s3 paired-call window+dynamic invariance",
+    "v8_SWfull_ball1_fps24_93f_s5 paired-call window+dynamic invariance",
+    "v8_SWe3_ball1_fps24_93f_s5 paired-call window+dynamic invariance",
+    "v8_SWe7_ball1_fps24_93f_s5 paired-call window+dynamic invariance",
+    "v8_SWl7_ball1_fps24_93f_s5 paired-call window+dynamic invariance",
+    "v8_SWl17_ball1_fps24_93f_s5 paired-call window+dynamic invariance",
+    "disabled hook is passthrough"
+  ],
+  "records": [
+    {
+      "name": "v8_SWfull_ball1_fps24_93f_s3",
+      "declared_range": [
+        0,
+        35
+      ],
+      "switched_conditional_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 35
+    },
+    {
+      "name": "v8_SWe3_ball1_fps24_93f_s3",
+      "declared_range": [
+        0,
+        3
+      ],
+      "switched_conditional_steps": [
+        0,
+        1,
+        2
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 3
+    },
+    {
+      "name": "v8_SWe7_ball1_fps24_93f_s3",
+      "declared_range": [
+        0,
+        7
+      ],
+      "switched_conditional_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 7
+    },
+    {
+      "name": "v8_SWl7_ball1_fps24_93f_s3",
+      "declared_range": [
+        7,
+        35
+      ],
+      "switched_conditional_steps": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 28
+    },
+    {
+      "name": "v8_SWl17_ball1_fps24_93f_s3",
+      "declared_range": [
+        17,
+        35
+      ],
+      "switched_conditional_steps": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 18
+    },
+    {
+      "name": "v8_SWfull_ball1_fps24_93f_s5",
+      "declared_range": [
+        0,
+        35
+      ],
+      "switched_conditional_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 35
+    },
+    {
+      "name": "v8_SWe3_ball1_fps24_93f_s5",
+      "declared_range": [
+        0,
+        3
+      ],
+      "switched_conditional_steps": [
+        0,
+        1,
+        2
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 3
+    },
+    {
+      "name": "v8_SWe7_ball1_fps24_93f_s5",
+      "declared_range": [
+        0,
+        7
+      ],
+      "switched_conditional_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 7
+    },
+    {
+      "name": "v8_SWl7_ball1_fps24_93f_s5",
+      "declared_range": [
+        7,
+        35
+      ],
+      "switched_conditional_steps": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 28
+    },
+    {
+      "name": "v8_SWl17_ball1_fps24_93f_s5",
+      "declared_range": [
+        17,
+        35
+      ],
+      "switched_conditional_steps": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "observed_stub_forward_calls": 70,
+      "used": 18
+    }
+  ],
+  "scope": "Exact published AST with fake underlying forward; assumes conditional then unconditional each step. Does not prove live deployment, pipeline order, tensor alignment, token positions, scheduler, or GPU execution."
+}

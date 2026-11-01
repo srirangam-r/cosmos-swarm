@@ -1,0 +1,5 @@
+deploy 08:50:56
+server up 08:51:26
+DONE
+heck s 3 maxabs 0 mean 0.0
+hookcheck s 5 maxabs 0 mean 0.0
