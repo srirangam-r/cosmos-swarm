@@ -1,7 +1,8 @@
 """Run the unchanged preregistered tools; keep outputs masked until QC freeze."""
 import pathlib,json,subprocess,sys,concurrent.futures,os
 ROOT=pathlib.Path(__file__).resolve().parent
-TOOLS=ROOT.parent/'cosmos-swarm'/'tools'
+REPO=next(p for p in [ROOT.parent/'cosmos-swarm',*ROOT.parents] if (p/'tools/trk_ballfall/measure_pend.py').exists())
+TOOLS=REPO/'tools'
 def one(item):
     code,name=item;clip=ROOT/'clips'/(name+'.mp4')
     if not clip.exists():return code,None

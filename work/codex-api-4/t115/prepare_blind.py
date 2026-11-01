@@ -3,6 +3,7 @@ import hashlib,json,pathlib,re,secrets,random,cv2,numpy as np,urllib.request
 ROOT=pathlib.Path(__file__).parent
 BASE='http://100.111.167.68:8030'
 def collect():
+    (ROOT/'clips').mkdir(exist_ok=True)
     records=[]
     for owner in ['ro-3','ro-api-3']:
         for j in json.load(urllib.request.urlopen(BASE+'/jobs?owner='+owner))['jobs']:
