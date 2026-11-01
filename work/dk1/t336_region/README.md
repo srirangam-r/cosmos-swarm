@@ -31,3 +31,18 @@ with or without SFR (K=15, CFG 3), remove that cost while the output still copie
 ## Not tested
 Near-vertical scenes (need the supplied amplitude of #6747), ODE inversion inside the mask (ProxyUp's choice; SDEdit is kept
 to stay matched to 276), plausibility judge, robot-clip prediction, and scenes outside the GAUGE rig.
+
+## Amendment 1 (20:33 UTC, after 5 clips): region-band arm fails qualitatively; t336b dual-clock, FROZEN before any t336b clip
+- Observation (`peek_real12_reg_regsfr_s1.jpg`, real_12 reg s1-3 and regsfr s1-2; sidecars confirm band box, σ_start 0.89844,
+  sfr 0/15): outside the box the scene is not rebuilt from frame 0. From the first generated frame on, the background is a flat
+  brown/grey textured wall, and only the boxed rod/bob remains. Variance-matched fresh noise at σ 0.898 with 16 steps left gives
+  Nano nothing to rebuild the background from; SFR15 does not help. 25 pending t336 jobs cancelled; real_17 reg_s1 and regsfr_s1
+  kept as a second-scene check. The 7 clips are still scored as preregistered (descriptive, n is small).
+- t336b (`build_jobs_b.py` → `jobs_b.jsonl`, 32 jobs): Time-to-Move-style dual clock via the server's `latent.x0_inject`
+  (PhyRPR latent fusion). start_step 0, so the background runs plain Nano's full schedule. Inside the same boxes, the predicted
+  clean video is replaced by the proxy latent for steps [0, K), K = 19 (release at σ 0.898) or 27 (σ 0.573). Arms inj19,
+  inj27 (seeds 1-3), inj19_x17, inj27_x17 (seed 1).
+- Readouts and decision rules unchanged: `analyze_b.py` (276 analyzer, prefix t336b_) and `quality_b.py` (same as quality.py,
+  t336b names). Fix candidate per arm: ΔDOVER vs plain ≥ −0.020 AND ≥ 10/12 clean within 10% AND the x17 control ≥ 1.5 on ≥ 3/4.
+  Extra QC (eye check, contact strips): a seam or a duplicate pendulum at the box edge is reported as a failure mode
+  (TTM reports duplicates when the background is unconstrained).
