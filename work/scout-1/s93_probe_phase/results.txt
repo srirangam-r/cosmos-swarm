@@ -1,0 +1,69 @@
+clip                                  meanD | pos-aligned D (rev pos i - fwd pos i): L0  L1  L2..L21  L22 L23 | content-aligned (rev 23-i - fwd i): c0 c1 mid c22 c23
+r3_probe_cosmos_baseF_b1_s1        -0.0139 | -0.025 -0.001 -0.0167 +0.002 +0.025 | +0.110 +0.028 -0.0167 -0.027 -0.109  n=24
+r3_probe_cosmos_baseF_b1_s2        -0.0148 | -0.026 -0.005 -0.0169 -0.014 +0.027 | +0.113 +0.017 -0.0169 -0.036 -0.112  n=24
+r3_probe_cosmos_baseF_b1_s3        -0.0119 | -0.014 -0.005 -0.0136 -0.005 +0.010 | +0.084 +0.010 -0.0136 -0.020 -0.089  n=24
+r3_probe_cosmos_rec_b1_s3          -0.0077 | -0.023 -0.026 -0.0098 +0.025 +0.033 | +0.086 +0.012 -0.0098 -0.013 -0.075  n=24
+r3_probe_cosmos_rect_b1_s3         -0.0076 | -0.009 -0.006 -0.0087 -0.003 +0.010 | +0.068 +0.001 -0.0087 -0.011 -0.067  n=24
+r3_probe_cosmos_timedQT_b1_s3      -0.0107 | -0.013 -0.004 -0.0123 -0.002 +0.010 | +0.082 +0.011 -0.0123 -0.017 -0.085  n=24
+r3_probe_real_ball1                +0.0188 | -0.039 -0.011 +0.0218 +0.022 +0.043 | +0.125 +0.032 +0.0218 -0.021 -0.121  n=24
+r3_probe_real_ball2                +0.0171 | -0.036 -0.008 +0.0197 +0.020 +0.041 | +0.128 +0.036 +0.0197 -0.025 -0.123  n=24
+r3_probe_real_ball3                +0.0163 | -0.036 -0.010 +0.0197 +0.018 +0.027 | +0.109 +0.026 +0.0197 -0.018 -0.118  n=24
+r3_probe_real_ball4                +0.0169 | -0.038 -0.012 +0.0202 +0.019 +0.033 | +0.111 +0.027 +0.0202 -0.019 -0.116  n=24
+r3_probe_real_midfall_ball1        +0.0146 | -0.014 +0.025 +0.0128 +0.047 +0.036 | +0.141 +0.057 +0.0128 +0.015 -0.120  n=24
+r3_probe_real_midfall_ball2        -0.0211 | -0.005 -0.017 -0.0210 -0.024 -0.042 | +0.089 +0.013 -0.0210 -0.053 -0.136  n=24
+r3c_ball_E_fps12                   -0.0143 | -0.032 -0.006 -0.0164 -0.005 +0.029 | +0.110 +0.020 -0.0164 -0.031 -0.113  n=24
+r3c_pend_189_nodur                 -0.0026 | +0.063 +0.024 -0.0050 +0.007 -0.057 | +0.131 +0.079 -0.0050 -0.047 -0.125  n=24
+r3c_pend_189_s1                    -0.0033 | +0.061 +0.027 -0.0056 +0.003 -0.058 | +0.131 +0.075 -0.0056 -0.045 -0.129  n=24
+r3c_pend_A_s1                      -0.0080 | -0.000 -0.010 -0.0087 -0.002 -0.004 | +0.060 +0.006 -0.0087 -0.018 -0.064  n=24
+r3c_pend_B_fps12                   -0.0090 | -0.003 -0.007 -0.0096 -0.010 -0.005 | +0.064 +0.011 -0.0096 -0.028 -0.072  n=24
+r3c_pend_s2                        -0.0098 | -0.002 -0.002 -0.0115 +0.001 -0.002 | +0.069 +0.013 -0.0115 -0.015 -0.073  n=24
+
+clip | middle-latent (L2-21) rel. delta (R-F)/F in % at sigma 0.2 0.4 0.6 0.8 | freeze rel % at 0.2 0.8 | seeds-consistent?
+cosmos_baseF_b1_s1           -5.8   -9.3  -10.1   -8.5   sd 0.0 0.1 0.1 0.1 |   -76   -24
+cosmos_baseF_b1_s2           -5.7   -9.0   -9.9   -8.2   sd 0.2 0.3 0.1 0.2 |   -77   -26
+cosmos_baseF_b1_s3           -7.3   -7.9   -7.8   -7.1   sd 0.2 0.3 0.1 0.3 |   -70   -22
+cosmos_rec_b1_s3             -6.5   -5.3   -5.3   -5.3   sd 0.1 0.1 0.4 0.5 |   -68   -24
+cosmos_rect_b1_s3            -7.3   -5.1   -4.3   -4.1   sd 0.1 0.1 0.2 0.2 |   -65   -17
+cosmos_timedQT_b1_s3         -6.8   -7.3   -7.3   -6.4   sd 0.2 0.2 0.2 0.1 |   -70   -21
+real_ball1                   +8.2  +10.7  +11.7  +10.8   sd 0.1 0.1 0.2 0.3 |   -76   -16
+real_ball2                   +7.1   +9.5  +10.6   +9.8   sd 0.3 0.2 0.2 0.3 |   -76   -18
+real_ball3                   +7.8   +9.9  +10.6  +10.1   sd 0.3 0.3 0.2 0.5 |   -75   -17
+real_ball4                   +7.7   +9.9  +11.0  +10.7   sd 0.2 0.3 0.3 0.7 |   -75   -17
+real_midfall_ball1           +3.6   +6.1   +7.8   +7.7   sd 0.0 0.2 0.3 0.2 |   -75   -24
+real_midfall_ball2           -6.4   -9.0  -10.5  -10.1   sd 0.1 0.1 0.2 0.1 |   -77   -32
+ball_E_fps12                 -5.3   -9.0   -9.5   -8.2   sd 0.2 0.1 0.1 0.2 |   -77   -25
+pend_189_nodur               -1.9   -2.4   -2.3   -2.0   sd 0.2 0.1 0.2 0.3 |   -91   -71
+pend_189_s1                  -2.3   -2.7   -2.7   -2.0   sd 0.2 0.1 0.1 0.1 |   -91   -71
+pend_A_s1                    -5.7   -8.2   -8.2   -8.7   sd 0.1 0.2 0.5 0.2 |   -82   -47
+pend_B_fps12                 -5.9   -8.0   -7.8   -7.0   sd 0.2 0.2 0.4 0.2 |   -84   -54
+pend_s2                      -7.7  -10.1  -10.3   -8.0   sd 0.2 0.3 0.6 0.7 |   -83   -52
+
+ball_F_ball1_fps24_93f_s1.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:1.074 2:0.851 3:0.870 0:0.827 | HF: 1:0.845 2:0.661 3:0.665 0:0.615
+  b%12==0 (n=7): framediff 0.814 vs other 0.913; HF 0.604 vs 0.704
+cause5_QT_ball1_fps24_93f_s3.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:0.913 2:0.692 3:0.673 0:0.557 | HF: 1:0.803 2:0.623 3:0.610 0:0.534
+  b%12==0 (n=7): framediff 0.566 vs other 0.721; HF 0.530 vs 0.652
+pend_A_fps24_93f_s1.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:1.173 2:1.079 3:1.045 0:1.067 | HF: 1:0.687 2:0.639 3:0.607 0:0.602
+  b%12==0 (n=7): framediff 0.870 vs other 1.109; HF 0.561 vs 0.639
+pend_fps24_s1_189f_crf20.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:2.295 2:2.198 3:2.030 0:1.850 | HF: 1:0.794 2:0.787 3:0.734 0:0.714
+  b%12==0 (n=15): framediff 1.773 vs other 2.121; HF 0.716 vs 0.761
+pend_fps24_s2.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:1.673 2:1.658 3:1.456 0:1.570 | HF: 1:0.850 2:0.838 3:0.770 0:0.793
+  b%12==0 (n=15): framediff 1.625 vs other 1.586; HF 0.785 vs 0.815
+real_ball_1_f0_93f.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:0.350 2:0.324 3:0.321 0:0.631 | HF: 1:0.296 2:0.287 3:0.280 0:0.543
+  b%12==0 (n=7): framediff 1.369 vs other 0.327; HF 1.149 vs 0.286
+real_ball_2_f0_93f.mp4
+  frame-diff by (b mod 4) [1=chunk boundary]: 1:0.383 2:0.326 3:0.315 0:0.642 | HF: 1:0.330 2:0.275 3:0.271 0:0.561
+  b%12==0 (n=7): framediff 1.370 vs other 0.338; HF 1.174 vs 0.292
+
+ball_F_ball1_fps24_93f_s1.mp4        HF jump at chunk boundary / other = 1.31   at b%12==0 / other = 0.86
+cause5_QT_ball1_fps24_93f_s3.mp4     HF jump at chunk boundary / other = 1.36   at b%12==0 / other = 0.81
+pend_A_fps24_93f_s1.mp4              HF jump at chunk boundary / other = 1.11   at b%12==0 / other = 0.88
+pend_fps24_s1_189f_crf20.mp4         HF jump at chunk boundary / other = 1.10   at b%12==0 / other = 0.98
+pend_fps24_s2.mp4                    HF jump at chunk boundary / other = 1.07   at b%12==0 / other = 1.01
+real_ball_1_f0_93f.mp4               HF jump at chunk boundary / other = 0.80   at b%12==0 / other = 4.02
+real_ball_2_f0_93f.mp4               HF jump at chunk boundary / other = 0.89   at b%12==0 / other = 4.02
