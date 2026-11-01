@@ -8,6 +8,7 @@ with a free offset and slope per flight (linear least squares); g = 2 * curvatur
 Primary g = FIRST usable rebound flight (largest, best conditioned); g_pooled = all flights (later short flights read ~15% low on real
 GAUGE drops, so it is reported only). flag = ok (first-flight R^2 > 0.98 and >= 6 frames) | weak | no_bounce.
 Usage: python3 -I measure_bounce.py clip.mp4 --fps 24 --ppm 539.8 [--tracker ball|diff] [--qc qc.png]
+       python3 -I measure_bounce.py clip.mp4 --fps 24 --ppm 539.8 --track_json samball_track.json [--start N]   (external track, e.g. SAM)
        python3 -I measure_bounce.py --planted planted.json clip_dir     (planted run, diam 0.10 m scale like v5)"""
 import sys, json, argparse, numpy as np
 sys.path.insert(0, __file__.rsplit('/', 1)[0])
@@ -47,11 +48,18 @@ def pooled(t, y, seg):
 
 def measure(F, fps, diam=None, mpp=None, tracker='ball', tol=2.0, nboot=300, seed=0):
     B = trk.blobs(F, mode=tracker); ok = [i for i, b in enumerate(B) if b]
-    fr = np.array(ok); t = fr / fps; y = np.array([B[i][1] for i in ok]); d_px = float(np.median([B[i][4] for i in ok]))
+    fr = np.array(ok); y = np.array([B[i][1] for i in ok]); d_px = float(np.median([B[i][4] for i in ok]))
     s = mpp if mpp else diam / d_px
+    return fit_track(fr, y, fps, s, d_px=d_px, tracker=tracker, tol=tol, nboot=nboot, seed=seed,
+                     track=[[int(i), float(B[i][0]), float(B[i][1])] for i in ok])
+
+
+def fit_track(fr, y, fps, s, d_px=None, tracker='external', tol=2.0, nboot=300, seed=0, track=None):
+    """Bounce-flight g from any per-frame track: fr = frame indices, y = image y (px, down), s = m per px."""
+    fr = np.asarray(fr); y = np.asarray(y, float); t = fr / fps
     K, seg = flights(t, y, tol)
     base = dict(method=VERSION, tracker=tracker, fps=fps, m_per_px=float(s), d_px=d_px, impact_frames=[int(fr[k]) for k in K],
-                track=[[int(i), float(B[i][0]), float(B[i][1])] for i in ok])
+                track=track if track is not None else [[int(i), float('nan'), float(v)] for i, v in zip(fr, y)])
     if not seg: return dict(base, g=None, flag='no_bounce', n_flights=0)
     cp, _, _ = pooled(t, y, seg); g_pooled = float(2 * cp[0] * s); allseg = seg
     seg = seg[:1]   # v1 primary: first rebound flight only (later, shorter flights read ~15% low on real GAUGE drops)
@@ -92,7 +100,14 @@ if __name__ == '__main__':
     a = argparse.ArgumentParser(); a.add_argument('clip'); a.add_argument('--fps', type=float, required=True)
     a.add_argument('--ppm', type=float); a.add_argument('--mpp', type=float); a.add_argument('--diam', type=float)
     a.add_argument('--tracker', default='ball'); a.add_argument('--tol', type=float, default=2.0); a.add_argument('--qc')
+    a.add_argument('--track_json', help="use an external track instead of trk.blobs: JSON with 'cy' (one value per frame, null/NaN = missing), e.g. tools/samball --track_out")
+    a.add_argument('--start', type=int, default=0, help='ignore track frames before this index (e.g. before a spawned ball appears)')
     o = a.parse_args(); mpp = o.mpp or (1 / o.ppm if o.ppm else None)
-    r = measure(trk.load(o.clip), o.fps, diam=o.diam, mpp=mpp, tracker=o.tracker, tol=o.tol)
+    if o.track_json:
+        cy = np.array([np.nan if v is None else v for v in json.load(open(o.track_json))['cy']], float)
+        fr = np.where(np.isfinite(cy) & (np.arange(len(cy)) >= o.start))[0]
+        r = fit_track(fr, cy[fr], o.fps, mpp, tracker='external:' + o.track_json.rsplit('/', 1)[-1], tol=o.tol)
+    else:
+        r = measure(trk.load(o.clip), o.fps, diam=o.diam, mpp=mpp, tracker=o.tracker, tol=o.tol)
     if o.qc: qc(r, o.qc)
     print(json.dumps({k: v for k, v in r.items() if k != 'track'}))

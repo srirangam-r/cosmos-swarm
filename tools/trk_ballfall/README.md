@@ -50,3 +50,15 @@ Planted: identical to the v5 pendulum estimates (ratio 0.9999-1.0000 on planted-
 Real reference: GAUGE pendulum is released at ~84° (L = 0.2726 m). Over the first ~8 s (a 189-frame Cosmos window) the real period is
 1.171 ± 0.003 s (mocap, n=20); 1.06 s (GAUGE's baseline) is the small-amplitude period (whole 130 s record: 1.048 s = 2π√(L/g)).
 Real-video check at Cosmos resolution: see work/raj-3/pseudo_cosmos_pend/.
+
+## measure_bounce.py v1 (raj-3): g from the first rebound flight
+For Cosmos clips whose first drop is unusable (held ball never released, a spawned ball, a ball starting mid-air, or a drop only ~4 frames long),
+g comes from the curvature of the first ballistic flight between bounces (free v0, so it doesn't depend on release).
+- Planted: equals v5 within 0.15% on the 4 clips that bounce (4/4 <5%). Composite "bounce g where present, else v5; e,a v5; period pend v1" @ 38db9dd: referee PASS 20/20.
+- Real GAUGE drops at Cosmos res (letterboxed 832x480, 539.8 px/m): 9.625 ± 0.047 (SE; sd 0.21; n=19 of 22 ok) vs 9.81. Later, shorter flights read ~15% low, so they are reported (`g_pooled`, `g_per_flight`) but not used.
+- `--track_json` takes an external per-frame track (e.g. tools/samball `--track_out`) instead of trk.blobs; `--start N` skips frames before a spawned ball appears.
+```
+python3 -I measure_bounce.py clip.mp4 --fps 24 --ppm 539.8 --qc qc.png
+python3 -I measure_bounce.py clip.mp4 --fps 24 --ppm 539.8 --track_json track.json --start 24
+```
+flag = ok needs first-flight R² > 0.98 and ≥ 6 frames. Look at the QC: on held/spawned-ball clips the blob tracker can lock onto jitter (flag=weak).

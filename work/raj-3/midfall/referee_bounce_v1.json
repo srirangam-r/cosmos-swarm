@@ -1,0 +1,25 @@
+{
+  "agent": "raj-3",
+  "method": "trk_ballfall measure_bounce v1 (g from first rebound flight) @ 38db9dd",
+  "estimates_scored": 4,
+  "within_tolerance": 4,
+  "pass_rate": 1.0,
+  "tolerance": 0.1,
+  "verdict": "fail",
+  "per_clip_error_band": {
+    "planted-06": {
+      "g": "<5%"
+    },
+    "planted-08": {
+      "g": "<5%"
+    },
+    "planted-14": {
+      "g": "<5%"
+    },
+    "planted-15": {
+      "g": "<5%"
+    }
+  },
+  "ignored_clip_ids": [],
+  "rule": "pass = at least 10 estimates (or all) scored and >= 90% within 10% relative error"
+}
