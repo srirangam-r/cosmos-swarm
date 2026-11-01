@@ -1,0 +1,7 @@
+# Carpet seed 3: qualitative QC
+
+Queue 073734-19090c, laptop5090; T2V superball/carpet, 832×480, 189 frames at 24 fps, seed 3, steps 35, guidance 6, flow shift 10; full prompt and remaining details in sidecar. Original MP4 SHA-256 `e9640e384856aa4625595bbe2cb4aa8ce69bb94633a46244973aab60f05f4cb4`; sidecar SHA-256 `25ee8c8e77b274bef5074f0e842f2195e51810b0f1abe7f5aa2da3293bbd989a`.
+
+All frames inspected in consecutive downscaled sheets, and alternate frames 0–40 plus selected late frames in native-resolution crops. A single pink ball is visible throughout, rising from the start, with an apparent apex around frames 9–12, and then descending to near its lowest position around frames 30–33. It remains near that position to frame 188 with small visual changes. The view and carpet appear broadly stable; no cut or duplication is apparent. The first flight begins before the clip and any contact at the low point is uncertain; a small change around frame 34 does not establish a rebound. The exact onset of rest and physical contact are uncertain. No two complete contact-bounded flights, decay or height ratio, or rhythm can be measured. Near-stillness is qualitative, not proof of zero motion or physical rest.
+
+`carpet3_native.jpg` has selected native-resolution crops (the bottom of the ball is cropped in some late frames); `carpet3_review.mp4` is a lossy transcode of the original. This unblinded observation is not planted-validated. Different T2V scenes cannot isolate surface material.
