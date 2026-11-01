@@ -11,7 +11,8 @@ _orig = _tc.dispatch_attention_fn
 
 def _chunked(query, key, value, *args, is_causal=False, **kw):
     L = query.shape[1]  # (B, L, H, D)
-    if is_causal or L <= QCHUNK or kw.get("attn_mask") is not None:
+    m = kw.get("attn_mask")  # none today; internals.py passes a (1,1,1,Lk) key bias, which broadcasts over any query chunk
+    if is_causal or L <= QCHUNK or (m is not None and m.shape[-2] != 1):
         return _orig(query, key, value, *args, is_causal=is_causal, **kw)
     return torch.cat([_orig(query[:, i:i + QCHUNK], key, value, *args, is_causal=False, **kw)
                       for i in range(0, L, QCHUNK)], dim=1)
