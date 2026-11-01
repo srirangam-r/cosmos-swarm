@@ -1,0 +1,10 @@
+Blind codes (rog-cc, 10:4x-10:5x UTC, key unopened). Aids (all blind, hex+row labels only, rng reproduced internally):
+rep3316_zoom.py (native-res corridor crop f76-92 step 2 + full frames every 8 f), rep3316_diff.py (|f92-f76|, |f84-f76|, |f92-f84| x4),
+rep3316_native.py (step-3 frames f4-40 for 4 ambiguous rows).
+eacd62 A: ball rolls off the plank toward the camera, still moving at the crop edge f76-92 -> rest N. B, C: diff dark -> Y.
+d2e60f A, C: ball moving on plank (bright diff) -> N. B: moving + a second ball hangs under the gripper f16-92 (gripper swings) -> art Y.
+872c0d A/B/C: all moving through f92 -> N.
+a48f63 A/B/C: diff dark -> Y. B: ball goes low f4-7 then is back under the gripper with a tether-like line f10-16, falls again -> art Y (could be an extreme bounce; coded as gripper re-entry).
+668313 A, B: moving (bright diff) -> N. C: faint ring in |f92-f76|, positions stable within ~3 px -> Y (BORDERLINE).
+668313 A and C: ball back under the gripper with tether-like line f13-19 after being low at f4-10 -> art Y (same caveat as a48f63 B).
+aa10be A/B/C: moving -> N.
