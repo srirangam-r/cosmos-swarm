@@ -4,7 +4,12 @@ the donor's clock (f=0.03), the full donor noise does (f=1.07). All start noises
 latent.start_file (x_start, used as is; latent frame 0 stays the conditioning frame). Same request as E6 stage C otherwise
 (GAUGE pendulum prompt, 832x480, 93 f @ 24 fps, 35 steps, CFG 6, noise.device cpu). Targets t1-8 (E6 first frames), fill
 seeds 1,2 (numpy default_rng(s), the SAME fresh noise for every arm -> paired). Donor = E6's k=0 donor (t1-8 -> d2,5,8,11,14,17,20,3).
+BUG FIX (v2, before any v2 clip): latent frame 0 of an inverted latent is the clean CONDITIONING latent, not noise. Mixing
+temporal bands of it spreads that frame over all frames as ringing at the band edge (|k|<=3 -> period ~6.9 latent = ~27.4 video
+frames), which is the flicker E6's tlo clips show and pend_acf read as a 'clean' 27.3-27.9 f period. v2 sets the donor's frame 0
+to the fresh noise's frame 0 before any temporal mixing (frame 0 is replaced by the conditioning frame anyway).
 Arms (16 clips each):
+  tlo_fix         E6's tlo transplant done right: donor bins |k|<=3 (frame 0 fixed) + fresh elsewhere
   up_fresh        fresh noise, uploaded unchanged (control for the upload path)
   damp_a{90,70,40,0}  fresh noise with its slow band (|k|<=3) scaled by a (energy hypothesis; inverted tlo std is ~0.92x white)
   tlo_phrand      donor's slow-band MAGNITUDE with the fresh noise's phase (+ fresh elsewhere): magnitude vs phase
@@ -57,16 +62,19 @@ def build(arm, t, s):
     if p.exists(): return p
     d = DONOR[t]; dC = load(E6 / "out" / f"A_rec{d:02}.npz"); shape = dC.shape
     fresh = np.random.default_rng(s).standard_normal(shape)
+    dC[:, :, 0] = fresh[:, :, 0]  # v2 fix: frame 0 is the conditioning latent, not noise
     if arm == "up_fresh": x = fresh
     elif arm.startswith("damp_a"): x = damp(fresh, int(arm[6:]) / 100)
+    elif arm == "tlo_fix": x = mixT(dC, fresh, 0, 3)
     elif arm == "tlo_phrand": x = phrand(dC, fresh)
     elif arm == "tlo_shuf": x = shuf(dC, fresh, s)
     else:
         donor = dC if arm.endswith("_C") else load(E6W / "out" / f"WA_rec{d:02}.npz")
+        donor[:, :, 0] = fresh[:, :, 0]
         x = mixT(donor, fresh, 3, 6) if arm.startswith("osc") else mixT(donor, fresh, 0, 6)
     np.savez(p, x_start=x.astype(np.float32)); return p
 
-ARMS = ["up_fresh", "damp_a90", "damp_a70", "damp_a40", "damp_a0", "tlo_phrand", "tlo_shuf", "osc_C", "osc_W", "low_C", "low_W"]
+ARMS = ["tlo_fix", "up_fresh", "damp_a90", "damp_a70", "damp_a40", "damp_a0", "tlo_phrand", "tlo_shuf", "osc_C", "osc_W", "low_C", "low_W"]
 
 def post(url, name, image, npz, seed):
     mp4 = OUT / f"{name}.mp4"
