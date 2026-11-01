@@ -1,0 +1,68 @@
+{
+ "n_clips": 22,
+ "missing_after": [],
+ "categories": {
+  "overall": {
+   "before": 0.7661187572354486,
+   "after": 0.7661187572354486,
+   "diff": 0.0,
+   "se": 0.0,
+   "n": 22
+  },
+  "Physical Laws": {
+   "before": 0.6190693015524477,
+   "after": 0.6190693015524477,
+   "diff": 0.0,
+   "se": 0.0,
+   "n": 22
+  },
+  "Visual Integrity": {
+   "before": 0.8650926891451077,
+   "after": 0.8650926891451077,
+   "diff": 0.0,
+   "se": 0.0,
+   "n": 22
+  },
+  "Geometric Reasoning": {
+   "before": 0.6824082844259189,
+   "after": 0.6824082844259189,
+   "diff": 0.0,
+   "se": 0.0,
+   "n": 22
+  },
+  "Semantic Alignment": {
+   "before": 0.9239558981691075,
+   "after": 0.9239558981691075,
+   "diff": 0.0,
+   "se": 0.0,
+   "n": 22
+  }
+ },
+ "seed_noise": {
+  "overall": {
+   "per_clip_seed_sd": 0.04937772972442765,
+   "n_pairs": 6,
+   "se_of_paired_diff_over_n_clips": 0.014887945681409586
+  },
+  "Physical Laws": {
+   "per_clip_seed_sd": 0.07571583896868775,
+   "n_pairs": 6,
+   "se_of_paired_diff_over_n_clips": 0.022829184413282477
+  },
+  "Visual Integrity": {
+   "per_clip_seed_sd": 0.04105636503983494,
+   "n_pairs": 6,
+   "se_of_paired_diff_over_n_clips": 0.012378959826636119
+  },
+  "Geometric Reasoning": {
+   "per_clip_seed_sd": 0.09580844275610044,
+   "n_pairs": 6,
+   "se_of_paired_diff_over_n_clips": 0.02888733239729354
+  },
+  "Semantic Alignment": {
+   "per_clip_seed_sd": 0.13264424663432928,
+   "n_pairs": 6,
+   "se_of_paired_diff_over_n_clips": 0.03999374515322112
+  }
+ }
+}

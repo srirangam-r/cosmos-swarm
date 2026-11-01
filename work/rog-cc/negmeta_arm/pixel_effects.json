@@ -1,0 +1,54 @@
+{
+ "motion": {
+  "inv_empty_ball1_s1": 1.8555632829666138,
+  "inv_empty_ball1_s2": 2.1250245571136475,
+  "inv_empty_ball2_s1": 1.949211835861206,
+  "inv_empty_ball2_s2": 2.1426150798797607,
+  "inv_nvneg_ball1_s1": 1.5275230407714844,
+  "inv_nvneg_ball1_s2": 1.2902480363845825,
+  "inv_nvneg_ball2_s1": 1.6022759675979614,
+  "inv_nvneg_ball2_s2": 1.504154920578003,
+  "same_empty_ball1_s1": 1.8307944536209106,
+  "same_empty_ball1_s2": 2.157069206237793,
+  "same_empty_ball2_s1": 1.9287817478179932,
+  "same_empty_ball2_s2": 2.493020534515381,
+  "same_nvneg_ball1_s1": 1.5240042209625244,
+  "same_nvneg_ball1_s2": 1.4376294612884521,
+  "same_nvneg_ball2_s1": 1.5599231719970703,
+  "same_nvneg_ball2_s2": 1.4957832098007202
+ },
+ "pair_mae": [
+  {
+   "clip": "ball1_s1",
+   "meta_effect_empty": 2.6654245853424072,
+   "meta_effect_nvneg": 1.758233666419983,
+   "neg_effect_inv": 5.402606964111328,
+   "neg_effect_same": 5.797679901123047,
+   "seed_effect_inv_empty": 11.895671844482422
+  },
+  {
+   "clip": "ball1_s2",
+   "meta_effect_empty": 5.054854869842529,
+   "meta_effect_nvneg": 3.013686180114746,
+   "neg_effect_inv": 14.861128807067871,
+   "neg_effect_same": 14.37435531616211,
+   "seed_effect_inv_empty": 11.895671844482422
+  },
+  {
+   "clip": "ball2_s1",
+   "meta_effect_empty": 2.36466908454895,
+   "meta_effect_nvneg": 1.988027811050415,
+   "neg_effect_inv": 5.591331958770752,
+   "neg_effect_same": 5.255569934844971,
+   "seed_effect_inv_empty": 11.635374069213867
+  },
+  {
+   "clip": "ball2_s2",
+   "meta_effect_empty": 5.780874729156494,
+   "meta_effect_nvneg": 2.19472599029541,
+   "neg_effect_inv": 14.71474552154541,
+   "neg_effect_same": 14.803583145141602,
+   "seed_effect_inv_empty": 11.635374069213867
+  }
+ ]
+}
