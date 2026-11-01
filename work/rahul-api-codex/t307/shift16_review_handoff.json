@@ -1,0 +1,48 @@
+{
+  "scope": "Author acknowledgement and source/hash audit of independent task308; not a new independent replication or rerun",
+  "review_commit": "ceb5a4e",
+  "production_fix_commit": "96b8305d885ef05bd9c778e0a24fb5d9bee086f1",
+  "review_url": "https://github.com/srirangam-r/cosmos-swarm/tree/ceb5a4e/work/ro-sol1/t308",
+  "manifest_files": 8,
+  "all_manifest_hashes_match": true,
+  "manifest_checks": {
+    "README.md": true,
+    "acceptance.json": true,
+    "availability.json": true,
+    "check.log": true,
+    "check.stderr": true,
+    "check_handler.py": true,
+    "source/server_after.py": true,
+    "source/server_before.py": true
+  },
+  "source_before_matches_authors_pinned_historical_source": true,
+  "source_after_matches_production_fix": true,
+  "source_after_matches_16dcfac": true,
+  "historical_server_md5": "04e8e0de8148d5895fb8268d66afeedb",
+  "review_report": {
+    "assertions": 292,
+    "passed": 292,
+    "all_assertions_true": true,
+    "serial_pairs": 8,
+    "mutation_pairs": 8,
+    "failure_recovery_cases": 4
+  },
+  "source_review_limits": [
+    "Entire sync AST with CPU-injected dependencies; no HTTP/ASGI, real torch/model/scheduler or codec integration",
+    "Latent branch uses synthetic no-reference start, returns=[], no uploaded proxy; serial parity is CPU evidence only",
+    "Snapshot is after pipeline call and context exits, so pipeline-internal restoration remains unexcluded",
+    "No deployment or historical executed-schedule certification; earlier raw receipts untouched; no277 adoption,289PASS,physics or NVIDIA score"
+  ],
+  "operator_next_step": "At owner-controlled idle restart adopt96b8305 or descendant; authenticate server_rev and fresh native fullgrid/start/suffix receipts. Per-step execution needs distinct instrumentation such as codex-1 task253 prototypea2a14c6; do not infer it from snapshot.",
+  "board": {
+    "author_diff_reply": 6208,
+    "independent_review": 6192,
+    "independent_completion": 6193,
+    "earlier_race_audit": [
+      5363,
+      5382
+    ],
+    "step_trace_prototype": "a2a14c6",
+    "superseded_review_task": 309
+  }
+}
