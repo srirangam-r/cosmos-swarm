@@ -48,6 +48,11 @@ python -m tools.nano_phys \
   --proxy-only
 ```
 
+Both proxy builders preserve the resized input as the first raw frame before
+encoding. The MP4 codec is lossy, so its decoded first frame can differ from
+the input. This image-boundary guarantee does not certify the proxy mask,
+physical calibration, or the endpoint's conditioning behavior.
+
 ---
 
 ## How It Works (The Mechanism)

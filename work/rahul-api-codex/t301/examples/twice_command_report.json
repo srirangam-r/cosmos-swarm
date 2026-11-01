@@ -1,0 +1,1424 @@
+{
+  "scope": "Summary/QC arithmetic only; no planted, physical-recovery, causal, or NVIDIA certification.",
+  "gates": {
+    "flicker_lt": 0.08,
+    "symmetric_tool_gap_lte": 0.1,
+    "flags": "both ok",
+    "strip_and_native": "explicit true"
+  },
+  "all_slots_pass_qc": true,
+  "planned": 30,
+  "received": 30,
+  "qc_accepted": 30,
+  "scenes": 3,
+  "seeds_per_scene": 2,
+  "planned_lines": 6,
+  "complete_lines": 6,
+  "missing": 0,
+  "rows": [
+    {
+      "id": "[\"syntheticA\",1,0.6]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticA\",1,0.6]",
+        "acf_s": 1.2,
+        "mp_s": 1.2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,0.9]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticA\",1,0.9]",
+        "acf_s": 1.8,
+        "mp_s": 1.8,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,1.18]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticA\",1,1.18]",
+        "acf_s": 2.36,
+        "mp_s": 2.36,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,1.5]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticA\",1,1.5]",
+        "acf_s": 3,
+        "mp_s": 3,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,2]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticA\",1,2]",
+        "acf_s": 4,
+        "mp_s": 4,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,0.6]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticA\",2,0.6]",
+        "acf_s": 1.2,
+        "mp_s": 1.2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,0.9]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticA\",2,0.9]",
+        "acf_s": 1.8,
+        "mp_s": 1.8,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,1.18]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticA\",2,1.18]",
+        "acf_s": 2.36,
+        "mp_s": 2.36,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,1.5]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticA\",2,1.5]",
+        "acf_s": 3,
+        "mp_s": 3,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,2]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticA\",2,2]",
+        "acf_s": 4,
+        "mp_s": 4,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,0.6]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticB\",1,0.6]",
+        "acf_s": 1.2,
+        "mp_s": 1.2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,0.9]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticB\",1,0.9]",
+        "acf_s": 1.8,
+        "mp_s": 1.8,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,1.18]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticB\",1,1.18]",
+        "acf_s": 2.36,
+        "mp_s": 2.36,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,1.5]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticB\",1,1.5]",
+        "acf_s": 3,
+        "mp_s": 3,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,2]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticB\",1,2]",
+        "acf_s": 4,
+        "mp_s": 4,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,0.6]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticB\",2,0.6]",
+        "acf_s": 1.2,
+        "mp_s": 1.2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,0.9]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticB\",2,0.9]",
+        "acf_s": 1.8,
+        "mp_s": 1.8,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,1.18]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticB\",2,1.18]",
+        "acf_s": 2.36,
+        "mp_s": 2.36,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,1.5]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticB\",2,1.5]",
+        "acf_s": 3,
+        "mp_s": 3,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,2]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticB\",2,2]",
+        "acf_s": 4,
+        "mp_s": 4,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,0.6]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticC\",1,0.6]",
+        "acf_s": 1.2,
+        "mp_s": 1.2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,0.9]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticC\",1,0.9]",
+        "acf_s": 1.8,
+        "mp_s": 1.8,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,1.18]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticC\",1,1.18]",
+        "acf_s": 2.36,
+        "mp_s": 2.36,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,1.5]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticC\",1,1.5]",
+        "acf_s": 3,
+        "mp_s": 3,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,2]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticC\",1,2]",
+        "acf_s": 4,
+        "mp_s": 4,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,0.6]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticC\",2,0.6]",
+        "acf_s": 1.2,
+        "mp_s": 1.2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,0.9]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticC\",2,0.9]",
+        "acf_s": 1.8,
+        "mp_s": 1.8,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,1.18]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticC\",2,1.18]",
+        "acf_s": 2.36,
+        "mp_s": 2.36,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,1.5]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticC\",2,1.5]",
+        "acf_s": 3,
+        "mp_s": 3,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,2]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticC\",2,2]",
+        "acf_s": 4,
+        "mp_s": 4,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    }
+  ],
+  "lines": [
+    {
+      "scene": "syntheticA",
+      "seed": 1,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticA",
+      "seed": 2,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticB",
+      "seed": 1,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticB",
+      "seed": 2,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticC",
+      "seed": 1,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticC",
+      "seed": 2,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 2,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 1.236,
+            "rmse_to_command_s": 1.327584272278035,
+            "mean_abs_relative_error": 1
+          },
+          "endpoint_response": 2,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 2
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 2
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 2
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 2
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "tools": {
+    "acf_s": {
+      "secondary_accepted_only_fit": {
+        "n": 30,
+        "slope": 2,
+        "intercept_s": 0,
+        "r2": 1,
+        "bias_s": 1.236,
+        "rmse_to_command_s": 1.327584272278035,
+        "mean_abs_relative_error": 1
+      },
+      "complete_scene_slopes": {
+        "n": 3,
+        "mean": 2,
+        "sd": 0,
+        "min": 2,
+        "max": 2
+      },
+      "full_grid_slope_summary": {
+        "n": 3,
+        "mean": 2,
+        "sd": 0,
+        "min": 2,
+        "max": 2
+      },
+      "byScene": [
+        {
+          "scene": "syntheticA",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 2
+        },
+        {
+          "scene": "syntheticB",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 2
+        },
+        {
+          "scene": "syntheticC",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 2
+        }
+      ],
+      "leave_one_complete_scene_out_mean_slopes": [
+        2,
+        2,
+        2
+      ],
+      "dose": [
+        {
+          "target_s": 0.6,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.2,
+            "sd": 0,
+            "min": 1.2,
+            "max": 1.2
+          }
+        },
+        {
+          "target_s": 0.9,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.8,
+            "sd": 0,
+            "min": 1.8,
+            "max": 1.8
+          }
+        },
+        {
+          "target_s": 1.18,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 2.36,
+            "sd": 0,
+            "min": 2.36,
+            "max": 2.36
+          }
+        },
+        {
+          "target_s": 1.5,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 3,
+            "sd": 0,
+            "min": 3,
+            "max": 3
+          }
+        },
+        {
+          "target_s": 2,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 4,
+            "sd": 0,
+            "min": 4,
+            "max": 4
+          }
+        }
+      ],
+      "paired_endpoints": {
+        "n": 6,
+        "mean": 2,
+        "sd": 0,
+        "min": 2,
+        "max": 2
+      },
+      "guided_seed_spread": [
+        {
+          "scene": "syntheticA",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 2,
+          "sample_sd_s": 0
+        }
+      ]
+    },
+    "mp_s": {
+      "secondary_accepted_only_fit": {
+        "n": 30,
+        "slope": 2,
+        "intercept_s": 0,
+        "r2": 1,
+        "bias_s": 1.236,
+        "rmse_to_command_s": 1.327584272278035,
+        "mean_abs_relative_error": 1
+      },
+      "complete_scene_slopes": {
+        "n": 3,
+        "mean": 2,
+        "sd": 0,
+        "min": 2,
+        "max": 2
+      },
+      "full_grid_slope_summary": {
+        "n": 3,
+        "mean": 2,
+        "sd": 0,
+        "min": 2,
+        "max": 2
+      },
+      "byScene": [
+        {
+          "scene": "syntheticA",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 2
+        },
+        {
+          "scene": "syntheticB",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 2
+        },
+        {
+          "scene": "syntheticC",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 2
+        }
+      ],
+      "leave_one_complete_scene_out_mean_slopes": [
+        2,
+        2,
+        2
+      ],
+      "dose": [
+        {
+          "target_s": 0.6,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.2,
+            "sd": 0,
+            "min": 1.2,
+            "max": 1.2
+          }
+        },
+        {
+          "target_s": 0.9,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.8,
+            "sd": 0,
+            "min": 1.8,
+            "max": 1.8
+          }
+        },
+        {
+          "target_s": 1.18,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 2.36,
+            "sd": 0,
+            "min": 2.36,
+            "max": 2.36
+          }
+        },
+        {
+          "target_s": 1.5,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 3,
+            "sd": 0,
+            "min": 3,
+            "max": 3
+          }
+        },
+        {
+          "target_s": 2,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 4,
+            "sd": 0,
+            "min": 4,
+            "max": 4
+          }
+        }
+      ],
+      "paired_endpoints": {
+        "n": 6,
+        "mean": 2,
+        "sd": 0,
+        "min": 2,
+        "max": 2
+      },
+      "guided_seed_spread": [
+        {
+          "scene": "syntheticA",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 2,
+          "sample_sd_s": 0
+        }
+      ]
+    }
+  },
+  "data_kind": "synthetic",
+  "input_sha256": "7118bb6c8908d341ffb4f9f43124e2fd214f9bd1ce2871ad66b66f1ba5995b3c",
+  "source_contract_message": 5950,
+  "observation_status": "ROWS_SUPPLIED",
+  "interpretation": "Arithmetic acceptance only. Native/strip booleans and reader validation must be audited externally. No physical, model, causal, referee or NVIDIA certification.",
+  "context": "ILLUSTRATIVE ONLY. Scene IDs, seed IDs, periods, flags and acceptance booleans are synthetic, not an adopted task265 plan or model measurements."
+}

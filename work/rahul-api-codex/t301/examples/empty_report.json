@@ -1,0 +1,1082 @@
+{
+  "scope": "Summary/QC arithmetic only; no planted, physical-recovery, causal, or NVIDIA certification.",
+  "gates": {
+    "flicker_lt": 0.08,
+    "symmetric_tool_gap_lte": 0.1,
+    "flags": "both ok",
+    "strip_and_native": "explicit true"
+  },
+  "all_slots_pass_qc": false,
+  "planned": 30,
+  "received": 0,
+  "qc_accepted": 0,
+  "scenes": 3,
+  "seeds_per_scene": 2,
+  "planned_lines": 6,
+  "complete_lines": 0,
+  "missing": 30,
+  "rows": [
+    {
+      "id": "[\"syntheticA\",1,0.6]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",1,0.9]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",1,1.18]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",1,1.5]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",1,2]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 2,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",2,0.6]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",2,0.9]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",2,1.18]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",2,1.5]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticA\",2,2]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 2,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",1,0.6]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",1,0.9]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",1,1.18]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",1,1.5]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",1,2]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 2,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",2,0.6]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",2,0.9]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",2,1.18]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",2,1.5]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticB\",2,2]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 2,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",1,0.6]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",1,0.9]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",1,1.18]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",1,1.5]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",1,2]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 2,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",2,0.6]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",2,0.9]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",2,1.18]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",2,1.5]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "[\"syntheticC\",2,2]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 2,
+      "observation": null,
+      "qc_accepted": false,
+      "reasons": [
+        "missing"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "scene": "syntheticA",
+      "seed": 1,
+      "accepted": 0,
+      "planned": 5,
+      "complete": false,
+      "metrics": {
+        "acf_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticA",
+      "seed": 2,
+      "accepted": 0,
+      "planned": 5,
+      "complete": false,
+      "metrics": {
+        "acf_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticB",
+      "seed": 1,
+      "accepted": 0,
+      "planned": 5,
+      "complete": false,
+      "metrics": {
+        "acf_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticB",
+      "seed": 2,
+      "accepted": 0,
+      "planned": 5,
+      "complete": false,
+      "metrics": {
+        "acf_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticC",
+      "seed": 1,
+      "accepted": 0,
+      "planned": 5,
+      "complete": false,
+      "metrics": {
+        "acf_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticC",
+      "seed": 2,
+      "accepted": 0,
+      "planned": 5,
+      "complete": false,
+      "metrics": {
+        "acf_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": null,
+          "endpoint_response": null,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": null
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": null
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": null
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "tools": {
+    "acf_s": {
+      "secondary_accepted_only_fit": null,
+      "complete_scene_slopes": {
+        "n": 0,
+        "mean": null,
+        "sd": null,
+        "min": null,
+        "max": null
+      },
+      "full_grid_slope_summary": null,
+      "byScene": [
+        {
+          "scene": "syntheticA",
+          "planned_lines": 2,
+          "complete_lines": 0,
+          "slope": null
+        },
+        {
+          "scene": "syntheticB",
+          "planned_lines": 2,
+          "complete_lines": 0,
+          "slope": null
+        },
+        {
+          "scene": "syntheticC",
+          "planned_lines": 2,
+          "complete_lines": 0,
+          "slope": null
+        }
+      ],
+      "leave_one_complete_scene_out_mean_slopes": [],
+      "dose": [
+        {
+          "target_s": 0.6,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 0.9,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 1.18,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 1.5,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 2,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        }
+      ],
+      "paired_endpoints": {
+        "n": 0,
+        "mean": null,
+        "sd": null,
+        "min": null,
+        "max": null
+      },
+      "guided_seed_spread": [
+        {
+          "scene": "syntheticA",
+          "target_s": 0.6,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 0.9,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.18,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.5,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 2,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.6,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.9,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.18,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.5,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 2,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.6,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.9,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.18,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.5,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 2,
+          "sample_sd_s": null
+        }
+      ]
+    },
+    "mp_s": {
+      "secondary_accepted_only_fit": null,
+      "complete_scene_slopes": {
+        "n": 0,
+        "mean": null,
+        "sd": null,
+        "min": null,
+        "max": null
+      },
+      "full_grid_slope_summary": null,
+      "byScene": [
+        {
+          "scene": "syntheticA",
+          "planned_lines": 2,
+          "complete_lines": 0,
+          "slope": null
+        },
+        {
+          "scene": "syntheticB",
+          "planned_lines": 2,
+          "complete_lines": 0,
+          "slope": null
+        },
+        {
+          "scene": "syntheticC",
+          "planned_lines": 2,
+          "complete_lines": 0,
+          "slope": null
+        }
+      ],
+      "leave_one_complete_scene_out_mean_slopes": [],
+      "dose": [
+        {
+          "target_s": 0.6,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 0.9,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 1.18,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 1.5,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "target_s": 2,
+          "planned": 6,
+          "accepted": 0,
+          "output_s": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        }
+      ],
+      "paired_endpoints": {
+        "n": 0,
+        "mean": null,
+        "sd": null,
+        "min": null,
+        "max": null
+      },
+      "guided_seed_spread": [
+        {
+          "scene": "syntheticA",
+          "target_s": 0.6,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 0.9,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.18,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.5,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 2,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.6,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.9,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.18,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.5,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 2,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.6,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.9,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.18,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.5,
+          "sample_sd_s": null
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 2,
+          "sample_sd_s": null
+        }
+      ]
+    }
+  },
+  "data_kind": "synthetic",
+  "input_sha256": "930359d14ca8c8b9f3c72fc24cd30cfd1a189e0711e62604c20b7ac48c8ad4c4",
+  "source_contract_message": 5950,
+  "observation_status": "NO_ROWS",
+  "interpretation": "Arithmetic acceptance only. Native/strip booleans and reader validation must be audited externally. No physical, model, causal, referee or NVIDIA certification.",
+  "context": "ILLUSTRATIVE ONLY. Scene IDs, seed IDs, periods, flags and acceptance booleans are synthetic, not an adopted task265 plan or model measurements."
+}

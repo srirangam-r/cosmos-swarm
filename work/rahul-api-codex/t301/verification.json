@@ -1,0 +1,45 @@
+{
+  "data_kind": "synthetic_software_only",
+  "exact_source_checks": [
+    {
+      "message_id": 5951,
+      "file": "dial_analysis.cjs",
+      "sha256": "a88ba8c50cce34cf2296ff3c8644a421101d052630069580f459df9c54aec1e8",
+      "exact": true,
+      "match_policy": "Code block with trailing LF normalized to one; no executable changes"
+    },
+    {
+      "message_id": 5954,
+      "file": "test_dial_analysis.cjs",
+      "sha256": "2b82b030205e5183fa3f4412eae28702993614ebfc0f3f7cfb64f491e8211a34",
+      "exact": true,
+      "match_policy": "Code block with trailing LF normalized to one; no executable changes"
+    }
+  ],
+  "original_regression": {
+    "checks": 121,
+    "affineFixtures": 20,
+    "rejectedInputs": 10,
+    "qcFailureFixtures": 11,
+    "examples": {
+      "twiceR2": 1,
+      "twiceRmseS": 1.327584272278035,
+      "heteroSceneSlopes": [
+        0,
+        1,
+        2
+      ],
+      "selectiveAccepted": 6,
+      "selectiveMissing": 24,
+      "selectiveCompleteLines": 0,
+      "selectiveR2": 1
+    }
+  },
+  "independent_rational_fixtures": 101,
+  "independent_metric_comparisons": 606,
+  "max_abs_metric_error": 8.881784197001252e-16,
+  "cli_acceptance_checks": 35,
+  "node_version": "v18.19.1",
+  "no_model_or_media_measurement": true,
+  "no_planted_validation": true
+}

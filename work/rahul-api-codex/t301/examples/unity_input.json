@@ -1,0 +1,488 @@
+{
+  "data_kind": "synthetic",
+  "context": "ILLUSTRATIVE ONLY. Scene IDs, seed IDs, periods, flags and acceptance booleans are synthetic, not an adopted task265 plan or model measurements.",
+  "plan": [
+    {
+      "id": "[\"syntheticA\",1,0.6]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.6
+    },
+    {
+      "id": "[\"syntheticA\",1,0.9]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.9
+    },
+    {
+      "id": "[\"syntheticA\",1,1.18]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.18
+    },
+    {
+      "id": "[\"syntheticA\",1,1.5]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.5
+    },
+    {
+      "id": "[\"syntheticA\",1,2]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 2
+    },
+    {
+      "id": "[\"syntheticA\",2,0.6]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.6
+    },
+    {
+      "id": "[\"syntheticA\",2,0.9]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.9
+    },
+    {
+      "id": "[\"syntheticA\",2,1.18]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.18
+    },
+    {
+      "id": "[\"syntheticA\",2,1.5]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.5
+    },
+    {
+      "id": "[\"syntheticA\",2,2]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 2
+    },
+    {
+      "id": "[\"syntheticB\",1,0.6]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.6
+    },
+    {
+      "id": "[\"syntheticB\",1,0.9]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.9
+    },
+    {
+      "id": "[\"syntheticB\",1,1.18]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.18
+    },
+    {
+      "id": "[\"syntheticB\",1,1.5]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.5
+    },
+    {
+      "id": "[\"syntheticB\",1,2]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 2
+    },
+    {
+      "id": "[\"syntheticB\",2,0.6]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.6
+    },
+    {
+      "id": "[\"syntheticB\",2,0.9]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.9
+    },
+    {
+      "id": "[\"syntheticB\",2,1.18]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.18
+    },
+    {
+      "id": "[\"syntheticB\",2,1.5]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.5
+    },
+    {
+      "id": "[\"syntheticB\",2,2]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 2
+    },
+    {
+      "id": "[\"syntheticC\",1,0.6]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.6
+    },
+    {
+      "id": "[\"syntheticC\",1,0.9]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.9
+    },
+    {
+      "id": "[\"syntheticC\",1,1.18]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.18
+    },
+    {
+      "id": "[\"syntheticC\",1,1.5]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.5
+    },
+    {
+      "id": "[\"syntheticC\",1,2]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 2
+    },
+    {
+      "id": "[\"syntheticC\",2,0.6]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.6
+    },
+    {
+      "id": "[\"syntheticC\",2,0.9]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.9
+    },
+    {
+      "id": "[\"syntheticC\",2,1.18]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.18
+    },
+    {
+      "id": "[\"syntheticC\",2,1.5]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.5
+    },
+    {
+      "id": "[\"syntheticC\",2,2]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 2
+    }
+  ],
+  "observations": [
+    {
+      "id": "[\"syntheticA\",1,0.6]",
+      "acf_s": 0.6,
+      "mp_s": 0.6,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",1,0.9]",
+      "acf_s": 0.9,
+      "mp_s": 0.9,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",1,1.18]",
+      "acf_s": 1.18,
+      "mp_s": 1.18,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",1,1.5]",
+      "acf_s": 1.5,
+      "mp_s": 1.5,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",1,2]",
+      "acf_s": 2,
+      "mp_s": 2,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",2,0.6]",
+      "acf_s": 0.6,
+      "mp_s": 0.6,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",2,0.9]",
+      "acf_s": 0.9,
+      "mp_s": 0.9,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",2,1.18]",
+      "acf_s": 1.18,
+      "mp_s": 1.18,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",2,1.5]",
+      "acf_s": 1.5,
+      "mp_s": 1.5,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticA\",2,2]",
+      "acf_s": 2,
+      "mp_s": 2,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",1,0.6]",
+      "acf_s": 0.6,
+      "mp_s": 0.6,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",1,0.9]",
+      "acf_s": 0.9,
+      "mp_s": 0.9,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",1,1.18]",
+      "acf_s": 1.18,
+      "mp_s": 1.18,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",1,1.5]",
+      "acf_s": 1.5,
+      "mp_s": 1.5,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",1,2]",
+      "acf_s": 2,
+      "mp_s": 2,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",2,0.6]",
+      "acf_s": 0.6,
+      "mp_s": 0.6,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",2,0.9]",
+      "acf_s": 0.9,
+      "mp_s": 0.9,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",2,1.18]",
+      "acf_s": 1.18,
+      "mp_s": 1.18,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",2,1.5]",
+      "acf_s": 1.5,
+      "mp_s": 1.5,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticB\",2,2]",
+      "acf_s": 2,
+      "mp_s": 2,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",1,0.6]",
+      "acf_s": 0.6,
+      "mp_s": 0.6,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",1,0.9]",
+      "acf_s": 0.9,
+      "mp_s": 0.9,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",1,1.18]",
+      "acf_s": 1.18,
+      "mp_s": 1.18,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",1,1.5]",
+      "acf_s": 1.5,
+      "mp_s": 1.5,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",1,2]",
+      "acf_s": 2,
+      "mp_s": 2,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",2,0.6]",
+      "acf_s": 0.6,
+      "mp_s": 0.6,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",2,0.9]",
+      "acf_s": 0.9,
+      "mp_s": 0.9,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",2,1.18]",
+      "acf_s": 1.18,
+      "mp_s": 1.18,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",2,1.5]",
+      "acf_s": 1.5,
+      "mp_s": 1.5,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    },
+    {
+      "id": "[\"syntheticC\",2,2]",
+      "acf_s": 2,
+      "mp_s": 2,
+      "flag_acf": "ok",
+      "flag_mp": "ok",
+      "flicker": 0.005,
+      "strip_ok": true,
+      "native_verified": true
+    }
+  ]
+}
