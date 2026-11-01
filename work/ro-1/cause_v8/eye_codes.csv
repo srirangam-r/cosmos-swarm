@@ -1,0 +1,11 @@
+clip,switch_steps,seed,settled_by_f92,rest_frame,last20,notes
+v8_SWfull_ball1_fps24_93f_s3,0-35,3,Y,~15 (slow roll),2.02,hookcheck maxabs 0 vs cause5_QT s3
+v8_SWfull_ball1_fps24_93f_s5,0-35,5,Y,~60-72 (slow roll),0.56,hookcheck maxabs 0 vs cause5_QT s5
+v8_SWe3_ball1_fps24_93f_s3,0-3,3,N,-,3.49,low hops to f87; trajectory ~ l17 s3
+v8_SWe3_ball1_fps24_93f_s5,0-3,5,N,-,4.29,high bounces to end (F-like)
+v8_SWe7_ball1_fps24_93f_s3,0-7,3,Y,~48,2.49,low hops until ~45
+v8_SWe7_ball1_fps24_93f_s5,0-7,5,N,-,1.28,ARTIFACT: ball grows ~2x and keeps bouncing; exits frame right ~f78 (low last20 = absence)
+v8_SWl7_ball1_fps24_93f_s3,7-35,3,Y,~48 (slow roll),1.79,
+v8_SWl7_ball1_fps24_93f_s5,7-35,5,Y,~60-72 (slow roll),0.57,near-identical to SWfull s5
+v8_SWl17_ball1_fps24_93f_s3,17-35,3,N,-,3.62,low hops to end
+v8_SWl17_ball1_fps24_93f_s5,17-35,5,N,-,3.63,high bounces to end (F-like)
