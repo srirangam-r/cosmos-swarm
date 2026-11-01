@@ -1,0 +1,59 @@
+--- ../../../../srv/server_preALG.py	2026-11-01 03:13:06.684806306 -0500
++++ server_alg.py	2026-11-01 03:21:13.159526739 -0500
+@@ -38,6 +38,44 @@
+ BASE_SCHED = dict(pipe.scheduler.config)
+ print(f"loaded in {time.time()-t0:.0f}s", flush=True)
+ 
++# --- ALG (Adaptive Low-Pass Guidance, arXiv 2506.08456) hook, ro-3 shift 69 ---
++# extra_params alg_steps=k (default 0 = off) and alg_factor=f (default 2.5): for the first k denoising steps the clean
++# conditioning latent (latent frame 0) seen by the transformer (cond AND uncond passes) is bilinearly down-sampled by f
++# and up-sampled back; from step k on the original clean latent is restored, so the output keeps the exact frame 0.
++import torch.nn.functional as _F
++ALG = dict(steps=0, factor=2.5, clean=None)
++_orig_prep = pipe.prepare_latents
++
++
++def _lowpass(x, f):
++    lead, (H, W) = x.shape[:-2], x.shape[-2:]
++    h, w = max(1, round(H / f)), max(1, round(W / f))
++    y = _F.interpolate(x.reshape(1, -1, H, W).float(), size=(h, w), mode="bilinear", align_corners=False)
++    return _F.interpolate(y, size=(H, W), mode="bilinear", align_corners=False).reshape(*lead, H, W).to(x.dtype)
++
++
++def _prep(*a, **k):
++    out = _orig_prep(*a, **k)
++    ALG["clean"] = None
++    if ALG["steps"] > 0:
++        lat = out[0]
++        ALG["clean"] = lat[..., 0, :, :].clone()
++        lat[..., 0, :, :] = _lowpass(ALG["clean"], ALG["factor"])
++        print(f"ALG on: steps={ALG['steps']} factor={ALG['factor']} lat={tuple(lat.shape)} d={float((lat[..., 0, :, :]-ALG['clean']).float().abs().mean()):.4f}", flush=True)
++    return out
++
++
++pipe.prepare_latents = _prep
++
++
++def _alg_cb(p, i, t, kw):
++    lat = kw["latents"]
++    if ALG["clean"] is not None:
++        c = ALG["clean"].to(lat.dtype)
++        lat[..., 0, :, :] = _lowpass(c, ALG["factor"]) if i + 1 < ALG["steps"] else c
++    return {"latents": lat}
++
++
+ LOCK = threading.Lock()
+ STATE = dict(busy=False, served=0, waiting=0, started=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+ app = FastAPI()
+@@ -94,6 +132,11 @@
+         try:
+             pipe.scheduler = UniPCMultistepScheduler.from_config(BASE_SCHED, flow_shift=float(flow_shift))
+             call["generator"] = torch.Generator(device="cuda").manual_seed(int(seed))
++            ALG["steps"] = int(extra.get("alg_steps", 0)); ALG["factor"] = float(extra.get("alg_factor", 2.5))
++            if ALG["steps"] > 0 and img is not None and not extra.get("action_mode"):
++                call["callback_on_step_end"] = _alg_cb
++            else:
++                ALG["steps"] = 0
+             t1 = time.time()
+             res = pipe(**call)
+             dt = time.time() - t1
