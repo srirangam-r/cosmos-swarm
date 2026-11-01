@@ -78,7 +78,8 @@
   "holder_back": 0,
   "reentry": 0,
   "any_fall": 1,
-  "note": "ball descends f0-f2 then a duplicate pops onto the far table edge at f2 (no intermediate heights); upper ball reaches plank f5-8; high bounces; no gripper all clip"
+  "note": "ball descends f0-f2 then a duplicate pops onto the far table edge at f2 (no intermediate heights); upper ball reaches plank f5-8; high bounces; no gripper all clip",
+  "descent_artifact": 1
  },
  "t139_O_ball2_s2": {
   "fall": 0,
@@ -190,7 +191,8 @@
   "reentry": 1,
   "any_fall": 1,
   "morph": 1,
-  "note": "frame-0 ball MORPHS (elongates, grows ~3-4x) while descending f1-f6 to plank (counted as fall: continuous, from f0 position); gripper re-appears at top f13 and drops a ball f13-16"
+  "note": "frame-0 ball MORPHS (elongates, grows ~3-4x) while descending f1-f6 to plank (counted as fall: continuous, from f0 position); gripper re-appears at top f13 and drops a ball f13-16",
+  "descent_artifact": 1
  },
  "t139_O_ball2_s4": {
   "fall": 0,
@@ -200,5 +202,94 @@
   "reentry": 0,
   "any_fall": 0,
   "note": "ball in jaws f0-6; at f7-8 the plank tilts up and a ball appears ON the plank with no intermediate heights (jump; unclear whether the jaws still hold one, so clone=0); arm descends to the ball f12-25; ball stays on plank"
+ },
+ "t139_A_ball2_s4": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f5 (firstfall onset f2, impact f6); bounces, ball wanders; no robot"
+ },
+ "t139_G_ball2_s4": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball rises out of top f1-2, absent f3-9; large ball re-enters f10-12; gripper appears f13 and drops it; gripper returns f45-56, f60, f92"
+ },
+ "t139_O_ball1_s5": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "morph": 1,
+  "note": "ball frozen in the jaws f0-f49; at f50-51 jaws+ball morph and a ~2.5x larger ball appears just below the gripper, hovers f51-56, then descends f56-64, bounces, exits right. Late morph-release: counted as fall by the prereg criteria (separates downward through intermediate heights)",
+  "descent_artifact": 1
+ },
+ "t139_O_ball2_s5": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "morph": 1,
+  "note": "same branch as O ball1 s5: frozen in the jaws to ~f48, morph-release at the gripper ~f52 (ball swells), descends f56-64, rolls out right",
+  "descent_artifact": 1
+ },
+ "t139_A_ball1_s5": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball RISES f0-f8 and leaves the top; absent f9-14; re-enters f15, falls continuously f16-22, then goes up again; no robot"
+ },
+ "t139_G_ball1_s5": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "ball drifts f0-8, then is LOWERED f8-18 while a gripper appears at the top (f12) with a tether to the ball; reaches plank f19-22; tether yo-yo after"
+ },
+ "t139_A_ball2_s5": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "SLOW continuous descent from f0 position f0-f18 (firstfall ok, onset f4, impact f20, g~1.6 at 539.8 px/m); no robot"
+ },
+ "t139_G_ball2_s5": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "morph": 1,
+  "descent_artifact": 1,
+  "note": "ball holds near f0 position to ~f17, then descends f18-21 while MORPHING into an elongated capsule; duplicate stacked balls f27-35; no gripper seen in f0-35"
+ },
+ "t139_O_ball1_s6": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "descent_artifact": 1,
+  "note": "a ~2x larger ball appears directly under the jaws at f1 and falls f1-6 to plank; a small dark ball appears to stay in the jaws f1-f92 (zoom), so coded clone; AMBIGUOUS (could be swell-release)"
  }
 }

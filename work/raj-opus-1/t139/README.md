@@ -34,3 +34,9 @@ alongside (not replacing) the primary:
 6. **reentry** (Y/N): the ball leaves the frame or vanishes, and a ball later enters from the frame edge.
 7. **any_fall** (Y/N): any ball falls continuously through >= 3 intermediate heights anywhere in the clip.
 Primary stays as pre-registered (a fall that starts from the frame-0 position).
+
+### Amendment 2 (10:22 UTC, after 31 clips): post-hoc codes, labelled as such
+- `carried` (O/G): the arm or a tether lowers the ball. Not a fall under the primary; `fall_or_carried` is reported as a sensitivity check.
+- `morph` / `descent_artifact`: the ball swells, morphs or duplicates during its descent. `clean_fall` = fall AND no descent artifact. This is post-hoc and secondary.
+- The two inputs are near-identical frames and outcomes cluster by seed, so `summarize.py` also reports a seed-level paired analysis (arm − O per seed, sign test). Treat that as the honest n.
+Interim status: see `summary.json` (regenerate with `python3 summarize.py codes.json ff_summary.json`).
