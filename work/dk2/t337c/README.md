@@ -25,3 +25,14 @@ clean ratio within 10% of real AND the x17 control ratio ≥ 1.5 on ≥ 3/4 scen
 Outside-box moving-pixel count versus plain (dk-scout #6900 §4 readout) is secondary.
 **Predictions.** TTM: dc arms have no duplicates and a lower DOVER cost than nphys (TTM IQ .617 vs .623 for the reference).
 The risk is that the background keeps nphys's cost when KW is close to 19. That's why there are two KW levels.
+
+## Secondary readout, frozen 20:52 UTC before any t337c clip: `outside.py` (dk2's own code, independent of dk-scout's)
+Outside region = frame minus (dk1 box + 16 px). Baselines (`outside_baseline.json`; t276 clips on real_12/17/18/19 × s1-3,
+dk1 boxes; arm A t332 rln on 12/17 with dk1's box for reference). Medians:
+| arm | drift_rgb (grey) | block_corr f12-92 vs f0 | move_px outside | lap_ratio |
+|---|---|---|---|---|
+| plain (n=12) | 2.26 | 0.996 | 37.9k (21.9k–83.6k) | 1.056 |
+| nphys (n=12) | 4.33 | 0.999 | 16.1k (14.2k–17.8k) | 1.022 |
+| arm A rln (n=6) | 100.1 | −0.096 | 342k | 0.022 |
+QC flags per clip: **wall** if block_corr < 0.9 or drift_rgb > 15; **outside motion / duplicate candidate** if move_px > 30k
+(about 2× the nphys max), which is then confirmed or rejected by eye on the contact strip. Run on t337c and t336b inj19/inj27.
