@@ -1,0 +1,1124 @@
+[
+ {
+  "cut_id": "g01_bouncing",
+  "clip": "1",
+  "start_f": 30,
+  "end_f": 54,
+  "label": "BOUNCING",
+  "run": [
+   46,
+   63
+  ],
+  "n_out_frames": 22,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   54
+  ]
+ },
+ {
+  "cut_id": "g01_rolling",
+  "clip": "1",
+  "start_f": 30,
+  "end_f": 122,
+  "label": "ROLLING",
+  "run": [
+   115,
+   130
+  ],
+  "n_out_frames": 80,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   122
+  ]
+ },
+ {
+  "cut_id": "g01_ambig_settle",
+  "clip": "1",
+  "start_f": 30,
+  "end_f": 74,
+  "label": "AMBIG",
+  "run": [
+   63,
+   85
+  ],
+  "n_out_frames": 39,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   74
+  ]
+ },
+ {
+  "cut_id": "g02_bouncing",
+  "clip": "2",
+  "start_f": 30,
+  "end_f": 58,
+  "label": "BOUNCING",
+  "run": [
+   50,
+   67
+  ],
+  "n_out_frames": 24,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   58
+  ]
+ },
+ {
+  "cut_id": "g02_rolling",
+  "clip": "2",
+  "start_f": 30,
+  "end_f": 129,
+  "label": "ROLLING",
+  "run": [
+   122,
+   137
+  ],
+  "n_out_frames": 83,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   129
+  ]
+ },
+ {
+  "cut_id": "g02_ambig_settle",
+  "clip": "2",
+  "start_f": 30,
+  "end_f": 78,
+  "label": "AMBIG",
+  "run": [
+   67,
+   89
+  ],
+  "n_out_frames": 41,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   78
+  ]
+ },
+ {
+  "cut_id": "g03_bouncing",
+  "clip": "3",
+  "start_f": 30,
+  "end_f": 60,
+  "label": "BOUNCING",
+  "run": [
+   49,
+   71
+  ],
+  "n_out_frames": 26,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   60
+  ]
+ },
+ {
+  "cut_id": "g03_rolling",
+  "clip": "3",
+  "start_f": 30,
+  "end_f": 102,
+  "label": "ROLLING",
+  "run": [
+   93,
+   112
+  ],
+  "n_out_frames": 61,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   102
+  ]
+ },
+ {
+  "cut_id": "g03_ambig_settle",
+  "clip": "3",
+  "start_f": 30,
+  "end_f": 82,
+  "label": "AMBIG",
+  "run": [
+   71,
+   93
+  ],
+  "n_out_frames": 45,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   82
+  ]
+ },
+ {
+  "cut_id": "g04_rolling",
+  "clip": "4",
+  "start_f": 30,
+  "end_f": 101,
+  "label": "ROLLING",
+  "run": [
+   85,
+   118
+  ],
+  "n_out_frames": 61,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   101
+  ]
+ },
+ {
+  "cut_id": "g04_rest",
+  "clip": "4",
+  "start_f": 30,
+  "end_f": 173,
+  "label": "REST",
+  "run": [
+   160,
+   173
+  ],
+  "n_out_frames": 121,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   173
+  ]
+ },
+ {
+  "cut_id": "g04_ambig_settle",
+  "clip": "4",
+  "start_f": 30,
+  "end_f": 68,
+  "label": "AMBIG",
+  "run": [
+   60,
+   76
+  ],
+  "n_out_frames": 33,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   68
+  ]
+ },
+ {
+  "cut_id": "g05_bouncing",
+  "clip": "5",
+  "start_f": 30,
+  "end_f": 68,
+  "label": "BOUNCING",
+  "run": [
+   61,
+   76
+  ],
+  "n_out_frames": 33,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   67
+  ]
+ },
+ {
+  "cut_id": "g05_rolling",
+  "clip": "5",
+  "start_f": 30,
+  "end_f": 107,
+  "label": "ROLLING",
+  "run": [
+   101,
+   113
+  ],
+  "n_out_frames": 66,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   107
+  ]
+ },
+ {
+  "cut_id": "g05_ambig_settle",
+  "clip": "5",
+  "start_f": 30,
+  "end_f": 87,
+  "label": "AMBIG",
+  "run": [
+   76,
+   99
+  ],
+  "n_out_frames": 49,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   87
+  ]
+ },
+ {
+  "cut_id": "g06_bouncing",
+  "clip": "6",
+  "start_f": 30,
+  "end_f": 72,
+  "label": "BOUNCING",
+  "run": [
+   64,
+   80
+  ],
+  "n_out_frames": 35,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   71
+  ]
+ },
+ {
+  "cut_id": "g06_rolling",
+  "clip": "6",
+  "start_f": 30,
+  "end_f": 167,
+  "label": "ROLLING",
+  "run": [
+   147,
+   188
+  ],
+  "n_out_frames": 116,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   167
+  ]
+ },
+ {
+  "cut_id": "g06_ambig_settle",
+  "clip": "6",
+  "start_f": 30,
+  "end_f": 91,
+  "label": "AMBIG",
+  "run": [
+   80,
+   103
+  ],
+  "n_out_frames": 51,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   91
+  ]
+ },
+ {
+  "cut_id": "g07_bouncing",
+  "clip": "7",
+  "start_f": 30,
+  "end_f": 62,
+  "label": "BOUNCING",
+  "run": [
+   51,
+   74
+  ],
+  "n_out_frames": 27,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   62
+  ]
+ },
+ {
+  "cut_id": "g07_rolling",
+  "clip": "7",
+  "start_f": 30,
+  "end_f": 148,
+  "label": "ROLLING",
+  "run": [
+   134,
+   162
+  ],
+  "n_out_frames": 99,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   148
+  ]
+ },
+ {
+  "cut_id": "g07_ambig_settle",
+  "clip": "7",
+  "start_f": 30,
+  "end_f": 84,
+  "label": "AMBIG",
+  "run": [
+   74,
+   95
+  ],
+  "n_out_frames": 46,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   84
+  ]
+ },
+ {
+  "cut_id": "g08_bouncing",
+  "clip": "8",
+  "start_f": 30,
+  "end_f": 60,
+  "label": "BOUNCING",
+  "run": [
+   51,
+   69
+  ],
+  "n_out_frames": 26,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   60
+  ]
+ },
+ {
+  "cut_id": "g08_rolling",
+  "clip": "8",
+  "start_f": 30,
+  "end_f": 98,
+  "label": "ROLLING",
+  "run": [
+   91,
+   105
+  ],
+  "n_out_frames": 58,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   98
+  ]
+ },
+ {
+  "cut_id": "g08_ambig_settle",
+  "clip": "8",
+  "start_f": 30,
+  "end_f": 79,
+  "label": "AMBIG",
+  "run": [
+   69,
+   90
+  ],
+  "n_out_frames": 42,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   79
+  ]
+ },
+ {
+  "cut_id": "g09_bouncing",
+  "clip": "9",
+  "start_f": 30,
+  "end_f": 66,
+  "label": "BOUNCING",
+  "run": [
+   55,
+   78
+  ],
+  "n_out_frames": 33,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   66
+  ]
+ },
+ {
+  "cut_id": "g09_rolling",
+  "clip": "9",
+  "start_f": 30,
+  "end_f": 155,
+  "label": "ROLLING",
+  "run": [
+   149,
+   162
+  ],
+  "n_out_frames": 107,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   155
+  ]
+ },
+ {
+  "cut_id": "g09_ambig_settle",
+  "clip": "9",
+  "start_f": 30,
+  "end_f": 89,
+  "label": "AMBIG",
+  "run": [
+   78,
+   101
+  ],
+  "n_out_frames": 52,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   89
+  ]
+ },
+ {
+  "cut_id": "g10_bouncing",
+  "clip": "10",
+  "start_f": 30,
+  "end_f": 66,
+  "label": "BOUNCING",
+  "run": [
+   55,
+   78
+  ],
+  "n_out_frames": 30,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   65
+  ]
+ },
+ {
+  "cut_id": "g10_rolling",
+  "clip": "10",
+  "start_f": 30,
+  "end_f": 116,
+  "label": "ROLLING",
+  "run": [
+   106,
+   127
+  ],
+  "n_out_frames": 72,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   116
+  ]
+ },
+ {
+  "cut_id": "g10_ambig_settle",
+  "clip": "10",
+  "start_f": 30,
+  "end_f": 92,
+  "label": "AMBIG",
+  "run": [
+   78,
+   106
+  ],
+  "n_out_frames": 52,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   92
+  ]
+ },
+ {
+  "cut_id": "g11_bouncing",
+  "clip": "11",
+  "start_f": 30,
+  "end_f": 63,
+  "label": "BOUNCING",
+  "run": [
+   51,
+   75
+  ],
+  "n_out_frames": 28,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   63
+  ]
+ },
+ {
+  "cut_id": "g11_rolling",
+  "clip": "11",
+  "start_f": 30,
+  "end_f": 112,
+  "label": "ROLLING",
+  "run": [
+   102,
+   123
+  ],
+  "n_out_frames": 69,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   112
+  ]
+ },
+ {
+  "cut_id": "g11_ambig_settle",
+  "clip": "11",
+  "start_f": 30,
+  "end_f": 84,
+  "label": "AMBIG",
+  "run": [
+   75,
+   94
+  ],
+  "n_out_frames": 46,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   84
+  ]
+ },
+ {
+  "cut_id": "g12_bouncing",
+  "clip": "12",
+  "start_f": 30,
+  "end_f": 58,
+  "label": "BOUNCING",
+  "run": [
+   50,
+   67
+  ],
+  "n_out_frames": 24,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   58
+  ]
+ },
+ {
+  "cut_id": "g12_rolling",
+  "clip": "12",
+  "start_f": 30,
+  "end_f": 118,
+  "label": "ROLLING",
+  "run": [
+   114,
+   122
+  ],
+  "n_out_frames": 74,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   118
+  ]
+ },
+ {
+  "cut_id": "g12_rest",
+  "clip": "12",
+  "start_f": 30,
+  "end_f": 108,
+  "label": "REST",
+  "run": [
+   106,
+   108
+  ],
+  "n_out_frames": 66,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   108
+  ]
+ },
+ {
+  "cut_id": "g12_ambig_settle",
+  "clip": "12",
+  "start_f": 30,
+  "end_f": 78,
+  "label": "AMBIG",
+  "run": [
+   67,
+   90
+  ],
+  "n_out_frames": 41,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   78
+  ]
+ },
+ {
+  "cut_id": "g13_bouncing",
+  "clip": "13",
+  "start_f": 30,
+  "end_f": 63,
+  "label": "BOUNCING",
+  "run": [
+   53,
+   73
+  ],
+  "n_out_frames": 28,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   63
+  ]
+ },
+ {
+  "cut_id": "g13_rolling",
+  "clip": "13",
+  "start_f": 30,
+  "end_f": 102,
+  "label": "ROLLING",
+  "run": [
+   93,
+   111
+  ],
+  "n_out_frames": 60,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   101
+  ]
+ },
+ {
+  "cut_id": "g13_ambig_settle",
+  "clip": "13",
+  "start_f": 30,
+  "end_f": 82,
+  "label": "AMBIG",
+  "run": [
+   73,
+   91
+  ],
+  "n_out_frames": 44,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   82
+  ]
+ },
+ {
+  "cut_id": "g14_bouncing",
+  "clip": "14",
+  "start_f": 30,
+  "end_f": 65,
+  "label": "BOUNCING",
+  "run": [
+   54,
+   77
+  ],
+  "n_out_frames": 30,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   65
+  ]
+ },
+ {
+  "cut_id": "g14_rolling",
+  "clip": "14",
+  "start_f": 30,
+  "end_f": 102,
+  "label": "ROLLING",
+  "run": [
+   96,
+   108
+  ],
+  "n_out_frames": 60,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   101
+  ]
+ },
+ {
+  "cut_id": "g14_ambig_settle",
+  "clip": "14",
+  "start_f": 30,
+  "end_f": 86,
+  "label": "AMBIG",
+  "run": [
+   77,
+   95
+  ],
+  "n_out_frames": 47,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   86
+  ]
+ },
+ {
+  "cut_id": "g15_bouncing",
+  "clip": "15",
+  "start_f": 30,
+  "end_f": 62,
+  "label": "BOUNCING",
+  "run": [
+   50,
+   74
+  ],
+  "n_out_frames": 28,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   62
+  ]
+ },
+ {
+  "cut_id": "g15_rolling",
+  "clip": "15",
+  "start_f": 30,
+  "end_f": 104,
+  "label": "ROLLING",
+  "run": [
+   97,
+   112
+  ],
+  "n_out_frames": 64,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   104
+  ]
+ },
+ {
+  "cut_id": "g15_ambig_settle",
+  "clip": "15",
+  "start_f": 30,
+  "end_f": 85,
+  "label": "AMBIG",
+  "run": [
+   74,
+   97
+  ],
+  "n_out_frames": 47,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   85
+  ]
+ },
+ {
+  "cut_id": "g16_rolling",
+  "clip": "16",
+  "start_f": 30,
+  "end_f": 135,
+  "label": "ROLLING",
+  "run": [
+   126,
+   144
+  ],
+  "n_out_frames": 88,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   135
+  ]
+ },
+ {
+  "cut_id": "g16_ambig_settle",
+  "clip": "16",
+  "start_f": 30,
+  "end_f": 118,
+  "label": "AMBIG",
+  "run": [
+   110,
+   126
+  ],
+  "n_out_frames": 74,
+  "out_fps": 25,
+  "src_frames_kept": [
+   31,
+   118
+  ]
+ },
+ {
+  "cut_id": "g17_bouncing",
+  "clip": "17",
+  "start_f": 30,
+  "end_f": 76,
+  "label": "BOUNCING",
+  "run": [
+   64,
+   88
+  ],
+  "n_out_frames": 40,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   76
+  ]
+ },
+ {
+  "cut_id": "g17_rolling",
+  "clip": "17",
+  "start_f": 30,
+  "end_f": 128,
+  "label": "ROLLING",
+  "run": [
+   120,
+   136
+  ],
+  "n_out_frames": 83,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   127
+  ]
+ },
+ {
+  "cut_id": "g17_ambig_settle",
+  "clip": "17",
+  "start_f": 30,
+  "end_f": 104,
+  "label": "AMBIG",
+  "run": [
+   88,
+   120
+  ],
+  "n_out_frames": 63,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   103
+  ]
+ },
+ {
+  "cut_id": "g18_bouncing",
+  "clip": "18",
+  "start_f": 30,
+  "end_f": 69,
+  "label": "BOUNCING",
+  "run": [
+   57,
+   81
+  ],
+  "n_out_frames": 33,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   69
+  ]
+ },
+ {
+  "cut_id": "g18_rolling",
+  "clip": "18",
+  "start_f": 30,
+  "end_f": 139,
+  "label": "ROLLING",
+  "run": [
+   131,
+   148
+  ],
+  "n_out_frames": 91,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   138
+  ]
+ },
+ {
+  "cut_id": "g18_ambig_settle",
+  "clip": "18",
+  "start_f": 30,
+  "end_f": 91,
+  "label": "AMBIG",
+  "run": [
+   81,
+   102
+  ],
+  "n_out_frames": 51,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   90
+  ]
+ },
+ {
+  "cut_id": "g19_bouncing",
+  "clip": "19",
+  "start_f": 30,
+  "end_f": 68,
+  "label": "BOUNCING",
+  "run": [
+   57,
+   80
+  ],
+  "n_out_frames": 33,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   67
+  ]
+ },
+ {
+  "cut_id": "g19_rolling",
+  "clip": "19",
+  "start_f": 30,
+  "end_f": 112,
+  "label": "ROLLING",
+  "run": [
+   103,
+   122
+  ],
+  "n_out_frames": 70,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   112
+  ]
+ },
+ {
+  "cut_id": "g19_ambig_settle",
+  "clip": "19",
+  "start_f": 30,
+  "end_f": 88,
+  "label": "AMBIG",
+  "run": [
+   80,
+   97
+  ],
+  "n_out_frames": 50,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   88
+  ]
+ },
+ {
+  "cut_id": "g20_bouncing",
+  "clip": "20",
+  "start_f": 30,
+  "end_f": 66,
+  "label": "BOUNCING",
+  "run": [
+   55,
+   78
+  ],
+  "n_out_frames": 32,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   66
+  ]
+ },
+ {
+  "cut_id": "g20_rolling",
+  "clip": "20",
+  "start_f": 30,
+  "end_f": 114,
+  "label": "ROLLING",
+  "run": [
+   104,
+   124
+  ],
+  "n_out_frames": 72,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   114
+  ]
+ },
+ {
+  "cut_id": "g20_ambig_settle",
+  "clip": "20",
+  "start_f": 30,
+  "end_f": 91,
+  "label": "AMBIG",
+  "run": [
+   78,
+   104
+  ],
+  "n_out_frames": 53,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   91
+  ]
+ },
+ {
+  "cut_id": "g21_bouncing",
+  "clip": "21",
+  "start_f": 30,
+  "end_f": 63,
+  "label": "BOUNCING",
+  "run": [
+   52,
+   75
+  ],
+  "n_out_frames": 29,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   63
+  ]
+ },
+ {
+  "cut_id": "g21_rolling",
+  "clip": "21",
+  "start_f": 30,
+  "end_f": 105,
+  "label": "ROLLING",
+  "run": [
+   93,
+   117
+  ],
+  "n_out_frames": 64,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   105
+  ]
+ },
+ {
+  "cut_id": "g21_ambig_settle",
+  "clip": "21",
+  "start_f": 30,
+  "end_f": 83,
+  "label": "AMBIG",
+  "run": [
+   75,
+   91
+  ],
+  "n_out_frames": 46,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   83
+  ]
+ },
+ {
+  "cut_id": "g22_bouncing",
+  "clip": "22",
+  "start_f": 30,
+  "end_f": 59,
+  "label": "BOUNCING",
+  "run": [
+   45,
+   74
+  ],
+  "n_out_frames": 25,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   59
+  ]
+ },
+ {
+  "cut_id": "g22_rolling",
+  "clip": "22",
+  "start_f": 30,
+  "end_f": 112,
+  "label": "ROLLING",
+  "run": [
+   109,
+   115
+  ],
+  "n_out_frames": 70,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   111
+  ]
+ },
+ {
+  "cut_id": "g22_ambig_settle",
+  "clip": "22",
+  "start_f": 30,
+  "end_f": 85,
+  "label": "AMBIG",
+  "run": [
+   74,
+   97
+  ],
+  "n_out_frames": 47,
+  "out_fps": 25,
+  "src_frames_kept": [
+   30,
+   85
+  ]
+ }
+]
