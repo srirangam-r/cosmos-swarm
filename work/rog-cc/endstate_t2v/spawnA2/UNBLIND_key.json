@@ -1,0 +1,434 @@
+{
+ "b9b15d": {
+  "prompt": "physics_016",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "d69c6c": {
+  "prompt": "physics_016",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "01bf80": {
+  "prompt": "physics_016",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "7a3fe8": {
+  "prompt": "physics_017",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "0a6ad8": {
+  "prompt": "physics_017",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "a40b4c": {
+  "prompt": "physics_017",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "1f2f19": {
+  "prompt": "physics_042",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "a14e0e": {
+  "prompt": "physics_042",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "356159": {
+  "prompt": "physics_042",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "30884a": {
+  "prompt": "physics_049",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "cfbc3f": {
+  "prompt": "physics_049",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "e937a8": {
+  "prompt": "physics_049",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "ee11eb": {
+  "prompt": "physics_057",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "9926d7": {
+  "prompt": "physics_057",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "f16791": {
+  "prompt": "physics_057",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "86bd22": {
+  "prompt": "physics_116",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "79ac41": {
+  "prompt": "physics_116",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "93df48": {
+  "prompt": "physics_116",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "f8474d": {
+  "prompt": "physics_126",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "107310": {
+  "prompt": "physics_126",
+  "seed": 2,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "f405fc": {
+  "prompt": "physics_126",
+  "seed": 3,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "b998ca": {
+  "prompt": "physics_163",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "fc1641": {
+  "prompt": "physics_163",
+  "seed": 2,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "b4f921": {
+  "prompt": "physics_163",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "31f7b2": {
+  "prompt": "physics_169",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "b5adc8": {
+  "prompt": "physics_169",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "9f5206": {
+  "prompt": "physics_169",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "fa37fe": {
+  "prompt": "physics_200",
+  "seed": 1,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "c76add": {
+  "prompt": "physics_200",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "N",
+   "C": "R"
+  }
+ },
+ "8bfc60": {
+  "prompt": "physics_200",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "494001": {
+  "prompt": "robot_011",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "8bbd93": {
+  "prompt": "robot_011",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "0499e0": {
+  "prompt": "robot_011",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "06fecc": {
+  "prompt": "robot_026",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "3fea58": {
+  "prompt": "robot_026",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "fc15bf": {
+  "prompt": "robot_026",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "e40314": {
+  "prompt": "robot_055",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "c939ff": {
+  "prompt": "robot_055",
+  "seed": 2,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "c058ca": {
+  "prompt": "robot_055",
+  "seed": 3,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "ec9c42": {
+  "prompt": "robot_068",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "R",
+   "C": "base"
+  }
+ },
+ "0d65ff": {
+  "prompt": "robot_068",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "667881": {
+  "prompt": "robot_068",
+  "seed": 3,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ },
+ "0c5c7e": {
+  "prompt": "robot_087",
+  "seed": 1,
+  "rows": {
+   "A": "R",
+   "B": "N",
+   "C": "base"
+  }
+ },
+ "ba2762": {
+  "prompt": "robot_087",
+  "seed": 2,
+  "rows": {
+   "A": "R",
+   "B": "base",
+   "C": "N"
+  }
+ },
+ "f1c8c5": {
+  "prompt": "robot_087",
+  "seed": 3,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "158dd7": {
+  "prompt": "robot_123",
+  "seed": 1,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "f7de87": {
+  "prompt": "robot_123",
+  "seed": 2,
+  "rows": {
+   "A": "N",
+   "B": "base",
+   "C": "R"
+  }
+ },
+ "eab5a9": {
+  "prompt": "robot_123",
+  "seed": 3,
+  "rows": {
+   "A": "base",
+   "B": "R",
+   "C": "N"
+  }
+ }
+}

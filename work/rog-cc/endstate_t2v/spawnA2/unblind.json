@@ -1,0 +1,49 @@
+{
+ "N": {
+  "n": 48,
+  "spawn_Y": 0,
+  "gone_Y": 6
+ },
+ "R": {
+  "n": 48,
+  "spawn_Y": 2,
+  "gone_Y": 6
+ },
+ "base": {
+  "n": 48,
+  "spawn_Y": 0,
+  "gone_Y": 4
+ },
+ "pairs": {
+  "spawn:R_vs_base": {
+   "n": 48,
+   "a_only": 2,
+   "b_only": 0
+  },
+  "spawn:R_vs_N": {
+   "n": 48,
+   "a_only": 2,
+   "b_only": 0
+  },
+  "spawn:N_vs_base": {
+   "n": 48,
+   "a_only": 0,
+   "b_only": 0
+  },
+  "gone:R_vs_base": {
+   "n": 48,
+   "a_only": 2,
+   "b_only": 0
+  },
+  "gone:R_vs_N": {
+   "n": 48,
+   "a_only": 0,
+   "b_only": 0
+  },
+  "gone:N_vs_base": {
+   "n": 48,
+   "a_only": 2,
+   "b_only": 0
+  }
+ }
+}

@@ -1,0 +1,8 @@
+0a6ad8 physics_017 s2  {'base': 'spawn=N gone=Y', 'R': 'spawn=Y gone=Y', 'N': 'spawn=N gone=Y'}
+3fea58 robot_026 s2  {'base': 'spawn=N gone=Y', 'R': 'spawn=N gone=Y', 'N': 'spawn=N gone=Y'}
+494001 robot_011 s1  {'base': 'spawn=N gone=N', 'R': 'spawn=N gone=Y', 'N': 'spawn=N gone=Y'}
+7a3fe8 physics_017 s1  {'base': 'spawn=N gone=Y', 'R': 'spawn=N gone=Y', 'N': 'spawn=N gone=Y'}
+a40b4c physics_017 s3  {'base': 'spawn=N gone=Y', 'R': 'spawn=Y gone=Y', 'N': 'spawn=N gone=Y'}
+ec9c42 robot_068 s1  {'base': 'spawn=N gone=N', 'R': 'spawn=N gone=Y', 'N': 'spawn=N gone=Y'}
+all {'base': 'spawn 0/48 gone 4/48', 'R': 'spawn 2/48 gone 6/48', 'N': 'spawn 0/48 gone 6/48'}
+excl_preseen {'base': 'spawn 0/45 gone 4/45', 'R': 'spawn 2/45 gone 6/45', 'N': 'spawn 0/45 gone 6/45'}
