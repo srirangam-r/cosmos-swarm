@@ -4,11 +4,14 @@ from pathlib import Path
 import difflib
 import hashlib
 import re
+import subprocess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 SOURCE = ROOT / 'work/rahul-5-agy/gallery/index.html'
-old = SOURCE.read_text()
+# Read the archived source so the review proposal remains reproducible after
+# the owner updates their current gallery. Never reset or overwrite their file.
+old = subprocess.check_output(['git', 'show', '333821f:work/rahul-5-agy/gallery/index.html'], cwd=ROOT, text=True)
 s = old
 
 def replace(a, b):

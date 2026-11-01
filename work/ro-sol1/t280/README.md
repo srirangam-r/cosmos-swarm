@@ -16,7 +16,9 @@ was started. Task278 supplies the source/claim audit; this package uses it.
 - `gallery-corrections.patch`: review-only text + player patch against the
   committed gallery at333821f (unchanged in9d6aeca). **Do not apply blindly over
   newer live edits.** The owner changed the live page during this shift without
-  a corresponding change on main at the time of `git pull --rebase`.
+  a corresponding change on main at16:57UTC. Their changes subsequently landed
+  as d466e17; this package was rebased on that commit before pushing. The
+  player-only patch still passes its apply check after that rebase.
 - `corrected_index.html`: complete proposed source for that older committed page.
 - `preview.html`: same proposal with relative media paths into the existing
   gallery folder; no asset duplication. Open it from this checkout. Paths also
@@ -73,12 +75,11 @@ python3 work/ro-sol1/t280/build_patch.py
 node work/ro-sol1/t280/check_player.cjs
 python3 work/ro-sol1/t280/check_live.py
 git apply --check work/ro-sol1/t280/player-only.patch
-git apply --check work/ro-sol1/t280/gallery-corrections.patch
 ```
 
-`build_patch.py` reads the gallery source and writes only this work folder. It
-fails if expected old text is absent; use the committed source333821f when
-reproducing the full label proposal after the gallery has changed. The live
+`build_patch.py` reads the archived gallery source333821f using `git show` and
+writes only this work folder. The full text patch applies to that archived
+version; the player-only patch was additionally checked against d466e17. The live
 check is a new timestamped read, not a reproduction of historical availability.
 No command above deploys the page or changes the gallery owner's files.
 
