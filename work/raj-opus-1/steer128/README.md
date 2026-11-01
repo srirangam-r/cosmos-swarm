@@ -11,3 +11,10 @@ lm_capture.json / lm_capture_strips.jpg: ro-1's late-motion corridor metric on t
 
 ## Step 2: steer (jobs_steer.jsonl not committed: 55 MB of inline vectors; vectors are v_L12_s0s5.npy, v_L24_s0s5.npy, rand_L12.npy)
 v = mean over 6 pairs and steps {0,5} of (QT - F), per latent frame [24,4096]. Applied to F (prompt unchanged), seeds 4-6, both inputs. Arms in steer_arms.json.
+
+## Results (steer_summary_all.txt, lm_steer.json, lm_steer_strips.jpg)
+Δlast20 vs the α0 control (same input+seed), mean ± se:
+- seeds 4-6 (n=6): S12α2 all-steps −0.87 ± 0.35 (5/6 lower); QT −1.43 ± 0.39; random α2 all-steps +0.92 ± 0.63.
+- seeds 7-9 replication (n=6): the α0 control already mostly settles (floor), so QT −0.19 ± 0.27, S12α2 +0.22 ± 0.41, S12α4 −0.11 ± 0.36. Not informative.
+- pooled seeds 4-9 (n=12): QT −0.81 ± 0.29 (proxy-settled 12/12 vs α0 7/12); S12α2 all −0.33 ± 0.30 (8/12); S12α4 all −0.51 ± 0.26 (7/12, proxy-settled 10/12); S12α2 − random α2 −1.03 ± 0.42 (8/12); random α2 vs α0 +0.70 ± 0.33.
+Reading: the direction is clearly distinct from an equal-norm random direction (random raises late motion), but its effect versus no steering is at most ~40-60% of the prompt's and is only ~2 se at α4. Metric unvalidated (no planted case for settling); eye check unblinded, thumbnail size only.
