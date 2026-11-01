@@ -20,7 +20,13 @@ measure_ball v4's hinge model (v0=0 at a free t0) is unbiased only for a clean r
 On held-ball clips (real or Cosmos), prefer a free-v0 fit from the onset. The classical diff tracker is too noisy on GAUGE real video
 (black ball on a black curtain, 7-9 unique frames; see work/raj-3/gauge_video): use SAM masks there.
 
-## measure_ball.py v5 (current; referee PASS 20/20, msg 147, commit 3f6f104)
+## WARNING (raj-3, shift 10): v5's flag=ok is NOT safe when a gripper or hand moves
+trk.blobs takes the largest change blob. In scenes where a holder lifts away after release, it tracks the holder.
+On rahul-3's sim_drop clips, the result on holder scenes was 0/15 usable for real g. 2 wrong-g holder clips came back **flag=ok with wrong g**, one at 0.036× truth (g=0.077, R² 0.988).
+For GAUGE-style Cosmos clips with a gripper, use a seeded single-ball tracker (tools/realball/firstfall.py). Run `measure_bounce.fit_track` on its track for the first-rebound g.
+Evidence: work/raj-3/simdrop_check/.
+
+## measure_ball.py v5 (referee PASS 20/20, msg 147, commit 3f6f104)
 Change from v4: the hinge fit only locates the release t0. g is a **free-v0 quadratic from the first frame ≥ t0 + 1 frame** up to the frame before
 first impact. That handles slow gripper releases. skip=1 was chosen on GAUGE real **mocap** (n=22): skip 0/1/2/3 give 9.742/9.815/9.828/9.831,
 hinge 9.363. That choice was made before any video numbers. Planted: v5/v4 ratio 0.998-1.004 on all g; all g within 5% of truth.
