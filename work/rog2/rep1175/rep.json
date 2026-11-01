@@ -1,0 +1,82 @@
+{
+ "nframes": {
+  "inv_empty_ball1_s1": 93,
+  "inv_empty_ball1_s2": 93,
+  "inv_empty_ball2_s1": 93,
+  "inv_empty_ball2_s2": 93,
+  "inv_nvneg_ball1_s1": 93,
+  "inv_nvneg_ball1_s2": 93,
+  "inv_nvneg_ball2_s1": 93,
+  "inv_nvneg_ball2_s2": 93,
+  "same_empty_ball1_s1": 93,
+  "same_empty_ball1_s2": 93,
+  "same_empty_ball2_s1": 93,
+  "same_empty_ball2_s2": 93,
+  "same_nvneg_ball1_s1": 93,
+  "same_nvneg_ball1_s2": 93,
+  "same_nvneg_ball2_s1": 93,
+  "same_nvneg_ball2_s2": 93
+ },
+ "motion": {
+  "inv_empty_ball1_s1": 2.017671585083008,
+  "inv_empty_ball1_s2": 2.304786443710327,
+  "inv_empty_ball2_s1": 2.0792105197906494,
+  "inv_empty_ball2_s2": 2.320568561553955,
+  "inv_nvneg_ball1_s1": 1.6836705207824707,
+  "inv_nvneg_ball1_s2": 1.4585862159729004,
+  "inv_nvneg_ball2_s1": 1.7602672576904297,
+  "inv_nvneg_ball2_s2": 1.6871984004974365,
+  "same_empty_ball1_s1": 1.9858479499816895,
+  "same_empty_ball1_s2": 2.3310227394104004,
+  "same_empty_ball2_s1": 2.079921007156372,
+  "same_empty_ball2_s2": 2.6599864959716797,
+  "same_nvneg_ball1_s1": 1.6849240064620972,
+  "same_nvneg_ball1_s2": 1.5983635187149048,
+  "same_nvneg_ball2_s1": 1.7141348123550415,
+  "same_nvneg_ball2_s2": 1.674658179283142
+ },
+ "pairs": [
+  {
+   "clip": "ball1_s1",
+   "meta_empty": 2.772613763809204,
+   "meta_nv": 1.8793790340423584,
+   "neg_inv": 5.51332426071167,
+   "neg_same": 5.8947367668151855,
+   "seed_inv_empty": 11.973112106323242
+  },
+  {
+   "clip": "ball1_s2",
+   "meta_empty": 5.088517665863037,
+   "meta_nv": 3.0998380184173584,
+   "neg_inv": 14.765060424804688,
+   "neg_same": 14.313170433044434,
+   "seed_inv_empty": 11.973112106323242
+  },
+  {
+   "clip": "ball2_s1",
+   "meta_empty": 2.4891304969787598,
+   "meta_nv": 2.0997703075408936,
+   "neg_inv": 5.7261962890625,
+   "neg_same": 5.377498149871826,
+   "seed_inv_empty": 11.761791229248047
+  },
+  {
+   "clip": "ball2_s2",
+   "meta_empty": 5.781793594360352,
+   "meta_nv": 2.3042855262756348,
+   "neg_inv": 14.590806007385254,
+   "neg_same": 14.667078971862793,
+   "seed_inv_empty": 11.761791229248047
+  }
+ ],
+ "summary": {
+  "empty_mean": 2.22237691283226,
+  "empty_se": 0.07999771382683267,
+  "nv_mean": 1.6577253639698029,
+  "nv_se": 0.032581050639682294,
+  "paired_diff_mean": 0.5646515488624573,
+  "paired_diff_se": 0.095605150983793,
+  "n_lower": 8,
+  "n": 8
+ }
+}
