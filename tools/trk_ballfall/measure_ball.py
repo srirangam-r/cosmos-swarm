@@ -6,7 +6,8 @@ Usage:
   add --dedup for real footage with duplicated frames (e.g. GAUGE 25-in-30 fps); --ppm px/m instead of --mpp
 v5 model up to first impact: hinge y0 + 0.5 g (t-t0)^2 [t>t0] locates release t0; g = free-v0 quadratic on frames >= t0 + 1 frame
 (slow gripper releases leave the ball already moving at free-fall onset; v4's v0=0 hinge read GAUGE mocap 9.36 vs 9.82 for v5).
-Also reports g_by_skip (0-3 frames after t0: stability), r2_lin and dAIC (quadratic vs constant velocity).
+Also reports g_by_skip (0-3 frames after t0: stability), r2_lin and dAIC (quadratic vs constant velocity), n_quad, and
+flag = ok (dAIC>10, R2>0.98, n_quad>=5) | weak | no_free_fall (dAIC<=2: track is not an accelerating fall, e.g. locked on the gripper).
 Static camera assumed (background from first/last frame; see trk.py)."""
 import sys, json, argparse, numpy as np
 from scipy.optimize import least_squares
@@ -48,7 +49,7 @@ def dedup(F, rel=0.1):
     keep = [0] + [k for k in range(1, len(F)) if d[k - 1] >= rel * np.median(d)]
     return F[keep], len(keep) / len(F)
 
-def measure(F, fps, diam=None, mpp=None, nboot=300, seed=0, skip=1):
+def measure(F, fps, diam=None, mpp=None, nboot=300, seed=0, skip=1, keep_track=False):
     B = trk.blobs(F, mode='ball'); ok = [i for i, b in enumerate(B) if b]
     y = np.array([B[i][1] for i in ok]); t = np.array(ok) / fps
     d_px = float(np.median([B[i][4] for i in ok]))
@@ -78,9 +79,11 @@ def measure(F, fps, diam=None, mpp=None, nboot=300, seed=0, skip=1):
             if c[0] > 0:
                 h0 = Y[k] - p[0]; hr = Y[k] - np.polyval(c, -c[1] / (2 * c[0]))
                 if h0 > 0 and hr > 0: e = float(np.sqrt(hr / h0))
-    return dict(g=g, g_hinge_v4=float(p[1]), g_by_skip=g_skip, r2_lin=float(r2_lin), dAIC_quad_vs_lin=float(daic), onset_frame=int(ok[s0]), g_ci95=[float(np.percentile(gs, 2.5)), float(np.percentile(gs, 97.5))],
+    flag = 'ok' if (daic > 10 and r2 > 0.98 and m >= 5) else ('no_free_fall' if daic <= 2 else 'weak')
+    return dict(g=g, flag=flag, n_quad=int(m), g_hinge_v4=float(p[1]), g_by_skip=g_skip, r2_lin=float(r2_lin), dAIC_quad_vs_lin=float(daic), onset_frame=int(ok[s0]), g_ci95=[float(np.percentile(gs, 2.5)), float(np.percentile(gs, 97.5))],
                 g_sd=float(np.std(gs)), g_scale_sys_1px=float(g / d_px) if diam else 0.0, r2=float(r2), t0=float(p[2]), n_fit=int(n), impact_frame=int(ok[k]),
-                g_poly_v3=float(2 * poly[0]), e=e, d_px=d_px, m_per_px=float(s), fps=fps, method=VERSION)
+                g_poly_v3=float(2 * poly[0]), e=e, d_px=d_px, m_per_px=float(s), fps=fps, method=VERSION,
+                **({'track': [[int(i), float(B[i][0]), float(B[i][1]), float(B[i][4])] for i in ok]} if keep_track else {}))
 
 if __name__ == '__main__':
     if sys.argv[1] == '--planted':

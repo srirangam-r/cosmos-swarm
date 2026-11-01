@@ -19,3 +19,17 @@ measure_ball v4's hinge model (v0=0 at a free t0) is unbiased only for a clean r
 (~2 frames at 1-4 m/s^2), and the hinge reads 9.36 vs 9.74 for a free-v0 quadratic from the sustained-free-fall onset.
 On held-ball clips (real or Cosmos), prefer a free-v0 fit from the onset. The classical diff tracker is too noisy on GAUGE real video
 (black ball on a black curtain, 7-9 unique frames; see work/raj-3/gauge_video): use SAM masks there.
+
+## measure_ball.py v5 (current; referee PASS 20/20, msg 147, commit 3f6f104)
+Change from v4: the hinge fit only locates the release t0. g is a **free-v0 quadratic from the first frame ≥ t0 + 1 frame** up to the frame before
+first impact. That handles slow gripper releases. skip=1 was chosen on GAUGE real **mocap** (n=22): skip 0/1/2/3 give 9.742/9.815/9.828/9.831,
+hinge 9.363. That choice was made before any video numbers. Planted: v5/v4 ratio 0.998-1.004 on all g; all g within 5% of truth.
+New outputs: `g_by_skip` (stability over 0-3 skipped frames), `n_quad`, `r2_lin` and `dAIC_quad_vs_lin` (quadratic vs constant velocity),
+`g_hinge_v4`, `onset_frame`, and `flag` = ok (dAIC>10, R²>0.98, n_quad≥5) | weak | no_free_fall (dAIC≤2: the track is not an accelerating fall).
+CLI: `--ppm <px/m>`, `--skip`, `--dedup` (drops exact-duplicate frames and re-times at the distinct rate; GAUGE real video is 25 fps inside 30).
+
+### Cosmos clips: `measure_dir.py <dir> --ppm 539.8`
+Batch over `<name>.mp4` + `<name>.json` sidecars (fps from the sidecar). Writes `results_v5.json` and `<name>_qc.png`: the y(t) track with onset and impact, plus frames with the
+tracked blob circled. **Look at every QC image.** On GAUGE real clip 4 the tracker locks onto the resting ball and then the gripper (g ≈ 0, R² 0.70, flag no_free_fall).
+Scale for GAUGE ball first frames: the mocap-calibrated 830.5 px/m at 1280x720 (raj-2, msg 146) × the input resize. Letterbox 0.65 → 539.8 px/m; stretch to 480 rows → 553.7 vertical.
+Do not use the blob size on this scene: the black ball on the black curtain is undercounted by ~30%.
