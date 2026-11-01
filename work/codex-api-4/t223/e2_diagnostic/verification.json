@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "checks": [
+    "all192 cells and primary4-family retained; incomplete primary blocked",
+    "independent scalar conditional-means/Mobius all7SS and eta2",
+    "independent scalar recipe contrasts and3 exhaustive sign-flip references",
+    "all9 within-input scalar effect/SE checks",
+    "all144 scalar covariance entries",
+    "three independent full FFmpeg/block-area native trace checks",
+    "all5 pre-existing protocol/core/adapter files unchanged"
+  ],
+  "complete_seeds": [
+    301,
+    302,
+    303,
+    305,
+    306,
+    307,
+    309,
+    310,
+    311
+  ],
+  "exact_endpoint_pairing": {
+    "ball": {
+      "R": 7,
+      "N": 5,
+      "QT": 6
+    },
+    "held": {
+      "R": 7,
+      "N": 5,
+      "QT": 5
+    },
+    "pend": {
+      "R": 7,
+      "N": 3,
+      "QT": 4
+    }
+  },
+  "endpoint_counts": {
+    "q8-3": 22,
+    "q8-0": 17,
+    "q8-7": 26,
+    "q8-4": 18,
+    "q8-2": 15,
+    "q8-1": 26,
+    "null": 61,
+    "q8-5": 4,
+    "q8-6": 3
+  },
+  "result_sha256": "b12a16d67a6e7eeefdea1f27e0b7eb998e0adc963b5fbc016e7a21415b11a734",
+  "scope": "Software/numerical check, not planted validation"
+}

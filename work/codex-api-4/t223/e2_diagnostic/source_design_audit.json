@@ -1,0 +1,92 @@
+{
+  "status": "pass: design evidence only",
+  "cells": [
+    {
+      "input": "ball",
+      "recipe": "F",
+      "n_seeds": 16,
+      "prompt_sha256": "6dfbbf22159307ee6d5330b652f359dfd6b5efabe8edcb1821876d5134c527cd",
+      "input_reference": "ball1_dd33.png"
+    },
+    {
+      "input": "ball",
+      "recipe": "R",
+      "n_seeds": 16,
+      "prompt_sha256": "8844b84b81bddc8985c1020c2c94677860a313bd62e5e9ab8857812949cad5a4",
+      "input_reference": "ball1_dd33.png"
+    },
+    {
+      "input": "ball",
+      "recipe": "N",
+      "n_seeds": 16,
+      "prompt_sha256": "bb630b84869c1258d4369bb2681d95ae214621e15ac40b70ff8a4f2effd0ccac",
+      "input_reference": "ball1_dd33.png"
+    },
+    {
+      "input": "ball",
+      "recipe": "QT",
+      "n_seeds": 16,
+      "prompt_sha256": "d893fff12cc6c5858b9430e9be0dd1ea7d4130c396a8fe562671713eb612fde1",
+      "input_reference": "ball1_dd33.png"
+    },
+    {
+      "input": "held",
+      "recipe": "F",
+      "n_seeds": 16,
+      "prompt_sha256": "6dfbbf22159307ee6d5330b652f359dfd6b5efabe8edcb1821876d5134c527cd",
+      "input_reference": "ball1_O.png"
+    },
+    {
+      "input": "held",
+      "recipe": "R",
+      "n_seeds": 16,
+      "prompt_sha256": "8844b84b81bddc8985c1020c2c94677860a313bd62e5e9ab8857812949cad5a4",
+      "input_reference": "ball1_O.png"
+    },
+    {
+      "input": "held",
+      "recipe": "N",
+      "n_seeds": 16,
+      "prompt_sha256": "bb630b84869c1258d4369bb2681d95ae214621e15ac40b70ff8a4f2effd0ccac",
+      "input_reference": "ball1_O.png"
+    },
+    {
+      "input": "held",
+      "recipe": "QT",
+      "n_seeds": 16,
+      "prompt_sha256": "d893fff12cc6c5858b9430e9be0dd1ea7d4130c396a8fe562671713eb612fde1",
+      "input_reference": "ball1_O.png"
+    },
+    {
+      "input": "pend",
+      "recipe": "F",
+      "n_seeds": 16,
+      "prompt_sha256": "f7eb5cc51f1abb21b7415836238250c41387acc9c5ee9976ad51e22257c553ca",
+      "input_reference": "pend10_mid_f93.png"
+    },
+    {
+      "input": "pend",
+      "recipe": "R",
+      "n_seeds": 16,
+      "prompt_sha256": "90cb1fcfc40e8c19be97b2ac913d8a668971f7ed9166a9ca5339a0983610c205",
+      "input_reference": "pend10_mid_f93.png"
+    },
+    {
+      "input": "pend",
+      "recipe": "N",
+      "n_seeds": 16,
+      "prompt_sha256": "2b1bc8056b54706a3b72e75a4322205c4600d88cbf31c5baa79090bd6fc67459",
+      "input_reference": "pend10_mid_f93.png"
+    },
+    {
+      "input": "pend",
+      "recipe": "QT",
+      "n_seeds": 16,
+      "prompt_sha256": "8e7a16c67cd2d4e7ade0a09d710bbdddd467194305a39d552b6850a05459a895",
+      "input_reference": "pend10_mid_f93.png"
+    }
+  ],
+  "conclusion": "All four ball/held prompts are pairwise identical; each pendulum prompt differs. Input bundles scene image and prompt text. QT changes intervention semantics.",
+  "input_bytes_sha256": null,
+  "native_input_byte_identity": "unverified"
+}
