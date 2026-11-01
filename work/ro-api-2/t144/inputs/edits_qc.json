@@ -1,0 +1,67 @@
+{
+ "A": {
+  "path": "inputs/G1_A.png",
+  "sha256": "6a1e3696c0386a14de83c7fbb1195f0589b826250616f59e9146ba9ef0571c32",
+  "gain": 0,
+  "edited_px": 0,
+  "core_identical": true,
+  "l2": 0.0,
+  "l2_ratio_to_VD": 0.0,
+  "l1": 0.0,
+  "psnr": Infinity
+ },
+ "VD": {
+  "path": "inputs/G1_VD.png",
+  "sha256": "62dd09705e82f9d11351d4f436fbeddfc7f60262105bd7b2e7f0e06f5a6eae1f",
+  "gain": 0.44972029610873954,
+  "edited_px": 1087,
+  "core_identical": true,
+  "l2": 1373.1310935231202,
+  "l2_ratio_to_VD": 1.000007425212202,
+  "l1": 58955.0,
+  "psnr": 46.16142176192031
+ },
+ "VU": {
+  "path": "inputs/G1_VU.png",
+  "sha256": "60f7cf79e76b3e127bca43d819a51e488aba47c0f128e692933743df6d0103fd",
+  "gain": 1.8013871748353494,
+  "edited_px": 1146,
+  "core_identical": true,
+  "l2": 1373.1383761296602,
+  "l2_ratio_to_VD": 1.0000127289014487,
+  "l1": 55729.0,
+  "psnr": 46.16137569512506
+ },
+ "VI": {
+  "path": "inputs/G1_VI.png",
+  "sha256": "f05993b0b9b6f24c0c868c16c8b19806f6905fb42eae3f469cfadd88628375ff",
+  "gain": 1.6956379161458472,
+  "edited_px": 1253,
+  "core_identical": true,
+  "l2": 1373.10123443248,
+  "l2_ratio_to_VD": 0.9999856797921972,
+  "l1": 58005.0,
+  "psnr": 46.16161064088977
+ },
+ "VB": {
+  "path": "inputs/G1_VB.png",
+  "sha256": "566f340a4f01dc999e64707cb74955b1e6e3e1c11f61d2de99fdd32e84783717",
+  "gain": 1.0382692964814617,
+  "edited_px": 1092,
+  "core_identical": true,
+  "l2": 1373.122354344288,
+  "l2_ratio_to_VD": 1.000001060747976,
+  "l1": 59125.0,
+  "psnr": 46.161477042719625
+ },
+ "_meta": {
+  "src": "../../raj-opus-1/t139/inputs/ball1_G.png",
+  "src_sha256": "1fb6d23f1dede2592ade1fd7cb140ce6848bf9bd8fbcc98468eae0b89dcc3baf",
+  "ball": [
+   280,
+   116,
+   12
+  ],
+  "core_r": 13
+ }
+}
