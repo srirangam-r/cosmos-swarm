@@ -1,0 +1,199 @@
+[
+  {
+    "clip": "ball1_dd33_s1.mp4",
+    "cond": "dd33",
+    "seed": 1,
+    "drop_cm": 34.5,
+    "v_imp": 2.6,
+    "first_imp": 16,
+    "n_impacts": 6,
+    "plank_pks": [
+      16,
+      25,
+      33,
+      41,
+      48,
+      56
+    ],
+    "flights_s": [
+      0.375,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.2916666666666667,
+      0.3333333333333333
+    ],
+    "rises_px": [
+      81.0,
+      66.0,
+      62.0,
+      55.0,
+      56.0
+    ],
+    "e_T_ratios": [
+      0.8888888888888888,
+      1.0,
+      0.8750000000000001,
+      1.1428571428571428
+    ],
+    "mean_e_T": 0.9766865079365079,
+    "se_e_T": 0.053738235124579675,
+    "still_bouncing": false
+  },
+  {
+    "clip": "ball1_dd33_s2.mp4",
+    "cond": "dd33",
+    "seed": 2,
+    "drop_cm": 34.5,
+    "v_imp": 2.6,
+    "first_imp": 6,
+    "n_impacts": 3,
+    "plank_pks": [
+      6,
+      69,
+      85
+    ],
+    "flights_s": [
+      2.625,
+      0.6666666666666666
+    ],
+    "rises_px": [
+      169.0,
+      140.0
+    ],
+    "e_T_ratios": [
+      0.25396825396825395
+    ],
+    "mean_e_T": 0.25396825396825395,
+    "se_e_T": 0.0,
+    "still_bouncing": true
+  },
+  {
+    "clip": "ball1_dd35_s1.mp4",
+    "cond": "dd35",
+    "seed": 1,
+    "drop_cm": 24.4,
+    "v_imp": 2.19,
+    "first_imp": 8,
+    "n_impacts": 2,
+    "plank_pks": [
+      8,
+      35
+    ],
+    "flights_s": [
+      1.125
+    ],
+    "rises_px": [
+      111.0
+    ],
+    "e_T_ratios": [],
+    "mean_e_T": null,
+    "se_e_T": 0.0,
+    "still_bouncing": false
+  },
+  {
+    "clip": "ball1_dd35_s2.mp4",
+    "cond": "dd35",
+    "seed": 2,
+    "drop_cm": 24.4,
+    "v_imp": 2.19,
+    "first_imp": null,
+    "n_impacts": 0,
+    "plank_pks": [],
+    "flights_s": [],
+    "rises_px": [],
+    "e_T_ratios": [],
+    "mean_e_T": null,
+    "se_e_T": 0.0,
+    "still_bouncing": false
+  },
+  {
+    "clip": "ball1_dd37_s1.mp4",
+    "cond": "dd37",
+    "seed": 1,
+    "drop_cm": 9.4,
+    "v_imp": 1.36,
+    "first_imp": null,
+    "n_impacts": 0,
+    "plank_pks": [],
+    "flights_s": [],
+    "rises_px": [],
+    "e_T_ratios": [],
+    "mean_e_T": null,
+    "se_e_T": 0.0,
+    "still_bouncing": false
+  },
+  {
+    "clip": "ball1_dd37_s2.mp4",
+    "cond": "dd37",
+    "seed": 2,
+    "drop_cm": 9.4,
+    "v_imp": 1.36,
+    "first_imp": 16,
+    "n_impacts": 1,
+    "plank_pks": [
+      16
+    ],
+    "flights_s": [],
+    "rises_px": [],
+    "e_T_ratios": [],
+    "mean_e_T": null,
+    "se_e_T": 0.0,
+    "still_bouncing": false
+  },
+  {
+    "clip": "ball1_dd58_s1.mp4",
+    "cond": "dd58",
+    "seed": 1,
+    "drop_cm": 5.3,
+    "v_imp": 1.02,
+    "first_imp": null,
+    "n_impacts": 0,
+    "plank_pks": [],
+    "flights_s": [],
+    "rises_px": [],
+    "e_T_ratios": [],
+    "mean_e_T": null,
+    "se_e_T": 0.0,
+    "still_bouncing": false
+  },
+  {
+    "clip": "ball1_dd58_s2.mp4",
+    "cond": "dd58",
+    "seed": 2,
+    "drop_cm": 5.3,
+    "v_imp": 1.02,
+    "first_imp": 10,
+    "n_impacts": 6,
+    "plank_pks": [
+      10,
+      24,
+      42,
+      58,
+      73,
+      88
+    ],
+    "flights_s": [
+      0.5833333333333334,
+      0.75,
+      0.6666666666666666,
+      0.625,
+      0.625
+    ],
+    "rises_px": [
+      25.0,
+      166.0,
+      140.0,
+      106.0,
+      141.0
+    ],
+    "e_T_ratios": [
+      1.2857142857142856,
+      0.8888888888888888,
+      0.9375,
+      1.0
+    ],
+    "mean_e_T": 1.0280257936507935,
+    "se_e_T": 0.07695079663108703,
+    "still_bouncing": true
+  }
+]
