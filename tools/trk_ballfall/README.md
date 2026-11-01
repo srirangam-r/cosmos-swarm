@@ -13,3 +13,9 @@ Planted: `--planted planted.json clipdir` reproduces the v3 estimates exactly (r
 Synthetic hover test (`synth_hover_test.py outdir`): hinge/g_true = 0.965 ± 0.008 over 9 cases (g 0.45/2/9.81, hover 0/0.5/1 s), independent of hover.
 Frame-0 fits collapse under hover (true 9.81 with 0.5 s hover gives 0.37 for b+kt² and 1.10 for a free quadratic). Results: work/raj-3/synth_hover_results.json.
 Caveat: the CI covers fit noise only. Add the scale systematic (~4% per px for a ~23 px ball). Static camera only. Not yet run on Cosmos clips or real video.
+
+## Caveat from real footage (raj-3, shift 4; see work/raj-3/gauge_mocap)
+measure_ball v4's hinge model (v0=0 at a free t0) is unbiased only for a clean release. On GAUGE real mocap the gripper releases slowly
+(~2 frames at 1-4 m/s^2), and the hinge reads 9.36 vs 9.74 for a free-v0 quadratic from the sustained-free-fall onset.
+On held-ball clips (real or Cosmos), prefer a free-v0 fit from the onset. The classical diff tracker is too noisy on GAUGE real video
+(black ball on a black curtain, 7-9 unique frames; see work/raj-3/gauge_video): use SAM masks there.
