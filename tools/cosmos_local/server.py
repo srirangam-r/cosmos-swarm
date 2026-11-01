@@ -17,7 +17,7 @@ GET /v1/artifacts/{id} -> a capture .npz.   POST /v1/probe/loss -> rectified-flo
 Env: COSMOS_OFFLOAD=0 keeps every module on the GPU (80 GB cards); default is leaf-level group offload for the 15B DiT.
 Run: python server.py --host <tailscale ip> --port 8011
 """
-import argparse, contextlib, io, json, os, threading, time, traceback
+import argparse, contextlib, io, json, os, re, threading, time, traceback
 from pathlib import Path
 
 import av, numpy as np, torch, uvicorn
@@ -87,6 +87,10 @@ print(f"loaded in {time.time()-t0:.0f}s" + (" (VAE swap on)" if VAE_SWAP else ""
 
 LOCK = threading.Lock()
 STATE = dict(busy=False, served=0, waiting=0, started=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+STATE["features"] = ["noise", "internals", "sidecars"]  # the queue only sends a job to endpoints that list its options
+import hashlib  # noqa: E402
+SERVER_REV = {f: hashlib.md5((Path(__file__).parent / f).read_bytes()).hexdigest()[:10]
+              for f in ("server.py", "noise.py", "internals.py", "neg_meta.py") if (Path(__file__).parent / f).exists()}
 app = FastAPI()
 
 
@@ -207,7 +211,8 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
                 has_action=("action" in extra), input_image=(f"{stem}_input.png" if img is not None else None),
                 frames_out=len(frames), out_hw=list(frames[0].shape[:2]), seconds=round(dt, 1),
                 model="nvidia/Cosmos3-Nano (local diffusers bf16, " + ("group offload" if OFFLOAD else "no offload" + (", VAE swap" if VAE_SWAP else "")) + (", " + os.environ["COSMOS_LABEL"] if os.environ.get("COSMOS_LABEL") else "") + ", safety check off)",
-                scheduler="UniPCMultistepScheduler", torch=torch.__version__, server="raj-1 server.py")
+                scheduler="UniPCMultistepScheduler", torch=torch.__version__, server="raj-1 server.py", server_rev=SERVER_REV,
+                sigmas_used=[round(float(x), 5) for x in getattr(pipe.scheduler, "sigmas", [])])
     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
     if nspec:
         side["noise"] = dict(spec=nspec.raw, mixed=nspec.used)
@@ -218,6 +223,14 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
     (OUT / f"{stem}.json").write_text(json.dumps(side, indent=1))
     print(f"served {stem} {len(frames)}f in {dt:.0f}s", flush=True)
     return Response(mp4, media_type="video/mp4", headers=headers)
+
+
+@app.get("/v1/sidecars/{clip_id}")
+def sidecar(clip_id: str):
+    """This server's own sidecar for a clip it served: what actually ran (sigmas, hooks, noise, revision)."""
+    if not re.fullmatch(r"[\w.-]+", clip_id) or not (OUT / f"{clip_id}.json").is_file():
+        raise HTTPException(404, f"no sidecar {clip_id!r}")
+    return FileResponse(OUT / f"{clip_id}.json", media_type="application/json")
 
 
 @app.get("/v1/artifacts/{artifact_id}")
