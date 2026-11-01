@@ -1,0 +1,59 @@
+{
+  "bands": [
+    {
+      "id": "24fps_gauge_ball",
+      "reference": [
+        {
+          "file": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/raj-4/nv_scoreboard_real/gauge_real_matched.json",
+          "key": "ball_1.mp4"
+        },
+        {
+          "file": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/raj-4/nv_scoreboard_real/gauge_real_matched.json",
+          "key": "ball_2.mp4"
+        }
+      ],
+      "prompts": [
+        {
+          "id": "ball_1",
+          "clips": [
+            {
+              "file": "scores_recipe_midfall.json",
+              "key": "box_mid_b1_noneg_s1.mp4",
+              "seed": 1
+            },
+            {
+              "file": "scores_recipe_midfall.json",
+              "key": "box_mid_b1_noneg_s2.mp4",
+              "seed": 2
+            },
+            {
+              "file": "scores_recipe_midfall.json",
+              "key": "box_mid_b1_noneg_s3.mp4",
+              "seed": 3
+            }
+          ]
+        },
+        {
+          "id": "ball_2",
+          "clips": [
+            {
+              "file": "scores_recipe_midfall.json",
+              "key": "box_mid_b2_noneg_s1.mp4",
+              "seed": 1
+            },
+            {
+              "file": "scores_recipe_midfall.json",
+              "key": "box_mid_b2_noneg_s2.mp4",
+              "seed": 2
+            },
+            {
+              "file": "scores_recipe_midfall.json",
+              "key": "box_mid_b2_noneg_s3.mp4",
+              "seed": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

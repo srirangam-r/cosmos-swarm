@@ -1,0 +1,57 @@
+{
+  "method": "Cosmos 3 report eqs. 10-11; binary DD; equally weighted bands and prompts",
+  "ddof": 0,
+  "zero_denominator_policy": "zero",
+  "bands": [
+    {
+      "id": "24fps_gauge_ball",
+      "fps_range": [
+        24.0,
+        24.0
+      ],
+      "reference_count": 2,
+      "reference_dd": 0,
+      "generated_dd": 0.3333333333333333,
+      "mc": 0.6666666666666666,
+      "mf": 0.22222222222222227,
+      "prompts": [
+        {
+          "id": "ball_1",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            1,
+            0
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        },
+        {
+          "id": "ball_2",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            1,
+            0
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        }
+      ]
+    }
+  ],
+  "mean_mf_across_bands": 0.22222222222222227,
+  "limitations": "Approximation: scorer differs from original VBench; input matching, distinct videos, generation metadata, fps, duration, and reference representativeness require manual audit. NVIDIA variance and zero conventions are unspecified."
+}
