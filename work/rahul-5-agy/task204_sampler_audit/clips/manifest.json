@@ -1,0 +1,86 @@
+{
+  "ms_pend10_midB_nv_s1": {
+    "queue_id": "123736-20f70e",
+    "sha256": "586555b5695c67aae8c7ce231f06768229a7a4b15244c7f76ebfc02befdf5200",
+    "bytes": 10187612,
+    "endpoint": "puget13",
+    "sampler": "nv"
+  },
+  "ms_pend10_midB_nv_s2": {
+    "queue_id": "123736-d64f90",
+    "sha256": "c594d8d2c96ec8622670144e4bed68b296e5b6a44f92e221da59d2427ce38634",
+    "bytes": 10074534,
+    "endpoint": "puget13",
+    "sampler": "nv"
+  },
+  "ms_pend10_midB_nv_s3": {
+    "queue_id": "123737-248add",
+    "sha256": "53a823b9b51ffabaec412758011aceb3e98b6bc7dc2f24e832dfca1528d38f5f",
+    "bytes": 9857193,
+    "endpoint": "puget13",
+    "sampler": "nv"
+  },
+  "ms_pend11_midB_nv_s1": {
+    "queue_id": "123738-3780c1",
+    "sha256": "5951433215735826c4386aaa6737b989d96c43d6f33a6ca274ff3657db0c421e",
+    "bytes": 10027587,
+    "endpoint": "puget13",
+    "sampler": "nv"
+  },
+  "ms_pend11_midB_nv_s2": {
+    "queue_id": "123738-65901c",
+    "sha256": "2ea94ebc8fa4a1ccc3c2f41fb0d2bcc0f603cb215c06de493ebf234a56bfe3f9",
+    "bytes": 10059975,
+    "endpoint": "puget13",
+    "sampler": "nv"
+  },
+  "ms_pend11_midB_nv_s3": {
+    "queue_id": "123738-2d2a4f",
+    "sha256": "ef64d1ff7d3c4f03d0db49cd6a74a65b81c9e03614b4d4d2a56cd40062a2c943",
+    "bytes": 9345831,
+    "endpoint": "puget13",
+    "sampler": "nv"
+  },
+  "ms_pend10_midB_kar_s1": {
+    "queue_id": "123739-71fd88",
+    "sha256": "56ec35a6e02531554be38dd807452e545a5cef88ad0b872ce45bc079dc43daf9",
+    "bytes": 10210576,
+    "endpoint": "puget13",
+    "sampler": "karras_default"
+  },
+  "ms_pend10_midB_kar_s2": {
+    "queue_id": "123739-0799f4",
+    "sha256": "b281c2fd713339fcd9be0c43a5ec4714744cf3a356ec2067c29d86a6ea418e58",
+    "bytes": 10074437,
+    "endpoint": "puget13",
+    "sampler": "karras_default"
+  },
+  "ms_pend10_midB_kar_s3": {
+    "queue_id": "123740-19b9a9",
+    "sha256": "ad2312a2f04ba4bac22a4cdbc6691eb00a2d224f6ac910bf6a32e182aadb6eca",
+    "bytes": 9736742,
+    "endpoint": "puget13",
+    "sampler": "karras_default"
+  },
+  "ms_pend11_midB_kar_s1": {
+    "queue_id": "123740-88a457",
+    "sha256": "17231d713b9d0610073a2e18e11a5ca84eb9b9ea843a0f7911d4e253106cfba1",
+    "bytes": 10003104,
+    "endpoint": "puget13",
+    "sampler": "karras_default"
+  },
+  "ms_pend11_midB_kar_s2": {
+    "queue_id": "123741-86dfc5",
+    "sha256": "04b9d1ce5df4102b0b9c6416ff15c1ba7ae19dbe2e4be0b90da5601ff488caec",
+    "bytes": 10000673,
+    "endpoint": "puget13",
+    "sampler": "karras_default"
+  },
+  "ms_pend11_midB_kar_s3": {
+    "queue_id": "123741-7a1b02",
+    "sha256": "b8eef0ca1fe8d2c0f51a85c1d8bbd3258f997164f726a1b5ac76175a628eeabd",
+    "bytes": 9296193,
+    "endpoint": "puget13",
+    "sampler": "karras_default"
+  }
+}

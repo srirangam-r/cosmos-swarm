@@ -1,0 +1,61 @@
+{
+  "id": "123736-20f70e",
+  "seq": 1590,
+  "owner": "ro-3",
+  "name": "ms_pend10_midB_nv_s1",
+  "kind": "clip",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+    "width": 832,
+    "height": 480,
+    "num_frames": 93,
+    "fps": 24,
+    "steps": 35,
+    "guidance": 6.0,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "negative_prompt": "",
+    "extra_params": {
+      "sampler": "nv"
+    }
+  },
+  "endpoints": [
+    "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T12:37:36Z",
+  "started": "2026-11-01T12:37:36Z",
+  "finished": "2026-11-01T12:40:01Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_mid_f93.png",
+  "video": null,
+  "sidecar": {
+    "name": "ms_pend10_midB_nv_s1",
+    "width": 832,
+    "height": 480,
+    "num_frames": 93,
+    "fps": 24,
+    "steps": 35,
+    "guidance": 6.0,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "negative_prompt": "",
+    "extra_params": {
+      "sampler": "nv"
+    },
+    "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+    "negative_prompt_text": "",
+    "image": "pend10_mid_f93.png",
+    "owner": "ro-3",
+    "queue_id": "123736-20f70e",
+    "endpoint": "puget13",
+    "endpoint_url": "http://100.77.182.40:8013",
+    "server_clip_id": "20261101T123956_0001_ro-3",
+    "artifact_ids": [],
+    "seconds": 138.9,
+    "wall_seconds": 144.6,
+    "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+}
