@@ -1,0 +1,28 @@
+{
+ "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt": null,
+ "size": "832x480",
+ "num_frames": 93,
+ "fps": 24.0,
+ "num_inference_steps": 35,
+ "guidance_scale": 6.0,
+ "flow_shift": 10.0,
+ "seed": 2,
+ "extra_params": {
+  "client": "ro-3",
+  "arm": "nocyc"
+ },
+ "has_action": false,
+ "input_image": "20261101T050525_0041_ro-3_input.png",
+ "frames_out": 93,
+ "out_hw": [
+  480,
+  832
+ ],
+ "seconds": 146.5,
+ "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, RTX 6000 Ada, safety check off)",
+ "scheduler": "UniPCMultistepScheduler",
+ "torch": "2.15.0+cu132",
+ "server": "ro-3 srv/server.py (raj-1 tools/cosmos_local/server.py @ no-offload)",
+ "model_path": "/home/rohith/swarm-work/ro-1/models/Cosmos3-Nano"
+}
