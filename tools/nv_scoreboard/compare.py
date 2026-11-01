@@ -9,7 +9,8 @@
       Pairs clips across the two runs (default: same input image + same seed; a fix may change the
       prompt, settings or checkpoint, so those are not part of the key). Reports per metric the
       scene-weighted mean difference AFTER-BEFORE with a bootstrap 95% CI over scenes, and,
-      with --real, the descriptive motion-fidelity gap |dd - dd_real(task)|.
+      with --real, a descriptive per-clip gap |dd - dd_real(task)|; this is
+      not NVIDIA's motion-fidelity score, which also requires motion control.
 
 Pairing/grouping keys come from each clip's JSON sidecar (client.py or server.py format:
 image/input_image/source_frame, seed, prompt_text/prompt, negative_prompt_text/negative_prompt,
