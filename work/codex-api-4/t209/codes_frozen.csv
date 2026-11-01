@@ -1,0 +1,15 @@
+id,late_rest,unique_ball,stable_size,present_end,note
+Q01,N,Y,Y,Y,Repeated clear late bouncing f80-92.
+Q02,N,Y,N,Y,"Large growth and lateral movement off plank; ball remains fully visible on full scene at f92, near robot side; motion continues f80-92."
+Q03,N,Y,Y,Y,Repeated clear late high bounces f80-92.
+Q04,U,Y,Y,Y,Near stationary on plank; small location/shape jitter and late drift make strict rest unclear f80-92.
+Q05,U,Y,Y,Y,Near stationary on plank; small location/shape jitter and late drift make strict rest unclear f80-92. Original stride JPG renderer showed header only; viewed both PNG halves.
+Q06,N,Y,Y,Y,Repeated clear late high bounces f80-92.
+Q07,Y,Y,Y,Y,Ball at stable location on plank f80-92; slight appearance changes; no clear translation. Earlier bounce cadence visible.
+Q08,N,Y,Y,Y,Repeated clear late bouncing f80-92.
+Q09,N,Y,Y,Y,Small repeated vertical bob/hop over plank through f92; changing gap/shadow evident in consecutive frames80-92.
+Q10,Y,Y,Y,Y,Ball at stable location on plank f80-92; appearance changes do not show clear translation.
+Q11,N,Y,Y,Y,Repeated clear late bouncing f80-92.
+Q12,N,Y,Y,Y,Repeated clear late high bounces f80-92.
+Q13,Y,Y,Y,Y,Ball at stable location on plank f80-92; appearance changes do not show clear translation. Viewed late PNG because JPG renderer showed header only.
+Q14,N,Y,Y,Y,Small repeated vertical bob/hop over plank f80-92; a gap/shadow changes across successive frames.

@@ -1,0 +1,56 @@
+[
+  {
+    "original_path": "work/ro-1/switch_probe/server_prompt_switch.py",
+    "copy": "source/server_prompt_switch.py",
+    "revision": "23fc980a7a721011b1b16ec9de5be67bd8a570af",
+    "sha256": "6d58dc0674ca3ae2846aaab0c9d3393b627b19641dde852fd7299821b71743e8"
+  },
+  {
+    "original_path": "work/ro-1/switch_probe/chain_v8.sh",
+    "copy": "source/chain_v8.sh",
+    "revision": "23fc980a7a721011b1b16ec9de5be67bd8a570af",
+    "sha256": "df7c3b5520c31827b2a361927a90b0998c399f177924bb7ffe05639c506a7c23"
+  },
+  {
+    "original_path": "work/ro-1/switch_probe/README.md",
+    "copy": "source/switch_README.md",
+    "revision": "23fc980a7a721011b1b16ec9de5be67bd8a570af",
+    "sha256": "ebae6d1f9e88046291a9b24c0b12f6a7779c8bf0b7be00d1f7cec4b7fe7191aa"
+  },
+  {
+    "original_path": "work/ro-1/cause_v8/jobs_v8.jsonl",
+    "copy": "source/jobs_v8.jsonl",
+    "revision": "23fc980a7a721011b1b16ec9de5be67bd8a570af",
+    "sha256": "0fb8067feba3678f19e691d68f11c2bbd136aad6bbcddf5eec7de313f9e3bdc5"
+  },
+  {
+    "original_path": "work/ro-1/cause_v8/README.md",
+    "copy": "source/cause_v8_README.md",
+    "revision": "23fc980a7a721011b1b16ec9de5be67bd8a570af",
+    "sha256": "707800376c3a48fd28cad054277bfe5ca6ac30296a13b8e043441ed1baa5e450"
+  },
+  {
+    "original_path": "work/ro-1/cause_v8/analyze7.py",
+    "copy": "source/analyze7.py",
+    "revision": "23fc980a7a721011b1b16ec9de5be67bd8a570af",
+    "sha256": "42add1087d95a30bcbce0ea284f87b88cd6b543a065bc5f629564afeb4047f2e"
+  },
+  {
+    "original_path": "work/ro-1/cause_v8/server/server_prompt_switch.py",
+    "copy": "source/executed_server_prompt_switch.py",
+    "revision": "f694d785c80eba213885540a7f5daffd4ecd4755",
+    "sha256": "6d58dc0674ca3ae2846aaab0c9d3393b627b19641dde852fd7299821b71743e8"
+  },
+  {
+    "original_path": "work/ro-1/cause_v8/server/README_switch.md",
+    "copy": "source/README_switch.md",
+    "revision": "f694d785c80eba213885540a7f5daffd4ecd4755",
+    "sha256": "20082bb616755f90142a0401e2e7268a98feff60704f5fdba21b5ff440384749"
+  },
+  {
+    "original_path": "work/ro-1/cause_v8/server/chain_v8.out",
+    "copy": "source/chain_v8.txt",
+    "revision": "f694d785c80eba213885540a7f5daffd4ecd4755",
+    "sha256": "1d001c782f7ba3cc8bd3847d7fe7473745b8e1705555cdf5b4272ac771671803"
+  }
+]
