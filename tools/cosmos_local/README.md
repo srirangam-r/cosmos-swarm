@@ -34,6 +34,9 @@ By default diffusers builds the CFG negative as `"" + INVERSE metadata` ("The vi
 - `test_neg_meta.py <diffusers pipeline_cosmos3_omni.py>` runs the pinned diffusers `tokenize_prompt` on a stub tokenizer. It checks that the default is unchanged and that `same` + `nvidia_default` gives exactly cosmos-framework's SAME-mode negative text (5 frame/fps combinations, PASS at diffusers 86ef420b).
 - **Running servers must `git pull` and restart to get this.** An old server silently ignores these keys, so check the sidecar's `negative_metadata_mode`.
 
+## 48 GB GPUs without offload (`COSMOS_VAE_SWAP=1`)
+With `COSMOS_OFFLOAD=0` on a 48 GB card the DiT (~30 GB) plus the Wan VAE's decode runs out of memory. `COSMOS_VAE_SWAP=1` moves the DiT to CPU RAM while the VAE encodes or decodes and back at its next call: the same ops on the same device, so outputs are unchanged, for a few seconds of PCIe copies. Needs ~30 GB free CPU RAM per server. Measured (832x480, 35 steps): L40S 129 s per 93-frame clip, 260 s per 189-frame clip; A6000 224 s / 457 s; for comparison RTX Pro 6000 (96 GB, no swap) 56 s / 133 s.
+
 ## Internals hooks (`extra_params.internals`) and the loss probe
 Opt-in, per request. A request without `internals` runs exactly the old code path. Every hook is installed around `pipe(**call)` and removed in a `finally` (hook handles, the attention function swap, the RoPE forward), so one server process can serve many agents in turn. The sidecar gets `internals`: the spec as parsed (vectors replaced by shape + sha256), `artifact_id`, and a summary of what fired. Bad specs return **HTTP 400** with the expected shapes/ranges in the message; nothing runs on the GPU first. Through the job queue use `extra_params` as usual; steering vectors must then be `artifact` references or inline `values` (the queue cannot upload files), and the artifact ids come back in the queue sidecar's `artifact_ids`.
 

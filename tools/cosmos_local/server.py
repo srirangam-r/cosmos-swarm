@@ -54,7 +54,30 @@ for name, comp in pipe.components.items():
         else:
             comp.to("cuda")
 BASE_SCHED = dict(pipe.scheduler.config)
-print(f"loaded in {time.time()-t0:.0f}s", flush=True)
+# COSMOS_VAE_SWAP=1 (48 GB cards without offload): the DiT (~30 GB) moves to CPU RAM while the VAE encodes or
+# decodes, and back to the GPU at its next call. Same ops on the same device, so outputs are unchanged; it costs
+# a few seconds of PCIe copies per request. Needs ~30 GB of free CPU RAM per server.
+VAE_SWAP = os.environ.get("COSMOS_VAE_SWAP", "0") == "1" and not OFFLOAD
+if VAE_SWAP:
+    def _dit_on_gpu():
+        return next(pipe.transformer.parameters()).device.type == "cuda"
+
+    def _vae_alone(fn):
+        def run(*a, **k):
+            if _dit_on_gpu():
+                pipe.transformer.to("cpu")
+                torch.cuda.empty_cache()
+            return fn(*a, **k)
+        return run
+
+    pipe.vae.encode, pipe.vae.decode = _vae_alone(pipe.vae.encode), _vae_alone(pipe.vae.decode)
+    # Registered before any internals hook, so the DiT is back on the GPU before those run.
+    def _dit_back(module, args):  # must return None: a pre-hook's return value would replace the inputs
+        if not _dit_on_gpu():
+            module.to("cuda")
+
+    pipe.transformer.register_forward_pre_hook(_dit_back)
+print(f"loaded in {time.time()-t0:.0f}s" + (" (VAE swap on)" if VAE_SWAP else ""), flush=True)
 
 LOCK = threading.Lock()
 STATE = dict(busy=False, served=0, waiting=0, started=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
@@ -173,7 +196,7 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
                 extra_params={k: v for k, v in extra.items() if k not in ("action", "internals")},
                 has_action=("action" in extra), input_image=(f"{stem}_input.png" if img is not None else None),
                 frames_out=len(frames), out_hw=list(frames[0].shape[:2]), seconds=round(dt, 1),
-                model="nvidia/Cosmos3-Nano (local diffusers bf16, " + ("group offload" if OFFLOAD else "no offload") + (", " + os.environ["COSMOS_LABEL"] if os.environ.get("COSMOS_LABEL") else "") + ", safety check off)",
+                model="nvidia/Cosmos3-Nano (local diffusers bf16, " + ("group offload" if OFFLOAD else "no offload" + (", VAE swap" if VAE_SWAP else "")) + (", " + os.environ["COSMOS_LABEL"] if os.environ.get("COSMOS_LABEL") else "") + ", safety check off)",
                 scheduler="UniPCMultistepScheduler", torch=torch.__version__, server="raj-1 server.py")
     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
     if spec:
