@@ -107,6 +107,10 @@ FINDING: Cosmos3-Nano generates undamped, perpetual bouncing (e_T = 0.989 ± 0.0
   - Clean Decaying Subset (Balls 1 & 3): Original $0.662 \pm 0.021$ vs VAE $0.665 \pm 0.011$ ($\Delta e_T = +0.002 \pm 0.016$).
   - Paired Detected Impact Time Discrepancy: **$0.094 \pm 0.069\text{ frames}$ ($3.76 \pm 2.75\text{ ms}$)** across 20 matched impacts on clean trajectories (paired estimated-time difference, not absolute ground-truth impact timing error, #1556).
   - VAE Reconstruction Quality: Whole-frame PSNR = **$36.25 \pm 0.72\text{ dB}$** (#1373) / **$36.35 \pm 0.32\text{ dB}$** (#1528), SSIM = **$0.9546 \pm 0.0041$**.
+  - Inference Sampler Hyperparameter Invariance (CFG & Flow Shift):
+    - *Flow Shift*: Bit-for-bit SHA-256 identity (`6af5474bd8bfec3565caa053d5ffb7f2ddd576bf07fe7726c83beebf086b93c6`) was verified across shift 10.0 vs 3.0 clips on `puget13` (Task 75 audit, commit `a1fb2e3`), demonstrating that `flow_shift` produces zero observed change on that stack, consistent with source-level schedule no-op audits (Finding `#1075`). Seed 1 cross-host divergences (GB10 vs A100) were verified to be hardware/stack confounds rather than causal shift effects.
+    - *Guidance Scale (CFG)*: Sweeps across CFG $\in [1.0, 6.0]$ demonstrate that lowering CFG does NOT induce dissipative settling. Centroid tracking with full-corridor background subtraction confirms that CFG $\le 2.5$ induces mid-air levitation/hovering and upward trajectory reversals (3/4 clips fail to reach the plank; 1/4 reaches the plank at f48 before rebounding). At higher guidance ($\text{CFG} \in [4.0, 6.0]$), undamped bouncing persists invariant to scale ($e_T \approx 1.0$).
+    - *Conclusion*: Neither flow shift nor CFG tuning can break the undamped limit cycle (Task 71, Finding `#1721`, Review `#1806`, Task 75 audit, commit `a1fb2e3`).
 - **Setup**: `AutoencoderKLWan` (bf16, temporal scale 4, spatial scale 16, 48 channels) on GB10. Evaluated on all 4 real GAUGE ball drops (129f full + 93f midfall, $n=8$ pairs, 16 videos).
 - **Method**: 2-pass ghost-free adaptive background subtraction tracker (`bounce_decay.py`, PASS 12/12, msg 599), scipy quadratic sub-pixel vertex interpolation, log-linear restitution regression ($\ln T_k = \ln T_0 + k\ln e_T$).
 - **Control**: Direct frame-for-frame comparison of pre-VAE original clips against post-VAE round-trip reconstructions under identical tracking parameters.
@@ -263,6 +267,7 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 - **What will NOT work**: 
   - Changing prompt text or FPS dials (Finding 5 proves they are null or induce hallucinations).
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
+  - Tuning inference sampler hyperparameters (CFG scale $\in [1.0, 6.0]$ or flow shift $\in [3.0, 10.0]$): Flow shift is an operational no-op on the diffusers UniPC schedule, low CFG ($\le 2.5$) induces mid-air levitation/reversal rather than dissipation, and CFG 4–6 preserves perpetual bouncing invariant to scale (Task 71, Task 75, commit `a1fb2e3`).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
   - Supervised LoRA fine-tuning trained only on isolated synthetic drops without manipulator grasp actuation (Finding 8 proves a 0.0% release rate; synthetic ballistic-only data cannot break the real Franka gripper visual anchor).
 - **What DOES work / Open Fix Directions**:

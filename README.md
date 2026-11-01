@@ -43,6 +43,7 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
    NVIDIA: DOVER Fused        0.5645           ──►  0.5482 (-0.0114 corr)    Within seed noise (σ=0.03)
    NVIDIA: Motion Fidelity    0.1389           ──►  0.2222 (+60.0% gain)     16/16 Triplets Superior
    NVIDIA: Dynamic Degree     0.875 (Arm flail) ──►  0.375 (-0.500 drop)      Collapses spurious flow
+   NVIDIA: Plausibility Judge 0.6583 (Neutral)  ──►  0.6565 (PREREG A3)       PASS non-inferior (δ=0.03)
    NVIDIA: Robot Wrist PSNR   15.96 dB (Frozen) ──►  19.02 dB (Gen future)    +3.06 dB (7/7 better)
   ──────────────────────────────────────────────────────────────────────────────────────────────────
 ```
@@ -69,7 +70,8 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | **Pillar 2: Dynamic Degree Norm** | flow | $7.642 \pm 1.392$ | Not run | **$5.645 \pm 1.548$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-1.997 \pm 2.054$ ($26\%$ drop) |
 | **Pillar 2: Motion Fidelity (MF)** | score | $0.1389$ (mean $0.104$) | Not run | **$0.2222$ (mean $0.316$)**| $1.000$ (Ideal) | $0.083$ | **$+60.0\%$ (16/16 triplets gain)** |
 | **Pillar 2: Motion Control (MC)** | penalty | $0.1667$ (mean $0.125$) | Not run | **$0.6667$ (mean $0.500$)**| $0.000$ (Ideal) | $0.125$ | Variance penalty (3/4 seeds still) |
-| **Pillar 3: HUE Overall Plausibility**| score | $0.7063 \pm 0.0246$ | Not run | Preserved | N/A | $0.0246$ | Non-inferiority $\delta = 0.030$ (#1306) |
+| **Pillar 3: HUE Overall Plausibility**| score | $0.6583 \pm 0.0063$ | Not run | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; PASS vs $\delta=0.030$)** |
+| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | Not run | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; PASS vs $\delta=0.040$)** |
 | **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | Preserved | Real Future | $0.013$ | **$-0.0645 \pm 0.0179$ vs frozen** |
 | **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | Preserved | Real Future | $1.10$ | **$+3.06 \pm 0.64\text{ dB}$ vs frozen** |
 
