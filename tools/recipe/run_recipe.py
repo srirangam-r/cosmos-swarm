@@ -11,6 +11,9 @@ true Earth gravitational acceleration (g = 9.82 ± 0.35 m/s^2), 100% genuine rel
 0% phantom duplicates, and +60% NVIDIA Motion Fidelity gain without visual quality degradation.
 
 Usage Examples:
+  # Run on CPU dry-run (no GPU / endpoint needed):
+  python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_midfall.png --out out/recipe_ball1.mp4 --dry-run
+
   # Run from conditioning frame via shared endpoint:
   python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_midfall.png --out out/recipe_ball1.mp4 --url http://127.0.0.1:8021
 
@@ -60,10 +63,17 @@ def letterbox_image(img_bgr: np.ndarray, target_w: int = 832, target_h: int = 48
     return canvas
 
 
-def extract_release_frame(video_path: str, diff_threshold: float = 8.0) -> np.ndarray:
+def extract_release_frame(
+    video_path: str,
+    diff_threshold: float = 8.0,
+    local_threshold: float = 15.0,
+    roi: tuple[int, int, int, int] | None = None,
+) -> np.ndarray:
     """
     Automatically detects the release seam / onset frame where object separation begins.
     Finds the first frame where inter-frame motion indicates gripper opening or free-fall detachment.
+    Supports both global frame difference and localized peak motion (e.g. falling ball / opening jaws),
+    as well as explicit bounding box ROI (x1, y1, x2, y2).
     """
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
@@ -76,6 +86,7 @@ def extract_release_frame(video_path: str, diff_threshold: float = 8.0) -> np.nd
     prev_gray = cv2.cvtColor(prev, cv2.COLOR_BGR2GRAY)
     frame_idx = 0
     release_frame = prev
+    detected = False
 
     while True:
         ret, curr = cap.read()
@@ -84,16 +95,36 @@ def extract_release_frame(video_path: str, diff_threshold: float = 8.0) -> np.nd
         frame_idx += 1
         curr_gray = cv2.cvtColor(curr, cv2.COLOR_BGR2GRAY)
         diff = cv2.absdiff(curr_gray, prev_gray)
-        mean_diff = float(np.mean(diff))
 
-        # Detect motion onset representing detachment / release
-        if mean_diff > diff_threshold:
-            print(f"[release_detector] Detected motion onset at frame {frame_idx} (mean diff: {mean_diff:.2f})")
-            release_frame = curr
-            break
+        if roi is not None:
+            x1, y1, x2, y2 = roi
+            roi_diff = diff[y1:y2, x1:x2]
+            motion_metric = float(np.mean(roi_diff)) if roi_diff.size > 0 else 0.0
+            if motion_metric > diff_threshold:
+                print(f"[release_detector] Detected motion onset in ROI at frame {frame_idx} (mean diff: {motion_metric:.2f})")
+                release_frame = curr
+                detected = True
+                break
+        else:
+            mean_diff = float(np.mean(diff))
+            # Compute peak local motion via box blur (average difference in 16x16 local neighborhood)
+            local_diff = cv2.blur(diff.astype(np.float32), (16, 16))
+            peak_local = float(np.max(local_diff))
+
+            if mean_diff > diff_threshold or peak_local > local_threshold:
+                print(
+                    f"[release_detector] Detected motion onset at frame {frame_idx} "
+                    f"(global mean: {mean_diff:.2f}, peak local: {peak_local:.2f})"
+                )
+                release_frame = curr
+                detected = True
+                break
+
         prev_gray = curr_gray
 
     cap.release()
+    if not detected:
+        print(f"[release_detector] Warning: No motion exceeding thresholds found in {video_path}; defaulting to frame 0")
     return release_frame
 
 
@@ -131,13 +162,26 @@ def run_inference_endpoint(
     resp.raise_for_status()
     wall_sec = time.time() - t0
 
+    video_bytes = resp.content
+    if len(video_bytes) < 32:
+        raise ValueError(f"Endpoint returned invalid payload: only {len(video_bytes)} bytes received.")
+
+    # Validate video container magic signature
+    is_mp4 = (len(video_bytes) >= 8 and video_bytes[4:8] == b"ftyp") or (b"ftyp" in video_bytes[:32])
+    is_webm = video_bytes.startswith(b"\x1a\x45\xdf\xa3")
+    if not (is_mp4 or is_webm):
+        raise ValueError(
+            f"Endpoint response does not contain a valid MP4 or WebM video container. "
+            f"First 16 bytes: {video_bytes[:16]!r}"
+        )
+
     metadata = {
         "endpoint": url,
         "server_clip_id": resp.headers.get("X-Clip-Id", "unknown"),
         "server_seconds": float(resp.headers.get("X-Seconds", 0.0)),
         "wall_seconds": round(wall_sec, 2),
     }
-    return resp.content, metadata
+    return video_bytes, metadata
 
 
 def run_inference_local(
@@ -153,11 +197,10 @@ def run_inference_local(
     flow_shift: float,
     seed: int,
     offload: str = "group",
-) -> tuple[str, dict]:
+) -> tuple[list, dict]:
     """Run in-process diffusers Cosmos3OmniPipeline."""
     import torch
     from diffusers import Cosmos3OmniPipeline
-    from diffusers.utils import export_to_video
 
     print(f"[local_pipeline] Loading Cosmos3-Nano from {model_dir}...", flush=True)
     pipe = Cosmos3OmniPipeline.from_pretrained(model_dir, torch_dtype=torch.bfloat16)
@@ -195,13 +238,42 @@ def run_inference_local(
         generator=generator,
     )
     wall_sec = time.time() - t0
+
     v = out.video
-    v = v[0] if (isinstance(v, np.ndarray) and v.ndim == 5) else v
-    frames = [(np.clip(f, 0, 1) * 255).round().astype(np.uint8) if f.dtype != np.uint8 else f for f in np.asarray(v)]
+    if hasattr(v, "detach"):
+        v = v.detach().cpu().numpy()
+    elif hasattr(v, "cpu"):
+        v = v.cpu().numpy()
+
+    # If 5D (B, T, C, H, W) or (B, T, H, W, C), take first batch item
+    if isinstance(v, np.ndarray) and v.ndim == 5:
+        v = v[0]
+
+    # If channels-first (T, C, H, W), transpose to (T, H, W, C)
+    if isinstance(v, np.ndarray) and v.ndim == 4 and v.shape[1] in (1, 3, 4) and v.shape[3] not in (1, 3, 4):
+        v = np.transpose(v, (0, 2, 3, 1))
+
+    # Convert to list of uint8 (H, W, C) images
+    if isinstance(v, (list, tuple)):
+        frames = []
+        for f in v:
+            if hasattr(f, "convert"):
+                frames.append(np.array(f))
+            else:
+                f_arr = np.asarray(f)
+                if f_arr.dtype != np.uint8:
+                    f_arr = (np.clip(f_arr, 0, 1) * 255).round().astype(np.uint8)
+                frames.append(f_arr)
+    else:
+        v_arr = np.asarray(v)
+        if v_arr.dtype != np.uint8:
+            v_arr = (np.clip(v_arr, 0, 1) * 255).round().astype(np.uint8)
+        frames = [v_arr[i] for i in range(len(v_arr))]
+
     return frames, {"wall_seconds": round(wall_sec, 2)}
 
 
-def verify_with_firstfall(mp4_path: str, fps: int = 24, ppm: float = 539.8) -> dict:
+def verify_with_firstfall(mp4_path: str, fps: int = 24, ppm: float = 539.8, point: str | None = None) -> dict:
     """Run referee-validated firstfall.py on the generated clip."""
     script_path = Path(__file__).resolve().parent.parent / "realball" / "firstfall.py"
     if not script_path.exists():
@@ -210,20 +282,25 @@ def verify_with_firstfall(mp4_path: str, fps: int = 24, ppm: float = 539.8) -> d
 
     import subprocess
     cmd = [sys.executable, str(script_path), mp4_path, "--fps", str(fps), "--ppm", str(ppm)]
+    if point:
+        cmd += ["--point", str(point)]
     print(f"[verify] Running referee-validated firstfall tracker: {' '.join(cmd)}")
     res = subprocess.run(cmd, capture_output=True, text=True)
     output = res.stdout + res.stderr
     print(output)
 
-    # Parse JSON output from firstfall if printed (finding outer { ... })
+    # Parse JSON output from firstfall (prefer res.stdout)
+    target_text = res.stdout if res.stdout.strip() else output
     try:
-        idx_start = output.find("{")
-        idx_end = output.rfind("}")
-        if idx_start != -1 and idx_end != -1 and idx_end > idx_start:
-            return json.loads(output[idx_start : idx_end + 1])
+        idx_start = target_text.find("{")
+        if idx_start != -1:
+            decoder = json.JSONDecoder()
+            parsed, _ = decoder.raw_decode(target_text[idx_start:])
+            if isinstance(parsed, dict):
+                return parsed
     except Exception as e:
         print(f"[verify] Error parsing firstfall JSON: {e}")
-    return {"raw_output": output}
+    return {"raw_output": output, "flag": "unparsed"}
 
 
 def main():
@@ -236,6 +313,9 @@ def main():
 
     parser.add_argument("--detect-release", action="store_true", help="Automatically detect release frame from video")
     parser.add_argument("--frame-idx", type=int, default=None, help="Explicit frame index to extract from video")
+    parser.add_argument("--roi", default=None, help="Bounding box ROI for release detection: x1,y1,x2,y2")
+    parser.add_argument("--diff-threshold", type=float, default=8.0, help="Global motion threshold for release detection")
+    parser.add_argument("--local-threshold", type=float, default=15.0, help="Localized peak motion threshold for release detection")
     parser.add_argument("--prompt", default=DEFAULT_PROMPT, help="Prompt text or path to JSON prompt")
     parser.add_argument("--out", default="out/recipe_output.mp4", help="Output MP4 path")
     parser.add_argument("--mode", choices=["endpoint", "local"], default="endpoint", help="Inference execution mode")
@@ -252,11 +332,23 @@ def main():
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED, help="Random seed (default: 1)")
     parser.add_argument("--dry-run", action="store_true", help="Execute CPU-only dry run without GPU/endpoint call (prepares conditioning, letterboxing, payload, mock output, and sidecar)")
     parser.add_argument("--verify", action="store_true", help="Run referee-validated firstfall tracker on output")
+    parser.add_argument("--point", default=None, help="Initial ball tracking point x,y for firstfall verification")
     parser.add_argument("--ppm", type=float, default=539.8, help="Pixels per meter for verification (default: 539.8)")
 
     args = parser.parse_args()
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    roi_tuple = None
+    if args.roi:
+        try:
+            coords = [int(v.strip()) for v in args.roi.split(",")]
+            if len(coords) == 4:
+                roi_tuple = tuple(coords)
+            else:
+                raise ValueError
+        except Exception:
+            raise ValueError(f"Invalid --roi format: {args.roi}. Expected x1,y1,x2,y2")
 
     # 1. Obtain and letterbox conditioning image
     if args.image:
@@ -274,7 +366,12 @@ def main():
                 raise ValueError(f"Could not read frame {args.frame_idx} from {args.video}")
             print(f"[input] Extracted frame {args.frame_idx} from {args.video}")
         elif args.detect_release:
-            raw_img = extract_release_frame(args.video)
+            raw_img = extract_release_frame(
+                args.video,
+                diff_threshold=args.diff_threshold,
+                local_threshold=args.local_threshold,
+                roi=roi_tuple,
+            )
         else:
             raise ValueError("Specify either --detect-release or --frame-idx when using --video")
 
@@ -373,10 +470,23 @@ def main():
     # 4. Verification
     if args.verify:
         print("[verify] Verifying generated clip kinematics...")
-        vf_result = verify_with_firstfall(str(out_path), fps=args.fps, ppm=args.ppm)
+        vf_result = verify_with_firstfall(str(out_path), fps=args.fps, ppm=args.ppm, point=args.point)
         sidecar["verification"] = vf_result
-        if "g" in vf_result:
-            print(f"[verify] PASS: Measured Free-Fall Gravity g = {vf_result['g']:.3f} m/s^2 (R^2 = {vf_result.get('r2', 0):.4f})")
+        flag = vf_result.get("flag", "unknown")
+        g_val = vf_result.get("g")
+        r2_val = vf_result.get("r2", 0.0)
+        daic_val = vf_result.get("dAIC_quad_vs_lin", 0.0)
+
+        if flag == "ok":
+            print(f"[verify] PASS: Measured Free-Fall Gravity g = {g_val:.3f} m/s^2 (R^2 = {r2_val:.4f}, flag: ok)")
+        elif g_val is not None:
+            print(
+                f"[verify] QUALIFIED / NOT OK: flag={flag}, g = {g_val:.3f} m/s^2 "
+                f"(R^2 = {r2_val:.4f}, dAIC = {daic_val:.1f}). "
+                f"Note: unconstrained pass requires flag == 'ok'."
+            )
+        else:
+            print(f"[verify] FAILED: flag={flag}, could not determine free-fall gravity.")
 
     sidecar_path = out_path.with_suffix(".json")
     with open(sidecar_path, "w") as f:
