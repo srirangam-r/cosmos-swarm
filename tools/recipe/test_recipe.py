@@ -405,6 +405,68 @@ class TestRecipeRunner(unittest.TestCase):
             self.assertFalse(sidecar["stage_2_dissipative_settle"])
             self.assertEqual(sidecar["prompt"], "A smooth metal sphere falling vertically and bouncing.")
 
+    def test_generic_rule_r_appends_to_prompt_and_sets_sidecar(self):
+        """Regression test for Raj #2930 req. 2 / Task 133: --rule-generic appends Rule R and records provenance."""
+        for flag in ["--rule-generic", "--rule-r", "--generic-rule"]:
+            with self.subTest(flag=flag), tempfile.TemporaryDirectory() as tmpdir:
+                input_img = Path(tmpdir) / "test_frame0.png"
+                cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+                out_video = Path(tmpdir) / f"out_rule_r_{flag.strip('-')}.mp4"
+                custom_prompt = "A pendulum swings back and forth in an arc."
+                args = [
+                    "run_recipe.py",
+                    "--image", str(input_img),
+                    "--out", str(out_video),
+                    "--dry-run",
+                    flag,
+                    "--prompt", custom_prompt,
+                ]
+
+                with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                    run_recipe.main()
+
+                sidecar_path = out_video.with_suffix(".json")
+                self.assertTrue(sidecar_path.exists())
+                with open(sidecar_path) as f:
+                    sidecar = json.load(f)
+
+                self.assertTrue(sidecar["generic_rule_applied"])
+                self.assertTrue(sidecar["stage_2_dissipative_settle"])
+                self.assertIn(custom_prompt, sidecar["prompt"])
+                self.assertIn(run_recipe.GENERIC_END_STATE_RULE, sidecar["prompt"])
+                self.assertEqual(sidecar["workflow_mode"], "user_frame0_inference")
+                self.assertFalse(sidecar["stage_1_release_seam"])
+                self.assertIn("Karras sigmas", sidecar["sampler_note"])
+
+    def test_workflow_modes_distinction(self):
+        """Workflow mode distinguishes user frame0 inference from diagnostic mid-event mode (Raj #2930 req. 1)."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            # 1. User frame0 mode
+            img_frame0 = Path(tmpdir) / "input_frame0.png"
+            cv2.imwrite(str(img_frame0), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_user = Path(tmpdir) / "out_user.mp4"
+            args_user = ["run_recipe.py", "--image", str(img_frame0), "--out", str(out_user), "--dry-run"]
+            with mock.patch.object(sys, "argv", args_user), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            with open(out_user.with_suffix(".json")) as f:
+                sidecar_user = json.load(f)
+            self.assertEqual(sidecar_user["workflow_mode"], "user_frame0_inference")
+            self.assertFalse(sidecar_user["stage_1_release_seam"])
+
+            # 2. Diagnostic mid-event mode
+            img_midfall = Path(tmpdir) / "gauge_ball1_midfall.png"
+            cv2.imwrite(str(img_midfall), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_diag = Path(tmpdir) / "out_diag.mp4"
+            args_diag = ["run_recipe.py", "--image", str(img_midfall), "--out", str(out_diag), "--dry-run"]
+            with mock.patch.object(sys, "argv", args_diag), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            with open(out_diag.with_suffix(".json")) as f:
+                sidecar_diag = json.load(f)
+            self.assertEqual(sidecar_diag["workflow_mode"], "diagnostic_mid_event_conditioning")
+            self.assertTrue(sidecar_diag["stage_1_release_seam"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

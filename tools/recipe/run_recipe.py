@@ -3,24 +3,30 @@
 tools/recipe/run_recipe.py: The Improved Cosmos3-Nano Recipe Runner
 
 Implements the Swarm Deliverable 1 Recipe:
-"Dynamic Mid-Event Conditioning (Release-Seam Protocol)" for NVIDIA Cosmos3-Nano.
+"Dynamic Mid-Event Conditioning & Generic End-State Rule" for NVIDIA Cosmos3-Nano.
 
-Bypasses the static-gripper grasping deadlock (which caused 0% release, phantom
-cloning, violent arm plunging, and the 0.45 m/s^2 measurement artifact), recovering
-true Earth gravitational acceleration (g = 9.82 ± 0.35 m/s^2), 100% genuine release,
-0% phantom duplicates, and +60% NVIDIA Motion Fidelity gain without visual quality degradation.
+Fulfills Human Steering Requirements (Raj #2930, Charter v23):
+1. User / Sealed Test Mode: Runs from frame 0 (t=0) and arbitrary prompts by appending
+   the tested Generic End-State Rule R ("By the end of the video, every object that was falling,
+   sliding, rolling or bouncing has lost its energy and come to rest, staying completely still
+   for the rest of the video.") without per-prompt manual tuning (Task 133 / PREREG cf33597).
+2. Diagnostic Mid-Event Mode: Isolates the physics of the DiT generative core by conditioning
+   past the static-gripper grasping deadlock (frame 33/35), recovering true Earth gravitational
+   acceleration (g = 9.82 ± 0.35 m/s^2), 100% genuine release, and 0% phantom duplicates.
+3. Sampler Specification: Uses UniPCMultistepScheduler. Note that diffusers with Karras sigmas
+   ignores flow_shift on diffusers/cosmos_local (#2870); NVIDIA vLLM-Omni applies flow_shift 10.0.
 
 Usage Examples:
-  # Run on CPU dry-run (no GPU / endpoint needed):
-  python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_midfall.png --out out/recipe_ball1.mp4 --dry-run
+  # 1. Primary User / Sealed Test mode from Frame 0 with Generic Rule R:
+  python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_f0.png --rule-generic --out out/user_ball1.mp4 --dry-run
 
-  # Run from conditioning frame via shared endpoint:
+  # 2. Diagnostic Mid-Event mode from post-release frame:
   python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_midfall.png --out out/recipe_ball1.mp4 --url http://127.0.0.1:8021
 
-  # Run with automatic release-seam detection from a video clip:
+  # 3. Video release-seam extraction mode:
   python3 tools/recipe/run_recipe.py --video assets/gauge_ball1_raw.mp4 --detect-release --out out/recipe_ball1.mp4
 
-  # Run and verify immediately with referee-validated firstfall tracker:
+  # 4. Run and verify with referee-validated firstfall tracker:
   python3 tools/recipe/run_recipe.py --image assets/gauge_ball1_midfall.png --out out/recipe_ball1.mp4 --verify
 """
 
@@ -57,6 +63,14 @@ TIMED_DISSIPATIVE_PROMPT = (
 )
 DEFAULT_PROMPT_TIMED = TIMED_DISSIPATIVE_PROMPT
 DEFAULT_PROMPT = TIMED_DISSIPATIVE_PROMPT
+
+# Raj #2930 Requirement 2 / Task 133 PREREG (commit cf33597):
+# Canonical tested generic end-state rule for unseen prompts
+GENERIC_END_STATE_RULE = (
+    "By the end of the video, every object that was falling, sliding, rolling or bouncing "
+    "has lost its energy and come to rest, staying completely still for the rest of the video."
+)
+RULE_R = GENERIC_END_STATE_RULE
 
 
 def letterbox_image(img_bgr: np.ndarray, target_w: int = 832, target_h: int = 480) -> np.ndarray:
@@ -360,6 +374,15 @@ def main():
         action="store_true",
         help="Stage 2: Use event-timing prompt to induce dissipative settling to rest (ro-1 #2460, #2488)",
     )
+    parser.add_argument(
+        "--rule-generic",
+        "--rule-r",
+        "--generic-rule",
+        action="store_true",
+        help="Apply the canonical generic end-state rule R (Raj #2930 req. 2 / Task 133) by appending it to the prompt: "
+             "'By the end of the video, every object that was falling, sliding, rolling or bouncing has lost its energy "
+             "and come to rest, staying completely still for the rest of the video.'",
+    )
 
     args = parser.parse_args()
     out_path = Path(args.out)
@@ -431,6 +454,11 @@ def main():
             data = json.load(f)
             prompt_str = json.dumps(data) if isinstance(data, (dict, list)) else str(data)
 
+    if args.rule_generic:
+        if GENERIC_END_STATE_RULE.strip() not in prompt_str:
+            prompt_str = prompt_str.rstrip() + (" " if not prompt_str.endswith(" ") else "") + GENERIC_END_STATE_RULE.strip()
+            print("[prompt] Applied canonical generic end-state rule R (Raj #2930 req. 2, Task 133 / PREREG cf33597)")
+
     # 2. Run inference
     print(f"[inference] Running recipe ({args.mode} mode, {args.width}x{args.height}, {args.num_frames}f @ {args.fps}fps, CFG {args.guidance}, Shift {args.flow_shift}, Seed {args.seed})...")
     sidecar_meta = {}
@@ -487,19 +515,30 @@ def main():
     print(f"[output] Successfully wrote generated video: {out_path} ({out_path.stat().st_size / 1e6:.2f} MB)")
 
     # 3. Create JSON sidecar with exact recipe parameters and provenance
+    is_diagnostic_mid_event = bool(
+        args.detect_release or (args.image and ("midfall" in str(args.image) or "release" in str(args.image)))
+    )
+    workflow_mode = "diagnostic_mid_event_conditioning" if is_diagnostic_mid_event else "user_frame0_inference"
+
     is_stage_2 = bool(
         not args.basic_prompt
         and (
             args.settle
+            or args.rule_generic
             or prompt_str == TIMED_DISSIPATIVE_PROMPT
             or "comes to rest on the plank" in prompt_str
+            or "come to rest" in prompt_str
+            or GENERIC_END_STATE_RULE.strip() in prompt_str
         )
     )
     sidecar = {
-        "recipe_name": "Dynamic Mid-Event Conditioning (Release-Seam Protocol)",
+        "recipe_name": "Dynamic Mid-Event Conditioning & Generic End-State Rule",
         "charter_deliverable": 1,
-        "stage_1_release_seam": True,
+        "workflow_mode": workflow_mode,
+        "stage_1_release_seam": is_diagnostic_mid_event,
         "stage_2_dissipative_settle": is_stage_2,
+        "generic_rule_applied": bool(args.rule_generic or GENERIC_END_STATE_RULE.strip() in prompt_str),
+        "sampler_note": "diffusers UniPCMultistepScheduler with Karras sigmas ignores flow_shift on diffusers/cosmos_local (#2870); NVIDIA vLLM-Omni applies flow_shift 10.0 (Raj #2930 req. 3)",
         "clip_file": str(out_path.name),
         "conditioning_image": str(cond_frame_path.name),
         "prompt": prompt_str,
