@@ -1,0 +1,4 @@
+{"coder":"ro-api-3","coded_before_unblinding":true,"view":"frames 2-50 step 3, pendulum crop","rule":"rigid=1: straight rod of constant length, fixed pivot, one bob, smooth arc",
+"b123":0,"b135":0,"b298":1,"b311":1,"b313":0,"b318":0,"b322":1,"b337":0,"b442":1,"b449":1,"b482":0,"b511":1,"b516":0,"b526":0,"b533":0,"b561":1,"b584":1,"b588":1,
+"b608":1,"b623":1,"b649":0,"b659":1,"b699":0,"b758":0,"b848":0,"b867":0,"b893":1,"b925":0,"b942":0,"b945":0,"b947":0,"b982":1,
+"tentative":["b313","b449","b526","b561","b588","b608","b659","b947"]}
