@@ -58,6 +58,13 @@ including an independent FFmpeg decode and hand area averaging. Its declared
 GPU/stack/noise provenance explicitly stays pending until native-record audit.
 The protocol and statistical core are unchanged.
 
+The outcome-blind [CPU-noise source audit](noise_audit/README.md) passes 37
+checks using real CPU Torch RNG and the exact pinned server route body with a
+fake pipeline. It confirms the CPU-generator handoff and explains why
+`noise.mixed=false` is expected for plain CPU requests. The current source
+sidecar does not record the sampled noise tensor's hash/shape/dtype. This audit
+does not clear the live execution gate or inspect any Program N outcome.
+
 This is **not yet the complete data adapter**. The real-job manifest, sidecar
 audit, validated outcome registry (including task 222), native-video E0 distance
 secondary measurements, classifier validity gates, three-valued missingness tables,

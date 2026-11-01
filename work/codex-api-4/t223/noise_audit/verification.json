@@ -1,0 +1,93 @@
+{
+  "checks": [
+    "torch wheel is CPU only",
+    "requested CPU generator is CPU",
+    "generator carries request seed",
+    "plain generator draw equals independent torch reference",
+    "fresh same-seed same-shape CPU draw repeats exactly",
+    "different seed changes manufactured draw",
+    "reusing generator advances draw",
+    "state hash sees stream advance",
+    "bf16 bytes are recorded without numpy conversion",
+    "dtype is an explicit equality condition",
+    "same raw bytes can have different shapes",
+    "full record catches shape difference",
+    "plain CPU installed context leaves helper untouched",
+    "mixed flag remains false for plain CPU",
+    "exact route passes CPU generator to fake pipeline",
+    "exact route passes requested seed",
+    "exact route first draw equals direct reference",
+    "native sidecar records request",
+    "native sidecar mixed false on successful plain CPU call",
+    "native noise sidecar has only spec and mixed",
+    "native noise sidecar has no sampled tensor hash",
+    "native sidecar records torch version",
+    "route clears busy after success",
+    "route balances waiter count",
+    "repeated exact route recreates generator state",
+    "repeated exact route repeats fake draw",
+    "same seed differs after earlier draw",
+    "same starting state does not fix arbitrary later draw",
+    "all mix replaces first 5D draw with B",
+    "all mix leaves subsequent A draw unchanged",
+    "native mixed flag true when mix executed",
+    "mixed helper restored after route success",
+    "pipeline failure becomes HTTP500",
+    "route clears busy after failure",
+    "mixed helper restored after failure",
+    "no failed clip counted as served",
+    "invalid device rejected before generation"
+  ],
+  "checks_passed": 37,
+  "executed_sync_ast_sha256": "c9c04846b3c90f30b7979419fc96c44aba5eb60f0e5ed99af0f7addb5f269243",
+  "hardware_scope": "one CPU runtime, no CUDA, no model or deployed endpoint",
+  "not_established": [
+    "CPU draws in an actual Cosmos3OmniPipeline",
+    "same sampled noise across deployed GPU types",
+    "checkpoint, pipeline, scheduler or output equivalence",
+    "any physical parameter or improvement"
+  ],
+  "numpy": "1.26.4",
+  "python": "3.10.12",
+  "source_commit": "e5c7b3b8f9996417a59aeb93099d9265a71428fb",
+  "source_sha256": {
+    "noise.py": "299f67c473e13fb9045be81691b65c6c7d22fd31c19f28e661147f719046bd95",
+    "server.py": "c264be3d96b11cd93af6c292cf0433e92806d063ddc0989186e7d9031a47b0af"
+  },
+  "status": "CPU fake-pipeline software checks only; live execution unverified",
+  "synthetic_draw": {
+    "advanced_generator_state": {
+      "byteorder": "little",
+      "dtype": "torch.uint8",
+      "packing": "C-contiguous native bytes",
+      "sha256": "3613b98f5db7aa4608f9718afb8a3e087085e0abaf07767da6b5404bc1ef562f",
+      "shape": [
+        5056
+      ]
+    },
+    "initial_generator_state": {
+      "byteorder": "little",
+      "dtype": "torch.uint8",
+      "packing": "C-contiguous native bytes",
+      "sha256": "df69e66af9e252976a2e22fd1689b1956d658b65bc3a771a45e38a028a0f1679",
+      "shape": [
+        5056
+      ]
+    },
+    "seed": 103,
+    "tensor": {
+      "byteorder": "little",
+      "dtype": "torch.float32",
+      "packing": "C-contiguous native bytes",
+      "sha256": "3a1de2ffcc0076335fa78c3f8dcc6f377b032b5fbf58f371739eefdec4b3f510",
+      "shape": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "torch": "2.14.1+cpu"
+}
