@@ -66,3 +66,14 @@ Text-described event: P still -> STILL; B up -> UP; B still -> STILL. (P fast ha
 ## Limits stated now
 One wording per counter-event; 3 real frames from 2 GAUGE scenes; 6 seeds; 93 f @ 24 fps; one stack per seed
 (a6k or a100), CPU noise. Not tested: other wordings, longer clips, T2V, q8/CUDA noise, CFG other than 6.
+
+## Amendment 1 (13:20 UTC, `date -u`; before any t226 clip was fetched or viewed; jobs still queued)
+1. **Still balls:** the firstfall tracker gates on change vs frame 0 / last frame, so a ball that never moves is lost.
+   Rule: if the track has no point at the needed frame, then (a) if it was lost near the top (last tracked y < 2D)
+   before that frame -> dy = -(y0 + D), the displacement needed to leave the top edge (a conservative "up" value); else (b) stay-check: NCC of the 31x31 input patch at the seed point vs the same
+   place in frame t (frame 8 for dy8; median over 84-92 for dyEnd) >= 0.8 -> dy = 0 ("stay"); else missing.
+2. **Fast pendulum:** rec_period v1 searches 0.6-3.2 s, so a true ~0.33 s period would read as a multiple. The primary
+   stays rec_period v1 unchanged. Sensitivity (not planted-validated): the same code with TMIN = 0.25 s.
+3. Code: measure_t226.py, analyze_t226.py (this commit). Decision rules exactly as above. Counts per arm of lost_up,
+   stay and missing values are reported next to every ball primary. (The PREREG's "H: -999 ... excluded from means" is
+   replaced by the -(y0 + D) value above, so a ball that leaves the top still counts in means and tests.)
