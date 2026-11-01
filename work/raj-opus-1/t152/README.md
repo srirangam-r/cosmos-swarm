@@ -15,3 +15,9 @@ Env: uv venv, Python 3.11, torch 2.11.0+cu128, RTX 5090 laptop.
 ## Nano clips
 run_all.sh also runs the 48 task-139 clips (vc_t139.json) and `analyze.py` joins them with firstfall g. Because of the failed validation and the
 ball-is-most-of-the-motion confound, a PhyFPS-g correlation there is descriptive only.
+
+## Closure (shift 4, 11:05 UTC Nov 1)
+- The t139 scoring was stopped after 9/48 clips (all arm A; `vc_t139_partial.json`, whole-clip PhyFPS 12.5-25.9).
+  Reasons: validation failed (#3548), so per-clip PhyFPS here tracks how much moves, not the clock, and can't be read against g.
+  The run was also sharing the 5090 with the laptop5090 queue endpoint.
+- Task closed as a negative on method. K vs E/O needs a clock that doesn't depend on the ball (see #3548 implications).
