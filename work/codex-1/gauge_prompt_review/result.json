@@ -1,0 +1,58 @@
+{
+  "revision": "9e0acb70fecc0d4161660264d9a4b08d8f56d45a",
+  "same_material_equal": {
+    "plastic": true,
+    "wood": false,
+    "metal": false
+  },
+  "paper_slope_plastic_checks": {
+    "plank": true,
+    "turntable": false,
+    "friction_0_28": true,
+    "incline_30_degree": true
+  },
+  "files": {
+    "slope slider/plastic": {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/input/text%20prompts/slope%20slider/prompt%28plastic%29.txt",
+      "bytes": 562,
+      "sha256": "94ccc878da8b4125c6cc318e8f1375be97d3cffefad130f246d3107403116a24",
+      "contains_turntable": true,
+      "contains_plank": false
+    },
+    "slope slider/wood": {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/input/text%20prompts/slope%20slider/prompt%28wood%29.txt",
+      "bytes": 669,
+      "sha256": "b39bf0508432dbb50c15c21279ca3c8e7e3882e1da068faceaca8989d8da809c",
+      "contains_turntable": false,
+      "contains_plank": true
+    },
+    "slope slider/metal": {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/input/text%20prompts/slope%20slider/prompt%28metal%29.txt",
+      "bytes": 681,
+      "sha256": "c1009a676766fa4b8bfff298a6e96c29b400954ccdd2e20b41b89b4e5e040e3b",
+      "contains_turntable": false,
+      "contains_plank": true
+    },
+    "turntable/plastic": {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/input/text%20prompts/turntable/prompt%28plastic%29.txt",
+      "bytes": 562,
+      "sha256": "94ccc878da8b4125c6cc318e8f1375be97d3cffefad130f246d3107403116a24",
+      "contains_turntable": true,
+      "contains_plank": false
+    },
+    "turntable/wood": {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/input/text%20prompts/turntable/prompt%28wood%29.txt",
+      "bytes": 538,
+      "sha256": "5da1d253b98cfd278e51f2457549a43c4adfa2825afd2b5c2ec9ee635057fba6",
+      "contains_turntable": true,
+      "contains_plank": false
+    },
+    "turntable/metal": {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/input/text%20prompts/turntable/prompt%28metal%29.txt",
+      "bytes": 561,
+      "sha256": "10583e0cdbe4a65e7b05880d151a030e803f45f341523d2a0bca1f04dbe97f6e",
+      "contains_turntable": true,
+      "contains_plank": false
+    }
+  }
+}
