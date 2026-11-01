@@ -1,0 +1,116 @@
+{
+ "ms_pend10_mid_s1": {
+  "warp_ratio_mean": 0.21383310854434967,
+  "warp_ratio_p90": 0.4268127977848053,
+  "resid_mean": 10.88892650604248,
+  "n_pairs": 91
+ },
+ "ms_pend10_mid_s2": {
+  "warp_ratio_mean": 0.33100125193595886,
+  "warp_ratio_p90": 0.5968884229660034,
+  "resid_mean": 19.40455436706543,
+  "n_pairs": 91
+ },
+ "ms_pend10_mid_s3": {
+  "warp_ratio_mean": 0.59205561876297,
+  "warp_ratio_p90": 0.7865573167800903,
+  "resid_mean": 40.28794479370117,
+  "n_pairs": 91
+ },
+ "ms_pend11_mid_s1": {
+  "warp_ratio_mean": 0.2103133350610733,
+  "warp_ratio_p90": 0.423004686832428,
+  "resid_mean": 10.922171592712402,
+  "n_pairs": 91
+ },
+ "ms_pend11_mid_s2": {
+  "warp_ratio_mean": 0.4196135699748993,
+  "warp_ratio_p90": 0.6038439869880676,
+  "resid_mean": 31.45722198486328,
+  "n_pairs": 91
+ },
+ "ms_pend11_mid_s3": {
+  "warp_ratio_mean": 0.5893502831459045,
+  "warp_ratio_p90": 0.7539313435554504,
+  "resid_mean": 44.6661262512207,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s1": {
+  "warp_ratio_mean": 0.4391547739505768,
+  "warp_ratio_p90": 0.6115509271621704,
+  "resid_mean": 29.125263214111328,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s1_Xa100": {
+  "warp_ratio_mean": 0.21383310854434967,
+  "warp_ratio_p90": 0.4268127977848053,
+  "resid_mean": 10.88892650604248,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s1_Xinta100": {
+  "warp_ratio_mean": 0.21383310854434967,
+  "warp_ratio_p90": 0.4268127977848053,
+  "resid_mean": 10.88892650604248,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s2": {
+  "warp_ratio_mean": 0.30340999364852905,
+  "warp_ratio_p90": 0.4207347631454468,
+  "resid_mean": 22.111780166625977,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s3": {
+  "warp_ratio_mean": 0.5795440673828125,
+  "warp_ratio_p90": 0.7466237545013428,
+  "resid_mean": 38.1055908203125,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s4": {
+  "warp_ratio_mean": 0.4858859181404114,
+  "warp_ratio_p90": 0.708583652973175,
+  "resid_mean": 34.05409622192383,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s5": {
+  "warp_ratio_mean": 0.47109872102737427,
+  "warp_ratio_p90": 0.643643856048584,
+  "resid_mean": 28.96547508239746,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s6": {
+  "warp_ratio_mean": 0.44113609194755554,
+  "warp_ratio_p90": 0.5851523280143738,
+  "resid_mean": 27.481075286865234,
+  "n_pairs": 91
+ },
+ "ms_pend10_midB_s7": {
+  "warp_ratio_mean": 0.29923179745674133,
+  "warp_ratio_p90": 0.41994139552116394,
+  "resid_mean": 18.306522369384766,
+  "n_pairs": 91
+ },
+ "ms_pend11_midB_s1": {
+  "warp_ratio_mean": 0.41643455624580383,
+  "warp_ratio_p90": 0.5424168109893799,
+  "resid_mean": 28.33664894104004,
+  "n_pairs": 91
+ },
+ "ms_pend11_midB_s1_Xa100": {
+  "warp_ratio_mean": 0.2103133350610733,
+  "warp_ratio_p90": 0.423004686832428,
+  "resid_mean": 10.922171592712402,
+  "n_pairs": 91
+ },
+ "ms_pend11_midB_s2": {
+  "warp_ratio_mean": 0.46604612469673157,
+  "warp_ratio_p90": 0.611872673034668,
+  "resid_mean": 27.009559631347656,
+  "n_pairs": 91
+ },
+ "ms_pend11_midB_s3": {
+  "warp_ratio_mean": 0.49557965993881226,
+  "warp_ratio_p90": 0.648267388343811,
+  "resid_mean": 30.72434425354004,
+  "n_pairs": 91
+ }
+}
