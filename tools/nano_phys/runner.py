@@ -12,29 +12,27 @@ import time
 import requests
 
 
-# Full native 35-step UniPC schedule (35 steps + terminal 0.0) from tools/cosmos_local
-# Note: step 19 corresponds to sigma ~ 0.896-0.898 (Raj #281 / ro-3 #5315 recipe)
+# Full native 35-step UniPC schedule (35 steps + terminal 0.0) from tools/cosmos_local server
+# Extracted directly from live queue sidecar (latent.sigmas_request, SHA256 4b48040e...)
+# In normalized flow units [0, 1]: step 19 corresponds to sigma = 0.89844 (Raj #281 recipe target ~0.90)
 NATIVE_SIGMAS_35 = [
-    14.61465, 12.93308, 11.42015, 10.06153, 8.84388, 7.75478, 6.78273, 5.91705,
-    5.14784, 4.46600, 3.86307, 3.33130, 2.86356, 2.45327, 2.09444, 1.78157,
-    1.50965, 1.27411, 1.07079, 0.89595, 0.74617, 0.61838, 0.50983, 0.41805,
-    0.34080, 0.27613, 0.22228, 0.17769, 0.14100, 0.11100, 0.08665, 0.06703,
-    0.05135, 0.03892, 0.02917, 0.00000
+    0.99502, 0.99432, 0.99349, 0.99253, 0.99140, 0.99007, 0.98851, 0.98666,
+    0.98447, 0.98187, 0.97876, 0.97503, 0.97056, 0.96518, 0.95868, 0.95082,
+    0.94127, 0.92968, 0.91558, 0.89844, 0.87762, 0.85242, 0.82207, 0.78581,
+    0.74295, 0.69305, 0.63610, 0.57269, 0.50418, 0.43273, 0.36112, 0.29241,
+    0.22942, 0.17428, 0.12816, 0.00000
 ]
 
 
 def sigma_to_step(target_sigma: float) -> int:
     """Find the step index in native 35-step UniPC schedule closest to target_sigma.
     
-    If target_sigma is normalized in [0, 1] (e.g. 0.90 for Raj's recipe), maps directly
-    to step 19 (sigma ~ 0.896) or step 14 (sigma ~ 2.094).
+    Target sigma is in [0, 1] (e.g. 0.90 for Raj's lead recipe, which maps directly
+    to step 19 with sigma = 0.89844).
     """
-    if target_sigma <= 1.0:
-        # Search among steps with sigma <= 1.5 or normalized scale
-        sub_indices = [i for i, s in enumerate(NATIVE_SIGMAS_35) if s <= 2.0]
-        if sub_indices:
-            return min(sub_indices, key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
-    return min(range(len(NATIVE_SIGMAS_35)), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
+    if target_sigma < 0.0 or target_sigma > 1.0:
+        raise ValueError(f"target_sigma must be in [0, 1], got {target_sigma}")
+    return min(range(35), key=lambda i: abs(NATIVE_SIGMAS_35[i] - target_sigma))
 
 
 def run_remote_nanophys(
