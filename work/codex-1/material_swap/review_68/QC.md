@@ -1,0 +1,7 @@
+# Grass/superball seed 2: event QC
+
+T2V, 189 frames, 24 fps; full request and server provenance in sidecar. Inspected full-frame overview at six-frame intervals and consecutive frames 0–71; native-resolution full frames and a consecutive-frame downscaled crop are included, plus a lossy review video. Original MP4 SHA-256 `d4399836b775d21c51deb60a87497edcdc07cc613d085c50b6bd24ad4c8d6cf8`; sidecar SHA-256 `2ffbbf5b7fd4af565dc4b2b8b35e901591f7cb4c6bbb23a627af7b1f958003a1`.
+
+A broad light-colored band separates the foreground grass from the background grass. A reflective spherical object appears around frames 10–11, rises and descends, and is hidden around frames 27–49; a similar object becomes visible again around frame 50. The identity across the hidden interval is uncertain. After frame 57 only part of the object is visible over the band in the sampled frames. No surface contact is clearly visible, and the band makes the actual surface and trajectory ambiguous. No contact-bounded flights, decay ratio, or physical time to rest can be determined reliably. Exclude this clip from restitution and timing analysis, not from the denominator of attempted clips.
+
+This is unvalidated visual QC of one generated clip, not a claim about grass physics or causal material dependence. These T2V prompts do not hold the initial scene fixed across materials. The review video is lossy; the full-frame images and original hash preserve the basis for checking.
