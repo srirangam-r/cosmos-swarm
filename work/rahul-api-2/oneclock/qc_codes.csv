@@ -11,3 +11,51 @@ oc_A_ball1_s29,0,ball size jumps ~3x at f2 (morph) before the fall,2026-11-01T11
 oc_A_ball1_s30,0,scene turns into green balls/blobs; no single-ball fall,2026-11-01T11:03
 oc_A_ball2_s21,1,one ball; fall f0-~8; high periodic bounces (~14-16 f); impact point moves between plank back and front (some depth motion); size constant,2026-11-01T11:06
 oc_A_ball2_s22,0,clean fall then rolls toward camera and exits by f24; no flight (same branch as ball1 s22),2026-11-01T11:06
+oc_A_ball1_s31,0,clean fall f0-10 then ball size jumps ~3x at f12-14 (toward camera),2026-11-01T11:27
+oc_A_ball1_s32,0,slow descent f0-20 with ball growing ~2.5x (toward camera); only small hops then rest,2026-11-01T11:27
+oc_A_ball1_s33,0,"very slow drift down f0-30; no clean rebound flight; rolls toward camera, exits ~f56",2026-11-01T11:27
+oc_A_ball1_s34,1,one ball; fall f0-~18; high rebound flights with roughly constant size; faint/ghost frames only after f54,2026-11-01T11:27
+oc_A_ball1_s35,0,impact at ~f2 then ball grows ~3x (toward camera),2026-11-01T11:27
+oc_A_ball1_s36,0,fragments/clones at f12-14 then a much larger ball appears from top f16-30,2026-11-01T11:27
+oc_A_ball1_s37,0,"fall f0-~10 then rolls toward camera, exits by f30; no rebound flight",2026-11-01T11:27
+oc_A_ball1_s38,1,one ball; fall f0-~10; flight 1 ~f16-38 clean; brief faint/transparent ball at impact f12-16; periodic bounces later,2026-11-01T11:27
+oc_A_ball1_s39,0,ball size ~2.5x by f6 (morph/toward camera),2026-11-01T11:27
+oc_A_ball1_s40,0,"slow drift down f0-24 growing ~3x (toward camera), exits f28; no flight",2026-11-01T11:27
+oc_A_ball1_s41,0,scene corruption f2-14 (blurred close-up of plank); clone/ghost later,2026-11-01T11:27
+oc_A_ball1_s42,0,fall f0-14 then low hops/roll along back of plank; ball vanishes ~f32; no clear flight,2026-11-01T11:27
+oc_A_ball1_s43,0,ball hovers near top f0-~60 (no release); late fall with a different-looking ball,2026-11-01T11:27
+oc_A_ball1_s44,0,ball grows ~3x during fall f8-12 (toward camera),2026-11-01T11:27
+oc_A_ball1_s45,0,slow fall f0-20; no clear rebound flight; rolls toward camera,2026-11-01T11:27
+oc_A_ball1_s46,0,ball vanishes f2-10; giant ball appears f12,2026-11-01T11:27
+oc_A_ball1_s47,0,clean fall f0-20 but ball stays at back of plank; no rebound flight,2026-11-01T11:27
+oc_A_ball1_s48,0,ball vanishes/fades f2-10; no clean fall,2026-11-01T11:27
+oc_A_ball1_s49,0,"ball morphs into a deformed blob f2-6, size jumps ~3x by f8",2026-11-01T11:27
+oc_A_ball1_s50,0,ball vanishes f10-24 and reappears near top f26,2026-11-01T11:27
+oc_A_ball2_s23,0,ball fades; multiple balls/fragments f10-92,2026-11-01T11:27
+oc_A_ball2_s24,0,flight-1 ball semi-transparent/faint f14-30; later rolls toward camera,2026-11-01T11:27
+oc_A_ball2_s25,0,ball faint/missing ~f4 in the fall; ball turns glassy/transparent from ~f20,2026-11-01T11:27
+oc_A_ball2_s26,0,clean fall f0-14 but flight-1 ball glassy/semi-transparent f16-34; then rolls toward camera,2026-11-01T11:27
+oc_A_ball2_s27,0,ball fades f4-12 then size ~3x by f16,2026-11-01T11:27
+oc_A_ball2_s28,0,clones from ~f16; many balls f44+,2026-11-01T11:27
+oc_A_ball2_s29,0,size jump f2-6; dark faint blobs; multiple balls,2026-11-01T11:27
+oc_A_ball2_s30,0,ball fragments/morphs f2-10 (debris),2026-11-01T11:27
+oc_A_ball2_s31,0,"ball vanishes f6-16, reappears larger f16-18",2026-11-01T11:27
+oc_A_ball2_s32,0,clean fall f0-20 then splits into 2-3 balls f22-34,2026-11-01T11:27
+oc_A_ball2_s33,0,"fall f0-10 then faint/ghost ball f12-30; rolls toward camera, exits ~f50",2026-11-01T11:27
+oc_A_ball2_s34,0,"clean fall f0-18; only low hops then rolls toward camera, exits ~f62",2026-11-01T11:27
+oc_A_ball2_s35,0,fall f0-14; then low hops along back of plank with glassy/semi-transparent ball,2026-11-01T11:27
+oc_A_ball2_s36,0,fall f0-12 then a huge second ball enters from top f16-34,2026-11-01T11:27
+oc_A_ball2_s37,0,"fall f0-14 then splits into 2 balls f16-30, rolls away",2026-11-01T11:27
+oc_A_ball2_s38,0,ball doubles (2 balls) from ~f20,2026-11-01T11:27
+oc_A_ball2_s39,0,size jump ~2.5x at f2-4; dark blob,2026-11-01T11:27
+oc_A_ball2_s40,0,slow fall f0-22 then glassy/transparent high bounces with depth motion,2026-11-01T11:27
+oc_A_ball2_s41,0,"clean fall f0-22; low hops then rolls toward camera, exits ~f60",2026-11-01T11:27
+oc_A_ball2_s42,0,fall f0-14; small rolls along back; ball vanishes ~f34,2026-11-01T11:27
+oc_A_ball2_s43,0,ball hovers near top whole clip (no release),2026-11-01T11:27
+oc_A_ball2_s44,0,ball grows ~2.5x during fall f6-12 (toward camera),2026-11-01T11:27
+oc_A_ball2_s45,0,ball fades/ghost f4-10 during fall,2026-11-01T11:27
+oc_A_ball2_s46,0,ball vanishes f2-10; giant ball appears f12,2026-11-01T11:27
+oc_A_ball2_s47,0,"ball grows while drifting toward camera f2-24, exits; no fall",2026-11-01T11:27
+oc_A_ball2_s48,0,ball vanishes f4-16,2026-11-01T11:27
+oc_A_ball2_s49,0,ball morphs into a deformed blob f2-8,2026-11-01T11:27
+oc_A_ball2_s50,0,"ball vanishes f10-26, reappears near top",2026-11-01T11:27
