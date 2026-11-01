@@ -65,12 +65,23 @@ fake pipeline. It confirms the CPU-generator handoff and explains why
 sidecar does not record the sampled noise tensor's hash/shape/dtype. This audit
 does not clear the live execution gate or inspect any Program N outcome.
 
-This is **not yet the complete data adapter**. The real-job manifest, sidecar
-audit, validated outcome registry (including task 222), native-video E0 distance
-secondary measurements, classifier validity gates, three-valued missingness tables,
-experiment-wide multiplicity and provenance joins will be added without changing
-the frozen estimands. Multilevel joint prompt-label tests and optional secondary
-E0 measures are specified in the protocol and not implemented by this core.
+The outcome-blind [E1/E2 adapter addendum](FACTORIAL_ADAPTER.md), fixed in board
+#4670 before coding or Program N outcome access, now implements strict planned
+cube/outcome joins, distinct missing/invalid/unknown tables by each factor,
+whole-seed multi-prompt randomization, and the full registered Holm families.
+It passes 52 manufactured-record/array checks, including independent scalar
+enumeration of the joint null and an input-specific effect that cancels in
+pooled prompt means. Registered but untested family members count at p=1 while
+their reported p-values remain null. Neither source validation declarations nor
+stack declarations are promoted to independently audited evidence. The five
+frozen protocol/core/video-adapter files are unchanged.
+
+This is **not yet the complete actual experiment analysis**. The real-job design
+manifest, sidecar audit, validated outcome registry (including task 222), E0
+secondary measurements and actual execution provenance still await their owners.
+The adapter's input schema does not select factor levels, splits, outcomes or
+test families on their behalf. Actual run IDs/metadata must be mapped to the
+frozen design before any outputs are analyzed.
 No synthetic verification value is a Nano finding, and no cross-GPU equivalence
 or scoreboard noninferiority margin is invented here.
 

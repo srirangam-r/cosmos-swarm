@@ -1,0 +1,214 @@
+{
+  "scope": "Manufactured arrays and records only; no Cosmos or referee data.",
+  "passed_checks": 52,
+  "checks": [
+    {
+      "name": "strict ordered cube join",
+      "passed": true
+    },
+    {
+      "name": "all planned cells retained",
+      "passed": true
+    },
+    {
+      "name": "input-specific effect cancels in pooled prompt means",
+      "passed": true
+    },
+    {
+      "name": "joint test detects input-specific prompt effect",
+      "passed": true
+    },
+    {
+      "name": "pooled paired contrast cancellation is reported",
+      "passed": true
+    },
+    {
+      "name": "omnibus statistic equals frozen SS formula",
+      "passed": true
+    },
+    {
+      "name": "independent scalar omnibus statistic",
+      "passed": true
+    },
+    {
+      "name": "independent whole-seed permutation enumeration",
+      "passed": true
+    },
+    {
+      "name": "input ordering invariant",
+      "passed": true
+    },
+    {
+      "name": "seed ordering invariant exact null",
+      "passed": true
+    },
+    {
+      "name": "constant cube no omnibus significance",
+      "passed": true
+    },
+    {
+      "name": "pure seed cube no prompt significance",
+      "passed": true
+    },
+    {
+      "name": "two-prompt omnibus matches whole-seed signflip",
+      "passed": true
+    },
+    {
+      "name": "Monte Carlo plus-one correction",
+      "passed": true
+    },
+    {
+      "name": "Monte Carlo deterministic",
+      "passed": true
+    },
+    {
+      "name": "unknown invalid missing stay distinct",
+      "passed": true
+    },
+    {
+      "name": "incomplete cube blocks primary decomposition",
+      "passed": true
+    },
+    {
+      "name": "incomplete cube blocks registered test",
+      "passed": true
+    },
+    {
+      "name": "all registered tests count for Holm",
+      "passed": true
+    },
+    {
+      "name": "Holm retains missing member at p one",
+      "passed": true
+    },
+    {
+      "name": "missingness factor tables retain counts",
+      "passed": true
+    },
+    {
+      "name": "every planned row reported",
+      "passed": true
+    },
+    {
+      "name": "declarations not promoted to runtime proof",
+      "passed": true
+    },
+    {
+      "name": "outcome row ordering cannot alter joins or inference",
+      "passed": true
+    },
+    {
+      "name": "GPU strata never pooled",
+      "passed": true
+    },
+    {
+      "name": "second GPU has own null and cube",
+      "passed": true
+    },
+    {
+      "name": "registered families adjusted separately",
+      "passed": true
+    },
+    {
+      "name": "duplicate planned run rejected",
+      "passed": true
+    },
+    {
+      "name": "missing planned cell rejected",
+      "passed": true
+    },
+    {
+      "name": "extra planned cell rejected",
+      "passed": true
+    },
+    {
+      "name": "bad artifact hash rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate levels rejected",
+      "passed": true
+    },
+    {
+      "name": "bad contrast rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate test ID rejected",
+      "passed": true
+    },
+    {
+      "name": "mixed experiment rejected",
+      "passed": true
+    },
+    {
+      "name": "missing method declaration rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate outcome rejected",
+      "passed": true
+    },
+    {
+      "name": "extra run outcome rejected",
+      "passed": true
+    },
+    {
+      "name": "extra metric rejected",
+      "passed": true
+    },
+    {
+      "name": "method drift rejected",
+      "passed": true
+    },
+    {
+      "name": "missing evidence rejected",
+      "passed": true
+    },
+    {
+      "name": "NaN rejected",
+      "passed": true
+    },
+    {
+      "name": "bool not numeric measurement",
+      "passed": true
+    },
+    {
+      "name": "unknown cannot carry zero value",
+      "passed": true
+    },
+    {
+      "name": "invalid needs reason",
+      "passed": true
+    },
+    {
+      "name": "registered measurement bounds enforced",
+      "passed": true
+    },
+    {
+      "name": "constant variance shares stay undefined",
+      "passed": true
+    },
+    {
+      "name": "duplicate artifacts are audited not new replication",
+      "passed": true
+    },
+    {
+      "name": "CLI one exits zero",
+      "passed": true
+    },
+    {
+      "name": "CLI two exits zero",
+      "passed": true
+    },
+    {
+      "name": "CLI byte-identical replay",
+      "passed": true
+    },
+    {
+      "name": "CLI hashes both input files",
+      "passed": true
+    }
+  ]
+}
