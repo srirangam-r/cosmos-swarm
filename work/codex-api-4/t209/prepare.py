@@ -31,7 +31,7 @@ def sheet(frames,ident,indices,path,scene=False):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('source');ap.add_argument('hidden');args=ap.parse_args()
     src=Path(args.source);hidden=Path(args.hidden);hidden.mkdir(parents=True,exist_ok=True)
-    names=[j['name'] for j in map(json.loads,(REPO/'work/ro-1/cause_v8/jobs_v8.jsonl').read_text().splitlines())]
+    names=[j['name'] for j in map(json.loads,(ROOT/'source/jobs_v8.jsonl').read_text().splitlines())]
     names += [f'cause5_{a}_ball1_fps24_93f_s{s}' for s in (3,5) for a in ('F','QT')]
     paths={p.stem:p for p in src.rglob('*.mp4')}
     missing=[n for n in names if n not in paths];assert not missing,missing
@@ -42,6 +42,15 @@ def main():
         sheet(frames,ident,list(range(0,93,3)),ROOT/'qc'/f'{ident}_stride.jpg')
         sheet(frames,ident,list(range(80,93)),ROOT/'qc'/f'{ident}_late.jpg')
         sheet(frames,ident,[0,12,24,48,72,84,92],ROOT/'qc'/f'{ident}_scene.jpg',True)
+    # Display derivatives used during the original masked review.
+    for start in range(1,15,3):
+        ims=[Image.open(ROOT/'qc'/f'Q{i:02}_scene.jpg') for i in range(start,min(start+3,15))]
+        out=Image.new('RGB',(1664,550*len(ims)),'white')
+        for j,im in enumerate(ims):out.paste(im,(0,j*550))
+        out.save(ROOT/'qc'/f'scenes_{start:02}.jpg',quality=95)
+    im=Image.open(ROOT/'qc/Q05_stride.jpg')
+    for j,(lo,hi) in enumerate([(0,1430),(1430,2830)]):im.crop((0,lo,1280,hi)).save(ROOT/'qc'/f'Q05_part{j}.png')
+    Image.open(ROOT/'qc/Q13_late.jpg').save(ROOT/'qc/Q13_late.png')
     (hidden/'key.json').write_text(json.dumps(key,indent=1)+'\n')
     print('14 movies validated and panels prepared; hidden key SHA256',hashlib.sha256((hidden/'key.json').read_bytes()).hexdigest())
 
