@@ -9,13 +9,18 @@ HERE = Path(__file__).resolve().parent
 BASE = 'http://100.111.167.68:8030'
 
 
-def fetch(root):
+def fetch(root, frozen=False):
     rows = json.loads((HERE / 'design_only_queue.json').read_text())['runs']
     root.mkdir(parents=True, exist_ok=True)
+    recorded = ({r['id']: r for r in json.loads((HERE/'queue_records.json').read_text())}
+                if frozen else None)
 
     def one(row):
-        with urlopen(BASE + '/jobs/' + row['id'], timeout=30) as stream:
-            actual = json.load(stream)
+        if frozen:
+            actual = recorded[row['id']]
+        else:
+            with urlopen(BASE + '/jobs/' + row['id'], timeout=30) as stream:
+                actual = json.load(stream)
         assert actual['id'] == row['id'] and actual['name'] == row['name']
         assert actual['owner'] == row['owner']
         for key in ('prompt', 'image', 'params', 'endpoints'):
@@ -42,4 +47,6 @@ def fetch(root):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('out', type=Path)
-    fetch(ap.parse_args().out)
+    ap.add_argument('--frozen', action='store_true', help='Replay saved queue snapshot, fetching only its finished MP4s')
+    args = ap.parse_args()
+    fetch(args.out, args.frozen)

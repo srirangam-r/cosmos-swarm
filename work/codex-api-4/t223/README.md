@@ -115,7 +115,7 @@ cross-GPU tests remain untested pending l40s/a6k artifacts. An explicitly
 exploratory four-seed CPU-versus-CUDA control on q8 shows no detected integer-seed
 correspondence (advantage −0.0062 gray levels, bootstrap 95% [−0.1714,+0.1637]);
 this is not equivalence or cross-GPU evidence. Queue sidecars record requested
-noise, not authenticated executed noise. E1–E4 outcomes remain unopened.
+noise, not authenticated executed noise. At that snapshot E1–E4 outcomes were unopened.
 
 The later [E0 cross-GPU follow-up](e0_cross_gpu/README.md) finds the owner's
 target jobs under raj-noise-c and independently decodes all32 native clips.
@@ -127,3 +127,13 @@ bootstrap95% [−0.0386,+0.8510]. Native execution/input/runtime/sampler provena
 remains pending. This independently corroborates pixel-motion correspondence
 on the tested clips; it establishes neither exact noise/output identity nor
 unrestricted pairing across queue stacks. Full values are in SUMMARY.md.
+
+The [E1 image-change diagnostic](e1_diagnostic/README.md) independently decodes
+58 finished T2V clips from the frozen64-run plan. The full16-seed primary stays
+blocked by six unfinished cells. In the pre-fixed14-complete-seed sensitivity,
+fast wording is associated with M +0.7387gray levels/transition, seed-bootstrap
+95%[0.4888,1.0073], averaged over colour. Seed SS0.680 and prompt SS0.184 coexist;
+neither is a universal causal allocation. M combines appearance/motion and is
+unvalidated, so this is not a physical-speed/period/colour/recipe result. Only
+6/14complete groups share exact endpoint, though all use the declared q8 class;
+native execution equality remains unverified. E2/E3 outcomes remain unopened.
