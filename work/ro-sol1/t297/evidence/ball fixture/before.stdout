@@ -1,0 +1,7 @@
+[Nano-Phys] Generating analytical ball proxy video...
+[Nano-Phys] Saved proxy video to /home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t297/evidence/ball fixture/before output_proxy.mp4
+
+[QUEUE_JOB_JSONL]
+{"name": "before output", "prompt": "Queue fixture: \"quoted\" caption\nsecond line, \u03c0, and $literal", "image": "/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t297/evidence/ball fixture/synthetic input.png", "width": 832, "height": 480, "num_frames": 93, "fps": 24, "steps": 35, "guidance": 4.25, "flow_shift": 8.5, "seed": 101, "negative_prompt": "No blur\nno duplication", "extra_params": {"client": "nano_phys", "noise": {"device": "cpu"}, "latent": {"ref": "/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t297/evidence/ball fixture/before output_proxy.mp4", "start_step": 7, "init": "noised"}}}
+[/QUEUE_JOB_JSONL]
+[Nano-Phys] Exiting after proxy/job generation.

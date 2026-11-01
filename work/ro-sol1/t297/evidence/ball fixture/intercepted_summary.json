@@ -1,0 +1,37 @@
+{
+  "owner": "ro-sol1-LOCAL-ONLY",
+  "name": "after output",
+  "prompt": "Queue fixture: \"quoted\" caption\nsecond line, \u03c0, and $literal",
+  "width": 832,
+  "height": 480,
+  "num_frames": 93,
+  "fps": 24,
+  "steps": 35,
+  "guidance": 4.25,
+  "flow_shift": 8.5,
+  "seed": 101,
+  "negative_prompt": "No blur\nno duplication",
+  "extra_params": {
+    "client": "nano_phys",
+    "noise": {
+      "device": "cpu"
+    },
+    "latent": {
+      "ref": "after output_proxy.mp4",
+      "start_step": 7,
+      "init": "noised"
+    }
+  },
+  "endpoints": [
+    "q8-0"
+  ],
+  "image_name": "synthetic input.png",
+  "files": [
+    {
+      "name": "after output_proxy.mp4",
+      "bytes": 86901,
+      "sha256": "25d13f55af7546a0df56c7e00808456a3c705e6ad6c2c2d9388e82adbb23924f"
+    }
+  ],
+  "image_sha256": "2f9b94c6df5af4fecc70e877d2a45cba233e601de87b36f17daab9556ba9a88c"
+}

@@ -1,0 +1,207 @@
+{
+  "scope": "CPU serialization/upload-byte smoke only; no live submission, native sigma, renderer geometry or physics validation",
+  "source_commit": "003cff7d53df272e56ab6192129aa5db103ca156",
+  "baseline_commit": "0596dc120705693e0ea30ee9d8f6810452a46241",
+  "source_sha256": {
+    "tools/nano_phys/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "tools/nano_phys/__init__.py": "8aca562982b552e1c8ff7695581b50ad3373ef441c582114e5d0241290271b0b",
+    "tools/nano_phys/runner.py": "b4122edcdb938b02bc7dac2767829c1edb784974279ce43cb97b2a2547183952",
+    "tools/nano_phys/proxy.py": "1e7cbdff3ba78348ec13c21d329e8c0ce6d59afe1d1c7c0034f244572c670ff5",
+    "tools/nano_phys/cli.py": "2d679cad5da45fd54ba57313b6fd015707e74b58aba0da7e40615278901add37"
+  },
+  "queue_client_sha256": "1530db6568b02b04322a3f6b35e930f71a815b96a1488a0cb1fc5289a5e67c40",
+  "local_intercepts": 2,
+  "network_requests": 0,
+  "passed": 36,
+  "failed": 0,
+  "cases": [
+    {
+      "physics": "pendulum",
+      "before": {
+        "stdout_pure_json": false,
+        "files_present": false,
+        "ref_is_basename": false
+      },
+      "after": {
+        "stdout_pure_json": true,
+        "files_present": true,
+        "ref_is_basename": true
+      },
+      "proxy": {
+        "frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480,
+        "bytes": 165894,
+        "sha256": "ea272c04ed57cbdec5868a5b3c225c4c2f74686548f232d06db4c08f1d0ef0d7"
+      }
+    },
+    {
+      "physics": "ball",
+      "before": {
+        "stdout_pure_json": false,
+        "files_present": false,
+        "ref_is_basename": false
+      },
+      "after": {
+        "stdout_pure_json": true,
+        "files_present": true,
+        "ref_is_basename": true
+      },
+      "proxy": {
+        "frames": 93,
+        "fps": 24.0,
+        "width": 832,
+        "height": 480,
+        "bytes": 86901,
+        "sha256": "25d13f55af7546a0df56c7e00808456a3c705e6ad6c2c2d9388e82adbb23924f"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "pendulum before CLI exits zero",
+      "pass": true
+    },
+    {
+      "name": "pendulum baseline reproduces three defects",
+      "pass": true
+    },
+    {
+      "name": "pendulum after CLI exits zero",
+      "pass": true
+    },
+    {
+      "name": "pendulum after resolves three defects",
+      "pass": true
+    },
+    {
+      "name": "pendulum after exactly one JSONL record",
+      "pass": true
+    },
+    {
+      "name": "pendulum logs on stderr",
+      "pass": true
+    },
+    {
+      "name": "pendulum proxy attachment exists",
+      "pass": true
+    },
+    {
+      "name": "pendulum proxy basename ref binding",
+      "pass": true
+    },
+    {
+      "name": "pendulum all93 proxy frames decode",
+      "pass": true
+    },
+    {
+      "name": "queue post targets inert fixture URL",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer exact proxy bytes",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer exact image bytes",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer basename binding",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer multiline caption preserved",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer all sampling fields",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer CPU and explicit fixture start",
+      "pass": true
+    },
+    {
+      "name": "pendulum real serializer owner/endpoints",
+      "pass": true
+    },
+    {
+      "name": "pendulum no baseline files uploaded",
+      "pass": true
+    },
+    {
+      "name": "ball before CLI exits zero",
+      "pass": true
+    },
+    {
+      "name": "ball baseline reproduces three defects",
+      "pass": true
+    },
+    {
+      "name": "ball after CLI exits zero",
+      "pass": true
+    },
+    {
+      "name": "ball after resolves three defects",
+      "pass": true
+    },
+    {
+      "name": "ball after exactly one JSONL record",
+      "pass": true
+    },
+    {
+      "name": "ball logs on stderr",
+      "pass": true
+    },
+    {
+      "name": "ball proxy attachment exists",
+      "pass": true
+    },
+    {
+      "name": "ball proxy basename ref binding",
+      "pass": true
+    },
+    {
+      "name": "ball all93 proxy frames decode",
+      "pass": true
+    },
+    {
+      "name": "queue post targets inert fixture URL",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer exact proxy bytes",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer exact image bytes",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer basename binding",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer multiline caption preserved",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer all sampling fields",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer CPU and explicit fixture start",
+      "pass": true
+    },
+    {
+      "name": "ball real serializer owner/endpoints",
+      "pass": true
+    },
+    {
+      "name": "ball no baseline files uploaded",
+      "pass": true
+    }
+  ]
+}
