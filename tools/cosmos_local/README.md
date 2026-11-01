@@ -10,6 +10,16 @@ Runs `nvidia/Cosmos3-Nano` with diffusers (`Cosmos3OmniPipeline`, bf16) on a 24 
   - Other `extra_params`: `use_resolution_template`, `use_duration_template`, `use_system_prompt`, `crf` (default 0 = lossless x264), and `client` (a label stored in the sidecar).
   - Requests run one at a time, in arrival order.
   - The server keeps every clip with a JSON sidecar in `out_srv/`. The response headers `X-Clip-Id` and `X-Seconds` identify the clip and its generation time.
+
+`sigmas_used` is copied from the request's post-call scheduler while the inference
+lock is still held. Earlier server source `04e8e0de81` read the shared scheduler
+after releasing that lock and encoding the video; another request could replace
+it before metadata capture. The CPU reproduction and correction are in
+[`work/rahul-api-codex/t307`](../../work/rahul-api-codex/t307). Operators must pull
+and restart to adopt the correction; publishing it does not update running
+services or repair old receipts. This field is a scheduler snapshot, not an
+instrumented trace of every integration step. Check native full grid, start,
+suffix and endpoint identity separately before certifying a benchmark.
   - `GET /health` reports busy, waiting and served.
 - `cosmos_patch.py`: **required on GPUs that also drive a display.** One 189-frame attention call (~75k query tokens) exceeds the X watchdog and crashes with `CUDA_ERROR_LAUNCH_TIMEOUT`. The patch splits non-causal attention into query chunks (`COSMOS_QCHUNK`, default 8192). This is exact: the max abs diff vs unchunked is 5e-4, which is bf16 rounding.
 - `internals.py`, `loss_probe.py`: optional per-request model-internals hooks and a denoising-loss probe (section "Internals hooks" below). `COSMOS_OFFLOAD=0` (env) skips group offload on big GPUs (80 GB cards); the default is unchanged.

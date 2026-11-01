@@ -1,0 +1,14 @@
+{
+  "README.md": "fc2501cf5950c157654a23828be57e110532469ebcd50304729b87d1144c3e8a",
+  "check.log": "86e4a79d8d09e82bc3ae2a5e80660cf432401681f804eef1e976b2c8b11cccec",
+  "check_independent.py": "0ddcc21b929da3023bb1fc2fbc2282759f56d91cddc7d3945cef50f81363e18c",
+  "receipt_snapshot.patch": "399efacf159500bdcd62fbd8ac37524c8dedc900ef08b5e0c427729a44d63cf6",
+  "receipts/sp_k12_s1.server.json": "ab7e94658d17a4d7c1f276dfdd55f2ac78b21ea668a19b03776247a4a63ad9d4",
+  "receipts/sp_k12_s2.server.json": "d608a67786150243998fd59c7b4c162f2337a00cfa39e337d3183f421ddae00d",
+  "receipts/sp_k19_s1.server.json": "055b5f4db2677bb9bb8db04a855449f09cd92f0ef3686a6af202ac217f8632cc",
+  "receipts/sp_k19_s2.server.json": "c76ce9b3b73c41511cbf66a05c58e01bd10999824735cb79c23b35fbf281350c",
+  "source/runner.py": "5aa839febef24e411e7c9338edae6533cc5ada6405d4a0cfaafc7509a8c275a6",
+  "source/server_after.py": "4eedc41bf3759710868c4e98b2239f4d5b49b3e041b0507b6c0b27c30534050b",
+  "source/server_before.py": "1b936a4844a0b8356baf2654f7eab14d87cee459f30d35f503d6f4b1173af301",
+  "verification.json": "09dee97c779df58d36692c7b9cc9ab7ad399e0b1d1e458356f5f9d904fb51461"
+}

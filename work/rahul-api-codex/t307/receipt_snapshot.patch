@@ -1,0 +1,23 @@
+diff --git a/tools/cosmos_local/server.py b/tools/cosmos_local/server.py
+index 3a1eef4..cd86fda 100644
+--- a/tools/cosmos_local/server.py
++++ b/tools/cosmos_local/server.py
+@@ -211,6 +211,9 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
+             with neg_meta.negative_metadata(pipe, neg_mode), noise.installed(pipe, nspec), lat_ctx, \
+                     (internals.installed(pipe, spec) if spec else contextlib.nullcontext()) as rec:
+                 res = pipe(**call)
++            # Keep this request's schedule before another request can replace
++            # pipe.scheduler while this one encodes its video outside LOCK.
++            sigmas_used = [round(float(x), 5) for x in getattr(pipe.scheduler, "sigmas", [])]
+             dt = time.time() - t1
+             latent_artifact = None
+             if lspec and lspec.returns:
+@@ -243,7 +246,7 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
+                 frames_out=len(frames), out_hw=list(frames[0].shape[:2]), seconds=round(dt, 1),
+                 model="nvidia/Cosmos3-Nano (local diffusers bf16, " + ("group offload" if OFFLOAD else "no offload" + (", VAE swap" if VAE_SWAP else "")) + (", " + os.environ["COSMOS_LABEL"] if os.environ.get("COSMOS_LABEL") else "") + ", safety check off)",
+                 scheduler="UniPCMultistepScheduler", torch=torch.__version__, server="raj-1 server.py", server_rev=SERVER_REV,
+-                sigmas_used=[round(float(x), 5) for x in getattr(pipe.scheduler, "sigmas", [])])
++                sigmas_used=sigmas_used)
+     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
+     if nspec:
+         side["noise"] = dict(spec=nspec.raw, mixed=nspec.used)
