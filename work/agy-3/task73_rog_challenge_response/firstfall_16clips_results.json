@@ -1,0 +1,692 @@
+{
+  "box_ctrl_b1_noneg_s1": {
+    "condition": "baseline_held",
+    "ball": 1,
+    "seed": 1,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b1_noneg_s1.mp4",
+    "firstfall_output": {
+      "flag": "lost",
+      "reason": "fewer than six tracked points",
+      "n_tracked": 1,
+      "fps_true": 24.0,
+      "track_info": {
+        "point": [
+          413.0,
+          257.5
+        ],
+        "pframe": 2,
+        "ctol": 25.0,
+        "seed_area": 113
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b1_noneg_s2": {
+    "condition": "baseline_held",
+    "ball": 1,
+    "seed": 2,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b1_noneg_s2.mp4",
+    "firstfall_output": {
+      "flag": "lost",
+      "reason": "fewer than six tracked points",
+      "n_tracked": 1,
+      "fps_true": 24.0,
+      "track_info": {
+        "point": [
+          300.5,
+          48.0
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 113
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b1_noneg_s3": {
+    "condition": "baseline_held",
+    "ball": 1,
+    "seed": 3,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b1_noneg_s3.mp4",
+    "firstfall_output": {
+      "g": 0.05492159151830498,
+      "g_ci95": [
+        0.04765930243405315,
+        0.06399945287349533
+      ],
+      "g_sd": 0.004081758176922583,
+      "r2": 0.994264026370549,
+      "dAIC_quad_vs_lin": 13.379599989250025,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.8488100735704203,
+      "fit_frames": [
+        19,
+        22
+      ],
+      "motion_frame": 28,
+      "impact_frame": 22,
+      "fall_time_s": 0.06785659309624636,
+      "fall_px": 0.04120322599510473,
+      "fall_m": 7.633054093202063e-05,
+      "g_from_h_T": 0.033154633667379564,
+      "d_seed_px": 41.397831189731775,
+      "d_impact_px": 43.72441101074219,
+      "d_ratio": 1.056200524378859,
+      "d_fallstart_px": 43.755008697509766,
+      "d_growth": 0.9993007043609771,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 183,
+      "track_info": {
+        "point": [
+          295.31882998171847,
+          272.63912248628884
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 1346
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b1_noneg_s4": {
+    "condition": "baseline_held",
+    "ball": 1,
+    "seed": 4,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b1_noneg_s4.mp4",
+    "firstfall_output": {
+      "g": -1.68635021749285,
+      "g_ci95": [
+        -1.825246683511786,
+        -1.5752330446776097
+      ],
+      "g_sd": 0.06245323251045622,
+      "r2": 0.9990945371497022,
+      "dAIC_quad_vs_lin": 18.88696860751054,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.6249999980709012,
+      "fit_frames": [
+        12,
+        15
+      ],
+      "motion_frame": 17,
+      "impact_frame": 14,
+      "fall_time_s": -0.04166666473756786,
+      "fall_px": -1.3034361471861189,
+      "fall_m": -0.002414664963294033,
+      "g_from_h_T": null,
+      "d_seed_px": 35.1431694414876,
+      "d_impact_px": 28.95026397705078,
+      "d_ratio": 0.823780678781752,
+      "d_fallstart_px": 28.95026397705078,
+      "d_growth": 1.0,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 174,
+      "track_info": {
+        "point": [
+          283.74924471299096,
+          293.55060422960725
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 970
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b2_noneg_s1": {
+    "condition": "baseline_held",
+    "ball": 2,
+    "seed": 1,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b2_noneg_s1.mp4",
+    "firstfall_output": {
+      "g": -0.32011856243054715,
+      "g_ci95": [
+        -0.48017784364577604,
+        -0.19207113745829787
+      ],
+      "g_sd": 0.07196885415233055,
+      "r2": 0.93333333333332,
+      "dAIC_quad_vs_lin": 5.167037876911422,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.16666661824279502,
+      "fit_frames": [
+        1,
+        4
+      ],
+      "motion_frame": 0,
+      "impact_frame": 0,
+      "fall_time_s": -0.16666661824279502,
+      "fall_px": 0.0,
+      "fall_m": 0.0,
+      "g_from_h_T": null,
+      "d_seed_px": 3.385137501286538,
+      "d_impact_px": 3.385137501286538,
+      "d_ratio": 1.0,
+      "d_fallstart_px": 3.385137501286538,
+      "d_growth": 1.0,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 9,
+      "track_info": {
+        "point": [
+          396.0855263157895,
+          279.7763157894737
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 9
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b2_noneg_s2": {
+    "condition": "baseline_held",
+    "ball": 2,
+    "seed": 2,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b2_noneg_s2.mp4",
+    "firstfall_output": {
+      "flag": "lost",
+      "reason": "fewer than six tracked points",
+      "n_tracked": 1,
+      "fps_true": 24.0,
+      "track_info": {
+        "point": [
+          310.75,
+          18.5
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 113
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b2_noneg_s3": {
+    "condition": "baseline_held",
+    "ball": 2,
+    "seed": 3,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b2_noneg_s3.mp4",
+    "firstfall_output": {
+      "g": 0.046378357740017556,
+      "g_ci95": [
+        -0.24394456498133216,
+        0.4092820111416107
+      ],
+      "g_sd": 0.16317554286581543,
+      "r2": 0.5023604345621456,
+      "dAIC_quad_vs_lin": -1.919160771277646,
+      "flag": "no_free_fall",
+      "n_fit": 4,
+      "t0": -0.9999999999259872,
+      "fit_frames": [
+        1,
+        4
+      ],
+      "motion_frame": 0,
+      "impact_frame": 0,
+      "fall_time_s": 0.9999999999259872,
+      "fall_px": 0.0,
+      "fall_m": 0.0,
+      "g_from_h_T": 0.0,
+      "d_seed_px": 46.111929472835136,
+      "d_impact_px": 46.111929472835136,
+      "d_ratio": 1.0,
+      "d_fallstart_px": 51.925498962402344,
+      "d_growth": 0.8880401805329471,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 183,
+      "track_info": {
+        "point": [
+          290.63674446439256,
+          428.0490724117295
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 1670
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_ctrl_b2_noneg_s4": {
+    "condition": "baseline_held",
+    "ball": 2,
+    "seed": 4,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_ctrl_b2_noneg_s4.mp4",
+    "firstfall_output": {
+      "g": 0.9512515694770849,
+      "g_ci95": [
+        0.6813634288984313,
+        1.2886117452005657
+      ],
+      "g_sd": 0.15169020564817873,
+      "r2": 0.9767033713977161,
+      "dAIC_quad_vs_lin": 7.569090395085844,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.5551032053472047,
+      "fit_frames": [
+        12,
+        15
+      ],
+      "motion_frame": 18,
+      "impact_frame": 15,
+      "fall_time_s": 0.0698967946527953,
+      "fall_px": 2.368653514771438,
+      "fall_m": 0.004388020590536196,
+      "g_from_h_T": 1.7963217651913057,
+      "d_seed_px": 44.695781072596446,
+      "d_impact_px": 75.7196273803711,
+      "d_ratio": 1.6941112911168201,
+      "d_fallstart_px": 37.687252044677734,
+      "d_growth": 2.0091575605089615,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 175,
+      "track_info": {
+        "point": [
+          274.92938360263315,
+          302.4733692399761
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 1569
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b1_noneg_s1": {
+    "condition": "recipe_midfall",
+    "ball": 1,
+    "seed": 1,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b1_noneg_s1.mp4",
+    "firstfall_output": {
+      "g": 9.732964621476617,
+      "g_ci95": [
+        5.492049541926723,
+        13.125696685116624
+      ],
+      "g_sd": 1.9068797292800987,
+      "r2": 0.997641308156227,
+      "dAIC_quad_vs_lin": 6.104093718830107,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": -0.007276307663140643,
+      "fit_frames": [
+        1,
+        4
+      ],
+      "motion_frame": 2,
+      "impact_frame": 5,
+      "fall_time_s": 0.21560964099647398,
+      "fall_px": 123.67946458185267,
+      "fall_m": 0.22912090511643698,
+      "g_from_h_T": 9.857308734472959,
+      "d_seed_px": 12.666024736934256,
+      "d_impact_px": 23.699220657348633,
+      "d_ratio": 1.8710859286609054,
+      "d_fallstart_px": 22.0,
+      "d_growth": 1.077237302606756,
+      "e": 1.1183158506796311,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 130,
+      "track_info": {
+        "point": [
+          286.10526315789474,
+          155.2085020242915
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 126
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b1_noneg_s2": {
+    "condition": "recipe_midfall",
+    "ball": 1,
+    "seed": 2,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b1_noneg_s2.mp4",
+    "firstfall_output": {
+      "g": 4.021468329835632,
+      "g_ci95": [
+        2.1234324998595775,
+        6.394013117305708
+      ],
+      "g_sd": 1.066788058042414,
+      "r2": 0.9909674288088999,
+      "dAIC_quad_vs_lin": 4.096644146275288,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.032140763050620524,
+      "fit_frames": [
+        1,
+        4
+      ],
+      "motion_frame": 3,
+      "impact_frame": 0,
+      "fall_time_s": -0.032140763050620524,
+      "fall_px": 0.0,
+      "fall_m": 0.0,
+      "g_from_h_T": null,
+      "d_seed_px": 61.597514911811054,
+      "d_impact_px": 61.597514911811054,
+      "d_ratio": 1.0,
+      "d_fallstart_px": 139.0,
+      "d_growth": 0.4431475892936047,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 189,
+      "track_info": {
+        "point": [
+          301.59632195282865,
+          72.19775688603002
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 2980
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b1_noneg_s3": {
+    "condition": "recipe_midfall",
+    "ball": 1,
+    "seed": 3,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b1_noneg_s3.mp4",
+    "firstfall_output": {
+      "g": -2.2020763257579405,
+      "g_ci95": [
+        -5.090334851650976,
+        0.7098580007268389
+      ],
+      "g_sd": 1.3981889705321284,
+      "r2": 0.9904026705611176,
+      "dAIC_quad_vs_lin": 0.3176835817613366,
+      "flag": "no_free_fall",
+      "n_fit": 6,
+      "t0": -0.999999999999998,
+      "fit_frames": [
+        1,
+        6
+      ],
+      "motion_frame": 2,
+      "impact_frame": 8,
+      "fall_time_s": 1.3333333333333313,
+      "fall_px": 186.15782948693493,
+      "fall_m": 0.34486444884574835,
+      "g_from_h_T": 0.38797250495146807,
+      "d_seed_px": 13.680870333281758,
+      "d_impact_px": 6.863662517577698,
+      "d_ratio": 0.5016977977548923,
+      "d_fallstart_px": 20.0,
+      "d_growth": 0.3431831258788849,
+      "e": 0.901033171014022,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 182,
+      "track_info": {
+        "point": [
+          285.63296703296703,
+          154.92967032967033
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 147
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b1_noneg_s4": {
+    "condition": "recipe_midfall",
+    "ball": 1,
+    "seed": 4,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b1_noneg_s4.mp4",
+    "firstfall_output": {
+      "g": 0.05721456499490712,
+      "g_ci95": [
+        0.022138380294794625,
+        0.09582610743385549
+      ],
+      "g_sd": 0.019107311491584907,
+      "r2": 0.5142168350131171,
+      "dAIC_quad_vs_lin": 4.496467433619756,
+      "flag": "weak",
+      "n_fit": 9,
+      "t0": 2.9443033544840365,
+      "fit_frames": [
+        72,
+        80
+      ],
+      "motion_frame": 81,
+      "impact_frame": 82,
+      "fall_time_s": 0.47236331218263006,
+      "fall_px": 24.496250000000003,
+      "fall_m": 0.045380233419785115,
+      "g_from_h_T": 0.40676577327421853,
+      "d_seed_px": 9.09728368293446,
+      "d_impact_px": 4.918490759365935,
+      "d_ratio": 0.5406548735632486,
+      "d_fallstart_px": 3.9088200952233594,
+      "d_growth": 1.2583057392117916,
+      "e": 0.9642201237899563,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 189,
+      "track_info": {
+        "point": [
+          281.1395793499044,
+          51.85086042065009
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 65
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b2_noneg_s1": {
+    "condition": "recipe_midfall",
+    "ball": 2,
+    "seed": 1,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b2_noneg_s1.mp4",
+    "firstfall_output": {
+      "g": 17.65532449023846,
+      "g_ci95": [
+        16.850707910662017,
+        18.478341831767054
+      ],
+      "g_sd": 0.4417878629134252,
+      "r2": 0.9980434215379316,
+      "dAIC_quad_vs_lin": 22.18277239769762,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.26223905008805737,
+      "fit_frames": [
+        3,
+        8
+      ],
+      "motion_frame": 3,
+      "impact_frame": 3,
+      "fall_time_s": -0.13723905008805737,
+      "fall_px": 14.212694669062586,
+      "fall_m": 0.026329556630349363,
+      "g_from_h_T": null,
+      "d_seed_px": 32.85889733292062,
+      "d_impact_px": 29.896384777910505,
+      "d_ratio": 0.9098413886201215,
+      "d_fallstart_px": 26.93387222290039,
+      "d_growth": 1.1099920772807133,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 104,
+      "track_info": {
+        "point": [
+          288.38157894736844,
+          203.1196172248804
+        ],
+        "pframe": 1,
+        "ctol": 25.0,
+        "seed_area": 848
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b2_noneg_s2": {
+    "condition": "recipe_midfall",
+    "ball": 2,
+    "seed": 2,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b2_noneg_s2.mp4",
+    "firstfall_output": {
+      "g": -0.05541504905198228,
+      "g_ci95": [
+        -0.05734813215842973,
+        -0.05386858256680441
+      ],
+      "g_sd": 0.0008691890598111763,
+      "r2": 0.9999931357182898,
+      "dAIC_quad_vs_lin": 25.742346368531386,
+      "flag": "weak",
+      "n_fit": 4,
+      "t0": 0.16666643524722316,
+      "fit_frames": [
+        1,
+        4
+      ],
+      "motion_frame": 0,
+      "impact_frame": 0,
+      "fall_time_s": -0.16666643524722316,
+      "fall_px": 0.0,
+      "fall_m": 0.0,
+      "g_from_h_T": null,
+      "d_seed_px": 10.341765891652821,
+      "d_impact_px": 10.341765891652821,
+      "d_ratio": 1.0,
+      "d_fallstart_px": 5.0,
+      "d_growth": 2.068353178330564,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 175,
+      "track_info": {
+        "point": [
+          378.8235294117647,
+          73.82352941176471
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 84
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b2_noneg_s3": {
+    "condition": "recipe_midfall",
+    "ball": 2,
+    "seed": 3,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b2_noneg_s3.mp4",
+    "firstfall_output": {
+      "g": -5.662355888438112,
+      "g_ci95": [
+        -22.008746740139028,
+        7.414756792922723
+      ],
+      "g_sd": 7.349970649567018,
+      "r2": 0.9717846172215788,
+      "dAIC_quad_vs_lin": -1.4409890866273187,
+      "flag": "no_free_fall",
+      "n_fit": 4,
+      "t0": -0.27619939841033025,
+      "fit_frames": [
+        1,
+        4
+      ],
+      "motion_frame": 2,
+      "impact_frame": 4,
+      "fall_time_s": 0.4428660650769969,
+      "fall_px": 110.48206902254807,
+      "fall_m": 0.20467222864495754,
+      "g_from_h_T": 2.0871040813278676,
+      "d_seed_px": 15.138795132120961,
+      "d_impact_px": 24.0,
+      "d_ratio": 1.5853309190424043,
+      "d_fallstart_px": 24.0,
+      "d_growth": 1.0,
+      "e": 1.0563214652038795,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 174,
+      "track_info": {
+        "point": [
+          287.1939393939394,
+          164.98181818181817
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 180
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  },
+  "box_mid_b2_noneg_s4": {
+    "condition": "recipe_midfall",
+    "ball": 2,
+    "seed": 4,
+    "path": "/home/nail/swarm-work/raj-3/brev_box/out/box_mid_b2_noneg_s4.mp4",
+    "firstfall_output": {
+      "g": 0.04212086347771412,
+      "g_ci95": [
+        -0.5812679159922641,
+        0.8213568378151758
+      ],
+      "g_sd": 0.3503746846889556,
+      "r2": 0.8202232435981635,
+      "dAIC_quad_vs_lin": -1.9854174100246027,
+      "flag": "no_free_fall",
+      "n_fit": 4,
+      "t0": 1.5833333330607124,
+      "fit_frames": [
+        35,
+        38
+      ],
+      "motion_frame": 0,
+      "impact_frame": 40,
+      "fall_time_s": 0.0833333336059543,
+      "fall_px": 1.682660850599781,
+      "fall_m": 0.003117193128195223,
+      "g_from_h_T": 0.8977516150463223,
+      "d_seed_px": 5.170882945826411,
+      "d_impact_px": 5.753627391751592,
+      "d_ratio": 1.1126972805283735,
+      "d_fallstart_px": 4.51351666838205,
+      "d_growth": 1.2747548783981961,
+      "e": null,
+      "m_per_px": 0.0018525379770285293,
+      "fps_true": 24.0,
+      "n_tracked": 189,
+      "track_info": {
+        "point": [
+          280.39298796441653,
+          51.79539508110937
+        ],
+        "pframe": 0,
+        "ctol": 25.0,
+        "seed_area": 21
+      },
+      "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+    }
+  }
+}
