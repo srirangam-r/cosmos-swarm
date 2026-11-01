@@ -22,3 +22,20 @@ The scale is t139 ball1: 185 px drop, 9.81 m/s^2 = 9.19 px/f^2 at 24 fps, 1 px n
 n uses a 2-frame backward difference before impact and the true onset. Calibrate it on real drops through the same tracker before reading it on Nano clips.
 
 Run: `python3 s102_onset_sim.py; python3 s102_onset_sim2.py` from the parent directory of scripts/ (paths are relative).
+
+## s102_rho_sim.py: rho1 under rounded impacts (#3634 §1)
+A synthetic physical bounce (one g, e = 0.8, 185 px, 9.19 px/f^2) is box-smoothed over w frames, then cut with task 162's PREREG segmentation:
+- fall: onset (y > y0 + 2 px) to impact-1-m;
+- flight 1: impact1+2+m to impact2-2-m.
+
+rho1 = a_flight1 / a_fall:
+
+| w | m=0 | m=1 | m=2 |
+|---|---|---|---|
+| 0 | 1.00 | 1.00 | 1.00 |
+| 2 | 1.00 | 1.00 | 1.00 |
+| 3 | 1.25 | 1.01 | 1.02 |
+| 4 | 2.17 | 1.24 | 1.08 |
+| 6 | 3.16 | 1.98 | 1.51 |
+
+Above w ≈ 8 the bounce train itself is erased: a box of width w has a spectral zero at period w.
