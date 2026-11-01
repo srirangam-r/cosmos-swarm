@@ -1,0 +1,517 @@
+{
+  "utc": "2026-11-01T17:31:14.131288+00:00",
+  "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+  "pin": "003cff7",
+  "status": 200,
+  "html_sha256": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36",
+  "html_equals_pin": true,
+  "broken_anchors": [],
+  "duplicate_ids": [],
+  "media": [
+    {
+      "source": "clips/ball_drop_g490.mp4",
+      "status": 200,
+      "bytes": 19433,
+      "sha256": "1be68aa0d224f5fcc5b1abf0d028761da5c4c0e63e4f07342cb87d12150d1d9d",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "189"
+          }
+        ],
+        "format": {
+          "duration": "7.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/ball_drop_g490.webm",
+      "status": 200,
+      "bytes": 34503,
+      "sha256": "9d2465fce3aba76a6a8fea93cc19cff2dd9a117b9ff757a4701182a7ffdfb3c1",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "189"
+          }
+        ],
+        "format": {
+          "duration": "7.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/ball_drop_g981_fixed.mp4",
+      "status": 200,
+      "bytes": 19132,
+      "sha256": "e7ba2e3b7f3fc376b8bb5b1766c45e7ed8d39f4aa1f2b15c0ed7c46180d6978b",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "189"
+          }
+        ],
+        "format": {
+          "duration": "7.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/ball_drop_g981_fixed.webm",
+      "status": 200,
+      "bytes": 34356,
+      "sha256": "301ef35aa8b7e7a8aa05ffa7494120cdd3bfb2141abc1f925be21d0acb3fb4a1",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "189"
+          }
+        ],
+        "format": {
+          "duration": "7.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/ball_settle.gif",
+      "status": 200,
+      "bytes": 2414594,
+      "sha256": "b21881c6b2669a3601dec9f6e7c0b11dd3b3496dbbe89f39fe0e81757246ddfb",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 840,
+            "height": 354,
+            "pix_fmt": "bgra",
+            "avg_frame_rate": "12/1",
+            "nb_read_frames": "47"
+          }
+        ],
+        "format": {
+          "duration": "3.910000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": "",
+      "same_as_original_raj_demo": true
+    },
+    {
+      "source": "clips/ball_settle.mp4",
+      "status": 200,
+      "bytes": 264206,
+      "sha256": "6ba3af0a67bf3d3ee5497e22bdbfac6a58eaac2d88ad95aadce3e31df962ea86",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 840,
+            "height": 354,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": "",
+      "same_as_original_raj_demo": true
+    },
+    {
+      "source": "clips/ball_settle.webm",
+      "status": 200,
+      "bytes": 108755,
+      "sha256": "17575c2c0dbcc90958e3f0e30ed4c5e20d734200ee08bdf6dd834977b0784470",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 840,
+            "height": 354,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/donor_base_nano.mp4",
+      "status": 200,
+      "bytes": 47778,
+      "sha256": "d675b850be211f1d92431f802da19e69f1b0165b811670e4610f4cfa25d2daaf",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/donor_base_nano.webm",
+      "status": 200,
+      "bytes": 80405,
+      "sha256": "e5a834d69afd2d5424a48840b251cd1914b2690aff365ede3438bcfd26174be9",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/donor_recon_real.mp4",
+      "status": 200,
+      "bytes": 48215,
+      "sha256": "6196e6b3e9761edd9f2f240678f278ce75ffd7ba7917155a093f08b6520c36ca",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/donor_recon_real.webm",
+      "status": 200,
+      "bytes": 78799,
+      "sha256": "c35a16db93e08c47845b08217042ad47dba8e8e2c5b3a377e5cedba4398a6af6",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/donor_transfer_fixed.mp4",
+      "status": 200,
+      "bytes": 50322,
+      "sha256": "53ec7311e11d62c09ef8089e9d862965b6a8de70a092b7411cfbf042995cadea",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/donor_transfer_fixed.webm",
+      "status": 200,
+      "bytes": 75106,
+      "sha256": "1a2ff9d5b03a9bc67b2e394890104671555d0a5157d989636aa9379b94d6ac2b",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/pendulum_physics_start.gif",
+      "status": 200,
+      "bytes": 4082245,
+      "sha256": "039bfe79159593d2ad7914c74c95048c3d5631753bd361dcaee57bdf2f8d7e3c",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 1264,
+            "height": 354,
+            "pix_fmt": "bgra",
+            "avg_frame_rate": "12/1",
+            "nb_read_frames": "47"
+          }
+        ],
+        "format": {
+          "duration": "3.910000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": "",
+      "same_as_original_raj_demo": true
+    },
+    {
+      "source": "clips/pendulum_physics_start.mp4",
+      "status": 200,
+      "bytes": 416202,
+      "sha256": "fd724670aab40fd348fe5dfcd11e7996a62a13cb96b0fb9ec1a302d12cb84e99",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1264,
+            "height": 354,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": "",
+      "same_as_original_raj_demo": true
+    },
+    {
+      "source": "clips/pendulum_physics_start.webm",
+      "status": 200,
+      "bytes": 166794,
+      "sha256": "1b37f042d6804226ac94584f24af69e8329fc8fa76ff4ef19d260d25caf89062",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 1264,
+            "height": 354,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "24/1",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/robot_action_own.mp4",
+      "status": 200,
+      "bytes": 31393,
+      "sha256": "a704ba229523059cfb40cd3460f6797655fc79f97a99e537e873ca12652a1611",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "5/1",
+            "nb_read_frames": "17"
+          }
+        ],
+        "format": {
+          "duration": "3.400000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/robot_action_own.webm",
+      "status": 200,
+      "bytes": 31937,
+      "sha256": "44a973e5e687b03c09fb118f7951b9ac90f79606c2cc63021d65591914cfbcb1",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "5/1",
+            "nb_read_frames": "17"
+          }
+        ],
+        "format": {
+          "duration": "3.400000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/robot_action_zero_fixed.mp4",
+      "status": 200,
+      "bytes": 17856,
+      "sha256": "ae2fc4b398b5aa310b333ed7f5ca6237d79577354ae524375d4e779bce6234f5",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "5/1",
+            "nb_read_frames": "17"
+          }
+        ],
+        "format": {
+          "duration": "3.400000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    },
+    {
+      "source": "clips/robot_action_zero_fixed.webm",
+      "status": 200,
+      "bytes": 16754,
+      "sha256": "3a255c9a9a331671712d87893b02b8fc308eb81cd3bf6cb93d72ac4d398fffb8",
+      "same_as_pin": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 416,
+            "height": 240,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "5/1",
+            "nb_read_frames": "17"
+          }
+        ],
+        "format": {
+          "duration": "3.400000"
+        }
+      },
+      "decode_exit": 0,
+      "decode_stderr": ""
+    }
+  ],
+  "media_pass": true
+}

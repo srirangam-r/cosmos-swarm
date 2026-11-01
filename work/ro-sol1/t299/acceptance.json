@@ -1,0 +1,59 @@
+{
+  "utc": "2026-11-01T17:31:45.753345+00:00",
+  "scope": "Live gallery presentation acceptance only; no physical or model validation",
+  "source_head": "b0a4f9d91df987ba6f1bc40b7befd0502bbc2aeb",
+  "gallery_pin": "003cff7",
+  "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+  "suite_byte_identical_to_293": true,
+  "suite_sha256": "0be30e2f40b9416370ccdc563fe088b8e3c4a97369cee870efae334bf30ac841",
+  "same_32_check_names": true,
+  "before": {
+    "pass": 25,
+    "fail": 7
+  },
+  "after": {
+    "pass": 32,
+    "fail": 0
+  },
+  "resolved_failures": [
+    "every internal evidence link resolves",
+    "pendulum: Restart starts and updates button",
+    "pendulum: MP4 controls are inactive in GIF mode",
+    "pendulum: GIF mode cannot restart hidden MP4",
+    "ball: Restart starts and updates button",
+    "ball: MP4 controls are inactive in GIF mode",
+    "ball: GIF mode cannot restart hidden MP4"
+  ],
+  "regressions": [],
+  "fatal": null,
+  "exceptions": [],
+  "html_sha256": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36",
+  "html_equals_commit": true,
+  "after_browser_http_status": 200,
+  "after_browser_html_unchanged": true,
+  "media_count": 20,
+  "media_pass": true,
+  "gif_animation": [
+    {
+      "stem": "pendulum",
+      "different_pixels_gt8": 29479,
+      "total_pixels": 1584000,
+      "screenshot_sha256": [
+        "7678a0d111a6c057a30d6e4566671010d3ea244b749ef0474f66fd1beeedb44c",
+        "d01be6b7d9f9a75a08356bbc7fc3f149ac3b251204902d51363e520afb0a018e"
+      ],
+      "pass": true
+    },
+    {
+      "stem": "ball",
+      "different_pixels_gt8": 40813,
+      "total_pixels": 1584000,
+      "screenshot_sha256": [
+        "69d948d50ba0cfc1971407f46b6f01f74691819e76e9070e1f472c0e5584b1a5",
+        "46d6cd527cb0bbaf0fc95fc4ec734e6b7f0140abb7d524456f8624e00a56a0c9"
+      ],
+      "pass": true
+    }
+  ],
+  "pass": true
+}
