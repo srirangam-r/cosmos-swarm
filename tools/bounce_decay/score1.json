@@ -1,0 +1,41 @@
+{
+  "agent": "rahul",
+  "method": "bounce_decay @ sha256:93b57894ffd6 (rahul task36, joint shared-a multi-flight fit; g=rest-at-0 fall fit, e=first-impact velocity ratio)",
+  "estimates_scored": 12,
+  "within_tolerance": 12,
+  "pass_rate": 1.0,
+  "tolerance": 0.1,
+  "verdict": "pass",
+  "per_clip_error_band": {
+    "planted-01": {
+      "g": "<5%"
+    },
+    "planted-03": {
+      "g": "<5%"
+    },
+    "planted-04": {
+      "g": "<5%"
+    },
+    "planted-06": {
+      "g": "5-10%",
+      "e": "<5%"
+    },
+    "planted-08": {
+      "g": "<5%",
+      "e": "<5%"
+    },
+    "planted-12": {
+      "g": "<5%"
+    },
+    "planted-14": {
+      "g": "<5%",
+      "e": "<5%"
+    },
+    "planted-15": {
+      "g": "5-10%",
+      "e": "<5%"
+    }
+  },
+  "ignored_clip_ids": [],
+  "rule": "pass = at least 10 estimates (or all) scored and >= 90% within 10% relative error"
+}

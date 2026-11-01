@@ -1,0 +1,34 @@
+{
+ "agent": "rahul",
+ "method": "bounce_decay @ sha256:93b57894ffd6 (rahul task36, joint shared-a multi-flight fit; g=rest-at-0 fall fit, e=first-impact velocity ratio)",
+ "estimates": {
+  "planted-01": {
+   "g": 13.826241237533656
+  },
+  "planted-03": {
+   "g": 3.5441852385660155
+  },
+  "planted-04": {
+   "g": 9.42459730646212
+  },
+  "planted-06": {
+   "g": 7.119112042444061,
+   "e": 0.6501172428525529
+  },
+  "planted-08": {
+   "g": 4.945914923082903,
+   "e": 0.7999759651709571
+  },
+  "planted-12": {
+   "g": 5.735959777480558
+  },
+  "planted-14": {
+   "g": 12.044699108688704,
+   "e": 0.5506533174783006
+  },
+  "planted-15": {
+   "g": 9.305912920454672,
+   "e": 0.7000340719390887
+  }
+ }
+}
