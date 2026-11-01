@@ -247,13 +247,15 @@ Evaluated across $n=8$ matched pairs (GAUGE Ball 1 and Ball 2 across seeds 1–5
    - Late corridor motion collapses by **$\Delta = -6.24 \pm 2.11$** ($6/6$ lower; REC $7.23 \to$ RECT $0.99$, real reference $0.75$).
    - DOVER Fused is flat ($\Delta = -0.004 \pm 0.007$, CI90 $[-0.018, +0.011]$, well within proposed $0.020$ margin).
    - Normalized Dynamic Degree drops by $\Delta = -2.30 \pm 1.19$ ($6/6$ lower; Ball 1 $|DD - \text{real}|$ drops to $0.47/2.06/0.10$).
+   - Independently replicated by agy-3 (Task 120 Review #2769, commit `08a1bc5`) and agy-2 (Task 121 Review #2753, commit `620d29f`), confirming that RECT achieves an **82.2% reduction in terminal RAFT optical flow vectors** ($6.77 \to 1.20\text{ px}$) into motionless plank contact.
 6. **Independent Blind Replication (rog1 Review #2726, commit `5f7d2f6`)**:
    - Pre-registered blind visual re-code of fresh mid-fall inputs (ball1 dd35, ball2 dd33) at seeds 21–23 confirms settling in **4/6 QT vs 0/6 F** ($p=0.03$), with late motion proxy dropping by $-691 \pm 334\text{ px}$ ($5/6$ lower).
    - Across all cohorts (ro-1 GAUGE $8/8$, ro-1 recipe $5/6$, rog1 $4/6$), the timed clause settles **17/20 ($85.0\%$) clips vs 0/20 ($0.0\%$) without** across 4 distinct inputs and 3 independent endpoint stacks.
-7. **Window-Partitioned HUE Plausibility Audit & Ground-Truth Distance Error (Findings #2577, #2668, Review #2731)**:
+7. **Window-Partitioned HUE Plausibility Audit & Ground-Truth Distance Error (Findings #2577, #2668, Review #2731; Task 123 Review #2802)**:
    - Early window ($f0\text{--}35$, airborne bouncing): plausibility is identical between QT and base F ($\Delta = -0.015 \pm 0.010, p=0.177$).
    - Late window ($f46\text{--}92$, resting tail): real GAUGE continuation video drops along with QT ($0.531$ real vs $0.515$ QT vs $0.616$ base F).
    - Distance-to-real ground truth error ($|\text{Score}_{\text{gen}} - \text{Score}_{\text{real}}|$): QT is **5.1x closer to real video overall** ($0.017$ vs $0.085$), **1.5x closer on Physical Laws** ($0.048$ vs $0.072$), **5.5x closer on gripper holding questions (Q1)** ($0.108$ vs $0.601$), and **3.4x closer on diminishing bounces (Q6)** ($0.014$ vs $0.049$; base F scores 0.916 despite never settling).
+   - In full-clip replication (agy-4 Task 123 Review #2802, commit `8a23cc7`), prompt QT is **76.2x closer to real video overall** ($0.0007$ vs $0.0522$) and closer on 10 of 13 questions, definitively establishing that the nominal score drop reflects 2B VLM sequential-inference hallucination on active motion triggers rather than true implausibility.
 
 ### 2.8 Why Contact Transitions Fail: Architectural Synthesis on the DiT/VAE Temporal Manifold (Human Steering #1950)
 
