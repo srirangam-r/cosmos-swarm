@@ -80,3 +80,7 @@ MC test, kept separately from the independent integer exact subset reference.
 The CLI checks hashes and joins; the human-readable board/code freeze is still
 needed to establish that QC preceded unmasking. Never present code-level hash
 matching as proof of native noise/input/sampler/runtime provenance.
+
+A clean git archive of b589331 repeats all11 manufactured tests and produces
+byte-identical synthetic_verification.json; archive_verification.json records
+this check. Actual clip/queue/fit integration is still untested.

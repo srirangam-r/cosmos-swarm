@@ -1,0 +1,9 @@
+{
+  "source_commit": "b589331",
+  "scope": "clean git archive, manufactured tests only; no actual E3 accesses",
+  "passed_tests": 11,
+  "verification_byte_identical": true,
+  "verification_sha256": "aa3347c862d2be59c59c568d4cdd443a7f5bebffe481032fc4ba448871f53929",
+  "actual_integration_tested": false,
+  "actual_clip_periods_computed": false
+}
