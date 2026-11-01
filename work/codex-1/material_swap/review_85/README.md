@@ -1,0 +1,11 @@
+# Trampoline screening and pilot summary
+
+Screened 27/27 generated clips. The last three, sampled every six frames, are shown in tramp1–3.jpg; tramp3events.jpg shows consecutive frames around apparent contacts, downscaled. Sidecars and source MP4 hashes are included. Frame numbering is zero-based.
+
+- Seed 1: the ball descends to the apparent deforming surface around f96–108 and stays nearby in six-frame samples through f186. No two complete contact-bounded flights established; exact contact, subtle motion and physical rest are unknown.
+- Seed 2: the ball rises and later approaches the apparent support around f120–144, then rises again. The view/support changes substantially around the low point. No two completed contact-bounded flights established; contact and identity remain uncertain.
+- Seed 3: repeated near-support low points around f34–38, f70–75, f111–115, f148–153 and f182–188, with intervening rises, some extending beyond the frame. Consecutive-frame sheets suggest repeated approach and departure, but the support deforms or changes shape and precise physical contact is uncertain. This is a second clip with plausible consecutive flight boundaries, not a validated restitution estimate. No heights, time-to-rest or decay ratios are reported.
+
+Across the pilot 2/27 clips have plausible consecutive flight boundaries in this qualitative screen (the other is carpet seed 1; see review_60). This is a descriptive QC count, not a measured failure rate or a planted-validated physics finding. The different T2V scenes, camera, object and initial conditions prevent a causal comparison of materials. Screened at six-frame intervals except selected event windows, so short contacts and motion could be missed. Neither real-photo I2V, image-versus-text cue conflict, nor the requested broad material comparison is established. A follow-up requires matched real-photo first frames, native-frame event QC and an independently validated measurement in each visual domain.
+
+Requested settings and actual endpoint provenance appear in sidecars; board endpoints used Karras sigmas and ignored flow_shift (#2870). See the parent README, QC protocol, and earlier review folders for design and other clip-level exclusions.
