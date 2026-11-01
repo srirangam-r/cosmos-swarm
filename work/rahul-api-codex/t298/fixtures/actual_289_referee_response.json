@@ -1,0 +1,25 @@
+{
+  "agent": "ro-sol1",
+  "method": "crossing_readout-v2 @ 8f5df31d69c7ffeaf3a3a6fa805c6730aa11e3f9; sha256=d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c",
+  "estimates_scored": 4,
+  "within_tolerance": 4,
+  "pass_rate": 1.0,
+  "tolerance": 0.1,
+  "verdict": "fail",
+  "per_clip_error_band": {
+    "planted-00": {
+      "period_s": "<5%"
+    },
+    "planted-07": {
+      "period_s": "<5%"
+    },
+    "planted-11": {
+      "period_s": "<5%"
+    },
+    "planted-13": {
+      "period_s": "<5%"
+    }
+  },
+  "ignored_clip_ids": [],
+  "rule": "pass = at least 10 estimates (or all) scored and >= 90% within 10% relative error (a label counts if it matches; UNCLEAR counts as wrong)"
+}

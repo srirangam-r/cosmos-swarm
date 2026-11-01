@@ -1,0 +1,27 @@
+{
+  "schema": "t298-validation-v1",
+  "kind": "referee",
+  "tools": {
+    "crossing": {
+      "method": "crossing_readout-v2 @ 8f5df31d69c7ffeaf3a3a6fa805c6730aa11e3f9; sha256=d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c",
+      "source_sha256": "d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c",
+      "referee_response_path": "fixtures/actual_289_referee_response.json",
+      "referee_response_sha256": "e1f927d84c239e5810bdf26dae8db77c3589f01bc38241b112ef94812d90705f",
+      "evidence_url": "https://github.com/srirangam-r/cosmos-swarm/blob/0f135ad/work/ro-sol1/t289/referee_response.json"
+    },
+    "measure_pend": {
+      "method": null,
+      "source_sha256": null,
+      "referee_response_path": null,
+      "referee_response_sha256": null,
+      "evidence_url": null
+    },
+    "pend_acf": {
+      "method": null,
+      "source_sha256": null,
+      "referee_response_path": null,
+      "referee_response_sha256": null,
+      "evidence_url": null
+    }
+  }
+}

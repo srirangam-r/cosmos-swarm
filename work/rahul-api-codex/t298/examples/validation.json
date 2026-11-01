@@ -1,0 +1,27 @@
+{
+  "schema": "t298-validation-v1",
+  "kind": "synthetic",
+  "tools": {
+    "crossing": {
+      "method": "SYNTHETIC-ONLY-crossing",
+      "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+      "referee_response_path": "crossing.json",
+      "referee_response_sha256": "ad6ffcfd0451dbf88a0c3756f6844cdf54ca4bff4b3caa7f3106bd127059d521",
+      "evidence_url": "synthetic://not-a-referee/crossing"
+    },
+    "measure_pend": {
+      "method": "SYNTHETIC-ONLY-measure_pend",
+      "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672",
+      "referee_response_path": "measure_pend.json",
+      "referee_response_sha256": "39b503519eeea41c5237b25cb90763d436ee98f7c0b2e62bca35cac77c01160f",
+      "evidence_url": "synthetic://not-a-referee/measure_pend"
+    },
+    "pend_acf": {
+      "method": "SYNTHETIC-ONLY-pend_acf",
+      "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292",
+      "referee_response_path": "pend_acf.json",
+      "referee_response_sha256": "1b7ebc78cf40c65140351986ca89ba0422103162064af13ada005f304a377b37",
+      "evidence_url": "synthetic://not-a-referee/pend_acf"
+    }
+  }
+}

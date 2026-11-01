@@ -1,0 +1,636 @@
+{
+  "schema": "t298-observations-v1",
+  "kind": "synthetic",
+  "rows": [
+    {
+      "id": "t277_real06_plain_s101",
+      "scene": "real06",
+      "seed": 101,
+      "arm": "plain",
+      "clip_sha256": "4d7788ef41f0fdf8911d4068e071c29e88789c66483a8ec7012792859e3f6ac7",
+      "evidence_url": "synthetic://not-a-video/t277_real06_plain_s101",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_plain_s101"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_proxy_s101",
+      "scene": "real06",
+      "seed": 101,
+      "arm": "proxy",
+      "clip_sha256": "2309472c9e5c2ebf40728e2318eda9d4004d409e5d95f6a15c268f32f620a4bd",
+      "evidence_url": "synthetic://not-a-video/t277_real06_proxy_s101",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_proxy_s101"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_wrong_s101",
+      "scene": "real06",
+      "seed": 101,
+      "arm": "wrong",
+      "clip_sha256": "dc5bcadeb6d39db508dcc8f00c5f241dcce19e0d0aa601e52ee4edab61269623",
+      "evidence_url": "synthetic://not-a-video/t277_real06_wrong_s101",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_wrong_s101"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_plain_s102",
+      "scene": "real06",
+      "seed": 102,
+      "arm": "plain",
+      "clip_sha256": "2c809aa9a09ee8d0717a887fd47864c63329484d442d6195b83114813a82b454",
+      "evidence_url": "synthetic://not-a-video/t277_real06_plain_s102",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_plain_s102"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_proxy_s102",
+      "scene": "real06",
+      "seed": 102,
+      "arm": "proxy",
+      "clip_sha256": "3ee52542f6a166194c34c19d77d7ae8ddfcda16a35190fd98f38ecc900666e19",
+      "evidence_url": "synthetic://not-a-video/t277_real06_proxy_s102",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_proxy_s102"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_wrong_s102",
+      "scene": "real06",
+      "seed": 102,
+      "arm": "wrong",
+      "clip_sha256": "627590c8413ca123e751ec97c0f672e5884d8939225df41fa00a9a04b0a9dd73",
+      "evidence_url": "synthetic://not-a-video/t277_real06_wrong_s102",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_wrong_s102"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_plain_s103",
+      "scene": "real06",
+      "seed": 103,
+      "arm": "plain",
+      "clip_sha256": "c9fac65356d61f63579012fd864149be606dcd3c468fecd6101dea459cc2d946",
+      "evidence_url": "synthetic://not-a-video/t277_real06_plain_s103",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_plain_s103"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_proxy_s103",
+      "scene": "real06",
+      "seed": 103,
+      "arm": "proxy",
+      "clip_sha256": "4b55ca5192144dbddd437af509394a609cbac7bbd9ca0488e5f684037ad6bafc",
+      "evidence_url": "synthetic://not-a-video/t277_real06_proxy_s103",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_proxy_s103"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real06_wrong_s103",
+      "scene": "real06",
+      "seed": 103,
+      "arm": "wrong",
+      "clip_sha256": "4f48a86cd179268c9bc67c784b0f8764aaa69a6706940d0c122a687af0517e61",
+      "evidence_url": "synthetic://not-a-video/t277_real06_wrong_s103",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real06_wrong_s103"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_plain_s101",
+      "scene": "real14",
+      "seed": 101,
+      "arm": "plain",
+      "clip_sha256": "09648ff8895886b57d032c0bf7363bc9270e7a133669d6baa3d53d6a13e9c2ab",
+      "evidence_url": "synthetic://not-a-video/t277_real14_plain_s101",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_plain_s101"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_proxy_s101",
+      "scene": "real14",
+      "seed": 101,
+      "arm": "proxy",
+      "clip_sha256": "aa6915a292fa2b61d5e1dda2673c5eafb2bbfb41b34c35e5aa98a56c6df779c3",
+      "evidence_url": "synthetic://not-a-video/t277_real14_proxy_s101",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_proxy_s101"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_wrong_s101",
+      "scene": "real14",
+      "seed": 101,
+      "arm": "wrong",
+      "clip_sha256": "63a7d2405255fb501c68b96263cd67241ed13757aa674c57d579107827f1eea5",
+      "evidence_url": "synthetic://not-a-video/t277_real14_wrong_s101",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_wrong_s101"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_plain_s102",
+      "scene": "real14",
+      "seed": 102,
+      "arm": "plain",
+      "clip_sha256": "456a88bc3a0f4ef8db51ee7a336e0762b4e6a7a2ca68f3954f9ea52740e9c559",
+      "evidence_url": "synthetic://not-a-video/t277_real14_plain_s102",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_plain_s102"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_proxy_s102",
+      "scene": "real14",
+      "seed": 102,
+      "arm": "proxy",
+      "clip_sha256": "25354b0dcd0b7c0fdea7ec9e6c8f58960d57101e3540c5a3b97eb2d66ae907ca",
+      "evidence_url": "synthetic://not-a-video/t277_real14_proxy_s102",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_proxy_s102"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_wrong_s102",
+      "scene": "real14",
+      "seed": 102,
+      "arm": "wrong",
+      "clip_sha256": "57bc4191a506ece2297a04a97e647aaf74f0be970646df7b1ceee7ad98336ed3",
+      "evidence_url": "synthetic://not-a-video/t277_real14_wrong_s102",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_wrong_s102"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_plain_s103",
+      "scene": "real14",
+      "seed": 103,
+      "arm": "plain",
+      "clip_sha256": "893cc7c6b7b09a28aae71ec6ee8d9de49002835b04af20bcb386a846b6edc12b",
+      "evidence_url": "synthetic://not-a-video/t277_real14_plain_s103",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_plain_s103"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.6,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_proxy_s103",
+      "scene": "real14",
+      "seed": 103,
+      "arm": "proxy",
+      "clip_sha256": "26de1a4968ace6745089b8a69e2688f871a5a058c79dd7c83a85d17575a0ef31",
+      "evidence_url": "synthetic://not-a-video/t277_real14_proxy_s103",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_proxy_s103"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 1.186,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    },
+    {
+      "id": "t277_real14_wrong_s103",
+      "scene": "real14",
+      "seed": 103,
+      "arm": "wrong",
+      "clip_sha256": "e397af03abc8863e77fb3a07e602d69f360fd8907d346066aace9f98dcf175b6",
+      "evidence_url": "synthetic://not-a-video/t277_real14_wrong_s103",
+      "flicker": 0.005,
+      "strip": {
+        "single_bob_rod": true,
+        "reviewed_by": "SYNTHETIC-FIXTURE",
+        "evidence_url": "synthetic://not-a-strip/t277_real14_wrong_s103"
+      },
+      "tools": {
+        "crossing": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-crossing",
+          "source_sha256": "efce4e717f50f4c3c9c386a97349481f850c967170cc3519e10437ff13c30fc5",
+          "reason": "measurable_unvalidated"
+        },
+        "measure_pend": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-measure_pend",
+          "source_sha256": "fc643539783b26684c1d0b8da9de101385489fd4655c2dc7127e10c211d5d672"
+        },
+        "pend_acf": {
+          "status": "ok",
+          "period_s": 2.0162,
+          "method": "SYNTHETIC-ONLY-pend_acf",
+          "source_sha256": "78ff8a17ef8f2349c2f8f01ee4f527e5d954140fae4bd903c4d87a6af3537292"
+        }
+      }
+    }
+  ]
+}

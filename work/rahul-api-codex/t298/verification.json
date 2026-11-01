@@ -1,0 +1,59 @@
+{
+  "scope": "software only; no generated or measured clips, no referee submission",
+  "base_repo_commit": "b0a4f9d91df987ba6f1bc40b7befd0502bbc2aeb",
+  "unit_tests": {
+    "tests": 25,
+    "failures": 0,
+    "errors": 0,
+    "log": "test_results.txt"
+  },
+  "independent_bootstrap": {
+    "resamples": 729,
+    "max_abs_difference": 4.440892098500626e-16
+  },
+  "current": {
+    "status": "NO_CLIPS",
+    "validation": "UNVALIDATED",
+    "coverage": {
+      "planned": 18,
+      "present": 0,
+      "technical_clean": 0,
+      "accepted": 0
+    },
+    "complete_guided_pairs": 0,
+    "interval": null,
+    "crossing_raw_verdict": "fail"
+  },
+  "synthetic": {
+    "status": "SYNTHETIC_SOFTWARE_CHECK_ONLY",
+    "coverage": {
+      "planned": 18,
+      "present": 18,
+      "technical_clean": 18,
+      "accepted": 18
+    },
+    "resamples_per_tool": {
+      "crossing": 729,
+      "measure_pend": 729,
+      "pend_acf": 729
+    }
+  },
+  "file_sha256": {
+    ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "README.md": "189f5c3aac51b325fda0bec9e69daef4ca565aee4568ca3b06d54d098c94636f",
+    "current_no_clips_report.json": "e7f6ddcf3c1f9b77671a81138b88d5a8ca63ace1e3b50166181d44e0796e6da2",
+    "current_validation.json": "afe6a92ab6ff9cc1391bf304f110ea5d4a7bda2d1be6ed1f664ff5f996a13cf4",
+    "examples/crossing.json": "ad6ffcfd0451dbf88a0c3756f6844cdf54ca4bff4b3caa7f3106bd127059d521",
+    "examples/measure_pend.json": "39b503519eeea41c5237b25cb90763d436ee98f7c0b2e62bca35cac77c01160f",
+    "examples/pend_acf.json": "1b7ebc78cf40c65140351986ca89ba0422103162064af13ada005f304a377b37",
+    "examples/synthetic_observations.json": "34b97cc23fbaca4f0537a5b1aa24410c696f06b1250e5da8299cfa49849a4608",
+    "examples/synthetic_report.json": "a0d7dd1d5709312ccb1cd1e720edec936504fb479f96f60bf9857a4f1dff90a7",
+    "examples/validation.json": "f3136fe0ac3ec06ff7f186c659fece27f8f47c5bc947735cedbd2836d9b1411b",
+    "fixtures/actual_289_referee_response.json": "e1f927d84c239e5810bdf26dae8db77c3589f01bc38241b112ef94812d90705f",
+    "observations_template.json": "21ed411ed9226ce5ed563fe0e541a49b8557337d66df4a369b4c56a90dd1a1bd",
+    "paired_report.py": "7e30ac8f076b0ccc0f803177db4715363449a029f7bb78e7f7bcdf344a7c8bce",
+    "test_paired_report.py": "fde658ed840c768b95132386e09588d3193993ffc022069bcadade812215f1a2",
+    "test_results.txt": "49a9975d22a551b3e6c5da7f389097d27c67d6d79929027dcffe4d32a9859cf8",
+    "write_examples.py": "d941d089abb941d2519c008bf0c598af7239b47c3d6f7afa60ee0fbc2f5acc14"
+  }
+}

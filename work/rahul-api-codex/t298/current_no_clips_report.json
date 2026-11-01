@@ -1,0 +1,570 @@
+{
+  "schema": "t298-report-v1",
+  "kind": "measured",
+  "status": "NO_CLIPS",
+  "method_validation_status": "UNVALIDATED",
+  "validation": {
+    "crossing": {
+      "method": "crossing_readout-v2 @ 8f5df31d69c7ffeaf3a3a6fa805c6730aa11e3f9; sha256=d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c",
+      "source_sha256": "d5bb5a444754253751b145b776dce9e5a1e4124b0f63235e9337894350547e8c",
+      "referee_response_path": "fixtures/actual_289_referee_response.json",
+      "referee_response_sha256": "e1f927d84c239e5810bdf26dae8db77c3589f01bc38241b112ef94812d90705f",
+      "evidence_url": "https://github.com/srirangam-r/cosmos-swarm/blob/0f135ad/work/ro-sol1/t289/referee_response.json",
+      "passed": false,
+      "errors": [
+        "raw_referee_not_pass"
+      ],
+      "evidence_kind": "referee",
+      "actual_response_sha256": "e1f927d84c239e5810bdf26dae8db77c3589f01bc38241b112ef94812d90705f",
+      "raw_verdict": "fail"
+    },
+    "measure_pend": {
+      "method": null,
+      "source_sha256": null,
+      "referee_response_path": null,
+      "referee_response_sha256": null,
+      "evidence_url": null,
+      "passed": false,
+      "errors": [
+        "method_identity_missing",
+        "referee_evidence_missing",
+        "response_hash_missing",
+        "response_unreadable",
+        "raw_referee_not_pass"
+      ],
+      "evidence_kind": "referee",
+      "actual_response_sha256": null,
+      "raw_verdict": null
+    },
+    "pend_acf": {
+      "method": null,
+      "source_sha256": null,
+      "referee_response_path": null,
+      "referee_response_sha256": null,
+      "evidence_url": null,
+      "passed": false,
+      "errors": [
+        "method_identity_missing",
+        "referee_evidence_missing",
+        "response_hash_missing",
+        "response_unreadable",
+        "raw_referee_not_pass"
+      ],
+      "evidence_kind": "referee",
+      "actual_response_sha256": null,
+      "raw_verdict": null
+    }
+  },
+  "coverage": {
+    "planned": 18,
+    "present": 0,
+    "technical_clean": 0,
+    "accepted": 0
+  },
+  "coverage_by_scene": {
+    "real06": {
+      "planned": 9,
+      "present": 0,
+      "technical_clean": 0,
+      "accepted": 0
+    },
+    "real14": {
+      "planned": 9,
+      "present": 0,
+      "technical_clean": 0,
+      "accepted": 0
+    }
+  },
+  "coverage_by_arm": {
+    "plain": {
+      "planned": 6,
+      "present": 0,
+      "technical_clean": 0,
+      "accepted": 0
+    },
+    "proxy": {
+      "planned": 6,
+      "present": 0,
+      "technical_clean": 0,
+      "accepted": 0
+    },
+    "wrong": {
+      "planned": 6,
+      "present": 0,
+      "technical_clean": 0,
+      "accepted": 0
+    }
+  },
+  "slots": [
+    {
+      "id": "t277_real06_plain_s101",
+      "scene": "real06",
+      "seed": 101,
+      "arm": "plain",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_proxy_s101",
+      "scene": "real06",
+      "seed": 101,
+      "arm": "proxy",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_wrong_s101",
+      "scene": "real06",
+      "seed": 101,
+      "arm": "wrong",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_plain_s102",
+      "scene": "real06",
+      "seed": 102,
+      "arm": "plain",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_proxy_s102",
+      "scene": "real06",
+      "seed": 102,
+      "arm": "proxy",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_wrong_s102",
+      "scene": "real06",
+      "seed": 102,
+      "arm": "wrong",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_plain_s103",
+      "scene": "real06",
+      "seed": 103,
+      "arm": "plain",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_proxy_s103",
+      "scene": "real06",
+      "seed": 103,
+      "arm": "proxy",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real06_wrong_s103",
+      "scene": "real06",
+      "seed": 103,
+      "arm": "wrong",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_plain_s101",
+      "scene": "real14",
+      "seed": 101,
+      "arm": "plain",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_proxy_s101",
+      "scene": "real14",
+      "seed": 101,
+      "arm": "proxy",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_wrong_s101",
+      "scene": "real14",
+      "seed": 101,
+      "arm": "wrong",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_plain_s102",
+      "scene": "real14",
+      "seed": 102,
+      "arm": "plain",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_proxy_s102",
+      "scene": "real14",
+      "seed": 102,
+      "arm": "proxy",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_wrong_s102",
+      "scene": "real14",
+      "seed": 102,
+      "arm": "wrong",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_plain_s103",
+      "scene": "real14",
+      "seed": 103,
+      "arm": "plain",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_proxy_s103",
+      "scene": "real14",
+      "seed": 103,
+      "arm": "proxy",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    },
+    {
+      "id": "t277_real14_wrong_s103",
+      "scene": "real14",
+      "seed": 103,
+      "arm": "wrong",
+      "present": false,
+      "technical_clean": false,
+      "accepted": false,
+      "issues": [
+        "missing_planned_clip"
+      ],
+      "validation_issues": [],
+      "periods_s": {}
+    }
+  ],
+  "guided_pairs": [
+    {
+      "scene": "real06",
+      "seed": 101,
+      "accepted": false,
+      "proxy_id": "t277_real06_proxy_s101",
+      "wrong_id": "t277_real06_wrong_s101",
+      "raw_wrong_over_proxy": {},
+      "raw_wrong_minus_proxy_s": {},
+      "accepted_wrong_minus_proxy_s": null,
+      "accepted_wrong_over_proxy": null
+    },
+    {
+      "scene": "real06",
+      "seed": 102,
+      "accepted": false,
+      "proxy_id": "t277_real06_proxy_s102",
+      "wrong_id": "t277_real06_wrong_s102",
+      "raw_wrong_over_proxy": {},
+      "raw_wrong_minus_proxy_s": {},
+      "accepted_wrong_minus_proxy_s": null,
+      "accepted_wrong_over_proxy": null
+    },
+    {
+      "scene": "real06",
+      "seed": 103,
+      "accepted": false,
+      "proxy_id": "t277_real06_proxy_s103",
+      "wrong_id": "t277_real06_wrong_s103",
+      "raw_wrong_over_proxy": {},
+      "raw_wrong_minus_proxy_s": {},
+      "accepted_wrong_minus_proxy_s": null,
+      "accepted_wrong_over_proxy": null
+    },
+    {
+      "scene": "real14",
+      "seed": 101,
+      "accepted": false,
+      "proxy_id": "t277_real14_proxy_s101",
+      "wrong_id": "t277_real14_wrong_s101",
+      "raw_wrong_over_proxy": {},
+      "raw_wrong_minus_proxy_s": {},
+      "accepted_wrong_minus_proxy_s": null,
+      "accepted_wrong_over_proxy": null
+    },
+    {
+      "scene": "real14",
+      "seed": 102,
+      "accepted": false,
+      "proxy_id": "t277_real14_proxy_s102",
+      "wrong_id": "t277_real14_wrong_s102",
+      "raw_wrong_over_proxy": {},
+      "raw_wrong_minus_proxy_s": {},
+      "accepted_wrong_minus_proxy_s": null,
+      "accepted_wrong_over_proxy": null
+    },
+    {
+      "scene": "real14",
+      "seed": 103,
+      "accepted": false,
+      "proxy_id": "t277_real14_proxy_s103",
+      "wrong_id": "t277_real14_wrong_s103",
+      "raw_wrong_over_proxy": {},
+      "raw_wrong_minus_proxy_s": {},
+      "accepted_wrong_minus_proxy_s": null,
+      "accepted_wrong_over_proxy": null
+    }
+  ],
+  "complete_guided_pairs": 0,
+  "paired_intervals_by_tool": null,
+  "interval_suppressed_reason": "requires all6 validated guided pairs",
+  "supplied_wrong_over_proxy": 1.7000000000000002,
+  "paired_plain_comparisons": [
+    {
+      "scene": "real06",
+      "seed": 101,
+      "guided_arm": "proxy",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "seed": 101,
+      "guided_arm": "wrong",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "seed": 102,
+      "guided_arm": "proxy",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "seed": 102,
+      "guided_arm": "wrong",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "seed": 103,
+      "guided_arm": "proxy",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "seed": 103,
+      "guided_arm": "wrong",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "seed": 101,
+      "guided_arm": "proxy",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "seed": 101,
+      "guided_arm": "wrong",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "seed": 102,
+      "guided_arm": "proxy",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "seed": 102,
+      "guided_arm": "wrong",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "seed": 103,
+      "guided_arm": "proxy",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "seed": 103,
+      "guided_arm": "wrong",
+      "accepted": false,
+      "raw_by_tool": {},
+      "accepted_by_tool": null
+    }
+  ],
+  "descriptive_seed_dispersion": [
+    {
+      "scene": "real06",
+      "arm": "plain",
+      "accepted_seeds": 0,
+      "complete_seed_summary_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "arm": "proxy",
+      "accepted_seeds": 0,
+      "complete_seed_summary_by_tool": null
+    },
+    {
+      "scene": "real06",
+      "arm": "wrong",
+      "accepted_seeds": 0,
+      "complete_seed_summary_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "arm": "plain",
+      "accepted_seeds": 0,
+      "complete_seed_summary_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "arm": "proxy",
+      "accepted_seeds": 0,
+      "complete_seed_summary_by_tool": null
+    },
+    {
+      "scene": "real14",
+      "arm": "wrong",
+      "accepted_seeds": 0,
+      "complete_seed_summary_by_tool": null
+    }
+  ],
+  "limits": [
+    "Targets are prescribed periods, not observed real-scene periods.",
+    "No real-physics recovery, causal mechanism, improvement or NVIDIA-score claim is computed.",
+    "Input/builder/native-schedule/sidecar identity and media QA are separate executor gates.",
+    "Validation files must be independently checked against actual referee records.",
+    "Synthetic PASS fixtures are not evidence of planted validation."
+  ],
+  "input_sha256": "21ed411ed9226ce5ed563fe0e541a49b8557337d66df4a369b4c56a90dd1a1bd",
+  "validation_registry_sha256": "afe6a92ab6ff9cc1391bf304f110ea5d4a7bda2d1be6ed1f664ff5f996a13cf4",
+  "report_source_sha256": "7e30ac8f076b0ccc0f803177db4715363449a029f7bb78e7f7bcdf344a7c8bce"
+}
