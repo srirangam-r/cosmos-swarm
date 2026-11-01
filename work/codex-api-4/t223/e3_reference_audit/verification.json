@@ -1,0 +1,318 @@
+{
+  "checks": [
+    {
+      "name": "complete_planned_90_label_grid",
+      "passed": true
+    },
+    {
+      "name": "single_frozen_unknown",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb1dd33/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb1dd33/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb1dd33/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb1dd33/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd35/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd35/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd35/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd35/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd37/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd37/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd37/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/F/heldoutb2dd37/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb1dd33/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb1dd33/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb1dd33/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb1dd33/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd35/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd35/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd35/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd35/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd37/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd37/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd37/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/QT/heldoutb2dd37/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb1dd33/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb1dd33/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb1dd33/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb1dd33/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd35/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd35/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd35/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd35/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd37/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd37/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd37/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown0/N/heldoutb2dd37/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb1dd33/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb1dd33/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb1dd33/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb1dd33/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd35/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd35/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd35/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd35/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd37/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd37/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd37/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/F/heldoutb2dd37/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb1dd33/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb1dd33/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb1dd33/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb1dd33/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd35/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd35/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd35/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd35/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd37/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd37/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd37/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/QT/heldoutb2dd37/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb1dd33/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb1dd33/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb1dd33/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb1dd33/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd35/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd35/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd35/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd35/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd37/scalar_core_point_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd37/training_only_bank_match",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd37/heldout_label_reversal_never_changes_selection",
+      "passed": true
+    },
+    {
+      "name": "unknown1/N/heldoutb2dd37/all_selected_banks_respect_training_cutoff",
+      "passed": true
+    },
+    {
+      "name": "source_bytes_unchanged_and_original_unknown_retained",
+      "passed": true
+    },
+    {
+      "name": "heldout_only_winner_is_not_selected",
+      "passed": true
+    },
+    {
+      "name": "constant_outcome_null",
+      "passed": true
+    },
+    {
+      "name": "all_tied_training_enumerates_all120_banks",
+      "passed": true
+    }
+  ],
+  "passed": 78,
+  "software_checks_only": true
+}

@@ -98,3 +98,12 @@ include independent exact-rational SS and scalar sign enumeration. These are
 same-label robustness results with unvalidated eye codes, not new physics or
 planted validation. Label-record hashes are explicitly distinct from video
 and noise provenance. Its own `SHA256SUMS` covers the reference package.
+
+The retrospective [E3 reference audit](e3_reference_audit/README.md) checks the
+frozen training-only ranking against independent exact subset enumeration on
+the same historical labels. All splits have 8–120 equally ranked top-three
+banks; resolving those ties with held-out labels can reverse QT's apparent lift
+or inflate nominal evidence for N. The frozen tie rule gives exact
+p≥0.30 throughout. Both hypothetical unknown-label completions and descriptive
+intervals are retained. This is a rest-only leakage diagnostic, not actual E3,
+new-scene evidence, or evidence that a seed bank cannot work.
