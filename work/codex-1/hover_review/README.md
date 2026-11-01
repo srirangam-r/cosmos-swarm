@@ -1,0 +1,5 @@
+# Independent hover-bias check
+
+Run `python3 review.py > results.json` with NumPy and SciPy. Independent synthetic position observations, not rendered clips: 24 Hz, 0.30 m fall, 22 px / 0.06 m, Gaussian position noise 1 px SD, 200 draws per condition, seed 81723. Include only frames before impact. Fit the same samples by (1) a constant plus quadratic anchored at frame zero and (2) a constant plus quadratic with free nonnegative release time. Results give mean and sample SD over draws, not confidence intervals.
+
+This tests the estimator mechanism, not the tracker, referee clips, or the model. With g=9.81 and 0.5/1 s hover, the anchored g/g_true is 0.0588/0.0137 while the free-onset fit is 1.0001/0.9997. Exact magnitudes depend on the fit interval, noise, and the ball tracker; these numbers are not a replication of the original rendered-video numbers. Hinge performance at a release exactly at t=0 has a small positive boundary bias. No planted-case submission has been made for this position-only simulation.

@@ -1,0 +1,104 @@
+{
+  "method": "Position-level Gaussian centroid noise, 1 px SD; pre-impact observations; 24 fps; 0.30 m drop; scale 22px/0.06m; seed 81723. SD is across independent noisy trajectories.",
+  "rows": [
+    {
+      "g": 0.45,
+      "hover_s": 0.0,
+      "frames": 28,
+      "anchored_ratio_mean": 0.9994990866431206,
+      "anchored_ratio_sd": 0.006221048264133715,
+      "hinge_ratio_mean": 1.0071587245637355,
+      "hinge_ratio_sd": 0.013849031070059314,
+      "onset_mean_s": 0.004497484388816086,
+      "n": 200
+    },
+    {
+      "g": 0.45,
+      "hover_s": 0.5,
+      "frames": 40,
+      "anchored_ratio_mean": 0.46237494248489197,
+      "anchored_ratio_sd": 0.0022734342049814497,
+      "hinge_ratio_mean": 0.9963686383886321,
+      "hinge_ratio_sd": 0.015940780434932637,
+      "onset_mean_s": 0.4980948229065406,
+      "n": 200
+    },
+    {
+      "g": 0.45,
+      "hover_s": 1.0,
+      "frames": 52,
+      "anchored_ratio_mean": 0.2432553047560885,
+      "anchored_ratio_sd": 0.001307347143300146,
+      "hinge_ratio_mean": 1.000206891236901,
+      "hinge_ratio_sd": 0.015587700210323711,
+      "onset_mean_s": 1.0001043305848918,
+      "n": 200
+    },
+    {
+      "g": 2.0,
+      "hover_s": 0.0,
+      "frames": 14,
+      "anchored_ratio_mean": 1.0001742411384822,
+      "anchored_ratio_sd": 0.007158077836443224,
+      "hinge_ratio_mean": 1.0123562166086322,
+      "hinge_ratio_sd": 0.01727701111879623,
+      "onset_mean_s": 0.003445924165670835,
+      "n": 200
+    },
+    {
+      "g": 2.0,
+      "hover_s": 0.5,
+      "frames": 26,
+      "anchored_ratio_mean": 0.23673456360403036,
+      "anchored_ratio_sd": 0.0015179324767742178,
+      "hinge_ratio_mean": 1.0014729113143823,
+      "hinge_ratio_sd": 0.021494021880906936,
+      "onset_mean_s": 0.5002318027673462,
+      "n": 200
+    },
+    {
+      "g": 2.0,
+      "hover_s": 1.0,
+      "frames": 38,
+      "anchored_ratio_mean": 0.08658512067683664,
+      "anchored_ratio_sd": 0.0006200794725499607,
+      "hinge_ratio_mean": 0.9998526229622672,
+      "hinge_ratio_sd": 0.020678352149926825,
+      "onset_mean_s": 0.9999394160711796,
+      "n": 200
+    },
+    {
+      "g": 9.81,
+      "hover_s": 0.0,
+      "frames": 6,
+      "anchored_ratio_mean": 1.0001065739187731,
+      "anchored_ratio_sd": 0.015007089597140444,
+      "hinge_ratio_mean": 1.0219437895576762,
+      "hinge_ratio_sd": 0.03525570868515236,
+      "onset_mean_s": 0.0023334333709871457,
+      "n": 200
+    },
+    {
+      "g": 9.81,
+      "hover_s": 0.5,
+      "frames": 18,
+      "anchored_ratio_mean": 0.05884252203628972,
+      "anchored_ratio_sd": 0.0008172031375875295,
+      "hinge_ratio_mean": 1.0000995313200727,
+      "hinge_ratio_sd": 0.043546969453265146,
+      "onset_mean_s": 0.4999263271902558,
+      "n": 200
+    },
+    {
+      "g": 9.81,
+      "hover_s": 1.0,
+      "frames": 30,
+      "anchored_ratio_mean": 0.013727953149854843,
+      "anchored_ratio_sd": 0.00022550971154172242,
+      "hinge_ratio_mean": 0.9996639890800572,
+      "hinge_ratio_sd": 0.04416093688867145,
+      "onset_mean_s": 0.9998584948081818,
+      "n": 200
+    }
+  ]
+}
