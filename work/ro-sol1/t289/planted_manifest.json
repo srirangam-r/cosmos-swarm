@@ -1,0 +1,85 @@
+{
+  "retrieved_utc": "2026-11-01T17:14:01.902363+00:00",
+  "clips": [
+    {
+      "clip_id": "planted-00",
+      "fps": 24,
+      "size": "832x480",
+      "frames": 144,
+      "params": [
+        "period_s"
+      ],
+      "units": {
+        "g": "m/s^2",
+        "e": "ratio",
+        "period_s": "s",
+        "a": "m/s^2"
+      },
+      "notes": "A pendulum released from rest. String length (pivot to bob centre) 0.6 m; bob diameter 0.08 m. Static camera facing the motion plane; no lens distortion.",
+      "url": "http://board.tail0c526a.ts.net:8090/clips/planted-00.mp4",
+      "sha256": "da26d44f44e6be02f5042fb52037bc1704217d91cc5480d33a8b2e0d35cfc752",
+      "local_file": "/tmp/ro-sol1-t289/planted-00.mp4",
+      "frame0_sha256": "6cd1c6c58e37e7ad70d580b31382f0cf6ca71cb4f0ad8f28db7ea50f21474684"
+    },
+    {
+      "clip_id": "planted-07",
+      "fps": 24,
+      "size": "832x480",
+      "frames": 144,
+      "params": [
+        "period_s"
+      ],
+      "units": {
+        "g": "m/s^2",
+        "e": "ratio",
+        "period_s": "s",
+        "a": "m/s^2"
+      },
+      "notes": "A pendulum released from rest. String length (pivot to bob centre) 0.9 m; bob diameter 0.08 m. Static camera facing the motion plane; no lens distortion.",
+      "url": "http://board.tail0c526a.ts.net:8090/clips/planted-07.mp4",
+      "sha256": "dd69df931fc5e1789076beaa6ea8b79628698763ac478f02966d60df650c3f84",
+      "local_file": "/tmp/ro-sol1-t289/planted-07.mp4",
+      "frame0_sha256": "b1abb889505eb62dfa6a7ec09802f1ac3c510b2b9e90cc12bad5cb7555e79a50"
+    },
+    {
+      "clip_id": "planted-11",
+      "fps": 24,
+      "size": "832x480",
+      "frames": 144,
+      "params": [
+        "period_s"
+      ],
+      "units": {
+        "g": "m/s^2",
+        "e": "ratio",
+        "period_s": "s",
+        "a": "m/s^2"
+      },
+      "notes": "A pendulum released from rest. String length (pivot to bob centre) 1.1 m; bob diameter 0.08 m. Static camera facing the motion plane; no lens distortion.",
+      "url": "http://board.tail0c526a.ts.net:8090/clips/planted-11.mp4",
+      "sha256": "f00bc5e70f99d5008ef5e5bc144da2ccda824a7290b71f6f3dfe3a02c229e778",
+      "local_file": "/tmp/ro-sol1-t289/planted-11.mp4",
+      "frame0_sha256": "6342d50289b325a5df4df551f5f9903e1f2d4d5d913ce5ddd45de0c9c4e0bae9"
+    },
+    {
+      "clip_id": "planted-13",
+      "fps": 24,
+      "size": "832x480",
+      "frames": 144,
+      "params": [
+        "period_s"
+      ],
+      "units": {
+        "g": "m/s^2",
+        "e": "ratio",
+        "period_s": "s",
+        "a": "m/s^2"
+      },
+      "notes": "A pendulum released from rest. String length (pivot to bob centre) 0.75 m; bob diameter 0.08 m. Static camera facing the motion plane; no lens distortion.",
+      "url": "http://board.tail0c526a.ts.net:8090/clips/planted-13.mp4",
+      "sha256": "125fe3c72ab49d4be734da35948a566b87cca7a53e925802ee67edd0660362ff",
+      "local_file": "/tmp/ro-sol1-t289/planted-13.mp4",
+      "frame0_sha256": "2f8803a8c9336c992bb022d581af2987442a3a34eb1a47795aa3958f7feccd05"
+    }
+  ]
+}

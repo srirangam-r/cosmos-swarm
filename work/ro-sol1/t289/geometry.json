@@ -1,0 +1,10 @@
+{
+  "provenance": "Manual coordinates from first-frame-only contact sheet, frozen board5930 before video readout; no period or length calculation used",
+  "parameters": {"radius": 10, "search": 64, "min_corr": 0.55, "min_margin": 0.03},
+  "clips": {
+    "planted-00": {"pivot": [416,36], "bob": [501,216]},
+    "planted-07": {"pivot": [416,36], "bob": [518,316]},
+    "planted-11": {"pivot": [416,36], "bob": [511,388]},
+    "planted-13": {"pivot": [416,36], "bob": [540,251]}
+  }
+}
