@@ -1,0 +1,17 @@
+clip,frame,phase,manual_y_px
+1,40,ascending,252
+1,41,ascending,237
+1,44,descending,234
+1,45,descending,246
+2,42,ascending,242
+2,43,ascending,230
+2,45,descending,229
+2,46,descending,241
+3,42,ascending,239
+3,43,ascending,229
+3,45,descending,233
+3,46,descending,247
+4,38,ascending,242
+4,39,ascending,229
+4,41,descending,233
+4,42,descending,245

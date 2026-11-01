@@ -78,3 +78,61 @@ Next: independently label ball centers and impact windows on real clips; compare
 with the track, and validate any revised method on multi-bounce simulations and
 the referee before interpreting restitution. Do not relax the 1.5 px threshold
 or swap fitters and treat the resulting number as validated.
+
+## Frame-center audit (shift 3)
+
+An exploratory visual audit identifies a plausible source of some, but not
+necessarily all, of the above fit errors. `center_annotations.csv` contains
+16 approximate center-y estimates from four same-rig real clips (four selected
+near-apex frames per clip, two ascending and two descending). These were read
+by one annotator from frame crops with no tracker overlay
+(`blind_centers_sheet.py`); the annotator had previously examined tracked
+frames, so this is **not a blinded study**. The estimated centers are rough,
+and near-apex frames were selected after reviewing the footage. Frame numbers
+and phase labels are in the CSV; phase refers to the apparent path before and
+after the first rebound's apex, not to the first fall.
+
+As a second image-based check, `hough_centers.py` detects exactly one circle
+in a fixed 75×80-pixel ROI for each of those same selected frames, without
+using the tracker or manual center coordinates. The fixed detection settings
+were selected during this exploratory audit. `hough_tracker_overlay.png`
+shows the detected outline in green and the original tracked y in red; it is
+not evidence on blurred contact frames or other scenes. The Hough and manual
+center estimates differ by 1.56 px mean absolute (maximum 4.5 px) on these
+selected 16 frames. Neither method is planted-validated or establishes true
+instantaneous physical position during motion blur.
+
+For each clip, the difference between mean (tracker minus Hough) on the two
+ascending frames and the same mean on the two descending frames is +7.31,
++13.08, +0.95, and +6.93 px. The four-clip mean is +7.07 ± 2.48 px (sample
+SE), but this descriptive SE excludes annotation/method uncertainty, and the
+clips share one setup; the frame/phase choice was exploratory. The prior
+1.5 px per-segment rejection is thus not simply evidence of different
+parabolic curvatures: the measured image-centroid mismatch is large on several
+clearer frames as well. The result does not establish which component of the
+tracker causes the shift.
+
+As a sensitivity exercise, `center_substitution.py` replaces only those four
+tracked y values in each clip with the Hough values and runs the original
+ordinary shared-curvature diagnostic on the same segment indices. Overall
+in-sample RMSE changes from 3.99/4.37/3.48/3.82 to 3.74/3.39/2.59/2.61 px,
+respectively (mean change −0.83 px). This changes observations on a
+hand-selected subset and is **not** an out-of-sample control, a validated
+tracker, or a restitution measurement. All fits remain above the original
+per-segment 1.5 px threshold even under this partial substitution. The full
+tool uses robust fitting, unlike this sensitivity check. Contact centers and
+other frames were not corrected; a clean new tracker must be tested on
+held-out synthetic multi-bounce clips and the referee before use.
+
+Reproduce from the repository root (Python, NumPy, SciPy, OpenCV 4.13.0):
+
+```bash
+for ball in 1 2 3 4; do
+  python3 work/codex-api-3/task36/blind_centers_sheet.py \
+    "work/agy-4/task72_score_review/real_control_clips/real_ball_${ball}_f0_93f.mp4" \
+    --out "work/codex-api-3/task36/real${ball}_blind.png"
+done
+python3 work/codex-api-3/task36/compare_centers.py > work/codex-api-3/task36/center_comparison.json
+python3 work/codex-api-3/task36/hough_centers.py > work/codex-api-3/task36/hough_comparison.json
+python3 work/codex-api-3/task36/center_substitution.py > work/codex-api-3/task36/center_substitution.json
+```

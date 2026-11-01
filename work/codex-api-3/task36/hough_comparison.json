@@ -1,0 +1,212 @@
+{
+  "clips": {
+    "1": {
+      "entries": [
+        {
+          "frame": 40,
+          "phase": "ascending",
+          "hough_x_px": 296.5,
+          "hough_y_px": 254.5,
+          "radius_px": 14.100000381469727,
+          "manual_y_px": 252.0,
+          "tracker_y_px": 261.16,
+          "tracker_minus_hough_px": 6.66,
+          "hough_minus_manual_px": 2.5
+        },
+        {
+          "frame": 41,
+          "phase": "ascending",
+          "hough_x_px": 295.5,
+          "hough_y_px": 237.5,
+          "radius_px": 16.200000762939453,
+          "manual_y_px": 237.0,
+          "tracker_y_px": 250.68,
+          "tracker_minus_hough_px": 13.18,
+          "hough_minus_manual_px": 0.5
+        },
+        {
+          "frame": 44,
+          "phase": "descending",
+          "hough_x_px": 299.5,
+          "hough_y_px": 234.5,
+          "radius_px": 16.600000381469727,
+          "manual_y_px": 234.0,
+          "tracker_y_px": 242.34,
+          "tracker_minus_hough_px": 7.84,
+          "hough_minus_manual_px": 0.5
+        },
+        {
+          "frame": 45,
+          "phase": "descending",
+          "hough_x_px": 302.5,
+          "hough_y_px": 245.5,
+          "radius_px": 13.399999618530273,
+          "manual_y_px": 246.0,
+          "tracker_y_px": 242.88,
+          "tracker_minus_hough_px": -2.62,
+          "hough_minus_manual_px": -0.5
+        }
+      ],
+      "ascending_bias_px": 9.92,
+      "descending_bias_px": 2.61,
+      "phase_difference_px": 7.3100000000000005
+    },
+    "2": {
+      "entries": [
+        {
+          "frame": 42,
+          "phase": "ascending",
+          "hough_x_px": 294.5,
+          "hough_y_px": 242.5,
+          "radius_px": 15.600000381469727,
+          "manual_y_px": 242.0,
+          "tracker_y_px": 257.98,
+          "tracker_minus_hough_px": 15.48,
+          "hough_minus_manual_px": 0.5
+        },
+        {
+          "frame": 43,
+          "phase": "ascending",
+          "hough_x_px": 296.5,
+          "hough_y_px": 231.5,
+          "radius_px": 15.5,
+          "manual_y_px": 230.0,
+          "tracker_y_px": 244.54,
+          "tracker_minus_hough_px": 13.04,
+          "hough_minus_manual_px": 1.5
+        },
+        {
+          "frame": 45,
+          "phase": "descending",
+          "hough_x_px": 298.5,
+          "hough_y_px": 228.5,
+          "radius_px": 15.199999809265137,
+          "manual_y_px": 229.0,
+          "tracker_y_px": 234.5,
+          "tracker_minus_hough_px": 6.0,
+          "hough_minus_manual_px": -0.5
+        },
+        {
+          "frame": 46,
+          "phase": "descending",
+          "hough_x_px": 299.5,
+          "hough_y_px": 237.5,
+          "radius_px": 14.600000381469727,
+          "manual_y_px": 241.0,
+          "tracker_y_px": 233.86,
+          "tracker_minus_hough_px": -3.64,
+          "hough_minus_manual_px": -3.5
+        }
+      ],
+      "ascending_bias_px": 14.26,
+      "descending_bias_px": 1.18,
+      "phase_difference_px": 13.08
+    },
+    "3": {
+      "entries": [
+        {
+          "frame": 42,
+          "phase": "ascending",
+          "hough_x_px": 295.5,
+          "hough_y_px": 236.5,
+          "radius_px": 13.800000190734863,
+          "manual_y_px": 239.0,
+          "tracker_y_px": 234.06,
+          "tracker_minus_hough_px": -2.44,
+          "hough_minus_manual_px": -2.5
+        },
+        {
+          "frame": 43,
+          "phase": "ascending",
+          "hough_x_px": 297.5,
+          "hough_y_px": 229.5,
+          "radius_px": 16.100000381469727,
+          "manual_y_px": 229.0,
+          "tracker_y_px": 235.72,
+          "tracker_minus_hough_px": 6.22,
+          "hough_minus_manual_px": 0.5
+        },
+        {
+          "frame": 45,
+          "phase": "descending",
+          "hough_x_px": 298.5,
+          "hough_y_px": 231.5,
+          "radius_px": 15.0,
+          "manual_y_px": 233.0,
+          "tracker_y_px": 239.08,
+          "tracker_minus_hough_px": 7.58,
+          "hough_minus_manual_px": -1.5
+        },
+        {
+          "frame": 46,
+          "phase": "descending",
+          "hough_x_px": 302.5,
+          "hough_y_px": 246.5,
+          "radius_px": 13.600000381469727,
+          "manual_y_px": 247.0,
+          "tracker_y_px": 240.81,
+          "tracker_minus_hough_px": -5.69,
+          "hough_minus_manual_px": -0.5
+        }
+      ],
+      "ascending_bias_px": 1.89,
+      "descending_bias_px": 0.9449999999999998,
+      "phase_difference_px": 0.9450000000000001
+    },
+    "4": {
+      "entries": [
+        {
+          "frame": 38,
+          "phase": "ascending",
+          "hough_x_px": 294.5,
+          "hough_y_px": 241.5,
+          "radius_px": 17.200000762939453,
+          "manual_y_px": 242.0,
+          "tracker_y_px": 254.07,
+          "tracker_minus_hough_px": 12.57,
+          "hough_minus_manual_px": -0.5
+        },
+        {
+          "frame": 39,
+          "phase": "ascending",
+          "hough_x_px": 294.5,
+          "hough_y_px": 230.5,
+          "radius_px": 16.299999237060547,
+          "manual_y_px": 229.0,
+          "tracker_y_px": 236.53,
+          "tracker_minus_hough_px": 6.03,
+          "hough_minus_manual_px": 1.5
+        },
+        {
+          "frame": 41,
+          "phase": "descending",
+          "hough_x_px": 297.5,
+          "hough_y_px": 229.5,
+          "radius_px": 15.0,
+          "manual_y_px": 233.0,
+          "tracker_y_px": 237.19,
+          "tracker_minus_hough_px": 7.69,
+          "hough_minus_manual_px": -3.5
+        },
+        {
+          "frame": 42,
+          "phase": "descending",
+          "hough_x_px": 299.5,
+          "hough_y_px": 240.5,
+          "radius_px": 13.600000381469727,
+          "manual_y_px": 245.0,
+          "tracker_y_px": 237.56,
+          "tracker_minus_hough_px": -2.94,
+          "hough_minus_manual_px": -4.5
+        }
+      ],
+      "ascending_bias_px": 9.3,
+      "descending_bias_px": 2.375,
+      "phase_difference_px": 6.925000000000001
+    }
+  },
+  "mean_phase_difference_px": 7.065,
+  "sample_se_px": 2.4784781957214523,
+  "hough_manual_mean_abs_px": 1.5625,
+  "hough_manual_max_abs_px": 4.5
+}

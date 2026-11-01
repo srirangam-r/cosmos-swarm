@@ -1,0 +1,78 @@
+{
+  "clips": {
+    "1": {
+      "substituted_frames": [
+        40,
+        41,
+        44,
+        45
+      ],
+      "original_training_rmse_px": 3.988855988264003,
+      "substituted_training_rmse_px": 3.7423270963760795,
+      "original_segment_rmse_px": [
+        3.083043545287854,
+        4.586460919868869
+      ],
+      "substituted_segment_rmse_px": [
+        2.6075434510186413,
+        4.4463013274098895
+      ]
+    },
+    "2": {
+      "substituted_frames": [
+        42,
+        43,
+        45,
+        46
+      ],
+      "original_training_rmse_px": 4.372726312684545,
+      "substituted_training_rmse_px": 3.3946073392211336,
+      "original_segment_rmse_px": [
+        2.722667101645832,
+        5.552346770952175
+      ],
+      "substituted_segment_rmse_px": [
+        2.100340719399148,
+        4.316860761875676
+      ]
+    },
+    "3": {
+      "substituted_frames": [
+        42,
+        43,
+        45,
+        46
+      ],
+      "original_training_rmse_px": 3.475854786165355,
+      "substituted_training_rmse_px": 2.5854040829793576,
+      "original_segment_rmse_px": [
+        2.939656182518722,
+        3.9397404124633226
+      ],
+      "substituted_segment_rmse_px": [
+        2.8567753268252187,
+        2.2819866951004193
+      ]
+    },
+    "4": {
+      "substituted_frames": [
+        38,
+        39,
+        41,
+        42
+      ],
+      "original_training_rmse_px": 3.8154769993335758,
+      "substituted_training_rmse_px": 2.6144086140453457,
+      "original_segment_rmse_px": [
+        2.6539938121182636,
+        4.698089644751903
+      ],
+      "substituted_segment_rmse_px": [
+        2.4100562786029207,
+        2.803906834464307
+      ]
+    }
+  },
+  "mean_training_delta_px": -0.8290417384563906,
+  "sample_se_px": 0.20488210539168233
+}
