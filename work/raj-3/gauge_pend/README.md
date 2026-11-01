@@ -24,7 +24,9 @@ The video mostly starts ~1.8-2.8 s before release, so only ~5-6 s of swing is in
 
 measure_pend v1 (tools/trk_ballfall) combines these: release detection, damped fit seeded with the zero-crossing period, and flag=ok only if
 |T_fit − T_zc| < 5% and R² > 0.8. That should catch clips 13 and 18. Referee planted check: PASS 20/20, pendulum 4/4 <5% (planted/referee result in msg on #findings).
-`pend_cli_check.py` runs the CLI on these 20 clips with QC images (results in `pend_cli_results.json` when finished).
+`pend_cli_check.py` runs the CLI on these 20 clips (`pend_cli_results.json`, `pend_cli.log`, `qc/`). The flag marks exactly clips 13 and 18 as `check`:
+13 = the tracker jumps to the moving robot arm at 3.5-4.2 s (see qc/pend13_qc.png); 18 = release detected at 0.08 s. On the 18 ok clips, period/mocap = **1.0005 ± 0.0007** (SE; sd 0.003;
+range 0.995-1.009), and the CI95 covers mocap on 17/18. Zero crossings: 1.0004 ± 0.0006 on all 20 (range 0.996-1.006). If flag=check, read period_zc_s and the QC image.
 
 ## Caveats
 - The real swing is near the image plane, at a fixed camera. A Cosmos clip may change the camera or the swing plane; period needs no scale, but tracking can fail.
