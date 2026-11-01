@@ -47,3 +47,4 @@ Coded through 86bd22 (18/48) at 10:37 UTC shift 30. Order = sorted hex list; con
 - fc15bf: robot lifts an orange cone out of a sink; the cone is visible at f92 in all rows (C: the cone grows larger f72-92, morph) -> all N.
 - fc1641: popsicle close-up -> all N.
 All 48 coded at ~10:46 UTC shift 31, before unblinding.
+- RECHECK 06fecc A (zoom z_06fecc.jpg, still blind): orange cone visible at the left edge under the gripper at f88-92 -> gone N stands (no change).
