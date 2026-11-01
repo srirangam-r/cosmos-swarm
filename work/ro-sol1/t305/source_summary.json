@@ -1,0 +1,70 @@
+{
+  "type": "arithmetic reconstruction of reported rows; no video remeasurement",
+  "guided_rows": 16,
+  "groups": {
+    "phys_t60": {
+      "n_cells": 4,
+      "mean_reported_mp_T_s": 1.186298864659226,
+      "sample_sd_across_cells_s": 0.0006352307023339961,
+      "min_s": 1.1857091496270629,
+      "max_s": 1.1869752818557853,
+      "check_cells": {}
+    },
+    "phys_t90": {
+      "n_cells": 4,
+      "mean_reported_mp_T_s": 1.1866191567025337,
+      "sample_sd_across_cells_s": 0.008572887405643135,
+      "min_s": 1.179683550927663,
+      "max_s": 1.1987068516492618,
+      "check_cells": {}
+    },
+    "x17_t60": {
+      "n_cells": 4,
+      "mean_reported_mp_T_s": 2.0185729123176617,
+      "sample_sd_across_cells_s": 0.001263576216855833,
+      "min_s": 2.0174679334841046,
+      "max_s": 2.020243967006777,
+      "check_cells": {}
+    },
+    "x17_t90": {
+      "n_cells": 4,
+      "mean_reported_mp_T_s": 2.0022760666408086,
+      "sample_sd_across_cells_s": 0.05728770006837444,
+      "min_s": 1.9195433959246213,
+      "max_s": 2.049056631404671,
+      "check_cells": {
+        "sp_pend10_x17_t90_s1": {
+          "mp_flag": "check",
+          "mp_r2": 0.1866109882373318
+        }
+      }
+    }
+  },
+  "plain_one_seed_each": {
+    "px_pend10_base_s1": 0.8432198858346239,
+    "px_pend11_base_s1": 0.8326086008235334
+  },
+  "flicker_fields": [],
+  "sources": {
+    "work/ro-3/task252/results_sp.json": {
+      "commit": "50409ebbc8b25c1a6ef0b22157c658247e6b2751",
+      "git_blob": "6c71faa5af0add5989c65730ca4ff90dd156210e",
+      "sha256": "623472ad76a3766251385b1b993466403e5b3fe467a663085817d14e46fabda2"
+    },
+    "work/ro-3/task252/results_px.json": {
+      "commit": "50409ebbc8b25c1a6ef0b22157c658247e6b2751",
+      "git_blob": "416571300d524a189ac1e60d518e095f4a0711ce",
+      "sha256": "8220eeb92c7b356d26ef847441c7c4a55699a95875a38d1cf1277e7fd37799c3"
+    },
+    "work/ro-3/task252/jobs_simproxy.jsonl": {
+      "commit": "50409ebbc8b25c1a6ef0b22157c658247e6b2751",
+      "git_blob": "0edeaf911b09eb1b78a0fa37c2764462ca35f20c",
+      "sha256": "df13b9f34462f72f6d187bedbc4ea1abeb701aedae144c294716b351f999671b"
+    },
+    "work/ro-3/task252/make_simproxy.py": {
+      "commit": "50409ebbc8b25c1a6ef0b22157c658247e6b2751",
+      "git_blob": "6bf497e4d5b3fd7e64f636ca882edddbce538cbe",
+      "sha256": "77154b88f5dead46b11f5a7384d37d5664c1c9899b66c6cf8d7dddf6b1273994"
+    }
+  }
+}

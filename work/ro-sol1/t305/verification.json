@@ -1,0 +1,155 @@
+{
+  "checks": [
+    {
+      "name": "reported table phys_t60",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reported table phys_t90",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reported table x17_t60",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reported table x17_t90",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "byte exact archive work/ro-3/task252/results_sp.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "byte exact archive work/ro-3/task252/results_px.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "byte exact archive work/ro-3/task252/jobs_simproxy.jsonl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "byte exact archive work/ro-3/task252/make_simproxy.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all 16 reported guided rows retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "flagged control retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "plain controls rounded from source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no flicker fields in source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "relative link native receipts",
+      "pass": true,
+      "detail": "work/raj-demos/sidecars"
+    },
+    {
+      "name": "relative link Runtime evidence",
+      "pass": true,
+      "detail": "work/ro-sol1/t303/README.md"
+    },
+    {
+      "name": "pinned link guided rows",
+      "pass": true,
+      "detail": "https://github.com/srirangam-r/cosmos-swarm/blob/50409ebbc8b25c1a6ef0b22157c658247e6b2751/work/ro-3/task252/results_sp.json"
+    },
+    {
+      "name": "pinned link plain rows",
+      "pass": true,
+      "detail": "https://github.com/srirangam-r/cosmos-swarm/blob/50409ebbc8b25c1a6ef0b22157c658247e6b2751/work/ro-3/task252/results_px.json"
+    },
+    {
+      "name": "pinned link job requests",
+      "pass": true,
+      "detail": "https://github.com/srirangam-r/cosmos-swarm/blob/50409ebbc8b25c1a6ef0b22157c658247e6b2751/work/ro-3/task252/jobs_simproxy.jsonl"
+    },
+    {
+      "name": "relative link Source and status record",
+      "pass": true,
+      "detail": "work/ro-sol1/t305/README.md"
+    },
+    {
+      "name": "relative link 297",
+      "pass": true,
+      "detail": "work/ro-sol1/t297/README.md"
+    },
+    {
+      "name": "relative link 302",
+      "pass": true,
+      "detail": "work/ro-sol1/t302/README.md"
+    },
+    {
+      "name": "relative link 303",
+      "pass": true,
+      "detail": "work/ro-sol1/t303/README.md"
+    },
+    {
+      "name": "relative link 298 ledger",
+      "pass": true,
+      "detail": "work/rahul-api-codex/t298/current_no_clips_report.json"
+    },
+    {
+      "name": "relative link 289 record",
+      "pass": true,
+      "detail": "work/ro-sol1/t289/README.md"
+    },
+    {
+      "name": "only tracked README changed",
+      "pass": true,
+      "detail": [
+        "tools/nano_phys/README.md"
+      ]
+    },
+    {
+      "name": "failed266 owner status retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no unsupported old benchmark badge",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "passed": 26,
+  "failed": 0,
+  "availability": [
+    {
+      "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+      "checked_utc": "2026-11-01T17:47:38.237053+00:00",
+      "http_status": 200,
+      "bytes": 47334,
+      "sha256": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36"
+    },
+    {
+      "url": "http://board.tail0c526a.ts.net:8031/demos",
+      "checked_utc": "2026-11-01T17:47:38.360424+00:00",
+      "http_status": 200,
+      "bytes": 569,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
+    }
+  ],
+  "limits": "Documentation/source arithmetic only; no model, measurement, browser, current player/media or physical validation."
+}
