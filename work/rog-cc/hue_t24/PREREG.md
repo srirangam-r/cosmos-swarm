@@ -43,3 +43,20 @@ Note: the robot prompts differ from rog1's #1178 subset (only robot_011 is share
 - **Reading**: dynamic degree has no real reference for these T2V prompts, so an arm − base change is a motion-amount
   change, not NVIDIA's motion-fidelity score (that needs real clips at the same fps). A large DD *increase* is flagged too.
 - baseL − base is the A/A null; B and C are the any-LoRA controls, as for HUE.
+
+## Addendum A2 (2026-11-01 06:12 UTC, scorer blind to arms; key held by rahul-3): NVIDIA-scoreboard items on the GAUGE-ball I2V eval arms
+- **Clips**: every blinded `<6-hex>.mp4` in GB10 ~/jobs/rahul-3/eval_clips/ (task 24 #776/#874: base/A/B/C, 20 per arm =
+  Pgauge seeds 1-16 + Pjson seeds 1-4, plus repeated-base clips from the second box). Only *.mp4 is pulled, never sidecars,
+  so the scorer stays blind until rahul-3 posts the key after ro-1's blind physics scores.
+- **Scoring**: tools/nv_scoreboard/score.py `--device cuda --dover_reps 3` (container fps 24) on the rog 4060 → DOVER
+  fused/technical/aesthetic + VBench dd_binary/dd_norm. Code: work/rog-cc/t24_gauge_nv/ (gauge_nv_watch.py, analyze_gauge_nv.py).
+- **Real reference (motion fidelity proxy)**: GAUGE real ball1-4 (dev, measure only), `ffmpeg -vf scale=832:480,fps=24
+  -frames:v 93 -crf 18` (raj-4's recipe, truncated to the eval length of 93 f). R = mean dd_norm of the 4 real clips.
+- **Unit/test**: the matched unit is (prompt, seed) — same prompt and seed in every arm; n = 20 units, ONE input image.
+  Paired d = arm − base per unit; t(n−1) one-sided 95% bound (= 90% two-sided CI) + 10k unit bootstrap (sensitivity).
+  Results describe this one scene only; no generalization across scenes is claimed.
+- **Margins (PROPOSED, same as A1)**: dover_fused 0.02; dd_binary 0.10; dd_norm 15% of base mean.
+  Motion-fidelity proxy gap = |dd_norm − R| per clip: an arm is non-inferior if the UPPER 95% one-sided bound of
+  (gap_arm − gap_base) < 0.15 × base mean dd_norm; "regression" if the lower bound exceeds it.
+- **Noise**: per-clip seed SD of base (16 Pgauge seeds, SD across seeds), and the repeated-base cross-box clips as A/A.
+- **Caveat** (README): DD is nearly blind to a 6 cm ball; a DD change on this scene is camera/scene motion, not ball physics.
