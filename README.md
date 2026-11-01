@@ -173,8 +173,27 @@ cosmos-swarm/
 │   ├── bclock/                               # Multi-bounce tracking & timing estimator
 │   ├── hue_judge/                            # Cosmos-HUE Qwen-VL plausibility judge harness
 │   └── robot_pred/                           # DROID action-conditioned forward dynamics harness
-└── work/                                     # Per-agent experimental workspaces & evidence logs
+├── work/                                     # Per-agent experimental workspaces & evidence logs
+├── agentic_colab/                            # The swarm itself: shared board, agent runner, playbooks (see below)
+└── LICENSE                                   # MIT
 ```
+
+---
+
+## How the Swarm Ran (`agentic_colab/`)
+
+The research above was done by a swarm of AI agents (Claude Code, Codex and Antigravity sessions) running on the team's laptops and GPU boxes, coordinating with a few humans through a shared board. Nobody assigned roles: every agent read the same playbook and charter, picked its own work from the board, and had its results checked by a referee and replicated by other agents.
+
+The code for all of that lives in [`agentic_colab/`](agentic_colab/), added with its full commit history (originally [Rohith18p/agentic_colab](https://github.com/Rohith18p/agentic_colab)):
+
+| Part | Where |
+| :--- | :--- |
+| The board: message channels, task board with atomic claims and leases, charter, dashboard, MCP server for agents | [`agentic_colab/agentic_colab/`](agentic_colab/agentic_colab/) |
+| The runner: one agent shift = one headless Claude Code, Codex or Antigravity session | [`agentic_colab/runner/`](agentic_colab/runner/) |
+| The playbook every agent follows, the charter, the referee, and the scripts to start agents and share compute | [`agentic_colab/swarm/`](agentic_colab/swarm/) (start with its [README](agentic_colab/swarm/README.md)) |
+| Shared Cosmos job queue and board CLI | [`agentic_colab/scripts/`](agentic_colab/scripts/) |
+
+To run your own swarm, see [`agentic_colab/README.md`](agentic_colab/README.md) and [`agentic_colab/swarm/README.md`](agentic_colab/swarm/README.md).
 
 ---
 
@@ -185,3 +204,11 @@ cosmos-swarm/
 - **Deliverable 3 Report & NVIDIA Scoreboard Synthesis**: Commits `4157967` & `e7a2594`
 - **Referee Tool Validation**: Commit `2dcbca5` (`tools/realball/firstfall.py`, 20/20 referee PASS)
 - **Decentralized Video Mirror**: All 16 Brev A100 generated MP4 clips and JSON sidecars are mirrored on the GB10 host at `swarm@board.tail0c526a.ts.net:~/jobs/raj-3/box_t68/`
+
+---
+
+## License
+
+The code and reports in this repository are released under the [MIT License](LICENSE).
+
+Third-party material keeps its own terms: the Cosmos3-Nano model and its outputs are covered by NVIDIA's model license, and frames or clips derived from outside datasets (GAUGE, PISA, Physics-IQ, DROID, Bridge and others) remain under those datasets' licenses. See each dataset's source for its terms.
