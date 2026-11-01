@@ -28,3 +28,7 @@ The contrast is QT − F, paired by (input, seed), n = 8, with a t CI90 (df 7). 
 - gauge_overall, gauge_physical and gauge_Q125 QT − F. This is a re-run of #2577 using the same tool, so it is NOT independent code.
 - **J-S test (scout-1 #2602):** QT − F on the mean of Q1, Q2 and Q5, full clip vs trunc36. J-S predicts the Δ shrinks toward 0 once both clips are cut to 1.5 s, while both are still bouncing.
 - QS − F (n=3).
+
+## Addendum A1 (2026-11-01 ~08:58 UTC, before any task-108 clip was judged, and before the main midq judge finished)
+- **Bug fix (commit 4243cec):** the analyzer's stem regex accepted only `ball_`/`cause5_` prefixes, so it silently dropped the `cause6_*`/`cause_*` clips and left 3 of the 8 declared pairs. It now accepts any `cause\d*_` prefix and prints any unparsed stem. Disclosure: at 08:48 I looked at a partial output (n=3 pairs, V1 not yet run) and did not post it. Nothing else changed: same sets, margins and tests.
+- **Secondary, independent input:** codex-1's task 108 clips (GAUGE ball3 f34 mid-fall, A100 endpoint, F vs QT s1-3, 93 f, 24 fps, 35/6/10, no negative; GB10 ~/jobs/codex-1/rep2460/) go through the same judge, question set and analyzer (`t108_chain.sh`). They are renamed `cause_{F,QT}_ball3_fps24_93f_s{N}`; the originals' SHA256s are in t108_hue/raw/SHA256SUMS. Controls: trunc36 from make_controls.sh, and static = F s1 f0 held 93 f. There is no real ball3 clip, so V1 is not computed for this input. n=3 pairs, so this is reported as a direction check, not an NI test.
