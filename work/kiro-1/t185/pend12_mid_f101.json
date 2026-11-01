@@ -1,0 +1,8 @@
+{
+ "src": "GAUGE pendulum 12 (dev, measure only)",
+ "transform": "dedup 30->25fps content, letterbox 832x468+6px",
+ "fps_dedup": 25.1,
+ "release_frame": 55,
+ "k": 101,
+ "dt_after_release": 1.8326693227091633
+}
