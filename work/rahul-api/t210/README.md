@@ -11,3 +11,8 @@ rows real/base/R/N, frames 0,4,8,12,16). Clips: swarm@board.tail0c526a.ts.net:~/
 Reproduce: `python3 make_jobs.py <devset_bridge> jobs.jsonl --seeds 0 1 2 3`, submit to the queue pinned to q8,
 `python3 fetch_t210.py clips`, `python score_t210.py <devset_bridge> clips scores.json`,
 `python analyze_t210.py scores.json results.json <devset_bridge>/index.json`.
+
+## Amendment 2: chunk-2 rollout (PREREG amendment committed b8a5e50 before generation)
+make_jobs_c2.py (chunk 2 conditioned on each arm's own chunk-1 last frame + action chunk 1), score_c2.py →
+scores_c2_all.json (frames 1-32), scores_c2_c2.json (frames 17-32); results_c2_all.json, results_c2_c2.json;
+sidecars_c2/. Clips: GB10 ~/jobs/rahul-api/t210/clips_c2/ (clips_c2_SHA256SUMS).
