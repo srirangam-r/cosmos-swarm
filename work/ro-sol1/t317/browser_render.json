@@ -1,0 +1,274 @@
+{
+  "utc": "2026-11-01T18:13:45.382Z",
+  "preview_sha256": "e9e0e2548b3f39d380e0913b56525f287f28998638988c9beb2e76f954bd2def",
+  "mode": "headless installed Brave, anonymous CDP pipes, static local page; no video playback",
+  "renders": [
+    {
+      "name": "desktop",
+      "state": {
+        "images": [
+          {
+            "src": "dense/frames_00_11.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_12_23.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_24_35.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_36_47.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_48_59.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_60_71.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_72_83.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_84_92.webp",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P600_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P600_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P900_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P900_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1186_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1186_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1500_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1500_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P2000_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P2000_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P600_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P600_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P900_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P900_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1186_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1186_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1500_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1500_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P2000_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P2000_s2.jpg",
+            "ok": true
+          }
+        ],
+        "dense": 8,
+        "cards": 20,
+        "overflow": false
+      }
+    },
+    {
+      "name": "desktop",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 12087,
+      "text": "Task 317 · frozen author publication 823a546 · presentation artifact\n\nPendulum dial: inspect the visual evidence\nSupplied-motion demonstration. Reader disagreement remains unresolved.\n\nThe author tested 20 outputs from two scenes and two seeds. This index reuses every published sampled sheet; it adds no new experiment or period estimate. The requested third scene is absent. Prescribed period adherence does not establish a recovered physical constant or NVIDIA nonregression.\n\nEvery frame of the disputed clip\nAll 20 author sheets\nPixel/source manifest\nDisputed clip: pend11 · prescribed 0.600 s · seed 2\n\nAuthor-reported MP 0.293 s and ACF 0.599 s disagree. This page does not select a winner. Each panel below stores consecutive decoded frames at 832×480 with labels outside the image. Open a strip for native resolution. All 93 frames are retained, including frame 0 and frame 92.\n\n24 fps; frame indices 0–92, t=i/24 s, final timestamp 3.833333 s. Exact rational times and native RGB hashes are in the manifest. Lossless WebP encoding round-trips every stored frame rectangle exactly. Labels and browser scaling are presentation only.\n\nFrames 0–11; every frame, native pixels stored.\nFrames 12–23; every frame, native pixels stored.\nFrames 24–35; every frame, native pixels stored.\nFrames 36–47; every frame, native pixels stored.\nFrames 48–59; every frame, native pixels stored.\nFrames 60–71; every frame, native pixels stored.\nFrames 72–83; every frame, native pixels stored.\nFrames 84–92; every frame, native pixels stored.\nAll 20 original author contact sheets\n\nThese JPEGs are the unchanged author artifacts, sampled every 6 frames (0.25 s). They may obscure faster motion; use the dense strips above for the disputed clip. Numbers and flags below are copied from the frozen author JSON, not recomputed or endorsed. Task 316 owns the independent numerical/gate audit.\n\ndial_pend10_P600_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.6026288704506837 s (ok); ACF: 0.6016219779849052 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P600_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.6019736735076409 s (ok); ACF: 0.5992990645269552 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P900_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.8950706482920561 s (ok); ACF: 0.8993841384847959 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P900_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.9042172786286883 s (ok); ACF: 0.9075062231471142 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1186_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.182273603674467 s (ok); ACF: 1.1811879612505436 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1186_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.1845074920430851 s (ok); ACF: 1.1817831993103027 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1500_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.5087289653928184 s (ok); ACF: 1.501738225730757 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1500_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.5048469258386907 s (ok); ACF: 1.4987799419711034 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P2000_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 2.0326310185145635 s (ok); ACF: 2.025206250449022 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P2000_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.9870474091995236 s (ok); ACF: 1.9859992004930973 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P600_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.6026981433036006 s (ok); ACF: 0.6059928374985853 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P600_s2\nREADER DISAGREEMENT — unresolved\n\nMP: 0.293409716439193 s (check); ACF: 0.5986177946130434 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P900_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.8881285729170028 s (ok); ACF: 0.8895741539696852 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P900_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.9057016099073153 s (ok); ACF: 0.9044096941749254 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1186_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.1841628385754144 s (ok); ACF: 1.1851045141617458 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1186_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.1770080990067688 s (ok); ACF: 1.173856396228075 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1500_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.4944464853880615 s (ok); ACF: 1.4931214954704046 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1500_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.5035528542717256 s (ok); ACF: 1.4981188507129748 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P2000_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 2.0202677900363804 s (check); ACF: 2.03073051571846 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P2000_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.9856981743828137 s (check); ACF: 1.9952619172011812 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\nNo model generation, clip remeasurement, referee submission, physical certification, remote deployment or live media playback was performed for this artifact."
+    },
+    {
+      "name": "mobile",
+      "state": {
+        "images": [
+          {
+            "src": "dense/frames_00_11.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_12_23.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_24_35.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_36_47.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_48_59.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_60_71.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_72_83.webp",
+            "ok": true
+          },
+          {
+            "src": "dense/frames_84_92.webp",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P600_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P600_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P900_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P900_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1186_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1186_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1500_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P1500_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P2000_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend10_P2000_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P600_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P600_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P900_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P900_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1186_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1186_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1500_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P1500_s2.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P2000_s1.jpg",
+            "ok": true
+          },
+          {
+            "src": "../../ro-3/task265/qc_dial/sheet_dial_pend11_P2000_s2.jpg",
+            "ok": true
+          }
+        ],
+        "dense": 8,
+        "cards": 20,
+        "overflow": false
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "height": 13875,
+      "text": "Task 317 · frozen author publication 823a546 · presentation artifact\n\nPendulum dial: inspect the visual evidence\nSupplied-motion demonstration. Reader disagreement remains unresolved.\n\nThe author tested 20 outputs from two scenes and two seeds. This index reuses every published sampled sheet; it adds no new experiment or period estimate. The requested third scene is absent. Prescribed period adherence does not establish a recovered physical constant or NVIDIA nonregression.\n\nEvery frame of the disputed clip\nAll 20 author sheets\nPixel/source manifest\nDisputed clip: pend11 · prescribed 0.600 s · seed 2\n\nAuthor-reported MP 0.293 s and ACF 0.599 s disagree. This page does not select a winner. Each panel below stores consecutive decoded frames at 832×480 with labels outside the image. Open a strip for native resolution. All 93 frames are retained, including frame 0 and frame 92.\n\n24 fps; frame indices 0–92, t=i/24 s, final timestamp 3.833333 s. Exact rational times and native RGB hashes are in the manifest. Lossless WebP encoding round-trips every stored frame rectangle exactly. Labels and browser scaling are presentation only.\n\nFrames 0–11; every frame, native pixels stored.\nFrames 12–23; every frame, native pixels stored.\nFrames 24–35; every frame, native pixels stored.\nFrames 36–47; every frame, native pixels stored.\nFrames 48–59; every frame, native pixels stored.\nFrames 60–71; every frame, native pixels stored.\nFrames 72–83; every frame, native pixels stored.\nFrames 84–92; every frame, native pixels stored.\nAll 20 original author contact sheets\n\nThese JPEGs are the unchanged author artifacts, sampled every 6 frames (0.25 s). They may obscure faster motion; use the dense strips above for the disputed clip. Numbers and flags below are copied from the frozen author JSON, not recomputed or endorsed. Task 316 owns the independent numerical/gate audit.\n\ndial_pend10_P600_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.6026288704506837 s (ok); ACF: 0.6016219779849052 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P600_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.6019736735076409 s (ok); ACF: 0.5992990645269552 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P900_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.8950706482920561 s (ok); ACF: 0.8993841384847959 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P900_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.9042172786286883 s (ok); ACF: 0.9075062231471142 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1186_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.182273603674467 s (ok); ACF: 1.1811879612505436 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1186_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.1845074920430851 s (ok); ACF: 1.1817831993103027 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1500_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.5087289653928184 s (ok); ACF: 1.501738225730757 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P1500_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.5048469258386907 s (ok); ACF: 1.4987799419711034 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P2000_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 2.0326310185145635 s (ok); ACF: 2.025206250449022 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend10_P2000_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.9870474091995236 s (ok); ACF: 1.9859992004930973 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P600_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.6026981433036006 s (ok); ACF: 0.6059928374985853 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P600_s2\nREADER DISAGREEMENT — unresolved\n\nMP: 0.293409716439193 s (check); ACF: 0.5986177946130434 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P900_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.8881285729170028 s (ok); ACF: 0.8895741539696852 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P900_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 0.9057016099073153 s (ok); ACF: 0.9044096941749254 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1186_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.1841628385754144 s (ok); ACF: 1.1851045141617458 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1186_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.1770080990067688 s (ok); ACF: 1.173856396228075 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1500_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.4944464853880615 s (ok); ACF: 1.4931214954704046 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P1500_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.5035528542717256 s (ok); ACF: 1.4981188507129748 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P2000_s1\nAuthor reader outputs — not independently adjudicated\n\nMP: 2.0202677900363804 s (check); ACF: 2.03073051571846 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\ndial_pend11_P2000_s2\nAuthor reader outputs — not independently adjudicated\n\nMP: 1.9856981743828137 s (check); ACF: 1.9952619172011812 s (ok)\n\npublished clip · sidecar · queue QC · MP plot · ACF plot\n\nNo model generation, clip remeasurement, referee submission, physical certification, remote deployment or live media playback was performed for this artifact."
+    }
+  ],
+  "exceptions": [],
+  "browser_pid": 10,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  }
+}

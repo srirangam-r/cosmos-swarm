@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "source_files_verified": 63,
+  "decoded_and_lossless_roundtrip_frames": 93,
+  "dense_sheets": 8,
+  "author_sheets_reused": 20,
+  "frozen_git_link_targets_verified": 100,
+  "browser_viewports": [
+    "1440x1040",
+    "390x2000"
+  ],
+  "images_decoded_per_viewport": 28,
+  "horizontal_overflow": false,
+  "runtime_exceptions": 0,
+  "final_html_matches_browser_hash": true,
+  "history": "Initial browser passed. A display text cleanup accidentally changed the all20 anchor; acceptance caught zero cards. Restored the anchor, rebuilt from final builder and reran final desktop/mobile checks successfully.",
+  "limits": "Presentation only. Reader disagreement remains unresolved; no new period estimate or physical validation."
+}
