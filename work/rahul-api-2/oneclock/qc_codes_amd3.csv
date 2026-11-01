@@ -67,3 +67,15 @@ oc_A_ball1_s83,0,"ghost/vanish f10-16; second ball f20-24 (clone)",2026-11-01T12
 oc_A_ball2_s83,0,"ball grows ~3-4x f4-12 (toward camera)",2026-11-01T12:00
 oc_A_ball1_s84,0,"ghost streak f10; morph at impact f13; faint f16-17; glassy/semi-transparent at flight-1 apex f22-27 (per-frame zoom f4-39)",2026-11-01T12:00
 oc_A_ball2_s84,0,"faint/near-invisible f10 and f14; morph fragment f17 in flight 1 (per-frame zoom f4-39)",2026-11-01T12:00
+oc_A_ball1_s85,0,"slow glide f0-38; then sits/perches at the rail f40-62 with ~1.7x growth; no clean impact or flight 1 (per-frame zoom f34-69)",2026-11-01T12:05
+oc_A_ball2_s85,0,"slow glide f0-38; glassy/semi-transparent f39-45; then perches at the rail f46-62 (per-frame zoom f34-69)",2026-11-01T12:05
+oc_A_ball1_s86,0,"giant ball f2+; two balls (clone) f4-8, f18, f24",2026-11-01T12:05
+oc_A_ball2_s86,0,"giant ball f2+; two stacked balls (clone) f4-46",2026-11-01T12:05
+oc_A_ball1_s87,0,"ball vanishes f2; larger ball f4+; morph",2026-11-01T12:05
+oc_A_ball2_s87,0,"ball vanishes f2-4, reappears high f6",2026-11-01T12:05
+oc_A_ball1_s88,0,"ball vanishes f2-6; a ball appears on the plank f8 and another at top f8 (clone)",2026-11-01T12:05
+oc_A_ball2_s88,0,"ball vanishes f2-18; two balls f24-28 (clone)",2026-11-01T12:05
+oc_A_ball1_s89,0,"morph/fragment f14 and f38 in flight; ghost at impacts f8-10, f26",2026-11-01T12:05
+oc_A_ball2_s89,0,"fragment/morph f14 and f38 in flight; faint at impact f10",2026-11-01T12:05
+oc_A_ball1_s90,0,"ball vanishes f2-6; giant ball from f8",2026-11-01T12:05
+oc_A_ball2_s90,0,"ball vanishes f2-4; faint/ghost ball f10-14; morph f24-32",2026-11-01T12:05
