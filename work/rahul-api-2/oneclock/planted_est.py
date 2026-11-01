@@ -10,7 +10,15 @@ def seed(F):
     B = np.median(F[::2], 0).astype(np.float32)
     d = cv2.GaussianBlur(np.abs(F[0].astype(np.float32) - B).max(2), (0, 0), 1.0)
     n, l, st, cen = cv2.connectedComponentsWithStats((d > 25).astype(np.uint8))
-    i = 1 + int(np.argmax(st[1:, 4])); return tuple(cen[i]), 2 * np.sqrt(st[i, 4] / np.pi)
+    i = 1 + int(np.argmax(st[1:, 4]))
+    # diameter at the half-maximum contrast contour (edge of an anti-aliased disk), not at the fixed threshold
+    raw = np.abs(F[0].astype(np.float32) - B).max(2); x0, y0, w, h = st[i, :4]; m = 6
+    sub = raw[max(y0 - m, 0):y0 + h + m, max(x0 - m, 0):x0 + w + m]
+    peak = np.percentile(raw[l == i], 95)
+    n2, l2, st2, _ = cv2.connectedComponentsWithStats((sub > 0.5 * peak).astype(np.uint8))
+    j = 1 + int(np.argmax(st2[1:, 4])) if n2 > 1 else None
+    d_half = 2 * np.sqrt(st2[j, 4] / np.pi) if j else 2 * np.sqrt(st[i, 4] / np.pi)
+    return tuple(cen[i]), d_half
 
 def est(path, fps, diam=0.10):
     F = oneclock.read(path); pt, dpx = seed(F)

@@ -1,0 +1,34 @@
+{
+ "agent": "rahul-api-2",
+ "method": "oneclock v2 (track2 v2 + per-segment quadratic) @ 43b13f2",
+ "estimates": {
+  "planted-01": {
+   "g": 12.5611
+  },
+  "planted-03": {
+   "g": 3.2559
+  },
+  "planted-04": {
+   "g": 8.5034
+  },
+  "planted-06": {
+   "g": 6.6393,
+   "e": 0.6504
+  },
+  "planted-08": {
+   "g": 4.5151,
+   "e": 0.8001
+  },
+  "planted-12": {
+   "g": 5.2335
+  },
+  "planted-14": {
+   "g": 11.1474,
+   "e": 0.5515
+  },
+  "planted-15": {
+   "g": 8.6226,
+   "e": 0.6999
+  }
+ }
+}
