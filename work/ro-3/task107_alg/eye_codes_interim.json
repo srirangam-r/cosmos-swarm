@@ -1,0 +1,5 @@
+{"_codes": "rigid = rigid fixed-length swing about the axle, same scene; deform = leaves the axle line but the pivot/length/rod changes; cut = hard scene cut after latent 0 (re-imagined rig); held = stays on the axle line. Coder: ro-3, unblinded (arm known), from full-frame sheets + ROI strips.",
+ "ms_pend10_restalg8f4_s1": {"code": "cut", "note": "f0-2 real scene, f4 hard cut to a zoomed re-imagined rig; the pendulum there hangs below the axle and sways"},
+ "ms_pend11_restalg8f4_s1": {"code": "cut", "note": "same: cut at f4 to a close-up rig, hanging pendulum"},
+ "ms_pend10_restalg4_s1": {"code": "deform", "note": "scene kept; rod drops by f8, but the pivot jumps between the post and the axle end, the bob reaches the table at f24, and the rod spans the full ROI f48-72"},
+ "ms_pend11_restalg4_s1": {"code": "deform", "note": "scene kept; rod leaves the axle, length varies 1x-2x (bob on the table f24/f48-52, rod along the axle f28-36), back on the axle line at rest f84-92"}}
