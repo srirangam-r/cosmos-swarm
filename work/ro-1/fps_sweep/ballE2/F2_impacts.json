@@ -1,0 +1,32 @@
+{
+ "ball2_fps24_s1_impacts_by_eye": [
+  7,
+  18,
+  28,
+  39,
+  48,
+  57,
+  66.5,
+  76,
+  85.5
+ ],
+ "intervals": [
+  11,
+  10,
+  11,
+  9,
+  9,
+  9.5,
+  9.5,
+  9.5
+ ],
+ "mean_frames": 9.8125,
+ "sd": 0.7989949043284676,
+ "rows_frames_per_bounce": {
+  "ball1 93f fps24 s1 (ro-1 F)": 7.636363636363637,
+  "ball1 189f fps24 s1 (raj-3)": 9.272727272727273,
+  "ball1 93f fps12 s1 (ro-1 E, rough)": 4.3,
+  "ball2 93f fps12 s1 (ro-1 E2)": 6.83,
+  "ball2 93f fps24 s1 (ro-1 F2)": 9.8125
+ }
+}
