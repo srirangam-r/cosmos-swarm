@@ -91,3 +91,16 @@ One wording per counter-event; 3 real frames from 2 GAUGE scenes; 6 seeds; 93 f 
    Per-arm event counts and the McNemar tests use the **majority code** over coders (ties -> OTHER); Cohen's kappa is
    reported for every coder pair, and Fleiss' kappa if there are 3 or more coders.
 3. Unchanged: endpoint routing (seeds 101-104 a6k-0..3, 105-106 a100), measurements, decision rules.
+
+## Amendment 4 (13:41 UTC, `date -u`; before any t226 clip was viewed or measured; no strip or key exists yet)
+Known-answer range check of the P-fast readout (synth_check_t226.py; rahul-api-2's synth_fast.py clips drawn on the t226 P
+input, T = 0.33/0.5/1.0/1.8 s x A 15/40 deg x v1/v2 backgrounds = 16 clips; results synth_check_result.json):
+- rec_period v1 (the preregistered primary, window 0.6-3.2 s) reads T = 0.33 and 0.5 s as **exactly 2T** (ratios 2.00-2.02,
+  8/8 clips), always with flag `octave?`, which analyze_t226.py counts as readable. T = 1.0 and 1.8 s: ratio 0.992-1.000 (8/8 ok).
+- The Amendment-1 sensitivity window (0.25-3.2 s) recovers all 16 within 1% (ratios 0.992-1.010, all ok). No half-period picks.
+- On the 10 t193 Nano base clips (seeds 21-30) both windows give identical periods on all 3 readable clips (1.38/1.21/2.10 s,
+  same as t193); they differ only on 1 shallow (unreadable) clip (s25).
+Consequence, fixed now: the primary decision for P fast stays on v1 as preregistered. If Nano's fast clips have T < 0.6 s,
+v1 can only report about 2T, so the v1 contrast is a **conservative lower bound** on the speed-up. The w025 contrast is
+reported next to it as the better-calibrated magnitude, and any clip where v1 says `octave?` and w025 gives about v1/2 is
+listed. No other change.
