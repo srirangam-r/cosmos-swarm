@@ -1,0 +1,1437 @@
+[
+ {
+  "id": "082007-272ec9",
+  "seq": 112,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:07Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082008-14620e",
+  "seq": 113,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:08Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082008-4ab173",
+  "seq": 114,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:08Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082009-e2e888",
+  "seq": 115,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:09Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082009-88e00b",
+  "seq": 116,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:09Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082009-bd674f",
+  "seq": 117,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:09Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082010-216854",
+  "seq": 118,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg8f4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:10Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082010-86f5dc",
+  "seq": 119,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg8f4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:10Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082011-321d8d",
+  "seq": 120,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg8f4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:11Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:49Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082011-bf5e33",
+  "seq": 121,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg8f4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:11Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082011-3e0764",
+  "seq": 122,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg8f4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:11Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082012-94a845",
+  "seq": 123,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg8f4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:12Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082012-119b89",
+  "seq": 124,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg0_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:12Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082012-b8f5d8",
+  "seq": 125,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg0_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:12Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082012-4afacb",
+  "seq": 126,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg0_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:12Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend10_rest_f55.png"
+ },
+ {
+  "id": "082013-8c1f66",
+  "seq": 127,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg0_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:13Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082013-972f82",
+  "seq": 128,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg0_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:13Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082013-529beb",
+  "seq": 129,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg0_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "cancelled",
+  "submitted": "2026-11-01T08:20:13Z",
+  "started": null,
+  "finished": "2026-11-01T08:21:50Z",
+  "endpoint": null,
+  "attempts": 0,
+  "error": null,
+  "image": "pend11_rest_f44.png"
+ },
+ {
+  "id": "082150-4560b4",
+  "seq": 130,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg8f4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:50Z",
+  "started": "2026-11-01T08:27:01Z",
+  "finished": "2026-11-01T08:29:38Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg8f4_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082150-4560b4",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T082934_0004_ro-3",
+   "seconds": 151.5,
+   "wall_seconds": 156.5,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082151-8ea1b2",
+  "seq": 131,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg8f4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:51Z",
+  "started": "2026-11-01T08:29:38Z",
+  "finished": "2026-11-01T08:32:27Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg8f4_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082151-8ea1b2",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T083210_0005_ro-3",
+   "seconds": 151.7,
+   "wall_seconds": 168.7,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082151-0c552f",
+  "seq": 132,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:51Z",
+  "started": "2026-11-01T08:32:27Z",
+  "finished": "2026-11-01T08:35:06Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg4_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082151-0c552f",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T083502_0006_ro-3",
+   "seconds": 151.5,
+   "wall_seconds": 158.4,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082151-ab6dda",
+  "seq": 133,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg4_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:51Z",
+  "started": "2026-11-01T08:37:42Z",
+  "finished": "2026-11-01T08:40:18Z",
+  "endpoint": "puget13",
+  "attempts": 2,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg4_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082151-ab6dda",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T084014_0008_ro-3",
+   "artifact_ids": [],
+   "seconds": 152.0,
+   "wall_seconds": 156.6,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082152-aa99cc",
+  "seq": 134,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg8f4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:52Z",
+  "started": "2026-11-01T08:40:18Z",
+  "finished": "2026-11-01T08:42:55Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg8f4_s2",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082152-aa99cc",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T084250_0009_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.3,
+   "wall_seconds": 156.4,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082152-4fcadf",
+  "seq": 135,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg8f4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:52Z",
+  "started": "2026-11-01T08:42:55Z",
+  "finished": "2026-11-01T08:45:32Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg8f4_s2",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082152-4fcadf",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T084528_0010_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.8,
+   "wall_seconds": 157.1,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082152-f3cf88",
+  "seq": 136,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:52Z",
+  "started": "2026-11-01T08:45:32Z",
+  "finished": "2026-11-01T08:48:08Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg4_s2",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082152-f3cf88",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T084804_0011_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.5,
+   "wall_seconds": 155.9,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082152-28ce09",
+  "seq": 137,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg4_s2",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:52Z",
+  "started": "2026-11-01T08:48:08Z",
+  "finished": "2026-11-01T08:50:46Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg4_s2",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 2,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082152-28ce09",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T085040_0012_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.5,
+   "wall_seconds": 157.7,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082153-e1eb96",
+  "seq": 138,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg8f4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:53Z",
+  "started": "2026-11-01T08:50:46Z",
+  "finished": "2026-11-01T08:53:21Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg8f4_s3",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082153-e1eb96",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T085318_0013_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.4,
+   "wall_seconds": 155.7,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082153-dd17cb",
+  "seq": 139,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg8f4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:53Z",
+  "started": "2026-11-01T08:53:21Z",
+  "finished": "2026-11-01T08:55:57Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg8f4_s3",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 8,
+    "alg_factor": 4.0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082153-dd17cb",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T085554_0014_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.9,
+   "wall_seconds": 155.8,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082153-a1bcaa",
+  "seq": 140,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:53Z",
+  "started": "2026-11-01T08:55:57Z",
+  "finished": "2026-11-01T08:58:34Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg4_s3",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082153-a1bcaa",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T085830_0015_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.8,
+   "wall_seconds": 157.1,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082154-8bbf6f",
+  "seq": 141,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg4_s3",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:54Z",
+  "started": "2026-11-01T08:58:34Z",
+  "finished": "2026-11-01T09:01:11Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg4_s3",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 3,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 4,
+    "alg_factor": 2.5
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082154-8bbf6f",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T090107_0016_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.8,
+   "wall_seconds": 157.2,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082154-51c0a2",
+  "seq": 142,
+  "owner": "ro-3",
+  "name": "ms_pend10_restalg0_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:54Z",
+  "started": "2026-11-01T09:01:12Z",
+  "finished": "2026-11-01T09:03:48Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend10_rest_f55.png",
+  "sidecar": {
+   "name": "ms_pend10_restalg0_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend10_rest_f55.png",
+   "owner": "ro-3",
+   "queue_id": "082154-51c0a2",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T090344_0017_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.8,
+   "wall_seconds": 156.3,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ },
+ {
+  "id": "082154-39bb2a",
+  "seq": 143,
+  "owner": "ro-3",
+  "name": "ms_pend11_restalg0_s1",
+  "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+  "params": {
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   }
+  },
+  "endpoints": [
+   "puget13"
+  ],
+  "status": "done",
+  "submitted": "2026-11-01T08:21:54Z",
+  "started": "2026-11-01T09:03:48Z",
+  "finished": "2026-11-01T09:06:24Z",
+  "endpoint": "puget13",
+  "attempts": 1,
+  "error": null,
+  "image": "pend11_rest_f44.png",
+  "sidecar": {
+   "name": "ms_pend11_restalg0_s1",
+   "width": 832,
+   "height": 480,
+   "num_frames": 93,
+   "fps": 24,
+   "steps": 35,
+   "guidance": 6.0,
+   "flow_shift": 10.0,
+   "seed": 1,
+   "negative_prompt": "",
+   "extra_params": {
+    "alg_steps": 0
+   },
+   "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+   "negative_prompt_text": "",
+   "image": "pend11_rest_f44.png",
+   "owner": "ro-3",
+   "queue_id": "082154-39bb2a",
+   "endpoint": "puget13",
+   "endpoint_url": "http://100.77.182.40:8013",
+   "server_clip_id": "20261101T090621_0018_ro-3",
+   "artifact_ids": [],
+   "seconds": 151.8,
+   "wall_seconds": 156.4,
+   "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+  }
+ }
+]

@@ -1,0 +1,66 @@
+{
+ "independent_ffmpeg": {
+  "ms_pend10_restalg4_s1": {
+   "pairs": 92,
+   "trace_max_abs_error": 0.0
+  },
+  "ms_pend11_restalg8f4_s1": {
+   "pairs": 92,
+   "trace_max_abs_error": 0.0
+  }
+ },
+ "inputs": {
+  "pend10": {
+   "shared_file_sha256": "3e9b2669e7f3c79f9c1a16d64852fb192a966597abec99aaad63eab14dbe425c",
+   "f0_input_PSNR_dB": {
+    "ms_pend10_restalg0_s1": 34.463711370810685,
+    "ms_pend10_restalg4_s2": 34.463711370810685,
+    "ms_pend10_restalg8f4_s3": 34.463711370810685,
+    "ms_pend10_restalg4_s3": 34.463711370810685,
+    "ms_pend10_restalg4_s1": 34.463711370810685,
+    "ms_pend10_restalg8f4_s1": 34.463711370810685,
+    "ms_pend10_restalg8f4_s2": 34.463711370810685
+   },
+   "scope": "shared original file matches basename; original submitted bytes are not recoverable from queue sidecars"
+  },
+  "pend11": {
+   "shared_file_sha256": "b2abb549b906fd1ee5eb0c25d5491041df9706ab864efda48d6529994c887e0e",
+   "f0_input_PSNR_dB": {
+    "ms_pend11_restalg4_s3": 35.07007675276875,
+    "ms_pend11_restalg8f4_s2": 35.07007675276875,
+    "ms_pend11_restalg8f4_s1": 35.07007675276875,
+    "ms_pend11_restalg4_s1": 35.07007675276875,
+    "ms_pend11_restalg8f4_s3": 35.07007675276875,
+    "ms_pend11_restalg0_s1": 35.07007675276875,
+    "ms_pend11_restalg4_s2": 35.07007675276875
+   },
+   "scope": "shared original file matches basename; original submitted bytes are not recoverable from queue sidecars"
+  }
+ },
+ "native_summaries": {
+  "ms_pend10_restalg4_s1": {
+   "scheduler": "UniPCMultistepScheduler",
+   "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, RTX 6000 Ada, safety check off)",
+   "torch": "2.15.0+cu132",
+   "scope": "native saved summary for four seed1 treatment clips only; no sigma configuration or hook firing telemetry"
+  },
+  "ms_pend10_restalg8f4_s1": {
+   "scheduler": "UniPCMultistepScheduler",
+   "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, RTX 6000 Ada, safety check off)",
+   "torch": "2.15.0+cu132",
+   "scope": "native saved summary for four seed1 treatment clips only; no sigma configuration or hook firing telemetry"
+  },
+  "ms_pend11_restalg4_s1": {
+   "scheduler": "UniPCMultistepScheduler",
+   "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, RTX 6000 Ada, safety check off)",
+   "torch": "2.15.0+cu132",
+   "scope": "native saved summary for four seed1 treatment clips only; no sigma configuration or hook firing telemetry"
+  },
+  "ms_pend11_restalg8f4_s1": {
+   "scheduler": "UniPCMultistepScheduler",
+   "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, RTX 6000 Ada, safety check off)",
+   "torch": "2.15.0+cu132",
+   "scope": "native saved summary for four seed1 treatment clips only; no sigma configuration or hook firing telemetry"
+  }
+ }
+}

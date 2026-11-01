@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parent
 
 def main():
     clips = Path(sys.argv[1]); clips.mkdir(parents=True, exist_ok=True)
-    jobs = json.load(urllib.request.urlopen(URL+'/jobs?owner=ro-3'))['jobs']
+    snapshot=ROOT/'source/queue_jobs.json'
+    jobs=json.loads(snapshot.read_text()) if snapshot.exists() else json.load(urllib.request.urlopen(URL+'/jobs?owner=ro-3'))['jobs']
     selected = [j for j in jobs if 'restalg' in j['name'] and j['status']=='done']
     assert len(selected)==14
     assert len({j['name'] for j in selected})==14
@@ -49,6 +50,16 @@ def main():
             canvas.paste(Image.fromarray(frames[fidx]).resize((416,240)),(x,y+24))
             d.text((x+5,y+5),str(fidx),fill='black')
         canvas.save(ROOT/'qc'/f'{ident}_scene.jpg',quality=92)
+        starts={'A01':12,'A07':8,'A09':16,'A12':16}
+        if ident in starts:
+            start=starts[ident]
+            canvas=Image.new('RGB',(6*396,4*344+36),'white');d=ImageDraw.Draw(canvas)
+            d.text((8,8),ident+' dense consecutive frames',fill='black')
+            for q,fidx in enumerate(range(start,start+24)):
+                x=q%6*396;y=36+q//6*344
+                canvas.paste(Image.fromarray(frames[fidx][30:350,218:614]),(x,y+24))
+                d.text((x+5,y+5),str(fidx),fill='black')
+            canvas.save(ROOT/'qc'/f'{ident}_dense.jpg',quality=94)
     print('Fetched/prepared',len(key),'existing clips; key SHA256',hashlib.sha256(hidden.read_bytes()).hexdigest())
 
 if __name__=='__main__': main()

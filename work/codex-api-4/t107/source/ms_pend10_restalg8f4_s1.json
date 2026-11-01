@@ -1,0 +1,30 @@
+{
+ "prompt": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt": null,
+ "size": "832x480",
+ "num_frames": 93,
+ "fps": 24.0,
+ "num_inference_steps": 35,
+ "guidance_scale": 6.0,
+ "flow_shift": 10.0,
+ "seed": 1,
+ "extra_params": {
+  "client": "ro-3",
+  "queue_id": "082150-4560b4",
+  "alg_steps": 8,
+  "alg_factor": 4.0
+ },
+ "has_action": false,
+ "input_image": "20261101T082934_0004_ro-3_input.png",
+ "frames_out": 93,
+ "out_hw": [
+  480,
+  832
+ ],
+ "seconds": 151.5,
+ "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, RTX 6000 Ada, safety check off)",
+ "scheduler": "UniPCMultistepScheduler",
+ "torch": "2.15.0+cu132",
+ "server": "ro-3 srv/server.py (raj-1 tools/cosmos_local/server.py @ no-offload)",
+ "model_path": "/home/rohith/swarm-work/ro-1/models/Cosmos3-Nano"
+}
