@@ -1,0 +1,112 @@
+{
+ "A_rec01.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 2.448082447052002,
+  "mae_f0": 0.3627420663833618,
+  "mae_last": 2.6180479526519775,
+  "max_abs": 253.0,
+  "bit_identical": false
+ },
+ "A_rec02.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 3.673466205596924,
+  "mae_f0": 0.3224166929721832,
+  "mae_last": 3.224154472351074,
+  "max_abs": 254.0,
+  "bit_identical": false
+ },
+ "A_rec03.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 8.057841300964355,
+  "mae_f0": 0.33479735255241394,
+  "mae_last": 7.699070930480957,
+  "max_abs": 255.0,
+  "bit_identical": false
+ },
+ "A_rec04.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 2.8893299102783203,
+  "mae_f0": 0.3595152199268341,
+  "mae_last": 2.7349660396575928,
+  "max_abs": 250.0,
+  "bit_identical": false
+ },
+ "A_rec05.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 2.6654982566833496,
+  "mae_f0": 0.32684963941574097,
+  "mae_last": 2.7258872985839844,
+  "max_abs": 249.0,
+  "bit_identical": false
+ },
+ "A_rec06.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 2.7820143699645996,
+  "mae_f0": 0.33223074674606323,
+  "mae_last": 3.3197057247161865,
+  "max_abs": 252.0,
+  "bit_identical": false
+ },
+ "A_rec07.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 2.633479595184326,
+  "mae_f0": 0.3428861200809479,
+  "mae_last": 3.59494948387146,
+  "max_abs": 252.0,
+  "bit_identical": false
+ },
+ "A_rec08.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 2.5293843746185303,
+  "mae_f0": 0.3454785943031311,
+  "mae_last": 2.623974084854126,
+  "max_abs": 255.0,
+  "bit_identical": false
+ },
+ "A_rec09.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 3.1983859539031982,
+  "mae_f0": 0.3524622619152069,
+  "mae_last": 2.795982837677002,
+  "max_abs": 251.0,
+  "bit_identical": false
+ },
+ "A_rec10.mp4": {
+  "n_frames": [
+   93,
+   93
+  ],
+  "mae_all": 3.45284104347229,
+  "mae_f0": 0.31984007358551025,
+  "mae_last": 3.8902428150177,
+  "max_abs": 255.0,
+  "bit_identical": false
+ }
+}
