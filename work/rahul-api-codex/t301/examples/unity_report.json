@@ -1,0 +1,1424 @@
+{
+  "scope": "Summary/QC arithmetic only; no planted, physical-recovery, causal, or NVIDIA certification.",
+  "gates": {
+    "flicker_lt": 0.08,
+    "symmetric_tool_gap_lte": 0.1,
+    "flags": "both ok",
+    "strip_and_native": "explicit true"
+  },
+  "all_slots_pass_qc": true,
+  "planned": 30,
+  "received": 30,
+  "qc_accepted": 30,
+  "scenes": 3,
+  "seeds_per_scene": 2,
+  "planned_lines": 6,
+  "complete_lines": 6,
+  "missing": 0,
+  "rows": [
+    {
+      "id": "[\"syntheticA\",1,0.6]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticA\",1,0.6]",
+        "acf_s": 0.6,
+        "mp_s": 0.6,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,0.9]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticA\",1,0.9]",
+        "acf_s": 0.9,
+        "mp_s": 0.9,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,1.18]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticA\",1,1.18]",
+        "acf_s": 1.18,
+        "mp_s": 1.18,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,1.5]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticA\",1,1.5]",
+        "acf_s": 1.5,
+        "mp_s": 1.5,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",1,2]",
+      "scene": "syntheticA",
+      "seed": 1,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticA\",1,2]",
+        "acf_s": 2,
+        "mp_s": 2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,0.6]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticA\",2,0.6]",
+        "acf_s": 0.6,
+        "mp_s": 0.6,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,0.9]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticA\",2,0.9]",
+        "acf_s": 0.9,
+        "mp_s": 0.9,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,1.18]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticA\",2,1.18]",
+        "acf_s": 1.18,
+        "mp_s": 1.18,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,1.5]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticA\",2,1.5]",
+        "acf_s": 1.5,
+        "mp_s": 1.5,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticA\",2,2]",
+      "scene": "syntheticA",
+      "seed": 2,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticA\",2,2]",
+        "acf_s": 2,
+        "mp_s": 2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,0.6]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticB\",1,0.6]",
+        "acf_s": 0.6,
+        "mp_s": 0.6,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,0.9]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticB\",1,0.9]",
+        "acf_s": 0.9,
+        "mp_s": 0.9,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,1.18]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticB\",1,1.18]",
+        "acf_s": 1.18,
+        "mp_s": 1.18,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,1.5]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticB\",1,1.5]",
+        "acf_s": 1.5,
+        "mp_s": 1.5,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",1,2]",
+      "scene": "syntheticB",
+      "seed": 1,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticB\",1,2]",
+        "acf_s": 2,
+        "mp_s": 2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,0.6]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticB\",2,0.6]",
+        "acf_s": 0.6,
+        "mp_s": 0.6,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,0.9]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticB\",2,0.9]",
+        "acf_s": 0.9,
+        "mp_s": 0.9,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,1.18]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticB\",2,1.18]",
+        "acf_s": 1.18,
+        "mp_s": 1.18,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,1.5]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticB\",2,1.5]",
+        "acf_s": 1.5,
+        "mp_s": 1.5,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticB\",2,2]",
+      "scene": "syntheticB",
+      "seed": 2,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticB\",2,2]",
+        "acf_s": 2,
+        "mp_s": 2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,0.6]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticC\",1,0.6]",
+        "acf_s": 0.6,
+        "mp_s": 0.6,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,0.9]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticC\",1,0.9]",
+        "acf_s": 0.9,
+        "mp_s": 0.9,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,1.18]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticC\",1,1.18]",
+        "acf_s": 1.18,
+        "mp_s": 1.18,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,1.5]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticC\",1,1.5]",
+        "acf_s": 1.5,
+        "mp_s": 1.5,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",1,2]",
+      "scene": "syntheticC",
+      "seed": 1,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticC\",1,2]",
+        "acf_s": 2,
+        "mp_s": 2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,0.6]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.6,
+      "observation": {
+        "id": "[\"syntheticC\",2,0.6]",
+        "acf_s": 0.6,
+        "mp_s": 0.6,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,0.9]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 0.9,
+      "observation": {
+        "id": "[\"syntheticC\",2,0.9]",
+        "acf_s": 0.9,
+        "mp_s": 0.9,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,1.18]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.18,
+      "observation": {
+        "id": "[\"syntheticC\",2,1.18]",
+        "acf_s": 1.18,
+        "mp_s": 1.18,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,1.5]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 1.5,
+      "observation": {
+        "id": "[\"syntheticC\",2,1.5]",
+        "acf_s": 1.5,
+        "mp_s": 1.5,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    },
+    {
+      "id": "[\"syntheticC\",2,2]",
+      "scene": "syntheticC",
+      "seed": 2,
+      "target_s": 2,
+      "observation": {
+        "id": "[\"syntheticC\",2,2]",
+        "acf_s": 2,
+        "mp_s": 2,
+        "flag_acf": "ok",
+        "flag_mp": "ok",
+        "flicker": 0.005,
+        "strip_ok": true,
+        "native_verified": true
+      },
+      "qc_accepted": true,
+      "reasons": []
+    }
+  ],
+  "lines": [
+    {
+      "scene": "syntheticA",
+      "seed": 1,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticA",
+      "seed": 2,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticB",
+      "seed": 1,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticB",
+      "seed": 2,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticC",
+      "seed": 1,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "syntheticC",
+      "seed": 2,
+      "accepted": 5,
+      "planned": 5,
+      "complete": true,
+      "metrics": {
+        "acf_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        },
+        "mp_s": {
+          "fit": {
+            "n": 5,
+            "slope": 1,
+            "intercept_s": 0,
+            "r2": 1,
+            "bias_s": 0,
+            "rmse_to_command_s": 0,
+            "mean_abs_relative_error": 0
+          },
+          "endpoint_response": 1,
+          "adjacent": [
+            {
+              "lo_s": 0.6,
+              "hi_s": 0.9,
+              "response": 1
+            },
+            {
+              "lo_s": 0.9,
+              "hi_s": 1.18,
+              "response": 1
+            },
+            {
+              "lo_s": 1.18,
+              "hi_s": 1.5,
+              "response": 1
+            },
+            {
+              "lo_s": 1.5,
+              "hi_s": 2,
+              "response": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "tools": {
+    "acf_s": {
+      "secondary_accepted_only_fit": {
+        "n": 30,
+        "slope": 1,
+        "intercept_s": 0,
+        "r2": 1,
+        "bias_s": 0,
+        "rmse_to_command_s": 0,
+        "mean_abs_relative_error": 0
+      },
+      "complete_scene_slopes": {
+        "n": 3,
+        "mean": 1,
+        "sd": 0,
+        "min": 1,
+        "max": 1
+      },
+      "full_grid_slope_summary": {
+        "n": 3,
+        "mean": 1,
+        "sd": 0,
+        "min": 1,
+        "max": 1
+      },
+      "byScene": [
+        {
+          "scene": "syntheticA",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 1
+        },
+        {
+          "scene": "syntheticB",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 1
+        },
+        {
+          "scene": "syntheticC",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 1
+        }
+      ],
+      "leave_one_complete_scene_out_mean_slopes": [
+        1,
+        1,
+        1
+      ],
+      "dose": [
+        {
+          "target_s": 0.6,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 0.6,
+            "sd": 0,
+            "min": 0.6,
+            "max": 0.6
+          }
+        },
+        {
+          "target_s": 0.9,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 0.9,
+            "sd": 0,
+            "min": 0.9,
+            "max": 0.9
+          }
+        },
+        {
+          "target_s": 1.18,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.18,
+            "sd": 0,
+            "min": 1.18,
+            "max": 1.18
+          }
+        },
+        {
+          "target_s": 1.5,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.5,
+            "sd": 0,
+            "min": 1.5,
+            "max": 1.5
+          }
+        },
+        {
+          "target_s": 2,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 2,
+            "sd": 0,
+            "min": 2,
+            "max": 2
+          }
+        }
+      ],
+      "paired_endpoints": {
+        "n": 6,
+        "mean": 1,
+        "sd": 0,
+        "min": 1,
+        "max": 1
+      },
+      "guided_seed_spread": [
+        {
+          "scene": "syntheticA",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 2,
+          "sample_sd_s": 0
+        }
+      ]
+    },
+    "mp_s": {
+      "secondary_accepted_only_fit": {
+        "n": 30,
+        "slope": 1,
+        "intercept_s": 0,
+        "r2": 1,
+        "bias_s": 0,
+        "rmse_to_command_s": 0,
+        "mean_abs_relative_error": 0
+      },
+      "complete_scene_slopes": {
+        "n": 3,
+        "mean": 1,
+        "sd": 0,
+        "min": 1,
+        "max": 1
+      },
+      "full_grid_slope_summary": {
+        "n": 3,
+        "mean": 1,
+        "sd": 0,
+        "min": 1,
+        "max": 1
+      },
+      "byScene": [
+        {
+          "scene": "syntheticA",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 1
+        },
+        {
+          "scene": "syntheticB",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 1
+        },
+        {
+          "scene": "syntheticC",
+          "planned_lines": 2,
+          "complete_lines": 2,
+          "slope": 1
+        }
+      ],
+      "leave_one_complete_scene_out_mean_slopes": [
+        1,
+        1,
+        1
+      ],
+      "dose": [
+        {
+          "target_s": 0.6,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 0.6,
+            "sd": 0,
+            "min": 0.6,
+            "max": 0.6
+          }
+        },
+        {
+          "target_s": 0.9,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 0.9,
+            "sd": 0,
+            "min": 0.9,
+            "max": 0.9
+          }
+        },
+        {
+          "target_s": 1.18,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.18,
+            "sd": 0,
+            "min": 1.18,
+            "max": 1.18
+          }
+        },
+        {
+          "target_s": 1.5,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 1.5,
+            "sd": 0,
+            "min": 1.5,
+            "max": 1.5
+          }
+        },
+        {
+          "target_s": 2,
+          "planned": 6,
+          "accepted": 6,
+          "output_s": {
+            "n": 6,
+            "mean": 2,
+            "sd": 0,
+            "min": 2,
+            "max": 2
+          }
+        }
+      ],
+      "paired_endpoints": {
+        "n": 6,
+        "mean": 1,
+        "sd": 0,
+        "min": 1,
+        "max": 1
+      },
+      "guided_seed_spread": [
+        {
+          "scene": "syntheticA",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticA",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticB",
+          "target_s": 2,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.6,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 0.9,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.18,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 1.5,
+          "sample_sd_s": 0
+        },
+        {
+          "scene": "syntheticC",
+          "target_s": 2,
+          "sample_sd_s": 0
+        }
+      ]
+    }
+  },
+  "data_kind": "synthetic",
+  "input_sha256": "1faa30b85de43d95e79dee729d0d29653482e5473f0a8c3fd0db64f325eec333",
+  "source_contract_message": 5950,
+  "observation_status": "ROWS_SUPPLIED",
+  "interpretation": "Arithmetic acceptance only. Native/strip booleans and reader validation must be audited externally. No physical, model, causal, referee or NVIDIA certification.",
+  "context": "ILLUSTRATIVE ONLY. Scene IDs, seed IDs, periods, flags and acceptance booleans are synthetic, not an adopted task265 plan or model measurements."
+}

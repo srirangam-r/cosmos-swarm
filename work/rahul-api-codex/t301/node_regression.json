@@ -1,0 +1,19 @@
+{
+  "checks": 121,
+  "affineFixtures": 20,
+  "rejectedInputs": 10,
+  "qcFailureFixtures": 11,
+  "examples": {
+    "twiceR2": 1,
+    "twiceRmseS": 1.327584272278035,
+    "heteroSceneSlopes": [
+      0,
+      1,
+      2
+    ],
+    "selectiveAccepted": 6,
+    "selectiveMissing": 24,
+    "selectiveCompleteLines": 0,
+    "selectiveR2": 1
+  }
+}
