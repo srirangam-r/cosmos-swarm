@@ -1,0 +1,10 @@
+{
+ "kind": "real GAUGE dev-video derivative, time-warped (wrong-period donor control, E6-W); measurement/inversion only",
+ "source_video": "InternRobotics/GAUGE-Dataset@f95bb06e data/rigid/pendulum/video/2.mp4",
+ "source_sha256": "cad738f775eb3721b055092544e28027ce8f0e670b037af36a5d6410defe8b9a",
+ "transform": "t8 read_distinct (600 container frames, cut from first 300) ; distinct frames 93 + round(k*10/7), k<93",
+ "speed": 1.4285714285714286,
+ "n_distinct": 501,
+ "fps": 25,
+ "num_frames": 93
+}

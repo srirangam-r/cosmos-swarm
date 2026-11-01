@@ -1,0 +1,144 @@
+{
+ "real_periods_frames": {
+  "1": 29.153526946902275,
+  "2": 29.407229900360107,
+  "3": 29.870976209640503,
+  "4": 29.382195204496384,
+  "5": 29.15516087412834,
+  "6": 29.853190526366234,
+  "7": 29.691678553819656,
+  "8": 29.78580729663372,
+  "9": 29.146959826350212,
+  "10": 29.19169081747532,
+  "11": 29.175470128655434,
+  "12": 29.618478536605835,
+  "13": 29.531600922346115,
+  "14": 29.500453650951385,
+  "15": 29.661013215780258,
+  "16": 29.53095719218254,
+  "17": 29.27175670862198,
+  "18": 29.397729486227036,
+  "19": 29.53518831729889,
+  "20": 29.279219657182693
+ },
+ "n_clips": 7,
+ "recon": {
+  "n": 7,
+  "n_period_read": 7,
+  "median_ratio": 1.003,
+  "within_10pct": 7,
+  "median_copy_index": null,
+  "median_corr_with_target_real": 0.77
+ },
+ "base": {
+  "n": 0,
+  "n_period_read": 0,
+  "median_ratio": null,
+  "within_10pct": 0,
+  "median_copy_index": null,
+  "median_corr_with_target_real": null
+ },
+ "tlo": {
+  "n": 0,
+  "n_period_read": 0,
+  "median_ratio": null,
+  "within_10pct": 0,
+  "median_copy_index": null,
+  "median_corr_with_target_real": null
+ },
+ "slo": {
+  "n": 0,
+  "n_period_read": 0,
+  "median_ratio": null,
+  "within_10pct": 0,
+  "median_copy_index": null,
+  "median_corr_with_target_real": null
+ },
+ "all": {
+  "n": 0,
+  "n_period_read": 0,
+  "median_ratio": null,
+  "within_10pct": 0,
+  "median_copy_index": null,
+  "median_corr_with_target_real": null
+ },
+ "rows": [
+  {
+   "name": "A_rec01",
+   "target": 1,
+   "donor": 1,
+   "arm": "recon",
+   "P": 29.178508892655373,
+   "flag": "ok",
+   "ratio": 1.0008569098963085,
+   "copy_index": null,
+   "corr_target_real": 0.3522571325302124
+  },
+  {
+   "name": "A_rec02",
+   "target": 2,
+   "donor": 2,
+   "arm": "recon",
+   "P": 29.09473644196987,
+   "flag": "ok",
+   "ratio": 0.9893735839979131,
+   "copy_index": null,
+   "corr_target_real": 0.8990688323974609
+  },
+  {
+   "name": "A_rec03",
+   "target": 3,
+   "donor": 3,
+   "arm": "recon",
+   "P": 30.168572425842285,
+   "flag": "ok",
+   "ratio": 1.0099627214762983,
+   "copy_index": null,
+   "corr_target_real": 0.8442885875701904
+  },
+  {
+   "name": "A_rec04",
+   "target": 4,
+   "donor": 4,
+   "arm": "recon",
+   "P": 29.749391078948975,
+   "flag": "ok",
+   "ratio": 1.0124972239785677,
+   "copy_index": null,
+   "corr_target_real": 0.7895526885986328
+  },
+  {
+   "name": "A_rec05",
+   "target": 5,
+   "donor": 5,
+   "arm": "recon",
+   "P": 29.226863518357277,
+   "flag": "ok",
+   "ratio": 1.002459346547203,
+   "copy_index": null,
+   "corr_target_real": 0.5987020134925842
+  },
+  {
+   "name": "A_rec06",
+   "target": 6,
+   "donor": 6,
+   "arm": "recon",
+   "P": 29.94899620860815,
+   "flag": "ok",
+   "ratio": 1.0032092275750997,
+   "copy_index": null,
+   "corr_target_real": 0.7695532441139221
+  },
+  {
+   "name": "A_rec07",
+   "target": 7,
+   "donor": 7,
+   "arm": "recon",
+   "P": 29.799194052815437,
+   "flag": "ok",
+   "ratio": 1.0036210650334536,
+   "copy_index": null,
+   "corr_target_real": 0.7420652508735657
+  }
+ ]
+}
