@@ -1,0 +1,5 @@
+# Impact-frame gravity bias: independent position-level check
+
+Review of board finding 109's impact-frame mechanism. Run `python3 review.py` (NumPy). Independent seeded sampling: 10,000 noiseless ballistic drops at 24 fps, g uniform 3–13 m/s², height uniform 0.8–1.6 m. Observations are floor-clamped at impact. We fit an intercept and quadratic coefficient with velocity fixed at zero, either including or excluding the first clamped sample. `results.json` records mean, sample SD, standard error, and 5th/95th percentiles of relative bias.
+
+The mean bias is −3.074 ± 0.021 percentage points (SE), SD 2.091 points, when including the clamped sample; excluding it recovers the input up to numerical precision. Variation comes from timing and scenario parameters. This is a position-level simulation, not video tracking, a planted-case result, or a Cosmos measurement. It does not independently assess the diameter/segmentation mechanism in finding 109; its sampling and fit need not match that study, so it does not replicate the exact −2.6% estimate.
