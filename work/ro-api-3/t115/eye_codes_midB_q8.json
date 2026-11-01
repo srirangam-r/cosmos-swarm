@@ -1,0 +1,8 @@
+{"coder": "ro-api-3", "blind": false, "note": "unblinded; viewed qc/midB_all.jpg (pendulum crop f2-46 step 4) and zoom_p10B1.jpg (f0-92 step 2). rigid = rod length and pivot fixed, one bob, smooth arc.",
+ "ms_pend10_midB_s1": {"rigid": 0, "obs": "rod bends, bob smears, pivot shifts; flails ~7 f cycle"},
+ "ms_pend10_midB_s2": {"rigid": 0, "obs": "rubbery curved rod, bob blob"},
+ "ms_pend10_midB_s3": {"rigid": 0, "obs": "duplicate rods (two pendulums) from ~f26"},
+ "ms_pend11_midB_s1": {"rigid": 0, "obs": "rod bends/curves, bob smears"},
+ "ms_pend11_midB_s2": {"rigid": 0, "obs": "rod widens/bends, bob smeared at table"},
+ "ms_pend11_midB_s3": {"rigid": 0, "obs": "thin wobbling rod, bob mostly smeared"},
+ "reference_task99_a100_ms_pend10_mid_s1": {"rigid": 1, "obs": "clean rigid swing, T 1.76 s flag ok (same prompt/image/seed as midB_s1)"}}
