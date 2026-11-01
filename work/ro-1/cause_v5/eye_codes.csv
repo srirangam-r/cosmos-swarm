@@ -16,3 +16,5 @@ cause6_QT_ball2_fps24_93f_s1,ball2,QT,1,Y,~72,bounces ~4x then rests
 cause6_QT_ball2_fps24_93f_s2,ball2,QT,2,Y,~60,bounces then rolls to rest
 cause6_QT_ball2_fps24_93f_s3,ball2,QT,3,Y,~40,rests
 cause5_QT_ball1_fps24_93f_s5,ball1,QT,5,Y,~60-72,bounces/rolls to ~f57 then rests; mid-clip motion blur
+cause6_F_ball2_fps24_93f_s3,ball2,F,3,N,,low hops continue to f90 (shift 69 eye read)
+cause5_QS_ball1_fps24_93f_s5,ball1,QS,5,N,,keeps bouncing and grows; exits frame right ~f72-81 so last20 is low from absence not rest (shift 69)
