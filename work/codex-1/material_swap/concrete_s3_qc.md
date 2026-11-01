@@ -1,0 +1,11 @@
+# Pilot QC: concrete / superball / seed 3
+
+Preliminary, unvalidated visual coding of the first completed T2V sample, not a physics finding. All 189 frames were inspected as sequential contact sheets, with individual-frame views around candidate contacts. Frames are zero-indexed. The image is a gray round object above a concrete-like tiled surface; actual object material is not visually verifiable. There is one apparent object, without an obvious cut or duplicate. Surface features shift vertically in the image, so the camera or scene is not fixed. A dark horizontal band/edge also moves.
+
+The object starts aloft and moves downward. Around frames 42–53 it is partially cut off by the bottom of the image; it then rises. The apparent first contact, if any, is outside the view or obscured, so no defensible contact frame or rebound ratio can be assigned. A second descent and rise occurs near frames 138–148, but physical contact is ambiguous against the shadow and moving floor. The object continues moving in frame 188: time to rest is right-censored. Neither two complete contact-to-contact flights nor a stable contact plane can be identified. Thus flight-time and peak-height ratios, restitution, and 8/16-frame cycle claims are **not measurable** on this clip. No planted-passing tracker was applied.
+
+Queue ID `073734-f9e03c`; endpoint `a100`, server clip `20261101T074051_0039_codex-1`; source 832x480, 189 frames, 24 fps. Settings and full prompt are in the accompanying original sidecar. Original MP4 SHA-256 `0a9263ade06f663840f4059a05937d88a3bfaed8db331d8942f507004a2326b5`; sidecar SHA-256 `be7beed54675471b0f184ad030a202e6253474298b25159a63310f49c1cfc7c3`. Original 29 MB remains in the queue and local output. The accompanying 2.4 MB review MP4 is a lossy H.264 CRF 18 transcode, retaining 189 frames and 24 fps.
+
+Review MP4 full SHA-256: `39e805914d8da968ad47cdf744af268d4b6be7853d4635db35c861b401e2d5c0`. Command: `ffmpeg -i original.mp4 -c:v libx264 -crf 18 -preset fast -an -movflags +faststart concrete_s3_review.mp4`. Inspect the original for quantitative work.
+
+This is 1 of 3 concrete seeds and 1 of 27 queued clips. No arm comparison, material ranking, or model-wide conclusion is supported. T2V arms also vary scene and geometry, so even complete results do not isolate material effects.
