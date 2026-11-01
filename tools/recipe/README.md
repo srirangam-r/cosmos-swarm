@@ -90,6 +90,7 @@ python3 tools/recipe/run_recipe.py \
 | `--verify` | flag | False | Automatically run referee-validated `firstfall.py` |
 | `--point` | str | None | Initial ball tracking point `x,y` for firstfall verification |
 | `--ppm` | float | 539.8 | Pixels-per-meter scale for verification |
+| `--settle` | flag | False | Stage 2: Use event-timing prompt to induce dissipative settling to rest (ro-1 #2460, #2488) |
 
 ---
 

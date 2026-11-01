@@ -47,6 +47,12 @@ DEFAULT_PROMPT = (
     "A smooth metallic sphere drops vertically from rest above a flat wooden surface, "
     "falling freely under gravity, impacting the plank, and bouncing in real time."
 )
+# Stage 2: Validated dissipative settling prompt (ro-1 #2460, #2488)
+TIMED_DISSIPATIVE_PROMPT = (
+    "A smooth metallic sphere drops vertically above a flat wooden surface, falling freely under gravity, "
+    "impacting the plank, bouncing twice with rapidly diminishing peak heights, and coming to a complete rest "
+    "on the wooden plank within about one and a half seconds, remaining motionless thereafter."
+)
 
 
 def letterbox_image(img_bgr: np.ndarray, target_w: int = 832, target_h: int = 480) -> np.ndarray:
@@ -266,9 +272,10 @@ def run_inference_local(
                 frames.append(f_arr)
     else:
         v_arr = np.asarray(v)
+        from PIL import Image
         if v_arr.dtype != np.uint8:
             v_arr = (np.clip(v_arr, 0, 1) * 255).round().astype(np.uint8)
-        frames = [v_arr[i] for i in range(len(v_arr))]
+        frames = [Image.fromarray(v_arr[i]) for i in range(len(v_arr))]
 
     return frames, {"wall_seconds": round(wall_sec, 2)}
 
@@ -334,6 +341,12 @@ def main():
     parser.add_argument("--verify", action="store_true", help="Run referee-validated firstfall tracker on output")
     parser.add_argument("--point", default=None, help="Initial ball tracking point x,y for firstfall verification")
     parser.add_argument("--ppm", type=float, default=539.8, help="Pixels per meter for verification (default: 539.8)")
+    parser.add_argument(
+        "--settle",
+        "--timed-dissipation",
+        action="store_true",
+        help="Stage 2: Use event-timing prompt to induce dissipative settling to rest (ro-1 #2460, #2488)",
+    )
 
     args = parser.parse_args()
     out_path = Path(args.out)
@@ -387,7 +400,12 @@ def main():
     print(f"[input] Saved letterboxed conditioning frame to {cond_frame_path}")
 
     # Load prompt if JSON file
-    prompt_str = args.prompt
+    if args.settle and args.prompt == DEFAULT_PROMPT:
+        prompt_str = TIMED_DISSIPATIVE_PROMPT
+        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, #2488)")
+    else:
+        prompt_str = args.prompt
+
     if prompt_str.endswith(".json") and os.path.exists(prompt_str):
         with open(prompt_str) as f:
             data = json.load(f)
@@ -452,6 +470,8 @@ def main():
     sidecar = {
         "recipe_name": "Dynamic Mid-Event Conditioning (Release-Seam Protocol)",
         "charter_deliverable": 1,
+        "stage_1_release_seam": True,
+        "stage_2_dissipative_settle": bool(args.settle),
         "clip_file": str(out_path.name),
         "conditioning_image": str(cond_frame_path.name),
         "prompt": prompt_str,

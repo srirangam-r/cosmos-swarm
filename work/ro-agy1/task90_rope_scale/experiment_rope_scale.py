@@ -138,7 +138,13 @@ def run_clip(pipe, img_pil, prompt, seed, early_scale, out_path, num_frames=93, 
 
     v = res.video
     v = v[0] if (isinstance(v, np.ndarray) and v.ndim == 5) else v
-    frames = [(np.clip(f, 0, 1) * 255).round().astype(np.uint8) if f.dtype != np.uint8 else f for f in np.asarray(v)]
+    # Export as list of PIL Images to prevent Diffusers export_to_video uint8 overflow inversion
+    frames = [
+        Image.fromarray((np.clip(f, 0, 1) * 255).round().astype(np.uint8))
+        if f.dtype != np.uint8
+        else Image.fromarray(f)
+        for f in np.asarray(v)
+    ]
 
     encode_mp4(frames, fps, out_path)
     print(f"[done] Wrote {out_path} ({len(frames)} frames in {wall_sec:.1f}s, scale={early_scale}, seed={seed})")
