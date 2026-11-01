@@ -96,3 +96,14 @@ opened, viewed or measured.
     fall below it. STILL vs SWING is left to the blind coders.
   - **Added sensitivity:** `log_cpf_late`, the paired log of (changed-pixel fraction over frames 46-92 + 1e-4). The
     primary for `still` stays log me_late.
+
+## Amendment 3: a6k-only sensitivity (13:50 UTC, before all P clips exist and before any contrast is computed)
+Reason: task 239 interim (8e090f0, board #4912) shows the a100 endpoint does not reproduce the l40s clip for the same
+seed with noise.device=cpu (s105/s106 at the different-seed level), while a6k does (s101). Pairing inside a seed is still
+valid, since all four arms of s105/s106 ran on a100. But seeds 105-106 come from a stack that is not a6k-equivalent.
+- **Primary: unchanged.** All 6 seeds, same rule.
+- **Added sensitivity:** the same frozen `analyze` on seeds 101-104 only (a6k; `subset_seeds.py`, `auto226b.sh`).
+  With 4 seeds the minimum exact sign-flip p is 0.125, so this run can't pass rule 3(b). I report its direction and d,
+  and say whether they agree with the 6-seed primary. It can't create a TEXT CONTROLS verdict by itself.
+- What I have seen so far: per-clip measure_pend T of the **base** arm only (s101, s105, s106), in the t239 interim.
+  I have seen no other arm's value and no contrast.
