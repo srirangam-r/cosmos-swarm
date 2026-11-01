@@ -1,0 +1,48 @@
+{
+  "initial": {
+    "python": "3.12.3",
+    "opencv": "5.0.0",
+    "numpy": "2.5.4"
+  },
+  "pinned": {
+    "python": "3.12.3",
+    "opencv": "4.12.0",
+    "numpy": "2.2.6"
+  },
+  "archive": {
+    "python": "3.10.12",
+    "opencv": "4.12.0",
+    "numpy": "2.2.6"
+  },
+  "cases": [
+    {
+      "name": "real06_P1.186",
+      "frames": 93,
+      "pinned412_archive_raw_matches": 93,
+      "initial5_archive_raw_matches": 1,
+      "initial5_vs_pinned412_raw_matches": 1
+    },
+    {
+      "name": "real06_P2.0162",
+      "frames": 93,
+      "pinned412_archive_raw_matches": 93,
+      "initial5_archive_raw_matches": 1,
+      "initial5_vs_pinned412_raw_matches": 1
+    },
+    {
+      "name": "real14_P1.186",
+      "frames": 93,
+      "pinned412_archive_raw_matches": 93,
+      "initial5_archive_raw_matches": 1,
+      "initial5_vs_pinned412_raw_matches": 1
+    },
+    {
+      "name": "real14_P2.0162",
+      "frames": 93,
+      "pinned412_archive_raw_matches": 93,
+      "initial5_archive_raw_matches": 1,
+      "initial5_vs_pinned412_raw_matches": 1
+    }
+  ],
+  "interpretation": "Environment drift demonstrated; changed multiple dependencies, not an isolated OpenCV causal experiment. Original numeric-library pins reproduce all372 archived raw frames despite Python minor-version difference."
+}

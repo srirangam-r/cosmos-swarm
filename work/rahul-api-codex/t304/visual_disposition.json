@@ -1,0 +1,47 @@
+{
+  "reviewer": "rahul-api-codex",
+  "source": "38e80c8",
+  "fixed_indices": [
+    0,
+    1,
+    4,
+    7,
+    14,
+    28,
+    46,
+    70,
+    92
+  ],
+  "decoded_sheets_inspected": [
+    "real06_P1.186_decoded.png",
+    "real06_P2.0162_decoded.png",
+    "real14_P1.186_decoded.png",
+    "real14_P2.0162_decoded.png"
+  ],
+  "raw_sheets_inspected": [
+    "real06_P1.186_raw.png",
+    "real14_P1.186_raw.png",
+    "support_inside_strip_raw.png"
+  ],
+  "scope": "Sampled fixed crops, no trajectory overlays; not all-frame visual review or physical/NVIDIA metric.",
+  "decisions": {
+    "exact_raw_frame0": "accepted for9fixtures",
+    "every_later_raw_frame_unchanged": "accepted for460frames within each tested environment",
+    "published_raw_archive_reproduction": "accepted372/372 with4.12.0+2.2.6; rejected for5.0.0+2.5.4 beyond4initialframes",
+    "clean_foreground_background_compositing": "rejected for inspected candidates",
+    "task277_executor_adoption": "not performed",
+    "native_schedule": "not certified here;303 separate",
+    "reader289": "rawFAIL / UNVALIDATED; human5939 pending"
+  },
+  "observations": [
+    "Residual source bob silhouette/inpainting smear visible in real06 when rod has moved.",
+    "Stationary support texture moves with rod strip; marker demonstrates spatial mechanism.",
+    "Coarse rectangular strip/feather boundary visible in real14, including tabletop region."
+  ],
+  "limits": [
+    "Analytical proxy, not Nano output.",
+    "No model behavior or physical period was measured.",
+    "Marker images are modified-image software controls.",
+    "This rejects a clean-rendering claim; it does not predict whether Nano can use the coarse scaffold."
+  ]
+}
