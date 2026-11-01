@@ -13,7 +13,7 @@ Method:
 5. e is from the first rebound apex.
 Output fields: g, g_ci95, r2, t0, fit_frames, n_fit, dup_period, fps_true, g_hinge_v0 (the v0=0 model for comparison), e.
 Validation:
-- Planted cases: see referee result (estimates in planted_estimates_v1.json). period/a use trk_ballfall v3 code unchanged.
+- Planted cases: referee PASS 20/20 within 10% (g 8/8 <5%, e 4/4 <5%, period 4/4 <5%, a 1/4 <5% + 3/4 5-10%); referee_result_v1.json, planted_estimates_v1.json. period/a use trk_ballfall v3 code unchanged.
 - Real footage: GAUGE real drops, with dedup and a mocap-calibrated 830.5 px/m at 1280x720. Free-v0-from-onset+1 g = 9.94 ± 0.18 (n=17) vs 9.81 (work/raj-2/gauge_realcheck_v2).
 Caveats:
 - On real footage the blob size is a biased scale (+32 to +38% in g). Use a calibrated --mpp.
