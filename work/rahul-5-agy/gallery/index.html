@@ -451,9 +451,9 @@
       <section class="gallery-card" id="row-donor-transfer">
         <div class="card-header">
           <div class="card-title-group">
-            <h2>2. Spatio-Temporal Donor-Noise Band Transfer (E6 / E6-W)</h2>
+            <h2>2. Spatial Donor-Noise Band Transfer (E6 'slo' / 'all')</h2>
             <div class="card-meta">
-              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #254 &bull; <a href="http://board.tail0c526a.ts.net:8031/e6/report.md">:8031 Report</a> &bull; Target: Dynamics Rate Tuning
+              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="http://board.tail0c526a.ts.net:8031/e6/report.md">:8031 Report</a> &bull; Findings #5600, #5634 &bull; Target: Dynamics Rate Tuning
             </div>
           </div>
           <div class="btn-group">
@@ -508,12 +508,12 @@
         <div class="card-footer">
           <div class="sentence-box">
             <div class="sentence-label">Mechanism &amp; Explanation</div>
-            Transferring coarse low-frequency spatial-temporal noise bands from an inverted physical reference clip drives Nano to correct physical timing ($P/P_{\text{real}} = 0.998$) while allowing fine diffusion noise fill to synthesize fresh textures without memorizing donor appearance.
+            Transferring coarse spatial noise bands from an inverted physical reference clip drives Nano toward physical timing ($P/P_{\text{real}} \approx 1.000$) while diffusion noise fill synthesizes fresh textures. <em>Diagnostic Note:</em> The temporal mixing arm ('tlo') was identified as a 27.4-frame frame-0 ringing artifact with heavy flicker (flicker index 0.505; #5600, #5634), whereas spatial-only transfer ('slo', shown here) and full donor transfer ('all') remain flicker-free (&lt; 0.01) and reproduce real motion.
           </div>
           <div class="metric-card">
             <div class="metric-title">Period Ratio to Reality</div>
-            <div class="metric-value">P / P_real = 0.998</div>
-            <div class="metric-sub">64/64 clips in 10% band (vs Base 0.880, copy index &approx; 0)</div>
+            <div class="metric-value">P / P_real = 0.998 &ndash; 1.001</div>
+            <div class="metric-sub">Spatial 'slo' &amp; full 'all' arms; flicker index &lt; 0.01 (vs Base 0.880)</div>
           </div>
         </div>
       </section>
