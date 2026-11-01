@@ -37,7 +37,9 @@ def parse(stem):
     for p in ("trunc36_", "static_"):
         if stem.startswith(p):
             pre, stem = p[:-1], stem[len(p):]
-    m = re.match(r"(?:ball|cause5)_(F|QT|QS)_(ball\d)_fps24_93f_s(\d+)$", stem)
+    # BUGFIX 08:55 UTC (before the judge finished): was (?:ball|cause5), which silently dropped the
+    # cause6_* / cause_* stems and left 3 of the PREREG's 8 QT/F pairs. Any ro-1 cause_v5 prefix is accepted now.
+    m = re.match(r"(?:ball|cause\d*)_(F|QT|QS)_(ball\d)_fps24_93f_s(\d+)$", stem)
     if m:
         return pre, m.group(1), (m.group(2), int(m.group(3)))
     return pre, ("real" if stem.startswith("real") else None), None
@@ -75,7 +77,10 @@ def main():
         elif arm == "real":
             reals[(ctl, stem)] = v
         elif arm:
+            assert (ctl, arm, key) not in clips, f"duplicate key {stem}"
             clips[(ctl, arm, key)] = v
+        else:
+            print("UNPARSED clip (dropped):", stem)
     res = {"n_clips_judged": len(pq), "contrasts": {}, "arm_means": {}, "real": {}, "static": {}, "validity": {}}
     for ctl in ("", "trunc36"):
         for s in SETS:
