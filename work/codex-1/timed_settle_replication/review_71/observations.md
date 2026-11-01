@@ -1,0 +1,5 @@
+# Seed 2 blind visual QC
+
+Before opening the key, inspected native-pixel crops covering the gripper and plank at every frame of both 93-frame clips. Both clips show a ball-like object near the plank around frames 24–42, then rising back to near the gripper by roughly frames 54–60, followed by a new descent around frames 72–75. Both show continued visible movement near the plank at the end. Neither demonstrates sustained rest through the end. Physical contact, object identity, the mechanism of the high return, and precise rest onset are uncertain; a sharp visual distinction between hovering and touching is not assumed. These are unvalidated qualitative observations, not measurements of restitution or a recipe effect. This is one matched seed and one real-photo scene; seed 1 screening remains inconclusive and seed 3 is incomplete.
+
+The full 93-frame native-pixel crop sheets are retained as review evidence. The crop omits the outer scene. Arm labels were opened only after this note was written.
