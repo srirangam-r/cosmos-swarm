@@ -240,6 +240,9 @@ def main():
     r = np.nanmedian(d1) / 2 if np.isfinite(np.nanmedian(d1)) else 10
     bg = ghost_free_bg(fr, p1, r)
     pts, diam = track(fr, bg, seed, A.thr, A.maxjump)
+    # rahul-3 task36: iterate bg/track so a resting ghost ball is removed from the median bg (e<=0.5 clips)
+    for _ in range(2):
+        bg = ghost_free_bg(fr, pts, r); pts, diam = track(fr, bg, seed, A.thr, A.maxjump)
     y = pts[:, 1]
     an = analyse(t, y, A.min_rise, A.min_pts, A.hold_px)
     # scale: 50%-contrast diameter over the first descent (ball isolated, before the
