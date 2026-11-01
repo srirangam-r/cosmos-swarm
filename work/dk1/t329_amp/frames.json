@@ -1,0 +1,59 @@
+[
+ {
+  "id": "real_09",
+  "image": "inputs/real_09.png",
+  "pivot": [
+   323,
+   121
+  ],
+  "bob": [
+   325,
+   255
+  ],
+  "P_real_s": 1.1727,
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "from": "work/dk2/t276/frames.json@a33fc5a"
+ },
+ {
+  "id": "real_16",
+  "image": "inputs/real_16.png",
+  "pivot": [
+   322,
+   121
+  ],
+  "bob": [
+   322,
+   255
+  ],
+  "P_real_s": 1.1874,
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "from": "work/dk2/t276/frames.json@a33fc5a"
+ },
+ {
+  "id": "real_14",
+  "image": "inputs/real_14.png",
+  "pivot": [
+   324,
+   122
+  ],
+  "bob": [
+   333,
+   252
+  ],
+  "P_real_s": 1.1877671105039158,
+  "seeds": [
+   101,
+   102,
+   103
+  ],
+  "from": "work/dk1/t277_rep/frames.json@67ba8cf"
+ }
+]
