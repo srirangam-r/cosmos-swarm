@@ -1,0 +1,149 @@
+{
+ "t139_O_ball1_s1": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "gripper lifts ball up out of frame f4-6; larger ball enters from top f16 and falls; gripper returns holding ball f28; tether/yo-yo rest of clip"
+ },
+ "t139_A_ball1_s1": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f4 (~130 px, firstfall onset f2 impact f4); then high e~1 bounces leaving top of frame, extra balls appear; no robot"
+ },
+ "t139_G_ball1_s1": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball drifts up and vanishes f1-2; gripper + larger ball re-enter from top f16, dropped f17, bounces; gripper returns repeatedly"
+ },
+ "t139_O_ball2_s1": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "gripper lifts ball out f4-6 (markers remain); gripper re-enters with larger ball f16, drops it f17-18; tether/yo-yo"
+ },
+ "t139_A_ball2_s1": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f4; chaotic bounces with duplicate balls (f12, f24, f48); no robot"
+ },
+ "t139_G_ball2_s1": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball drifts up and out f1-3; reappears f10-12; gripper re-enters f13 and drops a ball (ball near gripper + one on plank f17); gripper returns repeatedly"
+ },
+ "t139_O_ball1_s2": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball stays in the jaws f0-f92; giant second ball enters top-right f4, falls to plank, rolls/bounces; classic clone"
+ },
+ "t139_A_ball1_s2": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "clean continuous fall from f0 position f0-f12 (firstfall flag ok, onset f2, impact f12); bounces, rolls out right f80+; no robot"
+ },
+ "t139_G_ball1_s2": {
+  "fall": 1,
+  "jump": 1,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "ball descends f0-f2 then a duplicate pops onto the far table edge at f2 (no intermediate heights); upper ball reaches plank f5-8; high bounces; no gripper all clip"
+ },
+ "t139_O_ball2_s2": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "arm lowers and CARRIES the ball down to the plank f2-8 (not free); gripper morphs into a giant ball f9-10 that grows; coded fall=0 because carried (prereg wording didn't say 'free': sensitivity case)"
+ },
+ "t139_A_ball2_s2": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "clean continuous fall from f0 position f0-f10 (firstfall ok); bounce; ball hovers static mid-air f30-40, then falls; rolls out right; no robot"
+ },
+ "t139_G_ball2_s2": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f7; e~1 bounces through f92; no gripper all clip"
+ },
+ "t139_O_ball1_s3": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "arm descends carrying the ball f9-17 and PLACES it on the plank; ball grows; gripper retracts ~f40; ball stays on plank"
+ },
+ "t139_A_ball1_s3": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "ball VANISHES at f1 (absent f1-8); larger ball enters from top f9 and falls f9-13 to plank; then on/near plank; no robot. firstfall auto=fall here (tracker jump) - eye/auto disagree"
+ },
+ "t139_O_ball2_s3": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "arm descends carrying the ball f9-28 and PLACES it on the plank; gripper retracts; ball grows, stays on plank (same branch as ball1 s3)"
+ },
+ "t139_G_ball1_s3": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 1,
+  "any_fall": 1,
+  "note": "frame-0 ball stays floating at its position f0-f92 with NOTHING holding it; large second ball enters from top f6, falls to plank f6-14, bounces/rests; no gripper"
+ }
+}
