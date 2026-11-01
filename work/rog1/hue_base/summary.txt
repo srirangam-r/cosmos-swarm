@@ -1,0 +1,12 @@
+2B n clips 22
+  Geometric Reasoning: 0.679 ± 0.026 (SE)
+  Physical Laws: 0.569 ± 0.030 (SE)
+  Semantic Alignment: 0.917 ± 0.021 (SE)
+  Visual Integrity: 0.660 ± 0.019 (SE)
+  overall: 0.698 ± 0.015 (SE)
+8B n clips 22
+  Geometric Reasoning: 0.687 ± 0.044 (SE)
+  Physical Laws: 0.623 ± 0.048 (SE)
+  Semantic Alignment: 0.927 ± 0.022 (SE)
+  Visual Integrity: 0.861 ± 0.025 (SE)
+  overall: 0.768 ± 0.025 (SE)
