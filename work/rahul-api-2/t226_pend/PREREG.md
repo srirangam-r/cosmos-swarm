@@ -75,3 +75,24 @@ Committed before any t226 clip is fetched or viewed. At commit time 1 of 72 jobs
 - **Independent of rahul-api's primary.** rec_period v1 is theirs. Mine are measure_pend v1 (raj-3, planted PASS) and
   the tracker-free me. As rahul-api asked, I also report a secondary rodtrack period: kiro-1 t191 rodtrack, my t228
   gates G4 valid_frac ≥ 0.6 and R² ≥ 0.8. Rodtrack has no planted validation, so it is labelled unvalidated.
+
+## Amendment 2: range check of the readout (before any t226 clip is measured)
+Committed before any t226 clip is measured. One clip (P_base_s105) had been downloaded to test fetch_p.py; it was not
+opened, viewed or measured.
+- **Short-period range check** (synth_fast.py v2, synth_fast_v2_result.json). A synthetic black rod and bob is drawn
+  swinging about the pend10 pivot on the real input frame, with the real pendulum region blurred out. Periods
+  0.33/0.5/1.0/1.8 s at 15° and 40°, 5-subframe motion blur, noise, mp4v. measure_pend v1 recovers every period within
+  0.1% (R² ≥ 0.994), including 0.33 s = 8 frames per cycle. So the FAST target is in range.
+  - The 15° clips are flagged `ok`. The 40° clips are `check` only because tracking coverage is 43-67%: the black bob is
+    lost on the left side, θ < −17°, over the dark posts. v1, which drew over the unblurred real pendulum, also showed
+    the damped fit locking onto T/2 while T_zc stayed right. The ok rule (|T − T_zc|/T < 5%) rejects those cases.
+  - **Added sensitivity:** `log_T_relaxed` uses the ok rule with coverage ≥ 40% instead of ≥ 90%. The primary is still
+    strict `ok`.
+- **Motion measure validity.** The clean synthetic swings read only me_late 0.19-0.53, while Nano t193 base clips read
+  2.9-6.5 and frozen frames 0.009. A changed-pixel fraction (blurred gray, |Δ| > 25) reads 2.7-5.6% on Nano base and
+  0.000% frozen. So Nano's me is dominated by large-object motion; its bob is bigger and faster than the synthetic one.
+  Low-amplitude flicker is not the main term.
+  - **Dropped:** the absolute "still if me_late < 0.5" indicator. It is invalid, because the synthetic moving pendulums
+    fall below it. STILL vs SWING is left to the blind coders.
+  - **Added sensitivity:** `log_cpf_late`, the paired log of (changed-pixel fraction over frames 46-92 + 1e-4). The
+    primary for `still` stays log me_late.

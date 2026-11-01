@@ -38,11 +38,19 @@ def motion(F):
     return d
 
 
+def changed_frac(F, thr=25.0, sig=1.5):
+    """Amendment 2: fraction of ROI pixels whose blurred gray value changes by > thr between consecutive frames."""
+    G = np.array([cv2.GaussianBlur(f.mean(2) if f.ndim == 3 else f, (0, 0), sig) for f in F])
+    m = roi_mask(*G.shape[1:3])
+    return (np.abs(np.diff(G, axis=0))[:, m] > thr).mean(1)
+
+
 def measure_clip(path, fps=24.0):
     F = trk.load(path)
-    d = motion(F)
+    d = motion(F); c = changed_frac(F)
     r = dict(clip=os.path.basename(path), n_frames=int(len(F)), fps=fps,
              me_all=float(d.mean()), me_late=float(d[LATE0 - 1:].mean()) if len(d) >= LATE0 else float('nan'),
+             cpf_all=float(c.mean()), cpf_late=float(c[LATE0 - 1:].mean()) if len(c) >= LATE0 else float('nan'),
              curve=[float(x) for x in d])
     try:
         p = mp.measure(F, fps, nboot=100, keep_track=True)
@@ -110,6 +118,18 @@ def carryover(curves, A, B, max_exact=8, nperm=20000, seed=0):
                 perm_p=float(np.mean(vals >= same - 1e-12)))
 
 
+def relaxed_ok(p):
+    """Amendment 2 sensitivity gate: measure_pend's ok rule without the >= 90% tracked-frames condition (>= 40% instead).
+    Synthetic check (synth_fast.py v2): 40 deg swings lose the black bob over the dark posts (coverage 43-67%), yet the
+    period is exact (|T - T_zc| / T < 0.5%, R2 >= 0.994)."""
+    try:
+        T, Tzc = p['period_s'], p['period_zc_s']
+        return bool(p['n_halfcycles'] >= 3 and p['r2'] > 0.8 and np.isfinite(Tzc) and abs(T - Tzc) / T < 0.05
+                    and p['frac_tracked'] >= 0.4)
+    except (KeyError, TypeError):
+        return False
+
+
 def analyze(meas, arms, contrasts, arm_key='arm'):
     tab = {}; curves = {}
     for r in meas:
@@ -122,7 +142,8 @@ def analyze(meas, arms, contrasts, arm_key='arm'):
     for a in arms:
         rs = [v for (aa, s), v in tab.items() if aa == a]
         T = [v['pend'].get('period_s') for v in rs if v['pend'].get('flag') == 'ok']
-        out['arms'][a] = dict(n=len(rs), n_ok=len(T), n_fail=sum(v['pend'].get('flag') == 'fail' for v in rs),
+        out['arms'][a] = dict(n=len(rs), n_ok=len(T), n_relaxed=sum(relaxed_ok(v['pend']) for v in rs),
+                              n_fail=sum(v['pend'].get('flag') == 'fail' for v in rs),
                               me_all_geo=float(np.exp(np.mean([np.log(v['me_all']) for v in rs]))) if rs else None,
                               me_late_geo=float(np.exp(np.mean([np.log(v['me_late']) for v in rs]))) if rs else None,
                               T_ok_geo=float(np.exp(np.mean(np.log(T)))) if T else None, T_ok=T)
@@ -130,8 +151,10 @@ def analyze(meas, arms, contrasts, arm_key='arm'):
         A, B = c.split(':')
         res = {}
         for key, f in (('log_me_all', lambda v: np.log(v['me_all'])), ('log_me_late', lambda v: np.log(v['me_late'])),
+                       ('log_cpf_late', lambda v: np.log(v.get('cpf_late', np.nan) + 1e-4)),
                        ('log_rms_px', lambda v: np.log(v['pend'].get('rms_px', np.nan)) if v['pend'].get('rms_px', 0) > 0 else np.nan),
                        ('log_T_ok', lambda v: np.log(v['pend']['period_s']) if v['pend'].get('flag') == 'ok' else np.nan),
+                       ('log_T_relaxed', lambda v: np.log(v['pend']['period_s']) if relaxed_ok(v['pend']) else np.nan),
                        ('log_T_any', lambda v: np.log(v['pend']['period_s']) if np.isfinite(v['pend'].get('period_s', np.nan)) else np.nan)):
             rows = {k: float(f(v)) for k, v in tab.items() if k[0] in (A, B)}
             res[key] = paired(rows, A, B, key)
