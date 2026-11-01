@@ -1,0 +1,122 @@
+{
+ "cells": {
+  "ball1_s41": {
+   "R": {
+    "rest": "N",
+    "art": "N"
+   },
+   "N": {
+    "rest": "Y",
+    "art": "N"
+   },
+   "F": {
+    "rest": "Y",
+    "art": "N"
+   }
+  },
+  "ball1_s42": {
+   "N": {
+    "rest": "N",
+    "art": "N"
+   },
+   "F": {
+    "rest": "N",
+    "art": "Y"
+   },
+   "R": {
+    "rest": "N",
+    "art": "N"
+   }
+  },
+  "ball1_s43": {
+   "N": {
+    "rest": "N",
+    "art": "N"
+   },
+   "F": {
+    "rest": "N",
+    "art": "N"
+   },
+   "R": {
+    "rest": "N",
+    "art": "N"
+   }
+  },
+  "ball2_s41": {
+   "R": {
+    "rest": "Y",
+    "art": "N"
+   },
+   "F": {
+    "rest": "Y",
+    "art": "Y"
+   },
+   "N": {
+    "rest": "Y",
+    "art": "N"
+   }
+  },
+  "ball2_s42": {
+   "F": {
+    "rest": "N",
+    "art": "Y"
+   },
+   "N": {
+    "rest": "N",
+    "art": "N"
+   },
+   "R": {
+    "rest": "Y",
+    "art": "Y"
+   }
+  },
+  "ball2_s43": {
+   "R": {
+    "rest": "N",
+    "art": "N"
+   },
+   "N": {
+    "rest": "N",
+    "art": "N"
+   },
+   "F": {
+    "rest": "N",
+    "art": "N"
+   }
+  }
+ },
+ "arms": {
+  "F": {
+   "rest": 2,
+   "art": 3,
+   "n": 6
+  },
+  "R": {
+   "rest": 2,
+   "art": 1,
+   "n": 6
+  },
+  "N": {
+   "rest": 2,
+   "art": 0,
+   "n": 6
+  }
+ },
+ "paired": {
+  "R-F": {
+   "rest_up": 1,
+   "rest_down": 1,
+   "sign_p_two_sided": 1.0
+  },
+  "R-N": {
+   "rest_up": 1,
+   "rest_down": 1,
+   "sign_p_two_sided": 1.0
+  },
+  "N-F": {
+   "rest_up": 0,
+   "rest_down": 0,
+   "sign_p_two_sided": 1.0
+  }
+ }
+}
