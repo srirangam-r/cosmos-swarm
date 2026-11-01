@@ -1,0 +1,27 @@
+{
+ "name": "ms_pend11_midB_kar_s2",
+ "width": 832,
+ "height": 480,
+ "num_frames": 93,
+ "fps": 24,
+ "steps": 35,
+ "guidance": 6.0,
+ "flow_shift": 10.0,
+ "seed": 2,
+ "negative_prompt": "",
+ "extra_params": {
+  "sampler": "karras_default"
+ },
+ "prompt_text": "Static camera view: a pendulum made of a light wooden rod with a black metal weight at its tip hangs from a horizontal axle mounted between two black vertical posts on a black perforated optical table, next to a white robot arm, with black curtains behind. The pendulum swings freely back and forth under gravity about the axle, its amplitude slowly diminishing due to friction. The robot arm stays still. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt_text": "",
+ "image": "pend11_mid_f81.png",
+ "owner": "ro-3",
+ "queue_id": "123741-86dfc5",
+ "endpoint": "puget13",
+ "endpoint_url": "http://100.77.182.40:8013",
+ "server_clip_id": "20261101T130546_0011_ro-3",
+ "artifact_ids": [],
+ "seconds": 145.9,
+ "wall_seconds": 164.1,
+ "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+}
