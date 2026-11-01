@@ -1,0 +1,130 @@
+{
+  "real_ball_1_full_129f": {
+    "source": "real_ball_1_lb832.mp4",
+    "start_f": 0,
+    "num_frames": 129,
+    "latent_shape": [
+      1,
+      48,
+      33,
+      30,
+      52
+    ],
+    "psnr_db": 36.86,
+    "rmse_px_val": 3.661,
+    "orig_mp4": "real_ball_1_full_129f_orig.mp4",
+    "vae_rt_mp4": "real_ball_1_full_129f_vae_rt.mp4"
+  },
+  "real_ball_1_midfall_dd33_93f": {
+    "source": "real_ball_1_lb832.mp4",
+    "start_f": 33,
+    "num_frames": 93,
+    "latent_shape": [
+      1,
+      48,
+      24,
+      30,
+      52
+    ],
+    "psnr_db": 37.041,
+    "rmse_px_val": 3.585,
+    "orig_mp4": "real_ball_1_midfall_dd33_93f_orig.mp4",
+    "vae_rt_mp4": "real_ball_1_midfall_dd33_93f_vae_rt.mp4"
+  },
+  "real_ball_2_full_129f": {
+    "source": "real_ball_2_lb832.mp4",
+    "start_f": 0,
+    "num_frames": 129,
+    "latent_shape": [
+      1,
+      48,
+      33,
+      30,
+      52
+    ],
+    "psnr_db": 36.848,
+    "rmse_px_val": 3.665,
+    "orig_mp4": "real_ball_2_full_129f_orig.mp4",
+    "vae_rt_mp4": "real_ball_2_full_129f_vae_rt.mp4"
+  },
+  "real_ball_2_midfall_dd35_93f": {
+    "source": "real_ball_2_lb832.mp4",
+    "start_f": 35,
+    "num_frames": 93,
+    "latent_shape": [
+      1,
+      48,
+      24,
+      30,
+      52
+    ],
+    "psnr_db": 36.923,
+    "rmse_px_val": 3.634,
+    "orig_mp4": "real_ball_2_midfall_dd35_93f_orig.mp4",
+    "vae_rt_mp4": "real_ball_2_midfall_dd35_93f_vae_rt.mp4"
+  },
+  "real_ball_3_full_129f": {
+    "source": "real_ball_3_lb832.mp4",
+    "start_f": 0,
+    "num_frames": 129,
+    "latent_shape": [
+      1,
+      48,
+      33,
+      30,
+      52
+    ],
+    "psnr_db": 35.515,
+    "rmse_px_val": 4.273,
+    "orig_mp4": "real_ball_3_full_129f_orig.mp4",
+    "vae_rt_mp4": "real_ball_3_full_129f_vae_rt.mp4"
+  },
+  "real_ball_3_midfall_dd34_93f": {
+    "source": "real_ball_3_lb832.mp4",
+    "start_f": 34,
+    "num_frames": 93,
+    "latent_shape": [
+      1,
+      48,
+      24,
+      30,
+      52
+    ],
+    "psnr_db": 35.687,
+    "rmse_px_val": 4.19,
+    "orig_mp4": "real_ball_3_midfall_dd34_93f_orig.mp4",
+    "vae_rt_mp4": "real_ball_3_midfall_dd34_93f_vae_rt.mp4"
+  },
+  "real_ball_4_full_129f": {
+    "source": "real_ball_4_lb832.mp4",
+    "start_f": 0,
+    "num_frames": 129,
+    "latent_shape": [
+      1,
+      48,
+      33,
+      30,
+      52
+    ],
+    "psnr_db": 35.489,
+    "rmse_px_val": 4.287,
+    "orig_mp4": "real_ball_4_full_129f_orig.mp4",
+    "vae_rt_mp4": "real_ball_4_full_129f_vae_rt.mp4"
+  },
+  "real_ball_4_midfall_dd34_93f": {
+    "source": "real_ball_4_lb832.mp4",
+    "start_f": 34,
+    "num_frames": 93,
+    "latent_shape": [
+      1,
+      48,
+      24,
+      30,
+      52
+    ],
+    "psnr_db": 35.67,
+    "rmse_px_val": 4.198,
+    "orig_mp4": "real_ball_4_midfall_dd34_93f_orig.mp4",
+    "vae_rt_mp4": "real_ball_4_midfall_dd34_93f_vae_rt.mp4"
+  }
+}
