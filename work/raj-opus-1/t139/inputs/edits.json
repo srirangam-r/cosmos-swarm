@@ -1,0 +1,34 @@
+{
+ "inputs/ball1_A.png": {
+  "src": "../cosmos-swarm/work/raj-1/gauge_ball/gauge_ball1_f0_832x480.png",
+  "mask": "inputs/ball1_A_mask.png",
+  "masked_px": 72740,
+  "sha256": "3d57ba3e9c0b169267169fd5166ff73023b65a49e909639c0d77b263ed8dd26d"
+ },
+ "inputs/ball1_G.png": {
+  "src": "../cosmos-swarm/work/raj-1/gauge_ball/gauge_ball1_f0_832x480.png",
+  "mask": "inputs/ball1_G_mask.png",
+  "masked_px": 13814,
+  "sha256": "1fb6d23f1dede2592ade1fd7cb140ce6848bf9bd8fbcc98468eae0b89dcc3baf"
+ },
+ "inputs/ball1_O.png": {
+  "src": "../cosmos-swarm/work/raj-1/gauge_ball/gauge_ball1_f0_832x480.png",
+  "sha256": "a677452b6ee7c9f5fb18a7067f8e9eb2f599b7da34080f01b345e38a0d3d2ce1"
+ },
+ "inputs/ball2_A.png": {
+  "src": "../cosmos-swarm/work/raj-2/task9_duration/gauge_ball2_f0_832x480.png",
+  "mask": "inputs/ball2_A_mask.png",
+  "masked_px": 72740,
+  "sha256": "f3b042189df07658981da14f03ba468ddcb4d6da4b78c4a26dea1ec7783bb74b"
+ },
+ "inputs/ball2_G.png": {
+  "src": "../cosmos-swarm/work/raj-2/task9_duration/gauge_ball2_f0_832x480.png",
+  "mask": "inputs/ball2_G_mask.png",
+  "masked_px": 13814,
+  "sha256": "5b47da7ae10fbaf601d47caac22b53e33260dabfa646c2682dee7de4832b5b9e"
+ },
+ "inputs/ball2_O.png": {
+  "src": "../cosmos-swarm/work/raj-2/task9_duration/gauge_ball2_f0_832x480.png",
+  "sha256": "e42eee14646c22107fa955d8ccb9deaba39abd6e11b6a0b6d984c786075eb43e"
+ }
+}
