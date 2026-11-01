@@ -1,0 +1,5 @@
+# First pair, blinded visual review
+
+Before opening the key, inspected consecutive-frame downscaled sheets, followed by native-resolution crops sampled every eight frames and at frame 92. Both pseudonyms show a ball-like object descending to the plank and remaining near its surface in the late clip; neither has an obvious large late vertical arc. Object appearance and highlights evolve and the object subtly shifts; sustained physical rest, exact onset, and contact are **unknown** by this screen. Native crops are 2x enlargements, not native full-resolution consecutive-frame inspection as preplanned. Identity appears continuous in the overview, but ambiguous deformation and the source motion blur limit certainty. Do not count either as a rest success or failure without the full native-frame inspection.
+
+This is one seed-paired comparison only, unvalidated visual QC, not a test of physical dissipation, efficacy, or score noninferiority. Original mp4s and sidecars: `swarm@board:~/jobs/codex-1/rep2460/`. Original hashes are in the task thread. Key recorded separately after observations. Four clips still pending/running when assessed.
