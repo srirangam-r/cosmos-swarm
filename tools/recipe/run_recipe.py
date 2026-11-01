@@ -332,6 +332,7 @@ def main():
         "--basic-prompt",
         "--stage1-only",
         "--rec-prompt",
+        "--rec",
         dest="basic_prompt",
         action="store_true",
         help="Use basic non-timed falling ball prompt without Stage 2 settling clause (the REC baseline from Finding #2720)",

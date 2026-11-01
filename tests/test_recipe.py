@@ -354,8 +354,8 @@ class TestRecipeRunner(unittest.TestCase):
             self.assertEqual(sidecar["prompt"], run_recipe.TIMED_DISSIPATIVE_PROMPT)
 
     def test_stage1_only_flag_sets_stage2_false(self):
-        """Regression test for rog-cc #2775: --stage1-only / --rec-prompt uses REC prompt and sets stage_2: False."""
-        for flag in ["--stage1-only", "--rec-prompt", "--basic-prompt"]:
+        """Regression test for rog-cc #2775: --stage1-only / --rec-prompt / --rec uses REC prompt and sets stage_2: False."""
+        for flag in ["--stage1-only", "--rec-prompt", "--rec", "--basic-prompt"]:
             with self.subTest(flag=flag), tempfile.TemporaryDirectory() as tmpdir:
                 input_img = Path(tmpdir) / "test_input.png"
                 cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
