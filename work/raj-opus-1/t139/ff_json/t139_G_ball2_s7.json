@@ -1,0 +1,42 @@
+{
+ "g": 1.2408638067873679,
+ "g_ci95": [
+  1.0445818174347277,
+  1.427108496702519
+ ],
+ "g_sd": 0.10386369149947307,
+ "r2": 0.991727218630189,
+ "dAIC_quad_vs_lin": 33.34969271468131,
+ "flag": "ok",
+ "n_fit": 17,
+ "t0": 0.68307706829529,
+ "fit_frames": [
+  18,
+  34
+ ],
+ "motion_frame": 25,
+ "impact_frame": 36,
+ "fall_time_s": 0.81692293170471,
+ "fall_px": 170.95641025641024,
+ "fall_m": 0.3167032424164695,
+ "g_from_h_T": 0.9491182645314287,
+ "d_seed_px": 10.645107772184812,
+ "d_impact_px": 11.0,
+ "d_ratio": 1.0333385284029257,
+ "d_fallstart_px": 16.200000762939453,
+ "d_growth": 0.6790123137009084,
+ "e": 1.5589850349321515,
+ "m_per_px": 0.0018525379770285293,
+ "fps_true": 24.0,
+ "n_tracked": 92,
+ "track_info": {
+  "point": [
+   280.0,
+   116.0
+  ],
+  "pframe": 0,
+  "ctol": 25.0,
+  "seed_area": 89
+ },
+ "method": "firstfall v1 (seeded colour+change ball tracker, continuity; blob-minor scale; realball v1.1 fit)"
+}

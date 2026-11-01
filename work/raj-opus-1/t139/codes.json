@@ -290,6 +290,110 @@
   "reentry": 0,
   "any_fall": 1,
   "descent_artifact": 1,
-  "note": "a ~2x larger ball appears directly under the jaws at f1 and falls f1-6 to plank; a small dark ball appears to stay in the jaws f1-f92 (zoom), so coded clone; AMBIGUOUS (could be swell-release)"
+  "note": "original marked ball stays in the jaws f0-f92 (zoom confirmed, markers visible f6-92); a ~2x larger clone forms directly beneath at f1 and falls f1-6 to plank. Clone, not release"
+ },
+ "t139_O_ball2_s6": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 1,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "descent_artifact": 1,
+  "note": "original ball stays in the jaws f0-f92 (zoom: markers visible f10-92); ball duplicates at the jaws f2-4, a larger clone descends f6-13 to plank. Clone (firstfall 'ok' fit is on the clone)"
+ },
+ "t139_A_ball1_s6": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "slow continuous fall from f0 position f0-f14 (firstfall ok, onset f4, impact f15); ball then sits on the plank f27-92; no robot"
+ },
+ "t139_G_ball1_s6": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f8 (firstfall ok, onset f2, impact f8), ball grows ~1.3x; bounces through f92; white gripper-like shape at top edge f31-60 that never holds the ball"
+ },
+ "t139_A_ball2_s6": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "slow continuous fall from f0 position f0-f12 (firstfall ok, onset f3, impact f13); no robot"
+ },
+ "t139_G_ball2_s6": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "continuous fall from f0 position f0-f6, ball grows; bounces on plank through f92; white gripper-like edge at top f33-40 that never holds the ball"
+ },
+ "t139_O_ball1_s7": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "ball in jaws f0-25; arm descends f18-36 carrying the ball and PLACES it on the plank (f36-56); retracts f60+; ball stays on plank"
+ },
+ "t139_A_ball1_s7": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "fast continuous fall from f0 position f0-f4 (firstfall onset f3, impact f5); bounces; no robot"
+ },
+ "t139_G_ball1_s7": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 1,
+  "any_fall": 1,
+  "borderline": 1,
+  "note": "BORDERLINE: ball invisible at f1 (white gripper-like crescent at top), blurred blob mid-height f2, at plank f3-4: only 2 intermediate heights visible (prereg needs 3) -> fall=0; ball enters from top again f18-22; arm+gripper return f27-56 and handle the ball"
+ },
+ "t139_O_ball2_s7": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "ball in jaws f0-26; arm descends f27-40 carrying the ball and PLACES it on the plank; same branch as O ball1 s7"
+ },
+ "t139_A_ball2_s7": {
+  "fall": 1,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 0,
+  "reentry": 0,
+  "any_fall": 1,
+  "note": "fast continuous fall from f0 position f0-f4 (firstfall onset f2, impact f5); bounces; no robot"
+ },
+ "t139_G_ball2_s7": {
+  "fall": 0,
+  "jump": 0,
+  "clone": 0,
+  "holder_back": 1,
+  "reentry": 0,
+  "any_fall": 0,
+  "carried": 1,
+  "note": "ball FLOATS motionless and unsupported at its f0 position f0-f26; a gripper/arm descends from the top f26-35 to the ball and the ball moves down with it (firstfall onset f25)"
  }
 }
