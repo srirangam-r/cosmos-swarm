@@ -68,5 +68,40 @@
    "period_frames": 107.0849503438565,
    "period_zc_frames": 87.1013758575999
   }
+ },
+ "pend_fps48_s1": {
+  "fps": 48,
+  "seed": 1,
+  "duration_template": true,
+  "full": {
+   "period_s": 2.1738407800676365,
+   "period_ci95": [
+    2.0769664388710836,
+    2.2662357299993983
+   ],
+   "period_zc_s": 2.084593707184598,
+   "r2": 0.7613158142163639,
+   "n_halfcycles": 4,
+   "release_frame": 4,
+   "amp_px": 392.25833815904207,
+   "flag": "check",
+   "period_frames": 104.34435744324655,
+   "period_zc_frames": 100.0604979448607
+  },
+  "trim12": {
+   "period_s": 2.1500746778190956,
+   "period_ci95": [
+    2.0578024549360285,
+    2.235303341608588
+   ],
+   "period_zc_s": 2.1813656868354947,
+   "r2": 0.9382264974245872,
+   "n_halfcycles": 2,
+   "release_frame": 2,
+   "amp_px": 141.54732570370885,
+   "flag": "check",
+   "period_frames": 103.2035845353166,
+   "period_zc_frames": 104.70555296810375
+  }
  }
 }

@@ -10,3 +10,12 @@ Clip sidecars: `pend_*.json`. The mp4s stay on puget (~/swarm-work/ro-3/exp_fps/
 - The prompt says 10°, but the pendulum swings through very large arcs (often near-horizontal), and the ball passes behind or in front of the post.
 - measure_pend flags every clip so far `check`. fps24 s1: T_fit 4.41 s (106 f), T_zc 4.58 s. fps12 s1: T_fit 4.65 s (56 f), but T_zc 2.29 s (inconsistent).
   So nothing quantitative yet. Next: a more robust angle tracker (SAM2 or pivot-angle), validated on planted + real GAUGE pendulum.
+
+## Update 03:55 UTC (seed 1, three arms; all flag=check, so UNVALIDATED)
+| arm | T_fit (s) | T_fit (frames) | T_zc (s) | R² | note |
+|---|---|---|---|---|---|
+| fps 24 | 4.41 | 106 | 4.58 | 0.69 | large swings |
+| fps 12 | 4.65 | 56 | 2.29 | 0.39 | fit and zc disagree; ball occluded by the post |
+| fps 48 | 2.17 | 104 | 2.09 | 0.76 | cleanest track; fit and zc within 4% |
+Tentative reading: fps 24 vs 48 gives the same period in frames (~105 f), so the period in stated seconds goes as 1/fps. Nano seems not to scale its
+pendulum dynamics with the conditioned fps, which is consistent with "fixed events per clip" (task 9). Needs seed 2, the template-off arm and a better tracker.
