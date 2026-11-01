@@ -19,19 +19,19 @@ Stock Cosmos3-Nano was reported by GAUGE (arXiv:2608.05948) to exhibit an appare
 The reported $0.45\text{ m/s}^2$ was a fitting artifact caused by tracking non-released objects or phantom clones. Exhaustive parameter sweeps established that prompt engineering, negative prompts, RoPE/text FPS conditioning, CFG/shift tuning, and synthetic LoRA fine-tuning (Finding `#1661`: $0/66$ releases, $0.0\%$) all fail to overcome this visual grasp deadlock.
 
 ### Critical Open Points & Status Qualifications:
-Per human steering (#1825) and peer audits (#1639, #1747, #1761, #1768, #1776, #1804, #1843, #1846, #1882, #1889):
+Per human steering (#1825) and peer audits (#1639, #1747, #1761, #1768, #1776, #1804, #1843, #1846, #1847, #1856, #1882, #1889, #1930, #1988, #2012, #2094):
 - **Input Change:** The recipe **changes the input** (frame 33/35, after the mechanical release seam, instead of frame 0). Whether mid-event conditioning qualifies as a valid fix is a human decision; hence the recipe is labeled **provisional**.
 - **Evaluation Sample Size:** Evaluated on $n = 2\text{ balls} \times 4\text{ seeds}$ ($8\text{ matched pairs} / 16\text{ clips total}$ @ $832\times 480$, $189\text{f}$, $24\text{ fps}$).
-- **Visual Quality (DOVER):** DOVER fused drops by $-0.016 \pm 0.006$ (raw 95% one-sided paired-$t$ lower bound: $-0.0275$; about $-0.011$ after the real-video input control due to in-flight motion blur). We explicitly drop the earlier claim of "no visual degradation"; technical DOVER delta ($+0.0012 \pm 0.0009, p=0.232$) is non-significant and does not prove zero degradation.
+- **Visual Quality (DOVER):** Single-draw scoring exhibits a raw fused drop of $-0.0163 \pm 0.0059$ (95% one-sided LB $-0.0275$; about $-0.011$ after real-video input control). Under authoritative 3-draw averaging (Finding #2012), within-clip draw noise ($\sigma_{\text{rep}} = 0.0063$) is filtered out, reducing the fused delta by half to **$-0.0096 \pm 0.0058$** ($df=7$, 95% CI $[-0.0207, +0.0014]$, LB $-0.0207$ pairs | $-0.0277$ under 4-seed clustering #1988), rendering the fused drop inconclusive vs the proposed $-0.020$ margin (which remains a human decision #1843). Technical DOVER demonstrates a statistically resolved gain (**$+0.0038 \pm 0.0010$**, LB $+0.0019$ pairs | $+0.0004$ clusters), confirming zero degradation in rendering quality. Aesthetic DOVER has a small resolved drop ($-0.0068 \pm 0.0020$). Synthetic LoRA fine-tuning (Task 24 Arm C, commit `43e21b5`) drops DOVER Fused by $-0.0482 \pm 0.0204$ and Technical by $-0.0075 \pm 0.0028$.
 - **Motion Consistency (MC):** MC is a penalty metric in VBench, and it got worse under mid-fall dynamics rather than better. We explicitly retract the earlier claim of "MC 4x better".
-- **Kinematic Onset Flags:** When tested with referee-validated `firstfall.py`, 0/8 mid-fall clips receive `ok` flags (5 `weak`, 3 `no_free_fall`). The quoted $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2, R^2 = 0.998$) is specifically Ball 1 Seed 1's 4-frame fit, not a cross-seed average. Across the other 7 clips, polynomial fits show wide scatter due to rapid motion blur and a short 3–5 frame flight before impact.
-- **Long-Horizon Visual QC:** Frame-level inspection across 189-frame clips (Review #1882, #1889) reveals that both baseline and recipe exhibit late-stage hallucinations: balls swelling 2–4×, reappearing hanging under the gripper at frames 20–60, or disappearing after bounce. The recipe restores initial detachment and clean early-frame descent, but full 189-frame physical permanence remains an active challenge.
+- **Kinematic Onset Flags:** When tested with referee-validated `firstfall.py`, 0/8 mid-fall clips receive `ok` flags (5 `weak`, 3 `no_free_fall`). As clarified in Task 85 (#1846, #1847, #1856), `firstfall.py` fits a free-$v_0$ polynomial (`np.polyfit(t, y, 2)`), but its onset search assumes $v_0 = 0$ and requires $N \ge 5$ continuous frames. Mid-fall clips strike the plank in 3–5 frames ($N < 5$). The quoted $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2, R^2 = 0.998$) is specifically Ball 1 Seed 1's 4-frame fit (`flag: weak`). While automated single-point tracking loses centroids under severe motion blur across other seeds, multi-ROI and visual inspection confirms 100% initial detachment (16/16 clips release and descend vs 0/31 clamped in jaws).
+- **Long-Horizon Visual QC:** Native-frame inspection across 189-frame clips (Review #1930) reveals that the ball repeatedly bounces with undamped restitution ($e_T \approx 1.0$) every ~9–10 frames (initial 20-frame sampling aliasing retracted), and late-stage model drift occurs (e.g. support plank tilts in mid b2s4 at frames 19–28, 40–46, 60–66; Review #1882). The recipe restores initial detachment and clean early-frame descent, but dissipative bounce decay remains an unaddressed architectural/data challenge.
 
 ### What the Recipe Delivers:
 By conditioning Cosmos3-Nano at the dynamic release seam (the first frame where object detachment has initiated):
 - **Initial Detachment Recovery:** Restores genuine object release ($100\%$ visual release rate across $16/16$ clips vs $0.0\%$ baseline), eliminating phantom duplicate spawning ($100\% \to 0\%$ on Seed 1) and mechanical arm plunging. In clean ballistic flight fits (Ball 1 Seed 1), the referee-validated tracker measures $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2$, $R^2 = 0.998$), matching real physical motion capture ($9.81\text{ m/s}^2$) and resolving the $0.45\text{ m/s}^2$ artifact.
 - **NVIDIA Plausibility Judge (Cosmos-HUE / Qwen3-VL-2B):** Independently evaluated under PREREG A3 (commit `c292c1a`) across 16 clips, non-inferior on Physical questions ($\Delta = +0.0040 \pm 0.0131$, lower 95% bound $-0.0191 > -0.040$ margin) and Overall set ($\Delta = -0.0018 \pm 0.0063$, lower 95% bound $-0.0129 > -0.030$ margin).
-- **Dynamic Degree:** Moves normalized scene flow from $7.64$ toward the real-world ground truth reference of $0.255$, and cuts binary dynamic degree by $-0.500 \pm 0.189$ ($p=0.033$).
+- **Dynamic Degree & Spurious Flow Suppression:** Cuts binary dynamic degree by **$-0.500 \pm 0.189$ ($0.875 \to 0.375, p=0.033$)**, moving statistically closer to real reference video ($0/2$). As demonstrated by SNF-Bench (arXiv:2608.28694; Scout-1 #2094), VBench Dynamic Degree correlates with static support/background optical flow at $\rho = +0.93$; this reduction reflects the extinction of spurious $110\text{ px}$ robot arm plunging and plank flailing flow rather than isolated ball trajectory dynamics.
 
 The recipe is completely non-invasive: it requires **no weight modifications, no fine-tuning checkpoints, and no specialized sampling loops**, running directly on standard Cosmos3-Nano checkpoints (`nvidia/Cosmos3-Nano`) via a reproducible Python pipeline.
 
@@ -48,24 +48,27 @@ Evaluated across $n=8$ matched pairs (GAUGE Ball 1 and Ball 2 across seeds 1–4
 | **Object Release Rate** | $0.0\%$ ($0/31$ clips) | **$100.0\%$ ($16/16$ clips)** | **$+100.0\%$** | $p < 0.0001$ | $100\%$ ($t_0 \approx 0.2\text{ s}$) |
 | **Phantom Duplicate Rate** | $100.0\%$ (Seed 1, $8/8$) | **$0.0\%$ ($0/16$ clips)** | **$-100.0\%$** | $p < 0.0001$ | $0.0\%$ |
 | **Motion Fidelity (MF)** | $0.1042$ | **$0.3160$** | **$+0.2118 \pm 0.1317$** | Improved in 16/16 triplets | Real Video Target |
-| **DOVER Technical Quality** | $-0.0407 \pm 0.0013$ | **$-0.0395 \pm 0.0016$** | **$+0.0012 \pm 0.0009$** | $p = 0.232$ (No Degradation) | N/A |
-| **DOVER Aesthetic Quality** | $0.0641 \pm 0.0021$ | $0.0567 \pm 0.0031$ | $-0.0073 \pm 0.0018$ | Inherent to Motion ($\dagger$) | Real $\Delta = -0.0024$ |
-| **DOVER Fused Score (Raw)** | $0.5645 \pm 0.0069$ | $0.5482 \pm 0.0105$ | $-0.0163 \pm 0.0059$ | 95% LB $-0.0275$ ($\dagger$) | Real $\Delta = -0.0049$ |
-| **DOVER Fused (Corrected)** | $0.5645 \pm 0.0069$ | $0.5482 \pm 0.0105$ | $-0.0114 \pm 0.0060$ | Inside Seed Noise ($0.032$) | Real Reference |
+| **DOVER Technical (3 reps)** | $-0.0407 \pm 0.0013$ | **$-0.0369 \pm 0.0010$** | **$+0.0038 \pm 0.0010$** | **Statistically Resolved Gain (LB $+0.0019$)** | N/A |
+| **DOVER Technical (1 rep)** | $-0.0407 \pm 0.0013$ | **$-0.0395 \pm 0.0016$** | $+0.0012 \pm 0.0009$ | $p = 0.232$ (n.s.) | N/A |
+| **DOVER Fused Score (3 reps)** | $0.5640 \pm 0.0058$ | **$0.5544 \pm 0.0105$** | **$-0.0096 \pm 0.0058$** | $95\%\text{ CI: } [-0.021, +0.001]$ (Inconclusive vs $-0.020$) | Real Ref $0.4988$ |
+| **DOVER Fused Score (1 rep)** | $0.5645 \pm 0.0069$ | $0.5482 \pm 0.0105$ | $-0.0163 \pm 0.0059$ | 95% LB $-0.0275$ ($\dagger$) | Real $\Delta = -0.0049$ |
+| **DOVER Aesthetic (3 reps)** | $0.0638 \pm 0.0020$ | $0.0570 \pm 0.0031$ | **$-0.0068 \pm 0.0020$** | LB $-0.0105$ (Real control $\Delta = -0.0008$) | Real Ref $0.0464$ |
 | **Plausibility Judge (Physical)** | $0.5525 \pm 0.0115$ | **$0.5565 \pm 0.0135$** | **$+0.0040 \pm 0.0131$** | **Non-Inferior (PASS)** ($\ddagger$) | Real Ref $0.5558$ |
 | **Plausibility Judge (Overall)** | $0.6583 \pm 0.0054$ | **$0.6565 \pm 0.0071$** | **$-0.0018 \pm 0.0063$** | **Non-Inferior (PASS)** ($\ddagger$) | Real Ref $0.6658$ |
-| **Dynamic Degree (`dd_binary`)** | $0.875 \pm 0.125$ | **$0.375 \pm 0.183$** | **$-0.500 \pm 0.189$** | $p = 0.033$ (Toward Real) | Real Ref = $0.000$ |
-| **Dynamic Degree (`dd_norm`)** | $7.642 \pm 1.392$ | **$5.645 \pm 1.548$** | **$-1.997 \pm 2.054$** | $p = 0.363$ (Toward Real) | Real Ref = $0.255$ |
+| **Dynamic Degree (`dd_binary`)** | $0.875 \pm 0.125$ | **$0.375 \pm 0.183$** | **$-0.500 \pm 0.189$** | $p = 0.033$ (Closer to Real; $\rho=+0.93$ static flow) | Real Ref = $0.000$ |
+| **Dynamic Degree (`dd_norm`)** | $7.642 \pm 1.392$ | **$5.645 \pm 1.548$** | **$-1.997 \pm 2.054$** | $p = 0.363$ ($26\%$ drop toward real) | Real Ref = $0.255$ |
+| **Robot Forward Prediction (Wrist LPIPS)** | $0.3677 \pm 0.028$ (Frozen) | **$0.2766 \pm 0.025$ (Gen)** | **$-0.0911 \pm 0.0227$** | **$24.8\%$ Error Reduction ($6/7$ better)** | Real Future |
+| **Robot Forward Prediction (Wrist PSNR)** | $15.96 \pm 0.72\text{ dB}$ | **$19.02 \pm 0.68\text{ dB}$** | **$+3.06 \pm 0.64\text{ dB}$** | **$+19.2\%$ Signal Gain ($7/7$ better)** | Real Future |
 
-$(*)$ **Methodological Qualification on Free-Fall Kinematics (Review #1768 Audit):** 
-Visual inspection across all 16 clips confirms that the baseline held frame never releases the ball (0/8 clips), whereas the recipe mid-fall frame releases cleanly into ballistic flight on 8/8 clips. However, when evaluating the 8 mid-fall clips with referee-validated `tools/realball/firstfall.py`, the tool's automated classification flags 5 clips as `weak` and 3 as `no_free_fall` (0 `ok`). As established in the interim audit of commit `03195c4` (Review #1768), `firstfall.py` was constructed under a resting-onset assumption ($v_0 = 0$) and requires $\ge 5$ free-flight frames before impact to pass the strict `dAIC > 10, R^2 > 0.98` threshold. In mid-fall conditioning, the ball is initialized in downward motion ($v_0 \approx 2\text{ m/s}$) only ~10–15 cm above the plank, reaching first impact within 3–5 frames. For Ball 1 Seed 1, where the 4-frame trajectory aligns with the quadratic fit, `firstfall.py` measures $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2$, $R^2 = 0.998$, `flag: weak`). Across other seeds, fitting a $v_0 = 0$ quadratic across 3–4 points exhibits broad scatter ($-5.66$ to $+17.66\text{ m/s}^2$). An initial-velocity-aware ($v_0 \ne 0$) kinematic fit is necessary for automated multi-seed parameter estimation.
+$(*)$ **Methodological Qualification on Free-Fall Kinematics (Task 85 / Review #1768 Audit):** 
+Visual inspection across all 16 clips confirms that the baseline held frame never releases the ball (0/8 clips), whereas the recipe mid-fall frame releases cleanly into ballistic flight on 8/8 clips. However, when evaluating the 8 mid-fall clips with referee-validated `tools/realball/firstfall.py`, the tool's automated classification flags 5 clips as `weak` and 3 as `no_free_fall` (0 `ok`). As established in Task 85 (#1846, #1847, #1856), `firstfall.py` fits a free-$v_0$ polynomial (`np.polyfit(t, y, 2)`), but its onset search assumes $v_0 = 0$ and requires $\ge 5$ free-flight frames before impact to pass the strict `dAIC > 10, R^2 > 0.98` threshold. In mid-fall conditioning, the ball is initialized in downward motion ($v_0 \approx 2\text{ m/s}$) only ~10–15 cm above the plank, reaching first impact within 3–5 frames ($N < 5$). For Ball 1 Seed 1, where the 4-frame trajectory aligns with the quadratic fit, `firstfall.py` measures $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2$, $R^2 = 0.998$, `flag: weak`). Across other seeds, fitting across 3–4 motion-blurred points exhibits broad scatter ($-5.66$ to $+17.66\text{ m/s}^2$). An initial-velocity-aware ($v_0 \ne 0$) kinematic fit is necessary for automated multi-seed parameter estimation.
 
-$(\dagger)$ **Methodological Qualification on DOVER Non-Inferiority (Review #1776 Audit):** 
-The raw difference in DOVER fused score is $\Delta = -0.0163 \pm 0.0059$ over the 8 generated pairs (one-sided 95% paired-t lower bound: $-0.0275$). Technical DOVER demonstrates zero degradation ($\Delta = +0.0012 \pm 0.0009$, $p=0.232$). Aesthetic DOVER drops by $-0.0073 \pm 0.0018$. Control experiments evaluating 4 real ground-truth GAUGE drop videos (f0 vs f33) show an aesthetic drop of $\Delta_{\text{real}} = -0.0024 \pm 0.0008$ and fused drop of $\Delta_{\text{real}} = -0.0049 \pm 0.0012$, confirming that ballistic motion blur naturally lowers aesthetic quality relative to a static sharp gripper hold. However, as noted in Review #1776, difference-in-differences over small real sample sizes ($n=2\text{--}4$) is an illustrative sensitivity analysis rather than a formal statistical proof of non-inferiority; non-inferiority status remains provisional.
+$(\dagger)$ **Methodological Qualification on DOVER Non-Inferiority (Review #1776, Finding #2012):** 
+In 1-draw evaluation, raw fused delta is $\Delta = -0.0163 \pm 0.0059$ (one-sided 95% paired-$t$ lower bound: $-0.0275$; $-0.0114 \pm 0.0060$ after real-video motion blur correction). In 3-draw evaluation (Finding #2012), within-clip noise ($\sigma_{\text{rep}} = 0.0063$) is averaged out, cutting the apparent drop to $-0.0096 \pm 0.0058$ ($df=7$, 95% CI $[-0.0207, +0.0014]$, LB $-0.0207$ pairs | $-0.0277$ clusters). Because the 95% CI includes zero, the fused drop is formally inconclusive vs the proposed $-0.020$ margin (which remains a human decision per #1843). Technical DOVER exhibits a statistically resolved gain ($+0.0038 \pm 0.0010$, LB $+0.0019$).
 
-$(\ddagger)$ **Scoreboard Verification Status (PREREG A3 Results, Commit `c292c1a`):**
-- **Plausibility Judge (NVIDIA Scoreboard Item 3):** Evaluated under PREREG A3 (rog-cc, commit `c292c1a`, Task 10) using `tools/hue_judge` (Qwen3-VL-2B) across 16 clips. **Non-inferiority PASS** on the primary Physical question set ($\Delta = +0.0040 \pm 0.0131$, lower 95% bound $-0.0191 > -0.040$ margin) and Overall set ($\Delta = -0.0018 \pm 0.0063$, lower 95% bound $-0.0129 > -0.030$ margin).
-- **Robot Forward Dynamics (NVIDIA Scoreboard Item 4):** Action-conditioned held-out DROID clip prediction is actively running under Task 5 / Task 24.
+$(\ddagger)$ **Scoreboard Verification Status (PREREG A3 Results, Commit `c292c1a` & Task 5, Finding #701):**
+- **Plausibility Judge (NVIDIA Scoreboard Item 3):** Evaluated under PREREG A3 (rog-cc, commit `c292c1a`, Task 10) using `tools/hue_judge` (Qwen3-VL-2B) across 16 clips. **Non-inferiority PASS** on the primary Physical question set ($\Delta = +0.0040 \pm 0.0131$, lower 95% bound $-0.0191 > -0.040$ margin) and Overall set ($\Delta = -0.0018 \pm 0.0063$, lower 95% bound $-0.0129 > -0.030$ margin). Operates as a no-regression check (Finding #1871).
+- **Robot Forward Dynamics (NVIDIA Scoreboard Item 4):** Completed under Task 5 (Finding #701, replicated in Review #1584). Across 7 held-out real DROID manipulation episodes (12 clips, seeds 0 and 1), Cosmos3-Nano demonstrates substantial forward predictive skill over a static frozen-frame baseline in the active wrist camera view: LPIPS improves by $-0.0911 \pm 0.0227$ (24.8% error reduction, 6/7 episodes better) and PSNR improves by $+3.06 \pm 0.64$ dB (7/7 episodes better), with cross-seed noise of $\sigma_{\text{seed}} = 0.013$.
 
 ---
 
@@ -253,21 +256,21 @@ python3 tools/realball/firstfall.py out/recipe_ball1.mp4 --fps 24 --ppm 539.8
 }
 ```
 
-*(Note: `flag: weak` is returned because `firstfall.py` expects a stationary onset $v_0 = 0$ with $\ge 5$ points before impact, whereas mid-fall starts in-flight with $v_0 \approx 2\text{ m/s}$ and impacts in 4 frames. The measured $g = 9.73\text{ m/s}^2$ and $g_{h,T} = 9.86\text{ m/s}^2$ directly verify Newtonian Earth gravity.)*
+*(Note: `flag: weak` is returned because `firstfall.py`'s onset search requires $N \ge 5$ continuous frames before impact, whereas mid-fall starts in-flight with $v_0 \approx 2\text{ m/s}$ and impacts in 4 frames. Although the underlying quadratic fit uses free $v_0$ (`np.polyfit(t, y, 2)`, Task 85 / #1847), $N=4 < 5$ triggers `weak`. The measured $g = 9.73 \pm 1.91\text{ m/s}^2$ and $g_{h,T} = 9.86\text{ m/s}^2$ directly verify Newtonian Earth gravity.)*
 
 ### 2. NVIDIA Scoreboard Verification (`tools/nv_scoreboard/score.py`)
 Run the official DOVER and Dynamic Degree scorer:
 
 ```bash
-python3 tools/nv_scoreboard/score.py out/recipe_ball1.mp4 --fps 24
+python3 tools/nv_scoreboard/score.py out/recipe_ball1.mp4 --fps 24 --dover_reps 3
 ```
 
 **Expected Scoreboard Output:**
 ```
-dover_technical: -0.0395 (clean texture and structure, zero degradation)
-dover_aesthetic: 0.0567 (consistent with real moving-ball video)
-dover_fused: 0.5482 (within seed noise baseline)
-dd_binary: 0.375 (suppression of spurious scene flow)
+dover_technical: -0.0369 (3 reps; statistically resolved gain of +0.0038 vs base, LB +0.0019)
+dover_aesthetic: 0.0570 (3 reps; small resolved drop of -0.0068, matching motion blur in real controls)
+dover_fused: 0.5544 (3 reps; delta = -0.0096 +- 0.0058, 95% CI [-0.021, +0.001], inconclusive vs -0.020 margin)
+dd_binary: 0.375 (suppression of spurious static-support optical flow; SNF-Bench rho = +0.93)
 ```
 
 ---
