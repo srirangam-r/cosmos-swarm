@@ -1,3 +1,5 @@
 clip,input,arm,seed,settles_by_f92,approx_rest_frame,notes
 v7_REC_ball1_fps24_93f_s1,ball1,REC,1,N,,bounces to f90 (UNBLINDED eye read)
 v7_RECT_ball1_fps24_93f_s1,ball1,RECT,1,Y,~51,bounces to ~f45 then on plank with slight shifts; ball looks glossier/larger than input
+v7_REC_ball2_fps24_93f_s1,ball2,REC,1,N,,two balls from ~f24 (duplicate) both bouncing to f90 (UNBLINDED eye read)
+v7_RECT_ball2_fps24_93f_s1,ball2,RECT,1,Y,~60,bounces f6-57 then on plank; slow roll/spin to f90 but no lift; ball larger/glossier than input

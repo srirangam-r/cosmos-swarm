@@ -1,0 +1,132 @@
+{
+ "1": {
+  "cat": "Sema",
+  "text": "At the start of the video, does a robot arm hold a black ball above a ",
+  "F": 0.7568059768527746,
+  "QT": 0.5217804997228086,
+  "diff": -0.23502547712996602,
+  "se": 0.08601125493108727,
+  "real": 0.40560151636600494,
+  "F_b1": 0.7327099829912186
+ },
+ "2": {
+  "cat": "Phys",
+  "text": "In the middle of the video, after the ball is released, does it fall d",
+  "F": 0.5736168920993805,
+  "QT": 0.2812897393014282,
+  "diff": -0.2923271527979523,
+  "se": 0.12655662020922648,
+  "real": 0.35819803178310394,
+  "F_b1": 0.5879946991801261
+ },
+ "3": {
+  "cat": "Phys",
+  "text": "In the middle of the video, does the ball speed up as it falls?",
+  "F": 0.1591947264969349,
+  "QT": 0.1718018827959895,
+  "diff": 0.012607156299054623,
+  "se": 0.022221903929067872,
+  "real": 0.18305785953998566,
+  "F_b1": 0.1544831395149231
+ },
+ "4": {
+  "cat": "Phys",
+  "text": "When the ball hits the plank, does it bounce up instead of passing thr",
+  "F": 0.1651316569186747,
+  "QT": 0.11402931157499552,
+  "diff": -0.05110234534367919,
+  "se": 0.0129567505490014,
+  "real": 0.10175036638975143,
+  "F_b1": 0.16187937185168266
+ },
+ "5": {
+  "cat": "Phys",
+  "text": "Does the ball start falling only after the gripper releases it?",
+  "F": 0.4387148432433605,
+  "QT": 0.34173291362822056,
+  "diff": -0.09698192961513996,
+  "se": 0.04258989521392037,
+  "real": 0.33549781143665314,
+  "F_b1": 0.43735227584838865
+ },
+ "6": {
+  "cat": "Phys",
+  "text": "Do the ball's bounces get lower each time until it comes to rest?",
+  "F": 0.9161054790019989,
+  "QT": 0.8959143832325935,
+  "diff": -0.020191095769405365,
+  "se": 0.008909088604967497,
+  "real": 0.890757143497467,
+  "F_b1": 0.914544016122818
+ },
+ "7": {
+  "cat": "Visu",
+  "text": "Throughout the video, does the ball keep a round shape?",
+  "F": 0.9560432583093643,
+  "QT": 0.9754744619131088,
+  "diff": 0.019431203603744507,
+  "se": 0.007794527469224174,
+  "real": 0.9779577851295471,
+  "F_b1": 0.9524811625480651
+ },
+ "8": {
+  "cat": "Visu",
+  "text": "Throughout the video, does the video stay free of unnatural flickering",
+  "F": 0.4267780799418688,
+  "QT": 0.4097191207110882,
+  "diff": -0.0170589592307806,
+  "se": 0.007219884269277293,
+  "real": 0.4209423065185547,
+  "F_b1": 0.4210138440132141
+ },
+ "9": {
+  "cat": "Visu",
+  "text": "Throughout the video, is the image clean, free of heavy noise, static ",
+  "F": 0.7221832200884819,
+  "QT": 0.7189813405275345,
+  "diff": -0.003201879560947418,
+  "se": 0.0056758429073024185,
+  "real": 0.6917153000831604,
+  "F_b1": 0.7200715184211731
+ },
+ "10": {
+  "cat": "Visu",
+  "text": "Throughout the video, does the video stay in one continuous shot witho",
+  "F": 0.9470667727291584,
+  "QT": 0.9479435533285141,
+  "diff": 0.0008767805993556976,
+  "se": 0.0019768105125006897,
+  "real": 0.9465747177600861,
+  "F_b1": 0.9451680839061737
+ },
+ "11": {
+  "cat": "Geom",
+  "text": "Throughout the video, does the camera stay static?",
+  "F": 0.9047075659036636,
+  "QT": 0.9007993079721928,
+  "diff": -0.003908257931470871,
+  "se": 0.004597783287033566,
+  "real": 0.9045428037643433,
+  "F_b1": 0.9028615176677703
+ },
+ "12": {
+  "cat": "Geom",
+  "text": "Throughout the video, do objects move smoothly and continuously rather",
+  "F": 0.37070726603269577,
+  "QT": 0.3849847801029682,
+  "diff": 0.014277514070272446,
+  "se": 0.027527152304324013,
+  "real": 0.43751636147499084,
+  "F_b1": 0.3724289506673813
+ },
+ "13": {
+  "cat": "Phys",
+  "text": "Throughout the video, do the robot arm and the table stay present with",
+  "F": 0.9315398745238781,
+  "QT": 0.9346390925347805,
+  "diff": 0.003099218010902405,
+  "se": 0.0018139709070448078,
+  "real": 0.9360741972923279,
+  "F_b1": 0.930572509765625
+ }
+}
