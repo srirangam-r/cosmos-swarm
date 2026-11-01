@@ -1,0 +1,17 @@
+{
+  "scope": "HTTP availability only from ro; no deployed playback or scientific validation. No service changes. Earlier timeouts already coordinated6765.",
+  "observations": [
+    {
+      "url": "http://sha-devel:8085/",
+      "utc": "2026-11-01T20:14:56.537525+00:00",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "http://board:8031/demos/",
+      "utc": "2026-11-01T20:14:56.538913+00:00",
+      "status": 200,
+      "bytes": 569,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
+    }
+  ]
+}

@@ -1,0 +1,1112 @@
+{
+  "scope": "Byte preservation, complete saved grids and display identities only. No new scores or physics validation.",
+  "checks": [
+    {
+      "check": "source bytes: source/README.md",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/analyze_t331.py",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/bg_fidelity.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/bg_fidelity.py",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/build_swaps.py",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/offsets.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scores_ctrl.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scores_t331.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scores_tm.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/swap_meta.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/t331_results.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/tone_ctrl.py",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/tone_match.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/desktop_metrics.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/mobile_metrics.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/build.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/mobile_receipts.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/verification.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/board_receipts.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/DEMO_READOUT.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/index.html",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/desktop_receipts.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/gallery_http.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/README.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/mf_plain.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/scores_real.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/mf_nphys.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/gen_sha256.txt",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/mf24_manifest_nphys.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/scores_real24.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/t319_table.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/scores_gen.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/mf24_manifest_plain.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/t319_results.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/scorer_commit.txt",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/README.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t328/source/analyze_t319.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/mobile_rows.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/desktop_rows.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/build.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/desktop_sheet.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/verification.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/board_receipts.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/DEMO_READOUT.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/mobile_sheet.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/index.html",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/gallery_http.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/README.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/analyze.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/frames.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/SHA256SUMS",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/build_jobs.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/jobs.jsonl",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/README.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_x17_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_plain_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_nphys_x17_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_06_plain_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/clips/t277r_real_14_nphys_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/clips_SHA256SUMS",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/t276_results.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/strip_nphys.jpg",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/ungated_ratios.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/strip_nphys_x17.jpg",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/strip_plain.jpg",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/out/t276_table.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/inputs/real_06.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t332/source/inputs/real_14.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/mobile_rows.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/desktop_rows.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/desktop_playback.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/build.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/verification.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/board_receipts.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/DEMO_READOUT.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/index.html",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/gallery_http.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/README.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/mobile_playback.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/analyze.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/frames.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/SHA256SUMS",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/build_jobs.py",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/jobs.jsonl",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/README.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s3.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s1.mp4",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s1.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s101.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s3.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s2.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s2.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s2.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s1.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s1.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s3.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s2.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s1.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s3.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s3.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s3.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s3.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s1.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s2.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s101.mp4",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s2.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s3.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s102.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s103.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s2.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s1.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s2.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s2.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s2.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s1.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s2.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s103.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s103.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s3.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s1.mp4",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s1.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s1.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s101.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s2.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_x17_s3.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s1.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s102.qc.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_x17_s1.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s3.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_x17_s101.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_14_nphys_s102.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_16_nphys_s1.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/clips/t329a_real_09_nphys_s3.server.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/out/clips_SHA256SUMS",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/out/t276_results.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/out/strip_nphys.jpg",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/out/strip_nphys_x17.jpg",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/out/t276_table.md",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/inputs/real_14.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/inputs/real_16.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/source/inputs/real_09.png",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/baseline/t277_results.json",
+      "passed": true
+    },
+    {
+      "check": "earlier demo unchanged: work/ro-sol1/t334/baseline/t276_results.json",
+      "passed": true
+    },
+    {
+      "check": "dover_fused complete 6x3 grid",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 091",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 092",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 093",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 121",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 122",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 123",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 161",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 162",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 163",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 171",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 172",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 173",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 181",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 182",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 183",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 191",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 192",
+      "passed": true
+    },
+    {
+      "check": "dover_fused displayed main effects sum to total 193",
+      "passed": true
+    },
+    {
+      "check": "dover_technical complete 6x3 grid",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 091",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 092",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 093",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 121",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 122",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 123",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 161",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 162",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 163",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 171",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 172",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 173",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 181",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 182",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 183",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 191",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 192",
+      "passed": true
+    },
+    {
+      "check": "dover_technical displayed main effects sum to total 193",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic complete 6x3 grid",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 091",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 092",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 093",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 121",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 122",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 123",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 161",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 162",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 163",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 171",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 172",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 173",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 181",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 182",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 183",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 191",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 192",
+      "passed": true
+    },
+    {
+      "check": "dover_aesthetic displayed main effects sum to total 193",
+      "passed": true
+    },
+    {
+      "check": "source script uses 20000 draws",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_file_count": 13,
+  "prior_file_count": 205
+}
