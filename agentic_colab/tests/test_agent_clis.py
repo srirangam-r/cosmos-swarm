@@ -1,0 +1,283 @@
+"""Codex and Antigravity (agy) shifts, driven with fake CLIs so no model is called."""
+
+from __future__ import annotations
+
+import json
+import sys
+import types
+from pathlib import Path
+from datetime import datetime, timezone
+
+import anyio
+import pytest
+
+from runner import Runner
+from runner.__main__ import load_agent
+from runner.agy import AgyAgent
+from runner.codex import CodexAgent
+from runner.kiro import KiroAgent
+
+from .conftest import wait_until
+
+# Both fakes log their arguments and whether an API key reached them, then print events in the
+# real CLI's format (checked against `codex exec --json` and `agy -p --output-format stream-json`).
+FAKE_CODEX = """\
+import json, os, sys
+with open(os.path.join(os.getcwd(), "calls.jsonl"), "a") as f:
+    f.write(json.dumps({"args": sys.argv[1:], "api_key": "OPENAI_API_KEY" in os.environ}) + "\\n")
+print(json.dumps({"type": "thread.started", "thread_id": "t"}), flush=True)
+if os.environ.get("FAKE_LIMIT"):
+    print(json.dumps({"type": "error", "message": "You've hit your usage limit. Try again later."}), flush=True)
+    sys.exit(1)
+print(json.dumps({"type": "item.completed", "item": {"type": "agent_message", "text": "did a codex thing"}}), flush=True)
+print(json.dumps({"type": "turn.completed", "usage": {}}), flush=True)
+"""
+
+FAKE_AGY = """\
+import json, os, sys
+with open(os.path.join(os.getcwd(), "calls.jsonl"), "a") as f:
+    f.write(json.dumps({"args": sys.argv[1:], "api_key": "OPENAI_API_KEY" in os.environ}) + "\\n")
+step = lambda i, **kw: print(json.dumps({"event": "step_update", "step_update": {
+    "step_index": i, "state": "DONE", "step_type": "agent_response", **kw}}), flush=True)
+print(json.dumps({"event": "init", "init": {"model": "m"}}), flush=True)
+step(1, text_delta="looking around")
+if os.environ.get("FAKE_LIMIT"):
+    print(json.dumps({"event": "result", "result": {"status": "ERROR", "error": os.environ.get(
+        "FAKE_LIMIT_TEXT", "RESOURCE_EXHAUSTED: quota exceeded")}}))
+    sys.exit(1)
+step(2, text_delta="did an agy thing")
+print(json.dumps({"event": "result", "result": {"status": "SUCCESS", "response": "did an agy thing"}}), flush=True)
+"""
+
+FAKE_KIRO = """\
+import json, os, sys
+with open(os.path.join(os.getcwd(), "calls.jsonl"), "a") as f:
+    f.write(json.dumps({"args": sys.argv[1:], "api_key": "OPENAI_API_KEY" in os.environ}) + "\\n")
+ev = lambda t, **d: print(json.dumps({"type": t, "data": d}), flush=True)
+chunk = lambda text: ev("sessionUpdate", sessionId="s", update={
+    "sessionUpdate": "agent_message_chunk", "content": {"type": "text", "text": text}})
+print("[INFO] kas.server.starting", flush=True)
+ev("runStarted", payloadSchema="acp", engine="v2")
+chunk("looking ")
+chunk("around")
+if os.environ.get("FAKE_LIMIT"):
+    print("[ERROR] " + os.environ.get("FAKE_LIMIT_TEXT", "You have reached the usage limit for your plan."), flush=True)
+    ev("runFinished", sessionId="s", status="error", stopReason="error", finalText="")
+    sys.exit(1)
+ev("metadata", sessionId="s", meteringUsage=[{"value": 0.5, "unit": "credit"}, {"value": 0.25, "unit": "credit"}])
+ev("runFinished", sessionId="s", status="success", stopReason="end_turn", finalText="did a kiro thing")
+"""
+
+def make(cls, tmp_path, monkeypatch, fake: str, env_cmd: str):
+    script = tmp_path / "fake_cli.py"
+    script.write_text(fake)
+    playbook = tmp_path / "PLAYBOOK.md"
+    playbook.write_text("Be a good swarm agent.")
+    monkeypatch.setenv(env_cmd, f"{sys.executable} {script}")
+    monkeypatch.setenv("AGENT_PROMPT_FILE", str(playbook))
+    monkeypatch.setenv("AGENT_WORKDIR", str(tmp_path / "work"))
+    monkeypatch.setenv("MAX_SHIFTS", "1")
+    for var in ("AGENT_MODEL", "AGENT_EFFORT", "AGENT_MODE", "KIRO_ENGINE", "AUTO_UPDATE", "SWARM_END"):
+        monkeypatch.delenv(var, raising=False)
+    agent = cls.from_env()
+    agent.pause_poll_seconds = 0.2
+    return agent
+
+
+def calls(tmp_path) -> list[dict]:
+    path = tmp_path / "work" / "calls.jsonl"
+    return [json.loads(line) for line in path.read_text().splitlines()] if path.exists() else []
+
+
+async def run_one_shift(live_server, agent, name):
+    runner = Runner(live_server.url, name, agent, step_interval=0.05, idle_interval=0.1, heartbeat_interval=0.3)
+    async with anyio.create_task_group() as tg:
+        tg.start_soon(runner.run)
+        await wait_until(lambda: agent.state.shifts >= 1 and live_server.ws.list_messages(channel="activity"),
+                         timeout=20, message="one shift and its report")
+        runner.stop()
+    tags = set(next(a for a in live_server.ws.list_agents() if a["name"] == name)["skills"])
+    return live_server.ws.list_messages(channel="activity")[0]["body"], tags
+
+
+def test_runner_agent_names_codex_and_agy(monkeypatch):
+    monkeypatch.delenv("AGENT_MODEL", raising=False)
+    assert type(load_agent("codex")) is CodexAgent and type(load_agent("agy")) is AgyAgent
+    assert load_agent("agy").model == "gemini-4-argon-low"
+
+
+@pytest.mark.anyio
+async def test_codex_shift_uses_the_chatgpt_login_and_reports(live_server, tmp_path, monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-should-not-be-used")
+    monkeypatch.setenv("CODEX_HOME", str(tmp_path / "codex"))
+    (tmp_path / "codex").mkdir()
+    (tmp_path / "codex" / "config.toml").write_text('model = "gpt-test"\nmodel_reasoning_effort = "high"\n')
+    agent = make(CodexAgent, tmp_path, monkeypatch, FAKE_CODEX, "CODEX_CMD")
+    report, tags = await run_one_shift(live_server, agent, "cx-1")
+
+    [call] = calls(tmp_path)
+    args = call["args"]
+    assert call["api_key"] is False
+    assert args[:2] == ["exec", "--json"] and args[args.index("--sandbox") + 1] == "workspace-write"
+    board_url = next(a for a in args if a.startswith("mcp_servers.board.url="))
+    assert json.loads(board_url.split("=", 1)[1]).endswith("/mcp")
+    assert args[-1].startswith("Be a good swarm agent.") and 'agent_name="cx-1"' in args[-1]
+    assert "mcp__board__" not in args[-1] and "--model" not in args  # the Codex config picks the model
+    assert report.startswith("Shift 1") and "Codex gpt-test, cost not reported" in report
+    assert "did a codex thing" in report
+    assert {"model:gpt-test", "effort:high"} <= tags
+
+
+@pytest.mark.anyio
+async def test_codex_usage_limit_backs_off(live_server, tmp_path, monkeypatch):
+    monkeypatch.setenv("FAKE_LIMIT", "1")
+    monkeypatch.setenv("CODEX_HOME", str(tmp_path / "no-codex-config"))
+    agent = make(CodexAgent, tmp_path, monkeypatch, FAKE_CODEX, "CODEX_CMD")
+    agent.model, agent.effort = "gpt-other", "low"  # e.g. from agent.env
+    report, tags = await run_one_shift(live_server, agent, "cx-2")
+    assert agent.state.blocked_until is not None and "Codex usage limit" in report
+    args = calls(tmp_path)[0]["args"]
+    assert args[args.index("--model") + 1] == "gpt-other" and 'model_reasoning_effort="low"' in args
+    assert {"model:gpt-other", "effort:low"} <= tags
+
+
+@pytest.mark.anyio
+async def test_agy_shift_adds_the_board_to_its_mcp_config(live_server, tmp_path, monkeypatch):
+    agent = make(AgyAgent, tmp_path, monkeypatch, FAKE_AGY, "AGY_CMD")
+    agent.mcp_config_path = tmp_path / "gemini" / "mcp_config.json"
+    agent.mcp_config_path.parent.mkdir()
+    agent.mcp_config_path.write_text(json.dumps({"mcpServers": {"other": {"serverUrl": "http://x"}}}))
+    report, tags = await run_one_shift(live_server, agent, "agy-t")
+
+    servers = json.loads(agent.mcp_config_path.read_text())["mcpServers"]
+    assert servers["other"] == {"serverUrl": "http://x"}  # the owner's servers stay
+    assert servers["board"] == {"disabled": False, "serverUrl": live_server.url.rstrip("/") + "/mcp"}
+    args = calls(tmp_path)[0]["args"]
+    assert args[args.index("--model") + 1] == "gemini-4-argon-low" and args[args.index("--mode") + 1] == "auto"
+    assert "--dangerously-skip-permissions" in args and "--effort" not in args
+    assert args[args.index("-p") + 1].startswith("Be a good swarm agent.")
+    assert report.startswith("Shift 1") and "agy gemini-4-argon-low, cost not reported" in report
+    assert "did an agy thing" in report and "looking around" not in report
+    assert {"model:gemini-4-argon-low", "effort:default"} <= tags
+
+
+@pytest.mark.anyio
+async def test_agy_quota_error_backs_off(live_server, tmp_path, monkeypatch):
+    monkeypatch.setenv("FAKE_LIMIT", "1")
+    agent = make(AgyAgent, tmp_path, monkeypatch, FAKE_AGY, "AGY_CMD")
+    agent.mcp_config_path = tmp_path / "mcp_config.json"
+    report, _ = await run_one_shift(live_server, agent, "agy-limit")
+    assert agent.state.blocked_until is not None and "agy RESOURCE_EXHAUSTED" in report
+    assert "looking around" in report  # the last thing it said before the error
+
+
+@pytest.mark.anyio
+async def test_agy_quota_reset_time_sets_the_backoff(live_server, tmp_path, monkeypatch):
+    # agy's real wording; the runner waits until the stated reset, not the default 30 minutes.
+    monkeypatch.setenv("FAKE_LIMIT", "1")
+    monkeypatch.setenv("FAKE_LIMIT_TEXT", "Individual quota reached. Please upgrade your subscription to increase "
+                                          "your limits. Resets in 3h0m34s.")
+    agent = make(AgyAgent, tmp_path, monkeypatch, FAKE_AGY, "AGY_CMD")
+    agent.mcp_config_path = tmp_path / "mcp_config.json"
+    report, _ = await run_one_shift(live_server, agent, "agy-reset")
+    assert "agy quota reached" in report or "usage limit" in report
+    wait = (datetime.fromisoformat(agent.state.blocked_until) - datetime.now(timezone.utc)).total_seconds()
+    assert 3 * 3600 < wait < 3 * 3600 + 120
+
+
+def test_agy_reset_parser():
+    from runner.agy import reset_seconds
+    assert reset_seconds("Resets in 33s.") == 33
+    assert reset_seconds("Resets in 163h1m47s.") == 163 * 3600 + 107
+    assert reset_seconds("no time given") is None
+
+
+def test_agy_leaves_an_unreadable_mcp_config_alone(tmp_path):
+    agent = AgyAgent(prompt_file=tmp_path / "p.md", workdir=tmp_path / "work")
+    agent.mcp_config_path = tmp_path / "mcp_config.json"
+    agent.mcp_config_path.write_text("{not json")
+    agent._write_mcp_config(types.SimpleNamespace(agent_name="a", client=types.SimpleNamespace(url="http://b/mcp")))
+    assert agent.mcp_config_path.read_text() == "{not json"
+
+
+@pytest.mark.anyio
+async def test_a_usage_limit_hands_back_claimed_tasks(live_server, tmp_path, monkeypatch):
+    monkeypatch.setenv("FAKE_LIMIT", "1")
+    monkeypatch.setenv("CODEX_HOME", str(tmp_path / "no-codex-config"))
+    ws = live_server.ws
+    ws.register_agent("cx-held")
+    held = ws.create_task("alice", "human", "Does X hold?")
+    done = ws.create_task("alice", "human", "Already finished")
+    ws.claim_task("cx-held", held["id"])
+    ws.claim_task("cx-held", done["id"])
+    ws.update_task("cx-held", "agent", done["id"], status="completed")
+    agent = make(CodexAgent, tmp_path, monkeypatch, FAKE_CODEX, "CODEX_CMD")
+    await run_one_shift(live_server, agent, "cx-held")
+    task = next(t for t in ws.list_tasks() if t["id"] == held["id"])
+    assert task["status"] == "open" and task["claimed_by"] is None
+    notes = [m["body"] for m in ws.list_messages(task_id=held["id"])]
+    assert any("released automatically" in n and "usage limit" in n for n in notes)
+    assert next(t for t in ws.list_tasks() if t["id"] == done["id"])["status"] == "completed"  # finished work untouched
+    assert agent.state.limited_since is not None
+
+
+@pytest.mark.anyio
+async def test_limit_release_can_be_turned_off(live_server, tmp_path, monkeypatch):
+    monkeypatch.setenv("FAKE_LIMIT", "1")
+    monkeypatch.setenv("CODEX_HOME", str(tmp_path / "no-codex-config"))
+    monkeypatch.setenv("LIMIT_RELEASE_SECONDS", "0")
+    ws = live_server.ws
+    ws.register_agent("cx-keep")
+    held = ws.create_task("alice", "human", "Keep me")
+    ws.claim_task("cx-keep", held["id"])
+    agent = make(CodexAgent, tmp_path, monkeypatch, FAKE_CODEX, "CODEX_CMD")
+    await run_one_shift(live_server, agent, "cx-keep")
+    assert next(t for t in ws.list_tasks() if t["id"] == held["id"])["claimed_by"] == "cx-keep"
+
+
+def test_rate_limits_wait_minutes_and_usage_limits_wait_longer():
+    from runner.claude_code import is_rate_limit
+    assert is_rate_limit("Codex rate limit") and is_rate_limit("agy too many requests")
+    for usage in ("Codex usage limit", "You've hit your 5-hour limit", "agy quota reached", "agy RESOURCE_EXHAUSTED"):
+        assert not is_rate_limit(usage)
+
+
+def test_runner_agent_name_kiro():
+    agent = load_agent("kiro")
+    assert type(agent) is KiroAgent and agent.model == "claude-opus-5.5" and agent.engine == "v2"
+
+
+@pytest.mark.anyio
+async def test_kiro_shift_uses_a_workspace_mcp_config(live_server, tmp_path, monkeypatch):
+    agent = make(KiroAgent, tmp_path, monkeypatch, FAKE_KIRO, "KIRO_CMD")
+    report, tags = await run_one_shift(live_server, agent, "kiro-t")
+
+    config = json.loads((tmp_path / "work" / ".kiro" / "settings" / "mcp.json").read_text())
+    assert config["mcpServers"]["board"] == {"url": live_server.url.rstrip("/") + "/mcp"}
+    args = calls(tmp_path)[0]["args"]
+    assert args[0] == "chat" and "--no-interactive" in args and "--trust-all-tools" in args
+    assert args[args.index("--model") + 1] == "claude-opus-5.5" and args[args.index("--agent-engine") + 1] == "v2"
+    assert args[args.index("--output-format") + 1] == "stream-json" and "--effort" not in args
+    assert args[-1].startswith("Be a good swarm agent.")
+    assert report.startswith("Shift 1") and "Kiro claude-opus-5.5, 0.75 credits" in report
+    assert "did a kiro thing" in report and "looking around" not in report
+    assert {"model:claude-opus-5.5", "effort:default"} <= tags
+
+
+@pytest.mark.anyio
+async def test_kiro_usage_limit_backs_off(live_server, tmp_path, monkeypatch):
+    monkeypatch.setenv("FAKE_LIMIT", "1")
+    agent = make(KiroAgent, tmp_path, monkeypatch, FAKE_KIRO, "KIRO_CMD")
+    report, _ = await run_one_shift(live_server, agent, "kiro-limit")
+    assert agent.state.blocked_until is not None and "Kiro usage limit" in report
+    assert "looking around" in report  # the last thing it said before the error
+
+
+def test_kiro_ignores_limit_words_in_agent_output():
+    from runner.claude_code import ShiftResult
+    agent = KiroAgent(prompt_file=Path("p.md"), workdir=Path("w"))
+    result = ShiftResult()
+    agent._parse_event(json.dumps({"type": "sessionUpdate", "data": {"update": {
+        "sessionUpdate": "agent_message_chunk", "content": {"text": "the queue hit a rate limit"}}}}).encode(), result)
+    agent._parse_event(b"[INFO] throttle settings loaded", result)
+    assert result.limit is None
