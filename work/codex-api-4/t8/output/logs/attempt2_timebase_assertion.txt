@@ -1,0 +1,8 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-o3uknwnd because the default path (/home/nail/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+1 ok 1.176323 1.172407 1.172248 1.00334 46 6
+Traceback (most recent call last):
+  File "/home/nail/swarm-work/codex-api-4/cosmos-swarm/work/codex-api-4/t8/analyze.py", line 57, in <module>
+    assert hz==25.0,(i,hz); W=F[93:186].astype(np.float32)
+AssertionError: (2, 25.1)

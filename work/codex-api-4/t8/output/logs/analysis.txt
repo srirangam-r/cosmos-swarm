@@ -1,0 +1,25 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-mtkdz2s_ because the default path (/home/nail/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+1 ok 1.176323 1.172407 1.172248 1.00334 46 6
+2 ok 1.178238 1.178341 1.176475 0.999913 65 11
+3 ok 1.196557 1.176397 1.178788 1.017137 69 20
+4 ok 1.176312 1.178444 1.175867 0.998191 65 5
+5 ok 1.170218 1.1718 1.172098 0.99865 47 7
+6 ok 1.199895 1.177962 1.1756 1.01862 53 15
+7 ok 1.197084 1.17516 1.174563 1.018656 53 5
+8 ok 1.187848 1.171442 1.173665 1.014005 44 5
+9 ok 1.17183 1.171582 1.173635 1.000212 41 6
+10 ok 1.177659 1.173449 1.175667 1.003588 55 16
+11 ok 1.174722 1.172046 1.174158 1.002283 44 6
+12 ok 1.196722 1.174664 1.176843 1.018778 55 5
+13 check 3.194012 1.177316 1.178014 2.712959 62 5
+14 ok 1.187767 1.170004 1.172457 1.015182 43 8
+15 ok 1.183732 1.172312 1.172638 1.009742 50 6
+16 ok 1.187728 1.174536 1.174637 1.011232 54 6
+17 ok 1.175933 1.17624 1.176065 0.999739 54 5
+18 ok 1.183398 1.178629 1.181535 1.004047 55 5
+19 ok 1.183434 1.180597 1.182516 1.002403 70 15
+20 ok 1.176628 1.175466 1.173739 1.000988 52 6
+all {'n': 20, 'ids': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'ratio': {'mean': 1.092483239647617, 'se': 0.0853046119941314, 'sd': 0.38149382242624347, 'min': 0.9981905595425623, 'max': 2.712959394472882, 'within_1pct': 12, 'within_5pct': 19}, 'ratio_turning': {'mean': 1.0918999468655195, 'se': 0.08525023911967128, 'sd': 0.38125065953939363, 'min': 0.9983961525788041, 'max': 2.711353844879805, 'within_1pct': 12, 'within_5pct': 19}, 'ratio_zc': {'mean': 0.9948721476015067, 'se': 0.010252050381741056, 'sd': 0.04584856312465134, 'min': 0.8022851156562865, 'max': 1.0186496067120219, 'within_1pct': 15, 'within_5pct': 19}, 'covers_reference': 11, 'max_align_period_change_s': 0.0027073599838849383}
+ok {'n': 19, 'ids': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20], 'ratio': {'mean': 1.007195020972603, 'se': 0.0017627575343160298, 'sd': 0.0076836819540485055, 'min': 0.9981905595425623, 'max': 1.0187779037989864, 'within_1pct': 12, 'within_5pct': 19}, 'ratio_turning': {'mean': 1.006665531180557, 'se': 0.0017312977804617036, 'sd': 0.007546552066208833, 'min': 0.9983961525788041, 'max': 1.0206662292920141, 'within_1pct': 12, 'within_5pct': 19}, 'ratio_zc': {'mean': 1.0050083071775706, 'se': 0.0016202901243359013, 'sd': 0.007062680911197147, 'min': 0.9992911492741835, 'max': 1.0186496067120219, 'within_1pct': 15, 'within_5pct': 19}, 'covers_reference': 11, 'max_align_period_change_s': 0.002557682662819305}
