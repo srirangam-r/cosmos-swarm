@@ -131,9 +131,14 @@
       "name": "no unsupported old benchmark badge",
       "pass": true,
       "detail": null
+    },
+    {
+      "name": "post-rebase304 link and explicit compositing rejection",
+      "pass": true,
+      "detail": "work/rahul-api-codex/t304/README.md exists in git at b8f3a09; board6133; no repeated experiment"
     }
   ],
-  "passed": 26,
+  "passed": 27,
   "failed": 0,
   "availability": [
     {
@@ -151,5 +156,6 @@
       "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
     }
   ],
-  "limits": "Documentation/source arithmetic only; no model, measurement, browser, current player/media or physical validation."
+  "limits": "Documentation/source arithmetic only; no model, measurement, browser, current player/media or physical validation.",
+  "verification_note": "An initial disk-only check for304 failed because this checkout is sparse; git object lookup and source read confirm the repository link. No product failure inferred."
 }
