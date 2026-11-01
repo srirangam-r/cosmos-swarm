@@ -77,7 +77,7 @@ def measure(F, fps, ppm=None, diam=None, point=None, device='cpu', nboot=300, se
     w0, k, yt, yb = fall_window(cy)
     idx = np.array([i for i in range(w0, k) if np.isfinite(cy[i]) and area[i] > 0])
     t = idx / fps
-    d_px = float(np.median(2 * np.sqrt(area[idx[-6:]] / np.pi)))
+    d_px = float(np.median(2 * np.sqrt(area[idx[:3]] / np.pi)))  # at-rest frames (no motion blur); fixed a priori, not tuned
     s = 1.0 / ppm if ppm else diam / d_px
     Y = cy[idx] * s
     c, j, p = mb.fit_onset(t, Y, fps, skip=skip)
