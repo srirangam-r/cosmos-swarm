@@ -1,0 +1,3 @@
+# Seed 3 blinded crop review
+
+Reviewed all 93 consecutive frames per clip in the indicated crop, before opening the arm key. Clip 0: the ball-like object moves toward the foreground and leaves the bottom of the crop around frames 60–65; its late state is unknown from this crop. Clip 1: a ball-like object makes repeated vertical excursions near the plank through roughly frame 47 and then remains close to the plank, with gradual positional/appearance change through frame 92. Whether this counts as physical rest and whether the object contacts the plank require native-resolution and full-frame checks. Identity and event mechanisms are uncertain. These observations are qualitative and unvalidated, not a prompt-effect conclusion. The crop excludes portions of the scene.
