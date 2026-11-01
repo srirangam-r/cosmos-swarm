@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parent
 REPO=ROOT.parents[2]
 URL='http://100.111.167.68:8030'
 
-def decode(path):
+def decode(path,expected_fps=24):
     cap=cv2.VideoCapture(str(path)); frames=[]
     while True:
         ok,frame=cap.read()
@@ -17,7 +17,7 @@ def decode(path):
         frames.append(cv2.cvtColor(frame,cv2.COLOR_BGR2RGB))
     fps=cap.get(cv2.CAP_PROP_FPS);cap.release()
     assert len(frames)==93 and frames[0].shape==(480,832,3)
-    assert abs(fps-24)<1e-6
+    assert abs(fps-expected_fps)<1e-6
     return frames
 
 def panel(frames,ident,indices,target,scene=False):
@@ -50,6 +50,20 @@ def main():
         frames=decode(clips/(v['name']+'.mp4'))
         panel(frames,ident,list(range(0,93,4)),ROOT/'qc'/f'{ident}_crop.jpg')
         panel(frames,ident,[0,4,12,24,48,72,84,92],ROOT/'qc'/f'{ident}_scene.jpg',True)
+    # Followups selected during masked review, before key/gates were opened.
+    dense={'Q01':36,'Q02':52,'Q05':24,'Q06':68,'Q07':44,'Q08':8,'Q11':4,'Q12':56}
+    for ident,start in dense.items():
+        frames=decode(clips/(key[ident]['name']+'.mp4'))
+        panel(frames,ident,list(range(start,min(start+20,93))),ROOT/'qc'/f'{ident}_dense.jpg')
+    for start in (1,5,9):
+        out=Image.new('RGB',(1664,556*4),'white')
+        for j,i in enumerate(range(start,start+4)):
+            out.paste(Image.open(ROOT/'qc'/f'Q{i:02}_scene.jpg'),(0,556*j))
+        out.save(ROOT/'qc'/f'scenes_{start}.jpg',quality=94)
+    real=ROOT/'source/real10_review.mp4'
+    if real.exists():
+        frames=decode(real,25)
+        panel(frames,'REAL10 known calibration control',list(range(0,93,4)),ROOT/'qc/real10_crop.jpg')
     print('Prepared12; key SHA256',hashlib.sha256(hidden.read_bytes()).hexdigest())
 
 if __name__=='__main__': main()
