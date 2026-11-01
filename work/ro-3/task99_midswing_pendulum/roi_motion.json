@@ -35,10 +35,40 @@
   "motion_late": 0.7870653292181071,
   "motion_all": 2.2691417452649336
  },
+ "ms_pend11_mid_s1": {
+  "n": 93,
+  "motion_early": 4.03151565255732,
+  "motion_late": 4.512301219870665,
+  "motion_all": 4.239102062725251
+ },
+ "ms_pend11_mid_s2": {
+  "n": 93,
+  "motion_early": 6.895546737213404,
+  "motion_late": 8.696023295120517,
+  "motion_all": 7.846433076451192
+ },
+ "ms_pend11_mid_s3": {
+  "n": 93,
+  "motion_early": 8.644731775426221,
+  "motion_late": 8.778998015873016,
+  "motion_all": 8.750941358024694
+ },
  "ms_pend11_rest_s1": {
   "n": 93,
   "motion_early": 1.8522424309229866,
   "motion_late": 1.9538289976484424,
   "motion_all": 1.9286368951767507
+ },
+ "ms_pend11_rest_s2": {
+  "n": 93,
+  "motion_early": 2.0394506907701353,
+  "motion_late": 0.7704504703115814,
+  "motion_all": 1.1589806188175755
+ },
+ "ms_pend11_rest_s3": {
+  "n": 93,
+  "motion_early": 1.5540395355673133,
+  "motion_late": 0.8127689594356262,
+  "motion_all": 1.521096349973162
  }
 }
