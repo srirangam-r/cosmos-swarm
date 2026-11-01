@@ -14,3 +14,9 @@ Predeclared in work/rog-cc/hue_t24/PREREG.md, addendum A3 (commit 9a4f7c0). anal
 
 nv16_compare.py independently re-scores DOVER/DD on the same 16 clips (my install, dover_reps=3) and compares the result with agy-3's 5b18adb scores.
 Usage: `nv16_compare.py nv16.json ../../agy-3/task68_nv_scoreboard OUTDIR`
+
+## Visual QC (qc/ctrl_sheet.jpg, qc/mid_sheet.jpg)
+Rows: b1s1, b2s1, b1s3, b2s4. Columns: ctrl at frames 0/60/100/115/130/160/188; mid at frames 0/20/60/100/130/160/188.
+Both arms are visually chaotic, so do not read the base as "a ball that never moves".
+- BASE: a phantom ball 2-4x the real size appears and flies toward the camera, or bounces on the plank.
+- RECIPE: in 3 of the 4 rows the ball reappears hanging under the gripper at f20-60, the ball grows, and the plank lifts or flips.
