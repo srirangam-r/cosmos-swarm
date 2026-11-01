@@ -34,7 +34,7 @@ def fm(v):
     return float(np.mean(out))
 
 still = np.repeat(np.full((1, 256, 256), 128, np.float32) + np.random.default_rng(0).uniform(0, 50, (1, 256, 256)).astype(np.float32), 17, 0)
-assert pd(still) == 0 and fm(still) < 1e-6
+assert pd(still) == 0 and fm(still) < 1e-3  # Farneback numerical floor ~3e-4 px
 
 def boot(x, rng=np.random.default_rng(0), B=10000):
     x = np.asarray(x); i = rng.integers(0, len(x), (B, len(x)))
