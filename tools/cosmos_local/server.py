@@ -6,7 +6,9 @@ POST /v1/videos/sync  multipart form, same fields as vLLM-Omni:
   extra_params (JSON str), file field input_reference (image, optional -> T2V).
   extra_params keys honoured: action_mode="forward_dynamics" (+ domain_name, action_chunk_size, image_size, view_point,
   action), use_resolution_template, use_duration_template, use_system_prompt, crf (mp4 quality, default 0 = lossless),
-  client (free-text label stored in the sidecar). "guardrails" is ignored (safety checker off; research use).
+  client (free-text label stored in the sidecar),
+  negative_metadata_mode ("inverse" = diffusers default | "same" = NVIDIA cosmos-framework reference),
+  negative_preset ("nvidia_default" = cosmos-framework image2video JSON negative; overrides negative_prompt). "guardrails" is ignored (safety checker off; research use).
   Returns video/mp4. Every clip + JSON sidecar is also kept server-side in out_srv/.
 GET /health -> status, busy, served count.
 Run: python server.py --host <tailscale ip> --port 8011
@@ -20,6 +22,7 @@ from fastapi.responses import Response, JSONResponse
 from PIL import Image
 from diffusers import Cosmos3OmniPipeline
 import cosmos_patch  # chunked attention (display watchdog)
+import neg_meta  # negative_metadata_mode / negative_preset (NVIDIA reference CFG text)
 from diffusers.pipelines.cosmos.pipeline_cosmos3_omni import CosmosActionCondition
 from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
 
@@ -79,6 +82,13 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
     W, H = (int(v) for v in size.lower().split("x")) if size else (img.size if img is not None else (832, 480))
     call = dict(prompt=prompt, num_inference_steps=num_inference_steps, guidance_scale=guidance_scale, fps=fps,
                 enable_safety_check=False, output_type="np")
+    neg_mode = str(extra.get("negative_metadata_mode", "inverse")).lower()
+    if neg_mode not in neg_meta.MODES:
+        raise HTTPException(400, f"negative_metadata_mode must be one of {neg_meta.MODES}")
+    try:
+        negative_prompt = neg_meta.resolve_negative(negative_prompt, extra.get("negative_preset"))
+    except ValueError as e:
+        raise HTTPException(400, str(e))
     if negative_prompt:
         call["negative_prompt"] = negative_prompt
     for k_in, k_out in (("use_resolution_template", "add_resolution_template"),
@@ -102,7 +112,8 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
             pipe.scheduler = UniPCMultistepScheduler.from_config(BASE_SCHED, flow_shift=float(flow_shift))
             call["generator"] = torch.Generator(device="cuda").manual_seed(int(seed))
             t1 = time.time()
-            res = pipe(**call)
+            with neg_meta.negative_metadata(pipe, neg_mode):
+                res = pipe(**call)
             dt = time.time() - t1
         except Exception as e:
             traceback.print_exc()
@@ -120,7 +131,7 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
         img.save(OUT / f"{stem}_input.png")
     side = dict(prompt=prompt, negative_prompt=negative_prompt, size=f"{W}x{H}", num_frames=num_frames, fps=fps,
                 num_inference_steps=num_inference_steps, guidance_scale=guidance_scale, flow_shift=flow_shift,
-                seed=seed, extra_params={k: v for k, v in extra.items() if k != "action"},
+                seed=seed, negative_metadata_mode=neg_mode, extra_params={k: v for k, v in extra.items() if k != "action"},
                 has_action=("action" in extra), input_image=(f"{stem}_input.png" if img is not None else None),
                 frames_out=len(frames), out_hw=list(frames[0].shape[:2]), seconds=round(dt, 1),
                 model="nvidia/Cosmos3-Nano (local diffusers bf16, group offload, safety check off)",

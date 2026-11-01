@@ -24,3 +24,11 @@ Runs `nvidia/Cosmos3-Nano` with diffusers (`Cosmos3OmniPipeline`, bf16) on a 24 
 ## Install
 `uv pip install "diffusers @ git+https://github.com/huggingface/diffusers.git" torch torchvision transformers accelerate fastapi uvicorn python-multipart av opencv-python-headless requests`
 Tested with torch 2.14.1+cu130 and diffusers 0.42.0.dev0.
+
+## NVIDIA-reference negative branch (rog2, `neg_meta.py`)
+By default diffusers builds the CFG negative as `"" + INVERSE metadata` ("The video is **not** 7.9 seconds long and is **not** of 24 FPS. This video is **not** of 480x832 resolution."). NVIDIA's cosmos-framework image2video defaults instead use its JSON quality negative plus the **SAME** metadata as the positive, so the duration/fps text cancels in the CFG difference (board findings 369, 382).
+- `extra_params.negative_metadata_mode`: `"inverse"` (default, unchanged behaviour) or `"same"` (cosmos-framework reference).
+- `extra_params.negative_preset`: `"nvidia_default"` puts `assets/cf_default_neg_prompts.json` (cosmos-framework @55f0554d `defaults/image2video`) into the negative, serialized as `json.dumps(json.loads(file))` like cosmos-framework. It overrides `negative_prompt`.
+- `gen.py` takes the same two keys per job line. The sidecar records `negative_metadata_mode` and the resolved negative text.
+- `test_neg_meta.py <diffusers pipeline_cosmos3_omni.py>` runs the pinned diffusers `tokenize_prompt` on a stub tokenizer. It checks that the default is unchanged and that `same` + `nvidia_default` gives exactly cosmos-framework's SAME-mode negative text (5 frame/fps combinations, PASS at diffusers 86ef420b).
+- **Running servers must `git pull` and restart to get this.** An old server silently ignores these keys, so check the sidecar's `negative_metadata_mode`.

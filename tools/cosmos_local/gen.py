@@ -4,7 +4,8 @@
 Usage: python gen.py jobs.jsonl [--offload group|seq|none] [--model DIR]
 Each job line: {"name":..., "image": path|null, "prompt": str|path.json, "negative_prompt": str|path.json|null,
                 "width":832, "height":480, "num_frames":189, "fps":24, "steps":35, "guidance":6.0,
-                "flow_shift":10.0, "seed":1}
+                "flow_shift":10.0, "seed":1,
+                "negative_metadata_mode": "inverse"|"same", "negative_preset": null|"nvidia_default"}
 Writes out/<name>.mp4 and out/<name>.json (sidecar with every setting). Skips jobs whose mp4 exists.
 """
 import argparse, inspect, json, os, sys, time
@@ -14,11 +15,12 @@ import torch
 from PIL import Image
 from diffusers import Cosmos3OmniPipeline
 import cosmos_patch  # chunked attention (display watchdog)
+import neg_meta  # negative_metadata_mode / negative_preset
 from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
 from diffusers.utils import export_to_video
 
 DEF = dict(width=832, height=480, num_frames=189, fps=24, steps=35, guidance=6.0, flow_shift=10.0, seed=1,
-           negative_prompt=None, image=None)
+           negative_prompt=None, image=None, negative_metadata_mode="inverse", negative_preset=None)
 
 
 def load_text(x):
@@ -78,7 +80,7 @@ def main():
         call = dict(prompt=load_text(j["prompt"]), num_frames=j["num_frames"], height=j["height"], width=j["width"],
                     num_inference_steps=j["steps"], guidance_scale=j["guidance"],
                     generator=torch.Generator(device="cuda").manual_seed(int(j["seed"])))
-        neg = load_text(j["negative_prompt"])
+        neg = neg_meta.resolve_negative(load_text(j["negative_prompt"]), j["negative_preset"])
         if neg is not None:
             call["negative_prompt"] = neg
         if j["image"]:
@@ -90,7 +92,8 @@ def main():
             call["enable_safety_check"] = False
         call = {k: v for k, v in call.items() if k in sig}
         t1 = time.time()
-        res = pipe(**call)
+        with neg_meta.negative_metadata(pipe, j["negative_metadata_mode"]):
+            res = pipe(**call)
         dt = time.time() - t1
         vid = res.video if hasattr(res, "video") else res.frames[0]
         if isinstance(vid, list) and vid and isinstance(vid[0], list):
