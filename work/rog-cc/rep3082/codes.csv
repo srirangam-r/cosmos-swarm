@@ -1,0 +1,41 @@
+hex,rest,artifact,note
+01337d,N,Y,"ball absent f72-76, bounces in from top f80-88; strip: ball on plank f48-52 then under the gripper f60-72 (teleport)"
+0334e9,Y,N,"ball on plank f72-92, same position; texture rotates (spins in place)"
+03a896,N,N,"bouncing f76-80, out of crop f84-88, back f92"
+03b12f,Y,N,"ball on plank f72-92 stationary, diff dark"
+05a981,N,U,"absent f72-76, in air f80/f88"
+072ad9,U,N,"on plank; small shifts and a slight rise at f80, diff ring; borderline"
+0b75c6,N,N,"absent f72-80, in air f84-88, gone f92"
+0f64aa,Y,N,on plank stationary; highlight changes only
+178aac,N,N,"on plank, rolling (position shifts), strong diff"
+18d30b,Y,N,on plank stationary; spins in place
+2359cb,N,N,"bouncing f80-88, absent otherwise"
+29ab5a,N,N,"in air f76/f88, absent otherwise"
+2d46fb,N,N,"bouncing f84-88, absent otherwise"
+38f222,N,N,"bouncing top-left f72-84, gone f88-92"
+3b5c84,N,N,bouncing at the plank's left end f72-92
+3dbce8,N,N,in air f80/f88
+49810a,N,N,mostly absent; streak f80
+4d2434,N,N,bounce f84-88
+50afc3,N,N,giant ball moving on the plank
+55153b,N,Y,ball hangs on a STRING and swings (tether appears)
+5f10da,N,N,bouncing/moving f72-92
+771536,N,N,"in air f76-80, gone f84-88, on plank f92"
+7979c0,N,N,moving in air f72-92
+7d7bf8,N,N,in air f84-88
+8091cc,N,N,in air f84-88
+871995,N,N,in air/streaks
+999483,Y,N,"on plank stationary, diff faint"
+a2b7f0,N,N,in air f80/f92
+a65cf2,N,N,bouncing
+ad5103,N,N,in air f84-88
+ad9312,N,Y,"on plank f72-84, DOUBLED ball f88, gone f92"
+c5fc39,N,Y,"giant ball moving, morphs f88, gone f92"
+cc01d0,N,N,in air f84-88
+d4cdcc,N,Y,giant ball on a STRING swinging
+db6ae4,N,N,in air f76/f88
+e2d0ae,N,N,"on plank, rolling right f72-92"
+eb3abb,N,N,"on plank, rolling f72-92"
+f396c6,N,N,in air f76/f88
+f45778,N,N,on plank rolling
+ff93a4,N,N,in air f76/f88/f92
