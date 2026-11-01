@@ -12,6 +12,8 @@ dev = sys.argv[1]
 ids = [c["id"] for c in json.load(open(os.path.join(dev, "index.json")))["clips"]]
 N = len(ids)
 SEEDS = [1, 2, 3]
+# Amendment (before any E1 data beyond the 2-clip pilot): the queue rejects empty prompts; 11/24 Bridge clips have none.
+EMPTY = "A robot arm performs a manipulation task on a tabletop."
 
 
 def job(name, cid, donor, seed):
@@ -21,7 +23,7 @@ def job(name, cid, donor, seed):
              "action_chunk_size": own["action_chunk_size"], "image_size": own["image_size"],
              "view_point": own["view_point"], "action": don["action_chunks"][0], "guardrails": True,
              "noise": {"device": "cpu"}}
-    return {"name": name, "prompt": own["prompt"], "image": os.path.abspath(os.path.join(dev, cid, "first_frame.png")),
+    return {"name": name, "prompt": own["prompt"].strip() or EMPTY, "image": os.path.abspath(os.path.join(dev, cid, "first_frame.png")),
             "width": 256, "height": 256, "num_frames": own["action_chunk_size"] + 1, "fps": own["fps"],
             "steps": 30, "guidance": 1.0, "flow_shift": 10.0, "seed": seed, "extra_params": extra,
             "meta": {"clip": cid, "action_donor": donor}}
