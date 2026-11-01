@@ -1,0 +1,80 @@
+{
+  "artifact_cases": [
+    {
+      "name": "box_ctrl b2 s3",
+      "f_birth": 24,
+      "type": "Mode Interpolation (MI)",
+      "coexist": "f24-50+",
+      "loc": "Held (y\u2248135) + Landed (y\u2248315)"
+    },
+    {
+      "name": "REC ball2 s1",
+      "f_birth": 25,
+      "type": "Mode Interpolation (MI)",
+      "coexist": "f25-34",
+      "loc": "Held (y\u2248125) + Plank (y\u2248327)"
+    },
+    {
+      "name": "rog1 ball1 s23 (F)",
+      "f_birth": 2,
+      "type": "Motion Demand (K)",
+      "coexist": "f4-11",
+      "loc": "Left Boundary Entry (x\u22480)"
+    },
+    {
+      "name": "REC ball2 s2",
+      "f_birth": 58,
+      "type": "Motion Demand (K)",
+      "coexist": "f58-92",
+      "loc": "Ceiling Entry (y\u22480-100)"
+    },
+    {
+      "name": "pend10 restev s2",
+      "f_birth": 32,
+      "type": "Motion Demand (K)",
+      "coexist": "f39-92",
+      "loc": "T-Bifurcation (Axle/Bob)"
+    },
+    {
+      "name": "REC ball1 s3",
+      "f_birth": 30,
+      "type": "Identity Breakdown (B)",
+      "coexist": "f30-92",
+      "loc": "Giant Sphere + Debris Field"
+    },
+    {
+      "name": "REC ball2 s3",
+      "f_birth": 35,
+      "type": "Geometric Morphing (B)",
+      "coexist": "f35-92",
+      "loc": "Plank Phantom Box"
+    },
+    {
+      "name": "rog1 ball1 s22 (F)",
+      "f_birth": 14,
+      "type": "Planar Breakdown (B)",
+      "coexist": "f14-29",
+      "loc": "Plank Tilt / Edge-On Flip"
+    }
+  ],
+  "settling_cases": {
+    "s22": {
+      "clip_id": "r60_8bf9f5",
+      "hypothesis_T_verdict": "SUPPORTED (late window-censoring: macroscopic bounce collapsed, micro-hops \u22642 px on table)",
+      "hypothesis_A_verdict": "REFUTED (zero pull-back to gripper y\u2248120; sits at table y\u2248394)",
+      "hypothesis_G_verdict": "CONSISTENT (falls to lower table surface)",
+      "terminal_state": "Table contact micro-oscillation (y=393-395 px, x=297 px)"
+    },
+    "s23": {
+      "clip_id": "r60_0c3579",
+      "hypothesis_T_verdict": "REFUTED (undamped limit cycle, not purely late decay)",
+      "hypothesis_A_verdict": "REFUTED (zero pull-back to gripper y\u2248120; loops y=356-379)",
+      "hypothesis_G_verdict": "CONFIRMED (lateral plank run-off triggers 5-frame cyclic bounce between table and plank edge)",
+      "terminal_state": "5-frame cyclic loop (y=356-379 px, x=294-308 px)"
+    }
+  },
+  "synthesis": {
+    "artifact_mechanism": "Mixed multi-factor etiology. Pure mode interpolation (MI) is refuted as a unitary explanation because 7/8 artifacts appear late (f >= 14, median f=25). However, MI correctly explains simultaneous held+landed superposition in box_ctrl and REC ball2 s1. Motion demand (K) drives late ceiling entry and prompt-forced pendulum bifurcation. Structural/identity dissolution accounts for debris and plank flips.",
+    "settling_mechanism": "Hypothesis A (gripper pull-back) is decisively refuted across 2/2 non-settling clips (0/2 show return to frame-0 height). Non-settling splits into window censoring (Hypothesis T, 1/2) and geometric plank-boundary loop entrapment (Hypothesis G, 1/2)."
+  }
+}
