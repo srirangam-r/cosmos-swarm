@@ -18,3 +18,9 @@ Consequences for measuring g:
 - Even with a perfect track, g depends on which ball and which scale. With the fixed 539.8 px/m, the big ball's fall reads roughly 10 m/s²
   (eyeballed, unvalidated). If the big ball has the real ball's size, the scale is ~3x smaller and g reads ~3 m/s².
   A ball that materializes mid-air has no defined free fall.
+
+## SAM2.1 tracks of gauge_ball1_noneg_s1 (tools/samball, UNVALIDATED, planted check not yet run)
+Results are in `samball_unvalidated/`: QC png, fit JSON and per-frame track for each ball.
+- Original held ball (point 280,117 at frame 0): stays at y ≈ 120-130 px for all 189 frames, disturbed only while the big ball covers it (frames ~12-30). flag no_free_fall.
+- Big ball (point 280,66 at frame 24): clean fall at frames 24-33, 256 px, R² 0.998, n=10, flag ok, mask diameter ~100 px (the original ball is ~34 px).
+  g = 3.71 [3.26, 4.27] m/s² at the fixed table-plane scale of 539.8 px/m. If the big ball is the same physical ball, its 3.0x size gives a 3.0x finer m/px, and g reads ~1.2 m/s².
