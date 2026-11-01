@@ -1,0 +1,70 @@
+{
+  "task": 15,
+  "question": "Is Nano's ball gravity slow once the release problem is removed? I2V from a real mid-fall frame (ball already let go)",
+  "verdict": "Nano's ball gravity is REAL (g ≈ 8.3-9.9 m/s^2), NOT slow. GAUGE's 0.45 m/s^2 is an object-release artifact. However, Nano completely fails at energy dissipation / restitution (e_T ≈ 1.09, bouncing for >7.4s with 16-19 cycles vs real rest in 1.4s).",
+  "setup": {
+    "model": "nvidia/Cosmos3-Nano (diffusers bf16, all on GPU, safety check off)",
+    "server": "GB10 server.py (100.122.219.51:8011)",
+    "resolution": "832x480",
+    "frames": 189,
+    "fps": 24.0,
+    "steps": 35,
+    "guidance": 6.0,
+    "flow_shift": 10.0,
+    "seed": 1,
+    "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+    "negative_prompt": null,
+    "scale": "539.8 px/m (0.0018525 m/px)"
+  },
+  "clips": {
+    "ball_1": {
+      "clip": "20261101T033939_0007_raj-3.mp4",
+      "first_frame": "real GAUGE ball 1 dedup frame 33 (in free fall)",
+      "seed": [287, 155],
+      "first_impact_frame": 5,
+      "first_apex_frame": 11,
+      "first_rebound_rise_cm": 27.1,
+      "first_flight_time_s": 0.417,
+      "first_rebound_g_fit": 9.90,
+      "first_rebound_g_eff": 12.46,
+      "total_bounces": 19,
+      "bouncing_duration_s": 7.46,
+      "mean_e_T": 1.083,
+      "mean_e_T_se": 0.026,
+      "still_bouncing_at_end": true
+    },
+    "ball_2": {
+      "clip": "20261101T040234_0012_raj-3.mp4",
+      "first_frame": "real GAUGE ball 2 dedup frame 35 (in free fall)",
+      "seed": [290, 172],
+      "first_impact_frame": 6,
+      "first_apex_frame": 11,
+      "first_rebound_rise_cm": 21.5,
+      "first_flight_time_s": 0.458,
+      "first_rebound_g_fit": 8.33,
+      "first_rebound_g_eff": 8.20,
+      "second_flight_time_s": 0.625,
+      "second_rebound_rise_cm": 35.6,
+      "total_bounces": 16,
+      "bouncing_duration_s": 7.25,
+      "mean_e_T": 1.109,
+      "mean_e_T_se": 0.034,
+      "still_bouncing_at_end": true
+    }
+  },
+  "ground_truth_mocap": {
+    "source": "GAUGE rigid bouncing ball 1.json (30 fps)",
+    "first_impact_s": 0.333,
+    "first_flight_time_s": 0.433,
+    "first_rebound_rise_cm": 19.6,
+    "time_to_rest_s": 1.40,
+    "total_bounces": 4,
+    "mean_e_h": 0.668,
+    "mean_e_T": 0.693
+  },
+  "control": "GAUGE held-ball clip (raj-1 gauge_ball1_noneg_s1): ball held at t=0, never released, spawned duplicate ball, measured g = 0.45 m/s^2 (GAUGE paper)",
+  "tools_used": [
+    "bounce_decay.py (referee planted PASS 12/12, sha256 93b57894ffd6)",
+    "independent NCC localized template matching (analyze_midfall.py)"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "name": "ball1_steps4_cfg6_s2",
+ "image": "/home/sha/devel/cosmos-swarm/work/raj-1/gauge_ball/gauge_ball1_f0_832x480.png",
+ "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt": null,
+ "width": 832,
+ "height": 480,
+ "num_frames": 93,
+ "fps": 24,
+ "steps": 4,
+ "guidance": 6.0,
+ "flow_shift": 10.0,
+ "seed": 2,
+ "extra_params": {
+  "client": "rahul-5-agy"
+ },
+ "endpoint": "http://100.77.182.40:8021",
+ "server_clip_id": "20261101T051005_0067_rahul-5-agy",
+ "seconds": 24.2,
+ "wall_seconds": 32.6
+}
