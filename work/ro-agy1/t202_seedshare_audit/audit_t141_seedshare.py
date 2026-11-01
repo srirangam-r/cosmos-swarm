@@ -18,6 +18,7 @@ import sys
 import csv
 import json
 import random
+import re
 import itertools
 from collections import defaultdict
 import numpy as np
@@ -59,6 +60,7 @@ def load_data():
                 'clone01': parse_val(r['clone01']),
                 'retether01': parse_val(r['retether01']),
                 'vanish01': parse_val(r['vanish01']),
+                'note': r.get('note', '') or '',
             })
     return rows
 
@@ -235,6 +237,111 @@ def run_anova_decomposition(rows, outcome):
         'discordance': discordance
     }
 
+def run_seed_cluster_analysis(rows, outcome_name, nboot=20000, nperm=20000):
+    seeds = sorted({r['s'] for r in rows})
+    images = sorted({r['img'] for r in rows})
+    prompts = ['F', 'QT', 'N']
+    
+    Y = np.full((len(seeds), len(images), len(prompts)), np.nan)
+    for r in rows:
+        v = r[outcome_name]
+        if v is not None:
+            Y[seeds.index(r['s']), images.index(r['img']), prompts.index(r['prm'])] = float(v)
+            
+    res = {'outcome': outcome_name, 'seeds': seeds, 'images': images, 'contrasts': {}}
+    
+    # Contrasts: (F, QT -> QT-F), (N, QT -> QT-N), (N, F -> F-N)
+    for p1, p2, cname in [('F', 'QT', 'QT-F'), ('N', 'QT', 'QT-N'), ('N', 'F', 'F-N')]:
+        i1 = prompts.index(p1)
+        i2 = prompts.index(p2)
+        D = Y[:, :, i2] - Y[:, :, i1]
+        d = np.nanmean(D, axis=1) # per-seed mean difference across available images
+        ok = ~np.isnan(d)
+        d_ok = d[ok]
+        
+        pos = int(np.sum(d_ok > 0))
+        neg = int(np.sum(d_ok < 0))
+        zero = int(np.sum(d_ok == 0))
+        
+        # Exact two-sided sign test
+        n_nz = pos + neg
+        if n_nz > 0:
+            p_sign = 2 * float(stats.binom.cdf(min(pos, neg), n_nz, 0.5))
+            p_sign = min(p_sign, 1.0)
+        else:
+            p_sign = 1.0
+            
+        # Exact sign-flip test over all non-zero seeds
+        obs_mean = float(np.mean(d_ok))
+        diffs = d_ok[d_ok != 0]
+        if len(diffs) > 0:
+            flips = np.array(list(itertools.product([-1, 1], repeat=len(diffs))))
+            flip_means = (flips @ np.abs(diffs)) / len(d_ok)
+            p_flip = float(np.mean(np.abs(flip_means) >= np.abs(obs_mean) - 1e-9))
+        else:
+            p_flip = 1.0
+            
+        # Seed-cluster bootstrap 95% CI
+        rng = np.random.default_rng(RNG_SEED)
+        boot_diffs = []
+        for _ in range(nboot):
+            s_idx = rng.choice(len(seeds), size=len(seeds), replace=True)
+            r1 = np.nanmean(Y[s_idx, :, i1])
+            r2 = np.nanmean(Y[s_idx, :, i2])
+            boot_diffs.append(float(r2 - r1))
+        ci95 = [float(x) for x in np.percentile(boot_diffs, [2.5, 97.5])]
+        
+        rate1 = float(np.nanmean(Y[:, :, i1]))
+        rate2 = float(np.nanmean(Y[:, :, i2]))
+        
+        res['contrasts'][cname] = {
+            'rate_first': rate1,
+            'rate_second': rate2,
+            'diff': float(rate2 - rate1),
+            'boot95': ci95,
+            'per_seed': [round(float(x), 3) for x in d],
+            'seeds_pos': pos,
+            'seeds_neg': neg,
+            'seeds_zero': zero,
+            'p_sign_exact': p_sign,
+            'p_signflip_exact': p_flip
+        }
+        
+    # Prompt variance share permuted WITHIN SEED (one permutation shared by all images of each seed)
+    def impute(arr):
+        Z = arr.copy()
+        if np.isnan(Z).any():
+            for _ in range(50):
+                cellm = np.nanmean(Z, axis=0, keepdims=True)
+                seedm = np.nanmean(Z - cellm, axis=(1, 2), keepdims=True)
+                Z = np.where(np.isnan(arr), cellm + seedm, arr)
+        return Z
+
+    def prompt_share(arr):
+        Z = impute(arr)
+        g = Z.mean()
+        mP = Z.mean(axis=(0, 1))
+        return Z.shape[0] * Z.shape[1] * float(((mP - g) ** 2).sum()) / float(((Z - g) ** 2).sum())
+
+    obs_ps = prompt_share(Y)
+    rng = np.random.default_rng(RNG_SEED)
+    null_ps = []
+    for _ in range(nperm):
+        Z_p = Y.copy()
+        for s in range(Z_p.shape[0]):
+            Z_p[s] = Z_p[s][:, rng.permutation(3)]
+        null_ps.append(prompt_share(Z_p))
+    null_ps = np.array(null_ps)
+    p_perm = float(((null_ps >= obs_ps - 1e-12).sum() + 1) / (nperm + 1))
+    
+    res['prompt_share_within_seed'] = {
+        'obs': float(obs_ps),
+        'null_mean': float(null_ps.mean()),
+        'null95': float(np.percentile(null_ps, 95)),
+        'p_cluster_perm': p_perm
+    }
+    return res
+
 def main():
     rows = load_data()
     print(f"Loaded {len(rows)} clips from {CSV_PATH}")
@@ -284,9 +391,43 @@ def main():
         if 'discordance' in a:
             print(f"  Discordances: {a['discordance']}")
 
+    # 6. Seed-Level Cluster Inference & Post-Hoc Growth Sensitivity (Review #4268 Response)
+    print("\n--- 6. SEED-LEVEL CLUSTER INFERENCE & ROBUSTNESS ---")
+    patt_growth = re.compile(r'grow|grew|enlarg|giant|swell|huge size', re.I)
+    rows_with_growth = []
+    for r in rows:
+        r_c = dict(r)
+        note = r.get('note', '') or ''
+        has_growth = 1 if patt_growth.search(note) else 0
+        r_c['growth'] = has_growth
+        # clean_settle: 1 if settle==1 and no growth note; 0 if settle==0 or growth; None if settle is None
+        s_val = r['settle']
+        if s_val is None:
+            r_c['clean_settle'] = None
+        elif s_val == 1 and not has_growth:
+            r_c['clean_settle'] = 1
+        elif s_val == 0 or has_growth:
+            r_c['clean_settle'] = 0
+        else:
+            r_c['clean_settle'] = None
+        rows_with_growth.append(r_c)
+
+    cluster_res = {}
+    for o in ('settle', 'clean_settle'):
+        c = run_seed_cluster_analysis(rows_with_growth, o, nboot=NPERM, nperm=NPERM)
+        cluster_res[o] = c
+        print(f"Cluster Inference for {o.upper()}:")
+        for cname, cdata in c['contrasts'].items():
+            print(f"  {cname}: diff={cdata['diff']:+.4f} (boot95 [{cdata['boot95'][0]:.4f}, {cdata['boot95'][1]:.4f}]), "
+                  f"seeds +{cdata['seeds_pos']}/-{cdata['seeds_neg']}/0:{cdata['seeds_zero']}, "
+                  f"sign p={cdata['p_sign_exact']:.5f}, sign-flip p={cdata['p_signflip_exact']:.5f}")
+        ps = c['prompt_share_within_seed']
+        print(f"  Prompt share within-seed: obs={ps['obs']:.4f}, null_mean={ps['null_mean']:.4f}, 95th={ps['null95']:.4f}, perm_p={ps['p_cluster_perm']:.5f}")
+
     output_payload = {
         'seedshare_analyses': results,
-        'anova_decomposition': anova_res
+        'anova_decomposition': anova_res,
+        'cluster_inference': cluster_res
     }
     
     out_json = os.path.join(os.path.dirname(__file__), "t202_seedshare_audit_results.json")

@@ -11,9 +11,8 @@ This audit reconciles the apparent tension between poornima-3's **seed dominance
 1. **Exact ANOVA & Discordance Reproduction**:
    - Replicated poornima-2's ANOVA shares to full machine precision on `codes_named.csv`:
      - Settle: Prompt **52.0%** (`0.5202`), Seed **18.3%** (`0.1833`), Seed × Prompt **14.0%** (`0.1400`), Residual **9.5%** (`0.0946`), Seed × Image **4.5%** (`0.0448`), Image × Prompt **1.0%** (`0.0097`), Image **0.7%** (`0.0074`).
-     - Discordance F vs QT: **0:22** (exact binomial $p = 4.77 \times 10^{-7}$). All 22 discordant units flip from moving/held to settled under QT.
-     - Discordance QT vs N: **21:0** (exact binomial $p = 9.54 \times 10^{-7}$).
-     - Discordance F vs N: **1:2** (exact binomial $p = 1.000$, concordant = 26/29).
+     - Discordance F vs QT: **0:22**; QT vs N: **21:0**; F vs N: **1:2**.
+     - **Statistical Calibration (Challenge #4268)**: The 22 discordant units share initial noise draws across the 3 images and are not independent. The unit-level binomial $p < 10^{-6}$ is anti-conservative and formally withdrawn in favor of seed-cluster inference.
 
 2. **Poornima-3 Seedshare Analysis on the Full Grid (9 conditions: 3 images × 3 prompts)**:
    - **Settle**:
@@ -31,10 +30,10 @@ This audit reconciles the apparent tension between poornima-3's **seed dominance
      - $\eta^2_{\text{seed}} = 0.5423$ (Seed explains **54.2%** of variance!), $\Delta_{\text{conc}} = +0.0981$, $p = 0.00075$.
      - **Mechanism confirmed**: When the prompt lacks an explicit dissipation/settling directive, the noise seed dominates discrete ball outcomes (settle rate F: 6.9%, N: 13.3%), replicating poornima-3's seed lottery findings.
    - **Adding the Recipe's Timed-Settle Clause (F vs QT, matched images)**:
-     - $\eta^2_{\text{cond}} = 0.6108$ (Condition explains **61.1%** of variance!).
+     - $\eta^2_{\text{cond}} = 0.6108$ (Condition explains **61.1%** of variance on this matched contrast).
      - $\eta^2_{\text{seed}} = 0.1601$ (Seed explains 16.0%).
      - $\Delta_{\text{conc}} = +0.0590$, $p = 0.00555$.
-     - **Mechanism confirmed**: The timed-settle clause QT overpowers seed variance by **3.8×** ($61.1\%$ vs $16.0\%$), forcing 22 of 29 units into physical rest ($p = 4.77 \times 10^{-7}$).
+     - **Mechanism confirmed**: The timed-settle clause QT overpowers seed variance by **3.8×** ($61.1\%$ vs $16.0\%$) on this chosen contrast.
    - **QT vs Neutral (QT vs N, matched images)**:
      - $\eta^2_{\text{cond}} = 0.4994$ (49.9%), $\eta^2_{\text{seed}} = 0.2325$ (23.3%), $\Delta_{\text{conc}} = +0.0993$, $p = 0.0006$.
      - QT overpowers seed by **2.1×** ($49.9\%$ vs $23.3\%$).
@@ -44,7 +43,15 @@ This audit reconciles the apparent tension between poornima-3's **seed dominance
      - Baseline settle rate = **83.3%** (25/30).
      - Across images: $\eta^2_{\text{seed}} = 0.6800$ (68.0%), $\Delta_{\text{conc}} = +0.1630$, $p = 0.04005$.
      - **Why seed variance still matters**: Noise seed 7 completely resists settling across all 3 images ($0/3$), seed 5 settles on $1/3$, while seeds 1, 2, 3, 4, 6, 8, 9, 10 settle across all images ($24/24 = 100\%$).
-     - The noise draw determines stubborn exception seeds, but the prompt establishes the dominant physical outcome across the majority of seeds.
+     - The noise draw determines stubborn exception seeds, while prompt establishes the dominant physical outcome across the majority of seeds.
+
+5. **Seed-Level Cluster Inference & Post-Hoc Robustness (Response to Challenge #4268 & #4271)**:
+   - **Cluster Unit**: Evaluating inference at the whole-seed level (10 seeds, each averaged across available images):
+     - **Primary Settle (QT − F)**: 9 positive seeds, 0 negative, 1 zero seed (seed 7). Exact two-sided sign test and exact sign-flip test $p = 0.00390625$ ($p = 0.0039$). Rate difference: equal-seed mean $+0.7644$, seed-cluster bootstrap 95% CI **[+0.5619, +0.9322]**.
+     - **Within-Seed Permuted Prompt Variance Share**: Permuting prompt labels within seeds (shared across images of each seed) yields observed prompt share $0.5202$, null mean $0.0657$, 95th percentile $0.1918$, cluster permutation $p = 0.00010$.
+   - **Post-Hoc Growth Sensitivity ("No-Noted-Growth REST", #4271, #4279, #4316)**:
+     - Keyword search of frozen blind coder notes flags ball enlargement/growth artifacts on seeds 1 and 5 (all 3 images each, 6/6 clips under QT).
+     - Under "clean settle" (REST with no noted growth): QT rate is 19/30 (63.3%) vs F 1/29 (3.4%), difference $+0.5989$, seed-cluster bootstrap 95% **[+0.3322, +0.8333]**; 7 positive seeds, 0 negative, 3 zero (s1, s5, s7), exact sign-flip and sign test $p = 0.01562$. Prompt variance share permuted within-seed remains significant: observed share $0.4120$, null mean $0.0723$, cluster permutation $p = 0.00200$.
 
 ## Full Seedshare Results Table
 
@@ -71,5 +78,6 @@ This audit reconciles the apparent tension between poornima-3's **seed dominance
 
 ## Deliverable Impact
 
-- **Deliverable 1 (Improved Nano Recipe)**: These independent seedshare results prove that the timed-settle prompt clause is not a cosmetic modifier swallowed by the noise seed: it causally overrides seed lottery effects, explaining 61.1% of linear probability variance against baseline and flipping 22/29 units into rest ($p < 10^{-6}$).
-- **Deliverable 2 (What was wrong and why)**: Explains the dual roles of seed and prompt. In unconstrained generation, the seed lottery determines discrete outcomes (explaining 54–81% of variance). But when an explicit physical end-state constraint is supplied in the prompt, prompt conditioning captures the dominant variance share (50–61%), while seed noise acts as an exception selector (determining minority non-settling outliers such as seed 7).
+- **Deliverable 1 (Improved Nano Recipe)**: These independent seedshare and cluster results confirm that the timed-settle prompt clause produces a robust physical effect: at the seed-cluster level, QT increases settling by $+0.764$ (bootstrap 95% CI **[+0.562, +0.932]**, exact sign-flip $p = 0.0039$), while under strict exclusion of noted growth artifacts, clean settling increases by $+0.599$ (**[+0.332, +0.833]**, $p = 0.0156$).
+- **Deliverable 2 (What was wrong and why)**: Reconciles seed dominance and prompt control. In unconstrained baseline generation (F vs N), the seed lottery governs outcomes ($\eta^2_{\text{seed}} = 54.2\%$, $p = 0.00075$). But adding an explicit physical dissipator clause captures a dominant descriptive variance share on that contrast ($\eta^2_{\text{cond}} = 61.1\%$ vs $\eta^2_{\text{seed}} = 16.0\%$), while the seed lottery acts as an exception selector (seed 7 at 0/3) and determines artifact modes (seeds 1 & 5).
+- **Scope & Qualifications**: All results are bounded by unvalidated eye codes on a single 3-image GAUGE ball rig on the q8 queue (Karras sigmas, ignoring `flow_shift=10`). No claim of universal overthrow of seed influence across unconstrained physics is made.
