@@ -1,0 +1,24 @@
+[
+  {
+    "scene": "pendulum",
+    "difference_bbox": [
+      188,
+      125,
+      1238,
+      526
+    ],
+    "mean_absolute_pixel_difference": 0.8780843855218855,
+    "pass": true
+  },
+  {
+    "scene": "ball",
+    "difference_bbox": [
+      188,
+      125,
+      1238,
+      674
+    ],
+    "mean_absolute_pixel_difference": 1.225837962962963,
+    "pass": true
+  }
+]

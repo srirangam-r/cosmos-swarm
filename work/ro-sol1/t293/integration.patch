@@ -1,0 +1,118 @@
+--- a/work/rahul-5-agy/gallery/index.html
++++ b/work/rahul-5-agy/gallery/index.html
+@@ -949,7 +949,7 @@
+           </div>
+         </div>
+ 
+-        <div class="evidence-card" id="5566">
++        <div class="evidence-card" id="5566"><span id="5666"></span><span id="5718"></span>
+           <div class="evidence-title">
+             <span>Finding #5566 / #5666: E3 Guidance Negative</span>
+             <span class="label-badge badge-negative">Negative Result</span>
+@@ -960,7 +960,7 @@
+           </div>
+         </div>
+ 
+-        <div class="evidence-card" id="5600">
++        <div class="evidence-card" id="5600"><span id="5634"></span>
+           <div class="evidence-title">
+             <span>Finding #5600 / #5634: E6 tlo Artifact</span>
+             <span class="label-badge badge-artifact">Artifact</span>
+@@ -971,7 +971,7 @@
+           </div>
+         </div>
+ 
+-        <div class="evidence-card" id="5563">
++        <div class="evidence-card" id="5563"><span id="5785"></span>
+           <div class="evidence-title">
+             <span>Finding #5563 / #5785: Task 266 Gravity</span>
+             <span class="label-badge badge-provisional">Provisional</span>
+@@ -1005,47 +1005,65 @@
+ 
+   <script>
+     // --- Single-Video Controls (Featured Presentation Demos) ---
++    function singleVideoMode(v) {
++      return v.dataset.format !== 'gif';
++    }
++
++    function paintSingle(v) {
++      const controls = v.closest('section').querySelector('.sync-controls');
++      const videoMode = singleVideoMode(v);
++      controls.querySelectorAll('button, select').forEach(e => { e.disabled = !videoMode; });
++      controls.querySelector('button').textContent = v.paused ? 'Play' : 'Pause';
++    }
++
++    function playSingle(v) {
++      if (!singleVideoMode(v)) return;
++      v.play().catch(() => paintSingle(v));
++    }
++
+     function toggleSinglePlay(id, btn) {
+       const v = document.getElementById(id);
+-      if (!v) return;
+-      if (v.paused) {
+-        v.play();
+-        btn.textContent = "Pause";
+-      } else {
+-        v.pause();
+-        btn.textContent = "Play";
+-      }
++      if (!v || !singleVideoMode(v)) return;
++      if (v.paused) playSingle(v); else v.pause();
++      paintSingle(v);
+     }
+ 
+     function restartSingle(id) {
+       const v = document.getElementById(id);
+-      if (!v) return;
++      if (!v || !singleVideoMode(v)) return;
+       v.currentTime = 0;
+-      v.play();
++      playSingle(v);
++      paintSingle(v);
+     }
+ 
+     function setSingleSpeed(id, val) {
+       const v = document.getElementById(id);
+-      if (!v) return;
+-      const rate = parseFloat(val);
++      if (!v || !singleVideoMode(v)) return;
++      const rate = Number(val);
+       if (Number.isFinite(rate) && rate > 0) v.playbackRate = rate;
+     }
+ 
+     function setFormat(vidId, imgId, fmt, btn) {
+       const v = document.getElementById(vidId);
+       const img = document.getElementById(imgId);
+-      const parent = btn.parentElement;
+-      parent.querySelectorAll('button').forEach(b => b.classList.remove('active'));
++      if (!v || !img || !['gif', 'mp4'].includes(fmt)) return;
++      btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+       btn.classList.add('active');
+-
+-      if (fmt === 'gif') {
+-        if (v) { v.pause(); v.style.display = 'none'; }
+-        if (img) img.style.display = 'block';
+-      } else {
+-        if (img) img.style.display = 'none';
+-        if (v) { v.style.display = 'block'; v.play(); }
+-      }
+-    }
++      v.dataset.format = fmt;
++      v.style.display = fmt === 'gif' ? 'none' : 'block';
++      img.style.display = fmt === 'gif' ? 'block' : 'none';
++      if (fmt === 'gif') v.pause(); else playSingle(v);
++      paintSingle(v);
++    }
++
++    document.querySelectorAll('video[id^="v-demo-"]').forEach(v => {
++      v.dataset.format = 'mp4';
++      ['play', 'pause', 'ended', 'error'].forEach(event => v.addEventListener(event, () => {
++        if (!singleVideoMode(v) && !v.paused) v.pause();
++        paintSingle(v);
++      }));
++      paintSingle(v);
++    });
+ 
+     // --- Paired Dual-Video Synchronization Keeper (ro-sol1 t283 engine) ---
+     const demoPairs = new Map();
