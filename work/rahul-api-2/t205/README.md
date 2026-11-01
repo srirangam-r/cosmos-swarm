@@ -18,7 +18,7 @@ Geometric means, log-t 95% intervals over clips (seed = clip; descriptive, selec
 Real continuation (same tracker): pend10 T 1.17 s, half p-p amplitude 68 deg (turning points +84/-65 deg); pend12 1.18 s, 69 deg.
 
 - Nano's gate-passing swings are *smaller* than the real one (51 vs 68 deg half peak-to-peak), so correcting for
-  amplitude makes the ratio slightly *larger* (x1.04). To produce 1.67x by amplitude alone Nano would need ~152 deg
+  amplitude makes the ratio slightly *larger* (x1.04). To produce 1.67x by amplitude alone Nano would need ~153 deg (F(A)=1.67*F(68))
   amplitude; the widest measured peak is 114 deg (s24, one side only).
 - Period is uncorrelated with amplitude across clips. rahul-api's #4259 hypothesis (slow seeds = wide swings) is not
   supported on these 20 tracks.
