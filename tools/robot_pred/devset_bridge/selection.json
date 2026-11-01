@@ -1,0 +1,174 @@
+{
+ "source": "IPEC-COMMUNITY/bridge_orig_lerobot (LeRobot v2.0)",
+ "selection": "random.Random(20261101).sample(episodes with length>=33, 24)",
+ "episodes": [
+  {
+   "episode_index": 2407,
+   "tasks": [
+    "open microwave"
+   ],
+   "length": 56
+  },
+  {
+   "episode_index": 2809,
+   "tasks": [
+    "picking the yellow block puting it to the right"
+   ],
+   "length": 35
+  },
+  {
+   "episode_index": 3380,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 5151,
+   "tasks": [
+    "Take the sushi to the faucet base."
+   ],
+   "length": 46
+  },
+  {
+   "episode_index": 5156,
+   "tasks": [
+    "topple metal pot cardboard fence"
+   ],
+   "length": 36
+  },
+  {
+   "episode_index": 6510,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 7052,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 7656,
+   "tasks": [
+    "Put the orange brush in the drawer"
+   ],
+   "length": 36
+  },
+  {
+   "episode_index": 7979,
+   "tasks": [
+    ""
+   ],
+   "length": 34
+  },
+  {
+   "episode_index": 12404,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 15532,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 18616,
+   "tasks": [
+    "put pan on stove and put stuffedduck in pan"
+   ],
+   "length": 61
+  },
+  {
+   "episode_index": 22217,
+   "tasks": [
+    ""
+   ],
+   "length": 42
+  },
+  {
+   "episode_index": 25242,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 27639,
+   "tasks": [
+    "Move the cylinder to the right side of the green triangle"
+   ],
+   "length": 45
+  },
+  {
+   "episode_index": 31702,
+   "tasks": [
+    "put the corn below the metal pot"
+   ],
+   "length": 35
+  },
+  {
+   "episode_index": 35253,
+   "tasks": [
+    "take the silver pot cover from the left of the stove to put over and close the silver pot"
+   ],
+   "length": 33
+  },
+  {
+   "episode_index": 36743,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 39241,
+   "tasks": [
+    "take carrot out of pot cardboard fence"
+   ],
+   "length": 36
+  },
+  {
+   "episode_index": 41643,
+   "tasks": [
+    "unfold a cloth on table"
+   ],
+   "length": 38
+  },
+  {
+   "episode_index": 47177,
+   "tasks": [
+    "unfold the cloth from bottom right to top left"
+   ],
+   "length": 38
+  },
+  {
+   "episode_index": 47426,
+   "tasks": [
+    "move the duck to top rigth of table"
+   ],
+   "length": 34
+  },
+  {
+   "episode_index": 47623,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 51538,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  }
+ ]
+}

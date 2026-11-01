@@ -1,0 +1,127 @@
+{
+ "source": "IPEC-COMMUNITY/bridge_orig_lerobot (LeRobot v2.0)",
+ "selection": "random.Random(20261101).sample(episodes with length>=33, 24)",
+ "n_chunks": 2,
+ "clips": [
+  {
+   "id": "bridge_002407",
+   "episode_index": 2407,
+   "prompt": "open microwave"
+  },
+  {
+   "id": "bridge_002809",
+   "episode_index": 2809,
+   "prompt": "picking the yellow block puting it to the right"
+  },
+  {
+   "id": "bridge_003380",
+   "episode_index": 3380,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_005151",
+   "episode_index": 5151,
+   "prompt": "Take the sushi to the faucet base."
+  },
+  {
+   "id": "bridge_005156",
+   "episode_index": 5156,
+   "prompt": "topple metal pot cardboard fence"
+  },
+  {
+   "id": "bridge_006510",
+   "episode_index": 6510,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_007052",
+   "episode_index": 7052,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_007656",
+   "episode_index": 7656,
+   "prompt": "Put the orange brush in the drawer"
+  },
+  {
+   "id": "bridge_007979",
+   "episode_index": 7979,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_012404",
+   "episode_index": 12404,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_015532",
+   "episode_index": 15532,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_018616",
+   "episode_index": 18616,
+   "prompt": "put pan on stove and put stuffedduck in pan"
+  },
+  {
+   "id": "bridge_022217",
+   "episode_index": 22217,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_025242",
+   "episode_index": 25242,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_027639",
+   "episode_index": 27639,
+   "prompt": "Move the cylinder to the right side of the green triangle"
+  },
+  {
+   "id": "bridge_031702",
+   "episode_index": 31702,
+   "prompt": "put the corn below the metal pot"
+  },
+  {
+   "id": "bridge_035253",
+   "episode_index": 35253,
+   "prompt": "take the silver pot cover from the left of the stove to put over and close the silver pot"
+  },
+  {
+   "id": "bridge_036743",
+   "episode_index": 36743,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_039241",
+   "episode_index": 39241,
+   "prompt": "take carrot out of pot cardboard fence"
+  },
+  {
+   "id": "bridge_041643",
+   "episode_index": 41643,
+   "prompt": "unfold a cloth on table"
+  },
+  {
+   "id": "bridge_047177",
+   "episode_index": 47177,
+   "prompt": "unfold the cloth from bottom right to top left"
+  },
+  {
+   "id": "bridge_047426",
+   "episode_index": 47426,
+   "prompt": "move the duck to top rigth of table"
+  },
+  {
+   "id": "bridge_047623",
+   "episode_index": 47623,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_051538",
+   "episode_index": 51538,
+   "prompt": ""
+  }
+ ]
+}
