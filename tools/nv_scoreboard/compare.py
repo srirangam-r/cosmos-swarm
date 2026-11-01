@@ -27,7 +27,7 @@ DD = ["dd_norm", "dd_frac", "dd_binary"]
 # asserted default. Never group an explicit value with an unknown value.
 NOISE_CONTEXT = ("model", "checkpoint", "inference_stack", "use_duration_template",
                  "use_resolution_template", "use_system_prompt", "negative_metadata_mode",
-                 "noise_context")
+                 "noise_context", "cond_fps", "play_fps")
 
 
 def noise_context(meta):
@@ -124,7 +124,8 @@ def cmd_noise(a):
     S = load(a.scores)
     groups = {}
     for name, r in S.items():
-        key = (field(r, "image"), field(r, "prompt"), field(r, "neg"), field(r, "settings"), noise_context(r["meta"]))
+        key = (field(r, "image"), field(r, "prompt"), field(r, "neg"), field(r, "settings"), noise_context(r["meta"]),
+               (r.get("fps"), r.get("fps_source")))
         if any(v is None for v in key[:3]) or any(v is None for v in key[3]) or field(r, "seed") is None:
             sys.exit(f"missing image, prompt, negative prompt, complete settings, or seed: {name}")
         groups.setdefault(key, []).append(r)
@@ -136,7 +137,7 @@ def cmd_noise(a):
             sys.exit(f"duplicate seed within noise group: {key[0]}")
         context = {k: json.loads(v) for k, v in key[4] if v is not None}
         unknown = [k for k, v in key[4] if v is None]
-        rep["groups"].append(dict(image=key[0], neg=key[2], context=context, unknown_context=unknown, n=len(rs), seeds=[field(r, "seed") for r in rs],
+        rep["groups"].append(dict(image=key[0], neg=key[2], context=context, unknown_context=unknown, scored_fps=key[5][0], fps_source=key[5][1], n=len(rs), seeds=[field(r, "seed") for r in rs],
                                   **{m: [round(r[m], 4) for r in rs] for m in METRICS if all(m in r for r in rs)}))
     for m in METRICS:
         num, df = 0.0, 0

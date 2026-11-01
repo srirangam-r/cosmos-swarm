@@ -18,7 +18,7 @@ A partial download gives "failed finding central directory". Check the file size
 ```
 python score.py CLIPS_DIR [more clips] --dover_dir <DOVER_DIR> --device cuda|cpu --dover_reps 3 --out scores.json
 ```
-- fps comes from the sidecar `<clip>.json` key `fps` if there is one, otherwise from the container.
+- Motion sampling uses the container playback fps. Sidecar `fps` and `cond_fps` describe generation and may differ from playback; if `play_fps` is provided, it must match the container (within 0.1% or 0.01 fps). New outputs record `fps_source=container`. Legacy outputs may have sampled using conditioning fps: rescore them when fps differs.
 - Per clip it writes `dd_binary, dd_norm, dd_frac, dd_maxrad[...]` and `dover_fused, dover_technical, dover_aesthetic` (each with an `_sd` over `--dover_reps` random fragment draws).
 - `--no_dd` / `--no_dover` turn either part off.
 - Sidecar metadata is embedded in new score files so comparisons remain portable. Duplicate clip basenames are rejected, including collisions with existing output entries; use separate output files or unique names.
@@ -35,7 +35,7 @@ python compare.py paired before.json after.json --real ../../work/raj-4/nv_score
 - `paired` matches clips using image and seed by default. It averages seeds within each scene, weights scenes equally, and bootstraps scenes for a descriptive 95% CI of AFTER−BEFORE. With `--real`, the motion-fidelity gap |dd − dd_real(task)| is descriptive and pair-weighted; its reference uncertainty is not included. A single scene cannot provide a scene-level CI. Use several independent scenes; a small-sample bootstrap may still be unreliable.
 - No automated non-inferiority verdict is provided. A CI crossing zero does not establish no degradation: specify an acceptable margin in advance and use an appropriate design and interval, including reference uncertainty for motion fidelity.
 - The task (ball / pend / slope) comes from the clip basename via `--task_re`. Reference clips whose names match no task are ignored.
-- The comparator has synthetic regression checks and a sidecar compatibility check; the Cosmos seed-noise baseline is pending (task 4). Older score files without embedded metadata still require their sidecars at the recorded paths.
+- Seed-noise grouping also separates recorded `cond_fps`, `play_fps`, scored fps and its source; missing values remain unknown. Paired comparisons can intentionally vary fps, so check playback rate and use a real reference at the corresponding playback fps manually. The comparator has synthetic regression checks and a sidecar compatibility check; the Cosmos seed-noise baseline is pending (task 4). Older score files without embedded metadata still require their sidecars at the recorded paths.
 
 ## Definitions
 **Dynamic degree** is a re-implementation of VBench's `dynamic_degree.py`:

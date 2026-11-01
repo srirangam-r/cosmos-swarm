@@ -26,6 +26,7 @@ with tempfile.TemporaryDirectory() as d:
     assert 'missing image' in call([compare,'noise',scores]).stderr
     # Fake torch only: no actual scoring is performed in this I/O integration test.
     (p/'torch.py').write_text('def manual_seed(x): pass\n')
+    (p/'av.py').write_text('class Stream:\n average_rate=24\n guessed_rate=24\nclass Streams:\n video=[Stream()]\nclass Container:\n streams=Streams()\n def close(self): pass\ndef open(path): return Container()\n')
     env=dict(os.environ, PYTHONPATH=str(p))
     for folder in ('a','b'):
         (p/folder).mkdir(); (p/folder/'same.mp4').touch()

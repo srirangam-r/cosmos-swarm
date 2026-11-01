@@ -5,8 +5,8 @@ Usage:
   python score.py CLIP_OR_DIR [...] --dover_dir PATH/TO/DOVER --out results.json [--device cpu]
                   [--no_dover] [--no_dd] [--dover_reps 1]
 
-Per clip it reads an optional JSON sidecar (same stem, .json) and takes fps from
-sidecar["fps"] if present, else from the container.
+Per clip it reads an optional JSON sidecar (same stem, .json). Motion sampling
+uses container playback fps, not the generation conditioning fps in the sidecar.
 
 Dynamic degree follows VBench (vbench/dynamic_degree.py):
   * frames sampled every round(fps/8) frames (~8 fps)
@@ -23,7 +23,7 @@ DOVER (VQAssessment/DOVER, dover.yml, val-l1080p sampling): raw technical and
 aesthetic heads plus the fused overall score in [0,1] (DOVER's fuse_results).
 DOVER's fragment sampling is random; --dover_reps N averages N draws and reports sd.
 """
-import argparse, glob, json, os, sys, time
+import argparse, glob, json, math, os, sys, time
 import numpy as np
 import torch
 
@@ -158,8 +158,12 @@ def main():
     for c in clips:
         side = os.path.splitext(c)[0] + ".json"
         meta = json.load(open(side)) if os.path.exists(side) else {}
-        fps = float(meta.get("fps") or video_fps(c))
-        r = dict(clip=c, fps=fps, sidecar=side if meta else None, metadata=meta)
+        fps = video_fps(c)
+        if not math.isfinite(fps) or fps <= 0:
+            sys.exit(f"invalid playback fps for {c}: {fps}")
+        if meta.get("play_fps") is not None and not math.isclose(float(meta["play_fps"]), fps, rel_tol=0.001, abs_tol=0.01):
+            sys.exit(f"play_fps does not match container for {c}: {meta['play_fps']} vs {fps}")
+        r = dict(clip=c, fps=fps, fps_source="container", sidecar=side if meta else None, metadata=meta)
         t0 = time.time()
         if not a.no_dd:
             r.update(dynamic_degree(c, fps, a.device))
