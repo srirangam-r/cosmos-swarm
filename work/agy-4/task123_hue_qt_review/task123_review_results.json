@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "source_file": "/home/nail/swarm-work/agy-4/cosmos-swarm/work/ro-1/hue_qt/res.json",
+    "n_qt_f_pairs": 8,
+    "n_qs_f_pairs": 3,
+    "qt_pairs": [
+      [
+        "ball_F_ball1_fps24_93f_s1",
+        "cause_QT_ball1_fps24_93f_s1"
+      ],
+      [
+        "ball_F_ball1_fps24_93f_s2",
+        "cause_QT_ball1_fps24_93f_s2"
+      ],
+      [
+        "cause5_F_ball1_fps24_93f_s3",
+        "cause5_QT_ball1_fps24_93f_s3"
+      ],
+      [
+        "cause5_F_ball1_fps24_93f_s4",
+        "cause5_QT_ball1_fps24_93f_s4"
+      ],
+      [
+        "cause5_F_ball1_fps24_93f_s5",
+        "cause5_QT_ball1_fps24_93f_s5"
+      ],
+      [
+        "ball_F_ball2_fps24_93f_s1",
+        "cause6_QT_ball2_fps24_93f_s1"
+      ],
+      [
+        "ball_F_ball2_fps24_93f_s2",
+        "cause6_QT_ball2_fps24_93f_s2"
+      ],
+      [
+        "cause6_F_ball2_fps24_93f_s3",
+        "cause6_QT_ball2_fps24_93f_s3"
+      ]
+    ],
+    "qs_pairs": [
+      [
+        "cause5_F_ball1_fps24_93f_s3",
+        "cause5_QS_ball1_fps24_93f_s3"
+      ],
+      [
+        "cause5_F_ball1_fps24_93f_s4",
+        "cause5_QS_ball1_fps24_93f_s4"
+      ],
+      [
+        "cause5_F_ball1_fps24_93f_s5",
+        "cause5_QS_ball1_fps24_93f_s5"
+      ]
+    ],
+    "real_reference_clip": "real_ball1_dd32_93f"
+  },
+  "category_contrasts": {
+    "overall": {
+      "F_mean": 0.6360458163186334,
+      "QT_mean": 0.584545414411248,
+      "Real_ref": 0.5838604770027673,
+      "diff_mean": -0.05150040190738554,
+      "se": 0.016011125370773177,
+      "t_stat": -3.2165385452164865,
+      "p_val": 0.014723909571283502,
+      "ci90": [
+        -0.07680901856376575,
+        -0.027781727562586844
+      ],
+      "ci95": [
+        -0.08143859687977684,
+        -0.02309176029744919
+      ],
+      "n_pairs": 8,
+      "n_positive": 1
+    },
+    "Physical Laws": {
+      "F_mean": 0.5307172453807046,
+      "QT_mean": 0.45656788717800134,
+      "Real_ref": 0.4675559016565482,
+      "diff_mean": -0.07414935820270332,
+      "se": 0.02772356309633928,
+      "t_stat": -2.6745969825391693,
+      "p_val": 0.03178716696657023,
+      "ci90": [
+        -0.11444545711856335,
+        -0.02936379351497937
+      ],
+      "ci95": [
+        -0.12068155878320498,
+        -0.019728233028824094
+      ],
+      "n_pairs": 8,
+      "n_positive": 1
+    },
+    "Visual Integrity": {
+      "F_mean": 0.7630178327672184,
+      "QT_mean": 0.7630296191200614,
+      "Real_ref": 0.7592975273728371,
+      "diff_mean": 1.1786352843046188e-05,
+      "se": 0.0010318393499805184,
+      "t_stat": 0.01142266268801313,
+      "p_val": 0.9912049636193878,
+      "ci90": [
+        -0.001599832228384912,
+        0.0015668496489524841
+      ],
+      "ci95": [
+        -0.0018767328350804747,
+        0.0018544984050095081
+      ],
+      "n_pairs": 8,
+      "n_positive": 4
+    },
+    "Geometric Reasoning": {
+      "F_mean": 0.6377074159681797,
+      "QT_mean": 0.6428920440375805,
+      "Real_ref": 0.671029582619667,
+      "diff_mean": 0.005184628069400787,
+      "se": 0.015674500186009615,
+      "t_stat": 0.33076831847106447,
+      "p_val": 0.7504998807586521,
+      "ci90": [
+        -0.018739903764799233,
+        0.029375783354043936
+      ],
+      "ci95": [
+        -0.024060146370902657,
+        0.03291390277445316
+      ],
+      "n_pairs": 8,
+      "n_positive": 5
+    },
+    "Semantic Alignment": {
+      "F_mean": 0.7568059768527746,
+      "QT_mean": 0.5217804997228086,
+      "Real_ref": 0.40560151636600494,
+      "diff_mean": -0.23502547712996602,
+      "se": 0.08601125493108727,
+      "t_stat": -2.732496779848984,
+      "p_val": 0.029233099625854624,
+      "ci90": [
+        -0.3705540060065686,
+        -0.1067430954426527
+      ],
+      "ci95": [
+        -0.39836869270075115,
+        -0.08907170896418393
+      ],
+      "n_pairs": 8,
+      "n_positive": 1
+    }
+  },
+  "question_contrasts": {
+    "Q1": {
+      "id": 1,
+      "category": "Semantic Alignment",
+      "text": "At the start of the video, does a robot arm hold a black ball above a wooden plank?",
+      "F_mean": 0.7568059768527746,
+      "QT_mean": 0.5217804997228086,
+      "Real_val": 0.40560151636600494,
+      "diff_mean": -0.23502547712996602,
+      "se": 0.08601125493108727,
+      "dist_F": 0.3512044604867697,
+      "dist_QT": 0.11617898335680366,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 3.022960352546436
+    },
+    "Q2": {
+      "id": 2,
+      "category": "Physical Laws",
+      "text": "In the middle of the video, after the ball is released, does it fall downward?",
+      "F_mean": 0.5736168920993805,
+      "QT_mean": 0.2812897393014282,
+      "Real_val": 0.35819803178310394,
+      "diff_mean": -0.2923271527979523,
+      "se": 0.12655662020922648,
+      "dist_F": 0.21541886031627655,
+      "dist_QT": 0.07690829248167574,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 2.8009835268102266
+    },
+    "Q3": {
+      "id": 3,
+      "category": "Physical Laws",
+      "text": "In the middle of the video, does the ball speed up as it falls?",
+      "F_mean": 0.1591947264969349,
+      "QT_mean": 0.1718018827959895,
+      "Real_val": 0.18305785953998566,
+      "diff_mean": 0.012607156299054623,
+      "se": 0.022221903929067872,
+      "dist_F": 0.023863133043050766,
+      "dist_QT": 0.011255976743996143,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 2.1200410755805077
+    },
+    "Q4": {
+      "id": 4,
+      "category": "Physical Laws",
+      "text": "When the ball hits the plank, does it bounce up instead of passing through it?",
+      "F_mean": 0.1651316569186747,
+      "QT_mean": 0.11402931157499552,
+      "Real_val": 0.10175036638975143,
+      "diff_mean": -0.05110234534367919,
+      "se": 0.0129567505490014,
+      "dist_F": 0.06338129052892327,
+      "dist_QT": 0.012278945185244083,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 5.161786258732563
+    },
+    "Q5": {
+      "id": 5,
+      "category": "Physical Laws",
+      "text": "Does the ball start falling only after the gripper releases it?",
+      "F_mean": 0.4387148432433605,
+      "QT_mean": 0.34173291362822056,
+      "Real_val": 0.33549781143665314,
+      "diff_mean": -0.09698192961513996,
+      "se": 0.04258989521392037,
+      "dist_F": 0.10321703180670738,
+      "dist_QT": 0.006235102191567421,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 16.554184460088216
+    },
+    "Q6": {
+      "id": 6,
+      "category": "Physical Laws",
+      "text": "Do the ball's bounces get lower each time until it comes to rest?",
+      "F_mean": 0.9161054790019989,
+      "QT_mean": 0.8959143832325935,
+      "Real_val": 0.890757143497467,
+      "diff_mean": -0.020191095769405365,
+      "se": 0.008909088604967497,
+      "dist_F": 0.02534833550453186,
+      "dist_QT": 0.005157239735126495,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 4.915097378910217
+    },
+    "Q7": {
+      "id": 7,
+      "category": "Visual Integrity",
+      "text": "Throughout the video, does the ball keep a round shape?",
+      "F_mean": 0.9560432583093643,
+      "QT_mean": 0.9754744619131088,
+      "Real_val": 0.9779577851295471,
+      "diff_mean": 0.019431203603744507,
+      "se": 0.007794527469224174,
+      "dist_F": 0.0219145268201828,
+      "dist_QT": 0.0024833232164382935,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 8.824677623565133
+    },
+    "Q8": {
+      "id": 8,
+      "category": "Visual Integrity",
+      "text": "Throughout the video, does the video stay free of unnatural flickering?",
+      "F_mean": 0.4267780799418688,
+      "QT_mean": 0.4097191207110882,
+      "Real_val": 0.4209423065185547,
+      "diff_mean": -0.0170589592307806,
+      "se": 0.007219884269277293,
+      "dist_F": 0.0058357734233140945,
+      "dist_QT": 0.011223185807466507,
+      "QT_closer": false,
+      "error_ratio_F_over_QT": 0.5199747668288357
+    },
+    "Q9": {
+      "id": 9,
+      "category": "Visual Integrity",
+      "text": "Throughout the video, is the image clean, free of heavy noise, static or distortion?",
+      "F_mean": 0.7221832200884819,
+      "QT_mean": 0.7189813405275345,
+      "Real_val": 0.6917153000831604,
+      "diff_mean": -0.003201879560947418,
+      "se": 0.0056758429073024185,
+      "dist_F": 0.030467920005321503,
+      "dist_QT": 0.027266040444374084,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 1.1174310427463654
+    },
+    "Q10": {
+      "id": 10,
+      "category": "Visual Integrity",
+      "text": "Throughout the video, does the video stay in one continuous shot without cuts to a different scene?",
+      "F_mean": 0.9470667727291584,
+      "QT_mean": 0.9479435533285141,
+      "Real_val": 0.9465747177600861,
+      "diff_mean": 0.0008767805993556976,
+      "se": 0.0019768105125006897,
+      "dist_F": 0.0004920549690723419,
+      "dist_QT": 0.0013688355684280396,
+      "QT_closer": false,
+      "error_ratio_F_over_QT": 0.35946974232808265
+    },
+    "Q11": {
+      "id": 11,
+      "category": "Geometric Reasoning",
+      "text": "Throughout the video, does the camera stay static?",
+      "F_mean": 0.9047075659036636,
+      "QT_mean": 0.9007993079721928,
+      "Real_val": 0.9045428037643433,
+      "diff_mean": -0.003908257931470871,
+      "se": 0.004597783287033566,
+      "dist_F": 0.00016476213932037354,
+      "dist_QT": 0.0037434957921504974,
+      "QT_closer": false,
+      "error_ratio_F_over_QT": 0.04401290891413662
+    },
+    "Q12": {
+      "id": 12,
+      "category": "Geometric Reasoning",
+      "text": "Throughout the video, do objects move smoothly and continuously rather than jumping between positions?",
+      "F_mean": 0.37070726603269577,
+      "QT_mean": 0.3849847801029682,
+      "Real_val": 0.43751636147499084,
+      "diff_mean": 0.014277514070272446,
+      "se": 0.027527152304324013,
+      "dist_F": 0.06680909544229507,
+      "dist_QT": 0.05253158137202263,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 1.2717891542072706
+    },
+    "Q13": {
+      "id": 13,
+      "category": "Physical Laws",
+      "text": "Throughout the video, do the robot arm and the table stay present without appearing or disappearing?",
+      "F_mean": 0.9315398745238781,
+      "QT_mean": 0.9346390925347805,
+      "Real_val": 0.9360741972923279,
+      "diff_mean": 0.003099218010902405,
+      "se": 0.0018139709070448078,
+      "dist_F": 0.004534322768449783,
+      "dist_QT": 0.0014351047575473785,
+      "QT_closer": true,
+      "error_ratio_F_over_QT": 3.1595761526141324
+    }
+  },
+  "distance_to_real": {
+    "overall": {
+      "dist_F": 0.05218533931586611,
+      "dist_QT": 0.0006849374084806348,
+      "error_ratio": 76.18993891956704
+    },
+    "Physical Laws": {
+      "dist_F": 0.06316134372415644,
+      "dist_QT": 0.01098801447854686,
+      "error_ratio": 5.748203540091202
+    },
+    "Visual Integrity": {
+      "dist_F": 0.0037203053943812847,
+      "dist_QT": 0.003732091747224331,
+      "error_ratio": 0.9968418909176571
+    },
+    "Geometric Reasoning": {
+      "dist_F": 0.03332216665148735,
+      "dist_QT": 0.028137538582086563,
+      "error_ratio": 1.1842601851713326
+    },
+    "Semantic Alignment": {
+      "dist_F": 0.3512044604867697,
+      "dist_QT": 0.11617898335680366,
+      "error_ratio": 3.022960352546436
+    }
+  },
+  "exploratory_exclusion": {
+    "excluded_questions": [
+      1,
+      2,
+      5
+    ],
+    "retained_questions": [
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "F_mean": 0.6499457899946719,
+    "QT_mean": 0.6454287234693765,
+    "Real_ref": 0.6490888841450214,
+    "diff_mean": -0.004517066525295349,
+    "se": 0.00410514249118641,
+    "t_stat": -1.100343419258485,
+    "p_val": 0.3075765393577292,
+    "ci90": [
+      -0.010880984803661672,
+      0.0018830586224795054
+    ],
+    "passes_non_inferiority_delta_03": true
+  },
+  "stillness_control_qs": {
+    "overall": {
+      "F_mean": 0.6312272335665349,
+      "QS_mean": 0.6264161601280555,
+      "diff_mean": -0.004811073438479381,
+      "se": 0.0028248499568940574,
+      "n_pairs": 3
+    },
+    "Physical Laws": {
+      "F_mean": 0.5360779035836459,
+      "QS_mean": 0.512394948138131,
+      "diff_mean": -0.023682955445514835,
+      "se": 0.0043776839800889165,
+      "n_pairs": 3
+    },
+    "Visual Integrity": {
+      "F_mean": 0.7592225881914297,
+      "QS_mean": 0.7647808318336805,
+      "diff_mean": 0.005558243642250697,
+      "se": 0.0034030976352248414,
+      "n_pairs": 3
+    },
+    "Geometric Reasoning": {
+      "F_mean": 0.6281026601791382,
+      "QS_mean": 0.6657258545358976,
+      "diff_mean": 0.03762319435675939,
+      "se": 0.011109006662532991,
+      "n_pairs": 3
+    },
+    "Semantic Alignment": {
+      "F_mean": 0.6963909417390823,
+      "QS_mean": 0.678465356429418,
+      "diff_mean": -0.01792558530966441,
+      "se": 0.021117095111149807,
+      "n_pairs": 3
+    }
+  }
+}
