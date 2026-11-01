@@ -1,0 +1,8 @@
+orig G4 8 PASS 3 R2 6
+L70 G4 7 PASS 1 R2 4
+L50 G4 1 PASS 0 R2 3
+L70 paired G4 delta -0.1 bootstrap95 -0.4 0.2 gain/loss 1 2 exact p 1
+L50 paired G4 delta -0.7 bootstrap95 -1.0 -0.4 gain/loss 0 7 exact p 0.015625
+Both PASS orig/L70 seeds: []
+Both PASS orig/L50 seeds: []
+L70 G4-qualified L_med by seed: [(21, 86.4), (24, 101.2), (26, 129.2), (27, 90.6), (28, 95.7), (29, 93.4), (30, 89.2)]
