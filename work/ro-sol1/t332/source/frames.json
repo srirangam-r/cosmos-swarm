@@ -1,0 +1,32 @@
+[
+ {
+  "id": "real_06",
+  "image": "inputs/real_06.png",
+  "pivot": [
+   322,
+   121
+  ],
+  "bob": [
+   207,
+   154
+  ],
+  "src": "ro-sol1 t292 @592bf78 real06_f186.png sha256 fe4953ddd9971a798f95003c23fbc08d3d432e8acda2477e39c3cce6c655ec6e (GAUGE f95bb06 video/6.mp4 container frame 186)",
+  "P_real_s": 1.199895358339639,
+  "P_src": "work/codex-api-4/t8/table.csv tool_period_s (measure_pend v1 on the real 25 Hz clip)"
+ },
+ {
+  "id": "real_14",
+  "image": "inputs/real_14.png",
+  "pivot": [
+   324,
+   122
+  ],
+  "bob": [
+   333,
+   252
+  ],
+  "src": "ro-sol1 t292 @592bf78 real14_f186.png sha256 85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2 (GAUGE f95bb06 video/14.mp4 container frame 186)",
+  "P_real_s": 1.1877671105039158,
+  "P_src": "work/codex-api-4/t8/table.csv tool_period_s (measure_pend v1 on the real 25 Hz clip)"
+ }
+]

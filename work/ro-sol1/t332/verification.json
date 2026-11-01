@@ -1,0 +1,514 @@
+{
+  "scope": "Packaging checks only; no independent scoring or physics validation.",
+  "checks": [
+    {
+      "name": "exact source: work/dk1/t277_rep/README.md",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/SHA256SUMS",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/build_jobs.py",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s101.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s101.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s101.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s102.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s102.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s102.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s103.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s103.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_s103.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s101.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s101.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s101.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s102.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s102.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s102.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s103.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s103.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_nphys_x17_s103.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s101.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s101.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s101.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s102.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s102.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s102.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s103.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s103.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_06_plain_s103.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s101.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s101.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s101.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s102.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s102.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s102.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s103.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s103.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_s103.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s101.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s101.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s101.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s102.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s102.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s102.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s103.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_nphys_x17_s103.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s101.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s101.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s101.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s102.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s102.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s102.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s103.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s103.qc.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/clips/t277r_real_14_plain_s103.server.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/frames.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/inputs/real_06.png",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/inputs/real_14.png",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/jobs.jsonl",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/clips_SHA256SUMS",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/strip_nphys.jpg",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/strip_nphys_x17.jpg",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/strip_plain.jpg",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/t276_results.json",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/t276_table.md",
+      "passed": true
+    },
+    {
+      "name": "exact source: work/dk1/t277_rep/out/ungated_ratios.md",
+      "passed": true
+    },
+    {
+      "name": "all18 expected source slots",
+      "passed": true
+    },
+    {
+      "name": "all18 display rows retained",
+      "passed": true
+    },
+    {
+      "name": "display retains saved gate totals: plain",
+      "passed": true
+    },
+    {
+      "name": "display retains saved gate totals: nphys",
+      "passed": true
+    },
+    {
+      "name": "display retains saved gate totals: nphys_x17",
+      "passed": true
+    },
+    {
+      "name": "real14 nphys all rejected",
+      "passed": true
+    },
+    {
+      "name": "source x17 rejects remain0/6",
+      "passed": true
+    },
+    {
+      "name": "three native mp4s present in source commit",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/README.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/real06_annotated.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/real06_f186.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/real06_frame0.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/real14_annotated.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/real14_f186.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/real14_frame0.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/reproduce.py",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/reproduction.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t292/runtime.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/DEMO_READOUT.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/README.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/availability.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/browser_render.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/demo_card.html",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/desktop.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/mobile.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/render.cjs",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/sha256_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/verification.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t315/visual_review.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/DEMO_READOUT.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/README.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/board_receipts.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/browser_render.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/build.py",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/desktop.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/desktop_metrics.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/desktop_receipts.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/gallery_http.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/index.html",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/mobile.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/mobile_metrics.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/mobile_receipts.png",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/render.cjs",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/README.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/analyze_t319.py",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/gen_sha256.txt",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/mf24_manifest_nphys.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/mf24_manifest_plain.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/mf_nphys.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/mf_plain.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/scorer_commit.txt",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/scores_gen.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/scores_real.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/scores_real24.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/t319_results.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source/t319_table.md",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/source_receipt.json",
+      "passed": true
+    },
+    {
+      "name": "prior file unchanged: work/ro-sol1/t328/verification.json",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

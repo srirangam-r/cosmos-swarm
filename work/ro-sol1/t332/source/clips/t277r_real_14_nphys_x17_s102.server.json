@@ -1,0 +1,118 @@
+{
+ "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt": null,
+ "size": "832x480",
+ "num_frames": 93,
+ "fps": 24.0,
+ "num_inference_steps": 35,
+ "guidance_scale": 6.0,
+ "flow_shift": 10.0,
+ "seed": 102,
+ "negative_metadata_mode": "inverse",
+ "extra_params": {
+  "client": "nano_phys",
+  "queue_id": "195154-04842e",
+  "noise": {
+   "device": "cpu"
+  },
+  "latent": {
+   "ref": "proxy_real_14_nphys_x17.mp4",
+   "start_step": 19,
+   "init": "noised"
+  }
+ },
+ "has_action": false,
+ "input_image": "20261101T195400_0121_nano_phys_input.png",
+ "frames_out": 93,
+ "out_hw": [
+  480,
+  832
+ ],
+ "seconds": 32.6,
+ "model": "nvidia/Cosmos3-Nano (local diffusers bf16, no offload, Brev brev-bhu5qgfem gpu3, safety check off)",
+ "scheduler": "UniPCMultistepScheduler",
+ "torch": "2.9.1+cu128",
+ "server": "raj-1 server.py",
+ "server_rev": {
+  "server.py": "04e8e0de81",
+  "noise.py": "a5aef0fbe3",
+  "internals.py": "75dc2bebac",
+  "neg_meta.py": "3e82bf1434"
+ },
+ "sigmas_used": [
+  0.89844,
+  0.87762,
+  0.85242,
+  0.82207,
+  0.78581,
+  0.74295,
+  0.69305,
+  0.6361,
+  0.57269,
+  0.50418,
+  0.43273,
+  0.36112,
+  0.29241,
+  0.22942,
+  0.17428,
+  0.12816,
+  0.0
+ ],
+ "noise": {
+  "spec": {
+   "device": "cpu"
+  },
+  "mixed": false
+ },
+ "latent": {
+  "spec": {
+   "ref": "proxy_real_14_nphys_x17.mp4",
+   "start_step": 19,
+   "init": "noised"
+  },
+  "artifact_id": null,
+  "start_step": 19,
+  "sigma_start": 0.89844,
+  "init": "noised",
+  "band": null,
+  "sfr": 0,
+  "sigmas_request": [
+   0.99502,
+   0.99432,
+   0.99349,
+   0.99253,
+   0.9914,
+   0.99007,
+   0.98851,
+   0.98666,
+   0.98447,
+   0.98187,
+   0.97876,
+   0.97503,
+   0.97056,
+   0.96518,
+   0.95868,
+   0.95082,
+   0.94127,
+   0.92968,
+   0.91558,
+   0.89844,
+   0.87762,
+   0.85242,
+   0.82207,
+   0.78581,
+   0.74295,
+   0.69305,
+   0.6361,
+   0.57269,
+   0.50418,
+   0.43273,
+   0.36112,
+   0.29241,
+   0.22942,
+   0.17428,
+   0.12816,
+   0.0
+  ]
+ }
+}

@@ -1,0 +1,1103 @@
+{
+  "utc": "2026-11-01T20:04:19.947Z",
+  "preview_sha256": "dcb2ba0219d77d415cb52b44b8e0740f369bf00348b4169604072b65a970e5ca",
+  "mode": "headless installed Brave, anonymous CDP pipes, static local page; no video playback",
+  "renders": [
+    {
+      "name": "desktop",
+      "state": {
+        "overflow": false,
+        "text": "TASK 277 • DK1 RESULTS • SOURCE 124b6d5 • PRESENTATION ONLY\nA supplied pendulum period transfers on a fresh input. The second input fails QC.\n\nThree new seeds succeed on real_06. All three Nano-Phys attempts on real_14 are rejected by the frozen motion-quality gate.\n\nAttributed to dk1's completed task 277 and review #6700. This addendum reuses existing outputs; it adds no independent measurement.\n\nKeep every attempt in the denominator\nArm\tClean\tWithin 10% + clean\tAccepted ACF median ×P\nPlain Nano\t1/6\t0/6\t1.595\nNano-Phys\t3/6\t3/6\t1.005\nWrong period ×1.7\t0/6\t0/6\t—\n\nEach arm: 2 inputs × 3 seeds. Nano-Phys's 3/6 successes all come from real_06. Accepted-only source interval:[1.000645,1.005342], resampling three seeds from one take.\n\nThe target period is supplied from later real video. This demonstrates conditional period transfer, not inference from the first frame. Two fresh inputs share one GAUGE rig.\n\nThe two source inputs\nreal_06: visible angle≈74°; supplied P=1.199895s. Nano-Phys3/3 clean.\nreal_14: visible angle≈4°; supplied P=1.187767s. Nano-Phys0/3 clean.\nThe control transfers numerically, with gate rejection retained\n\nOn real_06, ×1.7 gives ACF ratios 1.725/1.697/1.700 and measure_pend ratios 1.716/1.679/1.706 over seeds 101–103. These are ungated numerical readings. ACF flags check, so all three remain rejected. Overall ×1.7 is0/6 clean.\n\nOn real_14, ACF values near 1 disagree with the other reader (R² 0.27–0.48). The cause remains a hypothesis; task 329 tests a supplied amplitude separately. A still pose does not determine angular velocity.\n\nIndependent saved-result review #6730 finds only one of six main-arm pairs clean in both arms (real_06 seed102). Selected arm medians are not a six-pair improvement estimate. Real14 QC rejection shows unresolved reader disagreement, not proof that the rendered swing failed or that amplitude caused it.\n\nAll 18 saved rows\n\nRatios below divide the author's saved period by its supplied reference. Rejected values stay visible; they are excluded from accepted-only summaries. A dash means the source period is missing.\n\nInput \nBoth inputs\nreal_06\nreal_14\nArm \nAll arms\nPlain Nano\nNano-Phys\nWrong period ×1.7\n\n18 saved rows\n\nInput\tArm\tSeed\tFrozen gate\tACF/P\tACF flag\tMP/P\tMP flag\tMP R²\tFlicker\nreal_06\tNano-Phys\t101\tPASS\t1.005\tok\t1.000\tok\t0.96\t0.0082\nreal_06\tNano-Phys\t102\tPASS\t1.005\tok\t0.999\tok\t0.96\t0.0088\nreal_06\tNano-Phys\t103\tPASS\t1.001\tok\t0.995\tok\t0.95\t0.0072\nreal_06\tWrong period ×1.7\t101\tREJECT\t1.725\tcheck\t1.716\tok\t0.97\t0.0087\nreal_06\tWrong period ×1.7\t102\tREJECT\t1.697\tcheck\t1.679\tok\t0.96\t0.0092\nreal_06\tWrong period ×1.7\t103\tREJECT\t1.700\tcheck\t1.706\tok\t0.96\t0.0077\nreal_06\tPlain Nano\t101\tREJECT\t1.215\tcheck\t0.599\tcheck\t0.36\t0.0073\nreal_06\tPlain Nano\t102\tPASS\t1.595\tok\t1.641\tcheck\t0.77\t0.0076\nreal_06\tPlain Nano\t103\tREJECT\t—\tfail\t1.960\tcheck\t0.73\t0.0279\nreal_14\tNano-Phys\t101\tREJECT\t1.007\tok\t0.512\tcheck\t0.48\t0.0060\nreal_14\tNano-Phys\t102\tREJECT\t1.025\tok\t0.366\tcheck\t0.46\t0.0062\nreal_14\tNano-Phys\t103\tREJECT\t0.961\tok\t0.322\tcheck\t0.27\t0.0053\nreal_14\tWrong period ×1.7\t101\tREJECT\t1.577\tok\t0.278\tcheck\t0.23\t0.0059\nreal_14\tWrong period ×1.7\t102\tREJECT\t1.679\tok\t2.076\tcheck\t0.91\t0.0062\nreal_14\tWrong period ×1.7\t103\tREJECT\t1.702\tcheck\t0.803\tcheck\t0.42\t0.0049\nreal_14\tPlain Nano\t101\tREJECT\t1.434\tcheck\t1.020\tcheck\t0.58\t0.0057\nreal_14\tPlain Nano\t102\tREJECT\t0.238\tok\t0.139\tcheck\t0.11\t0.0044\nreal_14\tPlain Nano\t103\tREJECT\t—\tfail\t2.326\tcheck\t0.50\t0.0260\nExact frozen gate and uncertainty scope\nThe author's contact sheets\nSheet \nNano-Phys\nPlain Nano\nWrong period ×1.7\nUnmodified source sheets: six rows per arm, eight cropped/resized frames per clip. First three rows real_06; last three real_14; seeds 101–103. Author labels include the frozen gate. Click for full resolution. Static images are not a playback check.\nWhat this demo does not establish\nA general first-frame-only recipe: period comes from future real video; geometry is manually supplied (±6px). Release-from-rest is assumed. The large-angle harmonic proxy does not certify nonlinear physics.\nNVIDIA non-regression: task 277 has no new NVIDIA scores. The separate task 319 quality scorecard reports about 0.057 lower DOVER on its own cohort. Its seed1-only control is consistent with a common proxy-path cost; equivalence and cause are unresolved.\nIndependent validation by this page: it packages dk1's outputs. Historical crossing reader 289/raw FAIL and non-rest state 296 were not used. Plausibility judge, robot prediction and new rigs remain untested.\n\nActual setup reported by source: Cosmos3-Nano; q8 server 04e8e0de81; UniPC; sigma_start 0.89844/start19; 832×480;93 frames at 24 fps;35 steps;CFG 6;CPU noise; seeds 101–103. Real reference periods use an assumed 25 Hz clock.\n\nFrozen evidence and presentation notes\n\n18/18 clips generated according to dk1; hashes and sidecars retained. Only the three real_06 Nano-Phys MP4s are committed in the source. The other native clips remain with dk1; no regeneration or playback is claimed here.\n\nOriginal source and three native MP4s\nAuthor README\nAll source results\nAuthor ungated table\nFrozen analyzer\nExact jobs\nSupplied references\n18 clip hashes\nSource byte receipt\nBoard receipts\nPlain readout\nOriginal held-out demo\nQuality-cost scorecard\n\nReading context: ProxyUp §§4–5 separates proxy motion and appearance; GAUGE C.3 separates period, geometry and fit diagnostics; Physics-IQ metrics separates spatial and temporal agreement. This page reuses those distinctions and the existing results.",
+        "rows": [
+          {
+            "clip": "t277r_real_06_nphys_s101",
+            "cells": [
+              "real_06",
+              "Nano-Phys",
+              "101",
+              "PASS",
+              "1.005",
+              "ok",
+              "1.000",
+              "ok",
+              "0.96",
+              "0.0082"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_s102",
+            "cells": [
+              "real_06",
+              "Nano-Phys",
+              "102",
+              "PASS",
+              "1.005",
+              "ok",
+              "0.999",
+              "ok",
+              "0.96",
+              "0.0088"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_s103",
+            "cells": [
+              "real_06",
+              "Nano-Phys",
+              "103",
+              "PASS",
+              "1.001",
+              "ok",
+              "0.995",
+              "ok",
+              "0.95",
+              "0.0072"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_x17_s101",
+            "cells": [
+              "real_06",
+              "Wrong period ×1.7",
+              "101",
+              "REJECT",
+              "1.725",
+              "check",
+              "1.716",
+              "ok",
+              "0.97",
+              "0.0087"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_x17_s102",
+            "cells": [
+              "real_06",
+              "Wrong period ×1.7",
+              "102",
+              "REJECT",
+              "1.697",
+              "check",
+              "1.679",
+              "ok",
+              "0.96",
+              "0.0092"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_x17_s103",
+            "cells": [
+              "real_06",
+              "Wrong period ×1.7",
+              "103",
+              "REJECT",
+              "1.700",
+              "check",
+              "1.706",
+              "ok",
+              "0.96",
+              "0.0077"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_plain_s101",
+            "cells": [
+              "real_06",
+              "Plain Nano",
+              "101",
+              "REJECT",
+              "1.215",
+              "check",
+              "0.599",
+              "check",
+              "0.36",
+              "0.0073"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_plain_s102",
+            "cells": [
+              "real_06",
+              "Plain Nano",
+              "102",
+              "PASS",
+              "1.595",
+              "ok",
+              "1.641",
+              "check",
+              "0.77",
+              "0.0076"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_plain_s103",
+            "cells": [
+              "real_06",
+              "Plain Nano",
+              "103",
+              "REJECT",
+              "—",
+              "fail",
+              "1.960",
+              "check",
+              "0.73",
+              "0.0279"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_s101",
+            "cells": [
+              "real_14",
+              "Nano-Phys",
+              "101",
+              "REJECT",
+              "1.007",
+              "ok",
+              "0.512",
+              "check",
+              "0.48",
+              "0.0060"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_s102",
+            "cells": [
+              "real_14",
+              "Nano-Phys",
+              "102",
+              "REJECT",
+              "1.025",
+              "ok",
+              "0.366",
+              "check",
+              "0.46",
+              "0.0062"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_s103",
+            "cells": [
+              "real_14",
+              "Nano-Phys",
+              "103",
+              "REJECT",
+              "0.961",
+              "ok",
+              "0.322",
+              "check",
+              "0.27",
+              "0.0053"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_x17_s101",
+            "cells": [
+              "real_14",
+              "Wrong period ×1.7",
+              "101",
+              "REJECT",
+              "1.577",
+              "ok",
+              "0.278",
+              "check",
+              "0.23",
+              "0.0059"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_x17_s102",
+            "cells": [
+              "real_14",
+              "Wrong period ×1.7",
+              "102",
+              "REJECT",
+              "1.679",
+              "ok",
+              "2.076",
+              "check",
+              "0.91",
+              "0.0062"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_x17_s103",
+            "cells": [
+              "real_14",
+              "Wrong period ×1.7",
+              "103",
+              "REJECT",
+              "1.702",
+              "check",
+              "0.803",
+              "check",
+              "0.42",
+              "0.0049"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_plain_s101",
+            "cells": [
+              "real_14",
+              "Plain Nano",
+              "101",
+              "REJECT",
+              "1.434",
+              "check",
+              "1.020",
+              "check",
+              "0.58",
+              "0.0057"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_plain_s102",
+            "cells": [
+              "real_14",
+              "Plain Nano",
+              "102",
+              "REJECT",
+              "0.238",
+              "ok",
+              "0.139",
+              "check",
+              "0.11",
+              "0.0044"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_plain_s103",
+            "cells": [
+              "real_14",
+              "Plain Nano",
+              "103",
+              "REJECT",
+              "—",
+              "fail",
+              "2.326",
+              "check",
+              "0.50",
+              "0.0260"
+            ]
+          }
+        ],
+        "links": [
+          "source/out/strip_nphys.jpg",
+          "../t328/index.html",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/124b6d5b6abbabcf09dfbb256f4a7559cdda56b0/work/dk1/t277_rep",
+          "source/README.md",
+          "source/out/t276_results.json",
+          "source/out/ungated_ratios.md",
+          "source/analyze.py",
+          "source/jobs.jsonl",
+          "source/frames.json",
+          "source/out/clips_SHA256SUMS",
+          "source_receipt.json",
+          "board_receipts.json",
+          "DEMO_READOUT.md",
+          "../t315/demo_card.html",
+          "../t328/index.html",
+          "https://arxiv.org/abs/2607.03732",
+          "https://arxiv.org/abs/2608.05948",
+          "https://arxiv.org/abs/2501.09038v2"
+        ],
+        "images": [
+          {
+            "src": "source/inputs/real_06.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/inputs/real_14.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/out/strip_nphys.jpg",
+            "width": 1160,
+            "height": 1080
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "source/out/strip_nphys.jpg",
+          "exists": true
+        },
+        {
+          "href": "../t328/index.html",
+          "exists": true
+        },
+        {
+          "href": "source/README.md",
+          "exists": true
+        },
+        {
+          "href": "source/out/t276_results.json",
+          "exists": true
+        },
+        {
+          "href": "source/out/ungated_ratios.md",
+          "exists": true
+        },
+        {
+          "href": "source/analyze.py",
+          "exists": true
+        },
+        {
+          "href": "source/jobs.jsonl",
+          "exists": true
+        },
+        {
+          "href": "source/frames.json",
+          "exists": true
+        },
+        {
+          "href": "source/out/clips_SHA256SUMS",
+          "exists": true
+        },
+        {
+          "href": "source_receipt.json",
+          "exists": true
+        },
+        {
+          "href": "board_receipts.json",
+          "exists": true
+        },
+        {
+          "href": "DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "../t315/demo_card.html",
+          "exists": true
+        },
+        {
+          "href": "../t328/index.html",
+          "exists": true
+        }
+      ],
+      "filters": [
+        {
+          "scene": "all",
+          "arm": "all",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103",
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103",
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103",
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103",
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103",
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "plain",
+          "visible": [
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103",
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103",
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys_x17",
+          "visible": [
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103",
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "all",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103",
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103",
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "plain",
+          "visible": [
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "nphys",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "nphys_x17",
+          "visible": [
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "all",
+          "visible": [
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103",
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103",
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "plain",
+          "visible": [
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys",
+          "visible": [
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys_x17",
+          "visible": [
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103"
+          ]
+        }
+      ],
+      "sheets": [
+        {
+          "arm": "nphys",
+          "src": "source/out/strip_nphys.jpg",
+          "width": 1160,
+          "height": 1080,
+          "href": "source/out/strip_nphys.jpg"
+        },
+        {
+          "arm": "plain",
+          "src": "source/out/strip_plain.jpg",
+          "width": 1160,
+          "height": 1080,
+          "href": "source/out/strip_plain.jpg"
+        },
+        {
+          "arm": "nphys_x17",
+          "src": "source/out/strip_nphys_x17.jpg",
+          "width": 1160,
+          "height": 1080,
+          "href": "source/out/strip_nphys_x17.jpg"
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "state": {
+        "overflow": false,
+        "text": "TASK 277 • DK1 RESULTS • SOURCE 124b6d5 • PRESENTATION ONLY\nA supplied pendulum period transfers on a fresh input. The second input fails QC.\n\nThree new seeds succeed on real_06. All three Nano-Phys attempts on real_14 are rejected by the frozen motion-quality gate.\n\nAttributed to dk1's completed task 277 and review #6700. This addendum reuses existing outputs; it adds no independent measurement.\n\nKeep every attempt in the denominator\nArm\tClean\tWithin 10% + clean\tAccepted ACF median ×P\nPlain Nano\t1/6\t0/6\t1.595\nNano-Phys\t3/6\t3/6\t1.005\nWrong period ×1.7\t0/6\t0/6\t—\n\nEach arm: 2 inputs × 3 seeds. Nano-Phys's 3/6 successes all come from real_06. Accepted-only source interval:[1.000645,1.005342], resampling three seeds from one take.\n\nThe target period is supplied from later real video. This demonstrates conditional period transfer, not inference from the first frame. Two fresh inputs share one GAUGE rig.\n\nThe two source inputs\nreal_06: visible angle≈74°; supplied P=1.199895s. Nano-Phys3/3 clean.\nreal_14: visible angle≈4°; supplied P=1.187767s. Nano-Phys0/3 clean.\nThe control transfers numerically, with gate rejection retained\n\nOn real_06, ×1.7 gives ACF ratios 1.725/1.697/1.700 and measure_pend ratios 1.716/1.679/1.706 over seeds 101–103. These are ungated numerical readings. ACF flags check, so all three remain rejected. Overall ×1.7 is0/6 clean.\n\nOn real_14, ACF values near 1 disagree with the other reader (R² 0.27–0.48). The cause remains a hypothesis; task 329 tests a supplied amplitude separately. A still pose does not determine angular velocity.\n\nIndependent saved-result review #6730 finds only one of six main-arm pairs clean in both arms (real_06 seed102). Selected arm medians are not a six-pair improvement estimate. Real14 QC rejection shows unresolved reader disagreement, not proof that the rendered swing failed or that amplitude caused it.\n\nAll 18 saved rows\n\nRatios below divide the author's saved period by its supplied reference. Rejected values stay visible; they are excluded from accepted-only summaries. A dash means the source period is missing.\n\nInput \nBoth inputs\nreal_06\nreal_14\nArm \nAll arms\nPlain Nano\nNano-Phys\nWrong period ×1.7\n\n18 saved rows\n\nInput\tArm\tSeed\tFrozen gate\tACF/P\tACF flag\tMP/P\tMP flag\tMP R²\tFlicker\nreal_06\tNano-Phys\t101\tPASS\t1.005\tok\t1.000\tok\t0.96\t0.0082\nreal_06\tNano-Phys\t102\tPASS\t1.005\tok\t0.999\tok\t0.96\t0.0088\nreal_06\tNano-Phys\t103\tPASS\t1.001\tok\t0.995\tok\t0.95\t0.0072\nreal_06\tWrong period ×1.7\t101\tREJECT\t1.725\tcheck\t1.716\tok\t0.97\t0.0087\nreal_06\tWrong period ×1.7\t102\tREJECT\t1.697\tcheck\t1.679\tok\t0.96\t0.0092\nreal_06\tWrong period ×1.7\t103\tREJECT\t1.700\tcheck\t1.706\tok\t0.96\t0.0077\nreal_06\tPlain Nano\t101\tREJECT\t1.215\tcheck\t0.599\tcheck\t0.36\t0.0073\nreal_06\tPlain Nano\t102\tPASS\t1.595\tok\t1.641\tcheck\t0.77\t0.0076\nreal_06\tPlain Nano\t103\tREJECT\t—\tfail\t1.960\tcheck\t0.73\t0.0279\nreal_14\tNano-Phys\t101\tREJECT\t1.007\tok\t0.512\tcheck\t0.48\t0.0060\nreal_14\tNano-Phys\t102\tREJECT\t1.025\tok\t0.366\tcheck\t0.46\t0.0062\nreal_14\tNano-Phys\t103\tREJECT\t0.961\tok\t0.322\tcheck\t0.27\t0.0053\nreal_14\tWrong period ×1.7\t101\tREJECT\t1.577\tok\t0.278\tcheck\t0.23\t0.0059\nreal_14\tWrong period ×1.7\t102\tREJECT\t1.679\tok\t2.076\tcheck\t0.91\t0.0062\nreal_14\tWrong period ×1.7\t103\tREJECT\t1.702\tcheck\t0.803\tcheck\t0.42\t0.0049\nreal_14\tPlain Nano\t101\tREJECT\t1.434\tcheck\t1.020\tcheck\t0.58\t0.0057\nreal_14\tPlain Nano\t102\tREJECT\t0.238\tok\t0.139\tcheck\t0.11\t0.0044\nreal_14\tPlain Nano\t103\tREJECT\t—\tfail\t2.326\tcheck\t0.50\t0.0260\nExact frozen gate and uncertainty scope\nThe author's contact sheets\nSheet \nNano-Phys\nPlain Nano\nWrong period ×1.7\nUnmodified source sheets: six rows per arm, eight cropped/resized frames per clip. First three rows real_06; last three real_14; seeds 101–103. Author labels include the frozen gate. Click for full resolution. Static images are not a playback check.\nWhat this demo does not establish\nA general first-frame-only recipe: period comes from future real video; geometry is manually supplied (±6px). Release-from-rest is assumed. The large-angle harmonic proxy does not certify nonlinear physics.\nNVIDIA non-regression: task 277 has no new NVIDIA scores. The separate task 319 quality scorecard reports about 0.057 lower DOVER on its own cohort. Its seed1-only control is consistent with a common proxy-path cost; equivalence and cause are unresolved.\nIndependent validation by this page: it packages dk1's outputs. Historical crossing reader 289/raw FAIL and non-rest state 296 were not used. Plausibility judge, robot prediction and new rigs remain untested.\n\nActual setup reported by source: Cosmos3-Nano; q8 server 04e8e0de81; UniPC; sigma_start 0.89844/start19; 832×480;93 frames at 24 fps;35 steps;CFG 6;CPU noise; seeds 101–103. Real reference periods use an assumed 25 Hz clock.\n\nFrozen evidence and presentation notes\n\n18/18 clips generated according to dk1; hashes and sidecars retained. Only the three real_06 Nano-Phys MP4s are committed in the source. The other native clips remain with dk1; no regeneration or playback is claimed here.\n\nOriginal source and three native MP4s\nAuthor README\nAll source results\nAuthor ungated table\nFrozen analyzer\nExact jobs\nSupplied references\n18 clip hashes\nSource byte receipt\nBoard receipts\nPlain readout\nOriginal held-out demo\nQuality-cost scorecard\n\nReading context: ProxyUp §§4–5 separates proxy motion and appearance; GAUGE C.3 separates period, geometry and fit diagnostics; Physics-IQ metrics separates spatial and temporal agreement. This page reuses those distinctions and the existing results.",
+        "rows": [
+          {
+            "clip": "t277r_real_06_nphys_s101",
+            "cells": [
+              "real_06",
+              "Nano-Phys",
+              "101",
+              "PASS",
+              "1.005",
+              "ok",
+              "1.000",
+              "ok",
+              "0.96",
+              "0.0082"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_s102",
+            "cells": [
+              "real_06",
+              "Nano-Phys",
+              "102",
+              "PASS",
+              "1.005",
+              "ok",
+              "0.999",
+              "ok",
+              "0.96",
+              "0.0088"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_s103",
+            "cells": [
+              "real_06",
+              "Nano-Phys",
+              "103",
+              "PASS",
+              "1.001",
+              "ok",
+              "0.995",
+              "ok",
+              "0.95",
+              "0.0072"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_x17_s101",
+            "cells": [
+              "real_06",
+              "Wrong period ×1.7",
+              "101",
+              "REJECT",
+              "1.725",
+              "check",
+              "1.716",
+              "ok",
+              "0.97",
+              "0.0087"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_x17_s102",
+            "cells": [
+              "real_06",
+              "Wrong period ×1.7",
+              "102",
+              "REJECT",
+              "1.697",
+              "check",
+              "1.679",
+              "ok",
+              "0.96",
+              "0.0092"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_nphys_x17_s103",
+            "cells": [
+              "real_06",
+              "Wrong period ×1.7",
+              "103",
+              "REJECT",
+              "1.700",
+              "check",
+              "1.706",
+              "ok",
+              "0.96",
+              "0.0077"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_plain_s101",
+            "cells": [
+              "real_06",
+              "Plain Nano",
+              "101",
+              "REJECT",
+              "1.215",
+              "check",
+              "0.599",
+              "check",
+              "0.36",
+              "0.0073"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_plain_s102",
+            "cells": [
+              "real_06",
+              "Plain Nano",
+              "102",
+              "PASS",
+              "1.595",
+              "ok",
+              "1.641",
+              "check",
+              "0.77",
+              "0.0076"
+            ]
+          },
+          {
+            "clip": "t277r_real_06_plain_s103",
+            "cells": [
+              "real_06",
+              "Plain Nano",
+              "103",
+              "REJECT",
+              "—",
+              "fail",
+              "1.960",
+              "check",
+              "0.73",
+              "0.0279"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_s101",
+            "cells": [
+              "real_14",
+              "Nano-Phys",
+              "101",
+              "REJECT",
+              "1.007",
+              "ok",
+              "0.512",
+              "check",
+              "0.48",
+              "0.0060"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_s102",
+            "cells": [
+              "real_14",
+              "Nano-Phys",
+              "102",
+              "REJECT",
+              "1.025",
+              "ok",
+              "0.366",
+              "check",
+              "0.46",
+              "0.0062"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_s103",
+            "cells": [
+              "real_14",
+              "Nano-Phys",
+              "103",
+              "REJECT",
+              "0.961",
+              "ok",
+              "0.322",
+              "check",
+              "0.27",
+              "0.0053"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_x17_s101",
+            "cells": [
+              "real_14",
+              "Wrong period ×1.7",
+              "101",
+              "REJECT",
+              "1.577",
+              "ok",
+              "0.278",
+              "check",
+              "0.23",
+              "0.0059"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_x17_s102",
+            "cells": [
+              "real_14",
+              "Wrong period ×1.7",
+              "102",
+              "REJECT",
+              "1.679",
+              "ok",
+              "2.076",
+              "check",
+              "0.91",
+              "0.0062"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_nphys_x17_s103",
+            "cells": [
+              "real_14",
+              "Wrong period ×1.7",
+              "103",
+              "REJECT",
+              "1.702",
+              "check",
+              "0.803",
+              "check",
+              "0.42",
+              "0.0049"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_plain_s101",
+            "cells": [
+              "real_14",
+              "Plain Nano",
+              "101",
+              "REJECT",
+              "1.434",
+              "check",
+              "1.020",
+              "check",
+              "0.58",
+              "0.0057"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_plain_s102",
+            "cells": [
+              "real_14",
+              "Plain Nano",
+              "102",
+              "REJECT",
+              "0.238",
+              "ok",
+              "0.139",
+              "check",
+              "0.11",
+              "0.0044"
+            ]
+          },
+          {
+            "clip": "t277r_real_14_plain_s103",
+            "cells": [
+              "real_14",
+              "Plain Nano",
+              "103",
+              "REJECT",
+              "—",
+              "fail",
+              "2.326",
+              "check",
+              "0.50",
+              "0.0260"
+            ]
+          }
+        ],
+        "links": [
+          "source/out/strip_nphys.jpg",
+          "../t328/index.html",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/124b6d5b6abbabcf09dfbb256f4a7559cdda56b0/work/dk1/t277_rep",
+          "source/README.md",
+          "source/out/t276_results.json",
+          "source/out/ungated_ratios.md",
+          "source/analyze.py",
+          "source/jobs.jsonl",
+          "source/frames.json",
+          "source/out/clips_SHA256SUMS",
+          "source_receipt.json",
+          "board_receipts.json",
+          "DEMO_READOUT.md",
+          "../t315/demo_card.html",
+          "../t328/index.html",
+          "https://arxiv.org/abs/2607.03732",
+          "https://arxiv.org/abs/2608.05948",
+          "https://arxiv.org/abs/2501.09038v2"
+        ],
+        "images": [
+          {
+            "src": "source/inputs/real_06.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/inputs/real_14.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/out/strip_nphys.jpg",
+            "width": 1160,
+            "height": 1080
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "source/out/strip_nphys.jpg",
+          "exists": true
+        },
+        {
+          "href": "../t328/index.html",
+          "exists": true
+        },
+        {
+          "href": "source/README.md",
+          "exists": true
+        },
+        {
+          "href": "source/out/t276_results.json",
+          "exists": true
+        },
+        {
+          "href": "source/out/ungated_ratios.md",
+          "exists": true
+        },
+        {
+          "href": "source/analyze.py",
+          "exists": true
+        },
+        {
+          "href": "source/jobs.jsonl",
+          "exists": true
+        },
+        {
+          "href": "source/frames.json",
+          "exists": true
+        },
+        {
+          "href": "source/out/clips_SHA256SUMS",
+          "exists": true
+        },
+        {
+          "href": "source_receipt.json",
+          "exists": true
+        },
+        {
+          "href": "board_receipts.json",
+          "exists": true
+        },
+        {
+          "href": "DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "../t315/demo_card.html",
+          "exists": true
+        },
+        {
+          "href": "../t328/index.html",
+          "exists": true
+        }
+      ],
+      "filters": [
+        {
+          "scene": "all",
+          "arm": "all",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103",
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103",
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103",
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103",
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103",
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "plain",
+          "visible": [
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103",
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103",
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys_x17",
+          "visible": [
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103",
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "all",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103",
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103",
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "plain",
+          "visible": [
+            "t277r_real_06_plain_s101",
+            "t277r_real_06_plain_s102",
+            "t277r_real_06_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "nphys",
+          "visible": [
+            "t277r_real_06_nphys_s101",
+            "t277r_real_06_nphys_s102",
+            "t277r_real_06_nphys_s103"
+          ]
+        },
+        {
+          "scene": "real_06",
+          "arm": "nphys_x17",
+          "visible": [
+            "t277r_real_06_nphys_x17_s101",
+            "t277r_real_06_nphys_x17_s102",
+            "t277r_real_06_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "all",
+          "visible": [
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103",
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103",
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "plain",
+          "visible": [
+            "t277r_real_14_plain_s101",
+            "t277r_real_14_plain_s102",
+            "t277r_real_14_plain_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys",
+          "visible": [
+            "t277r_real_14_nphys_s101",
+            "t277r_real_14_nphys_s102",
+            "t277r_real_14_nphys_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys_x17",
+          "visible": [
+            "t277r_real_14_nphys_x17_s101",
+            "t277r_real_14_nphys_x17_s102",
+            "t277r_real_14_nphys_x17_s103"
+          ]
+        }
+      ],
+      "sheets": [
+        {
+          "arm": "nphys",
+          "src": "source/out/strip_nphys.jpg",
+          "width": 1160,
+          "height": 1080,
+          "href": "source/out/strip_nphys.jpg"
+        },
+        {
+          "arm": "plain",
+          "src": "source/out/strip_plain.jpg",
+          "width": 1160,
+          "height": 1080,
+          "href": "source/out/strip_plain.jpg"
+        },
+        {
+          "arm": "nphys_x17",
+          "src": "source/out/strip_nphys_x17.jpg",
+          "width": 1160,
+          "height": 1080,
+          "href": "source/out/strip_nphys_x17.jpg"
+        }
+      ]
+    }
+  ],
+  "exceptions": [],
+  "browser_pid": 134,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  },
+  "passed": true
+}
