@@ -9,3 +9,5 @@ oc_A_ball1_s27,0,ball fades to a ghost f2-12 then a much larger ball appears (mo
 oc_A_ball1_s28,0,slow descent with a clone at ~f16; green blob f22-24; multiple balls later,2026-11-01T11:03
 oc_A_ball1_s29,0,ball size jumps ~3x at f2 (morph) before the fall,2026-11-01T11:03
 oc_A_ball1_s30,0,scene turns into green balls/blobs; no single-ball fall,2026-11-01T11:03
+oc_A_ball2_s21,1,one ball; fall f0-~8; high periodic bounces (~14-16 f); impact point moves between plank back and front (some depth motion); size constant,2026-11-01T11:06
+oc_A_ball2_s22,0,clean fall then rolls toward camera and exits by f24; no flight (same branch as ball1 s22),2026-11-01T11:06
