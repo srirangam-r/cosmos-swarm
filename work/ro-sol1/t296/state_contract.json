@@ -1,0 +1,165 @@
+{
+  "schema": "t277-input-state-clarification-v1",
+  "status": "PROPOSED; EXECUTOR_ADOPTION_REQUIRED; NOT_QUEUE_READY",
+  "input_manifest_commit": "592bf7838ecfcc7eb5b7a5e5d1f7eebd1f91928d",
+  "input_manifest_path": "work/ro-sol1/t292/manifest.json",
+  "input_manifest_sha256": "3133f48c8534c15cf0ae429329ff2b475b0975f0d49c50bf138bcb6ef16b1d1b",
+  "clarification_messages": [
+    6005,
+    6013
+  ],
+  "review_source_messages": [
+    6010,
+    6011
+  ],
+  "review_source_sha256": "0d7ea880539045ff2ed93523b368d1af414eb2cd169a1ec6cb54bc82ae02e919",
+  "uncertainty": {
+    "model": "Independent per-coordinate +/-tolerance for BOTH pivot and bob",
+    "provenance": "Conservative review interpretation agreed in6005; rough manual annotation, not calibrated hard bounds or statistical CI",
+    "confidence_level": null,
+    "includes_motion_blur_calibration": false
+  },
+  "angle_right_rad": "atan2(bob_x-pivot_x,bob_y-pivot_y)",
+  "angle_left_rad": "-angle_right_rad",
+  "omega_left_rad_s": "-omega_right_rad_s",
+  "opencv_rotation_deg": "degrees(theta_right(t)-theta_right(0)); negative of left-positive angular change",
+  "temporal_law": "Prescribed harmonic theta(t)=theta0*cos(2*pi*t/P)+(omega0*P/(2*pi))*sin(2*pi*t/P); not nonlinear pendulum dynamics",
+  "amplitude_deg": 85,
+  "state_source": "SUPPLIED, not recovered real velocity/amplitude/period",
+  "metric_length_m": null,
+  "g_m_s2": null,
+  "num_frames": 93,
+  "fps": 24,
+  "records": [
+    {
+      "scene": "real06",
+      "image": "real06_f186.png",
+      "image_sha256": "fe4953ddd9971a798f95003c23fbc08d3d432e8acda2477e39c3cce6c655ec6e",
+      "pivot_xy": [
+        322.0,
+        121.0
+      ],
+      "bob_xy": [
+        207.0,
+        154.0
+      ],
+      "pivot_coordinate_tolerance_px": 6,
+      "bob_coordinate_tolerance_px": 6,
+      "theta_range_right_rad": [
+        -1.40692478789407,
+        -1.1588953095039258
+      ],
+      "radius_range_px": [
+        105.11898020814318,
+        134.73678042761745
+      ],
+      "geometric_inward_sign_right": 1,
+      "geometric_direction_ambiguous": false,
+      "prescribed_states": [
+        {
+          "period_s": 1.186,
+          "theta0_right_rad": -1.2913485626685244,
+          "theta0_left_rad": 1.2913485626685244,
+          "omega0_right_rad_s": 3.868768336264842,
+          "omega0_left_rad_s": -3.868768336264842,
+          "absolute_omega_sign_right": 1,
+          "direction_source": "Prescribed nominal inward sign; not observed motion",
+          "frame1_time_s": 0.041666666666666664,
+          "frame1_theta_right_rad": -1.1001217165191763,
+          "frame1_cv2_rotation_deg": 10.956491213955161,
+          "frame1_expected_bob_center_px": [
+            215.3683397182113,
+            175.2557741217394
+          ]
+        },
+        {
+          "period_s": 2.0162,
+          "theta0_right_rad": -1.2913485626685244,
+          "theta0_left_rad": 1.2913485626685244,
+          "omega0_right_rad_s": 2.275746080155789,
+          "omega0_left_rad_s": -2.275746080155789,
+          "absolute_omega_sign_right": 1,
+          "direction_source": "Prescribed nominal inward sign; not observed motion",
+          "frame1_time_s": 0.041666666666666664,
+          "frame1_theta_right_rad": -1.1859209508135737,
+          "frame1_cv2_rotation_deg": 6.040557203432076,
+          "frame1_expected_bob_center_px": [
+            211.11118939987978,
+            165.91850046128732
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "real14",
+      "image": "real14_f186.png",
+      "image_sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2",
+      "pivot_xy": [
+        324.0,
+        122.0
+      ],
+      "bob_xy": [
+        333.0,
+        252.0
+      ],
+      "pivot_coordinate_tolerance_px": 5,
+      "bob_coordinate_tolerance_px": 5,
+      "theta_range_right_rad": [
+        -0.008333140440135918,
+        0.15702977597173187
+      ],
+      "radius_range_px": [
+        120,
+        141.2834031300209
+      ],
+      "geometric_inward_sign_right": null,
+      "geometric_direction_ambiguous": true,
+      "prescribed_states": [
+        {
+          "period_s": 1.186,
+          "theta0_right_rad": 0.06912048084718227,
+          "theta0_left_rad": -0.06912048084718227,
+          "omega0_right_rad_s": -7.850902353844898,
+          "omega0_left_rad_s": 7.850902353844898,
+          "absolute_omega_sign_right": -1,
+          "direction_source": "Prescribed nominal inward sign; not observed motion",
+          "frame1_time_s": 0.041666666666666664,
+          "frame1_theta_right_rad": -0.2570275057432335,
+          "frame1_cv2_rotation_deg": -18.686903128320193,
+          "frame1_expected_bob_center_px": [
+            290.8740113384242,
+            248.0304283702676
+          ]
+        },
+        {
+          "period_s": 2.0162,
+          "theta0_right_rad": 0.06912048084718227,
+          "theta0_left_rad": -0.06912048084718227,
+          "omega0_right_rad_s": -4.61817785520288,
+          "omega0_left_rad_s": 4.61817785520288,
+          "absolute_omega_sign_right": -1,
+          "direction_source": "Prescribed nominal inward sign; not observed motion",
+          "frame1_time_s": 0.041666666666666664,
+          "frame1_theta_right_rad": -0.1233452090565403,
+          "frame1_cv2_rotation_deg": -11.027471732556963,
+          "frame1_expected_bob_center_px": [
+            307.96746752088035,
+            251.32114251856103
+          ]
+        }
+      ]
+    }
+  ],
+  "remaining_gates": [
+    "executor adoption of these input images and state assumptions",
+    "exact shared prompt/negative/guidance and frozen proxy builder",
+    "native sampler/full sigma/stack freeze + actual-start verification (291)",
+    "referee-owner resolution5939; crossing reader remains UNVALIDATED",
+    "no queue submission until all parent277 execution gates met",
+    "state/builder must adopt this explicit harmonic law or explicitly replace it",
+    "actual proxy rendered frame0/rod/crop/mask/codec QA remains pending",
+    "native provenance follow-up295 and queue serialization5975 acceptance"
+  ],
+  "reader_status": "UNVALIDATED; referee5933 raw FAIL; human5939 pending",
+  "queue_job_ids": []
+}

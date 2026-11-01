@@ -1,0 +1,162 @@
+{
+  "scope": "Input identity, reviewer-source fidelity, actual OpenCV point/zero-image transforms only; no proxy mask/clip/model validation",
+  "runtime": {
+    "python": "3.10.12",
+    "opencv": "4.12.0",
+    "numpy": "2.2.6",
+    "node": "v22.23.2"
+  },
+  "checks_passed": 30,
+  "checks": [
+    {
+      "name": "real06 image identity",
+      "passed": true,
+      "sha256": "fe4953ddd9971a798f95003c23fbc08d3d432e8acda2477e39c3cce6c655ec6e"
+    },
+    {
+      "name": "real06 resolution",
+      "passed": true,
+      "shape": [
+        480,
+        832,
+        3
+      ]
+    },
+    {
+      "name": "real06 fixed index",
+      "passed": true
+    },
+    {
+      "name": "real06 source match",
+      "passed": true
+    },
+    {
+      "name": "real06 angle convention",
+      "passed": true
+    },
+    {
+      "name": "real06 source geometry",
+      "passed": true
+    },
+    {
+      "name": "real06 zero rotation pixel identity",
+      "passed": true,
+      "max_abs_error": 0
+    },
+    {
+      "name": "real06 P1.186 cv2 rotation sign",
+      "passed": true,
+      "affine_error_px": 0.0
+    },
+    {
+      "name": "real06 P1.186 reviewer frame1",
+      "passed": true
+    },
+    {
+      "name": "real06 P1.186 sign reversal detected",
+      "passed": true,
+      "wrong_sign_distance_px": 45.478828786219516
+    },
+    {
+      "name": "real06 P1.186 zero angle pivot invariant",
+      "passed": true
+    },
+    {
+      "name": "real06 P2.0162 cv2 rotation sign",
+      "passed": true,
+      "affine_error_px": 2.842170943040401e-14
+    },
+    {
+      "name": "real06 P2.0162 reviewer frame1",
+      "passed": true
+    },
+    {
+      "name": "real06 P2.0162 sign reversal detected",
+      "passed": true,
+      "wrong_sign_distance_px": 25.18025034694473
+    },
+    {
+      "name": "real06 P2.0162 zero angle pivot invariant",
+      "passed": true
+    },
+    {
+      "name": "real14 image identity",
+      "passed": true,
+      "sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2"
+    },
+    {
+      "name": "real14 resolution",
+      "passed": true,
+      "shape": [
+        480,
+        832,
+        3
+      ]
+    },
+    {
+      "name": "real14 fixed index",
+      "passed": true
+    },
+    {
+      "name": "real14 source match",
+      "passed": true
+    },
+    {
+      "name": "real14 angle convention",
+      "passed": true
+    },
+    {
+      "name": "real14 source geometry",
+      "passed": true
+    },
+    {
+      "name": "real14 zero rotation pixel identity",
+      "passed": true,
+      "max_abs_error": 0
+    },
+    {
+      "name": "real14 P1.186 cv2 rotation sign",
+      "passed": true,
+      "affine_error_px": 0.0
+    },
+    {
+      "name": "real14 P1.186 reviewer frame1",
+      "passed": true
+    },
+    {
+      "name": "real14 P1.186 sign reversal detected",
+      "passed": true,
+      "wrong_sign_distance_px": 83.50247405228298
+    },
+    {
+      "name": "real14 P1.186 zero angle pivot invariant",
+      "passed": true
+    },
+    {
+      "name": "real14 P2.0162 cv2 rotation sign",
+      "passed": true,
+      "affine_error_px": 0.0
+    },
+    {
+      "name": "real14 P2.0162 reviewer frame1",
+      "passed": true
+    },
+    {
+      "name": "real14 P2.0162 sign reversal detected",
+      "passed": true,
+      "wrong_sign_distance_px": 49.851744914155795
+    },
+    {
+      "name": "real14 P2.0162 zero angle pivot invariant",
+      "passed": true
+    }
+  ],
+  "reviewer_regression_summary": {
+    "checks": 2678,
+    "syntheticBoundaryStates": 36,
+    "geometryPerturbations": 1225,
+    "maxAngleErrorRad": 2.220446049250313e-16,
+    "maxPointErrorPx": 5.684341886080802e-14
+  },
+  "reviewer_envelope_samples": 16016
+}

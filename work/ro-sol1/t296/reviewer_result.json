@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "checks": 2678,
+    "syntheticBoundaryStates": 36,
+    "geometryPerturbations": 1225,
+    "maxAngleErrorRad": 2.220446049250313e-16,
+    "maxPointErrorPx": 5.684341886080802e-14
+  },
+  "envelopeSamples": 16016,
+  "sceneResults": [
+    {
+      "scene": "real06",
+      "geometry": {
+        "theta0": -1.2913485626685244,
+        "radiusPx": 119.64113005150026,
+        "thetaRange": [
+          -1.40692478789407,
+          -1.1588953095039258
+        ],
+        "radiusRangePx": [
+          105.11898020814318,
+          134.73678042761745
+        ],
+        "inwardVelocitySign": 1,
+        "uncertaintyModel": "independent per-coordinate hard bounds; not statistical CI"
+      },
+      "envelope": {
+        "x": [
+          181.77593370005582,
+          462.2240662999442
+        ],
+        "y": [
+          124.1617227969171,
+          261.7367804276174
+        ]
+      },
+      "starts": [
+        {
+          "theta0": -1.2913485626685244,
+          "amplitudeRad": 1.4835298641951802,
+          "angularVelocity0": 3.868768336264842,
+          "periodS": 1.186,
+          "mode": "harmonic prescribed non-rest",
+          "temporalLaw": "small-angle harmonic, not exact nonlinear dynamics",
+          "bobFrame1": [
+            215.3683397182113,
+            175.2557741217394
+          ],
+          "maxConsecutiveCenterDisplacementPx": 38.92603696210052
+        },
+        {
+          "theta0": -1.2913485626685244,
+          "amplitudeRad": 1.4835298641951802,
+          "angularVelocity0": 2.275746080155789,
+          "periodS": 2.0162,
+          "mode": "harmonic prescribed non-rest",
+          "temporalLaw": "small-angle harmonic, not exact nonlinear dynamics",
+          "bobFrame1": [
+            211.1111893998798,
+            165.91850046128732
+          ],
+          "maxConsecutiveCenterDisplacementPx": 22.99503605802485
+        }
+      ]
+    },
+    {
+      "scene": "real14",
+      "geometry": {
+        "theta0": 0.06912048084718227,
+        "radiusPx": 130.31116606031887,
+        "thetaRange": [
+          -0.008333140440135918,
+          0.15702977597173187
+        ],
+        "radiusRangePx": [
+          120,
+          141.2834031300209
+        ],
+        "inwardVelocitySign": null,
+        "uncertaintyModel": "independent per-coordinate hard bounds; not statistical CI"
+      },
+      "envelope": {
+        "x": [
+          178.25422287351446,
+          469.74577712648556
+        ],
+        "y": [
+          127.45868912971898,
+          268.28340313002093
+        ]
+      },
+      "starts": [
+        {
+          "theta0": 0.06912048084718227,
+          "amplitudeRad": 1.4835298641951802,
+          "angularVelocity0": -7.850902353844898,
+          "periodS": 1.186,
+          "mode": "harmonic prescribed non-rest",
+          "temporalLaw": "small-angle harmonic, not exact nonlinear dynamics",
+          "bobFrame1": [
+            290.8740113384242,
+            248.0304283702676
+          ],
+          "maxConsecutiveCenterDisplacementPx": 42.394685810918276
+        },
+        {
+          "theta0": 0.06912048084718227,
+          "amplitudeRad": 1.4835298641951802,
+          "angularVelocity0": -4.61817785520288,
+          "periodS": 2.0162,
+          "mode": "harmonic prescribed non-rest",
+          "temporalLaw": "small-angle harmonic, not exact nonlinear dynamics",
+          "bobFrame1": [
+            307.96746752088035,
+            251.32114251856103
+          ],
+          "maxConsecutiveCenterDisplacementPx": 25.04532436467328
+        }
+      ]
+    }
+  ],
+  "scope": "software and owner-pasted image geometry; no source/media/Nano/referee validation"
+}
