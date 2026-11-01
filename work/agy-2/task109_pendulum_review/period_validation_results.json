@@ -1,0 +1,162 @@
+{
+  "ms_pend10_mid_s1.mp4": {
+    "arm": "mid",
+    "mp_flag": "ok",
+    "mp_period": 1.7609903085157834,
+    "mp_r2": 0.8288013448579311,
+    "acf_flag": "ok",
+    "acf_period": 1.9427213383217652
+  },
+  "ms_pend10_mid_s2.mp4": {
+    "arm": "mid",
+    "mp_flag": "ok",
+    "mp_period": 0.7576868876487021,
+    "mp_r2": 0.8300112508097002,
+    "acf_flag": "ok",
+    "acf_period": 0.7874378878623247
+  },
+  "ms_pend10_mid_s3.mp4": {
+    "arm": "mid",
+    "mp_flag": "check",
+    "mp_period": 0.37448877697085986,
+    "mp_r2": 0.6987218106597773,
+    "acf_flag": "ok",
+    "acf_period": 0.4022693025569121
+  },
+  "ms_pend10_rest_s1.mp4": {
+    "arm": "rest",
+    "mp_flag": "check",
+    "mp_period": 3.521563723072475,
+    "mp_r2": 0.4826516732413473,
+    "acf_flag": "check",
+    "acf_period": 2.2466951912889876
+  },
+  "ms_pend10_rest_s2.mp4": {
+    "arm": "rest",
+    "mp_flag": "check",
+    "mp_period": 1.3073019810779225,
+    "mp_r2": 0.23198141402408345,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend10_rest_s3.mp4": {
+    "arm": "rest",
+    "mp_flag": "check",
+    "mp_period": 2.533159314933472,
+    "mp_r2": 0.8513801280734556,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend10_restev_s1.mp4": {
+    "arm": "restev",
+    "mp_flag": "check",
+    "mp_period": 3.279348680704734,
+    "mp_r2": 0.6235510672892199,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend10_restev_s2.mp4": {
+    "arm": "restev",
+    "mp_flag": "check",
+    "mp_period": 59.999999779822815,
+    "mp_r2": 0.8062319717512113,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend10_restev_s3.mp4": {
+    "arm": "restev",
+    "mp_flag": "check",
+    "mp_period": 2.3190378119606887,
+    "mp_r2": 0.5158599379260059,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend11_mid_s1.mp4": {
+    "arm": "mid",
+    "mp_flag": "check",
+    "mp_period": 0.7260296990660974,
+    "mp_r2": 0.3598909143628177,
+    "acf_flag": "ok",
+    "acf_period": 1.4899692038695018
+  },
+  "ms_pend11_mid_s2.mp4": {
+    "arm": "mid",
+    "mp_flag": "check",
+    "mp_period": 0.33325035992000035,
+    "mp_r2": 0.1763722936555857,
+    "acf_flag": "ok",
+    "acf_period": 0.33001060007760924
+  },
+  "ms_pend11_mid_s3.mp4": {
+    "arm": "mid",
+    "mp_flag": "check",
+    "mp_period": 0.39505749345481816,
+    "mp_r2": 0.48112855470570504,
+    "acf_flag": "ok",
+    "acf_period": 0.42144977611800033
+  },
+  "ms_pend11_rest_s1.mp4": {
+    "arm": "rest",
+    "mp_flag": "check",
+    "mp_period": 0.4730887247137841,
+    "mp_r2": 0.30508166820127225,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend11_rest_s2.mp4": {
+    "arm": "rest",
+    "mp_flag": "check",
+    "mp_period": 1.7875149123031266,
+    "mp_r2": 0.9348064721204712,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend11_rest_s3.mp4": {
+    "arm": "rest",
+    "mp_flag": "check",
+    "mp_period": 4.144365842753266,
+    "mp_r2": 0.9068329278867289,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend11_restev_s1.mp4": {
+    "arm": "restev",
+    "mp_flag": "check",
+    "mp_period": 2.4949073131858794,
+    "mp_r2": 0.7956035247048002,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend11_restev_s2.mp4": {
+    "arm": "restev",
+    "mp_flag": "check",
+    "mp_period": 59.99999999184612,
+    "mp_r2": 0.8174949351368346,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "ms_pend11_restev_s3.mp4": {
+    "arm": "restev",
+    "mp_flag": "check",
+    "mp_period": 0.6241172846236286,
+    "mp_r2": 0.5860100550441003,
+    "acf_flag": "fail",
+    "acf_period": null
+  },
+  "pend10.mp4": {
+    "arm": "real",
+    "mp_flag": "ok",
+    "mp_period": 1.2273890823231257,
+    "mp_r2": 0.9204174626388899,
+    "acf_flag": "ok",
+    "acf_period": 1.2269447036087513
+  },
+  "pend11.mp4": {
+    "arm": "real",
+    "mp_flag": "ok",
+    "mp_period": 1.227549850624132,
+    "mp_r2": 0.9267502104045819,
+    "acf_flag": "ok",
+    "acf_period": 1.231495273609956
+  }
+}
