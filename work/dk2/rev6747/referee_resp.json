@@ -1,0 +1,25 @@
+{
+  "agent": "dk2",
+  "method": "dk2 pend_track (centroid+damped-sine fit) @rev6747 v1",
+  "estimates_scored": 4,
+  "within_tolerance": 4,
+  "pass_rate": 1.0,
+  "tolerance": 0.1,
+  "verdict": "fail",
+  "per_clip_error_band": {
+    "planted-00": {
+      "period_s": "<5%"
+    },
+    "planted-07": {
+      "period_s": "<5%"
+    },
+    "planted-11": {
+      "period_s": "<5%"
+    },
+    "planted-13": {
+      "period_s": "<5%"
+    }
+  },
+  "ignored_clip_ids": [],
+  "rule": "pass = at least 10 estimates (or all) scored and >= 90% within 10% relative error (a label counts if it matches; UNCLEAR counts as wrong)"
+}

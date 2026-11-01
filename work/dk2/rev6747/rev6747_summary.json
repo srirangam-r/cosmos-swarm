@@ -1,0 +1,524 @@
+{
+ "P_real_s": {
+  "real_09": 1.1727,
+  "real_14": 1.1877671105039158,
+  "real_16": 1.1874
+ },
+ "rows": [
+  {
+   "clip": "t329a_real_09_nphys_s1",
+   "proxy": "A18",
+   "scene": "real_09",
+   "x17": false,
+   "seed": 1,
+   "flag": "ok",
+   "ratio": 1.0025329420130205,
+   "amp_px": 23.29239338668996,
+   "R2": 0.9930771258104978
+  },
+  {
+   "clip": "t329a_real_09_nphys_s2",
+   "proxy": "A18",
+   "scene": "real_09",
+   "x17": false,
+   "seed": 2,
+   "flag": "ok",
+   "ratio": 0.9923802447958339,
+   "amp_px": 31.991641126797525,
+   "R2": 0.8694246264454887
+  },
+  {
+   "clip": "t329a_real_09_nphys_s3",
+   "proxy": "A18",
+   "scene": "real_09",
+   "x17": false,
+   "seed": 3,
+   "flag": "ok",
+   "ratio": 0.9984933885386096,
+   "amp_px": 24.190404617398816,
+   "R2": 0.9865862500856173
+  },
+  {
+   "clip": "t329a_real_09_nphys_x17_s1",
+   "proxy": "A18",
+   "scene": "real_09",
+   "x17": true,
+   "seed": 1,
+   "flag": "ok",
+   "ratio": 1.685334637127128,
+   "amp_px": 22.003673379701045,
+   "R2": 0.9989031233870141
+  },
+  {
+   "clip": "t329a_real_09_nphys_x17_s2",
+   "proxy": "A18",
+   "scene": "real_09",
+   "x17": true,
+   "seed": 2,
+   "flag": "ok",
+   "ratio": 1.6943288519528064,
+   "amp_px": 21.029852898809164,
+   "R2": 0.9912468900913792
+  },
+  {
+   "clip": "t329a_real_09_nphys_x17_s3",
+   "proxy": "A18",
+   "scene": "real_09",
+   "x17": true,
+   "seed": 3,
+   "flag": "ok",
+   "ratio": 1.6907127931180062,
+   "amp_px": 21.677347472775747,
+   "R2": 0.9989592016739798
+  },
+  {
+   "clip": "t329a_real_14_nphys_s101",
+   "proxy": "A18",
+   "scene": "real_14",
+   "x17": false,
+   "seed": 101,
+   "flag": "ok",
+   "ratio": 0.9996733510192649,
+   "amp_px": 19.363792608430874,
+   "R2": 0.9956243906398727
+  },
+  {
+   "clip": "t329a_real_14_nphys_s102",
+   "proxy": "A18",
+   "scene": "real_14",
+   "x17": false,
+   "seed": 102,
+   "flag": "ok",
+   "ratio": 0.9964491863517779,
+   "amp_px": 25.03861060949426,
+   "R2": 0.988648033293149
+  },
+  {
+   "clip": "t329a_real_14_nphys_s103",
+   "proxy": "A18",
+   "scene": "real_14",
+   "x17": false,
+   "seed": 103,
+   "flag": "ok",
+   "ratio": 0.99766232765855,
+   "amp_px": 18.621799766580335,
+   "R2": 0.9862954395260636
+  },
+  {
+   "clip": "t329a_real_14_nphys_x17_s101",
+   "proxy": "A18",
+   "scene": "real_14",
+   "x17": true,
+   "seed": 101,
+   "flag": "ok",
+   "ratio": 1.6995137038947599,
+   "amp_px": 23.06281182004331,
+   "R2": 0.995885866880818
+  },
+  {
+   "clip": "t329a_real_14_nphys_x17_s102",
+   "proxy": "A18",
+   "scene": "real_14",
+   "x17": true,
+   "seed": 102,
+   "flag": "ok",
+   "ratio": 1.71081396745098,
+   "amp_px": 17.53950619348265,
+   "R2": 0.9896018041603044
+  },
+  {
+   "clip": "t329a_real_14_nphys_x17_s103",
+   "proxy": "A18",
+   "scene": "real_14",
+   "x17": true,
+   "seed": 103,
+   "flag": "ok",
+   "ratio": 1.7180513008800518,
+   "amp_px": 20.902754033055064,
+   "R2": 0.9984639211735222
+  },
+  {
+   "clip": "t329a_real_16_nphys_s1",
+   "proxy": "A18",
+   "scene": "real_16",
+   "x17": false,
+   "seed": 1,
+   "flag": "ok",
+   "ratio": 0.9986231902131771,
+   "amp_px": 21.195329800181725,
+   "R2": 0.9957842451398207
+  },
+  {
+   "clip": "t329a_real_16_nphys_s2",
+   "proxy": "A18",
+   "scene": "real_16",
+   "x17": false,
+   "seed": 2,
+   "flag": "ok",
+   "ratio": 1.0114201470659778,
+   "amp_px": 29.05627304726607,
+   "R2": 0.9926585550570626
+  },
+  {
+   "clip": "t329a_real_16_nphys_s3",
+   "proxy": "A18",
+   "scene": "real_16",
+   "x17": false,
+   "seed": 3,
+   "flag": "ok",
+   "ratio": 1.0050315673661336,
+   "amp_px": 21.641649171784753,
+   "R2": 0.9964364288826998
+  },
+  {
+   "clip": "t329a_real_16_nphys_x17_s1",
+   "proxy": "A18",
+   "scene": "real_16",
+   "x17": true,
+   "seed": 1,
+   "flag": "ok",
+   "ratio": 1.7395589400977762,
+   "amp_px": 22.76983059067845,
+   "R2": 0.9949370698698561
+  },
+  {
+   "clip": "t329a_real_16_nphys_x17_s2",
+   "proxy": "A18",
+   "scene": "real_16",
+   "x17": true,
+   "seed": 2,
+   "flag": "check",
+   "ratio": 1.7020880244937042,
+   "amp_px": 22.275869353993997,
+   "R2": 0.9945492538820578
+  },
+  {
+   "clip": "t329a_real_16_nphys_x17_s3",
+   "proxy": "A18",
+   "scene": "real_16",
+   "x17": true,
+   "seed": 3,
+   "flag": "ok",
+   "ratio": 1.6870211287903185,
+   "amp_px": 21.408195755387727,
+   "R2": 0.9986076483861361
+  },
+  {
+   "clip": "t276_real_09_nphys_s1",
+   "proxy": "rest",
+   "scene": "real_09",
+   "x17": false,
+   "seed": 1,
+   "flag": "check",
+   "ratio": 0.8757196439648527,
+   "amp_px": 5.556439223395738,
+   "R2": 0.6122697509398978
+  },
+  {
+   "clip": "t276_real_09_nphys_s2",
+   "proxy": "rest",
+   "scene": "real_09",
+   "x17": false,
+   "seed": 2,
+   "flag": "check",
+   "ratio": 0.814685747767918,
+   "amp_px": 0.38532125085528673,
+   "R2": 0.4766663391159488
+  },
+  {
+   "clip": "t276_real_09_nphys_s3",
+   "proxy": "rest",
+   "scene": "real_09",
+   "x17": false,
+   "seed": 3,
+   "flag": "check",
+   "ratio": 0.616062080457073,
+   "amp_px": 2.6454102062087155,
+   "R2": 0.34855091815160055
+  },
+  {
+   "clip": "t276_real_09_nphys_x17_s1",
+   "proxy": "rest",
+   "scene": "real_09",
+   "x17": true,
+   "seed": 1,
+   "flag": "check",
+   "ratio": 2.4754652225550156,
+   "amp_px": 2.7209946397235227,
+   "R2": 0.43806119310087266
+  },
+  {
+   "clip": "t276_real_16_nphys_s1",
+   "proxy": "rest",
+   "scene": "real_16",
+   "x17": false,
+   "seed": 1,
+   "flag": "check",
+   "ratio": 3.25444749458865,
+   "amp_px": 14.292466980105216,
+   "R2": 0.7922915545885558
+  },
+  {
+   "clip": "t276_real_16_nphys_s2",
+   "proxy": "rest",
+   "scene": "real_16",
+   "x17": false,
+   "seed": 2,
+   "flag": "check",
+   "ratio": 1.381280632763297,
+   "amp_px": 2.3237252556375205,
+   "R2": 0.32682494889843916
+  },
+  {
+   "clip": "t276_real_16_nphys_s3",
+   "proxy": "rest",
+   "scene": "real_16",
+   "x17": false,
+   "seed": 3,
+   "flag": "check",
+   "ratio": 1.313354780847509,
+   "amp_px": 16.756802600060503,
+   "R2": 0.35765378306429707
+  },
+  {
+   "clip": "t276_real_16_nphys_x17_s1",
+   "proxy": "rest",
+   "scene": "real_16",
+   "x17": true,
+   "seed": 1,
+   "flag": "check",
+   "ratio": 3.25444749458865,
+   "amp_px": 14.292466980105216,
+   "R2": 0.7922915545885558
+  },
+  {
+   "clip": "t277r_real_14_nphys_s101",
+   "proxy": "rest",
+   "scene": "real_14",
+   "x17": false,
+   "seed": 101,
+   "flag": "ok",
+   "ratio": 0.9865039114739838,
+   "amp_px": 4.967738798183177,
+   "R2": 0.9455579338732226
+  },
+  {
+   "clip": "t277r_real_14_nphys_s102",
+   "proxy": "rest",
+   "scene": "real_14",
+   "x17": false,
+   "seed": 102,
+   "flag": "check",
+   "ratio": 1.0461924616485045,
+   "amp_px": 10.44393581628244,
+   "R2": 0.7149455895118906
+  },
+  {
+   "clip": "t277r_real_14_nphys_s103",
+   "proxy": "rest",
+   "scene": "real_14",
+   "x17": false,
+   "seed": 103,
+   "flag": "ok",
+   "ratio": 0.9631665488579572,
+   "amp_px": 3.2008364037669477,
+   "R2": 0.9329134091265715
+  },
+  {
+   "clip": "t277r_real_14_nphys_x17_s101",
+   "proxy": "rest",
+   "scene": "real_14",
+   "x17": true,
+   "seed": 101,
+   "flag": "check",
+   "ratio": 1.6948625071093937,
+   "amp_px": 4.765441500891883,
+   "R2": 0.847078443287148
+  },
+  {
+   "clip": "t277r_real_14_nphys_x17_s102",
+   "proxy": "rest",
+   "scene": "real_14",
+   "x17": true,
+   "seed": 102,
+   "flag": "ok",
+   "ratio": 1.6795323888590894,
+   "amp_px": 6.7855069461030775,
+   "R2": 0.9772041261600907
+  },
+  {
+   "clip": "t277r_real_14_nphys_x17_s103",
+   "proxy": "rest",
+   "scene": "real_14",
+   "x17": true,
+   "seed": 103,
+   "flag": "check",
+   "ratio": 1.615502576484706,
+   "amp_px": 4.905797732117207,
+   "R2": 0.36403286175091953
+  }
+ ],
+ "summary": {
+  "A18": {
+   "n": 9,
+   "n_ok": 9,
+   "n_ok_within10": 9,
+   "median_ratio_ok": 0.9986231902131771,
+   "ratio_ok": [
+    1.003,
+    0.992,
+    0.998,
+    1.0,
+    0.996,
+    0.998,
+    0.999,
+    1.011,
+    1.005
+   ],
+   "median_amp_px": 23.29239338668996,
+   "amp_px": [
+    23.3,
+    32.0,
+    24.2,
+    19.4,
+    25.0,
+    18.6,
+    21.2,
+    29.1,
+    21.6
+   ]
+  },
+  "A18_x17": {
+   "n": 9,
+   "n_ok": 8,
+   "n_ok_within10": 8,
+   "median_ratio_ok": 1.6969212779237832,
+   "ratio_ok": [
+    1.685,
+    1.694,
+    1.691,
+    1.7,
+    1.711,
+    1.718,
+    1.74,
+    1.687
+   ],
+   "median_amp_px": 21.677347472775747,
+   "amp_px": [
+    22.0,
+    21.0,
+    21.7,
+    23.1,
+    17.5,
+    20.9,
+    22.8,
+    22.3,
+    21.4
+   ]
+  },
+  "rest": {
+   "n": 9,
+   "n_ok": 2,
+   "n_ok_within10": 2,
+   "median_ratio_ok": 0.9748352301659704,
+   "ratio_ok": [
+    0.987,
+    0.963
+   ],
+   "median_amp_px": 4.967738798183177,
+   "amp_px": [
+    5.6,
+    0.4,
+    2.6,
+    14.3,
+    2.3,
+    16.8,
+    5.0,
+    10.4,
+    3.2
+   ]
+  },
+  "rest_x17": {
+   "n": 5,
+   "n_ok": 1,
+   "n_ok_within10": 1,
+   "median_ratio_ok": 1.6795323888590894,
+   "ratio_ok": [
+    1.68
+   ],
+   "median_amp_px": 4.905797732117207,
+   "amp_px": [
+    2.7,
+    14.3,
+    4.8,
+    6.8,
+    4.9
+   ]
+  }
+ },
+ "pairs": [
+  [
+   "t329a_real_09_nphys_s1",
+   "t276_real_09_nphys_s1",
+   true,
+   false,
+   4.191964034919319
+  ],
+  [
+   "t329a_real_09_nphys_s2",
+   "t276_real_09_nphys_s2",
+   true,
+   false,
+   83.02589347404687
+  ],
+  [
+   "t329a_real_09_nphys_s3",
+   "t276_real_09_nphys_s3",
+   true,
+   false,
+   9.144292465729702
+  ],
+  [
+   "t329a_real_14_nphys_s101",
+   "t277r_real_14_nphys_s101",
+   true,
+   true,
+   3.8979087659586056
+  ],
+  [
+   "t329a_real_14_nphys_s102",
+   "t277r_real_14_nphys_s102",
+   true,
+   false,
+   2.3974305328895493
+  ],
+  [
+   "t329a_real_14_nphys_s103",
+   "t277r_real_14_nphys_s103",
+   true,
+   true,
+   5.817791794877432
+  ],
+  [
+   "t329a_real_16_nphys_s1",
+   "t276_real_16_nphys_s1",
+   true,
+   false,
+   1.4829721019950675
+  ],
+  [
+   "t329a_real_16_nphys_s2",
+   "t276_real_16_nphys_s2",
+   true,
+   false,
+   12.504177495499313
+  ],
+  [
+   "t329a_real_16_nphys_s3",
+   "t276_real_16_nphys_s3",
+   true,
+   false,
+   1.2915142398172437
+  ]
+ ]
+}
