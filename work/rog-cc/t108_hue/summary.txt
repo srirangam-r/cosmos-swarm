@@ -1,0 +1,12 @@
+full:QT-F:gauge_overall                -0.013 ± 0.028  CI90 [-0.094,+0.068] n=3 up=2 NI not shown
+full:QT-F:gauge_physical               -0.019 ± 0.036  CI90 [-0.125,+0.087] n=3 up=2 NI not shown
+full:QT-F:gauge_Q125                   -0.065 ± 0.109  CI90 [-0.384,+0.254] n=3 up=2 
+full:QT-F:mf_overall                   +0.001 ± 0.007  CI90 [-0.020,+0.021] n=3 up=2 NI
+full:QT-F:mf_physical                  +0.002 ± 0.006  CI90 [-0.015,+0.020] n=3 up=1 NI
+trunc36:QT-F:gauge_overall             -0.017 ± 0.023  CI90 [-0.086,+0.051] n=3 up=1 NI not shown
+trunc36:QT-F:gauge_physical            -0.010 ± 0.033  CI90 [-0.106,+0.085] n=3 up=2 NI not shown
+trunc36:QT-F:gauge_Q125                -0.035 ± 0.032  CI90 [-0.129,+0.060] n=3 up=1 
+trunc36:QT-F:mf_overall                -0.008 ± 0.011  CI90 [-0.039,+0.023] n=3 up=1 NI not shown
+trunc36:QT-F:mf_physical               +0.003 ± 0.006  CI90 [-0.016,+0.021] n=3 up=2 NI
+validity {"V1_real_minus_static_mf_physical": 0.050315918214619226, "V1_real_minus_static_gauge_physical": 0.06797132082283497, "V1_pass": false, "V2_twin_sum_bounce_lower(16+17)": 1.0990268096327782, "V2_twin_sum_rest(18+19)": 1.2459282100200653}
+real {"full:real_ball3_dd34_93f": {"gauge_overall": 0.6014407288569671, "gauge_physical": 0.499738447368145, "gauge_Q125": 0.4000633855660756, "mf_overall": 0.6458342939925691, "mf_physical": 0.5966113141737879}, "trunc36:trunc36_real_ball3_dd34_93f": {"gauge_overall": 0.6626944501812642, "gauge_physical": 0.5853770039975643, "gauge_Q125": 0.5736522475878397, "mf_overall": 0.6565966595792108, "mf_physical": 0.5964999701827765}}
