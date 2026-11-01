@@ -1,0 +1,476 @@
+[
+  {
+    "id": "ball1_nf61_s1",
+    "scene": "ball1",
+    "num_frames": 61,
+    "duration_s": 2.542,
+    "seed": 1,
+    "neg_prompt": null,
+    "g_pred_if_N_minus_2_scaling_ms2": 3.39,
+    "firstfall_v1": {
+      "flag": "weak",
+      "g_ms2": -0.12053041829066105,
+      "g_ci95_ms2": [
+        -0.16414214883951952,
+        -0.08632843885704823
+      ],
+      "g_from_h_T_ms2": 0.00526081790007582,
+      "r2": 0.9540457685394621,
+      "dAIC_quad_vs_lin": 9.228599398126605,
+      "fit_frames": [
+        1,
+        6
+      ],
+      "fall_px": 2.5242573355203604,
+      "fall_time_s": 1.3333333333332107,
+      "seeded_282_117_flag": "ok",
+      "seeded_282_117_g_ms2": 2.747188723509845
+    },
+    "gauge_blind_v1_1": {
+      "release": 1,
+      "bclock_flag": "ok",
+      "g_ms2": 3.179,
+      "g_src": "curv_first",
+      "first_fall_r2": 0.9956,
+      "max_drop_px": 200.4,
+      "rest_minus_impact_px": -200.1,
+      "held_at_end_ncc": 0.892,
+      "n_impacts": 1
+    },
+    "measure_ball_v5": {
+      "g_ms2": null,
+      "g_ci95_ms2": null,
+      "r2": 0.9028037378709785,
+      "fit_frames": null,
+      "track_source": null,
+      "Quality_flag": null
+    },
+    "dual_patch_gripper_vs_ball": {
+      "n_frames": 61,
+      "max_gripper_drop_f0_14_px": 0.0,
+      "max_ball_drop_f0_14_px": 83.0,
+      "max_ball_minus_gripper_sep_f0_14_px": 96.0,
+      "max_gripper_drop_f0_42_px": 87.0,
+      "max_ball_drop_f0_42_px": 99.0,
+      "max_ball_minus_gripper_separation_f0_42_px": 96.0,
+      "median_abs_ball_gripper_sep_f0_42_px": 65.0,
+      "gripper_ball_y_corr_f0_42": -0.1893,
+      "gripper_y_f0_f12_f20_f38": [
+        68.0,
+        33.0,
+        58.0,
+        122.0
+      ],
+      "ball_y_f0_f12_f20_f38": [
+        117.0,
+        177.0,
+        193.0,
+        101.0
+      ],
+      "spawned_plank_ball": {
+        "n_frames_with_dark_object_in_flight_or_plank": 33,
+        "first_frame_detected": 9,
+        "last_frame_detected": 43,
+        "median_area_px": 2116.0,
+        "equiv_diameter_px": 51.90544168639358,
+        "median_y_px": 335.74600355239784
+      },
+      "physical_regime": "true_release_from_stationary_gripper"
+    }
+  },
+  {
+    "id": "ball1_nf93_s1",
+    "scene": "ball1",
+    "num_frames": 93,
+    "duration_s": 3.875,
+    "seed": 1,
+    "neg_prompt": null,
+    "g_pred_if_N_minus_2_scaling_ms2": 1.458,
+    "firstfall_v1": {
+      "flag": "no_free_fall",
+      "g_ms2": 1.7292899063925273,
+      "g_ci95_ms2": [
+        -3.7808964515152046,
+        8.61702285377717
+      ],
+      "g_from_h_T_ms2": null,
+      "r2": 0.3577889718074849,
+      "dAIC_quad_vs_lin": -1.6966250802111844,
+      "fit_frames": [
+        4,
+        7
+      ],
+      "fall_px": 3.363636363636367,
+      "fall_time_s": -0.16666655977779232,
+      "seeded_282_117_flag": "no_free_fall",
+      "seeded_282_117_g_ms2": 1.8335795364323915
+    },
+    "gauge_blind_v1_1": {
+      "release": 1,
+      "bclock_flag": "ok",
+      "g_ms2": 0.09,
+      "g_src": "curv_first",
+      "first_fall_r2": 0.984,
+      "max_drop_px": 185.3,
+      "rest_minus_impact_px": -185.9,
+      "held_at_end_ncc": 0.908,
+      "n_impacts": 1
+    },
+    "measure_ball_v5": {
+      "g_ms2": null,
+      "g_ci95_ms2": null,
+      "r2": 0.20423367947713178,
+      "fit_frames": null,
+      "track_source": null,
+      "Quality_flag": null
+    },
+    "dual_patch_gripper_vs_ball": {
+      "n_frames": 93,
+      "max_gripper_drop_f0_14_px": 53.0,
+      "max_ball_drop_f0_14_px": 50.0,
+      "max_ball_minus_gripper_sep_f0_14_px": 0.0,
+      "max_gripper_drop_f0_42_px": 161.0,
+      "max_ball_drop_f0_42_px": 140.0,
+      "max_ball_minus_gripper_separation_f0_42_px": 0.0,
+      "median_abs_ball_gripper_sep_f0_42_px": 4.0,
+      "gripper_ball_y_corr_f0_42": 0.9859,
+      "gripper_y_f0_f12_f20_f38": [
+        68.0,
+        117.0,
+        138.0,
+        228.0
+      ],
+      "ball_y_f0_f12_f20_f38": [
+        117.0,
+        164.0,
+        183.0,
+        241.0
+      ],
+      "spawned_plank_ball": {
+        "n_frames_with_dark_object_in_flight_or_plank": 66,
+        "first_frame_detected": 24,
+        "last_frame_detected": 92,
+        "median_area_px": 843.0,
+        "equiv_diameter_px": 32.7618823667344,
+        "median_y_px": 345.0867253458377
+      },
+      "physical_regime": "gripper_lowers_with_held_ball_plus_spawned_plank_ball"
+    }
+  },
+  {
+    "id": "ball2_nf93_s1",
+    "scene": "ball2",
+    "num_frames": 93,
+    "duration_s": 3.875,
+    "seed": 1,
+    "neg_prompt": null,
+    "g_pred_if_N_minus_2_scaling_ms2": 1.458,
+    "firstfall_v1": {
+      "flag": "weak",
+      "g_ms2": -3.9081184321747413,
+      "g_ci95_ms2": [
+        -6.22851818618509,
+        -2.0517986289661025
+      ],
+      "g_from_h_T_ms2": null,
+      "r2": 0.8939672508489063,
+      "dAIC_quad_vs_lin": 4.056855065545562,
+      "fit_frames": [
+        13,
+        16
+      ],
+      "fall_px": 0.6422493505937723,
+      "fall_time_s": -0.04166656842435956,
+      "seeded_282_117_flag": "no_free_fall",
+      "seeded_282_117_g_ms2": 0.5950921993901052
+    },
+    "gauge_blind_v1_1": {
+      "release": 1,
+      "bclock_flag": "ok",
+      "g_ms2": 0.031,
+      "g_src": "curv_first",
+      "first_fall_r2": 0.9959,
+      "max_drop_px": 149.5,
+      "rest_minus_impact_px": -150.2,
+      "held_at_end_ncc": 0.944,
+      "n_impacts": 1
+    },
+    "measure_ball_v5": {
+      "g_ms2": null,
+      "g_ci95_ms2": null,
+      "r2": 0.15820267083899386,
+      "fit_frames": null,
+      "track_source": null,
+      "Quality_flag": null
+    },
+    "dual_patch_gripper_vs_ball": {
+      "n_frames": 93,
+      "max_gripper_drop_f0_14_px": 42.0,
+      "max_ball_drop_f0_14_px": 39.0,
+      "max_ball_minus_gripper_sep_f0_14_px": 0.0,
+      "max_gripper_drop_f0_42_px": 162.0,
+      "max_ball_drop_f0_42_px": 143.0,
+      "max_ball_minus_gripper_separation_f0_42_px": 0.0,
+      "median_abs_ball_gripper_sep_f0_42_px": 4.5,
+      "gripper_ball_y_corr_f0_42": 0.9871,
+      "gripper_y_f0_f12_f20_f38": [
+        68.0,
+        105.0,
+        143.0,
+        229.0
+      ],
+      "ball_y_f0_f12_f20_f38": [
+        117.0,
+        152.0,
+        188.0,
+        242.0
+      ],
+      "spawned_plank_ball": {
+        "n_frames_with_dark_object_in_flight_or_plank": 72,
+        "first_frame_detected": 8,
+        "last_frame_detected": 92,
+        "median_area_px": 546.5,
+        "equiv_diameter_px": 26.378502823279536,
+        "median_y_px": 344.7305135493518
+      },
+      "physical_regime": "gripper_lowers_with_held_ball_plus_spawned_plank_ball"
+    }
+  },
+  {
+    "id": "ball1_nf189_s1",
+    "scene": "ball1",
+    "num_frames": 189,
+    "duration_s": 7.875,
+    "seed": 1,
+    "neg_prompt": null,
+    "g_pred_if_N_minus_2_scaling_ms2": 0.353,
+    "firstfall_v1": {
+      "flag": "weak",
+      "g_ms2": 28.16372869333698,
+      "g_ci95_ms2": [
+        19.836959263541726,
+        37.093471081843425
+      ],
+      "g_from_h_T_ms2": null,
+      "r2": 0.9047422763128182,
+      "dAIC_quad_vs_lin": 7.245066781843459,
+      "fit_frames": [
+        10,
+        14
+      ],
+      "fall_px": 0.0,
+      "fall_time_s": -0.12537686345696902,
+      "seeded_282_117_flag": "no_free_fall",
+      "seeded_282_117_g_ms2": -2.029771724371672e-14
+    },
+    "gauge_blind_v1_1": {
+      "release": 1,
+      "bclock_flag": "check",
+      "g_ms2": null,
+      "g_src": null,
+      "first_fall_r2": null,
+      "max_drop_px": 30.2,
+      "rest_minus_impact_px": -51.0,
+      "held_at_end_ncc": 0.711,
+      "n_impacts": 1
+    },
+    "measure_ball_v5": {
+      "g_ms2": null,
+      "g_ci95_ms2": null,
+      "r2": 0.37722677862994236,
+      "fit_frames": null,
+      "track_source": null,
+      "Quality_flag": null
+    },
+    "dual_patch_gripper_vs_ball": {
+      "n_frames": 189,
+      "max_gripper_drop_f0_14_px": 33.0,
+      "max_ball_drop_f0_14_px": 15.0,
+      "max_ball_minus_gripper_sep_f0_14_px": 2.0,
+      "max_gripper_drop_f0_42_px": 168.0,
+      "max_ball_drop_f0_42_px": 15.0,
+      "max_ball_minus_gripper_separation_f0_42_px": 2.0,
+      "median_abs_ball_gripper_sep_f0_42_px": 63.0,
+      "gripper_ball_y_corr_f0_42": -0.7634,
+      "gripper_y_f0_f12_f20_f38": [
+        68.0,
+        101.0,
+        120.0,
+        232.0
+      ],
+      "ball_y_f0_f12_f20_f38": [
+        117.0,
+        132.0,
+        128.0,
+        84.0
+      ],
+      "spawned_plank_ball": {
+        "n_frames_with_dark_object_in_flight_or_plank": 157,
+        "first_frame_detected": 32,
+        "last_frame_detected": 188,
+        "median_area_px": 2431.0,
+        "equiv_diameter_px": 55.63492907563719,
+        "median_y_px": 336.17253839205057
+      },
+      "physical_regime": "held_stationary_plus_spawned_substitute_ball"
+    }
+  },
+  {
+    "id": "ball2_nf189_s1",
+    "scene": "ball2",
+    "num_frames": 189,
+    "duration_s": 7.875,
+    "seed": 1,
+    "neg_prompt": null,
+    "g_pred_if_N_minus_2_scaling_ms2": 0.353,
+    "firstfall_v1": {
+      "flag": "no_free_fall",
+      "g_ms2": 4.6555639453900115,
+      "g_ci95_ms2": [
+        -2.5135047673540676,
+        10.390818915585385
+      ],
+      "g_from_h_T_ms2": 1.8984613881425387,
+      "r2": 0.9540411641915186,
+      "dAIC_quad_vs_lin": -0.30640317394207983,
+      "fit_frames": [
+        7,
+        10
+      ],
+      "fall_px": 53.273333333333326,
+      "fall_time_s": 0.3224427446195827,
+      "seeded_282_117_flag": "no_free_fall",
+      "seeded_282_117_g_ms2": -1.8944536094135605e-14
+    },
+    "gauge_blind_v1_1": {
+      "release": 1,
+      "bclock_flag": "check",
+      "g_ms2": 5.255,
+      "g_src": "fall_timing",
+      "first_fall_r2": 0.6573,
+      "max_drop_px": 46.8,
+      "rest_minus_impact_px": -9.6,
+      "held_at_end_ncc": 0.578,
+      "n_impacts": 4
+    },
+    "measure_ball_v5": {
+      "g_ms2": null,
+      "g_ci95_ms2": null,
+      "r2": 0.6790590936279102,
+      "fit_frames": null,
+      "track_source": null,
+      "Quality_flag": null
+    },
+    "dual_patch_gripper_vs_ball": {
+      "n_frames": 189,
+      "max_gripper_drop_f0_14_px": 27.0,
+      "max_ball_drop_f0_14_px": 17.0,
+      "max_ball_minus_gripper_sep_f0_14_px": 3.0,
+      "max_gripper_drop_f0_42_px": 44.0,
+      "max_ball_drop_f0_42_px": 17.0,
+      "max_ball_minus_gripper_separation_f0_42_px": 3.0,
+      "median_abs_ball_gripper_sep_f0_42_px": 22.0,
+      "gripper_ball_y_corr_f0_42": -0.1404,
+      "gripper_y_f0_f12_f20_f38": [
+        68.0,
+        95.0,
+        88.0,
+        52.0
+      ],
+      "ball_y_f0_f12_f20_f38": [
+        117.0,
+        134.0,
+        61.0,
+        80.0
+      ],
+      "spawned_plank_ball": {
+        "n_frames_with_dark_object_in_flight_or_plank": 155,
+        "first_frame_detected": 34,
+        "last_frame_detected": 188,
+        "median_area_px": 2454.0,
+        "equiv_diameter_px": 55.897494065298574,
+        "median_y_px": 336.4368587213891
+      },
+      "physical_regime": "held_stationary_plus_spawned_substitute_ball"
+    }
+  },
+  {
+    "id": "ball1_nf189_neg_s1",
+    "scene": "ball1",
+    "num_frames": 189,
+    "duration_s": 7.875,
+    "seed": 1,
+    "neg_prompt": "boilerplate",
+    "g_pred_if_N_minus_2_scaling_ms2": 0.353,
+    "firstfall_v1": {
+      "flag": "weak",
+      "g_ms2": 12.284144598072697,
+      "g_ci95_ms2": [
+        8.498109740661501,
+        17.016688169836332
+      ],
+      "g_from_h_T_ms2": null,
+      "r2": 0.9468768980971667,
+      "dAIC_quad_vs_lin": 6.9721514322214375,
+      "fit_frames": [
+        19,
+        22
+      ],
+      "fall_px": -40.597165991902834,
+      "fall_time_s": -0.0839228610538777,
+      "seeded_282_117_flag": "weak",
+      "seeded_282_117_g_ms2": 6.523050865399071
+    },
+    "gauge_blind_v1_1": {
+      "release": 0,
+      "bclock_flag": null,
+      "g_ms2": null,
+      "g_src": null,
+      "first_fall_r2": null,
+      "max_drop_px": 14.5,
+      "rest_minus_impact_px": null,
+      "held_at_end_ncc": 0.793,
+      "n_impacts": null
+    },
+    "measure_ball_v5": {
+      "g_ms2": null,
+      "g_ci95_ms2": null,
+      "r2": 0.7338232920306342,
+      "fit_frames": null,
+      "track_source": null,
+      "Quality_flag": null
+    },
+    "dual_patch_gripper_vs_ball": {
+      "n_frames": 189,
+      "max_gripper_drop_f0_14_px": 0.0,
+      "max_ball_drop_f0_14_px": 0.0,
+      "max_ball_minus_gripper_sep_f0_14_px": 2.0,
+      "max_gripper_drop_f0_42_px": 15.0,
+      "max_ball_drop_f0_42_px": 14.0,
+      "max_ball_minus_gripper_separation_f0_42_px": 4.0,
+      "median_abs_ball_gripper_sep_f0_42_px": 1.0,
+      "gripper_ball_y_corr_f0_42": 0.9965,
+      "gripper_y_f0_f12_f20_f38": [
+        68.0,
+        51.0,
+        55.0,
+        63.0
+      ],
+      "ball_y_f0_f12_f20_f38": [
+        117.0,
+        102.0,
+        105.0,
+        114.0
+      ],
+      "spawned_plank_ball": {
+        "n_frames_with_dark_object_in_flight_or_plank": 162,
+        "first_frame_detected": 15,
+        "last_frame_detected": 188,
+        "median_area_px": 2144.0,
+        "equiv_diameter_px": 52.247732811215734,
+        "median_y_px": 334.89143938459006
+      },
+      "physical_regime": "held_stationary_plus_spawned_substitute_ball"
+    }
+  }
+]
