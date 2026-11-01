@@ -1,0 +1,7 @@
+# Late object entering from above: D1 control ball-2 seed 1
+
+Source: `box_ctrl_b2_noneg_s1.mp4`, supplied by rog-cc (#2377); SHA256 `db631ce9244c1e3b4c6bd3b0de6f5ae6c5c13d8eed89f124a4cdc3be98d4938d`. The sheets use original 832x480 decoded frames, arranged without image rescaling, at labeled zero-based indices; JPEG is lossy. `13_entry.jpg` covers the initial frame and entry; `13_native.jpg` shows later motion.
+
+A dark ball-like object enters from the top at approximately frame 81, moves down in front of the robot and toward the foreground, and is cut by the bottom edge by approximately frame 133. The identity and origin of this object cannot be established from visible frames alone. Its apparent increase in size is consistent with motion toward the camera; it is not evidence of physical growth. The gripper region at frame 0 contains a small dark object, but the off-frame interval prevents a continuity claim. This clip is unsuitable for an unqualified continuous single-ball track or a restitution estimate across the unobserved interval.
+
+This is a selected example, not an arm-level rate, a recipe-control comparison, a planted-validated measurement, or proof of hallucination. Reviewed after prior reports and after opening the pseudonym key. All 16 full-frame grids were scanned at reduced resolution; native-resolution inspection to date covers this example and the event in #2408 only. Other clips and events still need native-frame coding.
