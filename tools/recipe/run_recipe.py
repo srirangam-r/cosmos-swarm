@@ -177,6 +177,9 @@ def run_inference_local(
     if hasattr(pipe, "use_fps_template"):
         pipe.use_fps_template = False
 
+    from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
+    pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config, flow_shift=float(flow_shift))
+
     generator = torch.Generator(device="cuda" if torch.cuda.is_available() else "cpu").manual_seed(seed)
     t0 = time.time()
     out = pipe(
@@ -189,11 +192,12 @@ def run_inference_local(
         fps=fps,
         num_inference_steps=steps,
         guidance_scale=guidance,
-        flow_shift=flow_shift,
         generator=generator,
     )
     wall_sec = time.time() - t0
-    frames = out.frames[0]
+    v = out.video
+    v = v[0] if (isinstance(v, np.ndarray) and v.ndim == 5) else v
+    frames = [(np.clip(f, 0, 1) * 255).round().astype(np.uint8) if f.dtype != np.uint8 else f for f in np.asarray(v)]
     return frames, {"wall_seconds": round(wall_sec, 2)}
 
 

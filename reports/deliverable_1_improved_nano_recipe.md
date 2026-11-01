@@ -3,32 +3,37 @@
 **Swarm Deliverable for NVIDIA Cosmos3-Nano**  
 **Authoritative Specification: Dynamic Mid-Event Conditioning (The Release-Seam Protocol)**  
 **Freeze Target:** Sun Nov 1, 8:00 AM EST (13:00 UTC)  
-**Deliverable Status:** Validated, Replicated, and Runnable End-to-End  
+**Deliverable Status:** Provisional (Whether mid-event conditioning counts as a fix is a human decision; qualified on kinematic onset and long-horizon visual QC)
 
 ---
 
 ## Executive Summary
 
-To fulfill **Charter Deliverable 1**, this document presents the definitive, validated recipe that makes NVIDIA Cosmos3-Nano physically and visually superior: **Dynamic Mid-Event Conditioning (The Release-Seam Protocol)**.
+To fulfill **Charter Deliverable 1**, this document presents the synthesized recipe for NVIDIA Cosmos3-Nano: **Dynamic Mid-Event Conditioning (The Release-Seam Protocol)**.
 
-Stock Cosmos3-Nano was reported by GAUGE (arXiv:2608.05948) to exhibit an apparent "slow gravity" of $0.45\text{ m/s}^2$ on bouncing ball scenes. Through rigorous multi-agent investigations, the swarm established that Nano's internal gravitational mechanics are not slow. Rather, when conditioned on initial frames where an object is clamped by a mechanical holder or gripper (e.g. Franka robotic arm in GAUGE frame 0), **Nano never releases the object into free fall ($0.0\%$ release rate across $31/31$ clips)**. Instead, it suffers catastrophic visual failure modes:
+Stock Cosmos3-Nano was reported by GAUGE (arXiv:2608.05948) to exhibit an apparent "slow gravity" of $0.45\text{ m/s}^2$ on bouncing ball scenes. Through multi-agent investigations, the swarm established that Nano's internal gravitational mechanics are not slow. Rather, when conditioned on initial frames where an object is clamped by a mechanical holder or gripper (e.g. Franka robotic arm in GAUGE frame 0), **Nano never releases the object into free fall ($0.0\%$ release rate across $31/31$ clips)**. Instead, it suffers catastrophic visual failure modes:
 1. **Phantom Duplicate Spawning (100% on Seed 1):** The ball remains clamped in the gripper jaws while an unphysical clone ball materializes directly on the plank.
 2. **Violent Arm Plunging:** The mechanical gripper arm plunges downward into the table ($>110\text{ px}$ excursion).
 3. **Multi-Second Hovering:** The object levitates motionless in mid-air.
 
-The reported $0.45\text{ m/s}^2$ was a spurious fitting artifact caused by tracking non-released objects or phantom clones. Exhaustive parameter sweeps established that prompt engineering, negative prompts, RoPE/text FPS conditioning, CFG/shift tuning, and synthetic LoRA fine-tuning (Finding `#1661`: $0/66$ releases, $0.0\%$) all fail to overcome this visual grasp deadlock.
+The reported $0.45\text{ m/s}^2$ was a fitting artifact caused by tracking non-released objects or phantom clones. Exhaustive parameter sweeps established that prompt engineering, negative prompts, RoPE/text FPS conditioning, CFG/shift tuning, and synthetic LoRA fine-tuning (Finding `#1661`: $0/66$ releases, $0.0\%$) all fail to overcome this visual grasp deadlock.
 
-### What the Validated Recipe Delivers:
-By conditioning Cosmos3-Nano at the dynamic release seam (the first frame where object detachment has initiated), the model bypasses the static visual trap and transitions into its latent ballistic manifold:
-- **Ballistic Motion Recovery:** Restores genuine object release ($100\%$ visual release rate across $16/16$ clips vs $0.0\%$ baseline), completely eliminating phantom duplicate spawning ($100\% \to 0\%$ on Seed 1) and mechanical arm plunging. In clean ballistic flight fits (Ball 1 Seed 1), the referee-validated tracker measures $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2$, $R^2 = 0.998$), matching real physical motion capture ($9.81\text{ m/s}^2$) and resolving the $0.45\text{ m/s}^2$ artifact. (See §2.3 for kinematic onset qualifications).
-- **Genuine Object Release:** Improves release rate from **$0.0\%$ ($0/31$) to $100.0\%$ ($16/16$)** confirmed by visual and multi-ROI tracking.
-- **Extinction of Catastrophic Artifacts:** Eliminates phantom duplicate spawning ($100\% \to 0\%$ on Seed 1) and suppresses unphysical arm plunging.
-- **NVIDIA Motion Fidelity:** Improves by **$+60.0\%$** ($0.1389 \to 0.2222$) on primary seed triplets, and gains across all 16 combinatorial 3-of-4 seed triplets ($\Delta\text{MF} \in [+0.0833, +0.4167]$, mean $+0.2118$) by extinguishing spurious scene optical flow.
-- **DOVER Visual Quality:** Zero degradation in technical quality ($\Delta = +0.0012 \pm 0.0009$, $p=0.232$). Raw DOVER Fused delta is $-0.0163 \pm 0.0059$ (95% one-sided paired-$t$ lower bound $-0.0275$); real-video control across 4 drops shows a $-0.0049 \pm 0.0012$ fused drop due to in-flight motion blur, yielding a descriptive difference-in-differences generative shift of $-0.0114 \pm 0.0060$ (within empirical seed noise $\sigma = 0.021\text{--}0.032$).
-- **NVIDIA Plausibility Judge (Cosmos-HUE / Qwen3-VL-2B):** Independently evaluated under PREREG A3 (commit `c292c1a`) across 16 clips, **passing non-inferiority** on the primary Physical question set ($\Delta = +0.0040 \pm 0.0131$, lower 95% bound $-0.0191 > -0.040$ margin) and Overall set ($\Delta = -0.0018 \pm 0.0063$, lower 95% bound $-0.0129 > -0.030$ margin).
+### Critical Open Points & Status Qualifications:
+Per human steering (#1825) and peer audits (#1639, #1747, #1761, #1768, #1776, #1804, #1843, #1846, #1882, #1889):
+- **Input Change:** The recipe **changes the input** (frame 33/35, after the mechanical release seam, instead of frame 0). Whether mid-event conditioning qualifies as a valid fix is a human decision; hence the recipe is labeled **provisional**.
+- **Evaluation Sample Size:** Evaluated on $n = 2\text{ balls} \times 4\text{ seeds}$ ($8\text{ matched pairs} / 16\text{ clips total}$ @ $832\times 480$, $189\text{f}$, $24\text{ fps}$).
+- **Visual Quality (DOVER):** DOVER fused drops by $-0.016 \pm 0.006$ (raw 95% one-sided paired-$t$ lower bound: $-0.0275$; about $-0.011$ after the real-video input control due to in-flight motion blur). We explicitly drop the earlier claim of "no visual degradation"; technical DOVER delta ($+0.0012 \pm 0.0009, p=0.232$) is non-significant and does not prove zero degradation.
+- **Motion Consistency (MC):** MC is a penalty metric in VBench, and it got worse under mid-fall dynamics rather than better. We explicitly retract the earlier claim of "MC 4x better".
+- **Kinematic Onset Flags:** When tested with referee-validated `firstfall.py`, 0/8 mid-fall clips receive `ok` flags (5 `weak`, 3 `no_free_fall`). The quoted $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2, R^2 = 0.998$) is specifically Ball 1 Seed 1's 4-frame fit, not a cross-seed average. Across the other 7 clips, polynomial fits show wide scatter due to rapid motion blur and a short 3–5 frame flight before impact.
+- **Long-Horizon Visual QC:** Frame-level inspection across 189-frame clips (Review #1882, #1889) reveals that both baseline and recipe exhibit late-stage hallucinations: balls swelling 2–4×, reappearing hanging under the gripper at frames 20–60, or disappearing after bounce. The recipe restores initial detachment and clean early-frame descent, but full 189-frame physical permanence remains an active challenge.
+
+### What the Recipe Delivers:
+By conditioning Cosmos3-Nano at the dynamic release seam (the first frame where object detachment has initiated):
+- **Initial Detachment Recovery:** Restores genuine object release ($100\%$ visual release rate across $16/16$ clips vs $0.0\%$ baseline), eliminating phantom duplicate spawning ($100\% \to 0\%$ on Seed 1) and mechanical arm plunging. In clean ballistic flight fits (Ball 1 Seed 1), the referee-validated tracker measures $g = 9.73 \pm 1.91\text{ m/s}^2$ ($g_{h,T} = 9.86\text{ m/s}^2$, $R^2 = 0.998$), matching real physical motion capture ($9.81\text{ m/s}^2$) and resolving the $0.45\text{ m/s}^2$ artifact.
+- **NVIDIA Plausibility Judge (Cosmos-HUE / Qwen3-VL-2B):** Independently evaluated under PREREG A3 (commit `c292c1a`) across 16 clips, non-inferior on Physical questions ($\Delta = +0.0040 \pm 0.0131$, lower 95% bound $-0.0191 > -0.040$ margin) and Overall set ($\Delta = -0.0018 \pm 0.0063$, lower 95% bound $-0.0129 > -0.030$ margin).
 - **Dynamic Degree:** Moves normalized scene flow from $7.64$ toward the real-world ground truth reference of $0.255$, and cuts binary dynamic degree by $-0.500 \pm 0.189$ ($p=0.033$).
 
-The recipe is completely non-invasive: it requires **no weight modifications, no fine-tuning checkpoints, and no specialized sampling loops**, running directly on standard Cosmos3-Nano checkpoints (`nvidia/Cosmos3-Nano`) via a reproducible 2-step Python pipeline.
+The recipe is completely non-invasive: it requires **no weight modifications, no fine-tuning checkpoints, and no specialized sampling loops**, running directly on standard Cosmos3-Nano checkpoints (`nvidia/Cosmos3-Nano`) via a reproducible Python pipeline.
 
 ---
 
@@ -162,7 +167,10 @@ canvas = np.zeros((480, 832, 3), dtype=np.uint8)
 canvas[(480 - nh)//2 : (480 - nh)//2 + nh, (832 - nw)//2 : (832 - nw)//2 + nw] = resized
 cond_image = Image.fromarray(cv2.cvtColor(canvas, cv2.COLOR_BGR2RGB))
 
-# 3. Generate clip with validated recipe parameters
+# 3. Configure flow shift scheduler and generate clip
+from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
+pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config, flow_shift=10.0)
+
 generator = torch.Generator(device="cuda").manual_seed(1)
 output = pipe(
     image=cond_image,
@@ -174,12 +182,14 @@ output = pipe(
     fps=24,
     num_inference_steps=35,
     guidance_scale=6.0,
-    flow_shift=10.0,
     generator=generator,
 )
 
 # 4. Save video
-export_to_video(output.frames[0], "recipe_output.mp4", fps=24)
+video = output.video[0]
+if isinstance(video, np.ndarray) and video.dtype != np.uint8:
+    video = (np.clip(video, 0, 1) * 255).round().astype(np.uint8)
+export_to_video(video, "recipe_output.mp4", fps=24)
 print("Recipe execution complete: recipe_output.mp4")
 ```
 
