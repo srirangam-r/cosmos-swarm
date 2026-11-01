@@ -1,0 +1,38 @@
+{
+ "arms": {
+  "base": {
+   "n_clips": 32,
+   "n_prompts_both_seeds": 16,
+   "dover_fused": 0.5991363282801896,
+   "dover_technical": -0.05181378941051662,
+   "dover_aesthetic": 0.08828939084196463,
+   "dd_binary": 0.65625,
+   "dd_norm": 7.890489007218016
+  }
+ },
+ "seed_noise": {
+  "base": {
+   "dover_fused": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.08645218034503332
+   },
+   "dover_technical": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.010837892647564046
+   },
+   "dover_aesthetic": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.030794346356032846
+   },
+   "dd_binary": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 0.2850438562747845
+   },
+   "dd_norm": {
+    "n_pairs": 16,
+    "per_clip_seed_sd": 3.435131277019567
+   }
+  }
+ },
+ "paired_vs_base": {}
+}
