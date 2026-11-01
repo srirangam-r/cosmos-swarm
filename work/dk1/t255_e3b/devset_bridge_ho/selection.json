@@ -1,0 +1,174 @@
+{
+ "source": "IPEC-COMMUNITY/bridge_orig_lerobot (LeRobot v2.0)",
+ "selection": "held-out for t255 E3b: random.Random(20261102).sample(episodes with length>=33 minus the 24 devset_bridge episodes, 24), sorted by index",
+ "episodes": [
+  {
+   "episode_index": 2485,
+   "tasks": [
+    "fold the cloth from right to left"
+   ],
+   "length": 41
+  },
+  {
+   "episode_index": 3755,
+   "tasks": [
+    "fold the cloth from bottom right to top left"
+   ],
+   "length": 38
+  },
+  {
+   "episode_index": 6862,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 8988,
+   "tasks": [
+    "put broccoli in pot"
+   ],
+   "length": 36
+  },
+  {
+   "episode_index": 10532,
+   "tasks": [
+    "open the drawer"
+   ],
+   "length": 33
+  },
+  {
+   "episode_index": 10907,
+   "tasks": [
+    "take sushi out of pot cardboard fence"
+   ],
+   "length": 36
+  },
+  {
+   "episode_index": 11495,
+   "tasks": [
+    ""
+   ],
+   "length": 42
+  },
+  {
+   "episode_index": 21303,
+   "tasks": [
+    "put the cube with a hole on top of the yellow cube"
+   ],
+   "length": 46
+  },
+  {
+   "episode_index": 22875,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 23459,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 26455,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 29224,
+   "tasks": [
+    "move the red pot to the left side of the sink"
+   ],
+   "length": 53
+  },
+  {
+   "episode_index": 32090,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 33862,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 34859,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 35603,
+   "tasks": [
+    ""
+   ],
+   "length": 35
+  },
+  {
+   "episode_index": 36198,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 36691,
+   "tasks": [
+    "put the ball in the cup"
+   ],
+   "length": 41
+  },
+  {
+   "episode_index": 43133,
+   "tasks": [
+    "open the drawer"
+   ],
+   "length": 33
+  },
+  {
+   "episode_index": 43569,
+   "tasks": [
+    ""
+   ],
+   "length": 46
+  },
+  {
+   "episode_index": 45047,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 47556,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 50991,
+   "tasks": [
+    ""
+   ],
+   "length": 47
+  },
+  {
+   "episode_index": 53096,
+   "tasks": [
+    "fold the cloth from the top right to bottom left"
+   ],
+   "length": 35
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "source": "IPEC-COMMUNITY/bridge_orig_lerobot (LeRobot v2.0)",
+ "selection": "held-out for t255 E3b: random.Random(20261102).sample(episodes with length>=33 minus the 24 devset_bridge episodes, 24), sorted by index",
+ "n_chunks": 2,
+ "clips": [
+  {
+   "id": "bridge_002485",
+   "episode_index": 2485,
+   "prompt": "fold the cloth from right to left"
+  },
+  {
+   "id": "bridge_003755",
+   "episode_index": 3755,
+   "prompt": "fold the cloth from bottom right to top left"
+  },
+  {
+   "id": "bridge_006862",
+   "episode_index": 6862,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_008988",
+   "episode_index": 8988,
+   "prompt": "put broccoli in pot"
+  },
+  {
+   "id": "bridge_010532",
+   "episode_index": 10532,
+   "prompt": "open the drawer"
+  },
+  {
+   "id": "bridge_010907",
+   "episode_index": 10907,
+   "prompt": "take sushi out of pot cardboard fence"
+  },
+  {
+   "id": "bridge_011495",
+   "episode_index": 11495,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_021303",
+   "episode_index": 21303,
+   "prompt": "put the cube with a hole on top of the yellow cube"
+  },
+  {
+   "id": "bridge_022875",
+   "episode_index": 22875,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_023459",
+   "episode_index": 23459,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_026455",
+   "episode_index": 26455,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_029224",
+   "episode_index": 29224,
+   "prompt": "move the red pot to the left side of the sink"
+  },
+  {
+   "id": "bridge_032090",
+   "episode_index": 32090,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_033862",
+   "episode_index": 33862,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_034859",
+   "episode_index": 34859,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_035603",
+   "episode_index": 35603,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_036198",
+   "episode_index": 36198,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_036691",
+   "episode_index": 36691,
+   "prompt": "put the ball in the cup"
+  },
+  {
+   "id": "bridge_043133",
+   "episode_index": 43133,
+   "prompt": "open the drawer"
+  },
+  {
+   "id": "bridge_043569",
+   "episode_index": 43569,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_045047",
+   "episode_index": 45047,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_047556",
+   "episode_index": 47556,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_050991",
+   "episode_index": 50991,
+   "prompt": ""
+  },
+  {
+   "id": "bridge_053096",
+   "episode_index": 53096,
+   "prompt": "fold the cloth from the top right to bottom left"
+  }
+ ]
+}
