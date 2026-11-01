@@ -1,0 +1,1088 @@
+{
+ "n_coded": 48,
+ "rates": {
+  "rel_strict": {
+   "O": {
+    "Y": 0,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "A": {
+    "Y": 8,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.2799923761135083,
+     0.7200076238864918
+    ]
+   },
+   "G": {
+    "Y": 5,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.14164435051961052,
+     0.5559606813326594
+    ]
+   }
+  },
+  "anyfall": {
+   "O": {
+    "Y": 10,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.38640647097934805,
+     0.8151901744524719
+    ]
+   },
+   "A": {
+    "Y": 16,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.8063865817272801,
+     1.0
+    ]
+   },
+   "G": {
+    "Y": 16,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.8063865817272801,
+     1.0
+    ]
+   }
+  },
+  "clone": {
+   "O": {
+    "Y": 13,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.5699064013154177,
+     0.9340852122641323
+    ]
+   },
+   "A": {
+    "Y": 4,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.10181901984237347,
+     0.4949876892939865
+    ]
+   },
+   "G": {
+    "Y": 5,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.14164435051961052,
+     0.5559606813326594
+    ]
+   }
+  },
+  "carried": {
+   "O": {
+    "Y": 8,
+    "n": 15,
+    "U": 1,
+    "wilson95": [
+     0.3011663015105079,
+     0.7519077474025356
+    ]
+   },
+   "A": {
+    "Y": 0,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "G": {
+    "Y": 0,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.0,
+     0.19361341827271994
+    ]
+   }
+  },
+  "holder_back": {
+   "O": {
+    "Y": 0,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "A": {
+    "Y": 0,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "G": {
+    "Y": 7,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.2309836333518552,
+     0.6682180439322348
+    ]
+   }
+  },
+  "hover": {
+   "O": {
+    "Y": 0,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "A": {
+    "Y": 1,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.011119057308331216,
+     0.2832926836802987
+    ]
+   },
+   "G": {
+    "Y": 2,
+    "n": 16,
+    "U": 0,
+    "wilson95": [
+     0.034976749337057134,
+     0.3602333143674828
+    ]
+   }
+  }
+ },
+ "seed_level": {
+  "rel_strict:A-O": {
+   "up": 5,
+   "down": 0,
+   "tie": 3,
+   "sign_p_two_sided": 0.0625
+  },
+  "rel_strict:G-O": {
+   "up": 4,
+   "down": 0,
+   "tie": 4,
+   "sign_p_two_sided": 0.125
+  },
+  "anyfall:A-O": {
+   "up": 4,
+   "down": 0,
+   "tie": 4,
+   "sign_p_two_sided": 0.125
+  },
+  "anyfall:G-O": {
+   "up": 4,
+   "down": 0,
+   "tie": 4,
+   "sign_p_two_sided": 0.125
+  },
+  "clone:A-O": {
+   "up": 1,
+   "down": 6,
+   "tie": 1,
+   "sign_p_two_sided": 0.125
+  },
+  "clone:G-O": {
+   "up": 1,
+   "down": 5,
+   "tie": 2,
+   "sign_p_two_sided": 0.21875
+  },
+  "carried:A-O": {
+   "up": 0,
+   "down": 5,
+   "tie": 3,
+   "sign_p_two_sided": 0.0625
+  },
+  "carried:G-O": {
+   "up": 0,
+   "down": 5,
+   "tie": 3,
+   "sign_p_two_sided": 0.0625
+  },
+  "holder_back:A-O": {
+   "up": 0,
+   "down": 0,
+   "tie": 8,
+   "sign_p_two_sided": 1.0
+  },
+  "holder_back:G-O": {
+   "up": 5,
+   "down": 0,
+   "tie": 3,
+   "sign_p_two_sided": 0.0625
+  },
+  "hover:A-O": {
+   "up": 1,
+   "down": 0,
+   "tie": 7,
+   "sign_p_two_sided": 1.0
+  },
+  "hover:G-O": {
+   "up": 2,
+   "down": 0,
+   "tie": 6,
+   "sign_p_two_sided": 0.5
+  }
+ },
+ "depart": {
+  "O": {
+   "departed": 15,
+   "n": 16,
+   "median_frame": 9.0
+  },
+  "A": {
+   "departed": 16,
+   "n": 16,
+   "median_frame": 1.0
+  },
+  "G": {
+   "departed": 16,
+   "n": 16,
+   "median_frame": 1.5
+  }
+ },
+ "cells": {
+  "A_ball1_s1": {
+   "hex": "15776c",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f1-4 (f4 ~1.2x larger at back table edge), contact ~f5; rebounds above start height f9-10; erratic bounces all clip; two balls appear to coexist at f27 and f52 (clone, LOW CONFIDENCE at tile size)",
+   "file": "t139_A_ball1_s1.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.13481305539608002,
+    "ncc_min": -0.5442873239517212,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s2": {
+   "hex": "fed4ba",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f1-9 (~1.2x by contact), contact f10-11, then repeated high e~1 bounces all clip",
+   "file": "t139_A_ball1_s2.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.18661585450172424,
+    "ncc_min": -0.5096296668052673,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s3": {
+   "hex": "f89222",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; ball VANISHES f1-8; ~2x ball re-enters from top f9, falls f9-12, lands f13, bounces/rolls; a second small grey ball coexists f32-44 (clone)",
+   "file": "t139_A_ball1_s3.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.11915698647499084,
+    "ncc_min": -0.4596851170063019,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s4": {
+   "hex": "81453b",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends f1-4 every frame (f2 smeared, motion blur), contact ~f5 at back of table; then rebounds ABOVE start height f11-16 (energy gain), repeated bounces, ball grows ~2x by f84-92",
+   "file": "t139_A_ball1_s4.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.525571882724762,
+    "ncc_min": -0.5323532223701477,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s5": {
+   "hex": "a18faa",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; ball rises UP-right and grows f2-7, exits top f8-15 (no fall from start); a larger ball RE-ENTERS from top f16, falls every frame f16-21 to the back table edge; later rises/falls again, swells ~3x on plank f64-72, rolls out by f76",
+   "file": "t139_A_ball1_s5.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": -0.08128015697002411,
+    "ncc_min": -0.5207622051239014,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s6": {
+   "hex": "4c870b",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f3-12 at constant size (clean), contacts the back table ~f12, small bounces f13-24, rolls along the plank and exits left by f36; empty after",
+   "file": "t139_A_ball1_s6.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": -0.1501230150461197,
+    "ncc_min": -0.5176573991775513,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s7": {
+   "hex": "f7e871",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; f1 ball faint/smeared slightly lower; descends f1-4 while SWELLING (~1.8x f2, ~3x on plank f4; rel N by (c)); erratic bounces with size changes all clip. Near-identical to 8fa18e",
+   "file": "t139_A_ball1_s7.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.1742379367351532,
+    "ncc_min": -0.38354697823524475,
+    "n_frames": 93
+   }
+  },
+  "A_ball1_s8": {
+   "hex": "1f160e",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "Y",
+   "note": "f0 no holder; ball stays at start, unsupported, jittering f0-25 and f28-48 and f60-92 (hover); ghost smear on plank f8; f26-27 a streak JUMPS to the plank within ~2 frames (not a continuous fall); f52 another streak, ball rolls on plank f56-72 while a ball sits at the start (clone). anyfall U pending native f48-58 check; NATIVE f48-58: ball at start descends f49,f50,f51 (f51 faint) then streak to plank f52; borderline anyfall Y (3 intermediate heights, last faint); ball back at start f56-58",
+   "file": "t139_A_ball1_s8.mp4",
+   "depart": {
+    "depart_frame": 4,
+    "ncc_f92": 0.6331627368927002,
+    "ncc_min": -0.5691695213317871,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s1": {
+   "hex": "c3b830",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; f1 ball smears/fades into faint fragments, f2 gone, f3 a ball low near the table (teleport); chaos f4-12; a ball falls f17-19 (3 heights); two balls stacked f24 and f48 (clone)",
+   "file": "t139_A_ball2_s1.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.09384194761514664,
+    "ncc_min": -0.44119179248809814,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s2": {
+   "hex": "303cb5",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f0-8 single size; blurry/morph near contact f9-11; later rolls toward camera, flies back up f24-31 and hangs mid-air f32-44 then drops again (implausible but after rel criterion)",
+   "file": "t139_A_ball2_s2.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.11943180114030838,
+    "ncc_min": -0.3943147361278534,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s3": {
+   "hex": "d267d4",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; original ball VANISHES f1-8 (gap); f9 a ~2x ball enters from the top, falls every frame f9-12, lands f12-13, bounces e~1, rolls; small dark debris beside it f40-44 (replacement, not coexistence -> clone N)",
+   "file": "t139_A_ball2_s3.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.06680434197187424,
+    "ncc_min": -0.553979218006134,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s4": {
+   "hex": "57ef44",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; f1 the same ball is ~30 px lower (>1 diam in ONE frame), motion-smeared but one ball of similar size; f2-3 pale/faint smear (after the window), f4 at the back table; BORDERLINE Y by the window rule (native f0-6 checked); later bounces to the top, plank shifts f8-9/f19-20",
+   "file": "t139_A_ball2_s4.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.6078295707702637,
+    "ncc_min": -0.5631586313247681,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s5": {
+   "hex": "4dc275",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; ~still f0-4, then the same ball descends SLOWLY every frame f5-16 at constant size (glide, ~12 frames to the table), contact ~f17; rebounds above start f24-32, exits top f36-52, a big ball re-enters f56 and falls f56-64, rolls",
+   "file": "t139_A_ball2_s5.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": -0.19048775732517242,
+    "ncc_min": -0.45969560742378235,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s6": {
+   "hex": "b2db9e",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f1-10 at constant size (clean), contacts the back table f11-12, small bounces, rolls along the plank, exits left ~f40",
+   "file": "t139_A_ball2_s6.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.21752287447452545,
+    "ncc_min": -0.4133889377117157,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s7": {
+   "hex": "8fa18e",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; f1 ball faint/smeared; descends f2-4 but SWELLS ~1.5x at f2, ~2.5x f3, ~3x on plank f4 (rel N by (c)); f7 a small ball reappears mid-air (identity swap), erratic bounces with size changing all clip",
+   "file": "t139_A_ball2_s7.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.295987069606781,
+    "ncc_min": -0.18723690509796143,
+    "n_frames": 93
+   }
+  },
+  "A_ball2_s8": {
+   "hex": "a99ca1",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends f0-7 (~2-3 diam), REVERSES UP in mid-air f8-13 with no contact, then bobs up/down (yo-yo) all clip, never reaches plank. rel_strict N by (e); by the 1-diameter window alone it would be Y (ambiguity disclosed)",
+   "file": "t139_A_ball2_s8.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": 0.14791607856750488,
+    "ncc_min": -0.4895240068435669,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s1": {
+   "hex": "bcf260",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "N",
+   "note": "f0 no holder; ball vanishes f1-2, empty f2-15; f16 a white gripper appears with a giant ball under it, ball falls f16-19 to the plank (holder_back); gripper reappears f28-32, f44, f52-56, f64, f76-80; replacement ball (no coexistence)",
+   "file": "t139_G_ball1_s1.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.38684380054473877,
+    "ncc_min": -0.4854203164577484,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s2": {
+   "hex": "8389b4",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; ball starts down f1 (smeared), then TWO balls f2-4 (y~90 and y~135 tile) during descent, merge near table f5-6; erratic bounces above start height thereafter. rel N by (a)/(b) duplicate",
+   "file": "t139_G_ball1_s2.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.1429104506969452,
+    "ncc_min": -0.22633898258209229,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s3": {
+   "hex": "10e422",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "Y",
+   "note": "f0 no holder; original ball stays at start f0-92 unsupported; f6 metal gripper enters top with GIANT ball which falls f7-14 lands bounces; holder_back = gripper appears holding the clone",
+   "file": "t139_G_ball1_s3.mp4",
+   "depart": {
+    "depart_frame": 10,
+    "ncc_f92": 0.38617661595344543,
+    "ncc_min": -0.5296631455421448,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s4": {
+   "hex": "d67e83",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "N",
+   "note": "f0 no holder; f1-7 CHAOS: ball smears/vanishes, a giant translucent blob swoops down to the plank, plank flips f7-9; f10-12 a gripper flange appears at top with a ball beneath it (holder_back), ball falls every frame f13-16 to plank; flange reappears f48-60, f88-92; ball teleports between top and plank",
+   "file": "t139_G_ball1_s4.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.18129505217075348,
+    "ncc_min": -0.580254852771759,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s5": {
+   "hex": "f499a9",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "N",
+   "note": "f0 no holder; ball at start f0-5; f6-16 descends while SWELLING 1x->3x (approaching camera), lands f17-22, rises and shrinks back to the start f23-48, repeats f56-72 then back to start f80-92: looks like a tethered pendulum swinging toward camera; a gripper/flange intrudes at top f11-29 and f60-76 above it (holder_back). rel N by (c)",
+   "file": "t139_G_ball1_s5.mp4",
+   "depart": {
+    "depart_frame": 3,
+    "ncc_f92": 0.3893072009086609,
+    "ncc_min": -0.5273416042327881,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s6": {
+   "hex": "ec3fb5",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f1-5, ~1.2x by the first diameter (f2) but progressive SWELL to ~1.8x at contact f5-6 (borderline vs (c); Y by the window rule); e~1 bounces all clip with the ball ~2.5x by f40; a flange intrudes at top f32-60 without touching",
+   "file": "t139_G_ball1_s6.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.16545958817005157,
+    "ncc_min": -0.502121090888977,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s7": {
+   "hex": "02d1bd",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "N",
+   "note": "f0 no holder; f1-7 a white hook-like object at the top, ball gone from the start f1; faint blob mid f2, ball at the back table f3, on the plank f4 (gap/fade); empty f7-17; a ball falls f18-22 (anyfall); a Franka arm descends onto the ball f25-52 and touches it f36-44 (holder_back), rises f52-56; balls fall from the top again f68-92",
+   "file": "t139_G_ball1_s7.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.47738751769065857,
+    "ncc_min": -0.49721550941467285,
+    "n_frames": 93
+   }
+  },
+  "G_ball1_s8": {
+   "hex": "1a2426",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends f3-6 at constant size (>1 diam by f4) then REVERSES UP in mid-air f7-15 and exits the top before any contact -> N by the (e) convention (as a99ca1; window-rule ambiguity disclosed); re-enters ~2x f21-27, lands f28, high e>1 bounces",
+   "file": "t139_G_ball1_s8.mp4",
+   "depart": {
+    "depart_frame": 3,
+    "ncc_f92": -0.08596688508987427,
+    "ncc_min": -0.5342172384262085,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s1": {
+   "hex": "09eb6a",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "N",
+   "note": "f0 no holder; ball rises UP f1-3, exits top f4-9; a small ball re-enters from top and falls f10-15; gripper/flange intrudes from top repeatedly (f12-17, 28-32, 48, 64, 76-80, 92) with balls beneath it (holder_back, contact LOW CONF); grey + dark balls coexist f16-19 etc (clone); chaotic",
+   "file": "t139_G_ball2_s1.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": 0.5926693677902222,
+    "ncc_min": -0.520458459854126,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s2": {
+   "hex": "83afce",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; ~still f0-2, same ball descends every frame f3-6 (motion-blur elongation f5), contact on plank ~f7; e~1 repeated bounces to near start height through f92",
+   "file": "t139_G_ball2_s2.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": -0.032595444470644,
+    "ncc_min": -0.2719214856624603,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s3": {
+   "hex": "e83900",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; original small ball stays at start f0-5 while a GIANT ~3x ball enters from the top f5-7 (coexist f5 -> clone) and falls every frame f7-15 to the table; plank flips/multiplies f22-40",
+   "file": "t139_G_ball2_s3.mp4",
+   "depart": {
+    "depart_frame": 10,
+    "ncc_f92": -0.059108395129442215,
+    "ncc_min": -0.3268675208091736,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s4": {
+   "hex": "f5cddd",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "Y",
+   "hover": "N",
+   "note": "f0 no holder; ball smears f1 and is gone f2-9; f9-13 a gripper descends from the top with a giant ball (holder_back), ball drops f13-16 onto the plank (carried N: the original ball is gone; replacement, same convention as 10e422); plank warps f7-14; gripper with ball again f48-56",
+   "file": "t139_G_ball2_s4.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.07209271937608719,
+    "ncc_min": -0.6487035751342773,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s5": {
+   "hex": "4f2fa7",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; ball drifts UP f1-5 to the top edge, sits there f5-15; f16-20 a stretched DOUBLE-ball blob descends, lands f22 as an elongated blob; two balls stacked f29-32 and f60 (clone)",
+   "file": "t139_G_ball2_s5.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.1997104436159134,
+    "ncc_min": -0.5976343750953674,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s6": {
+   "hex": "57161e",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f0-6 at constant size, contact ~f6; at f7 it is suddenly ~3x larger on the plank (swell AT contact, after the 1-diam window); repeated high bounces; a gripper intrudes at the top edge f25-60 but never touches the ball",
+   "file": "t139_G_ball2_s6.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": -0.21389977633953094,
+    "ncc_min": -0.42839837074279785,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s7": {
+   "hex": "0d778b",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "Y",
+   "note": "f0 no holder; ball HOVERS at start f0-23 (hover); f24-40 the same ball descends slowly every frame at constant size to the plank while a robot ARM (no hand) descends from the top f26-52 ~30-60 px above it, with NO visible contact (BORDERLINE carried, needs a native check); ball later back at the start position f56-92 (teleport); NATIVE f24-44: arm stays ~60-100 px above the ball, no contact -> carried N stands; ball faint/translucent f36-38 (after the 1-diameter window), lands f39",
+   "file": "t139_G_ball2_s7.mp4",
+   "depart": {
+    "depart_frame": 5,
+    "ncc_f92": 0.31994685530662537,
+    "ncc_min": -0.5640141367912292,
+    "n_frames": 93
+   }
+  },
+  "G_ball2_s8": {
+   "hex": "3387d9",
+   "rel_strict": "Y",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 no holder; same ball descends every frame f1-5 (~1.1x at the first diameter f2, swelling ~1.5x by f4; Y by window rule), contact ~f6; rebounds out of the top f13-21, re-enters and falls f22-28, repeated high bounces, rolls out by f76",
+   "file": "t139_G_ball2_s8.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": 0.1025751605629921,
+    "ncc_min": -0.4795849323272705,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s1": {
+   "hex": "104cbb",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; gripper lifts out of frame f5-7 taking the ball; empty f7-15; a GIANT ball enters from top f16 and falls every frame f17-20 to plank, bounces; gripper returns f28+ with ball hanging on a TETHER (carried); f32/f52 a ball in the jaws plus a big ball on the plank (clone). Near-identical to af1279",
+   "file": "t139_O_ball1_s1.mp4",
+   "depart": {
+    "depart_frame": 5,
+    "ncc_f92": 0.15680965781211853,
+    "ncc_min": -0.6154095530509949,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s2": {
+   "hex": "d8f635",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; f3-7 a GIANT ~4x ball enters from top right, descends f5-9 onto the plank, rolls; small ball stays in the jaws all clip (clone)",
+   "file": "t139_O_ball1_s2.mp4",
+   "depart": {
+    "depart_frame": null,
+    "ncc_f92": 0.9614698886871338,
+    "ncc_min": 0.9569154381752014,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s3": {
+   "hex": "0849d8",
+   "rel_strict": "N",
+   "anyfall": "N",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; arm CARRIES it down f8-16 (ball swells ~3x), sets it on plank f16-27, lets go f28-32, arm returns up f36-44 with a small ball back in jaws f44-92 while big ball rolls on plank (clone)",
+   "file": "t139_O_ball1_s3.mp4",
+   "depart": {
+    "depart_frame": 15,
+    "ncc_f92": 0.22870413959026337,
+    "ncc_min": -0.6148507595062256,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s4": {
+   "hex": "990f6b",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; original stays in jaws f0-92; a GIANT red/black ball enters from the bottom edge f6, bounces up/down f6-24 (falls f13-16), hangs under gripper f25-31, bounces f32-40 and rolls out (clone/re-entry)",
+   "file": "t139_O_ball1_s4.mp4",
+   "depart": {
+    "depart_frame": 9,
+    "ncc_f92": 0.32483282685279846,
+    "ncc_min": -0.5232768058776855,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s5": {
+   "hex": "164e8d",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; held f0-48; f52 a ~2.5x SWOLLEN ball appears beside jaws, falls f52-64 (4f rows), lands, rolls to camera growing, exits right f84-92. Near-identical to eab014. anyfall U pending native check; NATIVE f48-66: swollen ball descends every frame f51-66 -> anyfall Y",
+   "file": "t139_O_ball1_s5.mp4",
+   "depart": {
+    "depart_frame": 22,
+    "ncc_f92": 0.06149062514305115,
+    "ncc_min": -0.43966132402420044,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s6": {
+   "hex": "912cdd",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; f1 a ~2.5x SWOLLEN ball appears under the jaws and falls every frame f1-6, lands f7, bounces f8-31, rests on plank; a small ball stays in the jaws f16-92 (clone)",
+   "file": "t139_O_ball1_s6.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.0450376458466053,
+    "ncc_min": -0.3131260573863983,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s7": {
+   "hex": "919818",
+   "rel_strict": "N",
+   "anyfall": "N",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; held f0-19; arm CARRIES ball down f20-40 (swells ~3x), sets on plank f44-56, arm returns up f60-76 with a small ball in jaws f68-92 while big ball sits on plank (clone)",
+   "file": "t139_O_ball1_s7.mp4",
+   "depart": {
+    "depart_frame": 23,
+    "ncc_f92": 0.924517035484314,
+    "ncc_min": -0.6315493583679199,
+    "n_frames": 93
+   }
+  },
+  "O_ball1_s8": {
+   "hex": "69ae33",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "U",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; held f0-40; f44 ~2x ball swells out under jaws, falls f44-52 onto plank, one bounce f56, rests; a small pale ball stays in the jaws f52-92 (clone). anyfall U pending native f40-56 check (4f rows); NATIVE f40-56: ball descends every frame f44-50 -> anyfall Y; a thin white strap joins the jaws to the ball f45-49 while it drops (tether-like) -> carried U",
+   "file": "t139_O_ball1_s8.mp4",
+   "depart": {
+    "depart_frame": 21,
+    "ncc_f92": 0.3470722436904907,
+    "ncc_min": -0.3498697876930237,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s1": {
+   "hex": "af1279",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; gripper lifts out of frame f4-6 taking the ball (two small specks left f7-15); f16 gripper returns with a GIANT ball that drops f16-19 to plank (anyfall, borderline tether); then ball hangs on a TETHER from the gripper (carried) and teleports between tether and plank repeatedly f22-92",
+   "file": "t139_O_ball2_s1.mp4",
+   "depart": {
+    "depart_frame": 4,
+    "ncc_f92": 0.23470021784305573,
+    "ncc_min": -0.6465850472450256,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s2": {
+   "hex": "76703c",
+   "rel_strict": "N",
+   "anyfall": "N",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; f1-9 the whole gripper plunges chaotically to the plank (carried); f10 a giant ~5x ball appears on the plank, swells, rolls out; gripper back at the top holding a small ball f60-92 (clone)",
+   "file": "t139_O_ball2_s2.mp4",
+   "depart": {
+    "depart_frame": 1,
+    "ncc_f92": 0.29764240980148315,
+    "ncc_min": -0.48133188486099243,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s3": {
+   "hex": "312758",
+   "rel_strict": "N",
+   "anyfall": "N",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; arm CARRIES ball down f8-16 (swells ~3x), holds it on plank f16-27, releases f28-31 (plank warps), arm back up f32-40 with a small ball in jaws f36-92 while big ball rolls away (clone). Near-identical to 0849d8",
+   "file": "t139_O_ball2_s3.mp4",
+   "depart": {
+    "depart_frame": 9,
+    "ncc_f92": 0.40143081545829773,
+    "ncc_min": -0.6034637093544006,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s4": {
+   "hex": "0c6e34",
+   "rel_strict": "N",
+   "anyfall": "N",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; plank flips up f6-13 (scene chaos), a big ball SPAWNS on the plank f8; arm swoops down f11-21 and holds/lowers the big ball onto the plank (carried, borderline), returns up f22-28 with a small ball in jaws f28-92 while big ball rests on plank (clone)",
+   "file": "t139_O_ball2_s4.mp4",
+   "depart": {
+    "depart_frame": 10,
+    "ncc_f92": 0.5801499485969543,
+    "ncc_min": -0.4131137728691101,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s5": {
+   "hex": "eab014",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "N",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; ball stays in jaws f0-48; f52 gripper tilts, f56 a ~2.5x SWOLLEN ball emerges from jaws, falls f56-64 (anyfall from 4f-sampled rows), lands, rolls to camera growing, exits right f88-92; jaws empty at f92. rel N by (c) size; NATIVE f48-66: swollen ball descends every frame f53-66 -> anyfall Y",
+   "file": "t139_O_ball2_s5.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": 0.18188180029392242,
+    "ncc_min": -0.3479005694389343,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s6": {
+   "hex": "1a8d6a",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; f4-6 a ~2x SWOLLEN ball emerges below the jaws and falls every frame f6-12, lands f13, bounces, rests on plank by f28; a small ball stays in the jaws f16-92 (clone)",
+   "file": "t139_O_ball2_s6.mp4",
+   "depart": {
+    "depart_frame": 2,
+    "ncc_f92": 0.1538010984659195,
+    "ncc_min": -0.36536329984664917,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s7": {
+   "hex": "79a253",
+   "rel_strict": "N",
+   "anyfall": "N",
+   "clone": "Y",
+   "carried": "Y",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; held static f0-19; arm descends f20-60 CARRYING the ball to the plank; f60 a ~3x ball on the plank as the arm rises; small ball back in the jaws f64-92 (clone)",
+   "file": "t139_O_ball2_s7.mp4",
+   "depart": {
+    "depart_frame": 23,
+    "ncc_f92": 0.8756383657455444,
+    "ncc_min": -0.6186146140098572,
+    "n_frames": 93
+   }
+  },
+  "O_ball2_s8": {
+   "hex": "f454f3",
+   "rel_strict": "N",
+   "anyfall": "Y",
+   "clone": "Y",
+   "carried": "N",
+   "holder_back": "N",
+   "hover": "N",
+   "note": "f0 gripper holds ball; f9 a ~2x ball emerges beside the jaws, falls every frame f9-15, bounces, rests on the plank; a small ball stays in the jaws f16-92 (clone)",
+   "file": "t139_O_ball2_s8.mp4",
+   "depart": {
+    "depart_frame": 6,
+    "ncc_f92": 0.28221946954727173,
+    "ncc_min": -0.3202492594718933,
+    "n_frames": 93
+   }
+  }
+ }
+}
