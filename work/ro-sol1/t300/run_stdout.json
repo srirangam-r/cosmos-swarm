@@ -1,0 +1,110 @@
+{
+  "checks": 41,
+  "passed": 41,
+  "records": [
+    {
+      "name": "real06_P1.186",
+      "frame0": {
+        "raw_composition_vs_input": {
+          "mae_8bit": 0.015512319711538462,
+          "max_channel_error": 123,
+          "changed_pixels": 1868,
+          "pixels_over_10": 151,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_input": {
+          "mae_8bit": 3.5524948250534187,
+          "max_channel_error": 131,
+          "changed_pixels": 386433,
+          "pixels_over_10": 27535,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_raw": {
+          "mae_8bit": 3.5427417200854703,
+          "max_channel_error": 58,
+          "changed_pixels": 386449,
+          "pixels_over_10": 27387,
+          "pixel_identical": false
+        }
+      }
+    },
+    {
+      "name": "real06_P2.0162",
+      "frame0": {
+        "raw_composition_vs_input": {
+          "mae_8bit": 0.015512319711538462,
+          "max_channel_error": 123,
+          "changed_pixels": 1868,
+          "pixels_over_10": 151,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_input": {
+          "mae_8bit": 3.5524948250534187,
+          "max_channel_error": 131,
+          "changed_pixels": 386433,
+          "pixels_over_10": 27535,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_raw": {
+          "mae_8bit": 3.5427417200854703,
+          "max_channel_error": 58,
+          "changed_pixels": 386449,
+          "pixels_over_10": 27387,
+          "pixel_identical": false
+        }
+      }
+    },
+    {
+      "name": "real14_P1.186",
+      "frame0": {
+        "raw_composition_vs_input": {
+          "mae_8bit": 0.01704143295940171,
+          "max_channel_error": 162,
+          "changed_pixels": 2062,
+          "pixels_over_10": 119,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_input": {
+          "mae_8bit": 3.5663995726495727,
+          "max_channel_error": 158,
+          "changed_pixels": 385873,
+          "pixels_over_10": 27488,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_raw": {
+          "mae_8bit": 3.555967047275641,
+          "max_channel_error": 60,
+          "changed_pixels": 385880,
+          "pixels_over_10": 27347,
+          "pixel_identical": false
+        }
+      }
+    },
+    {
+      "name": "real14_P2.0162",
+      "frame0": {
+        "raw_composition_vs_input": {
+          "mae_8bit": 0.01704143295940171,
+          "max_channel_error": 162,
+          "changed_pixels": 2062,
+          "pixels_over_10": 119,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_input": {
+          "mae_8bit": 3.5663995726495727,
+          "max_channel_error": 158,
+          "changed_pixels": 385873,
+          "pixels_over_10": 27488,
+          "pixel_identical": false
+        },
+        "encoded_frame0_vs_raw": {
+          "mae_8bit": 3.555967047275641,
+          "max_channel_error": 60,
+          "changed_pixels": 385880,
+          "pixels_over_10": 27347,
+          "pixel_identical": false
+        }
+      }
+    }
+  ]
+}

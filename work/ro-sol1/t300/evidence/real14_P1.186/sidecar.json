@@ -1,0 +1,130 @@
+{
+  "name": "real14_P1.186",
+  "source_image": "real14_f186.png",
+  "source_image_sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2",
+  "supplied_state": {
+    "period_s": 1.186,
+    "theta0_right_rad": 0.06912048084718227,
+    "theta0_left_rad": -0.06912048084718227,
+    "omega0_right_rad_s": -7.850902353844898,
+    "omega0_left_rad_s": 7.850902353844898,
+    "absolute_omega_sign_right": -1,
+    "direction_source": "Prescribed nominal inward sign; not observed motion",
+    "frame1_time_s": 0.041666666666666664,
+    "frame1_theta_right_rad": -0.2570275057432335,
+    "frame1_cv2_rotation_deg": -18.686903128320193,
+    "frame1_expected_bob_center_px": [
+      290.8740113384242,
+      248.0304283702676
+    ]
+  },
+  "renderer_sha256": "1e7cbdff3ba78348ec13c21d329e8c0ce6d59afe1d1c7c0034f244572c670ff5",
+  "state_contract_sha256": "62e6c8345aaf5d2ebedc43003355d5271edf1049371ff751cb1f2919b0d684a7",
+  "generation_kind": "ANALYTICAL_CPU_PROXY; model inference not run",
+  "model": null,
+  "checkpoint": null,
+  "prompt": null,
+  "negative_prompt": null,
+  "seed": null,
+  "steps": null,
+  "guidance": null,
+  "flow_shift": null,
+  "builder_kwargs": {
+    "image_path": "/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t292/real14_f186.png",
+    "out_path": "/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t300/evidence/real14_P1.186/proxy.mp4",
+    "pivot": [
+      324,
+      122
+    ],
+    "bob": [
+      333,
+      252
+    ],
+    "period": 1.186,
+    "amplitude_deg": 85,
+    "release_from_rest": false,
+    "direction": "inward",
+    "num_frames": 93,
+    "fps": 24,
+    "width": 832,
+    "height": 480
+  },
+  "builder_metadata": {
+    "physics": "pendulum",
+    "proxy_path": "/home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t300/evidence/real14_P1.186/proxy.mp4",
+    "period": 1.186,
+    "g": 9.81,
+    "amplitude_deg": 85,
+    "release_from_rest": false,
+    "L_px": 130.31116606031887,
+    "th_cur_deg": -3.9603118304583846,
+    "num_frames": 93,
+    "fps": 24,
+    "resolution": "832x480"
+  },
+  "status": "CPU PROXY ACCEPTANCE CANDIDATE; NOT NANO OUTPUT; EXECUTOR ADOPTION REQUIRED",
+  "physical_state": "Supplied harmonic A85; no inferred real period, velocity, g or metric length",
+  "decoded_frames": 93,
+  "fps": 24.0,
+  "duration_s": 3.875,
+  "max_center_contract_error_px": 1.2710574864626038e-13,
+  "support_bounds_union": [
+    176.02094350397368,
+    90.18371239565545,
+    472.1924418813366,
+    270.14824794038236
+  ],
+  "frame0_observations": {
+    "raw_composition_vs_input": {
+      "mae_8bit": 0.01704143295940171,
+      "max_channel_error": 162,
+      "changed_pixels": 2062,
+      "pixels_over_10": 119,
+      "pixel_identical": false
+    },
+    "encoded_frame0_vs_input": {
+      "mae_8bit": 3.5663995726495727,
+      "max_channel_error": 158,
+      "changed_pixels": 385873,
+      "pixels_over_10": 27488,
+      "pixel_identical": false
+    },
+    "encoded_frame0_vs_raw": {
+      "mae_8bit": 3.555967047275641,
+      "max_channel_error": 60,
+      "changed_pixels": 385880,
+      "pixels_over_10": 27347,
+      "pixel_identical": false
+    }
+  },
+  "files": {
+    "composition_difference_x8.png": {
+      "sha256": "cf9c0641aa0ec23dcd2fff6561ab546567415e6cd5e15d750ef03f7572e067b3",
+      "bytes": 3031
+    },
+    "contact_sheet.jpg": {
+      "sha256": "b296383232268cea04590c71c4d642b38daadee455f7fd01f7f458cae9700721",
+      "bytes": 273065
+    },
+    "encoded_frame0.png": {
+      "sha256": "28e3d9f41f0764b5d6295853950c073bd4286be617a4cfe880ab7de3196387c5",
+      "bytes": 412781
+    },
+    "proxy.mp4": {
+      "sha256": "ee77517b93b2ac55f1cc0682913bddf07e83d459395e7892d96ec5a8a84ccd4a",
+      "bytes": 557440
+    },
+    "raw_frame0.png": {
+      "sha256": "cef9c8d2c01cc23702303f18704eb2bc8ee74bea92ecec4734cfd74e1b41214c",
+      "bytes": 501599
+    },
+    "source_mask.png": {
+      "sha256": "567a8ecc487281cfc354a9131580b3430358615f5b44f0c449cbf1c53d9fee3f",
+      "bytes": 1773
+    },
+    "trace.json": {
+      "sha256": "afdf61d195707be1c26c64116432dd57b9d3a09e566a356113953c6c4cb2a8c8",
+      "bytes": 68306
+    }
+  }
+}

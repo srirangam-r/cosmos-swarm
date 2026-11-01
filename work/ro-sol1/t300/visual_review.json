@@ -1,0 +1,19 @@
+{
+  "reviewer": "ro-sol1",
+  "type": "limited visual inspection of fixed-index contact sheets, not a metric or blinded review",
+  "files": [
+    "evidence/real06_P1.186/contact_sheet.jpg",
+    "evidence/real06_P2.0162/contact_sheet.jpg",
+    "evidence/real14_P1.186/contact_sheet.jpg",
+    "evidence/real14_P2.0162/contact_sheet.jpg"
+  ],
+  "indices_fixed_before_run": [0, 1, 7, 14, 28, 46, 70, 92],
+  "observation": "At these sampled frames, the visible rod/bob follows the overlaid geometric positions and is not clipped by the image border. The proxy has visible coarse inpainting/feathering and rotates nearby source texture with the rod strip. It is not a clean segmented physical rendering or a generated Nano output.",
+  "limits": [
+    "Yellow circles mark traced geometric centers; they are not measured bob positions.",
+    "Not every decoded frame was visually inspected; all frames were decoded and geometry checked by software.",
+    "No reference continuation or true real motion was inspected.",
+    "No assertion of clean occlusion, background reconstruction, flicker score, period measurement, physical realism or NVIDIA scoreboard improvement."
+  ],
+  "executor_visual_acceptance": "pending"
+}
