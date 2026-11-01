@@ -1,0 +1,343 @@
+{
+  "utc": "2026-11-01T19:58:48.125Z",
+  "preview_sha256": "d43bbd9241a329ab1ce5831e240c158b722acea76b0b7ccfd452a53a7a56953a",
+  "mode": "headless installed Brave, anonymous CDP pipes, static local page; no video playback",
+  "renders": [
+    {
+      "name": "desktop",
+      "state": {
+        "overflow": false,
+        "text": "DEMO EVIDENCE UPDATE · TASK 328 / SOURCE TASK 319\nNano-Phys has a visual-quality cost on this benchmark.\nAuthor-reported · provisional\n\ndk2 scored the existing held-out pendulum clips. Compared with plain Nano, Nano-Phys lost 0.057 DOVER on the matched grid. The motion-fidelity score needs a prominent qualification.\n\n18 plain + 18 Nano-Phys clips · 6 held-out input images × seeds 1–3 · 6 wrong-period clips at seed 1 · 6 real references from one pendulum rig.\n\nDOVER FUSED · NANO-PHYS MINUS PLAIN\n−0.0572\n\nSource JSON 95% interval: [−0.0675, −0.0488]\nAll 6 take means and all 18 matched pairs are negative.\n\nThe author enumerates all 6⁶ resamples of take means after averaging 3 seeds per arm. This interval is conditional on these six takes and the fixed shared seeds; it does not cover new rigs or prompts.\n\nTHRESHOLD AND SEED BASELINE\nBelow the proposed −0.030 margin\n\nThe whole interval is below that threshold. The source explicitly says this margin was proposed by agy-3 and never approved.\n\nAuthor's plain seed SD: 0.0444 per clip; estimated SD of a 3-seed mean: 0.0257. These are seed baselines, separate from the bootstrap interval and repeated DOVER crops.\n\nRead each score in its own units\n\nValues below are copied from the frozen source JSON. Selecting a metric changes the displayed means and paired summary.\n\nMetric\nDOVER fused\nDOVER technical\nDOVER aesthetic\nBinary dynamic degree\nContinuous flow proxy (dd_norm)\nPlain · 18 clips\n0.5439\nNano-Phys · 18 clips\n0.4867\nReal · 6 references\n0.5459\n\nNano-Phys − plain: -0.0572 · source 95% bootstrap interval [-0.0675, -0.0488]\n\nHigher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table.\n\nSix take-level DOVER differences\nA motion-fidelity score of 1.000 is degenerate here\n\nSource MF: plain 0.238 → Nano-Phys 1.000. Every real reference and every Nano-Phys clip has binary DD = 0; plain has 7/18 clips flagged dynamic. Under ddof=0 and the disclosed 0/0 → 0 MC convention, even a static output earns MF = 1 against this zero-DD reference.\n\nThis score cannot certify correct pendulum motion. MF implements the published Cosmos 3 formula using an approximate DD scorer. It is not an NVIDIA-identical evaluation.\n\nContinuous flow proxy: real 1.94, plain 4.83, Nano-Phys 0.44. Nano-Phys undershoots real flow. The proxy does not identify whether bob motion, camera motion or background motion was lost.\n\nWhat this evidence covers\nExisting clips, new scores: the author re-scored 42 task-276 clips on an RTX 4060 using the unchanged shared scorer, with 3 DOVER repetitions. Their source records MP4 hashes and reports 42/42 sidecars identical to task 276.\nSupplied dynamics: Nano-Phys used a simulated proxy, sigma 0.90, and a period derived from later real-video frames. The earlier 12/18 period-transfer demo remains conditional on that supplied period; it is not a first-frame-only physics solution.\nSmall, shared-rig reference: six 93-frame real windows have nominal 25 fps metadata versus generated 24 fps. For MF, the author re-encoded the real references at 24 fps, reporting unchanged frame sequence. Retiming changes playback time; it does not establish the original camera clock or an independently matched physical duration.\nImplementation scope: shared DD uses torchvision RAFT/PyAV and differs from original VBench. Nvidia's original report used 5-second clips and roughly 100 real references per FPS band. This grid is shorter and narrower.\nWrong-period comparison: x17 minus Nano-Phys is −0.00090 DOVER when restricted to their six matched seed-1 pairs. This is a descriptive comparison, not equivalence or identification of the cause of the quality drop.\nStill untested: plausibility judge, robot prediction, new prompts/rigs, and the cause of the DOVER drop.\nSUGGESTED WORDING FOR A HUMAN TO APPLY\n“Nano-Phys transfers a supplied pendulum period, with a visual-quality cost. On six held-out input images × three seeds, the author reports a 0.057 DOVER drop versus plain Nano. The higher motion-fidelity score is degenerate on these zero-DD references; a general first-frame-only recipe and full scoreboard non-regression remain unproved.”\nAttribution and frozen receipts\n\nMeasurements and analysis: dk2, task 319, finding #6690, source commit 9e92945. Presentation: ro-sol1, task 328. No new video measurement or independent physics validation is claimed by this page.\n\nThe source JSON gives [−0.0674511, −0.0488436]; the author's board message/README quotes [−0.068, −0.049]. This page uses the JSON values. Near-equal real/plain means do not establish equivalence. The author's causal wording about the proxy path is retained in the source receipt, with cause left unresolved in this readout.\n\nExact board messages · SHA256 / immutable-file receipt · Plain-text readout · Packaging checks\n\nAll 13 pinned source files\nPrior work used to frame the labels\n\nAppend-only addendum. Earlier demo artifacts are preserved. The judged root README and reports are untouched. This local static page is not a deployment to the shared gallery.",
+        "rows": 6,
+        "links": [
+          "../t315/DEMO_READOUT.md",
+          "board_receipts.json",
+          "source_receipt.json",
+          "DEMO_READOUT.md",
+          "verification.json",
+          "source/README.md",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/README.md",
+          "source/analyze_t319.py",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/analyze_t319.py",
+          "source/gen_sha256.txt",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/gen_sha256.txt",
+          "source/mf24_manifest_nphys.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf24_manifest_nphys.json",
+          "source/mf24_manifest_plain.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf24_manifest_plain.json",
+          "source/mf_nphys.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf_nphys.json",
+          "source/mf_plain.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf_plain.json",
+          "source/scorer_commit.txt",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scorer_commit.txt",
+          "source/scores_gen.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scores_gen.json",
+          "source/scores_real.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scores_real.json",
+          "source/scores_real24.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scores_real24.json",
+          "source/t319_results.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/t319_results.json",
+          "source/t319_table.md",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/t319_table.md",
+          "https://arxiv.org/abs/2607.03732",
+          "https://arxiv.org/abs/2311.17982",
+          "https://arxiv.org/abs/2606.02800"
+        ]
+      },
+      "links": [
+        {
+          "href": "../t315/DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "board_receipts.json",
+          "exists": true
+        },
+        {
+          "href": "source_receipt.json",
+          "exists": true
+        },
+        {
+          "href": "DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "verification.json",
+          "exists": true
+        },
+        {
+          "href": "source/README.md",
+          "exists": true
+        },
+        {
+          "href": "source/analyze_t319.py",
+          "exists": true
+        },
+        {
+          "href": "source/gen_sha256.txt",
+          "exists": true
+        },
+        {
+          "href": "source/mf24_manifest_nphys.json",
+          "exists": true
+        },
+        {
+          "href": "source/mf24_manifest_plain.json",
+          "exists": true
+        },
+        {
+          "href": "source/mf_nphys.json",
+          "exists": true
+        },
+        {
+          "href": "source/mf_plain.json",
+          "exists": true
+        },
+        {
+          "href": "source/scorer_commit.txt",
+          "exists": true
+        },
+        {
+          "href": "source/scores_gen.json",
+          "exists": true
+        },
+        {
+          "href": "source/scores_real.json",
+          "exists": true
+        },
+        {
+          "href": "source/scores_real24.json",
+          "exists": true
+        },
+        {
+          "href": "source/t319_results.json",
+          "exists": true
+        },
+        {
+          "href": "source/t319_table.md",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "name": "desktop",
+      "metrics": [
+        {
+          "key": "dover_fused",
+          "plain": "0.5439",
+          "nphys": "0.4867",
+          "real": "0.5459",
+          "summary": "Nano-Phys − plain: -0.0572 · source 95% bootstrap interval [-0.0675, -0.0488]",
+          "note": "Higher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table."
+        },
+        {
+          "key": "dover_technical",
+          "plain": "-0.0442",
+          "nphys": "-0.0539",
+          "real": "-0.0472",
+          "summary": "Nano-Phys − plain: -0.0097 · source 95% bootstrap interval [-0.0109, -0.0084]",
+          "note": "Higher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table."
+        },
+        {
+          "key": "dover_aesthetic",
+          "plain": "0.0589",
+          "nphys": "0.0443",
+          "real": "0.0619",
+          "summary": "Nano-Phys − plain: -0.0146 · source 95% bootstrap interval [-0.0184, -0.0110]",
+          "note": "Higher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table."
+        },
+        {
+          "key": "dd_binary",
+          "plain": "0.3889",
+          "nphys": "0.0000",
+          "real": "0.0000",
+          "summary": "Nano-Phys − plain: -0.3889 · source 95% bootstrap interval [-0.5000, -0.3333]",
+          "note": "Binary DD is dynamic presence, not a period or trajectory measurement. Zero DD does not imply a motionless bob; small motion may miss this scorer."
+        },
+        {
+          "key": "dd_norm",
+          "plain": "4.8331",
+          "nphys": "0.4382",
+          "real": "1.9381",
+          "summary": "Nano-Phys − plain: -4.3949 · source 95% bootstrap interval [-5.5152, -3.2893]",
+          "note": "dd_norm is a continuous optical-flow proxy in normalized pixels, not NVIDIA binary dynamic degree. Less flow alone is not a physics improvement."
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "state": {
+        "overflow": false,
+        "text": "DEMO EVIDENCE UPDATE · TASK 328 / SOURCE TASK 319\nNano-Phys has a visual-quality cost on this benchmark.\nAuthor-reported · provisional\n\ndk2 scored the existing held-out pendulum clips. Compared with plain Nano, Nano-Phys lost 0.057 DOVER on the matched grid. The motion-fidelity score needs a prominent qualification.\n\n18 plain + 18 Nano-Phys clips · 6 held-out input images × seeds 1–3 · 6 wrong-period clips at seed 1 · 6 real references from one pendulum rig.\n\nDOVER FUSED · NANO-PHYS MINUS PLAIN\n−0.0572\n\nSource JSON 95% interval: [−0.0675, −0.0488]\nAll 6 take means and all 18 matched pairs are negative.\n\nThe author enumerates all 6⁶ resamples of take means after averaging 3 seeds per arm. This interval is conditional on these six takes and the fixed shared seeds; it does not cover new rigs or prompts.\n\nTHRESHOLD AND SEED BASELINE\nBelow the proposed −0.030 margin\n\nThe whole interval is below that threshold. The source explicitly says this margin was proposed by agy-3 and never approved.\n\nAuthor's plain seed SD: 0.0444 per clip; estimated SD of a 3-seed mean: 0.0257. These are seed baselines, separate from the bootstrap interval and repeated DOVER crops.\n\nRead each score in its own units\n\nValues below are copied from the frozen source JSON. Selecting a metric changes the displayed means and paired summary.\n\nMetric\nDOVER fused\nDOVER technical\nDOVER aesthetic\nBinary dynamic degree\nContinuous flow proxy (dd_norm)\nPlain · 18 clips\n0.5439\nNano-Phys · 18 clips\n0.4867\nReal · 6 references\n0.5459\n\nNano-Phys − plain: -0.0572 · source 95% bootstrap interval [-0.0675, -0.0488]\n\nHigher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table.\n\nSix take-level DOVER differences\nA motion-fidelity score of 1.000 is degenerate here\n\nSource MF: plain 0.238 → Nano-Phys 1.000. Every real reference and every Nano-Phys clip has binary DD = 0; plain has 7/18 clips flagged dynamic. Under ddof=0 and the disclosed 0/0 → 0 MC convention, even a static output earns MF = 1 against this zero-DD reference.\n\nThis score cannot certify correct pendulum motion. MF implements the published Cosmos 3 formula using an approximate DD scorer. It is not an NVIDIA-identical evaluation.\n\nContinuous flow proxy: real 1.94, plain 4.83, Nano-Phys 0.44. Nano-Phys undershoots real flow. The proxy does not identify whether bob motion, camera motion or background motion was lost.\n\nWhat this evidence covers\nExisting clips, new scores: the author re-scored 42 task-276 clips on an RTX 4060 using the unchanged shared scorer, with 3 DOVER repetitions. Their source records MP4 hashes and reports 42/42 sidecars identical to task 276.\nSupplied dynamics: Nano-Phys used a simulated proxy, sigma 0.90, and a period derived from later real-video frames. The earlier 12/18 period-transfer demo remains conditional on that supplied period; it is not a first-frame-only physics solution.\nSmall, shared-rig reference: six 93-frame real windows have nominal 25 fps metadata versus generated 24 fps. For MF, the author re-encoded the real references at 24 fps, reporting unchanged frame sequence. Retiming changes playback time; it does not establish the original camera clock or an independently matched physical duration.\nImplementation scope: shared DD uses torchvision RAFT/PyAV and differs from original VBench. Nvidia's original report used 5-second clips and roughly 100 real references per FPS band. This grid is shorter and narrower.\nWrong-period comparison: x17 minus Nano-Phys is −0.00090 DOVER when restricted to their six matched seed-1 pairs. This is a descriptive comparison, not equivalence or identification of the cause of the quality drop.\nStill untested: plausibility judge, robot prediction, new prompts/rigs, and the cause of the DOVER drop.\nSUGGESTED WORDING FOR A HUMAN TO APPLY\n“Nano-Phys transfers a supplied pendulum period, with a visual-quality cost. On six held-out input images × three seeds, the author reports a 0.057 DOVER drop versus plain Nano. The higher motion-fidelity score is degenerate on these zero-DD references; a general first-frame-only recipe and full scoreboard non-regression remain unproved.”\nAttribution and frozen receipts\n\nMeasurements and analysis: dk2, task 319, finding #6690, source commit 9e92945. Presentation: ro-sol1, task 328. No new video measurement or independent physics validation is claimed by this page.\n\nThe source JSON gives [−0.0674511, −0.0488436]; the author's board message/README quotes [−0.068, −0.049]. This page uses the JSON values. Near-equal real/plain means do not establish equivalence. The author's causal wording about the proxy path is retained in the source receipt, with cause left unresolved in this readout.\n\nExact board messages · SHA256 / immutable-file receipt · Plain-text readout · Packaging checks\n\nAll 13 pinned source files\nPrior work used to frame the labels\n\nAppend-only addendum. Earlier demo artifacts are preserved. The judged root README and reports are untouched. This local static page is not a deployment to the shared gallery.",
+        "rows": 6,
+        "links": [
+          "../t315/DEMO_READOUT.md",
+          "board_receipts.json",
+          "source_receipt.json",
+          "DEMO_READOUT.md",
+          "verification.json",
+          "source/README.md",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/README.md",
+          "source/analyze_t319.py",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/analyze_t319.py",
+          "source/gen_sha256.txt",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/gen_sha256.txt",
+          "source/mf24_manifest_nphys.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf24_manifest_nphys.json",
+          "source/mf24_manifest_plain.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf24_manifest_plain.json",
+          "source/mf_nphys.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf_nphys.json",
+          "source/mf_plain.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/mf_plain.json",
+          "source/scorer_commit.txt",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scorer_commit.txt",
+          "source/scores_gen.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scores_gen.json",
+          "source/scores_real.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scores_real.json",
+          "source/scores_real24.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/scores_real24.json",
+          "source/t319_results.json",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/t319_results.json",
+          "source/t319_table.md",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/9e929451313f51de6abb1d0be3dbfcf382b91341/work/dk2/t319/t319_table.md",
+          "https://arxiv.org/abs/2607.03732",
+          "https://arxiv.org/abs/2311.17982",
+          "https://arxiv.org/abs/2606.02800"
+        ]
+      },
+      "links": [
+        {
+          "href": "../t315/DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "board_receipts.json",
+          "exists": true
+        },
+        {
+          "href": "source_receipt.json",
+          "exists": true
+        },
+        {
+          "href": "DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "verification.json",
+          "exists": true
+        },
+        {
+          "href": "source/README.md",
+          "exists": true
+        },
+        {
+          "href": "source/analyze_t319.py",
+          "exists": true
+        },
+        {
+          "href": "source/gen_sha256.txt",
+          "exists": true
+        },
+        {
+          "href": "source/mf24_manifest_nphys.json",
+          "exists": true
+        },
+        {
+          "href": "source/mf24_manifest_plain.json",
+          "exists": true
+        },
+        {
+          "href": "source/mf_nphys.json",
+          "exists": true
+        },
+        {
+          "href": "source/mf_plain.json",
+          "exists": true
+        },
+        {
+          "href": "source/scorer_commit.txt",
+          "exists": true
+        },
+        {
+          "href": "source/scores_gen.json",
+          "exists": true
+        },
+        {
+          "href": "source/scores_real.json",
+          "exists": true
+        },
+        {
+          "href": "source/scores_real24.json",
+          "exists": true
+        },
+        {
+          "href": "source/t319_results.json",
+          "exists": true
+        },
+        {
+          "href": "source/t319_table.md",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "metrics": [
+        {
+          "key": "dover_fused",
+          "plain": "0.5439",
+          "nphys": "0.4867",
+          "real": "0.5459",
+          "summary": "Nano-Phys − plain: -0.0572 · source 95% bootstrap interval [-0.0675, -0.0488]",
+          "note": "Higher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table."
+        },
+        {
+          "key": "dover_technical",
+          "plain": "-0.0442",
+          "nphys": "-0.0539",
+          "real": "-0.0472",
+          "summary": "Nano-Phys − plain: -0.0097 · source 95% bootstrap interval [-0.0109, -0.0084]",
+          "note": "Higher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table."
+        },
+        {
+          "key": "dover_aesthetic",
+          "plain": "0.0589",
+          "nphys": "0.0443",
+          "real": "0.0619",
+          "summary": "Nano-Phys − plain: -0.0146 · source 95% bootstrap interval [-0.0184, -0.0110]",
+          "note": "Higher is better within this shared DOVER implementation. These source scores are not calibrated to the scale of NVIDIA’s published table."
+        },
+        {
+          "key": "dd_binary",
+          "plain": "0.3889",
+          "nphys": "0.0000",
+          "real": "0.0000",
+          "summary": "Nano-Phys − plain: -0.3889 · source 95% bootstrap interval [-0.5000, -0.3333]",
+          "note": "Binary DD is dynamic presence, not a period or trajectory measurement. Zero DD does not imply a motionless bob; small motion may miss this scorer."
+        },
+        {
+          "key": "dd_norm",
+          "plain": "4.8331",
+          "nphys": "0.4382",
+          "real": "1.9381",
+          "summary": "Nano-Phys − plain: -4.3949 · source 95% bootstrap interval [-5.5152, -3.2893]",
+          "note": "dd_norm is a continuous optical-flow proxy in normalized pixels, not NVIDIA binary dynamic degree. Less flow alone is not a physics improvement."
+        }
+      ]
+    }
+  ],
+  "exceptions": [],
+  "browser_pid": 11,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  },
+  "passed": true
+}

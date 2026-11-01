@@ -1,0 +1,125 @@
+{
+  "method": "Cosmos 3 report eqs. 10-11; binary DD; equally weighted bands and prompts",
+  "ddof": 0,
+  "zero_denominator_policy": "zero",
+  "bands": [
+    {
+      "id": "24fps_pend_heldout",
+      "fps_range": [
+        24.0,
+        24.0
+      ],
+      "reference_count": 6,
+      "reference_dd": 0,
+      "generated_dd": 0,
+      "mc": 0.0,
+      "mf": 1.0,
+      "prompts": [
+        {
+          "id": "real_09_nphys",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            0
+          ],
+          "dd_mean": 0,
+          "variance": 0.0,
+          "mc": 0.0,
+          "zero_denominator": true
+        },
+        {
+          "id": "real_12_nphys",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            0
+          ],
+          "dd_mean": 0,
+          "variance": 0.0,
+          "mc": 0.0,
+          "zero_denominator": true
+        },
+        {
+          "id": "real_16_nphys",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            0
+          ],
+          "dd_mean": 0,
+          "variance": 0.0,
+          "mc": 0.0,
+          "zero_denominator": true
+        },
+        {
+          "id": "real_17_nphys",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            0
+          ],
+          "dd_mean": 0,
+          "variance": 0.0,
+          "mc": 0.0,
+          "zero_denominator": true
+        },
+        {
+          "id": "real_18_nphys",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            0
+          ],
+          "dd_mean": 0,
+          "variance": 0.0,
+          "mc": 0.0,
+          "zero_denominator": true
+        },
+        {
+          "id": "real_19_nphys",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            0
+          ],
+          "dd_mean": 0,
+          "variance": 0.0,
+          "mc": 0.0,
+          "zero_denominator": true
+        }
+      ]
+    }
+  ],
+  "mean_mf_across_bands": 1.0,
+  "limitations": "Approximation: scorer differs from original VBench; input matching, distinct videos, generation metadata, fps, duration, and reference representativeness require manual audit. NVIDIA variance and zero conventions are unspecified."
+}

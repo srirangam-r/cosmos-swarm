@@ -1,0 +1,125 @@
+{
+  "method": "Cosmos 3 report eqs. 10-11; binary DD; equally weighted bands and prompts",
+  "ddof": 0,
+  "zero_denominator_policy": "zero",
+  "bands": [
+    {
+      "id": "24fps_pend_heldout",
+      "fps_range": [
+        24.0,
+        24.0
+      ],
+      "reference_count": 6,
+      "reference_dd": 0,
+      "generated_dd": 0.38888888888888884,
+      "mc": 0.611111111111111,
+      "mf": 0.23765432098765438,
+      "prompts": [
+        {
+          "id": "real_09_plain",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            1
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        },
+        {
+          "id": "real_12_plain",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            1
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        },
+        {
+          "id": "real_16_plain",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            1
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        },
+        {
+          "id": "real_17_plain",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            1
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        },
+        {
+          "id": "real_18_plain",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            0,
+            1
+          ],
+          "dd_mean": 0.3333333333333333,
+          "variance": 0.22222222222222224,
+          "mc": 0.6666666666666666,
+          "zero_denominator": false
+        },
+        {
+          "id": "real_19_plain",
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "dd": [
+            0,
+            1,
+            1
+          ],
+          "dd_mean": 0.6666666666666666,
+          "variance": 0.22222222222222224,
+          "mc": 0.33333333333333337,
+          "zero_denominator": false
+        }
+      ]
+    }
+  ],
+  "mean_mf_across_bands": 0.23765432098765438,
+  "limitations": "Approximation: scorer differs from original VBench; input matching, distinct videos, generation metadata, fps, duration, and reference representativeness require manual audit. NVIDIA variance and zero conventions are unspecified."
+}

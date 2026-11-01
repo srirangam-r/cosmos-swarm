@@ -1,0 +1,460 @@
+{
+  "scope": "Source-byte preservation, expected slots, scalar consistency and label conventions only; no re-scoring, re-tracking or independent physical validation.",
+  "checks": [
+    {
+      "check": "source bytes: source/README.md",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/analyze_t319.py",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/gen_sha256.txt",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/mf24_manifest_nphys.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/mf24_manifest_plain.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/mf_nphys.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/mf_plain.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scorer_commit.txt",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scores_gen.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scores_real.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/scores_real24.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/t319_results.json",
+      "passed": true
+    },
+    {
+      "check": "source bytes: source/t319_table.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/DEMO_READOUT.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/availability.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/demo_card.html",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/sha256_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/verification.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t315/visual_review.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/build.py",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_00_11.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_12_23.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_24_35.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_36_47.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_48_59.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_60_71.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_72_83.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/dense/frames_84_92.webp",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/desktop_all20.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/desktop_dense.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/index.html",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/mobile_all20.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/mobile_dense.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/sha256_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/verification.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t317/visual_review.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/index.html",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/review_6330.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t320/verification.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/build.py",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/desktop_source_note.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/index.html",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/mobile_source_note.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/review_6380.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/source_README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/source_audit_pendulum_dial.py",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/source_audit_results.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/source_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t322/verification.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/build.py",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/desktop_receipts.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/frozen_evidence.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/index.html",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/mobile_receipts.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/reviews_6398_6399.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t323/verification.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/board_6432.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/browser_render.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/browser_stderr.log",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/build.py",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/desktop.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/desktop_receipts.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/gallery_http.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/index.html",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/mobile.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/mobile_receipts.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/mobile_values.png",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/render.cjs",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/source_ERRATA_RECEIPT.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/source_README.md",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/source_audit_pendulum_dial.py",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/source_audit_results.json",
+      "passed": true
+    },
+    {
+      "check": "prior immutable: work/ro-sol1/t324/verification.json",
+      "passed": true
+    },
+    {
+      "check": "42 generated plus 6 real rows",
+      "passed": true
+    },
+    {
+      "check": "complete source slots: plain",
+      "passed": true
+    },
+    {
+      "check": "complete source slots: nphys",
+      "passed": true
+    },
+    {
+      "check": "complete source slots: nphys_x17",
+      "passed": true
+    },
+    {
+      "check": "fused headline agrees with source means",
+      "passed": true
+    },
+    {
+      "check": "source interval below proposed margin",
+      "passed": true
+    },
+    {
+      "check": "MF uses disclosed convention",
+      "passed": true
+    },
+    {
+      "check": "six zero-denominator nphys groups",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_file_count": 13,
+  "prior_file_count": 92
+}
