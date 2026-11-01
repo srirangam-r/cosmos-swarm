@@ -87,3 +87,19 @@ oc_A_ball1_s93,0,"faint at impact f10; grows ~1.6x; flight 1 is a depth move (to
 oc_A_ball2_s93,0,"faint at impact f10; grows ~1.6x; flight 1 is a depth move (onto plank f20, back to rail f24)",2026-11-01T12:09
 oc_A_ball1_s94,0,"fragment/morph from f2; ball vanishes f16, f30-36; elongated shapes",2026-11-01T12:09
 oc_A_ball2_s94,0,"morph f6; ball jumps toward camera f8-10; vanishes/fragments f20-24; chaotic",2026-11-01T12:09
+oc_A_ball1_s95,0,"smear at impact f6; morph f14, f16, f22; flight 1 erratic (several small hops f8-22, no single arc)",2026-11-01T12:10
+oc_A_ball2_s95,0,"artifact figure f2; ball vanishes f2-4; ghost f6; reappears larger f8",2026-11-01T12:10
+oc_A_ball1_s96,0,"faint at impact f14; glassy ball toward plank f18; depth move onto plank, grows ~2x f24-46",2026-11-01T12:10
+oc_A_ball2_s96,0,"faint at impact f14; jumps toward camera onto plank f16; glassy f20-24",2026-11-01T12:10
+oc_A_ball1_s97,0,"drifts diagonally right and leaves the frame f20-24; no impact or flight",2026-11-01T12:11
+oc_A_ball2_s97,0,"drifts diagonally right and leaves the frame f20-24; no impact or flight",2026-11-01T12:11
+oc_A_ball1_s98,0,"slow descent, perches on rail f18-28; rolls toward camera onto plank f30-46 (grows); no rebound flight",2026-11-01T12:11
+oc_A_ball2_s98,0,"slow descent, perches on rail f18-28; rolls toward camera onto plank f30-46 (grows); no rebound flight",2026-11-01T12:11
+oc_A_ball1_s99,0,"ball vanishes f2-6; giant ball (~8x) from f8; hole/morph f16-38",2026-11-01T12:14
+oc_A_ball2_s99,0,"glassy ball f2-4; giant semi-transparent ball (~8x) from f10",2026-11-01T12:14
+oc_A_ball1_s100,0,"morph/smear at impact f10-22; ghost ball f26-32; clone-like shapes",2026-11-01T12:14
+oc_A_ball2_s100,0,"fragment/smear f5, f13; faint/ghost ball at impact f9-11 and f25",2026-11-01T12:14
+oc_A_ball1_s101,0,"fragments f10-14; clone (two balls) f16-22; then rolls toward camera",2026-11-01T12:15
+oc_A_ball2_s101,0,"impact on rail f16 then depth move onto plank f18-46 (grows); glassy f20-22; no flight arc",2026-11-01T12:15
+oc_A_ball1_s102,0,"slow descent to rail f16; then comes toward camera (grows ~3x) and leaves frame bottom f30-36; no rebound flight",2026-11-01T12:15
+oc_A_ball2_s102,0,"slow descent to rail f14; then comes toward camera (grows ~3x) and leaves frame bottom f30-36; no rebound flight",2026-11-01T12:15
