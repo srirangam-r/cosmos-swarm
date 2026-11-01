@@ -60,3 +60,10 @@ followed the flight (apex ~f15). Rule from now on, for every included clip:
 - primary rho1 = mean of the two trackers when both are valid and their median |y_t2 - y_ff| over the segment frames is < 4 px;
   if only one tracker is valid, use it and flag `single_tracker`; if neither, the clip is `untracked` (reported, not used).
 - Already-ratioed clips (ball1 s21, s23; ball2 s21) are re-scored with this rule and listed as "seen before amendment 2".
+
+## Amendment 3 (2026-11-01 ~11:30 UTC, after scoring seeds 21-50; result posted as #3782)
+Seeds 21-50 gave only 3 tracked seeds (QC yield 5/60). Extend to **seeds 51-110 x {ball1, ball2}** (120 clips),
+same first frames, prompt and settings. The only difference: these run on the Brev endpoints brev-p6k-0/1 (same
+server.py and diffusers commit, torch 2.15.0; not bit-identical to q8, #3746). The endpoint is recorded per clip. QC codes
+are frozen before any ratio, the same as before. Analysis is unchanged (Amendment 2 rule, seed-bootstrap geo-mean rho1).
+Both are reported: seeds 21-50 alone (#3782) and 21-110 pooled, plus a q8-vs-Brev split as a stack check. Stop at seed 110 whatever the result.
