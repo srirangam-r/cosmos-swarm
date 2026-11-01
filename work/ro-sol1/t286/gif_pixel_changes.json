@@ -1,0 +1,24 @@
+[
+  {
+    "stem": "pendulum_physics_start",
+    "screenshot_sha256": [
+      "f5dd4abc5d7023c88b63ae8fa68b7f584db31a49c763dc8f8dfee958b37fc012",
+      "5a2489a90e9b81527ce1c56750888c0ba8d1b724d087b511109f534dd7cccb61"
+    ],
+    "different_pixels_gt8": 39969,
+    "total_pixels": 1296000,
+    "fraction": 0.03084027777777778,
+    "pass": true
+  },
+  {
+    "stem": "ball_settle",
+    "screenshot_sha256": [
+      "54b384784834d5420eb4aeae9675e4401bc7e4139fd1c313575d46a3d250b07c",
+      "ebfd5b774f4c5b448a3aae1a808342f84c733de58559be234110e99f610750db"
+    ],
+    "different_pixels_gt8": 19115,
+    "total_pixels": 1296000,
+    "fraction": 0.014749228395061728,
+    "pass": true
+  }
+]

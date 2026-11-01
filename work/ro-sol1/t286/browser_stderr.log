@@ -1,0 +1,45 @@
+[10:10:1101/120704.918071:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/nail/.config/BraveSoftware/Brave-Browser/Crash Reports/settings.dat: Read-only file system (30)
+[10:10:1101/120704.918154:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/nail/.config/BraveSoftware/Brave-Browser/Crash Reports/settings.dat: Read-only file system (30)
+
+(process:10): dconf-CRITICAL **: 12:07:04.947: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.948: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.948: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.948: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.948: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.948: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.948: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.950: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+[10:28:1101/120704.950016:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/nail/.config/BraveSoftware/Brave-Browser/Crash Reports/settings.dat: Read-only file system (30)
+
+(process:10): dconf-CRITICAL **: 12:07:04.950: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.950: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.950: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.950: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.950: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.974: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.976: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:10): dconf-CRITICAL **: 12:07:04.977: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+[10:10:1101/120705.037468:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.systemd1.Manager.StartTransientUnit: object_path= /org/freedesktop/systemd1: org.freedesktop.DBus.Error.UnixProcessIdUnknown: Process with ID 10 does not exist.
+[10:24:1101/120705.051866:ERROR:crypto/nss_util.cc:256] Error initializing NSS with a persistent database (sql:/home/nail/.pki/nssdb): NSS error code: -8126
+
+(ro-sol1-browser-i7Dp2I --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:10): dconf-CRITICAL **: 12:07:05.230: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(ro-sol1-browser-i7Dp2I --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:10): dconf-CRITICAL **: 12:07:05.231: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(ro-sol1-browser-i7Dp2I --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:10): dconf-CRITICAL **: 12:07:05.231: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(ro-sol1-browser-i7Dp2I --noerrdialogs --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl:10): dconf-CRITICAL **: 12:07:05.232: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.

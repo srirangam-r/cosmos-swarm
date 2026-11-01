@@ -1,0 +1,291 @@
+{
+  "utc": "2026-11-01T17:05:57.394675+00:00",
+  "commit": "a597e6f",
+  "scope": "delivery/codec/timebase only; no physics measurement",
+  "media": [
+    {
+      "name": "pendulum_physics_start.mp4",
+      "url": "http://board.tail0c526a.ts.net:8031/demos/pendulum_physics_start.mp4",
+      "status": 200,
+      "content_type": null,
+      "bytes": 416202,
+      "sha256": "fd724670aab40fd348fe5dfcd11e7996a62a13cb96b0fb9ec1a302d12cb84e99",
+      "committed_sha256": "fd724670aab40fd348fe5dfcd11e7996a62a13cb96b0fb9ec1a302d12cb84e99",
+      "same_as_commit": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1264,
+            "height": 354,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "3.875000",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "full_decode_pass": true,
+      "decode_stderr": "",
+      "range_request": {
+        "status": 200,
+        "content_range": null,
+        "bytes_returned": 416202,
+        "prefix_matches": true
+      },
+      "mp4_atom_offsets": {
+        "moov": 36,
+        "mdat": 1869
+      },
+      "timeline": {
+        "frames": 93,
+        "first_s": 0.0,
+        "last_s": 3.833333,
+        "max_deviation_from_24fps_s": 3.33333333379926e-07
+      }
+    },
+    {
+      "name": "pendulum_physics_start.gif",
+      "url": "http://board.tail0c526a.ts.net:8031/demos/pendulum_physics_start.gif",
+      "status": 200,
+      "content_type": null,
+      "bytes": 4082245,
+      "sha256": "039bfe79159593d2ad7914c74c95048c3d5631753bd361dcaee57bdf2f8d7e3c",
+      "committed_sha256": "039bfe79159593d2ad7914c74c95048c3d5631753bd361dcaee57bdf2f8d7e3c",
+      "same_as_commit": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 1264,
+            "height": 354,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "12/1",
+            "avg_frame_rate": "12/1",
+            "duration": "3.910000",
+            "nb_read_frames": "47"
+          }
+        ],
+        "format": {
+          "duration": "3.910000"
+        }
+      },
+      "full_decode_pass": true,
+      "decode_stderr": "",
+      "timeline": {
+        "frames": 47,
+        "loop": 0,
+        "durations_ms": [
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          80
+        ],
+        "duration_s": 3.91,
+        "unique_decoded_frames": 47,
+        "max_deviation_from_12fps_s": 0.0033333333333334103,
+        "duration_difference_from_mp4_s": 0.035
+      }
+    },
+    {
+      "name": "ball_settle.mp4",
+      "url": "http://board.tail0c526a.ts.net:8031/demos/ball_settle.mp4",
+      "status": 200,
+      "content_type": null,
+      "bytes": 264206,
+      "sha256": "6ba3af0a67bf3d3ee5497e22bdbfac6a58eaac2d88ad95aadce3e31df962ea86",
+      "committed_sha256": "6ba3af0a67bf3d3ee5497e22bdbfac6a58eaac2d88ad95aadce3e31df962ea86",
+      "same_as_commit": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 840,
+            "height": 354,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "3.875000",
+            "nb_read_frames": "93"
+          }
+        ],
+        "format": {
+          "duration": "3.875000"
+        }
+      },
+      "full_decode_pass": true,
+      "decode_stderr": "",
+      "range_request": {
+        "status": 200,
+        "content_range": null,
+        "bytes_returned": 264206,
+        "prefix_matches": true
+      },
+      "mp4_atom_offsets": {
+        "moov": 36,
+        "mdat": 1925
+      },
+      "timeline": {
+        "frames": 93,
+        "first_s": 0.0,
+        "last_s": 3.833333,
+        "max_deviation_from_24fps_s": 3.33333333379926e-07
+      }
+    },
+    {
+      "name": "ball_settle.gif",
+      "url": "http://board.tail0c526a.ts.net:8031/demos/ball_settle.gif",
+      "status": 200,
+      "content_type": null,
+      "bytes": 2414594,
+      "sha256": "b21881c6b2669a3601dec9f6e7c0b11dd3b3496dbbe89f39fe0e81757246ddfb",
+      "committed_sha256": "b21881c6b2669a3601dec9f6e7c0b11dd3b3496dbbe89f39fe0e81757246ddfb",
+      "same_as_commit": true,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 840,
+            "height": 354,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "12/1",
+            "avg_frame_rate": "12/1",
+            "duration": "3.910000",
+            "nb_read_frames": "47"
+          }
+        ],
+        "format": {
+          "duration": "3.910000"
+        }
+      },
+      "full_decode_pass": true,
+      "decode_stderr": "",
+      "timeline": {
+        "frames": 47,
+        "loop": 0,
+        "durations_ms": [
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          90,
+          80,
+          80,
+          80
+        ],
+        "duration_s": 3.91,
+        "unique_decoded_frames": 47,
+        "max_deviation_from_12fps_s": 0.0033333333333334103,
+        "duration_difference_from_mp4_s": 0.035
+      }
+    }
+  ],
+  "pages": [
+    {
+      "url": "http://board.tail0c526a.ts.net:8031/demos/",
+      "status": 200,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c",
+      "new_demo_links_present": {
+        "pendulum_physics_start.mp4": true,
+        "pendulum_physics_start.gif": true,
+        "ball_settle.mp4": true,
+        "ball_settle.gif": true
+      }
+    },
+    {
+      "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+      "error": "<urlopen error [Errno 111] Connection refused>"
+    }
+  ],
+  "pass": true
+}
