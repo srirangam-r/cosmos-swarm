@@ -1,0 +1,302 @@
+{
+  "blind_01": {
+    "blind_id": "blind_01",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.463,
+    "mean_upper_diff": 0.443,
+    "mean_plank_diff": 3.603,
+    "max_blob_on_plank": 214.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.463)"
+  },
+  "blind_02": {
+    "blind_id": "blind_02",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.3964,
+    "mean_upper_diff": 1.874,
+    "mean_plank_diff": 3.863,
+    "max_blob_on_plank": 221.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 1.874)"
+  },
+  "blind_03": {
+    "blind_id": "blind_03",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.0773,
+    "mean_upper_diff": 0.454,
+    "mean_plank_diff": 5.841,
+    "max_blob_on_plank": 212.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 2.077)"
+  },
+  "blind_04": {
+    "blind_id": "blind_04",
+    "settled_by_f92": "Y",
+    "rest_frame": 70,
+    "last20": 0.6557,
+    "mean_upper_diff": 0.562,
+    "mean_plank_diff": 1.121,
+    "max_blob_on_plank": 210.0,
+    "notes": "Settled at rest on plank from ~f70; terminal corridor diff 0.656"
+  },
+  "blind_05": {
+    "blind_id": "blind_05",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.2903,
+    "mean_upper_diff": 0.643,
+    "mean_plank_diff": 5.254,
+    "max_blob_on_plank": 223.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 2.290)"
+  },
+  "blind_06": {
+    "blind_id": "blind_06",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.9117,
+    "mean_upper_diff": 1.63,
+    "mean_plank_diff": 2.652,
+    "max_blob_on_plank": 74.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 1.630)"
+  },
+  "blind_07": {
+    "blind_id": "blind_07",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.1248,
+    "mean_upper_diff": 0.504,
+    "mean_plank_diff": 5.75,
+    "max_blob_on_plank": 211.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 2.125)"
+  },
+  "blind_08": {
+    "blind_id": "blind_08",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.7887,
+    "mean_upper_diff": 1.678,
+    "mean_plank_diff": 2.978,
+    "max_blob_on_plank": 90.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 1.678)"
+  },
+  "blind_09": {
+    "blind_id": "blind_09",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.1912,
+    "mean_upper_diff": 0.426,
+    "mean_plank_diff": 2.446,
+    "max_blob_on_plank": 212.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.191)"
+  },
+  "blind_10": {
+    "blind_id": "blind_10",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.473,
+    "mean_upper_diff": 1.526,
+    "mean_plank_diff": 1.638,
+    "max_blob_on_plank": 80.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 1.526)"
+  },
+  "blind_11": {
+    "blind_id": "blind_11",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.581,
+    "mean_upper_diff": 1.063,
+    "mean_plank_diff": 2.053,
+    "max_blob_on_plank": 77.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 1.063)"
+  },
+  "blind_12": {
+    "blind_id": "blind_12",
+    "settled_by_f92": "Y",
+    "rest_frame": 46,
+    "last20": 0.75,
+    "mean_upper_diff": 0.529,
+    "mean_plank_diff": 0.98,
+    "max_blob_on_plank": 217.0,
+    "notes": "Settled at rest on plank from ~f46; terminal corridor diff 0.750"
+  },
+  "blind_13": {
+    "blind_id": "blind_13",
+    "settled_by_f92": "Y",
+    "rest_frame": 80,
+    "last20": 0.8319,
+    "mean_upper_diff": 0.526,
+    "mean_plank_diff": 1.093,
+    "max_blob_on_plank": 216.0,
+    "notes": "Settled at rest on plank from ~f80; terminal corridor diff 0.832"
+  },
+  "blind_14": {
+    "blind_id": "blind_14",
+    "settled_by_f92": "Y",
+    "rest_frame": 43,
+    "last20": 0.5552,
+    "mean_upper_diff": 0.553,
+    "mean_plank_diff": 0.888,
+    "max_blob_on_plank": 212.0,
+    "notes": "Settled at rest on plank from ~f43; terminal corridor diff 0.555"
+  },
+  "blind_15": {
+    "blind_id": "blind_15",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.4665,
+    "mean_upper_diff": 0.441,
+    "mean_plank_diff": 3.057,
+    "max_blob_on_plank": 214.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.466)"
+  },
+  "blind_16": {
+    "blind_id": "blind_16",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.9238,
+    "mean_upper_diff": 0.978,
+    "mean_plank_diff": 2.887,
+    "max_blob_on_plank": 193.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 2.924)"
+  },
+  "blind_17": {
+    "blind_id": "blind_17",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.4719,
+    "mean_upper_diff": 0.419,
+    "mean_plank_diff": 3.017,
+    "max_blob_on_plank": 211.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.472)"
+  },
+  "blind_18": {
+    "blind_id": "blind_18",
+    "settled_by_f92": "Y",
+    "rest_frame": 58,
+    "last20": 0.6209,
+    "mean_upper_diff": 0.579,
+    "mean_plank_diff": 0.979,
+    "max_blob_on_plank": 215.0,
+    "notes": "Settled at rest on plank from ~f58; terminal corridor diff 0.621"
+  },
+  "blind_19": {
+    "blind_id": "blind_19",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.9516,
+    "mean_upper_diff": 0.47,
+    "mean_plank_diff": 5.104,
+    "max_blob_on_plank": 215.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.952)"
+  },
+  "blind_20": {
+    "blind_id": "blind_20",
+    "settled_by_f92": "Y",
+    "rest_frame": 46,
+    "last20": 0.5651,
+    "mean_upper_diff": 0.532,
+    "mean_plank_diff": 0.909,
+    "max_blob_on_plank": 211.0,
+    "notes": "Settled at rest on plank from ~f46; terminal corridor diff 0.565"
+  },
+  "blind_21": {
+    "blind_id": "blind_21",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 2.7562,
+    "mean_upper_diff": 2.668,
+    "mean_plank_diff": 2.373,
+    "max_blob_on_plank": 85.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 2.668)"
+  },
+  "blind_22": {
+    "blind_id": "blind_22",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.6966,
+    "mean_upper_diff": 0.971,
+    "mean_plank_diff": 1.389,
+    "max_blob_on_plank": 55.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.697)"
+  },
+  "blind_23": {
+    "blind_id": "blind_23",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.8958,
+    "mean_upper_diff": 0.397,
+    "mean_plank_diff": 4.304,
+    "max_blob_on_plank": 222.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.896)"
+  },
+  "blind_24": {
+    "blind_id": "blind_24",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.8138,
+    "mean_upper_diff": 0.523,
+    "mean_plank_diff": 3.322,
+    "max_blob_on_plank": 201.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.814)"
+  },
+  "blind_25": {
+    "blind_id": "blind_25",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.4064,
+    "mean_upper_diff": 0.459,
+    "mean_plank_diff": 3.742,
+    "max_blob_on_plank": 214.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.406)"
+  },
+  "blind_26": {
+    "blind_id": "blind_26",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.2605,
+    "mean_upper_diff": 0.384,
+    "mean_plank_diff": 3.194,
+    "max_blob_on_plank": 214.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.260)"
+  },
+  "blind_27": {
+    "blind_id": "blind_27",
+    "settled_by_f92": "Y",
+    "rest_frame": 47,
+    "last20": 0.5038,
+    "mean_upper_diff": 0.429,
+    "mean_plank_diff": 0.85,
+    "max_blob_on_plank": 77.0,
+    "notes": "Settled at rest on plank from ~f47; terminal corridor diff 0.504"
+  },
+  "blind_28": {
+    "blind_id": "blind_28",
+    "settled_by_f92": "Y",
+    "rest_frame": 38,
+    "last20": 0.5205,
+    "mean_upper_diff": 0.437,
+    "mean_plank_diff": 0.863,
+    "max_blob_on_plank": 72.0,
+    "notes": "Settled at rest on plank from ~f38; terminal corridor diff 0.520"
+  },
+  "blind_29": {
+    "blind_id": "blind_29",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 1.3059,
+    "mean_upper_diff": 0.431,
+    "mean_plank_diff": 2.913,
+    "max_blob_on_plank": 221.0,
+    "notes": "Continuous hopping/rolling on plank to f92 (late diff 1.306)"
+  },
+  "blind_30": {
+    "blind_id": "blind_30",
+    "settled_by_f92": "N",
+    "rest_frame": "-",
+    "last20": 4.211,
+    "mean_upper_diff": 1.391,
+    "mean_plank_diff": 6.078,
+    "max_blob_on_plank": 178.0,
+    "notes": "Continuous bouncing/airborne motion to f92 (air diff 1.391)"
+  }
+}

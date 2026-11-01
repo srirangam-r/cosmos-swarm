@@ -1,0 +1,242 @@
+{
+  "blind_01": {
+    "orig_base": "t138_R_ball2_s32",
+    "arm": "R",
+    "ball": "ball2",
+    "seed": 32,
+    "prompt": "",
+    "hash": "00a111e270"
+  },
+  "blind_02": {
+    "orig_base": "t138_CO_ball1_s32",
+    "arm": "CO",
+    "ball": "ball1",
+    "seed": 32,
+    "prompt": "",
+    "hash": "06c7d4a0e6"
+  },
+  "blind_03": {
+    "orig_base": "t138_F_ball2_s32",
+    "arm": "F",
+    "ball": "ball2",
+    "seed": 32,
+    "prompt": "",
+    "hash": "1250df16bd"
+  },
+  "blind_04": {
+    "orig_base": "t138_QT_ball1_s31",
+    "arm": "QT",
+    "ball": "ball1",
+    "seed": 31,
+    "prompt": "",
+    "hash": "227e6e3caf"
+  },
+  "blind_05": {
+    "orig_base": "t138_QTnc_ball2_s32",
+    "arm": "QTnc",
+    "ball": "ball2",
+    "seed": 32,
+    "prompt": "",
+    "hash": "2fab994567"
+  },
+  "blind_06": {
+    "orig_base": "t138_CO_ball2_s33",
+    "arm": "CO",
+    "ball": "ball2",
+    "seed": 33,
+    "prompt": "",
+    "hash": "4826554b5f"
+  },
+  "blind_07": {
+    "orig_base": "t138_F_ball1_s32",
+    "arm": "F",
+    "ball": "ball1",
+    "seed": 32,
+    "prompt": "",
+    "hash": "51ff223310"
+  },
+  "blind_08": {
+    "orig_base": "t138_F_ball2_s31",
+    "arm": "F",
+    "ball": "ball2",
+    "seed": 31,
+    "prompt": "",
+    "hash": "59338e48e8"
+  },
+  "blind_09": {
+    "orig_base": "t138_QTnc_ball1_s33",
+    "arm": "QTnc",
+    "ball": "ball1",
+    "seed": 33,
+    "prompt": "",
+    "hash": "59970a6308"
+  },
+  "blind_10": {
+    "orig_base": "t138_F_ball2_s33",
+    "arm": "F",
+    "ball": "ball2",
+    "seed": 33,
+    "prompt": "",
+    "hash": "6f9bc3ddbd"
+  },
+  "blind_11": {
+    "orig_base": "t138_F_ball1_s33",
+    "arm": "F",
+    "ball": "ball1",
+    "seed": 33,
+    "prompt": "",
+    "hash": "72ce70bed2"
+  },
+  "blind_12": {
+    "orig_base": "t138_R_ball2_s31",
+    "arm": "R",
+    "ball": "ball2",
+    "seed": 31,
+    "prompt": "",
+    "hash": "7d97ee0970"
+  },
+  "blind_13": {
+    "orig_base": "t138_R_ball1_s31",
+    "arm": "R",
+    "ball": "ball1",
+    "seed": 31,
+    "prompt": "",
+    "hash": "83ebd510c2"
+  },
+  "blind_14": {
+    "orig_base": "t138_QTnc_ball2_s31",
+    "arm": "QTnc",
+    "ball": "ball2",
+    "seed": 31,
+    "prompt": "",
+    "hash": "841ed410be"
+  },
+  "blind_15": {
+    "orig_base": "t138_QT_ball2_s33",
+    "arm": "QT",
+    "ball": "ball2",
+    "seed": 33,
+    "prompt": "",
+    "hash": "963cc4168a"
+  },
+  "blind_16": {
+    "orig_base": "t138_CO_ball1_s31",
+    "arm": "CO",
+    "ball": "ball1",
+    "seed": 31,
+    "prompt": "",
+    "hash": "99a1fd8ef4"
+  },
+  "blind_17": {
+    "orig_base": "t138_QTnc_ball2_s33",
+    "arm": "QTnc",
+    "ball": "ball2",
+    "seed": 33,
+    "prompt": "",
+    "hash": "9f27cf30bf"
+  },
+  "blind_18": {
+    "orig_base": "t138_QTnc_ball1_s31",
+    "arm": "QTnc",
+    "ball": "ball1",
+    "seed": 31,
+    "prompt": "",
+    "hash": "a4ba57d48b"
+  },
+  "blind_19": {
+    "orig_base": "t138_QT_ball2_s32",
+    "arm": "QT",
+    "ball": "ball2",
+    "seed": 32,
+    "prompt": "",
+    "hash": "a4e38491e1"
+  },
+  "blind_20": {
+    "orig_base": "t138_QT_ball2_s31",
+    "arm": "QT",
+    "ball": "ball2",
+    "seed": 31,
+    "prompt": "",
+    "hash": "af342fbb6a"
+  },
+  "blind_21": {
+    "orig_base": "t138_CO_ball2_s31",
+    "arm": "CO",
+    "ball": "ball2",
+    "seed": 31,
+    "prompt": "",
+    "hash": "b6a0a8a278"
+  },
+  "blind_22": {
+    "orig_base": "t138_CO_ball1_s33",
+    "arm": "CO",
+    "ball": "ball1",
+    "seed": 33,
+    "prompt": "",
+    "hash": "b80bb854bb"
+  },
+  "blind_23": {
+    "orig_base": "t138_QTnc_ball1_s32",
+    "arm": "QTnc",
+    "ball": "ball1",
+    "seed": 32,
+    "prompt": "",
+    "hash": "c5c5c81818"
+  },
+  "blind_24": {
+    "orig_base": "t138_F_ball1_s31",
+    "arm": "F",
+    "ball": "ball1",
+    "seed": 31,
+    "prompt": "",
+    "hash": "ca94dd5e7f"
+  },
+  "blind_25": {
+    "orig_base": "t138_QT_ball1_s32",
+    "arm": "QT",
+    "ball": "ball1",
+    "seed": 32,
+    "prompt": "",
+    "hash": "cbfbfcb172"
+  },
+  "blind_26": {
+    "orig_base": "t138_R_ball1_s32",
+    "arm": "R",
+    "ball": "ball1",
+    "seed": 32,
+    "prompt": "",
+    "hash": "d934b335b6"
+  },
+  "blind_27": {
+    "orig_base": "t138_R_ball2_s33",
+    "arm": "R",
+    "ball": "ball2",
+    "seed": 33,
+    "prompt": "",
+    "hash": "e714c9d57e"
+  },
+  "blind_28": {
+    "orig_base": "t138_R_ball1_s33",
+    "arm": "R",
+    "ball": "ball1",
+    "seed": 33,
+    "prompt": "",
+    "hash": "ebeab07424"
+  },
+  "blind_29": {
+    "orig_base": "t138_QT_ball1_s33",
+    "arm": "QT",
+    "ball": "ball1",
+    "seed": 33,
+    "prompt": "",
+    "hash": "fb391746dd"
+  },
+  "blind_30": {
+    "orig_base": "t138_CO_ball2_s32",
+    "arm": "CO",
+    "ball": "ball2",
+    "seed": 32,
+    "prompt": "",
+    "hash": "fc8086547f"
+  }
+}

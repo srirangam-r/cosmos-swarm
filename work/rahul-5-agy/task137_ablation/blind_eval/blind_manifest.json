@@ -1,0 +1,182 @@
+{
+  "blind_01": {
+    "blind_id": "blind_01",
+    "clip_file": "blind_01.mp4",
+    "sheet_file": "blind_01_sheet.jpg",
+    "zoom_file": "blind_01_zoom.jpg"
+  },
+  "blind_02": {
+    "blind_id": "blind_02",
+    "clip_file": "blind_02.mp4",
+    "sheet_file": "blind_02_sheet.jpg",
+    "zoom_file": "blind_02_zoom.jpg"
+  },
+  "blind_03": {
+    "blind_id": "blind_03",
+    "clip_file": "blind_03.mp4",
+    "sheet_file": "blind_03_sheet.jpg",
+    "zoom_file": "blind_03_zoom.jpg"
+  },
+  "blind_04": {
+    "blind_id": "blind_04",
+    "clip_file": "blind_04.mp4",
+    "sheet_file": "blind_04_sheet.jpg",
+    "zoom_file": "blind_04_zoom.jpg"
+  },
+  "blind_05": {
+    "blind_id": "blind_05",
+    "clip_file": "blind_05.mp4",
+    "sheet_file": "blind_05_sheet.jpg",
+    "zoom_file": "blind_05_zoom.jpg"
+  },
+  "blind_06": {
+    "blind_id": "blind_06",
+    "clip_file": "blind_06.mp4",
+    "sheet_file": "blind_06_sheet.jpg",
+    "zoom_file": "blind_06_zoom.jpg"
+  },
+  "blind_07": {
+    "blind_id": "blind_07",
+    "clip_file": "blind_07.mp4",
+    "sheet_file": "blind_07_sheet.jpg",
+    "zoom_file": "blind_07_zoom.jpg"
+  },
+  "blind_08": {
+    "blind_id": "blind_08",
+    "clip_file": "blind_08.mp4",
+    "sheet_file": "blind_08_sheet.jpg",
+    "zoom_file": "blind_08_zoom.jpg"
+  },
+  "blind_09": {
+    "blind_id": "blind_09",
+    "clip_file": "blind_09.mp4",
+    "sheet_file": "blind_09_sheet.jpg",
+    "zoom_file": "blind_09_zoom.jpg"
+  },
+  "blind_10": {
+    "blind_id": "blind_10",
+    "clip_file": "blind_10.mp4",
+    "sheet_file": "blind_10_sheet.jpg",
+    "zoom_file": "blind_10_zoom.jpg"
+  },
+  "blind_11": {
+    "blind_id": "blind_11",
+    "clip_file": "blind_11.mp4",
+    "sheet_file": "blind_11_sheet.jpg",
+    "zoom_file": "blind_11_zoom.jpg"
+  },
+  "blind_12": {
+    "blind_id": "blind_12",
+    "clip_file": "blind_12.mp4",
+    "sheet_file": "blind_12_sheet.jpg",
+    "zoom_file": "blind_12_zoom.jpg"
+  },
+  "blind_13": {
+    "blind_id": "blind_13",
+    "clip_file": "blind_13.mp4",
+    "sheet_file": "blind_13_sheet.jpg",
+    "zoom_file": "blind_13_zoom.jpg"
+  },
+  "blind_14": {
+    "blind_id": "blind_14",
+    "clip_file": "blind_14.mp4",
+    "sheet_file": "blind_14_sheet.jpg",
+    "zoom_file": "blind_14_zoom.jpg"
+  },
+  "blind_15": {
+    "blind_id": "blind_15",
+    "clip_file": "blind_15.mp4",
+    "sheet_file": "blind_15_sheet.jpg",
+    "zoom_file": "blind_15_zoom.jpg"
+  },
+  "blind_16": {
+    "blind_id": "blind_16",
+    "clip_file": "blind_16.mp4",
+    "sheet_file": "blind_16_sheet.jpg",
+    "zoom_file": "blind_16_zoom.jpg"
+  },
+  "blind_17": {
+    "blind_id": "blind_17",
+    "clip_file": "blind_17.mp4",
+    "sheet_file": "blind_17_sheet.jpg",
+    "zoom_file": "blind_17_zoom.jpg"
+  },
+  "blind_18": {
+    "blind_id": "blind_18",
+    "clip_file": "blind_18.mp4",
+    "sheet_file": "blind_18_sheet.jpg",
+    "zoom_file": "blind_18_zoom.jpg"
+  },
+  "blind_19": {
+    "blind_id": "blind_19",
+    "clip_file": "blind_19.mp4",
+    "sheet_file": "blind_19_sheet.jpg",
+    "zoom_file": "blind_19_zoom.jpg"
+  },
+  "blind_20": {
+    "blind_id": "blind_20",
+    "clip_file": "blind_20.mp4",
+    "sheet_file": "blind_20_sheet.jpg",
+    "zoom_file": "blind_20_zoom.jpg"
+  },
+  "blind_21": {
+    "blind_id": "blind_21",
+    "clip_file": "blind_21.mp4",
+    "sheet_file": "blind_21_sheet.jpg",
+    "zoom_file": "blind_21_zoom.jpg"
+  },
+  "blind_22": {
+    "blind_id": "blind_22",
+    "clip_file": "blind_22.mp4",
+    "sheet_file": "blind_22_sheet.jpg",
+    "zoom_file": "blind_22_zoom.jpg"
+  },
+  "blind_23": {
+    "blind_id": "blind_23",
+    "clip_file": "blind_23.mp4",
+    "sheet_file": "blind_23_sheet.jpg",
+    "zoom_file": "blind_23_zoom.jpg"
+  },
+  "blind_24": {
+    "blind_id": "blind_24",
+    "clip_file": "blind_24.mp4",
+    "sheet_file": "blind_24_sheet.jpg",
+    "zoom_file": "blind_24_zoom.jpg"
+  },
+  "blind_25": {
+    "blind_id": "blind_25",
+    "clip_file": "blind_25.mp4",
+    "sheet_file": "blind_25_sheet.jpg",
+    "zoom_file": "blind_25_zoom.jpg"
+  },
+  "blind_26": {
+    "blind_id": "blind_26",
+    "clip_file": "blind_26.mp4",
+    "sheet_file": "blind_26_sheet.jpg",
+    "zoom_file": "blind_26_zoom.jpg"
+  },
+  "blind_27": {
+    "blind_id": "blind_27",
+    "clip_file": "blind_27.mp4",
+    "sheet_file": "blind_27_sheet.jpg",
+    "zoom_file": "blind_27_zoom.jpg"
+  },
+  "blind_28": {
+    "blind_id": "blind_28",
+    "clip_file": "blind_28.mp4",
+    "sheet_file": "blind_28_sheet.jpg",
+    "zoom_file": "blind_28_zoom.jpg"
+  },
+  "blind_29": {
+    "blind_id": "blind_29",
+    "clip_file": "blind_29.mp4",
+    "sheet_file": "blind_29_sheet.jpg",
+    "zoom_file": "blind_29_zoom.jpg"
+  },
+  "blind_30": {
+    "blind_id": "blind_30",
+    "clip_file": "blind_30.mp4",
+    "sheet_file": "blind_30_sheet.jpg",
+    "zoom_file": "blind_30_zoom.jpg"
+  }
+}
