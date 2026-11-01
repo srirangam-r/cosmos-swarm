@@ -1,0 +1,137 @@
+{
+ "rule": "flag ok: depth>=0.40, not at edge, no octave dip (fixed before clips were fetched)",
+ "per_seed": {
+  "21": {
+   "T": 2.5404,
+   "depth": 0.279,
+   "flag": "shallow",
+   "octave_depth": 0.084,
+   "boot_se": 0.098,
+   "visual": "ball detaches + clone ball floats (identity failure); dip 2.54 shallow"
+  },
+  "22": {
+   "T": 1.3815,
+   "depth": 0.452,
+   "flag": "ok",
+   "octave_depth": 0.127,
+   "boot_se": 0.375,
+   "visual": "out-of-plane swing (bob balloons toward camera); dip 1.38, 2T echo at ~2.75"
+  },
+  "23": {
+   "T": 1.6606,
+   "depth": 0.313,
+   "flag": "shallow",
+   "octave_depth": 0.05,
+   "boot_se": 0.225,
+   "visual": "not inspected in detail (shallow)"
+  },
+  "24": {
+   "T": 1.6344,
+   "depth": 0.289,
+   "flag": "shallow",
+   "octave_depth": 0.026,
+   "boot_se": 0.118,
+   "visual": "over-the-top/near-vertical swings, visually ~40 f repeat; dip 1.63 depth 0.29"
+  },
+  "25": {
+   "T": 1.4203,
+   "depth": 0.237,
+   "flag": "shallow",
+   "octave_depth": 0.15,
+   "boot_se": 0.652,
+   "visual": "not inspected in detail (shallow, bootstrap bistable)"
+  },
+  "26": {
+   "T": 2.5134,
+   "depth": 0.394,
+   "flag": "shallow",
+   "octave_depth": 0.103,
+   "boot_se": 0.114,
+   "visual": "big near-horizontal swing; clear dip 2.51 but depth 0.39 (<0.40)"
+  },
+  "27": {
+   "T": 1.2053,
+   "depth": 0.236,
+   "flag": "shallow",
+   "octave_depth": 0.036,
+   "boot_se": 0.582,
+   "visual": "rod stretches/lengthens (non-rigid); dip 1.21 shallow"
+  },
+  "28": {
+   "T": 1.2086,
+   "depth": 0.405,
+   "flag": "ok",
+   "octave_depth": 0.0,
+   "boot_se": 0.133,
+   "visual": "clean rigid swing, near-real period"
+  },
+  "29": {
+   "T": 0.7833,
+   "depth": 0.12,
+   "flag": "shallow",
+   "octave_depth": 0.013,
+   "boot_se": 0.867,
+   "visual": "irregular swing, rod morphs; no period"
+  },
+  "30": {
+   "T": 2.101,
+   "depth": 0.493,
+   "flag": "ok",
+   "octave_depth": 0.033,
+   "boot_se": 0.063,
+   "visual": "clean sharp dip, slow near-horizontal swing"
+  }
+ },
+ "strict": {
+  "seeds": [
+   22,
+   28,
+   30
+  ],
+  "n": 3,
+  "T_mean": 1.5637164999736726,
+  "T_se": 0.2732568531444197,
+  "ratio": 1.3370812312729137,
+  "ratio_se": 0.23365271752408698,
+  "geo_ratio": 1.2992423895171503
+ },
+ "sensitivity_plus_s24_s26": {
+  "seeds": [
+   22,
+   28,
+   30,
+   24,
+   26
+  ],
+  "n": 5,
+  "T_mean": 1.7677885721955822,
+  "T_se": 0.23943882557102641,
+  "ratio": 1.5115763763963934
+ },
+ "real_ref": {
+  "pend10_f93": 1.1695,
+  "mocap": 1.1736,
+  "pend12_f101": 1.1664,
+  "pend12_mocap": 1.1746,
+  "pend7_f93": 1.1804,
+  "pend3_f93": "2.38 flagged octave? (true ~1.19)"
+ },
+ "planted": "referee 4/4 period estimates <5% (verdict field fail: rule needs >=10 estimates; period-only tool)",
+ "kiro1_k185_ok": {
+  "T": [
+   1.931,
+   1.809,
+   1.737,
+   2.199,
+   2.309,
+   2.443
+  ],
+  "mean": 2.071333333333333
+ },
+ "pooled_strict_plus_k185": {
+  "n": 9,
+  "T_mean": 1.9021277222134465,
+  "T_se": 0.1381714353366789,
+  "ratio": 1.6151207626844244
+ }
+}
