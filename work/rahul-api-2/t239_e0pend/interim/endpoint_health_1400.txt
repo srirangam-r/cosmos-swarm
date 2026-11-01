@@ -1,0 +1,11 @@
+# /health of queue endpoints, probed 2026-11-01 ~14:00 UTC from sha-devel ("started" = server start time).
+# Noise patch e5c7b3b landed ~13:12 UTC (rog1 #4936). Start time is only a rough guide (q8/a6k-3 started 13:07-13:13 and DO apply cpu noise).
+gb10 unreachable
+puget13 started 2026-11-01T12:36:58Z
+puget21 started 2026-11-01T13:08:10Z   (rog1 #4936: ignores noise key, bit-identical with/without)
+a100 started 2026-11-01T04:03:38Z      (t239: l40s cpu vs a100 cpu same seed = different-seed level)
+laptop5090 started 2026-11-01T02:13:12Z
+int-a100 started 2026-11-01T13:34:16Z
+q8-0..7 started 13:07:42-13:13:15Z      (Raj #4786: cpu noise confirmed in server sidecars)
+a6k-0..2 started 13:16:58-13:17:09Z; a6k-3 13:11:11Z (t239: a6k-2/a6k-3 match l40s)
+l40s-0..3 started 13:19:27-13:21:40Z
