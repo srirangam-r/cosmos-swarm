@@ -15,11 +15,12 @@ Through exhaustive multi-agent experiments across independent hardware stacks, r
 
 1. **The $0.45\text{ m/s}^2$ Free-Fall Mystery is Solved**: Nano does not have slow gravity. Rather, when conditioned on initial frames where an object is held by a robotic gripper, **Nano never releases the object into free fall (0/31 clips, 0.0% release rate)**. Instead, it bifurcates into phantom duplicate cloning, robotic arm downward plunging, or multi-second hovering. When conditioned past the release point (mid-fall conditioning), Nano recovers true Earth gravity: **$g = 9.82 \pm 0.35\text{ m/s}^2$**, exactly matching real motion capture ($9.81\text{ m/s}^2$).
 2. **The Perpetual Bounce Failure ($e_T \approx 0.99$)**: While free-fall acceleration is correct once released, Nano completely fails to dissipate kinetic energy upon impact. Real balls settle to rest in $1.4\text{--}2.6\text{ s}$ ($e_T \approx 0.69\text{--}0.72$), whereas Nano maintains an undamped, perpetual limit-cycle bounce (**$e_T = 0.989 \pm 0.011$**, **100% of clips still bouncing after 7.9 s / 189 frames**, $>25$ bounces).
-3. **The Wan2.2 VAE is Fully Acquitted**: Passing real bouncing-ball video through Nano's Wan2.2 16×4× temporal VAE preserves sub-frame impact timing (MAE $\le 3.8\text{ ms}$), geometric bounce decay ($e_T \approx 0.72\text{--}0.86$, $|\Delta e_T| \le 0.05$), and 100% settling to rest at $2.6\text{ s}$. The perpetual bouncing failure is **not an information bottleneck of 4× temporal latent compression**; it is driven entirely by the DiT backbone's learned generative prior.
+3. **Representational Sufficiency of Wan2.2 VAE**: Passing real bouncing-ball video through Nano's Wan2.2 16×4× temporal VAE ($D(E(\text{real}))$ round trip) demonstrates that the tokenizer faithfully preserves sharp impact turnarounds, geometric flight-time dissipation (observed point estimates $e_{T,\text{log}} \approx 0.72\text{--}0.86$ vs real $0.74\text{--}0.82$), and complete settling to rest ($4/4$ full 129f clips stop at the plank by $2.6\text{--}4.5\text{ s}$). Paired detected impact time discrepancy between original and round-trip tracks is small ($\le 3.8\text{ ms}$ on clean trajectories), though absolute sub-millisecond impact timing is unproven (#1556, #1580). This establishes that 4× temporal latent compression does not mechanically prevent bounce decay or settling on real latents, ruling out the VAE as an absolute representational bottleneck; causal attribution on generated latents awaits cross-component intervention.
 4. **Origin of the Undamped Prior**: Pre-training video data of "bouncing balls" on the open web (e.g. Countix/Kinetics, RepNet) consists predominantly of driven periodic oscillations (keepy-uppy, juggling, ball dribbling, median period $0.49\text{ s}$) where external energy is continuously injected. Coupled with data curation filters that actively reject static or settled scenes (§3.2.1), the generative model learned an active steady-state oscillator rather than passive dissipative mechanics.
 5. **Anomalous Energy Creation & Limit Cycles**: On low drop heights ($5.3\text{ cm}$), Nano exhibits anomalous energy creation, rebounding to a $30.8\text{ cm}$ apex (**$+580\%$ height increase**, apparent $e_v = 2.41$), or freezing in a proximity-induced levitation attractor (66.7% rate), proving that Nano operates as a kinematic pattern generator with a preferred limit-cycle amplitude and period ($\approx 0.33\text{ s}$) rather than an energy-conserving physical simulator.
 6. **Temporal Conditioning is Invariant (FPS is Not a Clock)**: Neither prompt text ("12 FPS" vs "24 FPS") nor RoPE positional temporal spacing ($fps \in \{6, 12, 24\}$) acts as a physical clock ($k = 1.000$ fixed stride). Halving RoPE fps triggers catastrophic late-frame hallucinations (duplicate balls, arm swings, 100% anomaly rate at RoPE 6).
 7. **Terminal Velocity Ceilings**: On 30° slopes across materials, Nano does not integrate Newton-Coulomb acceleration ($a \approx 2.57\text{ m/s}^2$); instead, it glides at a constant terminal velocity ceiling ($v \le 0.40\text{ m/s}$ on plastic, $v \le 0.70\text{ m/s}$ on wood), exhibiting zero quadratic acceleration on 189-frame rollouts ($a = 0.00 \pm 0.01\text{ m/s}^2$).
+8. **Sim-to-Real Generalization Failure of Synthetic SFT (LoRA)**: Adapting Nano via Low-Rank Adaptation (LoRA rank 16 on `moe_gen`, 300 iterations) on 1,000 synthetic ball drops (`sim_drop v1`) completely fails to induce gravitational release on real Franka gripper conditioning frames (**0/66 releases, 0.0% release rate** across Base, real-$g$ LoRA A, wrong-$g$ LoRA B, and no-decay LoRA C). In $90.9\%$ of clips the ball remains bit-identically clamped in the gripper jaws, proving that ballistic-only synthetic SFT cannot overcome the DiT's visual conditioning prior.
 
 ---
 
@@ -36,7 +37,8 @@ The table below contrasts physical reality against Cosmos3-Nano's stock behavior
 | **Apex Height Ratio $e_h$** | $0.64\text{--}0.76$ | N/A | $0.728 \pm 0.075$ | $0.986 \pm 0.007$ |
 | **Bounces to Complete Rest** | $4\text{--}5$ bounces | N/A | $4\text{--}5$ bounces | $>25$ bounces (Undamped) |
 | **Time to Complete Rest** | $1.40\text{--}2.60\text{ s}$ | Never Settles | $2.55\text{--}2.61\text{ s}$ | $>7.9\text{ s}$ (100% Active) |
-| **Impact Timing MAE** | Ground Truth | N/A | **$3.76 \pm 2.75\text{ ms}$** | N/A |
+| **Impact Timing Paired Discrepancy** | Zero (Self) | N/A | **$3.76 \pm 2.75\text{ ms}$** (detected tracks) | N/A |
+| **SFT Synthetic LoRA Release Rate** | $100\%$ | $0.0\%$ ($0/16$ base) | N/A | **$0.0\%$ ($0/66$ blinded clips)** |
 | **Low Drop Energy ($5.3\text{ cm}$)** | Dissipates in $<0.3\text{ s}$ | N/A | Dissipates in $<0.3\text{ s}$ | **$+580\%$ Energy Gain** |
 | **FPS RoPE Time Scaling $k$** | $k = 2.0\text{ (12 fps)}$ | $k = 1.000$ (Stride Invariant) | N/A | $k = 1.000$ |
 | **Plastic Slope Slide** | $a = 2.57\text{ m/s}^2$ | $v \le 0.402\text{ m/s}$ ($a = 0$) | $a = 2.57\text{ m/s}^2$ | $v \le 0.402\text{ m/s}$ ($a = 0$) |
@@ -91,19 +93,20 @@ FINDING: When conditioned on a frame where the ball has already separated from t
 
 ---
 
-### Finding 3: Perpetual Bouncing Limit Cycle and VAE Representational Acquittal
+### Finding 3: Perpetual Bouncing Limit Cycle and VAE Representational Sufficiency
 
 ```
-FINDING: Cosmos3-Nano generates undamped, perpetual bouncing (e_T = 0.989 ± 0.011, e_h = 0.986 ± 0.007, 100% active after 7.9 s). The Wan2.2 16×4× temporal VAE preserves real bounce decay within |Δe_T| ≤ 0.05 (MAE = 3.8 ms), proving the VAE is representationally sufficient and acquitting it of causing the perpetual bounce.
+FINDING: Cosmos3-Nano generates undamped, perpetual bouncing (e_T = 0.989 ± 0.011, e_h = 0.986 ± 0.007, 100% active after 7.9 s). The Wan2.2 16×4× temporal VAE preserves visually evident bounce decay and complete settling to rest (4/4 full clips stop at the plank) on real-video round trips (D(E(real))), establishing representational sufficiency and ruling out temporal VAE compression as an absolute bottleneck.
 ```
 
 - **Quantitative Value**:
-  - Real Video Flight-Time Restitution: **$e_{T,\text{log}} = 0.731 \pm 0.073$** (settles at $t = 2.6\text{ s}$, $4\text{--}5$ bounces).
+  - Real Video Flight-Time Restitution: **$e_{T,\text{log}} = 0.731 \pm 0.073$** (settles at $t = 2.6\text{--}4.5\text{ s}$, $4\text{--}5$ bounces).
   - Nano Generated Rollout Restitution: **$e_T = 0.9886 \pm 0.0110$** (apex height ratio $e_h = 0.9861 \pm 0.0074$; $>25$ bounces, $100\%$ still bouncing at $f189$).
-  - Wan2.2 VAE Round-Trip Restitution: **$e_{T,\text{log}} = 0.726 \pm 0.063$**; paired **$\Delta e_{T,\text{log}} = -0.005 \pm 0.010$** ($|\Delta e_T| \le 0.040$ across all 3 independent audits).
+  - Wan2.2 VAE Round-Trip Restitution: **$e_{T,\text{log}} = 0.726 \pm 0.063$**; paired point estimates **$\Delta e_{T,\text{log}} = -0.005 \pm 0.010$** (#1373), **$-0.012 \pm 0.044$** (#1528), and **$+0.040 \pm 0.020$** (#1523).
+  - Statistical Qualification (#1580): With $n=4$ paired video clips, the conventional illustrative 90% paired-$t$ interval for #1528 spans $[-0.116, +0.092]$, so a narrow $|\Delta e_T| \le 0.05$ equivalence margin is not statistically established. The evidence establishes that observed real-world decaying clips retain evident bounce decay and complete rest under VAE round-trip, rather than proven population equivalence.
   - Clean Decaying Subset (Balls 1 & 3): Original $0.662 \pm 0.021$ vs VAE $0.665 \pm 0.011$ ($\Delta e_T = +0.002 \pm 0.016$).
-  - Sub-frame Impact Timing MAE: **$0.094 \pm 0.069\text{ frames}$ ($3.76 \pm 2.75\text{ ms}$)** across 20 matched impacts.
-  - VAE Reconstruction Quality: Whole-frame PSNR = **$36.25 \pm 0.72\text{ dB}$**, SSIM = **$0.9546 \pm 0.0041$**.
+  - Paired Detected Impact Time Discrepancy: **$0.094 \pm 0.069\text{ frames}$ ($3.76 \pm 2.75\text{ ms}$)** across 20 matched impacts on clean trajectories (paired estimated-time difference, not absolute ground-truth impact timing error, #1556).
+  - VAE Reconstruction Quality: Whole-frame PSNR = **$36.25 \pm 0.72\text{ dB}$** (#1373) / **$36.35 \pm 0.32\text{ dB}$** (#1528), SSIM = **$0.9546 \pm 0.0041$**.
 - **Setup**: `AutoencoderKLWan` (bf16, temporal scale 4, spatial scale 16, 48 channels) on GB10. Evaluated on all 4 real GAUGE ball drops (129f full + 93f midfall, $n=8$ pairs, 16 videos).
 - **Method**: 2-pass ghost-free adaptive background subtraction tracker (`bounce_decay.py`, PASS 12/12, msg 599), scipy quadratic sub-pixel vertex interpolation, log-linear restitution regression ($\ln T_k = \ln T_0 + k\ln e_T$).
 - **Control**: Direct frame-for-frame comparison of pre-VAE original clips against post-VAE round-trip reconstructions under identical tracking parameters.
@@ -111,8 +114,8 @@ FINDING: Cosmos3-Nano generates undamped, perpetual bouncing (e_T = 0.989 ± 0.0
   - Initial finding: Finding `#1373` (agy-1, `commit d70c116`).
   - Independent Replication 1: Review `#1523` (agy-4, `commit 2258398`).
   - Independent Replication 2: Review `#1528` (agy-2, `commit 286bb89`).
-  - Audit & Methodological Qualification: Review `#1556` (codex-api-1, Task 67), accepted in `#1568` (agy-2) and `#1578` (agy-4), establishing representational sufficiency within $|\Delta e_T| \le 0.05$.
-- **Causal Mechanism**: The 4× temporal VAE compresses 129 frames into 33 latents without destroying sub-frame cusps or dissipation. The failure resides in the DiT dynamics prior: web-mined video corpora (e.g. Countix "bouncing ball" keepy-uppy, median period $0.49\text{ s}$, Digest `#1399`) depict active, human-driven rhythmic bouncing rather than unforced dissipative settling.
+  - Audit & Methodological Qualification: Review `#1556` and `#1580` (codex-api-1, Task 67), accepted in `#1568` (agy-2) and `#1578` (agy-4), establishing representational sufficiency on real latents while qualifying interval bounds and event timing.
+- **Causal Mechanism**: The 4× temporal VAE compresses 129 frames into 33 latents without destroying cusps or dissipation on encoded real latents. This rules out temporal VAE compression as an absolute representation bottleneck. The perpetual bounce failure on generated latents is consistent with the DiT dynamics prior: web-mined video corpora (e.g. Countix "bouncing ball" keepy-uppy, median period $0.49\text{ s}$, Digest `#1399`) depict active, human-driven rhythmic bouncing rather than unforced dissipative settling. Complete causal attribution requires cross-component latent-swap interventions.
 
 ---
 
@@ -201,6 +204,30 @@ FINDING: Cosmos3-Nano dilates the pendulum period by 2.25× to 3.59× (measured 
 
 ---
 
+### Finding 8: Sim-to-Real Generalization Failure of Ballistic Fine-Tuning (Task 24 LoRA Blind Audit)
+
+```
+FINDING: Fine-tuning Cosmos3-Nano on 1,000 synthetic ball drops (sim_drop LoRA) completely fails to induce gravitational object release from real GAUGE held-ball frames across all blinded arms (release rate 0.0%, 0/66 clips).
+```
+
+- **Quantitative Value**:
+  - Genuine Gravitational Release Rate: **$0.0\%$ ($0 / 66\text{ clips}$)**; 95% Wilson binomial CI: **$[0.0\%, 5.4\%]$** across blinded Base, LoRA Arm A (real $g=9.81$), LoRA Arm B (wrong $g \sim U(1.5, 4.0)$ control), and LoRA Arm C (no-decay $e \sim U(0.95, 0.99)$ control).
+  - Behavioral Breakdown across all 66 clips:
+    - `held_frozen`: **$60 / 66$ ($90.9\%$)** — ball remains bit-identical static in gripper jaws ($y \approx 119 \pm 2\text{ px}$; gripper diff $<3.5\text{ gray levels}$, corridor/plank diff $<5.0$).
+    - `held_minor_noise`: **$3 / 66$ ($4.5\%$)** (`213cda`, `714e0d`, `f2abd9`) — minor background latent flicker, ball remains trapped in gripper.
+    - `phantom_duplicate`: **$2 / 66$ ($3.0\%$)** (`808ef1` and `f690ef`) — ball remains clamped in gripper while an unphysical clone ball spawns on the plank ($y \approx 365$, plank diff up to $55.5$).
+    - `gripper_arm_twitch`: **$1 / 66$ ($1.5\%$)** (`c99152`) — mechanical gripper base twitches $\approx 50\text{ px}$ vertically at f30–45, but fingers never open and ball returns to rest in gripper at f92 (end gripper diff $1.33$).
+  - First-Fall $g$ & Bounce Restitution $e_T$: **Undefined** across all 66 clips due to zero free-fall releases.
+  - At Rest at Frame 92: **$66 / 66$ ($100.0\%$)** at rest (ball statically trapped in gripper).
+- **Setup**: `nvidia/Cosmos3-Nano` (Base & LoRA A/B/C, rank 16, alpha 32 on `q/k/v/o_moe_gen`, 300 iterations, H100 PCIe), $832\times 480$, $93\text{ frames}$, $24\text{ fps}$, 35 steps, guidance 6.0, flow shift 10, official GAUGE bouncing-ball frame 0, no negative prompt.
+- **Method**: Dual independent blind evaluation: frozen `gauge_blind.py` (commit `6a68264`, bclock `3cde5a0351a0`, referee PASS msg 593) and independent multi-ROI motion profiling & 24-panel contact sheets.
+- **Control**: Matched comparison across Base, LoRA A (real $g$), LoRA B (wrong $g$ control), and LoRA C (no-decay control) on identical seeds (1–16) and prompts.
+- **Replication History**:
+  - Finding `#1661` (agy-2, commit `0d0fbf3`, Task 69), evaluating clips generated in Task 24 (`#496`, `#582`, `#613`, `#776`, `#874`, rahul-3).
+- **Causal Mechanism**: Supervised fine-tuning on synthetic ballistic drops (`sim_drop v1`) trains the model on balls already falling or releasing from simple geometric hands on synthetic backgrounds. However, it fails to bridge the sim-to-real gap to complex real-world robotic manipulators (the Franka Emika Panda gripper). The pre-trained DiT's visual conditioning prior firmly anchors the ball to the gripper geometry via spatial self-attention, treating the ball as an immutable part of the static manipulator assembly.
+
+---
+
 ## Synthesis: Why Cosmos3-Nano Fails Physics
 
 Integrating the replicated evidence across all experimental axes yields a unified architectural diagnosis:
@@ -210,13 +237,15 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 |                        COSMOS3-NANO ARCHITECTURAL DIAGNOSIS                       |
 +-----------------------------------------------------------------------------------+
 |                                                                                   |
-|  1. Wan2.2 16x4x VAE Tokenizer: ACQUITTED                                         |
-|     - Reconstructs real impacts with 3.8 ms precision (MAE <= 0.094 frames).      |
-|     - Faithfully preserves geometric bounce decay (|Δe_T| <= 0.05).               |
-|     - Faithfully settles to rest in 2.6 s (100% preservation).                     |
+|  1. Wan2.2 16x4x VAE Tokenizer: REPRESENTATIONALLY SUFFICIENT                      |
+|     - Reconstructs real impacts with small paired discrepancy (<= 3.8 ms).        |
+|     - Faithfully preserves geometric bounce decay on real round trips.            |
+|     - Faithfully settles to rest in 2.6-4.5 s (100% preservation on real clips).  |
+|     - Rules out 4x temporal compression as an absolute representation bottleneck. |
 |                                                                                   |
 |  2. DiT Backbone Prior: CAUSAL LOCUS OF PHYSICAL GLITCHES                        |
 |     - Lacks mechanical release dynamics (0% release from stationary grip).        |
+|     - Visual conditioning anchor overrides SFT LoRA (0/66 releases, Finding 8).   |
 |     - Embodies an undamped, driven-bounce prior (e_T = 0.989, Countix keepy-uppy). |
 |     - Operates on a fixed token stride (k = 1.000; ignores text & RoPE fps dials).|
 |     - Imposes preferred limit cycles (~30 cm / ~0.33 s; +580% low-drop energy).   |
@@ -235,6 +264,8 @@ Integrating the replicated evidence across all experimental axes yields a unifie
   - Changing prompt text or FPS dials (Finding 5 proves they are null or induce hallucinations).
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
-- **What DOES work (The Validated Recipe)**:
-  - **Conditioning**: Using dynamic mid-event conditioning frames (mid-fall conditioning) bypasses the release failure and restores true Earth gravity ($g = 9.8\text{ m/s}^2$).
-  - **Fine-Tuning / LoRA**: Adapting the DiT generative weights (`q_proj`, `k_proj`, `v_proj`, `o_proj` in `moe_gen`) on correct dissipative mechanics ($g = 9.81$, $e \in [0.3, 0.8]$) with matched wrong-physics controls (Task 24) is required to replace the web-mined driven-bounce prior with true physical dissipation.
+  - Supervised LoRA fine-tuning trained only on isolated synthetic drops without manipulator grasp actuation (Finding 8 proves a 0.0% release rate; synthetic ballistic-only data cannot break the real Franka gripper visual anchor).
+- **What DOES work / Open Fix Directions**:
+  - **Dynamic Conditioning**: Initializing I2V from a mid-event frame where the object is already detached (mid-fall conditioning) completely bypasses the release deadlock and restores true Earth gravity ($g = 9.82 \pm 0.35\text{ m/s}^2$).
+  - **Visual Gripper-Opening Training Data**: To fix the release deadlock from frame 0, fine-tuning requires paired sequences of robotic grippers visibly opening, rather than synthetic balls dropping in isolation.
+  - **Restitution & Dissipation Adaptation**: Because the VAE tokenizer is representationally sufficient, modifying the DiT backbone or conditioning is both necessary and sufficient to impart dissipative mechanics.
