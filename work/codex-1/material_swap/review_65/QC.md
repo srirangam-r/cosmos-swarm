@@ -1,0 +1,7 @@
+# Wood seed 3: qualitative QC
+
+Queue 073734-793566, gb10; T2V superball/wood, 832×480, 189 frames at 24 fps, seed 3, steps 35, guidance 6, flow shift 10; full prompt and remaining details in sidecar. Original MP4 SHA-256 `158a7d202a402a9670a47bb430803dba535df0618046c51536e9a6e931660c89`; sidecar SHA-256 `255ff2a9e5d4ab9d84859527a1ab1e8c90b9c9d29bddddc8aed6463b6bbe0637`.
+
+All frames inspected in consecutive downscaled sheets and frames 12–35 and selected later frames in native-resolution crops. A single grey ball enters from above, becomes fully visible and descends; the first frame shows only a small piece of it. The framing and surface appear broadly stable; no clear duplication or cut is visible. Around frames 18–21 the ball reaches its lowest apparent location and remains near it with small visual changes through the end; a distinct rebound is not apparent. The dark area below could be a shadow, so actual contact and exact rest onset are uncertain. No two complete flights, bounce-decay ratio, height ratio, or cycle estimate are available. Apparent near-stillness is qualitative and does not establish zero motion or physical rest.
+
+`wood3_native.jpg` shows the native-resolution crop, labelled by source frame. `wood_s3_review.mp4` is a lossy transcode of the original; use the hash above for provenance. This unblinded observation is not planted-validated, and different T2V scenes cannot isolate surface material.
