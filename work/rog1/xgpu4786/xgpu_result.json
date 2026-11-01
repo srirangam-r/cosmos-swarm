@@ -1,0 +1,552 @@
+{
+ "n_clips": 14,
+ "sidecar_noise": {
+  "xg_wood_ia100_cpu_s301": {
+   "has_noise_key": true,
+   "endpoint": "int-a100",
+   "excerpt": []
+  },
+  "xg_wood_ia100_cpu_s302": {
+   "has_noise_key": true,
+   "endpoint": "int-a100",
+   "excerpt": []
+  },
+  "xg_wood_ia100_cpu_s303": {
+   "has_noise_key": true,
+   "endpoint": "int-a100",
+   "excerpt": []
+  },
+  "xg_wood_ia100_cuda_s301": {
+   "has_noise_key": false,
+   "endpoint": "int-a100",
+   "excerpt": []
+  },
+  "xg_wood_l40s_cpu_s301": {
+   "has_noise_key": true,
+   "endpoint": "l40s-2",
+   "excerpt": []
+  },
+  "xg_wood_l40s_cpu_s302": {
+   "has_noise_key": true,
+   "endpoint": "l40s-3",
+   "excerpt": []
+  },
+  "xg_wood_l40s_cpu_s303": {
+   "has_noise_key": true,
+   "endpoint": "l40s-1",
+   "excerpt": []
+  },
+  "xg_wood_l5090_cpu_s301": {
+   "has_noise_key": true,
+   "endpoint": "laptop5090",
+   "excerpt": []
+  },
+  "xg_wood_l5090_cpu_s302": {
+   "has_noise_key": true,
+   "endpoint": "laptop5090",
+   "excerpt": []
+  },
+  "xg_wood_l5090_cpu_s303": {
+   "has_noise_key": true,
+   "endpoint": "laptop5090",
+   "excerpt": []
+  },
+  "xg_wood_p21_cpu_s301": {
+   "has_noise_key": true,
+   "endpoint": "puget21",
+   "excerpt": []
+  },
+  "xg_wood_p21_cpu_s302": {
+   "has_noise_key": true,
+   "endpoint": "puget21",
+   "excerpt": []
+  },
+  "xg_wood_p21_cpu_s303": {
+   "has_noise_key": true,
+   "endpoint": "puget21",
+   "excerpt": []
+  },
+  "xg_wood_p21_cuda_s301": {
+   "has_noise_key": false,
+   "endpoint": "puget21",
+   "excerpt": []
+  }
+ },
+ "pairs": [
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_ia100_cpu_s302",
+   "DIFF",
+   4.174
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_ia100_cpu_s303",
+   "DIFF",
+   4.401
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_l40s_cpu_s301",
+   "SAME",
+   0.723
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_l40s_cpu_s302",
+   "DIFF",
+   4.143
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_l40s_cpu_s303",
+   "DIFF",
+   4.401
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_l5090_cpu_s301",
+   "SAME",
+   3.113
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_l5090_cpu_s302",
+   "DIFF",
+   3.895
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_l5090_cpu_s303",
+   "DIFF",
+   3.385
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_p21_cpu_s301",
+   "SAME",
+   3.804
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   3.553
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   3.919
+  ],
+  [
+   "xg_wood_ia100_cpu_s301",
+   "xg_wood_p21_cuda_s301",
+   "CUDA",
+   3.804
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_ia100_cpu_s303",
+   "DIFF",
+   2.259
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_l40s_cpu_s301",
+   "DIFF",
+   4.162
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_l40s_cpu_s302",
+   "SAME",
+   0.449
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_l40s_cpu_s303",
+   "DIFF",
+   2.315
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_l5090_cpu_s301",
+   "DIFF",
+   2.863
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_l5090_cpu_s302",
+   "SAME",
+   2.191
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_l5090_cpu_s303",
+   "DIFF",
+   3.543
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_p21_cpu_s301",
+   "DIFF",
+   2.414
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_p21_cpu_s302",
+   "SAME",
+   1.938
+  ],
+  [
+   "xg_wood_ia100_cpu_s302",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   2.314
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_l40s_cpu_s301",
+   "DIFF",
+   4.35
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_l40s_cpu_s302",
+   "DIFF",
+   2.193
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_l40s_cpu_s303",
+   "SAME",
+   0.662
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_l5090_cpu_s301",
+   "DIFF",
+   3.038
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_l5090_cpu_s302",
+   "DIFF",
+   2.584
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_l5090_cpu_s303",
+   "SAME",
+   3.441
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_p21_cpu_s301",
+   "DIFF",
+   2.502
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   1.998
+  ],
+  [
+   "xg_wood_ia100_cpu_s303",
+   "xg_wood_p21_cpu_s303",
+   "SAME",
+   2.217
+  ],
+  [
+   "xg_wood_ia100_cuda_s301",
+   "xg_wood_l40s_cpu_s301",
+   "CUDA",
+   3.78
+  ],
+  [
+   "xg_wood_ia100_cuda_s301",
+   "xg_wood_l5090_cpu_s301",
+   "CUDA",
+   2.322
+  ],
+  [
+   "xg_wood_ia100_cuda_s301",
+   "xg_wood_p21_cpu_s301",
+   "CUDA",
+   2.221
+  ],
+  [
+   "xg_wood_ia100_cuda_s301",
+   "xg_wood_p21_cuda_s301",
+   "CUDA",
+   2.221
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_l40s_cpu_s302",
+   "DIFF",
+   4.131
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_l40s_cpu_s303",
+   "DIFF",
+   4.346
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_l5090_cpu_s301",
+   "SAME",
+   2.918
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_l5090_cpu_s302",
+   "DIFF",
+   3.922
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_l5090_cpu_s303",
+   "DIFF",
+   3.22
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_p21_cpu_s301",
+   "SAME",
+   3.722
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   3.454
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   3.896
+  ],
+  [
+   "xg_wood_l40s_cpu_s301",
+   "xg_wood_p21_cuda_s301",
+   "CUDA",
+   3.722
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_l40s_cpu_s303",
+   "DIFF",
+   2.238
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_l5090_cpu_s301",
+   "DIFF",
+   2.822
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_l5090_cpu_s302",
+   "SAME",
+   2.102
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_l5090_cpu_s303",
+   "DIFF",
+   3.51
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_p21_cpu_s301",
+   "DIFF",
+   2.367
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_p21_cpu_s302",
+   "SAME",
+   1.875
+  ],
+  [
+   "xg_wood_l40s_cpu_s302",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   2.264
+  ],
+  [
+   "xg_wood_l40s_cpu_s303",
+   "xg_wood_l5090_cpu_s301",
+   "DIFF",
+   3.021
+  ],
+  [
+   "xg_wood_l40s_cpu_s303",
+   "xg_wood_l5090_cpu_s302",
+   "DIFF",
+   2.529
+  ],
+  [
+   "xg_wood_l40s_cpu_s303",
+   "xg_wood_l5090_cpu_s303",
+   "SAME",
+   3.461
+  ],
+  [
+   "xg_wood_l40s_cpu_s303",
+   "xg_wood_p21_cpu_s301",
+   "DIFF",
+   2.461
+  ],
+  [
+   "xg_wood_l40s_cpu_s303",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   2.018
+  ],
+  [
+   "xg_wood_l40s_cpu_s303",
+   "xg_wood_p21_cpu_s303",
+   "SAME",
+   2.26
+  ],
+  [
+   "xg_wood_l5090_cpu_s301",
+   "xg_wood_l5090_cpu_s302",
+   "DIFF",
+   2.688
+  ],
+  [
+   "xg_wood_l5090_cpu_s301",
+   "xg_wood_l5090_cpu_s303",
+   "DIFF",
+   1.82
+  ],
+  [
+   "xg_wood_l5090_cpu_s301",
+   "xg_wood_p21_cpu_s301",
+   "SAME",
+   2.24
+  ],
+  [
+   "xg_wood_l5090_cpu_s301",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   1.883
+  ],
+  [
+   "xg_wood_l5090_cpu_s301",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   2.661
+  ],
+  [
+   "xg_wood_l5090_cpu_s301",
+   "xg_wood_p21_cuda_s301",
+   "CUDA",
+   2.24
+  ],
+  [
+   "xg_wood_l5090_cpu_s302",
+   "xg_wood_l5090_cpu_s303",
+   "DIFF",
+   3.177
+  ],
+  [
+   "xg_wood_l5090_cpu_s302",
+   "xg_wood_p21_cpu_s301",
+   "DIFF",
+   2.257
+  ],
+  [
+   "xg_wood_l5090_cpu_s302",
+   "xg_wood_p21_cpu_s302",
+   "SAME",
+   2.126
+  ],
+  [
+   "xg_wood_l5090_cpu_s302",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   2.505
+  ],
+  [
+   "xg_wood_l5090_cpu_s303",
+   "xg_wood_p21_cpu_s301",
+   "DIFF",
+   2.439
+  ],
+  [
+   "xg_wood_l5090_cpu_s303",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   2.764
+  ],
+  [
+   "xg_wood_l5090_cpu_s303",
+   "xg_wood_p21_cpu_s303",
+   "SAME",
+   2.646
+  ],
+  [
+   "xg_wood_p21_cpu_s301",
+   "xg_wood_p21_cpu_s302",
+   "DIFF",
+   2.062
+  ],
+  [
+   "xg_wood_p21_cpu_s301",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   2.011
+  ],
+  [
+   "xg_wood_p21_cpu_s302",
+   "xg_wood_p21_cpu_s303",
+   "DIFF",
+   2.033
+  ]
+ ],
+ "summary": {
+  "SAME": {
+   "n": 18,
+   "median": 2.2285749912261963,
+   "min": 0.4490591883659363,
+   "max": 3.8037424087524414
+  },
+  "DIFF": {
+   "n": 48,
+   "median": 2.7260063886642456,
+   "min": 1.8201501369476318,
+   "max": 4.4009504318237305
+  },
+  "CUDA": {
+   "n": 7,
+   "median": 2.322000503540039,
+   "min": 2.2214515209198,
+   "max": 3.8037424087524414
+  }
+ },
+ "replicated": false,
+ "late_motion": {
+  "xg_wood_ia100_cpu_s301": 0.1696,
+  "xg_wood_ia100_cpu_s302": 0.5548,
+  "xg_wood_ia100_cpu_s303": 0.1262,
+  "xg_wood_ia100_cuda_s301": 0.1538,
+  "xg_wood_l40s_cpu_s301": 0.1682,
+  "xg_wood_l40s_cpu_s302": 0.5284,
+  "xg_wood_l40s_cpu_s303": 0.1269,
+  "xg_wood_l5090_cpu_s301": 0.14,
+  "xg_wood_l5090_cpu_s302": 0.2301,
+  "xg_wood_l5090_cpu_s303": 0.2104,
+  "xg_wood_p21_cpu_s301": 0.3133,
+  "xg_wood_p21_cpu_s302": 0.1383,
+  "xg_wood_p21_cpu_s303": 0.2579,
+  "xg_wood_p21_cuda_s301": 0.3133
+ }
+}
