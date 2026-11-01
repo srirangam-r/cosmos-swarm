@@ -1,0 +1,189 @@
+{
+  "commit": "067d5a18b77a76edfd38b031d8130506c52801d2",
+  "files": [
+    {
+      "path": "work/ro-sol1/t317/README.md",
+      "sha256": "87e485a8f94cbedef4e9044de5516295d0a1e88ee424dff2f4e24272e1cc86b8"
+    },
+    {
+      "path": "work/ro-sol1/t317/browser_render.json",
+      "sha256": "54ffcfaf5f16af1df12d20f55ca7a9c3c53dd3e4b6f290c27df8a4af6ecac35c"
+    },
+    {
+      "path": "work/ro-sol1/t317/build.py",
+      "sha256": "c38594a1d507d353e1f551e73dc8ce3db5f132e29703183f59da9adbef51f0e8"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_00_11.webp",
+      "sha256": "d2b55e2aeb96a6ab68f8d0872b73d293f530350fca91a0735b1707d7a20d52b5"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_12_23.webp",
+      "sha256": "3302513d9e04b699fec33d855b0cce23eb6c92c45565054c08bed7aa7e08fd86"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_24_35.webp",
+      "sha256": "8d06d7ecf186cbf0b99ea3c7e8525ae1b10a3c35e69a4f4745c37f79f991d6a1"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_36_47.webp",
+      "sha256": "008f67a3c10359d940232e884dd65c73e2c8a2d80bb537b6a74ceb8b61c0b3ec"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_48_59.webp",
+      "sha256": "e1140575120ed44ac24c55d013161559694c17b1da6dd97643823a700b05a973"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_60_71.webp",
+      "sha256": "a82cb3dc6dd537efb76a9d02ea05ff1eb0b7a8e599b770f3b01eab786f70716c"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_72_83.webp",
+      "sha256": "ad41b8c38540f3302fff856e9fd03f9a124848c81a5ff1cd25f580142afb80c6"
+    },
+    {
+      "path": "work/ro-sol1/t317/dense/frames_84_92.webp",
+      "sha256": "3e1ce70539d70d903363c01ae5cb4970f4af333b04b871f068184cf1dc7acdf4"
+    },
+    {
+      "path": "work/ro-sol1/t317/desktop.png",
+      "sha256": "514f147b9b9cbbc7fb14fb039500016e695cb6634f91ccfcda9c376daa064ffd"
+    },
+    {
+      "path": "work/ro-sol1/t317/desktop_all20.png",
+      "sha256": "e3a4fb368b92dda3b4923189d9e870659d3020d2a7ef4434e6aeecc531724077"
+    },
+    {
+      "path": "work/ro-sol1/t317/desktop_dense.png",
+      "sha256": "d354005bc33633b6ff01ebe6e575c70b67a7c33226c832f9d85b32f00d45a0b6"
+    },
+    {
+      "path": "work/ro-sol1/t317/index.html",
+      "sha256": "e9e0e2548b3f39d380e0913b56525f287f28998638988c9beb2e76f954bd2def"
+    },
+    {
+      "path": "work/ro-sol1/t317/manifest.json",
+      "sha256": "fcf8f060f3be70fa63417ac9dc573683c162d04ae4b819f6e04cd36e7adb2014"
+    },
+    {
+      "path": "work/ro-sol1/t317/mobile.png",
+      "sha256": "ac0ed6c111903e5273d710f176ffc0625d0b2738f1b8f8209f26c6709ea81449"
+    },
+    {
+      "path": "work/ro-sol1/t317/mobile_all20.png",
+      "sha256": "9fb0ae8b0727d304259ef2f3cfedfe4d8c22625a578ca9f250629903806b93f3"
+    },
+    {
+      "path": "work/ro-sol1/t317/mobile_dense.png",
+      "sha256": "de850b78fe57b1a9da3db23901b1817981b03d97f1c8fcd3ada4e9d861149a44"
+    },
+    {
+      "path": "work/ro-sol1/t317/render.cjs",
+      "sha256": "bf3a0b7c783f1315524e54659279528f3314fa6d9c1712a0e0f4761d8e5072f5"
+    },
+    {
+      "path": "work/ro-sol1/t317/sha256_manifest.json",
+      "sha256": "e964577ff5853fb1d6b31447e402962f9e5e9c6f09782e738dc4a1bf6f8520fd"
+    },
+    {
+      "path": "work/ro-sol1/t317/verification.json",
+      "sha256": "ec4cfc1031b6e85cbf98df7544f45733d07173d3b1d5bc47e719b845c00a2882"
+    },
+    {
+      "path": "work/ro-sol1/t317/visual_review.json",
+      "sha256": "2861d369d469d3fc25280911d0a01552f1e5fa7ca91f29bab029934c60d20977"
+    },
+    {
+      "path": "work/ro-sol1/t320/README.md",
+      "sha256": "88ad460342d7d90d03b7a8529405116d82d522658ce28de50b866404950efb5b"
+    },
+    {
+      "path": "work/ro-sol1/t320/browser_render.json",
+      "sha256": "625e99b7c2213ef7fe8c1439fd098a037b13a8058862b72a99957567d744d29f"
+    },
+    {
+      "path": "work/ro-sol1/t320/desktop.png",
+      "sha256": "d3be77eda29ed65a430b67a99186b0ca81d8ca1f59f403ebf228870f818e77e2"
+    },
+    {
+      "path": "work/ro-sol1/t320/index.html",
+      "sha256": "82112c7156a888bdbafe03b280c1f406a529eb2b9b7fcff05890630ac7dc4838"
+    },
+    {
+      "path": "work/ro-sol1/t320/mobile.png",
+      "sha256": "8ec2526e699272b108a8fab407494c4d3c2ddf349c14754e030c7ee233a7b3aa"
+    },
+    {
+      "path": "work/ro-sol1/t320/render.cjs",
+      "sha256": "84178b41420bed4e9600c651df96a4345ed5890da3903d93c7ab667c3b55fd52"
+    },
+    {
+      "path": "work/ro-sol1/t320/review_6330.json",
+      "sha256": "675d4adca3141a9bc79a9ff33395904a8fb8014245ee3d55d744c8e3df72f374"
+    },
+    {
+      "path": "work/ro-sol1/t320/verification.json",
+      "sha256": "d67fdc871103aee4879428bb93a631d4bf7f4f59728ecfa833fba6ec01c18bc6"
+    },
+    {
+      "path": "work/ro-sol1/t322/README.md",
+      "sha256": "856c3843adae73184af855cf3db5d6dec1a2a255126ed86894f40ee04e8d0a5c"
+    },
+    {
+      "path": "work/ro-sol1/t322/browser_render.json",
+      "sha256": "f8131d17201af182c656bcef2df19f0b999789375db930d70ad3a232c6c568d8"
+    },
+    {
+      "path": "work/ro-sol1/t322/build.py",
+      "sha256": "c6c4e0a5b824c4e1234f8253b3069d6454761bdcf9e9f9ba3cdffc9c73d1b767"
+    },
+    {
+      "path": "work/ro-sol1/t322/desktop.png",
+      "sha256": "33ab5efd5ad5e2996fe12eb4bebcf4716bde01f4ae216e7ffe7f3ae37fc21e2a"
+    },
+    {
+      "path": "work/ro-sol1/t322/desktop_source_note.png",
+      "sha256": "9a9ea8674a9f2b026189413dc7e1a7d14cc3623062820c4aea6696ad81bac1c5"
+    },
+    {
+      "path": "work/ro-sol1/t322/index.html",
+      "sha256": "7f14bc44f27537c559e42733fb5aec863a3edda9978643a831012bd6a312f22a"
+    },
+    {
+      "path": "work/ro-sol1/t322/mobile.png",
+      "sha256": "40948633e6e373f262ff83081d791d5ae15a55f36502617ead0a99fd6c6a7cff"
+    },
+    {
+      "path": "work/ro-sol1/t322/mobile_source_note.png",
+      "sha256": "c26499e97d7e9c53b6fc4ed6cbac3cd04631a74242454844c38ade6e2ccec26f"
+    },
+    {
+      "path": "work/ro-sol1/t322/render.cjs",
+      "sha256": "4a944ab030f08be1f99825eaac6f9d62d26ecf306f82c39fab971c0a40a7523a"
+    },
+    {
+      "path": "work/ro-sol1/t322/review_6380.json",
+      "sha256": "1932c977aa059ef7a8742ef513e102c458d6614663eafa8ccb6b28fc5b74076b"
+    },
+    {
+      "path": "work/ro-sol1/t322/source_README.md",
+      "sha256": "10c68706eb7a607ccacbcaf2e72c86501c0f9f7a505325917cc139c0ddcbf2b8"
+    },
+    {
+      "path": "work/ro-sol1/t322/source_audit_pendulum_dial.py",
+      "sha256": "a2d34506e532ec48582d67c57686fce2a25952ef62cb53499e9c0f4143934fdc"
+    },
+    {
+      "path": "work/ro-sol1/t322/source_audit_results.json",
+      "sha256": "c5061a1cc5cbbbe5244f911cb71b4fb9b1cbbcd8944f0b3b160ab77da3117d67"
+    },
+    {
+      "path": "work/ro-sol1/t322/source_receipt.json",
+      "sha256": "424608dee047356f469eb3d2940a10724f98ecc665f5bde43843dea8b1023692"
+    },
+    {
+      "path": "work/ro-sol1/t322/verification.json",
+      "sha256": "953a311caf91b350bb20061220caf98de9cd266154c284a720f8b7ac4aef8696"
+    }
+  ]
+}

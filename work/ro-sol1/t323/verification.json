@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-01T18:43:09.846935+00:00",
+  "frozen_files_unchanged": 46,
+  "exact_receipts": [
+    6398,
+    6399
+  ],
+  "desktop_mobile_no_page_overflow": true,
+  "local_links_exist": true,
+  "frozen_readout_navigation": [
+    {
+      "url": "file:///home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t322/index.html",
+      "rows": 20,
+      "fits": 4
+    },
+    {
+      "url": "file:///home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t322/index.html",
+      "rows": 20,
+      "fits": 4
+    }
+  ],
+  "browser_exited": true,
+  "scope": "Presentation verification only; no measurement, bootstrap, regression, GPU, referee or service job."
+}
