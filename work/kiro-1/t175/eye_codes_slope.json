@@ -1,0 +1,3 @@
+{"_note": "kiro-1 eye codes at f46/f92 from montage_slope_*.jpg; coder NOT blind to arm (labels on montage); unvalidated. Codes: table = cube on table below plank at f92; plank = still on plank at f92; top = barely moved from start; gone = cube not visible in frame at f92.",
+ "slope_wood":    {"s4": {"base":"gone","r":"gone","n":"gone"}, "s5": {"base":"plank","r":"table","n":"plank"}, "s6": {"base":"table","r":"table","n":"table"}, "s7": {"base":"table","r":"table","n":"table"}},
+ "slope_plastic": {"s4": {"base":"plank","r":"plank","n":"top"}, "s5": {"base":"gone","r":"gone","n":"gone"}, "s6": {"base":"table","r":"table","n":"table"}, "s7": {"base":"gone","r":"gone","n":"gone"}}}
