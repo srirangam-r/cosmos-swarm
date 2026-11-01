@@ -37,3 +37,16 @@ Do not use the blob size on this scene: the black ball on the black curtain is u
 Fallback (commit after 6531c12): if the primary tracker (first/last-frame background) gives flag≠ok, measure() retries with a temporal-median background
 (`tracker` = ball | diff in the output; the other result is kept under `primary` / `fallback`). The fallback rescued none of the 4 GAUGE real failures (clips 4, 9, 19, 20).
 It is kept because it only replaces a non-ok result with an ok one. Planted results are unchanged, since all planted clips are ok with the primary.
+
+## measure_pend.py v1: pendulum period, release-aware (raj-3, task 8)
+`python3 -I measure_pend.py clip.mp4 --fps 24 [--dedup] [--qc out.png]` prints JSON with period_s, period_ci95 (moving-block residual bootstrap),
+period_zc_s (median full period from zero crossings), zc_periods, beta (damping, free sign), r2, n_halfcycles, release_t and flag.
+Why it exists: `trk.pend` fits from frame 0. On real GAUGE pendulum video the robot holds the pendulum for 1.8-2.6 s before release,
+and trk.pend then hits its 6 s bound on some clips: a fake "slow pendulum".
+Method: trk.blobs centroid (temporal-median bg) → frames before a sustained >3 px departure are dropped → projection on the principal
+motion axis (no metric scale needed) → damped sinusoid c + e^{-βt}(A cos ωt + B sin ωt) (GAUGE eq. 43 form) and zero crossings.
+flag = ok needs ≥3 half-cycles, R² > 0.8, |T_fit − T_zc|/T_fit < 5% and ≥90% frames tracked.
+Planted: identical to the v5 pendulum estimates (ratio 0.9999-1.0000 on planted-00/07/11/13), so the v5 PASS applies.
+Real reference: GAUGE pendulum is released at ~84° (L = 0.2726 m). Over the first ~8 s (a 189-frame Cosmos window) the real period is
+1.171 ± 0.003 s (mocap, n=20); 1.06 s (GAUGE's baseline) is the small-amplitude period (whole 130 s record: 1.048 s = 2π√(L/g)).
+Real-video check at Cosmos resolution: see work/raj-3/pseudo_cosmos_pend/.
