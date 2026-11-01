@@ -508,7 +508,7 @@
               <h2>1. Pendulum Clock &amp; Dynamics: Real vs Original Nano vs Nano + Physics Start</h2>
             </div>
             <div class="card-meta">
-              Authors: <strong>Raj via Claude</strong> (Task #281), <strong>ro-3</strong> (Task #252) &bull; <a href="#5315">Finding #5315</a> &bull; Target: Pendulum Period Slowness &bull; Status: <strong>Replicated (Lead Fix)</strong>
+              Authors: <strong>Raj via Claude</strong> (Task #281), <strong>ro-3</strong> (Task #252) &bull; <a href="#5315">Finding #5315</a> &bull; Held-Out Benchmark: <a href="#6239">Task #276 / #6239</a> &bull; Target: Pendulum Period Slowness &bull; Status: <strong>Replicated (Lead Fix)</strong>
             </div>
           </div>
           <div class="btn-group">
@@ -608,6 +608,9 @@
                 </tr>
               </tbody>
             </table>
+            <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+              <strong>Held-Out Multi-Scene Benchmark (<a href="#6239">Task #276 / Finding #6239</a>):</strong> On 6 held-out GAUGE real scenes &times; 3 seeds (42 clips total), Nano-Phys with supplied real period matched within 10% on 12/18 attempts (all 12 from 4 scenes; median $P/P_{\text{real}} = 1.011$, median flicker 0.0071; 2 scenes failed motion QC). Plain Nano matched in 1/18 (median 0.680). Wrong-period $1.7\times$ control had 1/6 pass strict QC (ratio 1.596; 4/6 numeric median 1.732 across available ACF fits). Evaluates conditional transfer of a supplied clock, not frame-0 period recovery. (Audit: <a href="https://github.com/srirangam-r/cosmos-swarm/tree/main/work/rahul-api-codex/t314">t314</a>; Demo card: <a href="https://github.com/srirangam-r/cosmos-swarm/tree/main/work/ro-sol1/t315">t315</a>).
+            </p>
           </div>
           <div class="metric-card">
             <div class="metric-title">Measured Oscillation Period</div>
@@ -692,16 +695,16 @@
           <div class="card-title-group">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
               <span class="badge-status badge-artifact">ARTIFACT: tlo (#5600, #5634)</span>
-              <span class="badge-status badge-provisional">PROVISIONAL: slo ('all')</span>
-              <h2>3. Donor-Noise Transfer &mdash; Spatial 'slo' vs Temporal 'tlo' Ringing ARTIFACT</h2>
+              <span class="badge-status badge-provisional">E7: PARTIAL DONOR-CLOCK TRANSFER</span>
+              <h2>3. Donor-Noise Transfer &mdash; Partial Clock Copying</h2>
             </div>
             <div class="card-meta">
-              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="#5600">Finding #5600</a>, <a href="#5634">#5634</a> &bull; Target: Dynamics Rate Tuning
+              Authors: <strong>raj-noise, dk2</strong> &bull; Tasks #250 / #258 &bull; <a href="#5600">Finding #5600</a>, <a href="#5634">#5634</a> &bull; Human E7 report: <a href="#6167">#6167</a>
             </div>
           </div>
           <div class="btn-group">
-            <button class="ctrl-btn active" onclick="switchVideo('v-r3-right', 'clips/donor_transfer_fixed', this)">Spatial 'slo' Band (PROVISIONAL)</button>
-            <button class="ctrl-btn" onclick="switchVideo('v-r3-right', 'clips/donor_recon_real', this)">Real Inversion Reference</button>
+            <button class="ctrl-btn active" onclick="switchVideo('v-r3-right', 'clips/donor_transfer_fixed', this)">E6 Spatial 'slo' Example</button>
+            <button class="ctrl-btn" onclick="switchVideo('v-r3-right', 'clips/donor_recon_real', this)">E6 Real Inversion Diagnostic</button>
           </div>
         </div>
 
@@ -721,7 +724,7 @@
 
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-fixed-model" id="badge-r3">Spatial 'slo' Band (Provisional)</span>
+              <span class="label-badge badge-fixed-model" id="badge-r3">Historical E6 Illustration (Variant Above)</span>
               <span class="video-tech">416&times;240 &bull; 24 fps</span>
             </div>
             <div class="video-wrapper">
@@ -751,13 +754,14 @@
         <div class="card-footer">
           <div class="sentence-box">
             <div class="sentence-label">Mechanism &amp; Explanation (Cross-Check Audit)</div>
-            <p><strong>Artifact Caught by Cross-Check:</strong> The temporal mixing arm (<code>tlo</code>) was proven by dk2 and Raj to be a <strong>global flicker artifact</strong> (<a href="#5600">Finding #5600</a>, <a href="#5634">#5634</a>), not a physics fix. Inverting clean frame 0 into latents and filtering temporal frequencies causes Dirichlet band-edge ringing at period 27.4 frames, producing whole-frame luma pulsing (flicker index 0.505) that tricked naive period trackers.</p>
-            <p style="margin-top: 0.5rem;"><strong>Spatial Band Transfer (Provisional):</strong> In contrast, spatial-only low-frequency filtering (<code>slo</code>, shown here) and full donor transfer (<code>all</code>) do not mix across frame 0, remain completely flicker-free (&lt; 0.01), and faithfully copy the reference clock ($P/P_{\text{real}} = 0.998\text{--}1.001$). Confirmatory clock-copy test E7b lands ~17:35 UTC.</p>
+            <p><strong>Shown: selected historical E6 media.</strong> These clips are illustrations, not the E7 benchmark grid. Earlier temporal mixing across clean frame 0 produced global luma ringing (27.4 frames; flicker index 0.505; <a href="#5634">#5634</a>). E7 corrected that boundary: its temporal donor arm had 8/16 clean clips, but 0/16 within 10% of the real period.</p>
+            <p style="margin-top: 0.5rem;"><strong>E7 spatial donor result:</strong> Raj reports 8 targets &times; 2 seeds per arm. Spatial <code>slo</code> transfer had 8/16 clean clips and 6/16 within 10% of the real period (median P/P_real 1.05); plain noise had 4/16 clean and 0/16 within 10% (median 0.47). Clean means <code>pend_acf</code> ok, flicker &lt; 0.08, and <code>measure_pend</code> agrees within 10%.</p>
+            <p style="margin-top: 0.5rem;"><strong>Partial clock copying:</strong> With a 10/7-sped-up donor, the median ratio fell to 0.68 (0.70 expected). The paired transfer fraction f = 0.93 uses only 3 targets, with CI [-2.2, 1.15]: underpowered. Raj reports no general noise-shaping fix; this route needs a matching real donor recording. <a href="#6167">Human report #6167</a>; no independent remeasurement or NVIDIA-scoreboard pass is claimed here.</p>
           </div>
           <div class="metric-card">
-            <div class="metric-title">Audit Classification</div>
-            <div class="metric-value" style="color:var(--accent-rose);">ARTIFACT (tlo)</div>
-            <div class="metric-sub">Spatial 'slo' is PROVISIONAL (P/P_real &approx; 1.000, flicker &lt; 0.01)</div>
+            <div class="metric-title">E7 Spatial Donor Coverage</div>
+            <div class="metric-value" style="color:var(--accent-amber);">8/16 Clean</div>
+            <div class="metric-sub">6/16 within 10% of real; plain 4/16 clean, 0/16 within 10%. Historical E6 videos shown.</div>
           </div>
         </div>
       </section>
@@ -834,25 +838,25 @@
         </div>
       </section>
 
-      <!-- ROW 5: Sim-Proxy Ball Drop Real-g Calibration (Task 266) -->
+      <!-- ROW 5: Analytical Ball Proxies; Diffusion Measurement QC Failed (Task 266) -->
       <section class="gallery-card" id="row-ball-gravity">
         <div class="card-header">
           <div class="card-title-group">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
-              <span class="badge-status badge-provisional">PROVISIONAL (DIFFUSION QUEUED #5785)</span>
-              <h2>5. Earth-Gravity Free-Fall Sim-Proxy Adaptation (Task 266)</h2>
+              <span class="badge-status badge-provisional">FAILED MEASUREMENT QC &bull; #5887</span>
+              <h2>5. Ball-Drop Motion Proxies (Task 266)</h2>
             </div>
             <div class="card-meta">
-              Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="#5563">Task #266 Thread</a> &bull; Target: Free-Fall Gravity Constant (0.45 m/s&sup2; &rarr; 9.81 m/s&sup2;)
+              Author: <strong>rahul-3, ro-3</strong> &bull; Task #266 &bull; <a href="#5887">Owner QC Report #5887</a> &bull; Analytical proxy inputs displayed
             </div>
           </div>
-          <span class="label-badge badge-control-model">Provisional &bull; In Flight</span>
+          <span class="label-badge badge-control-model">0/18 Measurable &bull; Owner Eye QC</span>
         </div>
 
         <div class="video-viewport">
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-plain-model">Uncalibrated Proxy Control (g &approx; 4.90 m/s&sup2;)</span>
+              <span class="label-badge badge-plain-model">Analytical Proxy &bull; Prescribed g = 4.905 m/s&sup2;</span>
               <span class="video-tech">416&times;240 &bull; 24 fps</span>
             </div>
             <div class="video-wrapper">
@@ -865,7 +869,7 @@
 
           <div class="video-col">
             <div class="video-label-row">
-              <span class="label-badge badge-fixed-model">Earth-Gravity Calibrated Proxy (g = 9.81 m/s&sup2;)</span>
+              <span class="label-badge badge-control-model">Analytical Proxy &bull; Prescribed g = 9.81 m/s&sup2;</span>
               <span class="video-tech">416&times;240 &bull; 24 fps</span>
             </div>
             <div class="video-wrapper">
@@ -894,14 +898,14 @@
 
         <div class="card-footer">
           <div class="sentence-box">
-            <div class="sentence-label">Mechanism &amp; Explanation</div>
-            <p><strong>Analytical Sim-Proxy Trajectory:</strong> Supplying a calibrated parabolic trajectory sim-proxy during latent initialization forces Cosmos3-Nano to overcome its default slow-motion free-fall rate (0.45 m/s&sup2;), scaling downward acceleration to real gravitational acceleration (9.81 m/s&sup2;).</p>
-            <p style="margin-top: 0.5rem;"><strong>Generation Status:</strong> Kinematic proxies generated and validated (ball_g981 vs ball_g490 control shown). 18 diffusion generation jobs submitted by rahul-3 to the upgraded q8 queue (<a href="#5785">#5785</a>, k=12, seeds 1&ndash;6); rendered diffusion outputs currently in flight on the queue.</p>
+            <div class="sentence-label">Displayed Inputs &amp; Measurement Limits</div>
+            <p><strong>Analytical Motion Inputs:</strong> These two animations show prescribed ball trajectories used to guide latent initialization. Their gravity values are inputs to the proxy renderer. A measured Cosmos3-Nano gravity improvement has not been established.</p>
+            <p style="margin-top: 0.5rem;"><strong>Generation and QC:</strong> All 18 diffusion clips completed and were fetched (plain / g981 / g490, seeds 1&ndash;6, 93 frames, k=12). In the <a href="#5887">owner's eye-QC report #5887</a>, camera pan/zoom and ambiguous release made 0/18 clips measurable for fitted gravity or bounce time. Task #266 is failed; these players display the analytical proxies.</p>
           </div>
-          <div class="metric-card">
-            <div class="metric-title">Effective Gravitational Acceleration</div>
-            <div class="metric-value">g = 9.81 m/s&sup2; (Proxy)</div>
-            <div class="metric-sub">Provisional: 18 diffusion jobs queued on q8 (<a href="#5785">#5785</a>); proxies displayed</div>
+          <div class="metric-card" style="border-left-color: var(--accent-amber);">
+            <div class="metric-title">Measurable Diffusion Clips</div>
+            <div class="metric-value" style="color: var(--accent-amber);">0 / 18</div>
+            <div class="metric-sub">Owner eye QC (<a href="#5887">#5887</a>); prescribed proxy g shown above</div>
           </div>
         </div>
       </section>
@@ -967,18 +971,29 @@
           </div>
           <div class="evidence-meta">Authors: dk2, Raj &bull; Task #258 &bull; Report :8031</div>
           <div class="evidence-desc">
-            Temporal low-pass mixing across clean frame 0 causes Dirichlet band-edge ringing at 27.4f, producing whole-frame luma pulsing (flicker index 0.505). Spatial band transfer (slo) avoids frame 0 mixing and remains flicker-free (&lt; 0.01).
+            Temporal low-pass mixing across clean frame 0 causes Dirichlet band-edge ringing at 27.4f, producing whole-frame luma pulsing (flicker index 0.505). This is the historical E6 artifact report; see E7 #6167 for the corrected boundary and full planned QC coverage.
           </div>
         </div>
 
-        <div class="evidence-card" id="5563"><span id="5785"></span>
+        <div class="evidence-card" id="6167">
           <div class="evidence-title">
-            <span>Finding #5563 / #5785: Task 266 Gravity</span>
-            <span class="label-badge badge-provisional">Provisional</span>
+            <span>Human Report #6167: E7 Donor-Clock Transfer</span>
+            <span class="label-badge badge-provisional">Partial / Underpowered</span>
           </div>
-          <div class="evidence-meta">Authors: rahul-3, ro-3 &bull; Task #266 &bull; q8 Queue</div>
+          <div class="evidence-meta">Raj &bull; Task #250 &bull; 224 generated clips; 8 targets &times; 2 seeds per arm &bull; Frozen 9dd4fc8 + f9e980e</div>
           <div class="evidence-desc">
-            Parabolic free-fall sim-proxy adaptation to correct Earth gravity (0.45 &rarr; 9.81 m/s&sup2;). 18 diffusion generation jobs submitted by rahul-3 to upgraded q8 queue (#5785); kinematic proxies displayed.
+            Spatial slo: 8/16 clean, 6/16 within 10% of real, median P/P_real 1.05. Plain: 4/16 clean, 0/16 within 10%, median 0.47. Sped-up donor median 0.68 (expected 0.70); paired f = 0.93 on only 3 targets, CI [-2.2, 1.15]. Temporal donor with frame 0 fixed: 8/16 clean, 0/16 within 10%. No general noise-shaping fix reported. This gallery quotes the human report; the existing E6 videos are not E7 benchmark clips, and no independent remeasurement or NVIDIA-scoreboard pass is claimed.
+          </div>
+        </div>
+
+        <div class="evidence-card" id="5563"><span id="5785"></span><span id="5887"></span>
+          <div class="evidence-title">
+            <span>Task 266 Gravity: Owner QC Report #5887</span>
+            <span class="label-badge badge-provisional">Failed Measurement QC</span>
+          </div>
+          <div class="evidence-meta">Authors: rahul-3, ro-3 &bull; Task #266 &bull; 18 Diffusion Clips Completed</div>
+          <div class="evidence-desc">
+            The displayed analytical proxies prescribe g = 9.81 and 4.905 m/s&sup2;. All 18 plain/g981/g490 diffusion clips completed; owner eye QC (#5887) found 0/18 measurable for fitted gravity or bounce time because of camera pan/zoom and ambiguous release. No measured gravity improvement is established. Task #266 failed; #5785 records the earlier submission.
           </div>
         </div>
 
@@ -990,6 +1005,17 @@
           <div class="evidence-meta">Author: Raj via Claude &bull; commit `a597e6f` &bull; 93f@24fps</div>
           <div class="evidence-desc">
             Full 24 fps, 93-frame continuous presentation slide demos for pendulum (real mocap vs plain Nano vs physics start) and bouncing ball (original prompt vs timed-settle sentence). Full ffmpeg and browser decode PASS.
+          </div>
+        </div>
+
+        <div class="evidence-card" id="6239"><span id="276"></span>
+          <div class="evidence-title">
+            <span>Finding #6239 / Task #276: Held-Out Pendulum Benchmark</span>
+            <span class="label-badge badge-provisional">Provisional &bull; 42 Clips</span>
+          </div>
+          <div class="evidence-meta">Authors: rahul-5-agy, dk2 &bull; Audit: rahul-api-codex (t314) &bull; Presentation: ro-sol1 (t315)</div>
+          <div class="evidence-desc">
+            On 6 held-out GAUGE real pendulum frames &times; 3 seeds: Nano-Phys with supplied real period matched mocap period within 10% on 12/18 attempts (all 12 from scenes real_12, 17, 18, 19; median P/P_real = 1.011 [0.999, 1.026], low median flicker 0.0071; scenes real_09 and 16 failed motion QC). Plain Nano matched in 1/18 (4/18 passed motion QC, median 0.680). Wrong-period 1.7&times; control had 1/6 pass strict QC (ratio 1.596; 4/6 numeric median 1.732 across available ACF fits). Tests conditional transfer of a supplied clock, not frame-0 period recovery. Reconstructed and audited by rahul-api-codex (<a href="https://github.com/srirangam-r/cosmos-swarm/tree/main/work/rahul-api-codex/t314">t314</a>); demo card by ro-sol1 (<a href="https://github.com/srirangam-r/cosmos-swarm/tree/main/work/ro-sol1/t315">t315</a>).
           </div>
         </div>
       </div>
