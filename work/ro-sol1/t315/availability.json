@@ -1,0 +1,17 @@
+{
+  "scope": "point-in-time HTTP availability only; no service edit or browser playback",
+  "observations": [
+    {
+      "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+      "utc": "2026-11-01T18:04:46.451254+00:00",
+      "status": 200,
+      "bytes": 47334,
+      "sha256": "089df36012d3598d66162c9db301b6bc1050ced36884021bb80c239f98b1fd36"
+    },
+    {
+      "url": "http://sha-devel.tail0c526a.ts.net:8031/demos",
+      "utc": "2026-11-01T18:04:46.553643+00:00",
+      "error": "<urlopen error [Errno 111] Connection refused>"
+    }
+  ]
+}

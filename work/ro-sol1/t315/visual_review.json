@@ -1,0 +1,20 @@
+{
+  "desktop": "All three arm cards, full denominators, supplied-period and QC caveats readable; source attribution visible.",
+  "mobile": "All cards and complete footer readable at390px; no clipped horizontal text.",
+  "runtime_exceptions": [],
+  "dimensions": [
+    {
+      "name": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "height": 1040
+    },
+    {
+      "name": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "height": 2000
+    }
+  ],
+  "not_validated": "Generated Nano video playback; measurements; arithmetic/gate/cluster/native audit; model or NVIDIA quality."
+}

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T18:05:38.281Z",
+  "preview_sha256": "30a6612ad4622beb3a1b64b67670aa5ab0f497aa90915b54bff5238deaf0d15a",
+  "mode": "headless installed Brave, anonymous CDP pipes, static local page; no video playback",
+  "renders": [
+    {
+      "name": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "height": 1040,
+      "text": "PROVISIONAL · TASK 276 · AUTHOR-REPORTED RESULTS\nNano-Phys renders a supplied pendulum period\n\nSix held-out real images. Three seeds per main arm. 12 of 18 Nano-Phys attempts passed motion QC and matched the supplied period within 10%.\n\nPlain Nano\n1 / 18\n\npassed QC and within 10%\n\n4/18 passed motion QC\nAccepted-clip median P/P_real: 0.680\n\nNano-Phys\n12 / 18\n\npassed QC and within 10%\n\n12/18 passed motion QC\nAccepted-clip median P/P_real: 1.011\n\nWrong-period control\n1 / 6\n\npassed motion QC\n\nSupplied 1.7 × real period; seed 1 only\nAccepted-clip median ratio: 1.596\n\n12/12 describes accepted clips. Six Nano-Phys attempts failed QC. All 12 accepted outputs came from four of the six scenes. The wrong-period narrative's 1.73 median includes three clips that fail strict QC.\n\nConditional transfer: real-video period estimates were supplied to the proxy. This benchmark does not establish period recovery from the first image. Reported median luminance flicker: 0.0071 for Nano-Phys, 0.0128 for plain. NVIDIA scoreboard coverage remains pending.\n\nSource: task276 / a33fc5a · Full readout and evidence links\nSource-attributed presentation card by ro-sol1; no independent clip measurement. Separate arithmetic and provenance review: rahul-api-codex / board6246. No generated-video playback on this card."
+    },
+    {
+      "name": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "height": 2000,
+      "text": "PROVISIONAL · TASK 276 · AUTHOR-REPORTED RESULTS\nNano-Phys renders a supplied pendulum period\n\nSix held-out real images. Three seeds per main arm. 12 of 18 Nano-Phys attempts passed motion QC and matched the supplied period within 10%.\n\nPlain Nano\n1 / 18\n\npassed QC and within 10%\n\n4/18 passed motion QC\nAccepted-clip median P/P_real: 0.680\n\nNano-Phys\n12 / 18\n\npassed QC and within 10%\n\n12/18 passed motion QC\nAccepted-clip median P/P_real: 1.011\n\nWrong-period control\n1 / 6\n\npassed motion QC\n\nSupplied 1.7 × real period; seed 1 only\nAccepted-clip median ratio: 1.596\n\n12/12 describes accepted clips. Six Nano-Phys attempts failed QC. All 12 accepted outputs came from four of the six scenes. The wrong-period narrative's 1.73 median includes three clips that fail strict QC.\n\nConditional transfer: real-video period estimates were supplied to the proxy. This benchmark does not establish period recovery from the first image. Reported median luminance flicker: 0.0071 for Nano-Phys, 0.0128 for plain. NVIDIA scoreboard coverage remains pending.\n\nSource: task276 / a33fc5a · Full readout and evidence links\nSource-attributed presentation card by ro-sol1; no independent clip measurement. Separate arithmetic and provenance review: rahul-api-codex / board6246. No generated-video playback on this card."
+    }
+  ],
+  "exceptions": [],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  }
+}

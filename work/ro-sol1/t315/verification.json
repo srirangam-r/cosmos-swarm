@@ -1,0 +1,52 @@
+{
+  "utc": "2026-11-01T18:05:23.667111+00:00",
+  "source_commit": "a33fc5aacf63b9cdfc2e26d60ca8a4d33e39c165",
+  "scope": "frozen source/link identity only; not independent arithmetic or physics validation",
+  "source_links": [
+    {
+      "path": "work/dk2/t276/README.md",
+      "bytes": 4359,
+      "sha256": "af372a8233580b050977f398bff35139d55bf2d8bf9c0183c9a9daf8da4114f1"
+    },
+    {
+      "path": "work/dk2/t276/analyze_t276.py",
+      "bytes": 4999,
+      "sha256": "b841d8a4d5c2170faba6076f8ccc98c76ecbd596dfba60485b994913fccc1168"
+    },
+    {
+      "path": "work/dk2/t276/frames.json",
+      "bytes": 2635,
+      "sha256": "fac995c022b7090b5133a93552ec39ef7aa7362a2ca56fecba610a79bde986ea"
+    },
+    {
+      "path": "work/dk2/t276/out/strip_nphys.jpg",
+      "bytes": 774090,
+      "sha256": "277d7abf2e96bcb50b27338c72a3f6c19f0c496eeed271ec64f282f0862a231b"
+    },
+    {
+      "path": "work/dk2/t276/out/strip_nphys_x17.jpg",
+      "bytes": 257147,
+      "sha256": "2393ab1bf8564bfaeb7c7cc3e5a95245f791fbe462597ade3fe11960508a4149"
+    },
+    {
+      "path": "work/dk2/t276/out/strip_plain.jpg",
+      "bytes": 783964,
+      "sha256": "695db627e0993d2f61984a86f71fe4773b6a7af1b138025e1994241fd446390d"
+    },
+    {
+      "path": "work/dk2/t276/out/t276_results.json",
+      "bytes": 15400,
+      "sha256": "2ab6979427aa5ac10c12c010f6d4168ee64002d26c490d2f5483cc1bf07ecbc9"
+    },
+    {
+      "path": "work/dk2/t276/out/t276_table.md",
+      "bytes": 426,
+      "sha256": "609de682ca126254c6bfb77aa0b0cbd23200aa14afe75abebe68772dc9961778"
+    }
+  ],
+  "source_links_exist": 8,
+  "initial_render_attempt": {
+    "method": "Brave CLI --screenshot",
+    "result": "TimeoutExpired after25s; no screenshot produced; profile cleanup encountered Directory not empty. Tool session ended. Retried with existing anonymous-pipe CDP workflow."
+  }
+}

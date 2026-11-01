@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nano-Phys — supplied-period transfer</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101820;color:#edf2f6;font:20px/1.45 system-ui,sans-serif}main{max-width:1160px;margin:0 auto;padding:44px 34px}.tag{font-size:14px;letter-spacing:.08em;color:#f3c277}h1{font-size:44px;line-height:1.1;margin:14px 0 18px}h2{font-size:24px;margin:0 0 18px}.lede{max-width:980px;color:#c5d5df;font-size:23px}.arms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.arm{padding:24px;border:1px solid #485562;border-radius:14px;background:#192630}.lead{border-color:#7bddc3;background:#1a3436}.count{font-size:52px;line-height:1.2;font-weight:750;margin:12px 0;color:#7bddc3}.muted{color:#becbd6}.detail{font-size:17px}.note{border-left:4px solid #f3c277;padding:2px 18px;margin:24px 0;font-size:18px}a{color:#9dcaff}.footer{font-size:15px;color:#a8bac8}p{margin:12px 0}strong{color:#fff}@media(max-width:700px){main{padding:24px 18px}h1{font-size:34px}.lede{font-size:20px}.arms{grid-template-columns:1fr}.arm{padding:20px}.count{font-size:44px}.note{font-size:17px}.detail{font-size:16px}}
+</style>
+<main>
+<div class="tag">PROVISIONAL · TASK 276 · AUTHOR-REPORTED RESULTS</div>
+<h1>Nano-Phys renders a supplied pendulum period</h1>
+<p class="lede">Six held-out real images. Three seeds per main arm. <strong>12 of 18</strong> Nano-Phys attempts passed motion QC and matched the supplied period within 10%.</p>
+<section class="arms" aria-label="Published benchmark arms">
+<article class="arm"><h2>Plain Nano</h2><div class="count">1 / 18</div><p>passed QC and within 10%</p><p class="detail muted">4/18 passed motion QC<br>Accepted-clip median P/P_real: 0.680</p></article>
+<article class="arm lead"><h2>Nano-Phys</h2><div class="count">12 / 18</div><p>passed QC and within 10%</p><p class="detail muted">12/18 passed motion QC<br>Accepted-clip median P/P_real: 1.011</p></article>
+<article class="arm"><h2>Wrong-period control</h2><div class="count">1 / 6</div><p>passed motion QC</p><p class="detail muted">Supplied 1.7 × real period; seed 1 only<br>Accepted-clip median ratio: 1.596</p></article>
+</section>
+<div class="note"><strong>12/12 describes accepted clips.</strong> Six Nano-Phys attempts failed QC. All 12 accepted outputs came from four of the six scenes. The wrong-period narrative's 1.73 median includes three clips that fail strict QC.</div>
+<p class="detail"><strong>Conditional transfer:</strong> real-video period estimates were supplied to the proxy. This benchmark does not establish period recovery from the first image. Reported median luminance flicker: 0.0071 for Nano-Phys, 0.0128 for plain. NVIDIA scoreboard coverage remains pending.</p>
+<p class="footer">Source: <a href="https://github.com/srirangam-r/cosmos-swarm/tree/a33fc5a/work/dk2/t276">task276 / a33fc5a</a> · <a href="DEMO_READOUT.md">Full readout and evidence links</a><br>Source-attributed presentation card by ro-sol1; no independent clip measurement. Separate arithmetic and provenance review: rahul-api-codex / board6246. No generated-video playback on this card.</p>
+</main>
+</html>
