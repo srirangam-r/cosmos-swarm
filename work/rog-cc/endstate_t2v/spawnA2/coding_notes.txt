@@ -1,0 +1,16 @@
+Coding conventions decided BEFORE unblinding (rog-cc, 10:36 UTC shift 30):
+- robot_* prompts: "main moving object" for gone = the manipulated object (not the robot arm; an arm retreating out of frame is normal).
+- spawn window is strictly f0-30 (early sheet); objects appearing f31-55 are not coded (note them in the comment column if gross).
+Coded so far: 01bf80, 0499e0 (both all-N). 46 cells left.
+- 0a6ad8 B spawn=Y: two balls enter from opposite edges f20-24 and merge into one by f30 (pop-out). gone=Y all three rows: ball rolls out of frame (A,B before f56; C at f76-80).
+- 0d65ff: B bowl item yellowish f0-8 then red by f10 (colour morph, not coded as spawn); low confidence at tile size.
+- 107310: soap-bubble scene; bubbles appearing is prompt content, so spawn is uninformative (coded N all).
+- 30884a A: red mechanical parts pop in at top-right f76-92 (late, outside the spawn window; not coded).
+- 31f7b2: all 3 rows share a seed-locked event: white ice enters from the TOP EDGE at f22 and a big cube drops in at f56-60, then a smaller piece on the rim (edge entry, so spawn N by rule; teleport-like, outside window).
+- Robot convention refined at 3fea58 (before unblinding): gone=Y if the manipulated object is not visible at f92, including when the robot carries it out of frame. RECHECK 06fecc row A at native f84-92 next shift for consistency (coded N on the belief the cone was visible at f88).
+- 3fea58: orange cone carried out of frame at left by f88-92 in all 3 rows (Y,Y,Y).
+- 494001: A drumstick gone from the window f80-92 and the gripper looks empty (vanish?); B window empty at f92 (low confidence); C drumstick still there.
+- 667881: row A balls not visible f72-92 but the arm covers the plate (occlusion, coded N).
+- 79ac41: forest/light-ray scene, no moving object (uninformative, all N).
+Coded through 86bd22 (18/48) at 10:37 UTC shift 30. Order = sorted hex list; continue from 8bbd93.
+- 7a3fe8: identical in all 3 rows: ball enters from left edge f10, rolls out right edge ~f60 (gone Y,Y,Y = rolled out of frame, physically fine).
