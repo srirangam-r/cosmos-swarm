@@ -21,6 +21,8 @@ Through exhaustive multi-agent experiments across independent hardware stacks, r
 6. **Temporal Conditioning is Invariant (FPS is Not a Clock)**: Neither prompt text ("12 FPS" vs "24 FPS") nor RoPE positional temporal spacing ($fps \in \{6, 12, 24\}$) acts as a physical clock ($k = 1.000$ fixed stride). Halving RoPE fps triggers catastrophic late-frame hallucinations (duplicate balls, arm swings, 100% anomaly rate at RoPE 6).
 7. **Terminal Velocity Ceilings**: On 30° slopes across materials, Nano does not integrate Newton-Coulomb acceleration ($a \approx 2.57\text{ m/s}^2$); instead, it glides at a constant terminal velocity ceiling ($v \le 0.40\text{ m/s}$ on plastic, $v \le 0.70\text{ m/s}$ on wood), exhibiting zero quadratic acceleration on 189-frame rollouts ($a = 0.00 \pm 0.01\text{ m/s}^2$).
 8. **Sim-to-Real Generalization of Synthetic SFT (LoRA) & Scoreboard Regressions**: An initial report that synthetic ballistic LoRA failed to release on 0/66 clips (Finding #1661) was refuted by ro-1 (#2211, #2200): automated trackers tracked blank wall at (281, 119) because the evaluation clips used a robot-free frame with ball at (529, 46). Re-coding shows the ball falls in 72/84 clips (53/84 clean falls, though 28 clips suffer physical hallucinations). However, synthetic LoRA is decisively refuted as a shippable fix on NVIDIA's scoreboard benchmarks: real-physics LoRA Arm A causes severe, statistically resolved regressions on DOVER Fused (−0.0767 ± 0.0211) and HUE Plausibility (−0.0280 ± 0.0090 overall, −0.0347 ± 0.0142 physical laws), while cutting motion by 55% (dd_norm −4.3 ± 1.2), failing the charter's no-regression mandate (#2168, #2201).
+9. **Early RoPE Spatial Scaling Fails ($0\%$ Release)**: Widening early spatial receptive fields (RoPE 0.7x dilation for $t \ge 900$; Task 90 Finding #2402) does not loosen the static visual grasp attractor: release rate remains $0/3$ ($0.0\%$), phantom duplicate balls still spawn, and spurious scene motion increases ($+3.17$ dynamic degree).
+10. **Event-Script Text Prompts Induce Geometric Deformation Rather Than Motion ($0/6$ Rigid Swings)**: Prompting Cosmos3-Nano with event narrative ('released in the first moment, falls, swings below the axle') from a static rest frame forces motion energy ($7.07 \pm 1.35$ gray levels), but results in $0/6$ rigid swings (ro-3 #2432): the rod stretches to $2\times$ length, duplicate bobs appear, or the structure shatters. In contrast, mid-event conditioning produces $6/6$ intact rigid swings ($100\%$), proving that text prompting cannot overcome static boundary attractors without destroying object geometry.
 
 ---
 
@@ -264,6 +266,29 @@ FINDING: Scaling RoPE spatial (height/width) frequencies by 0.7x in early denois
 
 ---
 
+### Finding 10: Event-Script Text Prompts Force Topological Deformation and Structural Shattering Rather Than Mechanical Dynamics (ro-3 Finding #2432)
+
+```
+FINDING: Prompting Cosmos3-Nano with event-script text ('released in the first moment, falls, swings below the axle') from a static rest frame forces motion (leaves axle line in 6/6 clips, ROI motion 7.07 ± 1.35 vs neutral 1.70 ± 0.18), but fails to produce rigid mechanical motion in 0/6 clips (0.0%). The model satisfies the text constraint by deforming or destroying object geometry (2x rod elongation, duplicate bobs, shattered rods). In contrast, mid-swing conditioning yields 6/6 rigid swings (100.0%) without geometric deformation (ro-3 #2432, commit 04f843a).
+```
+
+- **Quantitative Value**:
+  - **Leaves Axle Line**: restev **6/6 (100.0%)**, neutral 0/6 (0.0%), mid-swing 6/6 (100.0%) (2 videos × seeds 1–3).
+  - **Rigid, Fixed-Length Swing Below Axle**: restev **0/6 (0.0%)**, neutral 0/6 (0.0%), mid-swing **6/6 (100.0%)**.
+  - **Failure Classification across 6 Clips**:
+    - *Elongated Rod & Bob Disappearance (`moves_broken`)*: 3/6 clips drop by f8–16, but the rod elongates to $\approx 2\times$ length spanning from axle to table, while the bob vanishes or teleports.
+    - *Multi-Rod Morphing & Duplicate Bobs (`delayed_morph`)*: 2/6 clips hold at the axle until $\approx \text{f}32$, then morph into a T-shaped multi-rod object with duplicate bobs dangling.
+    - *Structural Shattering (`detached`)*: 1/6 clips explodes into tangled rods by f12 and falls onto the table.
+  - **ROI Motion Energy (Gray Levels)**: restev **$7.07 \pm 1.35$** ($n=6$), neutral $1.70 \pm 0.18$, mid-swing $6.68 \pm 0.73$, real reference $5.06\text{--}5.40$. Motion metrics alone would falsely score restev as "fixed", paralleling the optical flow reward trap seen in VBench Dynamic Degree (Finding #2249).
+  - **Dynamical Period**: Referee-validated `measure_pend` reports `check` on 6/6 clips and `pend_acf` fails on 6/6; no coherent physical oscillation or period exists.
+- **Setup**: `nvidia/Cosmos3-Nano`, $832\times 480$, 93f @ 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt. Input: real GAUGE pendulum videos 10 and 11, side view with robot in frame. Prompt: `prompt_event.txt` ("released in the first moment, falls, swings below the axle").
+- **Method**: Categorical blind eye coding from 4-frame ROI contact strips (`qc/restev_10.jpg`, `qc/restev_11.jpg`), ROI motion difference tracking, referee-validated `tools/trk_ballfall/measure_pend.py` (PASS msg 201), and `pend_acf` autocorrelation.
+- **Control**: The neutral-prompt rest arm on identical frames and seeds (stays at horizontal axle line in 6/6 clips).
+- **Evidence**: Commit `04f843a`, Finding `#2432`, `work/ro-3/task99_midswing_pendulum/` (`eye_codes.json`, `roi_motion_restev.json`, `qc/`).
+- **Causal Mechanism**: Directly confirms Scout-1's hypothesis H-S (Finding #2305, Digest #2365): text prompts function as high-level semantic event classifiers that enforce event occurrence ("it falls"), but lack the temporal capacity to constrain continuous spatial-temporal mechanics. When initialized from a static zero-velocity boundary condition (held horizontal along axle), the diffusion prior cannot reconcile the static image tokens with continuous rigid rotation. Consequently, the model minimizes denoising loss by distorting object geometry (elastic rod stretching, phantom duplicate bobs, structural shattering) to satisfy the text condition without obeying rigid mechanics. This directly mirrors the phantom duplicate ball spawning observed under conflicting text/visual constraints in ball drops (Finding 1, Finding 9).
+
+---
+
 ## Synthesis: Why Cosmos3-Nano Fails Physics
 
 Integrating the replicated evidence across all experimental axes yields a unified architectural diagnosis:
@@ -298,6 +323,7 @@ Integrating the replicated evidence across all experimental axes yields a unifie
 ### Implications for Deliverable 1 (The Fix)
 - **What will NOT work**: 
   - Changing prompt text or FPS dials (Finding 5 proves they are null or induce hallucinations).
+  - Event-script text prompting from static rest frames (Finding 10 proves event text forces motion only by destroying object geometry—$2\times$ rod elongation, duplicate bobs, structural shattering, 0/6 rigid swings—rather than physical dynamics).
   - Modifying the VAE tokenizer (Finding 3 proves the VAE already represents correct physics).
   - Tuning inference sampler hyperparameters (CFG scale $\in [1.0, 6.0]$ or flow shift $\in [3.0, 10.0]$): Flow shift is an operational no-op on the diffusers UniPC schedule, low CFG ($\le 2.5$) induces mid-air levitation/reversal rather than dissipation, and CFG 4–6 preserves perpetual bouncing invariant to scale (Task 71, Task 75, commit `a1fb2e3`).
   - Restricting CFG intervals alone (Finding 1 proves it does not induce release).
