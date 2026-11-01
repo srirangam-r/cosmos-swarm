@@ -3,3 +3,9 @@ oc_A_ball1_s21,1,clean continuous fall f0-~8; high continuous bounces; one ball,
 oc_A_ball1_s22,0,clean fall f0-~9 but NO rebound flight: ball rolls toward camera and leaves frame by f24,2026-11-01T11:00
 oc_A_ball1_s23,1,clean fall f0-~10 and flight 1; late artifacts only after f60 (ball approaches camera; ball reappears high f86+),2026-11-01T11:00
 oc_A_ball1_s24,0,fall clean but flight 1 has semi-transparent/ghost ball and a jump toward camera at f12,2026-11-01T11:00
+oc_A_ball1_s25,0,fall clean f0-8 but flight 1 has blurred/ghost ball f16-18 and ball grows ~2x (moves toward camera),2026-11-01T11:03
+oc_A_ball1_s26,0,duplicate ball at ~f6 during the fall; ball grows ~2x during fall; flight 1 only small hops,2026-11-01T11:03
+oc_A_ball1_s27,0,ball fades to a ghost f2-12 then a much larger ball appears (morph); no clean fall,2026-11-01T11:03
+oc_A_ball1_s28,0,slow descent with a clone at ~f16; green blob f22-24; multiple balls later,2026-11-01T11:03
+oc_A_ball1_s29,0,ball size jumps ~3x at f2 (morph) before the fall,2026-11-01T11:03
+oc_A_ball1_s30,0,scene turns into green balls/blobs; no single-ball fall,2026-11-01T11:03
