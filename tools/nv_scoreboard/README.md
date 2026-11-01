@@ -29,9 +29,10 @@ python score.py CLIPS_DIR [more clips] --dover_dir <DOVER_DIR> --device cuda|cpu
 python compare.py noise  scores.json --real ../../work/raj-4/nv_scoreboard_real/gauge_real_matched.json
 python compare.py paired before.json after.json --real ../../work/raj-4/nv_scoreboard_real/gauge_real_matched.json [--pair_by image,seed]
 ```
-- `noise` groups clips that differ only in seed (same input image, prompt, negative prompt, settings, read from sidecars). It reports the pooled within-group seed sd per metric and the overall sd.
-- `paired` matches clips across two score files. The default key is the same input image plus the same seed, because a fix may change the prompt, settings or checkpoint. Per metric it reports the paired mean AFTER−BEFORE with a bootstrap 95% CI over pairs. With `--real` it also gives the motion-fidelity gap |dd − dd_real(task)| before and after, and the CI of its change.
-- Verdict: DOVER "DROP" if the CI of the paired difference lies entirely below 0. Dynamic degree is "FURTHER from real" if the CI of the gap change lies entirely above 0.
+- Use a stable, unique `image_id` (or `image_sha256`) in each sidecar, identical for the same input across runs. Otherwise the entire image path is used; basename-only matching is unsafe. Missing or duplicate pairing keys and unmatched runs are errors.
+- `noise` groups clips that differ only in seed (same image, prompt, negative prompt and settings). It requires explicit image, prompt, negative prompt (empty string is valid), seed, num_frames, fps, steps, guidance, flow_shift, width and height. Repeated seeds in a group are rejected. It reports pooled within-group seed SD, not uncertainty across scenes.
+- `paired` matches clips using image and seed by default. It averages seeds within each scene, weights scenes equally, and bootstraps scenes for a descriptive 95% CI of AFTER−BEFORE. With `--real`, the motion-fidelity gap |dd − dd_real(task)| is descriptive and pair-weighted; its reference uncertainty is not included. A single scene cannot provide a scene-level CI. Use several independent scenes; a small-sample bootstrap may still be unreliable.
+- No automated non-inferiority verdict is provided. A CI crossing zero does not establish no degradation: specify an acceptable margin in advance and use an appropriate design and interval, including reference uncertainty for motion fidelity.
 - The task (ball / pend / slope) comes from the clip basename via `--task_re`. Reference clips whose names match no task are ignored.
 - Tested only on synthetic score files so far. The Cosmos seed-noise baseline is pending (task 4).
 

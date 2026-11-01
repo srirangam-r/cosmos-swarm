@@ -8,18 +8,15 @@
   python compare.py paired BEFORE.json AFTER.json [--real REAL.json] [--pair_by image,seed]
       Pairs clips across the two runs (default: same input image + same seed; a fix may change the
       prompt, settings or checkpoint, so those are not part of the key). Reports per metric the
-      paired mean difference AFTER-BEFORE with a bootstrap 95% CI over pairs, and, with --real,
-      the motion-fidelity gap |dd - dd_real(task)| before and after.
+      scene-weighted mean difference AFTER-BEFORE with a bootstrap 95% CI over scenes, and,
+      with --real, the descriptive motion-fidelity gap |dd - dd_real(task)|.
 
 Pairing/grouping keys come from each clip's JSON sidecar (client.py or server.py format:
 image/input_image/source_frame, seed, prompt_text/prompt, negative_prompt_text/negative_prompt,
-num_frames, fps, steps/num_inference_steps, guidance/guidance_scale, flow_shift). Without a sidecar
-the clip basename is used. The task (for the real reference) is the first regex group of --task_re
-on the clip basename (default matches ball / pend / slope).
-
-Pure numpy, no GPU. Verdict rule used in the output: a metric "drops" if the 95% CI of the paired
-DOVER difference lies entirely below 0, or the CI of the change in |dd - dd_real| lies entirely
-above 0 (motion moved away from real).
+num_frames, fps, steps/num_inference_steps, guidance/guidance_scale, flow_shift). A stable image_id or image_sha256 is preferred; otherwise the full image path is used.
+Missing metadata is rejected. The task (for the real reference) is the first regex group of --task_re
+on the clip basename (default matches ball / pend / slope). Missing or ambiguous pairing keys
+are errors. CIs are descriptive; they do not establish non-inferiority.
 """
 import argparse, hashlib, json, os, re, sys
 import numpy as np
@@ -53,16 +50,18 @@ def g(meta, *keys):
 def field(r, what):
     m, name = r["meta"], os.path.splitext(os.path.basename(r.get("clip", "")))[0]
     if what == "image":
-        v = g(m, "image", "input_image", "source_frame")
-        return os.path.basename(str(v)) if v is not None else name
+        # A stable, explicitly assigned ID is preferred across machines.  Never
+        # reduce paths to basenames: two different scenes can share one.
+        v = g(m, "image_id", "image_sha256", "image", "input_image", "source_frame")
+        return str(v) if v is not None else None
     if what == "seed":
         return g(m, "seed")
     if what == "prompt":
         v = g(m, "prompt_text", "prompt")
-        return hashlib.sha1(str(v).encode()).hexdigest()[:10] if v is not None else None
+        return hashlib.sha256(str(v).encode()).hexdigest() if v is not None else None
     if what == "neg":
-        v = g(m, "negative_prompt_text", "negative_prompt")
-        return hashlib.sha1(str(v).encode()).hexdigest()[:10] if v is not None else "none"
+        v = next((m[k] for k in ("negative_prompt_text", "negative_prompt") if k in m and m[k] is not None), None)
+        return hashlib.sha256(str(v).encode()).hexdigest() if v is not None else None
     if what == "settings":
         return tuple(g(m, *ks) for ks in (("num_frames",), ("fps",), ("steps", "num_inference_steps"),
                                           ("guidance", "guidance_scale"), ("flow_shift",), ("width",), ("height",)))
@@ -79,7 +78,7 @@ def task_of(r, task_re):
 def boot_ci(x, n=4000, seed=0):
     x = np.asarray(x, float)
     if len(x) < 2:
-        return (float("nan"), float("nan"))
+        return (None, None)
     rng = np.random.default_rng(seed)
     bs = x[rng.integers(0, len(x), (n, len(x)))].mean(1)
     return (float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5)))
@@ -103,9 +102,14 @@ def cmd_noise(a):
     groups = {}
     for name, r in S.items():
         key = (field(r, "image"), field(r, "prompt"), field(r, "neg"), field(r, "settings"))
+        if any(v is None for v in key[:3]) or any(v is None for v in key[3]) or field(r, "seed") is None:
+            sys.exit(f"missing image, prompt, negative prompt, complete settings, or seed: {name}")
         groups.setdefault(key, []).append(r)
     rep = dict(n_clips=len(S), n_groups=len(groups), groups=[], pooled_seed_sd={}, across_all_sd={})
     for key, rs in groups.items():
+        seeds = [field(r, "seed") for r in rs]
+        if len(set(seeds)) != len(seeds):
+            sys.exit(f"duplicate seed within noise group: {key[0]}")
         rep["groups"].append(dict(image=key[0], neg=key[2], n=len(rs), seeds=[field(r, "seed") for r in rs],
                                   **{m: [round(r[m], 4) for r in rs] for m in METRICS if all(m in r for r in rs)}))
     for m in METRICS:
@@ -131,39 +135,48 @@ def cmd_paired(a):
     A, B = load(a.before), load(a.after)
     keys = a.pair_by.split(",")
     kf = lambda r: tuple(field(r, k) for k in keys)
-    ia = {}
-    for r in A.values():
-        ia.setdefault(kf(r), []).append(r)
-    pairs = []
-    for r in B.values():
-        k = kf(r)
-        if k in ia and ia[k]:
-            pairs.append((ia[k].pop(0), r))
+    if "image" not in keys:
+        sys.exit("pair_by must include image for scene-level resampling")
+    def index(rows, label):
+        result = {}
+        for name, r in rows.items():
+            k = kf(r)
+            if any(v is None for v in k):
+                sys.exit(f"missing pairing key in {label}: {name}")
+            if k in result:
+                sys.exit(f"duplicate pairing key in {label}: {k}")
+            result[k] = r
+        return result
+    ia, ib = index(A, "before"), index(B, "after")
+    if ia.keys() != ib.keys():
+        sys.exit(f"unmatched pairing keys: {len(ia.keys() - ib.keys())} before, {len(ib.keys() - ia.keys())} after")
+    pairs = [(ia[k], ib[k]) for k in ia]
     if not pairs:
         sys.exit("no pairs: check --pair_by and sidecars")
     ref = real_ref(a.real, a.task_re)
-    rep = dict(n_pairs=len(pairs), pair_by=keys, n_before=len(A), n_after=len(B), metrics={}, verdict={})
+    rep = dict(n_pairs=len(pairs), pair_by=keys, n_before=len(A), n_after=len(B), metrics={},
+               inference_note="Scene-weighted bootstrap; descriptive only, not a non-inferiority test. Real-reference uncertainty is excluded.")
     for m in METRICS:
-        P = [(x[m], y[m]) for x, y in pairs if m in x and m in y]
+        P = [(field(x, "image"), x[m], y[m]) for x, y in pairs if m in x and m in y]
         if not P:
             continue
-        xa, xb = np.array(P).T
+        scenes = {}
+        for scene, x, y in P:
+            scenes.setdefault(scene, []).append((x, y))
+        scene_means = np.array([np.mean(v, axis=0) for v in scenes.values()])
+        xa, xb = scene_means.T
         d = xb - xa
         e = dict(n=len(P), before=float(xa.mean()), after=float(xb.mean()), delta=float(d.mean()),
-                 delta_ci95=boot_ci(d), delta_sd=float(d.std(ddof=1)) if len(d) > 1 else None)
+                 n_scenes=len(scenes), delta_ci95=boot_ci(d), delta_sd=float(d.std(ddof=1)) if len(d) > 1 else None)
         if m in DD and ref:
-            gaps = [(abs(x[m] - ref[task_of(x, a.task_re)][m]), abs(y[m] - ref[task_of(y, a.task_re)][m]))
-                    for x, y in pairs if m in x and m in y and task_of(x, a.task_re) in ref]
+            gaps = [(abs(x[m] - ref[task_of(x, a.task_re)][m]), abs(y[m] - ref[task_of(x, a.task_re)][m]))
+                    for x, y in pairs if m in x and m in y and task_of(x, a.task_re) == task_of(y, a.task_re)
+                    and m in ref.get(task_of(x, a.task_re), {})]
             if gaps:
                 ga, gb = np.array(gaps).T
                 e.update(gap_to_real_before=float(ga.mean()), gap_to_real_after=float(gb.mean()),
-                         gap_change=float((gb - ga).mean()), gap_change_ci95=boot_ci(gb - ga))
+                         gap_change=float((gb - ga).mean()), gap_n_pairs=len(gaps))
         rep["metrics"][m] = e
-        if m.startswith("dover") and not np.isnan(e["delta_ci95"][1]):
-            rep["verdict"][m] = "DROP" if e["delta_ci95"][1] < 0 else ("RISE" if e["delta_ci95"][0] > 0 else "no significant change")
-        if m in DD and "gap_change_ci95" in e and not np.isnan(e["gap_change_ci95"][0]):
-            lo, hi = e["gap_change_ci95"]
-            rep["verdict"][m] = "FURTHER from real" if lo > 0 else ("CLOSER to real" if hi < 0 else "no significant change")
     print(json.dumps(rep, indent=1))
     if a.out:
         json.dump(rep, open(a.out, "w"), indent=1)
