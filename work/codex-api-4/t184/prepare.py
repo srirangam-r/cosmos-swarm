@@ -36,6 +36,7 @@ def main():
     random.Random(18411753).shuffle(items)
     key={f'Q{i:02}':v for i,v in enumerate(items,1)}
     hidden=clips.parent/'key.json';hidden.write_text(json.dumps(key,indent=1)+'\n')
+    dense={'Q01':44,'Q02':24,'Q03':44,'Q05':24,'Q10':4,'Q11':69,'Q12':48,'Q09':20}
     for ident,v in key.items():
         c=cv2.VideoCapture(str(clips/(v['name']+'.mp4')));f=[]
         while True:
@@ -45,6 +46,15 @@ def main():
         c.release();assert len(f)==93
         panel(f,ident,list(range(0,93,4)),ROOT/'qc'/f'{ident}_crop.jpg')
         panel(f,ident,[0,4,12,24,48,72,84,92],ROOT/'qc'/f'{ident}_scene.jpg',True)
+        if ident in dense:
+            start=dense[ident]
+            panel(f,ident,list(range(start,min(start+24,93))),ROOT/'qc'/f'{ident}_dense.jpg')
+    for start in (1,7):
+        canvas=Image.new('RGB',(1664,6*280),'white')
+        for j,i in enumerate(range(start,start+6)):
+            im=Image.open(ROOT/'qc'/f'Q{i:02}_scene.jpg').resize((1664,280))
+            canvas.paste(im,(0,j*280))
+        canvas.save(ROOT/'qc'/f'scenes_{start}.jpg',quality=94)
     print('Prepared',len(key),'clips; key SHA256',hashlib.sha256(hidden.read_bytes()).hexdigest())
 
 if __name__=='__main__':main()

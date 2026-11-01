@@ -1,0 +1,72 @@
+{
+ "author_s5_s7": {
+  "clips": 9,
+  "seeds": 3,
+  "seed_means_s": {
+   "5": 1.970111546216165,
+   "6": 1.7840447101414185,
+   "7": 1.6793851790914578
+  },
+  "mean_s": 1.8111804784830137,
+  "seed_SE_s": 0.08501513115910414,
+  "ratio_to_saved_real": 1.5379493218575715,
+  "ratio_SE": 0.07218991418419429
+ },
+ "all_flags_ok": {
+  "clips": 4,
+  "seeds": 2,
+  "seed_means_s": {
+   "5": 1.9253487010245465,
+   "6": 1.7840447101414185
+  },
+  "mean_s": 1.8546967055829824,
+  "seed_SE_s": 0.07065199544156398,
+  "ratio_to_saved_real": 1.5749007757592013,
+  "ratio_SE": 0.05999357312433434
+ },
+ "rigid_Y_and_ok": {
+  "clips": 0,
+  "seeds": 0,
+  "seed_means_s": {},
+  "mean_s": null,
+  "seed_SE_s": null,
+  "ratio_to_saved_real": null,
+  "ratio_SE": null
+ },
+ "unclear_rigid_and_ok_descriptive_only": {
+  "clips": 1,
+  "seeds": 1,
+  "seed_means_s": {
+   "5": 1.9253487010245465
+  },
+  "mean_s": 1.9253487010245465,
+  "seed_SE_s": null,
+  "ratio_to_saved_real": 1.6348943488835357,
+  "ratio_SE": null
+ },
+ "counts": {
+  "flag": {
+   "check": 8,
+   "ok": 4
+  },
+  "rigid": {
+   "N": 8,
+   "U": 4
+  },
+  "motion": {
+   "Y": 12
+  },
+  "scene": {
+   "Y": 12
+  }
+ },
+ "author_included_check_count": 5,
+ "max_original_replay_absolute_error": 0,
+ "request_video_hash_audits_pass": 12,
+ "saved_real_fit_vs_mocap_relative_error": 0.0035015244049914074,
+ "saved_real_fps": 25.0,
+ "tool_sha256": {
+  "trk.py": "4de7b99dd38677a707e765d2b44d305b4fbade61b0e9e425f1dbad41549eaf2e",
+  "measure_pend.py": "ea671320010ff80ac5f9dce355590bc3e1952eeb62ad240c47e7fd783f07d120"
+ }
+}

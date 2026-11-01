@@ -1,0 +1,15 @@
+{
+ "original_period_replay_clips": 12,
+ "max_absolute_replay_error": 0,
+ "published_video_hash_matches": 12,
+ "request_video_contracts_pass": 12,
+ "tool_files_identical_to": "2e26463",
+ "panel_key_code_byte_replay_files": 36,
+ "independent_statistics_arithmetic": "PASS",
+ "script_compilation": "PASS",
+ "new_generation": 0,
+ "new_referee_submissions": 0,
+ "visual_codes_planted_validated": false,
+ "source_commit": "9f507a7",
+ "results_sha256": "14727b23bbe8fdd1ff87740bec6e222c091c6cda3c09f85246717132a9407d7c"
+}
