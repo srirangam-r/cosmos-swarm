@@ -1,0 +1,4994 @@
+[
+  {
+    "id": "131350-4f8b1c",
+    "seq": 2459,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s201",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:17:00Z",
+    "finished": "2026-11-01T13:17:58Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s201",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-4f8b1c",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T131756_0006_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-97a0dd",
+    "seq": 2463,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s202",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:20:56Z",
+    "finished": "2026-11-01T13:21:54Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s202",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-97a0dd",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132153_0010_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 57.8,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-bff1b3",
+    "seq": 2467,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s203",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:24:54Z",
+    "finished": "2026-11-01T13:25:54Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s203",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-bff1b3",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132551_0014_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.8,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-933ef6",
+    "seq": 2471,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s204",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:28:53Z",
+    "finished": "2026-11-01T13:30:02Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s204",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-933ef6",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132949_0018_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 69.8,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-dcc23e",
+    "seq": 2475,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s205",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:33:14Z",
+    "finished": "2026-11-01T13:34:12Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s205",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-dcc23e",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133411_0022_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-000f06",
+    "seq": 2479,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s206",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:37:10Z",
+    "finished": "2026-11-01T13:38:09Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s206",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-000f06",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133807_0026_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-ae3811",
+    "seq": 2483,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s207",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:41:07Z",
+    "finished": "2026-11-01T13:42:06Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s207",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-ae3811",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134204_0030_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-ed3701",
+    "seq": 2487,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_fast_s208",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:45:11Z",
+    "finished": "2026-11-01T13:46:12Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s208",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-ed3701",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134608_0034_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 60.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-d5bf05",
+    "seq": 2491,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s209",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:17:00Z",
+    "finished": "2026-11-01T13:17:58Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s209",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-d5bf05",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T131757_0006_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-2de52d",
+    "seq": 2495,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s210",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:20:56Z",
+    "finished": "2026-11-01T13:21:54Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s210",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-2de52d",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132153_0010_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 57.8,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-bb6dfe",
+    "seq": 2499,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s211",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:24:55Z",
+    "finished": "2026-11-01T13:25:54Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s211",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-bb6dfe",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132551_0014_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.0,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-8542b3",
+    "seq": 2503,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s212",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:28:53Z",
+    "finished": "2026-11-01T13:30:03Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s212",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-8542b3",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132950_0018_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 70.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-ed6289",
+    "seq": 2507,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s213",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:33:14Z",
+    "finished": "2026-11-01T13:34:12Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s213",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-ed6289",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133411_0022_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.0,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-95517f",
+    "seq": 2511,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s214",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:37:10Z",
+    "finished": "2026-11-01T13:38:09Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s214",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-95517f",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133807_0026_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-3e7295",
+    "seq": 2515,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s215",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:41:07Z",
+    "finished": "2026-11-01T13:42:06Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s215",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-3e7295",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134204_0030_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.3,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-fa20bf",
+    "seq": 2519,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_fast_s216",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:45:12Z",
+    "finished": "2026-11-01T13:46:14Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_fast_s216",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-fa20bf",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134609_0034_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 61.9,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-c62aa3",
+    "seq": 2458,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s201",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:16:01Z",
+    "finished": "2026-11-01T13:16:59Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s201",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-c62aa3",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T131657_0005_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-954c72",
+    "seq": 2462,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s202",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:19:57Z",
+    "finished": "2026-11-01T13:20:56Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s202",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-954c72",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132054_0009_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.1,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-ff45d4",
+    "seq": 2466,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s203",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:23:55Z",
+    "finished": "2026-11-01T13:24:54Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s203",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-ff45d4",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132452_0013_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-866f87",
+    "seq": 2470,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s204",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:27:54Z",
+    "finished": "2026-11-01T13:28:52Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s204",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-866f87",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132851_0017_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-a7327a",
+    "seq": 2474,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s205",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:32:14Z",
+    "finished": "2026-11-01T13:33:14Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s205",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-a7327a",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133312_0021_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.3,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-2e4de3",
+    "seq": 2478,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s206",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:36:10Z",
+    "finished": "2026-11-01T13:37:09Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s206",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-2e4de3",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133707_0025_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-2636da",
+    "seq": 2482,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s207",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:40:08Z",
+    "finished": "2026-11-01T13:41:07Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s207",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-2636da",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134104_0029_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.0,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-7ae2c5",
+    "seq": 2486,
+    "owner": "raj-noise-d",
+    "name": "N_E1_blue_slow_s208",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:44:05Z",
+    "finished": "2026-11-01T13:45:10Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s208",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-7ae2c5",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134502_0033_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 64.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-6233f4",
+    "seq": 2490,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s209",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:16:01Z",
+    "finished": "2026-11-01T13:16:59Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s209",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-6233f4",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T131658_0005_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.3,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-ddff9d",
+    "seq": 2494,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s210",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:19:58Z",
+    "finished": "2026-11-01T13:20:56Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s210",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-ddff9d",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132054_0009_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.1,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-6af915",
+    "seq": 2498,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s211",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:23:55Z",
+    "finished": "2026-11-01T13:24:54Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s211",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-6af915",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132452_0013_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.0,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-f3ba87",
+    "seq": 2502,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s212",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:27:54Z",
+    "finished": "2026-11-01T13:28:53Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s212",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-f3ba87",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132851_0017_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.9,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-aa6868",
+    "seq": 2506,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s213",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:32:16Z",
+    "finished": "2026-11-01T13:33:14Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s213",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-aa6868",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133313_0021_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-ca9116",
+    "seq": 2510,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s214",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:36:10Z",
+    "finished": "2026-11-01T13:37:10Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s214",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-ca9116",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133707_0025_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-0bfe68",
+    "seq": 2514,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s215",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:40:08Z",
+    "finished": "2026-11-01T13:41:07Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s215",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-0bfe68",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134105_0029_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-a04f8d",
+    "seq": 2518,
+    "owner": "raj-noise-e",
+    "name": "N_E1_blue_slow_s216",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:44:06Z",
+    "finished": "2026-11-01T13:45:10Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_blue_slow_s216",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "blue",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright blue metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-a04f8d",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134502_0033_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 64.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-66fef7",
+    "seq": 2457,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s201",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:15:02Z",
+    "finished": "2026-11-01T13:16:00Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s201",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-66fef7",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T131559_0004_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.1,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-0f4569",
+    "seq": 2461,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s202",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:18:58Z",
+    "finished": "2026-11-01T13:19:57Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s202",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-0f4569",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T131954_0008_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.1,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-8ebd9a",
+    "seq": 2465,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s203",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:22:54Z",
+    "finished": "2026-11-01T13:23:55Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s203",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-8ebd9a",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132351_0012_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 60.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-5c4754",
+    "seq": 2469,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s204",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:26:54Z",
+    "finished": "2026-11-01T13:27:53Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s204",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-5c4754",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132751_0016_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-e222bb",
+    "seq": 2473,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s205",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:31:12Z",
+    "finished": "2026-11-01T13:32:13Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s205",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-e222bb",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133210_0020_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 61.0,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-642d7f",
+    "seq": 2477,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s206",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:35:11Z",
+    "finished": "2026-11-01T13:36:10Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s206",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-642d7f",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133608_0024_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-24a91e",
+    "seq": 2481,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s207",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:39:08Z",
+    "finished": "2026-11-01T13:40:08Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s207",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-24a91e",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134005_0028_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-e368f1",
+    "seq": 2485,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_fast_s208",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:43:06Z",
+    "finished": "2026-11-01T13:44:04Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s208",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-e368f1",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134403_0032_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-0e08fa",
+    "seq": 2489,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s209",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:15:03Z",
+    "finished": "2026-11-01T13:16:01Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s209",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-0e08fa",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T131559_0004_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 57.9,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-5632e3",
+    "seq": 2493,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s210",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:18:58Z",
+    "finished": "2026-11-01T13:19:57Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s210",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-5632e3",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T131955_0008_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.1,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-8d0b53",
+    "seq": 2497,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s211",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:22:55Z",
+    "finished": "2026-11-01T13:23:54Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s211",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-8d0b53",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132351_0012_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.3,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-57db75",
+    "seq": 2501,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s212",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:26:54Z",
+    "finished": "2026-11-01T13:27:53Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s212",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-57db75",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132751_0016_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-fd3a61",
+    "seq": 2505,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s213",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:31:12Z",
+    "finished": "2026-11-01T13:32:12Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s213",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-fd3a61",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133210_0020_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.8,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-858e0a",
+    "seq": 2509,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s214",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:35:11Z",
+    "finished": "2026-11-01T13:36:10Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s214",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-858e0a",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133608_0024_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-d356cf",
+    "seq": 2513,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s215",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:39:08Z",
+    "finished": "2026-11-01T13:40:07Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s215",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-d356cf",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134005_0028_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-5c24a0",
+    "seq": 2517,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_fast_s216",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:43:06Z",
+    "finished": "2026-11-01T13:44:05Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_fast_s216",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "fast"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth quickly, each full back-and-forth swing taking about half a second, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-5c24a0",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134403_0032_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-11c89d",
+    "seq": 2456,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s201",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:14:03Z",
+    "finished": "2026-11-01T13:15:02Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s201",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 201,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-11c89d",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T131500_0003_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 58.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-6f1552",
+    "seq": 2460,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s202",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:17:58Z",
+    "finished": "2026-11-01T13:18:57Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s202",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 202,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-6f1552",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T131855_0007_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-11f7e3",
+    "seq": 2464,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s203",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:21:54Z",
+    "finished": "2026-11-01T13:22:54Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s203",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 203,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-11f7e3",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132251_0011_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 59.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-47f8b9",
+    "seq": 2468,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s204",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:25:55Z",
+    "finished": "2026-11-01T13:26:53Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s204",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 204,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-47f8b9",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132651_0015_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-f29153",
+    "seq": 2472,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s205",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:30:04Z",
+    "finished": "2026-11-01T13:31:08Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s205",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 205,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-f29153",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133101_0019_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 64.3,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-60b1ac",
+    "seq": 2476,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s206",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:34:13Z",
+    "finished": "2026-11-01T13:35:11Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s206",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 206,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-60b1ac",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133509_0023_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.1,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-74495f",
+    "seq": 2480,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s207",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:38:09Z",
+    "finished": "2026-11-01T13:39:07Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s207",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 207,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-74495f",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133906_0027_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-56d457",
+    "seq": 2484,
+    "owner": "raj-noise-d",
+    "name": "N_E1_red_slow_s208",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:42:06Z",
+    "finished": "2026-11-01T13:43:06Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s208",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 208,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-d",
+      "queue_id": "131350-56d457",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T134302_0031_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 59.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-2a9bc4",
+    "seq": 2488,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s209",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:14:04Z",
+    "finished": "2026-11-01T13:15:02Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s209",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 209,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-2a9bc4",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T131501_0003_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.3,
+      "wall_seconds": 58.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-88b75d",
+    "seq": 2492,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s210",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:17:59Z",
+    "finished": "2026-11-01T13:18:57Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s210",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 210,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-88b75d",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T131856_0007_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 58.7,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-f14b6c",
+    "seq": 2496,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s211",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:21:55Z",
+    "finished": "2026-11-01T13:22:54Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s211",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 211,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-f14b6c",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T132252_0011_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.8,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-7a5923",
+    "seq": 2500,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s212",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:25:54Z",
+    "finished": "2026-11-01T13:26:54Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s212",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 212,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-7a5923",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T132651_0015_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.8,
+      "wall_seconds": 59.5,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-a0e5e1",
+    "seq": 2504,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s213",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:30:04Z",
+    "finished": "2026-11-01T13:31:08Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s213",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 213,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-a0e5e1",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T133101_0019_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 63.2,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-361333",
+    "seq": 2508,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s214",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:34:13Z",
+    "finished": "2026-11-01T13:35:11Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s214",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 214,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-361333",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133510_0023_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 57.9,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-e72cc0",
+    "seq": 2512,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s215",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:38:09Z",
+    "finished": "2026-11-01T13:39:08Z",
+    "endpoint": "q8-6",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s215",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 215,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-e72cc0",
+      "endpoint": "q8-6",
+      "endpoint_url": "http://127.0.0.1:8047",
+      "server_clip_id": "20261101T133906_0027_raj-noise",
+      "artifact_ids": [],
+      "seconds": 56.0,
+      "wall_seconds": 58.4,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  },
+  {
+    "id": "131350-977014",
+    "seq": 2516,
+    "owner": "raj-noise-e",
+    "name": "N_E1_red_slow_s216",
+    "kind": "clip",
+    "prompt": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+    "params": {
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      }
+    },
+    "endpoints": [
+      "q8-4",
+      "q8-5",
+      "q8-6",
+      "q8-7"
+    ],
+    "status": "done",
+    "submitted": "2026-11-01T13:13:50Z",
+    "started": "2026-11-01T13:42:06Z",
+    "finished": "2026-11-01T13:43:06Z",
+    "endpoint": "q8-5",
+    "attempts": 1,
+    "error": null,
+    "image": null,
+    "video": null,
+    "sidecar": {
+      "name": "N_E1_red_slow_s216",
+      "width": 832,
+      "height": 480,
+      "num_frames": 93,
+      "fps": 24,
+      "steps": 35,
+      "guidance": 6.0,
+      "flow_shift": 10.0,
+      "seed": 216,
+      "negative_prompt": null,
+      "extra_params": {
+        "client": "raj-noise",
+        "noise": {
+          "device": "cpu"
+        },
+        "prog": "N",
+        "exp": "E1",
+        "color": "red",
+        "speed": "slow"
+      },
+      "prompt_text": "Static camera view: a simple pendulum, a thin rigid rod with a bright red metal ball at its tip, hangs from a horizontal axle mounted between two vertical posts on a table, in front of a plain grey wall. The pendulum swings back and forth slowly, each full back-and-forth swing taking about three seconds, under gravity, for the whole video.",
+      "negative_prompt_text": null,
+      "image": null,
+      "owner": "raj-noise-e",
+      "queue_id": "131350-977014",
+      "endpoint": "q8-5",
+      "endpoint_url": "http://127.0.0.1:8046",
+      "server_clip_id": "20261101T134303_0031_raj-noise",
+      "artifact_ids": [],
+      "seconds": 55.9,
+      "wall_seconds": 59.6,
+      "model": "nvidia/Cosmos3-Nano via the endpoint above; check that endpoint's #compute post for its stack"
+    }
+  }
+]

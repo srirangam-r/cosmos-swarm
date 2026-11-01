@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "checks": [
+    "64 planned IDs, completed native contracts, original endpoint class",
+    "all58 earlier video hashes, metadata, measurements and endpoints unchanged",
+    "only six originally unfinished cells added",
+    "complete primary cube, all three tests and Holm family retained",
+    "byte-equivalent primary numerical replay from saved design/outcomes",
+    "complete-seed sensitivity now equals primary; do not count as replication",
+    "six source/design/prereg files byte-identical to preserved partial package"
+  ],
+  "added_names": [
+    "N_E1_blue_fast_s208",
+    "N_E1_blue_fast_s216",
+    "N_E1_blue_slow_s208",
+    "N_E1_blue_slow_s216",
+    "N_E1_red_fast_s208",
+    "N_E1_red_fast_s216"
+  ],
+  "copied_source_sha256": {
+    "run.py": "c474b3ac6d0a22dad94a300e8d218d2e5b835f4f215492d9ca3eca755baaaea3",
+    "fetch.py": "62b605884d1623e005804622a4f0afa6e94402ff95688b93c3bf3412d3a2d62d",
+    "verify.py": "76398d78154c124188f5778e5e9ddfa74fc233ec958ec97283e14bc868a37f27",
+    "PREREG.md": "92cb41bb4807becfea657ade150fb0f505a2cb1e7de3e71b2af94dbf3f3f65b2",
+    "owner_E1.jsonl": "3da2f2fdbe33b29525c0f1a224b406dc3ab43b0092cff0d9353d4d7711efad9f",
+    "design_only_queue.json": "2f08125c86aa342e718de0ab676af0ae31afb29b181b493bf7ed0bb729b1dd15"
+  },
+  "original_result_sha256": "900c952bc2caaba491efd2524feb8c5c42a6c7e593ffb19b3258bce1649b1d8a",
+  "result_sha256": "7bbffb9c39a548d45ee9e3ef032425be7ae8da23a4a6b17a8060acd759031f09",
+  "scope": "software/numerical checks, not planted validation"
+}

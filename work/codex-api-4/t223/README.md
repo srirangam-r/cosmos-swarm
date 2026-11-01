@@ -137,3 +137,13 @@ neither is a universal causal allocation. M combines appearance/motion and is
 unvalidated, so this is not a physical-speed/period/colour/recipe result. Only
 6/14complete groups share exact endpoint, though all use the declared q8 class;
 native execution equality remains unverified. E2/E3 outcomes remain unopened.
+
+The additive [E1 full64 completion](e1_complete/README.md) includes all16 planned
+seed clusters with the unchanged diagnostic and primary3-test family. All58
+earlier clip hashes/measurements are identical. Fast−slow M is +0.7560±0.1233
+seed SE gray levels/transition, bootstrap95%[0.5341,1.0036], positive16/16;
+seed SS0.654 and prompt SS0.213 coexist. Each primary test has Monte Carlo
+rawp.0001/Holmp.0003. All64native contracts and numerical replay pass. This
+remains an unvalidated appearance/motion proxy, not speed/period/colour, causal
+text-versus-noise allocation, a recipe or NVIDIA-scoreboard proof. E2/E3 remain
+unopened; exact runtime/sampler/noise provenance is still unverified.

@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "checks": [
+    "all planned cells and full primary Holm family retained",
+    "independent scalar seed/prompt/interaction SS and eta2",
+    "independent scalar paired differences and exhaustive p",
+    "all16 scalar covariance entries",
+    "three full-video independent ffmpeg/block-area checks",
+    "all five pre-existing protocol/core/adapter hashes unchanged"
+  ],
+  "endpoint_matching": {
+    "complete_seeds": 16,
+    "all_four_exact_endpoint": 8,
+    "red_speed_exact_endpoint": 10,
+    "blue_speed_exact_endpoint": 14
+  },
+  "result_sha256": "7bbffb9c39a548d45ee9e3ef032425be7ae8da23a4a6b17a8060acd759031f09",
+  "scope": "Independent numerical/software verification, not planted validation"
+}
