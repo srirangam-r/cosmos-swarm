@@ -1,0 +1,149 @@
+## diffusers @86ef420b pipeline_cosmos3_omni.py
+        # Prompt-augmentation templates: appended inside `tokenize_prompt` so the LLM sees
+        # the same metadata the model was trained with. Negative prompts use inverse templates.
+        self.duration_template = "The video is {duration:.1f} seconds long and is of {fps:.0f} FPS."
+        self.image_resolution_template = "This image is of {height}x{width} resolution."
+        self.video_resolution_template = "This video is of {height}x{width} resolution."
+        self.inverse_duration_template = "The video is not {duration:.1f} seconds long and is not of {fps:.0f} FPS."
+        self.inverse_image_resolution_template = "This image is not of {height}x{width} resolution."
+        self.inverse_video_resolution_template = "This video is not of {height}x{width} resolution."
+        if use_system_prompt is None:
+            use_system_prompt = self.config.default_use_system_prompt
+
+        is_image = num_frames == 1
+
+        if negative_prompt is None:
+            negative_prompt = ""
+        def _apply_templates(text: str, is_negative: bool = False) -> str:
+            if not is_image and add_duration_template:
+                duration_template = self.inverse_duration_template if is_negative else self.duration_template
+                text = _append(text, duration_template.format(duration=num_frames / fps, fps=fps))
+            if add_resolution_template:
+                template = inverse_resolution_template if is_negative else resolution_template
+                text = _append(text, template.format(height=height, width=width))
+            return text
+        else:
+            cond_text = _apply_templates(prompt)
+            uncond_text = _apply_templates(negative_prompt, is_negative=True)
+        safety_checker: CosmosSafetyChecker | None = None,
+        enable_safety_checker: bool = True,
+        default_use_system_prompt: bool = True,
+        use_native_flow_schedule: bool = False,
+
+## vllm-omni @2f155262 vllm_omni/diffusion/models/cosmos3/pipeline_cosmos3.py
+        if use_duration_template is None:
+            use_duration_template = bool(self._get_sp_param(sp, "use_duration_template", False))
+        if use_resolution_template is None:
+            use_resolution_template = bool(self._get_sp_param(sp, "use_resolution_template", False))
+        if negative_metadata_mode is None:
+            negative_metadata_mode = str(self._get_sp_param(sp, "negative_metadata_mode", "inverse"))
+        negative_metadata_mode = negative_metadata_mode.strip().lower()
+        if negative_metadata_mode not in {"none", "same", "inverse"}:
+            raise ValueError(
+                "Cosmos3 negative_metadata_mode must be one of 'none', 'same', or 'inverse'; "
+                f"got {negative_metadata_mode!r}."
+            )
+
+        use_duration_template = use_duration_template and not is_t2i
+        dur_tmpl = COSMOS3_DURATION_TEMPLATE if use_duration_template else None
+        if negative_metadata_mode == "none":
+            negative_dur_tmpl = None
+            negative_res_tmpl = None
+        elif negative_metadata_mode == "same":
+            negative_dur_tmpl = dur_tmpl
+            negative_res_tmpl = res_tmpl
+        else:
+            negative_dur_tmpl = COSMOS3_INVERSE_DURATION_TEMPLATE if dur_tmpl else None
+            if res_tmpl is None:
+                negative_res_tmpl = None
+            elif is_t2i:
+                negative_res_tmpl = COSMOS3_INVERSE_IMAGE_RESOLUTION_TEMPLATE
+            else:
+                negative_res_tmpl = COSMOS3_INVERSE_RESOLUTION_TEMPLATE
+        use_system_prompt = bool(self._get_sp_param(sp, "use_system_prompt", is_v2v))
+        if negative_prompt is None:
+            negative_prompt = ""
+
+## cosmos-framework @55f0554d cosmos_framework/inference/defaults/image2video/sample_args.json
+{
+    "num_steps": 35,
+    "guidance": 6.0,
+    "shift": 10.0,
+    "sigma_max": 80.0,
+    "normalize_cfg": false,
+    "autoregressive": false,
+    "negative_prompt": null,
+    "negative_prompt_file": "neg_prompts.json",
+    "duration_template": "The video is {duration:.1f} seconds long and is of {fps:.0f} FPS.",
+    "resolution_template": "This video is of {height}x{width} resolution.",
+    "negative_metadata_mode": "none",
+    "inverse_duration_template": "The video is not {duration:.1f} seconds long and is not of {fps:.0f} FPS.",
+    "inverse_resolution_template": "This video is not of {height}x{width} resolution.",
+    "negative_prompt_keep_metadata": true,
+    "aspect_ratio": "16,9",
+    "fps": 24,
+    "num_frames": 189,
+    "video_save_quality": 10,
+    "image_save_quality": 95,
+    "enable_sound": false
+}
+## args.py _load_modality_defaults (negative_prompt_file -> negative_prompt)
+@cache
+def _load_modality_defaults(model_mode: str) -> dict[str, Any]:
+    default_file = PACKAGE_DIR / f"defaults/{model_mode}/sample_args.json"
+    if not default_file.exists():
+        raise FileNotFoundError(f"Missing modality defaults: {default_file}")
+    data = json.loads(default_file.read_text())
+    neg_file = data.pop("negative_prompt_file", None)
+    if neg_file is not None:
+        neg_path = PACKAGE_DIR / "defaults" / neg_file
+        if not neg_path.exists():
+            raise FileNotFoundError(f"Missing negative prompt file: {neg_path}")
+        data["negative_prompt"] = json.dumps(json.loads(neg_path.read_text()))
+    return data
+## args.py keep_metadata promotes none->same
+        if self.negative_prompt_keep_metadata and self.negative_metadata_mode == NegativeMetadataMode.NONE:
+            self.negative_metadata_mode = NegativeMetadataMode.SAME
+## inference.py negative metadata
+    negative_prompt = sample_args.negative_prompt
+    if sample_args.negative_metadata_mode == NegativeMetadataMode.SAME:
+        negative_prompt = (
+            _format_prompt_with_template(
+                negative_prompt if negative_prompt is not None else "",
+                fps=sample_args.fps,
+                num_frames=sample_args.num_frames,
+                duration_template=duration_template,
+                resolution_template=sample_args.resolution_template,
+                h=h,
+                w=w,
+            )
+            .lstrip(".")
+            .strip()
+        )
+    elif sample_args.negative_metadata_mode == NegativeMetadataMode.INVERSE:
+        negative_prompt = (
+            _format_prompt_with_template(
+                negative_prompt if negative_prompt is not None else "",
+                fps=sample_args.fps,
+                num_frames=sample_args.num_frames,
+                duration_template=inverse_duration_template,
+                resolution_template=sample_args.inverse_resolution_template,
+                h=h,
+                w=w,
+                force_duration_template=True,
+
+## vision encoder: only reasoner text generation uses self.visual
+        single entry point.  Pass ``pixel_values`` + ``image_grid_thw`` (and
+        optionally ``attention_mask``) to drive image-conditioned prefill via
+        the Qwen3-VL visual encoder; omit them for text-only prefill.  The
+        two arguments are mutually required: passing exactly one raises
+        ``ValueError`` inside :func:`_impl_generate_reasoner_text`.
+        Video conditioning is also supported via ``pixel_values_videos`` +
+        ``video_grid_thw``; the image and video pairs are mutually exclusive.
+
+        Uses the und-pathway weights (those WITHOUT the ``_moe_gen`` suffix)
+        plus the model-level ``embed_tokens`` / ``norm`` / ``lm_head``, and —
+        for the I2V path — the visual encoder under ``self.visual``.  The
+        generation pathway and all VFM-level multimodal embedders / heads
+        (``vae2llm``, ``llm2vae``, etc.) are bypassed.  See
+        :func:`_impl_generate_reasoner_text` for full argument docs.
