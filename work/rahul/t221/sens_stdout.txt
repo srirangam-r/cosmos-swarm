@@ -1,0 +1,55 @@
+21 clips
+raw geo 1.555553720775579 n 21
+baseline hc k=1 (repro): (np.float64(1.6398819518127683), np.float64(0.8391048206461744), np.float64(2.2776753723300467))
+
+[A] same-camera projection k=cos(alpha), applied to BOTH (hc):
+ k=1: geo 1.640 range[0.84,2.28]
+ k=0.9: geo 1.645 range[0.84,2.29]
+ k=0.8: geo 1.650 range[0.85,2.30]
+ k=0.7: geo 1.655 range[0.86,2.31]
+ k=0.6: geo 1.659 range[0.86,2.32]
+ k=0.5: geo 1.663 range[0.87,2.33]
+[B] projection differs: Nano k_n, real k=1 (generated geometry unvalidated):
+ k_n=0.9: geo 1.636
+ k_n=0.8: geo 1.631
+ k_n=0.7: geo 1.625
+ k_n=0.6: geo 1.619
+ k_n=0.5: geo 1.611
+[C] off-vertical centre/pivot offset (deg) about vertical, mode side (|theta-off|), both real and Nano:
+ off=-10: geo 1.594
+ off=-5: geo 1.585
+ off=0: geo 1.590
+ off=5: geo 1.604
+ off=10: geo 1.606
+ off=15: geo 1.601
+[D] largest-excursion (max) as amplitude, both:
+ off=0: geo 1.574
+ off=5: geo 1.554
+ off=10: geo 1.527
+[E] Nano uses max-excursion, real uses hc (most generous):
+ geo 1.498 range [0.74,2.12]
+[F] combined generous: Nano max & k_n=0.7, real hc k=1:
+ geo 1.486
+
+per-clip: raw ratio, A_n(hc,k=1), F-needed amplitude if real fixed
+ k175_pend_mid_base_s5        R_raw 1.63 A_hc 41 A_needed 151
+ k175_pend_mid_base_s6        R_raw 1.55 A_hc 66 A_needed 146
+ k175_pend_mid_base_s7        R_raw 1.49 A_hc 61 A_needed 142
+ k175_pend_mid_n_s5           R_raw 1.65 A_hc 47 A_needed 152
+ k175_pend_mid_n_s7           R_raw 1.32 A_hc 59 A_needed 127
+ k175_pend_mid_r_s5           R_raw 1.72 A_hc 65 A_needed 155
+ k175_pend_mid_r_s6           R_raw 1.53 A_hc 58 A_needed 145
+ k185_p10f93_base_s10         R_raw 0.77 A_hc 75 A_needed nan
+ k185_p10f93_base_s11         R_raw 2.11 A_hc 63 A_needed 168
+ k185_p10f93_base_s12         R_raw 1.60 A_hc 53 A_needed 149
+ k185_p10f93_base_s8          R_raw 1.88 A_hc 57 A_needed 162
+ k185_p10f93_base_s9          R_raw 1.98 A_hc 39 A_needed 165
+ k191_p10f93_base_s16         R_raw 2.09 A_hc 59 A_needed 167
+ k191_p10f93_base_s18         R_raw 1.56 A_hc 58 A_needed 147
+ k191_p10f93_base_s20         R_raw 0.86 A_hc 61 A_needed nan
+ k191_p10f93_base_s21         R_raw 2.13 A_hc 59 A_needed 168
+ k191_p10f93_base_s23         R_raw 1.44 A_hc 39 A_needed 138
+ k191_p10f93_base_s24         R_raw 1.50 A_hc 62 A_needed 143
+ k191_p10f93_base_s26         R_raw 2.20 A_hc 53 A_needed 169
+ k191_p10f93_base_s28         R_raw 1.02 A_hc 18 A_needed 74
+ k191_p10f93_base_s30         R_raw 1.79 A_hc 67 A_needed 159
