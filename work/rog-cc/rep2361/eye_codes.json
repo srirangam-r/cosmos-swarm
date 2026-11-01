@@ -3,5 +3,12 @@
  "rc61_pend12_rest_s4": "held (rod horizontal at the release point f0-f90)",
  "rc61_pend12_mid_s4": "swing (continuous swinging f0-f90)",
  "rc61_pend14_rest_s4": "held (rod horizontal f0-f90)",
- "rc61_pend14_mid_s4": "swing (small-amplitude swing near the bottom f0-f90; bob rarely leaves the zone, so passes undercount; rod length varies)"
+ "rc61_pend14_mid_s4": "swing (small-amplitude swing near the bottom f0-f90; bob rarely leaves the zone, so passes undercount; rod length varies)",
+ "rc61_pend12_rest_s5": "no-swing-detach (whole rod+axle piece drifts diagonally down-left as a rigid object and lands on the table f84-90; never swings about the axle)",
+ "rc61_pend12_mid_s5": "swing (continuous, faster/choppier than real: 16 zone passes vs real 6-7)",
+ "rc61_pend14_rest_s5": "partial-dip (rod dips ~45-60 deg below horizontal on the robot side f18-48, goes back UP to horizontal f54-84 and holds, dips again f90; never passes the bottom)",
+ "rc61_pend12_rest_s6": "no-swing-detach (rod lengthens into a long bar that slides diagonally down as a rigid object f12-60 and lies near the table; no rotation about the axle)",
+ "rc61_pend12_mid_s6": "swing (continuous f0-f90)",
+ "rc61_pend14_mid_s5": "swing (small amplitude near the bottom; bob never leaves the zone, so passes undercount)",
+ "rc61_pend14_rest_s6": "held (rod horizontal f0-f90; slight late shift of the rod near the gripper)"
 }

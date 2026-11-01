@@ -1,0 +1,66 @@
+{
+ "rest": {
+  "n": 6,
+  "swing_eye": 0,
+  "coded": 6,
+  "zone_motion_mean": 2.1025084853172302,
+  "zone_motion_se": 0.9012481555795024,
+  "passes": [
+   0,
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  "clips_with_pass": 2,
+  "names": [
+   "rc61_pend12_rest_s4",
+   "rc61_pend12_rest_s5",
+   "rc61_pend12_rest_s6",
+   "rc61_pend14_rest_s4",
+   "rc61_pend14_rest_s5",
+   "rc61_pend14_rest_s6"
+  ]
+ },
+ "mid": {
+  "n": 5,
+  "swing_eye": 5,
+  "coded": 5,
+  "zone_motion_mean": 18.591762161254884,
+  "zone_motion_se": 3.26900871026282,
+  "passes": [
+   6,
+   16,
+   7,
+   4,
+   1
+  ],
+  "clips_with_pass": 5,
+  "names": [
+   "rc61_pend12_mid_s4",
+   "rc61_pend12_mid_s5",
+   "rc61_pend12_mid_s6",
+   "rc61_pend14_mid_s4",
+   "rc61_pend14_mid_s5"
+  ]
+ },
+ "fisher_p_two_sided": 0.0021645021645021645,
+ "real_reference": {
+  "real12_held_f0_55": {
+   "zone_motion": 0.22674615681171417,
+   "passes": 0,
+   "occupancy": 0.0
+  },
+  "real12_mid_f93": {
+   "zone_motion": 6.007086277008057,
+   "passes": 7,
+   "occupancy": 0.1827956989247312
+  },
+  "real12_rest_f56": {
+   "zone_motion": 5.242471694946289,
+   "passes": 6,
+   "occupancy": 0.17204301075268819
+  }
+ }
+}
