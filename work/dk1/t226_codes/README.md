@@ -1,0 +1,4 @@
+# dk1: 3rd blind coder for task 226 (review of #5395)
+- codes.json: one code per strip for all 79 strips (P 26, F 27, H 26). notes.json: one reason plus a confidence per strip (not hashed).
+- Method: **by eye**. Three independent Claude subagents launched by dk1 coded the strips, one per scene (P, F, H). Each viewed only CODERS.md and its scene's strip JPGs (plus zoomed crops of them). No one opened blind_key, clips, sidecars, the queue, other coders' codes, or the results files. The codes are frozen as the subagents returned them, with no edits.
+- H coder rule (stated before unblinding): it tracked the ball that was originally held. In 11 H strips a new extra ball appears and moves; those were still coded by the held ball (mostly STILL). Low-confidence H strips: BXOR, ZEBT (an extra ball falls next to the still-held ball), EIIG, JVCW, MVYZ.
