@@ -1,0 +1,327 @@
+{
+ "per_clip": {
+  "r3082_A0_ball2_s10": {
+   "arm": "A0",
+   "inp": "ball2",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "Y"
+  },
+  "r3082_QT_ball1_s11": {
+   "arm": "QT",
+   "inp": "ball1",
+   "seed": 11,
+   "rest": "Y",
+   "artifact": "N"
+  },
+  "r3082_A0_ball2_s12": {
+   "arm": "A0",
+   "inp": "ball2",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_QT_ball1_s10": {
+   "arm": "QT",
+   "inp": "ball1",
+   "seed": 10,
+   "rest": "Y",
+   "artifact": "N"
+  },
+  "r3082_A0_ball2_s13": {
+   "arm": "A0",
+   "inp": "ball2",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "U"
+  },
+  "r3082_QT_ball1_s12": {
+   "arm": "QT",
+   "inp": "ball1",
+   "seed": 12,
+   "rest": "U",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball2_s10": {
+   "arm": "R12a4all",
+   "inp": "ball2",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_QT_ball2_s11": {
+   "arm": "QT",
+   "inp": "ball2",
+   "seed": 11,
+   "rest": "Y",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball1_s13": {
+   "arm": "S12a4e",
+   "inp": "ball1",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_QT_ball2_s13": {
+   "arm": "QT",
+   "inp": "ball2",
+   "seed": 13,
+   "rest": "Y",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball1_s10": {
+   "arm": "R12a4all",
+   "inp": "ball1",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball1_s12": {
+   "arm": "R12a4all",
+   "inp": "ball1",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball2_s10": {
+   "arm": "S12a4e",
+   "inp": "ball2",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball1_s12": {
+   "arm": "S12a4e",
+   "inp": "ball1",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball1_s13": {
+   "arm": "S12a4all",
+   "inp": "ball1",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball2_s13": {
+   "arm": "R12a4all",
+   "inp": "ball2",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball2_s13": {
+   "arm": "S12a4all",
+   "inp": "ball2",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_QT_ball2_s10": {
+   "arm": "QT",
+   "inp": "ball2",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball1_s11": {
+   "arm": "S12a4e",
+   "inp": "ball1",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball2_s11": {
+   "arm": "S12a4e",
+   "inp": "ball2",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "Y"
+  },
+  "r3082_QT_ball2_s12": {
+   "arm": "QT",
+   "inp": "ball2",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball2_s12": {
+   "arm": "R12a4all",
+   "inp": "ball2",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball1_s12": {
+   "arm": "S12a4all",
+   "inp": "ball1",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball1_s10": {
+   "arm": "S12a4e",
+   "inp": "ball1",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball1_s10": {
+   "arm": "S12a4all",
+   "inp": "ball1",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball2_s11": {
+   "arm": "R12a4all",
+   "inp": "ball2",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_QT_ball1_s13": {
+   "arm": "QT",
+   "inp": "ball1",
+   "seed": 13,
+   "rest": "Y",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball2_s13": {
+   "arm": "S12a4e",
+   "inp": "ball2",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_A0_ball2_s11": {
+   "arm": "A0",
+   "inp": "ball2",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball2_s10": {
+   "arm": "S12a4all",
+   "inp": "ball2",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_A0_ball1_s11": {
+   "arm": "A0",
+   "inp": "ball1",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "Y"
+  },
+  "r3082_R12a4all_ball1_s11": {
+   "arm": "R12a4all",
+   "inp": "ball1",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "Y"
+  },
+  "r3082_A0_ball1_s10": {
+   "arm": "A0",
+   "inp": "ball1",
+   "seed": 10,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball2_s11": {
+   "arm": "S12a4all",
+   "inp": "ball2",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "Y"
+  },
+  "r3082_A0_ball1_s12": {
+   "arm": "A0",
+   "inp": "ball1",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_A0_ball1_s13": {
+   "arm": "A0",
+   "inp": "ball1",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball1_s11": {
+   "arm": "S12a4all",
+   "inp": "ball1",
+   "seed": 11,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4all_ball2_s12": {
+   "arm": "S12a4all",
+   "inp": "ball2",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_R12a4all_ball1_s13": {
+   "arm": "R12a4all",
+   "inp": "ball1",
+   "seed": 13,
+   "rest": "N",
+   "artifact": "N"
+  },
+  "r3082_S12a4e_ball2_s12": {
+   "arm": "S12a4e",
+   "inp": "ball2",
+   "seed": 12,
+   "rest": "N",
+   "artifact": "N"
+  }
+ },
+ "tally": {
+  "A0": {
+   "rest_Y": 0,
+   "rest_N": 8,
+   "rest_U": 0,
+   "artifact_Y": 2,
+   "n": 8
+  },
+  "QT": {
+   "rest_Y": 5,
+   "rest_N": 2,
+   "rest_U": 1,
+   "artifact_Y": 0,
+   "n": 8
+  },
+  "R12a4all": {
+   "rest_Y": 0,
+   "rest_N": 8,
+   "rest_U": 0,
+   "artifact_Y": 1,
+   "n": 8
+  },
+  "S12a4e": {
+   "rest_Y": 0,
+   "rest_N": 8,
+   "rest_U": 0,
+   "artifact_Y": 1,
+   "n": 8
+  },
+  "S12a4all": {
+   "rest_Y": 0,
+   "rest_N": 8,
+   "rest_U": 0,
+   "artifact_Y": 1,
+   "n": 8
+  }
+ },
+ "sign_S12a4all_vs_A0": {
+  "S_only": 0,
+  "A0_only": 0,
+  "tie": 8,
+  "p_sign_one_sided": null
+ }
+}
