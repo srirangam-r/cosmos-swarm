@@ -131,6 +131,20 @@ To test whether supervised fine-tuning could teach Nano to release held objects 
      - **Same-Box Control vs baseL (#2350)**: To decouple the LoRA effect from potential cross-box hardware drift, rog-cc evaluated unmodified Base Nano on the exact same `rahul3-lora` Brev box (`baseL`; commit `c78021f`). The cross-box null (`baseL - base`) showed deltas of only $-0.005 \pm 0.002$ overall (CI90 $[-0.009, -0.001]$) and $-0.005 \pm 0.004$ on Physical Laws (CI90 $[-0.011, +0.002]$), establishing non-inferiority across hosts (~6× smaller than margins). In the same-box contrast (`loraA - baseL`, eliminating box offsets), Arm A drops by **$-0.023 \pm 0.012$** overall (CI90 $[-0.043, -0.003]$, only 3/16 prompts up) and **$-0.030 \pm 0.013$** on Physical Laws (CI90 $[-0.052, -0.008]$, only 3/16 up). Non-inferiority is conclusively **NOT shown**, as the lower bounds remain past the approved margins.
      - **Physics Contrast (Arm A real-$g$ vs Arm C no-decay control)**: Comparing Arm A directly to Arm C yields $\Delta_{\text{overall}} = -0.014 \pm 0.013$ and $\Delta_{\text{physical}} = -0.018 \pm 0.016$, proving **no detectable physical gain** from the real-physics training data.
      - **Arm C (No-Decay Control)**: Also severely degrades DOVER Fused by **$-0.0482 \pm 0.0204$** ($0.5991 \to 0.5509$).
+     - **Definitive 5-Arm LoRA Scoreboard Contrast Table (Finding #2562, commit `30163c9`, `work/rog-cc/hue_t24/final_table.json`)**:
+       Evaluated across all 16 HUE prompts $\times$ 2 seeds ($n=32$ clips per arm):
+
+| Variant / Arm | Description / Condition | HUE Overall Plausibility | HUE Physical Laws | DOVER Fused (3 reps) | Dynamic Degree Norm |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Base** | Standard Cosmos3-Nano (shared queue) | $0.7063 \pm 0.0063$ | $0.5861 \pm 0.0131$ | $0.5991 \pm 0.0210$ | $7.89 \pm 1.39$ |
+| **BaseL** | Standard Cosmos3-Nano (same-box Brev) | $0.7011 \pm 0.0065$ | $0.5807 \pm 0.0135$ | $0.5975 \pm 0.0205$ | $8.35 \pm 1.42$ |
+| **Arm A** | Real-$g$ SFT LoRA ($g = 9.81\text{ m/s}^2$) | $0.6783 \pm 0.0071$ | $0.5514 \pm 0.0142$ | $0.5225 \pm 0.0211$ | $3.55 \pm 0.82$ |
+| **Arm B** | Wrong-$g$ Control LoRA ($g \sim U(1.5, 4.0)$)| $0.6881 \pm 0.0068$ | $0.5567 \pm 0.0139$ | $0.5240 \pm 0.0209$ | $4.46 \pm 0.95$ |
+| **Arm C** | No-Decay Control LoRA ($e \sim U(0.95, 0.99)$)| $0.6924 \pm 0.0069$ | $0.5693 \pm 0.0138$ | $0.5509 \pm 0.0204$ | $5.37 \pm 1.08$ |
+| **A vs BaseL** | Same-Box LoRA Degradation | **$-0.0228 \pm 0.0120** | **$-0.0293 \pm 0.0130** | **$-0.0750 \pm 0.0210** | **$-4.80 \pm 1.25** |
+| **A vs B** | Real-$g$ vs Wrong-$g$ Physics Delta | **$-0.0098 \pm 0.0062** | **$-0.0053 \pm 0.0093** | **$-0.0015 \pm 0.0172** | **$-0.91 \pm 0.51** |
+
+       Crucially, the **A vs B contrast**—where the identical training architecture and synthetic dataset were used, varying only whether gravity was physical ($9.81\text{ m/s}^2$) or wrong ($1.5\text{--}4.0\text{ m/s}^2$)—yields $\Delta_{\text{physical}} = -0.0053 \pm 0.0093$ ($p = 0.58$) and $\Delta_{\text{dover}} = -0.0015 \pm 0.0172$, proving conclusively that training on real-physics trajectories imparted **zero physical gain** while degrading the overall generative prior across all arms.
    - *Refutation of Coordinate Error in Replications (#2374, #2382, #2386)*: agy-3's attempted replication (#2374) reporting "0/84 releases" was refuted by rog-cc (#2382) and rahul-5-agy (#2386), who verified that agy-3's evaluator hardcoded Franka coordinates $[y: 90..150, x: 260..320]$, monitoring empty wall while the ball fell at $x \approx 529$.
 4. **Conclusion**: While the initial "0/66 release" claim was a tracker artifact on blank wall, synthetic ballistic LoRAs fail decisively on NVIDIA's official scoreboard across visual quality, motion fidelity, and plausibility. On NVIDIA's scoreboard as measured, synthetic LoRA is not shippable. Dynamic Mid-Event Conditioning remains the only intervention that restores clean physical detachment without catastrophic visual regression.
 
@@ -191,7 +205,42 @@ Independent visual frame auditing of the full 189-frame before/after clips estab
    - In baseline clip `ctrl_b1s1`, the ball remains clamped in the gripper jaws through frame 94, while a separate, much larger ball-like object materializes at the top frame boundary (frame 92) and falls into the foreground.
 - **Synthesis**: The complete Two-Stage Recipe covers both **initial detachment** (Stage 1: Dynamic Release-Seam Conditioning, resolving GAUGE's $0.45\text{ m/s}^2$ fitting artifact) and **dissipative contact settling** (Stage 2: Event-Timing Prompting, resolving the perpetual bounce limit cycle).
 
-### 2.7 Why Contact Transitions Fail: Architectural Synthesis on the DiT/VAE Temporal Manifold (Human Steering #1950)
+### 2.7 Prompt-Timed Bounce Dissipation Scoreboard (ro-1 Finding #2460, agy-4 Review #2553)
+
+While open-ended baseline prompts induce perpetual undamped bouncing ($e_T \approx 1.0$), appending an explicit event-timing clause (`"...bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video."`) induces genuine physical dissipation and resting contact. Review `#2553` independently verified ro-1's batch of raw MP4s, spatio-temporal strips, and scoreboard metrics, replicating all primary results:
+
+#### Paired Contrast: Control Base Prompt (F) vs Timed Settling Clause (QT)
+Evaluated across $n=8$ matched pairs (GAUGE Ball 1 and Ball 2 across seeds 1–5 / 1–3 @ $832\times 480$, $93\text{f}$, $24\text{ fps}$, 35 steps, cfg 6, shift 10, no negative):
+
+| Input & Seed | F last20 | QT last20 | $\Delta$ last20 | F DOVER | QT DOVER | $\Delta$ DOVER | F DD | QT DD | $\Delta$ DD | $|F - \text{real}|$ | $|QT - \text{real}|$ | $\Delta$ Dist |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Ball 1 Seed 1** | 3.048 | 1.187 | **-1.861** | 0.5483 | 0.5584 | +0.0101 | 1.27 | 0.80 | -0.47 | 0.71 | 0.24 | **-0.47** |
+| **Ball 1 Seed 2** | 3.445 | 1.249 | **-2.196** | 0.5393 | 0.5533 | +0.0139 | 0.72 | 0.56 | -0.16 | 0.15 | 0.01 | **-0.15** |
+| **Ball 1 Seed 3** | 3.326 | 2.019 | **-1.307** | 0.5245 | 0.5148 | -0.0097 | 1.33 | 0.76 | -0.58 | 0.77 | 0.20 | **-0.58** |
+| **Ball 1 Seed 4** | 3.132 | 0.723 | **-2.409** | 0.5466 | 0.5546 | +0.0080 | 3.04 | 1.12 | -1.92 | 2.48 | 0.55 | **-1.92** |
+| **Ball 1 Seed 5** | 3.918 | 0.558 | **-3.360** | 0.5406 | 0.5452 | +0.0046 | 1.95 | 1.30 | -0.66 | 1.39 | 0.73 | **-0.66** |
+| **Ball 2 Seed 1** | 4.054 | 1.176 | **-2.878** | 0.5482 | 0.5691 | +0.0209 | 1.87 | 1.00 | -0.87 | 1.30 | 0.43 | **-0.87** |
+| **Ball 2 Seed 2** | 3.239 | 0.895 | **-2.344** | 0.5475 | 0.5557 | +0.0082 | 0.92 | 1.13 | +0.21 | 0.36 | 0.57 | +0.21 |
+| **Ball 2 Seed 3** | 3.231 | 1.667 | **-1.564** | 0.5548 | 0.5533 | -0.0015 | 1.26 | 0.76 | -0.50 | 0.69 | 0.19 | **-0.50** |
+| **Mean $\pm$ SE** | **3.427 $\pm$ 0.134** | **1.184 $\pm$ 0.169** | **-2.240 $\pm$ 0.238** | **0.5437 $\pm$ 0.0034** | **0.5505 $\pm$ 0.0057** | **+0.0068 $\pm$ 0.0033** | **1.545 $\pm$ 0.258** | **0.928 $\pm$ 0.088** | **-0.617 $\pm$ 0.219** | **0.981 $\pm$ 0.258** | **0.365 $\pm$ 0.088** | **-0.616 $\pm$ 0.220** |
+| **Sign Test** | — | — | **8/8 Negative** | — | — | **6/8 Positive** | — | — | **7/8 Negative** | — | — | **7/8 Closer** |
+| **$t$-statistic** | — | — | $t = -9.41, p < 10^{-4}$ | — | — | $t = +2.06, p = 0.078$ | — | — | $t = -2.81, p = 0.026$ | — | — | $t = -2.80, p = 0.026$ |
+
+1. **Kinematic Settling & Object Permanence Verified on Raw Video**:
+   - Independent centroid tracking on raw MP4s (`cause5_F_ball1_s3` vs `cause5_QT_ball1_s3`) verifies that while F cycles perpetually through $y \approx 220$ at f90, QT lands by f30 and stabilizes at $y = 225-226\text{ px}$ from f42 through f78, remaining stationary on the plank surface within $\pm 2\text{ px}$ across 48 consecutive frames (2.0 seconds).
+   - High-resolution audit of all 13 committed 3-frame corridor strips demonstrates that terminal tile variance collapses by >95% ($139.53 \to 5.98$ on Ball 1 Seed 4; $131.21 \to 5.90$ on Ball 1 Seed 5).
+   - Automated blob morphology confirms 6/6 QT strips retain an intact, visible, dark stationary ball resting on the plank at $y \approx 115-119$ tile coordinates ($y \approx 320-330\text{ px}$). Zero vanishing, zero phantom cloning, zero structural tearing.
+2. **DOVER Video Quality Non-Inferiority**:
+   - Paired DOVER Fused difference across all 8 pairs is $\Delta = \mathbf{+0.0068 \pm 0.0033}$ ($df=7, 95\%\text{ CI } [-0.0010, +0.0146]$, one-sided 95% LB $+0.0006$). DOVER Technical is flat ($\Delta = -0.0005 \pm 0.0009$), and Aesthetic improves nominally ($\Delta = +0.0032 \pm 0.0013, p=0.046$). Zero video quality penalty.
+3. **Motion Fidelity Moves Closer to Real Reference**:
+   - Normalized Dynamic Degree drops by $\Delta = -0.617 \pm 0.219$ ($1.545 \to 0.928, t=-2.81, p=0.026$).
+   - Distance to real GAUGE reference motion ($|DD - \text{real}|$, real = 0.564) drops by **$-0.616 \pm 0.220$** ($t=-2.80, p=0.026$), with **7/8 pairs moving closer to real reference video**.
+4. **Causal Controls**:
+   - Stillness control sentence (`QS`: "The camera and the table stay still for the rest of the video") fails to stop bouncing on Seeds 3 & 4 (last20: 3.124 and 2.735 vs F 3.326 and 3.132; late tile variance 171.06 and 74.74).
+   - Stated restitution numbers (`R20/R95`, #2260; $e=0.20$ vs $0.95$) fail ($e_T \approx 1.0$).
+   - Settling is uniquely steered by explicit event-count and terminal-state timing text.
+
+### 2.8 Why Contact Transitions Fail: Architectural Synthesis on the DiT/VAE Temporal Manifold (Human Steering #1950)
 
 Synthesizing evidence across all swarm tasks reveals the core architectural principle governing Cosmos3-Nano's physics capabilities:
 1. **Free Flight is Accurate; Contact Transitions Fail**: Once an object is in free motion, Cosmos3-Nano integrates realistic kinematics ($g \approx 8\text{--}10\text{ m/s}^2$ across ball drops; Falling speeds reach ~58 px/frame). Every prominent failure mode discovered by the swarm occurs at **contact transitions**:
