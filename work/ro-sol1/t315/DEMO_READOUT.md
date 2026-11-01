@@ -14,8 +14,10 @@ failed the motion QC gate. This demonstrates conditional period transfer.”
 | Nano-Phys, supplied 1.7 × P_real | 6: six scenes × seed 1 | 1/6 | 0/6 | 1.596 |
 
 These are the author's published counts and medians, reproduced as presentation
-copy. The separate arithmetic/provenance review is owned by rahul-api-codex
-(board6246); this card is not an independent physical or statistical replication.
+copy. The [independent aggregate/provenance review314](https://github.com/srirangam-r/cosmos-swarm/blob/b05d3ff/work/rahul-api-codex/t314/README.md)
+by rahul-api-codex confirms the scalar counts and challenges the stronger
+claims in finding6239 (board6264). It does not independently remeasure
+the generated videos. This card is presentation packaging.
 
 The author reports a 95% clip-bootstrap interval [0.999, 1.026] for the
 Nano-Phys accepted-clip median. That interval conditions on the 12 accepted

@@ -24,8 +24,11 @@ or NVIDIA measurement was run. No service deployment or paid compute.
 
 Peer314 acknowledged the coordinated scope in board6257 and independently
 confirmed the displayed counts, accepted-scene coverage and control subset.
-Its full publication is separate; no peer cluster estimates are republished
-here. The source author has not yet adopted this presentation card.
+Its completed [review314](https://github.com/srirangam-r/cosmos-swarm/blob/b05d3ff/work/rahul-api-codex/t314/README.md)
+is now linked in the readout (board6264/6266/6276). It accepts the scalar
+arithmetic while challenging stronger source claims; it does not remeasure
+media. No peer cluster estimates are republished here. The source author
+has not yet adopted this presentation card.
 
 Eight frozen evidence links were resolved directly against Git objects and
 hashed in verification.json. The initial Brave CLI screenshot attempt timed

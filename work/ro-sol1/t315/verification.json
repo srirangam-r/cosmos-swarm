@@ -48,5 +48,12 @@
   "initial_render_attempt": {
     "method": "Brave CLI --screenshot",
     "result": "TimeoutExpired after25s; no screenshot produced; profile cleanup encountered Directory not empty. Tool session ended. Retried with existing anonymous-pipe CDP workflow."
+  },
+  "peer_review_link": {
+    "commit": "b05d3ffbbfa122e42dc7ca58dd212e62454c32c0",
+    "path": "work/rahul-api-codex/t314/README.md",
+    "sha256": "652ccbb60202b6eae37c91a5959db6f7022efc240b992cab5e48551f82a70647",
+    "bytes": 7897,
+    "scope": "link/source identity only; peer audit not rerun"
   }
 }
