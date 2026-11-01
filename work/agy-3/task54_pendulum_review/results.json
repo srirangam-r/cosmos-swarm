@@ -1,0 +1,1296 @@
+{
+  "planted_controls": {
+    "planted-00": {
+      "name": "planted-00",
+      "path": "/home/nail/swarm-work/agy-1/planted/planted-00.mp4",
+      "fps": 24.0,
+      "skip": 0,
+      "n_frames_evaluated": 144,
+      "measure_pend_v1": {
+        "period_s": 2.4622452411792946,
+        "period_frames": 59.09388578830307,
+        "period_ci95_s": [
+          2.46103386060473,
+          2.463555990296465
+        ],
+        "zc_periods_s": [
+          2.4621193234517444,
+          2.4631700799296086,
+          2.4619555849268275
+        ],
+        "r2": 0.9999121455616378,
+        "beta": -0.00020121336386845894,
+        "flag": "ok"
+      },
+      "pend_acf_cli": {
+        "period_frames": 59.05875570479226,
+        "period_s": 2.4607814876996774,
+        "ci95_frames": [
+          58.730122733980465,
+          59.390716588280355
+        ],
+        "flag": "ok",
+        "window_spread": 0.00011869711713074264
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 59.05875570479226,
+        "l2_med_acf_frames": 59.049629941570586,
+        "cos_med_acf_frames": 59.085189350702784,
+        "l1_acf_s": 2.4607814876996774,
+        "l2_med_acf_s": 2.460401247565441,
+        "cos_med_acf_s": 2.461882889612616
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 60.14699669394893,
+        "period_zc_s": 2.506124862247872,
+        "period_ext_frames": 4.092951458863968,
+        "period_ext_s": 0.170539644119332,
+        "zc_intervals_frames": [
+          60.147,
+          58.358,
+          60.538
+        ],
+        "ext_periods_frames": [
+          2.5,
+          4.407,
+          5.5,
+          4.093,
+          2.0,
+          1.5,
+          31.0,
+          1.5,
+          5.5,
+          5.0,
+          2.94,
+          6.919,
+          7.06,
+          5.081,
+          3.5,
+          1.5,
+          2.582,
+          4.5,
+          3.418,
+          2.0,
+          1.5,
+          7.165,
+          7.0,
+          4.835,
+          3.0,
+          7.29,
+          6.0,
+          4.21,
+          3.5,
+          2.0,
+          1.5
+        ],
+        "right_turning_frames": [
+          4.0,
+          4.5,
+          6.5,
+          8.907,
+          12.0,
+          13.0,
+          14.0,
+          14.5,
+          45.5,
+          46.0,
+          47.0,
+          51.5,
+          52.0,
+          54.44,
+          58.919,
+          61.5,
+          64.0,
+          65.0,
+          65.5,
+          67.582,
+          70.0,
+          71.0,
+          72.0,
+          72.5,
+          107.5,
+          112.5,
+          114.665,
+          119.5,
+          119.5,
+          122.5,
+          126.79,
+          128.5,
+          131.0,
+          132.0,
+          133.0,
+          133.5
+        ],
+        "left_turning_frames": [
+          29.577,
+          88.699,
+          102.5
+        ],
+        "angle_min": -44.58312018454306,
+        "angle_max": 50.318017233393604,
+        "angle_range": 94.90113741793667,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.0,
+        "curve_fit": {
+          "period_fit_frames": 59.121886030739944,
+          "period_fit_s": 2.463411917947498,
+          "amplitude_px": 88.49285678250094,
+          "damping_beta": 0.00887684104685963,
+          "r2": 0.9790120080277704,
+          "fit_success": true
+        }
+      }
+    },
+    "planted-07": {
+      "name": "planted-07",
+      "path": "/home/nail/swarm-work/agy-1/planted/planted-07.mp4",
+      "fps": 24.0,
+      "skip": 0,
+      "n_frames_evaluated": 144,
+      "measure_pend_v1": {
+        "period_s": 1.9176674698606953,
+        "period_frames": 46.02401927665669,
+        "period_ci95_s": [
+          1.9171118171491603,
+          1.918154359437518
+        ],
+        "zc_periods_s": [
+          1.9174253867347917,
+          1.9175752737496516,
+          1.917881470812855,
+          1.9181845990770627
+        ],
+        "r2": 0.9999642408386246,
+        "beta": 7.826692158615006e-06,
+        "flag": "ok"
+      },
+      "pend_acf_cli": {
+        "period_frames": 46.00877278298205,
+        "period_s": 1.9170321992909187,
+        "ci95_frames": [
+          45.723507615772775,
+          46.29980524107631
+        ],
+        "flag": "ok",
+        "window_spread": 7.820914005258691e-05
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 46.00877278298205,
+        "l2_med_acf_frames": 46.01007142554844,
+        "cos_med_acf_frames": 46.02310830070565,
+        "l1_acf_s": 1.9170321992909187,
+        "l2_med_acf_s": 1.9170863093978516,
+        "cos_med_acf_s": 1.917629512529402
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 46.029864074602955,
+        "period_zc_s": 1.9179110031084565,
+        "period_ext_frames": 46.01319912381735,
+        "period_ext_s": 1.9172166301590563,
+        "zc_intervals_frames": [
+          46.013,
+          46.042,
+          46.029,
+          46.031
+        ],
+        "ext_periods_frames": [
+          45.96,
+          46.003,
+          46.133,
+          46.024
+        ],
+        "right_turning_frames": [
+          46.046,
+          92.048,
+          138.072
+        ],
+        "left_turning_frames": [
+          23.053,
+          69.014,
+          115.146
+        ],
+        "angle_min": -28.639909639035686,
+        "angle_max": 29.87140881039308,
+        "angle_range": 58.51131844942877,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.0,
+        "curve_fit": {
+          "period_fit_frames": 46.02405728623542,
+          "period_fit_s": 1.9176690535931424,
+          "amplitude_px": 102.15925100550488,
+          "damping_beta": 9.889796113315199e-06,
+          "r2": 0.999967079513607,
+          "fit_success": true
+        }
+      }
+    },
+    "planted-11": {
+      "name": "planted-11",
+      "path": "/home/nail/swarm-work/agy-1/planted/planted-11.mp4",
+      "fps": 24.0,
+      "skip": 0,
+      "n_frames_evaluated": 144,
+      "measure_pend_v1": {
+        "period_s": 1.8355841655560623,
+        "period_frames": 44.0540199733455,
+        "period_ci95_s": [
+          1.8352670474696964,
+          1.8358710031776084
+        ],
+        "zc_periods_s": [
+          1.8363740663466603,
+          1.8350775740939271,
+          1.835301430130715,
+          1.8357291688765054,
+          1.8357974335386151
+        ],
+        "r2": 0.999986178005294,
+        "beta": 6.231679238470889e-06,
+        "flag": "ok"
+      },
+      "pend_acf_cli": {
+        "period_frames": 44.028294614640636,
+        "period_s": 1.8345122756100265,
+        "ci95_frames": [
+          43.74844832108351,
+          44.313525509933974
+        ],
+        "flag": "ok",
+        "window_spread": 9.1084899470375e-05
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 44.028294614640636,
+        "l2_med_acf_frames": 44.02777978779471,
+        "cos_med_acf_frames": 44.03108604260174,
+        "l1_acf_s": 1.8345122756100265,
+        "l2_med_acf_s": 1.8344908244914462,
+        "cos_med_acf_s": 1.8346285851084059
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 44.0591692427639,
+        "period_zc_s": 1.8357987184484958,
+        "period_ext_frames": 44.08535451975017,
+        "period_ext_s": 1.836889771656257,
+        "zc_intervals_frames": [
+          44.066,
+          44.059,
+          44.066,
+          44.055,
+          44.03
+        ],
+        "ext_periods_frames": [
+          44.211,
+          43.988,
+          44.107,
+          44.064
+        ],
+        "right_turning_frames": [
+          44.105,
+          88.093,
+          132.157
+        ],
+        "left_turning_frames": [
+          21.931,
+          66.142,
+          110.249
+        ],
+        "angle_min": -19.768520748310877,
+        "angle_max": 20.951889089211683,
+        "angle_range": 40.72040983752256,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.0,
+        "curve_fit": {
+          "period_fit_frames": 44.0545707148858,
+          "period_fit_s": 1.8356071131202416,
+          "amplitude_px": 94.27837638278314,
+          "damping_beta": 0.00015603932588535043,
+          "r2": 0.9999825712141408,
+          "fit_success": true
+        }
+      }
+    },
+    "planted-13": {
+      "name": "planted-13",
+      "path": "/home/nail/swarm-work/agy-1/planted/planted-13.mp4",
+      "fps": 24.0,
+      "skip": 0,
+      "n_frames_evaluated": 144,
+      "measure_pend_v1": {
+        "period_s": 2.092056708011027,
+        "period_frames": 50.20936099226465,
+        "period_ci95_s": [
+          2.0908182090043037,
+          2.093493041396749
+        ],
+        "zc_periods_s": [
+          2.091902203339223,
+          2.091813693299245,
+          2.0931595966426695,
+          2.0916909049730528
+        ],
+        "r2": 0.9998154049040461,
+        "beta": 2.5343147496263905e-05,
+        "flag": "ok"
+      },
+      "pend_acf_cli": {
+        "period_frames": 50.12201323431537,
+        "period_s": 2.0884172180964735,
+        "ci95_frames": [
+          49.81575247615572,
+          50.431285005777326
+        ],
+        "flag": "ok",
+        "window_spread": 0.00018160271621401624
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 50.12201323431537,
+        "l2_med_acf_frames": 50.10559688392775,
+        "cos_med_acf_frames": 50.185902169127104,
+        "l1_acf_s": 2.0884172180964735,
+        "l2_med_acf_s": 2.0877332034969895,
+        "cos_med_acf_s": 2.0910792570469625
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 50.22493499807692,
+        "period_zc_s": 2.0927056249198714,
+        "period_ext_frames": 50.323768247644196,
+        "period_ext_s": 2.0968236769851747,
+        "zc_intervals_frames": [
+          50.251,
+          50.216,
+          50.182,
+          50.234
+        ],
+        "ext_periods_frames": [
+          50.157,
+          50.324,
+          50.343
+        ],
+        "right_turning_frames": [
+          50.17,
+          100.494
+        ],
+        "left_turning_frames": [
+          25.109,
+          75.267,
+          125.61
+        ],
+        "angle_min": -46.000889086011725,
+        "angle_max": 47.27134403618717,
+        "angle_range": 93.2722331221989,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.0,
+        "curve_fit": {
+          "period_fit_frames": 50.20890830227571,
+          "period_fit_s": 2.0920378459281546,
+          "amplitude_px": 125.12921546223008,
+          "damping_beta": -0.0007508221275422766,
+          "r2": 0.9998156821006291,
+          "fit_success": true
+        }
+      }
+    }
+  },
+  "finding_550_duration_ablation": {
+    "pend_fps24_s1_189f_dur_on": {
+      "name": "pend_fps24_s1_189f_dur_on",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips189/pend_fps24_s1_189f_crf20.mp4",
+      "fps": 24.0,
+      "skip": 12,
+      "n_frames_evaluated": 177,
+      "measure_pend_v1": {
+        "period_s": 4.4306698237690965,
+        "period_frames": 106.33607577045831,
+        "period_ci95_s": [
+          4.124281653026246,
+          4.807212011487945
+        ],
+        "zc_periods_s": [
+          4.74972229742138,
+          4.403596130346733
+        ],
+        "r2": 0.6696803671997503,
+        "beta": 0.07265876942408613,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 107.1010658964601,
+        "period_s": 4.462544412352504,
+        "ci95_frames": [
+          106.71212799403331,
+          107.49000379888689
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 107.1010658964601,
+        "l2_med_acf_frames": null,
+        "cos_med_acf_frames": null,
+        "l1_acf_s": 4.462544412352504,
+        "l2_med_acf_s": null,
+        "cos_med_acf_s": null
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 13.347981027810263,
+        "period_zc_s": 0.556165876158761,
+        "period_ext_frames": 13.099675819207704,
+        "period_ext_s": 0.545819825800321,
+        "zc_intervals_frames": [
+          3.068,
+          13.348,
+          52.262,
+          3.952,
+          49.601
+        ],
+        "ext_periods_frames": [
+          8.804,
+          13.1,
+          17.405,
+          18.923,
+          11.285,
+          10.308,
+          14.28,
+          9.299,
+          19.146
+        ],
+        "right_turning_frames": [
+          17.68,
+          22.658,
+          26.483,
+          117.268,
+          119.429,
+          126.567,
+          138.575
+        ],
+        "left_turning_frames": [
+          53.47,
+          59.877,
+          66.57,
+          77.282,
+          85.492,
+          88.567,
+          95.8,
+          102.847,
+          161.463
+        ],
+        "angle_min": -82.15846682113009,
+        "angle_max": 78.67015036188506,
+        "angle_range": 160.82861718301515,
+        "duplication_flag": true,
+        "frac_multi_blob": 0.3785310734463277,
+        "curve_fit": {
+          "period_fit_frames": 9.791054031748336,
+          "period_fit_s": 0.4079605846561807,
+          "amplitude_px": 22.622271993490852,
+          "damping_beta": 0.12558153108008224,
+          "r2": 0.008406617158632668,
+          "fit_success": true
+        }
+      }
+    },
+    "pend_fps24_nodur_s1_189f_dur_off": {
+      "name": "pend_fps24_nodur_s1_189f_dur_off",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips189/pend_fps24_nodur_s1_189f_crf20.mp4",
+      "fps": 24.0,
+      "skip": 12,
+      "n_frames_evaluated": 177,
+      "measure_pend_v1": {
+        "period_s": 4.427925319834,
+        "period_frames": 106.27020767601601,
+        "period_ci95_s": [
+          4.138866342941813,
+          4.774853206732834
+        ],
+        "zc_periods_s": [
+          3.3390311337595784,
+          1.391188180703665,
+          1.3818688663447203,
+          3.063987807723393
+        ],
+        "r2": 0.7047737357078763,
+        "beta": 0.06563530599040864,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 107.37705654189595,
+        "period_s": 4.474044022578998,
+        "ci95_frames": [
+          106.98761783139074,
+          107.76649525240117
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 107.37705654189595,
+        "l2_med_acf_frames": 107.37189386536213,
+        "cos_med_acf_frames": 107.28208286674132,
+        "l1_acf_s": 4.474044022578998,
+        "l2_med_acf_s": 4.4738289110567555,
+        "cos_med_acf_s": 4.470086786114222
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 9.900317192475391,
+        "period_zc_s": 0.4125132163531413,
+        "period_ext_frames": 8.80165567713047,
+        "period_ext_s": 0.36673565321376955,
+        "zc_intervals_frames": [
+          4.467,
+          15.334,
+          52.685,
+          2.126,
+          2.018,
+          50.373
+        ],
+        "ext_periods_frames": [
+          12.137,
+          7.357,
+          13.354,
+          26.946,
+          20.916,
+          8.802,
+          8.076,
+          5.508,
+          6.08
+        ],
+        "right_turning_frames": [
+          10.478,
+          18.637,
+          22.616,
+          25.994,
+          128.367,
+          131.52
+        ],
+        "left_turning_frames": [
+          53.247,
+          58.499,
+          66.6,
+          85.445,
+          87.516,
+          94.247,
+          95.592,
+          99.755,
+          101.673,
+          162.101
+        ],
+        "angle_min": -82.67964082611516,
+        "angle_max": 79.49064824276063,
+        "angle_range": 162.17028906887577,
+        "duplication_flag": true,
+        "frac_multi_blob": 0.3220338983050847,
+        "curve_fit": {
+          "period_fit_frames": 9.878483191892771,
+          "period_fit_s": 0.41160346632886546,
+          "amplitude_px": 38.8272011460686,
+          "damping_beta": 0.4071579135794085,
+          "r2": 0.008367682381568264,
+          "fit_success": true
+        }
+      }
+    }
+  },
+  "finding_621_clip_length_and_seeds": {
+    "pend_fps24_61f_s1": {
+      "name": "pend_fps24_61f_s1",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips_more/pend_fps24_61f_s1.mp4",
+      "fps": 24.0,
+      "skip": 0,
+      "n_frames_evaluated": 61,
+      "measure_pend_v1": {
+        "period_s": 3.3233984217229118,
+        "period_frames": 79.76156212134988,
+        "period_ci95_s": [
+          2.831259629193862,
+          4.896193784177635
+        ],
+        "zc_periods_s": [
+          1.5546595268063415,
+          0.44288203461818165
+        ],
+        "r2": 0.8881139990375269,
+        "beta": -0.21865641223073612,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": null,
+        "period_s": null,
+        "ci95_frames": null,
+        "flag": "fail",
+        "window_spread": null
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": null,
+        "l2_med_acf_frames": null,
+        "cos_med_acf_frames": null,
+        "l1_acf_s": null,
+        "l2_med_acf_s": null,
+        "cos_med_acf_s": null
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 6.328087031081948,
+        "period_zc_s": 0.2636702929617478,
+        "period_ext_frames": 7.754213290486845,
+        "period_ext_s": 0.3230922204369519,
+        "zc_intervals_frames": [
+          18.849,
+          7.905,
+          1.441,
+          4.732,
+          4.751,
+          9.985
+        ],
+        "ext_periods_frames": [
+          9.248,
+          7.754,
+          9.726,
+          6.2,
+          7.521
+        ],
+        "right_turning_frames": [
+          15.408,
+          22.136,
+          24.656,
+          29.89,
+          34.382,
+          36.091,
+          41.903
+        ],
+        "left_turning_frames": [],
+        "angle_min": -49.719414257235684,
+        "angle_max": 80.00294564329522,
+        "angle_range": 129.7223599005309,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.0,
+        "curve_fit": {
+          "period_fit_frames": null,
+          "period_fit_s": null,
+          "amplitude_px": null,
+          "damping_beta": null,
+          "r2": null,
+          "fit_success": false,
+          "fit_error": "`x0` is infeasible."
+        }
+      }
+    },
+    "pend_A_fps24_93f_s1": {
+      "name": "pend_A_fps24_93f_s1",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-1/fps_sweep/pend_A_fps24_93f_s1.mp4",
+      "fps": 24.0,
+      "skip": 12,
+      "n_frames_evaluated": 81,
+      "measure_pend_v1": {
+        "period_s": 2.087148527136952,
+        "period_frames": 50.091564651286845,
+        "period_ci95_s": [
+          2.0188039376334097,
+          2.161429320569758
+        ],
+        "zc_periods_s": [
+          2.0166113327421002
+        ],
+        "r2": 0.9538365515274855,
+        "beta": -0.013058540671241688,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 50.83516155689349,
+        "period_s": 2.1181317315372286,
+        "ci95_frames": [
+          50.439057218643406,
+          51.23126589514357
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 50.83516155689349,
+        "l2_med_acf_frames": null,
+        "cos_med_acf_frames": 51.012670156569065,
+        "l1_acf_s": 2.1181317315372286,
+        "l2_med_acf_s": null,
+        "cos_med_acf_s": 2.125527923190378
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 47.9088393589661,
+        "period_zc_s": 1.9962016399569207,
+        "period_ext_frames": 51.37147364380681,
+        "period_ext_s": 2.14047806849195,
+        "zc_intervals_frames": [
+          47.909
+        ],
+        "ext_periods_frames": [
+          51.371
+        ],
+        "right_turning_frames": [
+          46.939
+        ],
+        "left_turning_frames": [
+          22.513,
+          73.885
+        ],
+        "angle_min": -38.36877984323491,
+        "angle_max": 41.72536323482524,
+        "angle_range": 80.09414307806014,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.1728395061728395,
+        "curve_fit": {
+          "period_fit_frames": 49.70811287312891,
+          "period_fit_s": 2.0711713697137046,
+          "amplitude_px": 102.5324886710139,
+          "damping_beta": 0.02182991236046216,
+          "r2": 0.9305100516320648,
+          "fit_success": true
+        }
+      }
+    },
+    "pend_fps24_s1_189f": {
+      "name": "pend_fps24_s1_189f",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips189/pend_fps24_s1_189f_crf20.mp4",
+      "fps": 24.0,
+      "skip": 12,
+      "n_frames_evaluated": 177,
+      "measure_pend_v1": {
+        "period_s": 4.4306698237690965,
+        "period_frames": 106.33607577045831,
+        "period_ci95_s": [
+          4.124281653026246,
+          4.807212011487945
+        ],
+        "zc_periods_s": [
+          4.74972229742138,
+          4.403596130346733
+        ],
+        "r2": 0.6696803671997503,
+        "beta": 0.07265876942408613,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 107.1010658964601,
+        "period_s": 4.462544412352504,
+        "ci95_frames": [
+          106.71212799403331,
+          107.49000379888689
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 107.1010658964601,
+        "l2_med_acf_frames": null,
+        "cos_med_acf_frames": null,
+        "l1_acf_s": 4.462544412352504,
+        "l2_med_acf_s": null,
+        "cos_med_acf_s": null
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 13.347981027810263,
+        "period_zc_s": 0.556165876158761,
+        "period_ext_frames": 13.099675819207704,
+        "period_ext_s": 0.545819825800321,
+        "zc_intervals_frames": [
+          3.068,
+          13.348,
+          52.262,
+          3.952,
+          49.601
+        ],
+        "ext_periods_frames": [
+          8.804,
+          13.1,
+          17.405,
+          18.923,
+          11.285,
+          10.308,
+          14.28,
+          9.299,
+          19.146
+        ],
+        "right_turning_frames": [
+          17.68,
+          22.658,
+          26.483,
+          117.268,
+          119.429,
+          126.567,
+          138.575
+        ],
+        "left_turning_frames": [
+          53.47,
+          59.877,
+          66.57,
+          77.282,
+          85.492,
+          88.567,
+          95.8,
+          102.847,
+          161.463
+        ],
+        "angle_min": -82.15846682113009,
+        "angle_max": 78.67015036188506,
+        "angle_range": 160.82861718301515,
+        "duplication_flag": true,
+        "frac_multi_blob": 0.3785310734463277,
+        "curve_fit": {
+          "period_fit_frames": 9.791054031748336,
+          "period_fit_s": 0.4079605846561807,
+          "amplitude_px": 22.622271993490852,
+          "damping_beta": 0.12558153108008224,
+          "r2": 0.008406617158632668,
+          "fit_success": true
+        }
+      }
+    },
+    "pend_fps24_s2_189f": {
+      "name": "pend_fps24_s2_189f",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips_more/pend_fps24_s2.mp4",
+      "fps": 24.0,
+      "skip": 12,
+      "n_frames_evaluated": 177,
+      "measure_pend_v1": {
+        "period_s": 2.1756738485976257,
+        "period_frames": 52.21617236634302,
+        "period_ci95_s": [
+          1.9561801112960893,
+          2.6067856041693185
+        ],
+        "zc_periods_s": [
+          0.049420099265917394,
+          1.191065275308218,
+          1.2219651694391522,
+          0.20612125235583978,
+          0.19641074809421522,
+          0.7402690319499392,
+          1.3964989713517637,
+          0.5069621497171557,
+          0.9099958629136848,
+          0.2882959395155528,
+          0.1464174392389972,
+          2.1604014072028876,
+          0.32114896087655653,
+          0.07814833926651721,
+          0.24893884752723272,
+          1.2727632205217945,
+          0.9413582343993383,
+          1.208691186781194,
+          0.12418341900847274
+        ],
+        "r2": 0.31418317035031695,
+        "beta": -0.16676165203473672,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 56.65424356061306,
+        "period_s": 2.3605934816922107,
+        "ci95_frames": [
+          45.64440596980419,
+          59.040308189351585
+        ],
+        "flag": "check",
+        "window_spread": 0.09672391988334107
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 107.39115162294353,
+        "l2_med_acf_frames": null,
+        "cos_med_acf_frames": null,
+        "l1_acf_s": 4.474631317622647,
+        "l2_med_acf_s": null,
+        "cos_med_acf_s": null
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 12.090217445013955,
+        "period_zc_s": 0.5037590602089148,
+        "period_ext_frames": 6.685139374769726,
+        "period_ext_s": 0.2785474739487386,
+        "zc_intervals_frames": [
+          12.09,
+          49.644,
+          8.792,
+          10.784,
+          6.229,
+          8.858,
+          12.391,
+          25.83,
+          26.758,
+          4.147,
+          32.867,
+          27.261,
+          9.822,
+          6.96,
+          11.62,
+          1.687,
+          27.909,
+          16.368,
+          20.772
+        ],
+        "ext_periods_frames": [
+          9.504,
+          4.97,
+          5.025,
+          4.925,
+          6.685,
+          9.098,
+          7.433,
+          4.93,
+          8.999,
+          6.541,
+          5.826,
+          10.082,
+          13.205,
+          19.891,
+          15.342,
+          12.675,
+          15.496,
+          5.138,
+          4.503,
+          4.519,
+          4.259
+        ],
+        "right_turning_frames": [
+          8.47,
+          15.496,
+          17.974,
+          20.465,
+          22.999,
+          25.391,
+          29.685,
+          34.488,
+          66.515,
+          73.958,
+          76.636,
+          80.498,
+          82.462,
+          90.58,
+          95.668,
+          118.484,
+          133.825,
+          135.76,
+          146.5,
+          161.996,
+          166.5,
+          168.801,
+          171.019,
+          173.061
+        ],
+        "left_turning_frames": [
+          50.92,
+          54.57,
+          58.353,
+          59.5,
+          68.5,
+          69.503,
+          105.384,
+          106.604,
+          126.495,
+          158.836,
+          163.975
+        ],
+        "angle_min": -77.38061488207049,
+        "angle_max": 79.85227153405673,
+        "angle_range": 157.2328864161272,
+        "duplication_flag": true,
+        "frac_multi_blob": 0.7796610169491526,
+        "curve_fit": {
+          "period_fit_frames": 12.036562369439316,
+          "period_fit_s": 0.5015234320599715,
+          "amplitude_px": 28.873233741783178,
+          "damping_beta": -0.0037446569431727303,
+          "r2": 0.061956047568290984,
+          "fit_success": true
+        }
+      }
+    }
+  },
+  "cross_fps_extensions": {
+    "pend_fps48_s1_189f": {
+      "name": "pend_fps48_s1_189f",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips189/pend_fps48_s1_189f_crf20.mp4",
+      "fps": 48.0,
+      "skip": 24,
+      "n_frames_evaluated": 165,
+      "measure_pend_v1": {
+        "period_s": 2.1730779633875796,
+        "period_frames": 104.30774224260382,
+        "period_ci95_s": [
+          2.076044624474502,
+          2.265589178097684
+        ],
+        "zc_periods_s": [
+          0.9151602348520413,
+          2.1840880624756056,
+          2.084591342627958
+        ],
+        "r2": 0.7610010974699672,
+        "beta": -0.03205399280177661,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 103.45677980604678,
+        "period_s": 2.155349579292641,
+        "ci95_frames": [
+          103.06085974255438,
+          103.85269986953918
+        ],
+        "flag": "check",
+        "window_spread": NaN
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 103.45677980604678,
+        "l2_med_acf_frames": 103.78160302278529,
+        "cos_med_acf_frames": 103.7013998680208,
+        "l1_acf_s": 2.155349579292641,
+        "l2_med_acf_s": 2.1621167296413604,
+        "cos_med_acf_s": 2.160445830583767
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 104.9126363530293,
+        "period_zc_s": 2.1856799240214437,
+        "period_ext_frames": 101.92252223508353,
+        "period_ext_s": 2.1233858798975738,
+        "zc_intervals_frames": [
+          104.913
+        ],
+        "ext_periods_frames": [
+          101.923
+        ],
+        "right_turning_frames": [
+          105.677
+        ],
+        "left_turning_frames": [
+          48.154,
+          150.077
+        ],
+        "angle_min": -59.25690004990041,
+        "angle_max": 62.571361793820245,
+        "angle_range": 121.82826184372065,
+        "duplication_flag": true,
+        "frac_multi_blob": 0.3878787878787879,
+        "curve_fit": {
+          "period_fit_frames": 104.1013030862535,
+          "period_fit_s": 2.1687771476302813,
+          "amplitude_px": 133.2081056452033,
+          "damping_beta": -0.0031262614221079063,
+          "r2": 0.9305160837226198,
+          "fit_success": true
+        }
+      }
+    },
+    "pend_fps12_s1_189f": {
+      "name": "pend_fps12_s1_189f",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-3/task25_fps_pendulum/clips189/pend_fps12_s1_189f_crf20.mp4",
+      "fps": 12.0,
+      "skip": 6,
+      "n_frames_evaluated": 183,
+      "measure_pend_v1": {
+        "period_s": 4.64153644067851,
+        "period_frames": 55.69843728814212,
+        "period_ci95_s": [
+          4.324483634626896,
+          4.982608727533032
+        ],
+        "zc_periods_s": [
+          1.81243922269699,
+          3.7860630449730936,
+          1.5751437334073,
+          2.286342705236553,
+          1.569768658305554,
+          3.8269975450104123,
+          3.5713029249776653,
+          2.187168937401138,
+          2.9031531707181752,
+          0.39018926049397606,
+          3.202962199632676
+        ],
+        "r2": 0.3983341555345782,
+        "beta": 0.011333485064664302,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 44.20838833553342,
+        "period_s": 3.684032361294452,
+        "ci95_frames": [
+          34.659961441960164,
+          67.32991365068578
+        ],
+        "flag": "check",
+        "window_spread": 0.2558862164664658
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 66.61115489919523,
+        "l2_med_acf_frames": 111.78226911520878,
+        "cos_med_acf_frames": 64.51708278580816,
+        "l1_acf_s": 5.550929574932936,
+        "l2_med_acf_s": 9.315189092934064,
+        "cos_med_acf_s": 5.376423565484013
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 25.673630444408616,
+        "period_zc_s": 2.139469203700718,
+        "period_ext_frames": 10.553717987961797,
+        "period_ext_s": 0.8794764989968163,
+        "zc_intervals_frames": [
+          45.351,
+          19.27,
+          27.438,
+          18.436,
+          25.674,
+          20.143,
+          40.831,
+          1.193,
+          27.813,
+          35.154,
+          4.223,
+          38.832,
+          5.954
+        ],
+        "ext_periods_frames": [
+          8.034,
+          12.328,
+          17.075,
+          4.979,
+          5.973,
+          10.839,
+          10.269,
+          5.933,
+          16.436,
+          13.238,
+          5.485,
+          7.442,
+          13.907,
+          13.242
+        ],
+        "right_turning_frames": [
+          1.378,
+          27.383,
+          31.14,
+          35.417,
+          71.197,
+          92.734,
+          95.516,
+          103.573,
+          105.784,
+          109.506,
+          137.35,
+          139.978,
+          142.834,
+          147.42
+        ],
+        "left_turning_frames": [
+          8.144,
+          16.042,
+          47.073,
+          50.54,
+          59.401,
+          76.476,
+          77.705,
+          81.455,
+          83.678,
+          112.105,
+          117.336,
+          128.54,
+          130.574,
+          156.576,
+          159.026,
+          170.482,
+          172.268
+        ],
+        "angle_min": -82.58714703813575,
+        "angle_max": 81.85180454355157,
+        "angle_range": 164.43895158168732,
+        "duplication_flag": true,
+        "frac_multi_blob": 0.5846994535519126,
+        "curve_fit": {
+          "period_fit_frames": 22.49452923334247,
+          "period_fit_s": 1.874544102778539,
+          "amplitude_px": 44.7552238099705,
+          "damping_beta": 0.008764179143288142,
+          "r2": 0.07757952327996886,
+          "fit_success": true
+        }
+      }
+    },
+    "pend_B_fps12_93f_s1": {
+      "name": "pend_B_fps12_93f_s1",
+      "path": "/home/nail/swarm-work/agy-3/cosmos-swarm/work/ro-1/fps_sweep/pend_B_fps12_93f_s1.mp4",
+      "fps": 12.0,
+      "skip": 6,
+      "n_frames_evaluated": 87,
+      "measure_pend_v1": {
+        "period_s": 2.5345393044008113,
+        "period_frames": 30.414471652809738,
+        "period_ci95_s": [
+          2.4436086174893776,
+          2.6403774916616523
+        ],
+        "zc_periods_s": [
+          2.8710615962756854,
+          2.2509033922644495,
+          2.1974360788627587,
+          2.9203759077903366
+        ],
+        "r2": 0.7410392021240078,
+        "beta": -0.021846970388297894,
+        "flag": "check"
+      },
+      "pend_acf_cli": {
+        "period_frames": 34.918493112359386,
+        "period_s": 2.909874426029949,
+        "ci95_frames": [
+          25.82956059619837,
+          35.238239017499815
+        ],
+        "flag": "check",
+        "window_spread": 0.10309828345848124
+      },
+      "indep_self_similarity": {
+        "l1_acf_frames": 26.19189714700467,
+        "l2_med_acf_frames": 34.97180659125044,
+        "cos_med_acf_frames": 34.90318713544862,
+        "l1_acf_s": 2.1826580955837227,
+        "l2_med_acf_s": 2.914317215937537,
+        "cos_med_acf_s": 2.9085989279540514
+      },
+      "dark_bob_kinematics": {
+        "period_zc_frames": 30.965509765024134,
+        "period_zc_s": 2.5804591470853446,
+        "period_ext_frames": 25.638089934795765,
+        "period_ext_s": 2.1365074945663136,
+        "zc_intervals_frames": [
+          26.277,
+          35.061,
+          34.738,
+          27.193
+        ],
+        "ext_periods_frames": [
+          26.149,
+          23.013,
+          25.638
+        ],
+        "right_turning_frames": [
+          16.007,
+          39.02,
+          51.847,
+          77.485
+        ],
+        "left_turning_frames": [
+          4.544,
+          30.693,
+          65.097
+        ],
+        "angle_min": -47.338784319796154,
+        "angle_max": 68.69414430557663,
+        "angle_range": 116.03292862537279,
+        "duplication_flag": false,
+        "frac_multi_blob": 0.14942528735632185,
+        "curve_fit": {
+          "period_fit_frames": 30.716978830492863,
+          "period_fit_s": 2.5597482358744053,
+          "amplitude_px": 131.3574261179161,
+          "damping_beta": 0.011471881988606701,
+          "r2": 0.7523972620176336,
+          "fit_success": true
+        }
+      }
+    }
+  }
+}
