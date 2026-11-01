@@ -1,0 +1,212 @@
+{
+  "task": 256,
+  "finding_reviewed": 5116,
+  "author": "kiro-1",
+  "verdict": "refuted",
+  "refutation_summary": "Finding #5116 is refuted. The reported ~22x growth ratio (f0 ~45 px -> end ~990 px) and the claimed absence of an arm effect (F: 22.0, QT: 21.8, N: 22.6) are pure mathematical and geometric artifacts of positive-feedback HoughCircles dilation in track_ball.py. The detector allows maxRadius to double every frame (maxRadius = 2.0 * prev_d) with ultra-loose param2=20, causing the bounding circle to double exponentially until it saturates against the outer video boundaries. In an 832x480 frame, the reported mean end diameter is 986.4 px (2.06x the entire video frame height!). In real 1280x720 GAUGE calibration videos, the exact same tracker blew up to 2210 px (3.07x frame height, covering 4.16x the entire frame area). Because the tracker saturates at the image boundary in 100% of clips (90/90), every arm produces the exact same clamped ratio (986/45 = ~21.9x). The arm differences characterized in Finding #4350/#4372 remain fully valid.",
+  "algorithmic_divergence_test": {
+    "test_clip": "gauge_b1_ctrl_s2_true.mp4",
+    "frame_0_d": 36.0,
+    "frame_exceeded_480px": 5,
+    "frame_exceeded_480px_d": 484.0,
+    "final_frame_d": 1000.0,
+    "sample_trajectory": [
+      {
+        "frame": 0,
+        "d": 36.0,
+        "cx": 406.0,
+        "cy": 176.0
+      },
+      {
+        "frame": 5,
+        "d": 484.0,
+        "cx": 200.0,
+        "cy": 246.0
+      },
+      {
+        "frame": 10,
+        "d": 850.0,
+        "cx": 94.0,
+        "cy": 4.0
+      },
+      {
+        "frame": 15,
+        "d": 964.0,
+        "cx": 92.0,
+        "cy": 12.0
+      },
+      {
+        "frame": 20,
+        "d": 964.0,
+        "cx": 90.0,
+        "cy": 12.0
+      },
+      {
+        "frame": 25,
+        "d": 964.0,
+        "cx": 644.0,
+        "cy": 16.0
+      },
+      {
+        "frame": 30,
+        "d": 964.0,
+        "cx": 88.0,
+        "cy": 16.0
+      },
+      {
+        "frame": 35,
+        "d": 964.0,
+        "cx": 88.0,
+        "cy": 18.0
+      },
+      {
+        "frame": 40,
+        "d": 964.0,
+        "cx": 94.0,
+        "cy": 18.0
+      },
+      {
+        "frame": 45,
+        "d": 964.0,
+        "cx": 650.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 50,
+        "d": 964.0,
+        "cx": 60.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 55,
+        "d": 964.0,
+        "cx": 60.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 60,
+        "d": 964.0,
+        "cx": 172.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 65,
+        "d": 964.0,
+        "cx": 60.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 70,
+        "d": 964.0,
+        "cx": 64.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 75,
+        "d": 964.0,
+        "cx": 64.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 80,
+        "d": 1000.0,
+        "cx": 94.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 85,
+        "d": 1000.0,
+        "cx": 201.0,
+        "cy": 19.0
+      },
+      {
+        "frame": 90,
+        "d": 1000.0,
+        "cx": 48.0,
+        "cy": 19.0
+      }
+    ]
+  },
+  "author_dataset_audit": {
+    "total_clips": 90,
+    "grand_mean_d_f0": 45.0,
+    "grand_mean_d_end": 986.3777777777777,
+    "min_d_end": 918.0,
+    "max_d_end": 1284.0,
+    "clips_exceeding_480px": 90,
+    "pct_exceeding_480px": 100.0,
+    "clips_exceeding_832px": 90,
+    "pct_exceeding_832px": 100.0,
+    "arm_breakdown": {
+      "F": {
+        "n": 30,
+        "d_f0_mean": 45.333333333333336,
+        "d_f0_std": 3.9440531887330774,
+        "d_end_mean": 988.8666666666667,
+        "d_end_std": 13.522162877620165,
+        "growth_mean": 21.98926286217335,
+        "growth_std": 2.0753559255514404,
+        "growth_ci95": [
+          19.340153846153846,
+          26.084411764705877
+        ],
+        "pct_exceeding_480px": 100.0,
+        "pct_exceeding_832px": 100.0
+      },
+      "QT": {
+        "n": 30,
+        "d_f0_mean": 45.333333333333336,
+        "d_f0_std": 3.73571352696584,
+        "d_end_mean": 978.8,
+        "d_end_std": 19.29835917031981,
+        "growth_mean": 21.75288067374513,
+        "growth_std": 2.035996793916711,
+        "growth_ci95": [
+          19.429000000000002,
+          26.15632352941176
+        ],
+        "pct_exceeding_480px": 100.0,
+        "pct_exceeding_832px": 100.0
+      },
+      "N": {
+        "n": 30,
+        "d_f0_mean": 44.333333333333336,
+        "d_f0_std": 4.260933648339946,
+        "d_end_mean": 991.4666666666667,
+        "d_end_std": 57.67942055495665,
+        "growth_mean": 22.610133817872946,
+        "growth_std": 2.9064381203125933,
+        "growth_ci95": [
+          19.25607692307692,
+          29.81596638655462
+        ],
+        "pct_exceeding_480px": 100.0,
+        "pct_exceeding_832px": 100.0
+      }
+    }
+  },
+  "real_gauge_calibration_audit": {
+    "10.mp4": {
+      "mean_diameter_px": 2057.719914550202,
+      "max_diameter_px": 2060.0,
+      "frame_dimensions": [
+        1280,
+        720
+      ],
+      "diameter_to_height_ratio": 2.8579443257641692,
+      "diameter_to_width_ratio": 1.6075936832423452,
+      "ball_area_to_frame_area": 3.608443724635047
+    },
+    "12.mp4": {
+      "mean_diameter_px": 2362.7244995233555,
+      "max_diameter_px": 2376.0,
+      "frame_dimensions": [
+        1280,
+        720
+      ],
+      "diameter_to_height_ratio": 3.281561804893549,
+      "diameter_to_width_ratio": 1.8458785152526214,
+      "ball_area_to_frame_area": 4.757442900021273
+    }
+  }
+}
