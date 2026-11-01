@@ -1,0 +1,4 @@
+clips/
+*.pid
+fetch.log
+submit_rest.log
