@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "file": "work/codex-api-4/t223/PROTOCOL.md",
+      "baseline": "077a68c",
+      "sha256": "5088aba754bc45d31c013e858f89801f6d30a9c061206751ea91bce74ad26396",
+      "pass": true
+    },
+    {
+      "file": "work/codex-api-4/t223/analysis_core.py",
+      "baseline": "077a68c",
+      "sha256": "41f2c4b3d7c2408029e25d52a82d4a5a8d376658a0a11fe8874f516e8fbb97c5",
+      "pass": true
+    },
+    {
+      "file": "work/codex-api-4/t223/e0_video.py",
+      "baseline": "077a68c",
+      "sha256": "f75ed5413d34cb2f677c4109beb2d112a142ba9b7bfa6ca3c355b9f07db3d16e",
+      "pass": true
+    },
+    {
+      "file": "tools/trk_ballfall/measure_pend.py",
+      "baseline": "2e26463",
+      "sha256": "ea671320010ff80ac5f9dce355590bc3e1952eeb62ad240c47e7fd783f07d120",
+      "pass": true
+    },
+    {
+      "file": "tools/trk_ballfall/trk.py",
+      "baseline": "2e26463",
+      "sha256": "4de7b99dd38677a707e765d2b44d305b4fbade61b0e9e425f1dbad41549eaf2e",
+      "pass": true
+    },
+    {
+      "file": "work/codex-api-4/t8/reference.py",
+      "baseline": "657e9029",
+      "sha256": "db89037d6c22d6da777da901da8b62c82159bc73f83e860a8b5818e77303ecad",
+      "pass": true
+    },
+    {
+      "file": "work/codex-api-4/t8/output/traces/real_10.json",
+      "baseline": "657e9029",
+      "sha256": "b995650929da5aec7fd2784af41ccaa631ec45c7f3d413e4db2030b007abd129",
+      "pass": true
+    },
+    {
+      "file": "work/codex-api-4/t8/output/traces/real_11.json",
+      "baseline": "657e9029",
+      "sha256": "17787603873656157f2d1d3b4f11b511b9800392578b7c52c565d1a8cad84865",
+      "pass": true
+    },
+    {
+      "file": "work/codex-api-4/t8/output/traces/real_14.json",
+      "baseline": "657e9029",
+      "sha256": "e3cbe841cf11f19fb9896b648d3b6ae1cca855e1ce26070c60c5c172fc596f46",
+      "pass": true
+    }
+  ]
+}

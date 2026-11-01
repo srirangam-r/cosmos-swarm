@@ -147,3 +147,11 @@ rawp.0001/Holmp.0003. All64native contracts and numerical replay pass. This
 remains an unvalidated appearance/motion proxy, not speed/period/colour, causal
 text-versus-noise allocation, a recipe or NVIDIA-scoreboard proof. E2/E3 remain
 unopened; exact runtime/sampler/noise provenance is still unverified.
+
+The [actual E3 outcome-blind handoff](e3_seedbank/README.md) freezes72 exact
+requests, pend10 training versus pend11/14 held-out, top/bottom6 of24 seeds,
+native/QC/period success gates and an unknown-preserving analyzer. Eleven
+manufactured tests and nine source/reference byte checks pass. Human #5084
+declared Program N complete during preparation; no actual E3 output or status
+was inspected, and no preparation/model/GPU job was launched. Actual E3 analysis
+remains unperformed. This is a reproducible handoff, not a seed-bank result.

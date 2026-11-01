@@ -1,0 +1,2779 @@
+{
+  "selection": "Exactly72 design rows; no E3 statuses/outcomes/sidecars inspected",
+  "source_files": {
+    "work/raj-noise/jobs/E3_part0.jsonl": "1dbc510c31319f29ed2173123e7d22672a190d916c4a8d6873cd2b65fb7e6383",
+    "work/raj-noise/jobs/E3_part1.jsonl": "73cfb6f98a94a7f6c596168448d9014402f5b82e3aa7eab84b4c0edc8fbb5d4b"
+  },
+  "seeds": [
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    623,
+    624
+  ],
+  "training": [
+    "pend10"
+  ],
+  "heldout": [
+    "pend11",
+    "pend14"
+  ],
+  "bank_size": 6,
+  "runs": [
+    {
+      "id": "133351-69c195",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s601",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 601,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-302917",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s602",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 602,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-885c8c",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s603",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 603,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-7"
+    },
+    {
+      "id": "133351-11c68b",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s604",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 604,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-0"
+    },
+    {
+      "id": "133351-b93ee2",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s605",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 605,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-3e14c2",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s606",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 606,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-9495c8",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s607",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 607,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-2207fe",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s608",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 608,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-82410a",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s609",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 609,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-b72cc0",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s610",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 610,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-2"
+    },
+    {
+      "id": "133351-3b741f",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s611",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 611,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-759e38",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend10_s612",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 612,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-2"
+    },
+    {
+      "id": "133351-152418",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s613",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 613,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-9f512b",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s614",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 614,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-472135",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s615",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 615,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-805578",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s616",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 616,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-7"
+    },
+    {
+      "id": "133351-18eddd",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s617",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 617,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-894201",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s618",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 618,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133352-c9dd00",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s619",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 619,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133352-90c3f3",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s620",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 620,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133352-a37bb1",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s621",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 621,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133352-908724",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s622",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 622,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133352-b4b665",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s623",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 623,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133352-ea3168",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend10_s624",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend10_mid_f93.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 624,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend10_mid_f93.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133351-e619fb",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s601",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 601,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-85227c",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s602",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 602,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-a0ac97",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s603",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 603,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-1"
+    },
+    {
+      "id": "133351-2a07b2",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s604",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 604,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-7"
+    },
+    {
+      "id": "133351-456aa5",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s605",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 605,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-0"
+    },
+    {
+      "id": "133351-442be7",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s606",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 606,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-0"
+    },
+    {
+      "id": "133351-7a5da6",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s607",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 607,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-1a2906",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s608",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 608,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-246b86",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s609",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 609,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-2"
+    },
+    {
+      "id": "133351-825cf1",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s610",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 610,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-95f88c",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s611",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 611,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-2"
+    },
+    {
+      "id": "133351-d91e98",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend11_s612",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 612,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-839289",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s613",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 613,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-b14529",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s614",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 614,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-1"
+    },
+    {
+      "id": "133351-c5b7f2",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s615",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 615,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-e13997",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s616",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 616,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-0"
+    },
+    {
+      "id": "133351-3e0991",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s617",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 617,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-3111ff",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s618",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 618,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-1"
+    },
+    {
+      "id": "133352-e3d684",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s619",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 619,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133352-3bd4d2",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s620",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 620,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133352-4857bd",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s621",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 621,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-2"
+    },
+    {
+      "id": "133352-eb890b",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s622",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 622,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133352-f441cd",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s623",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 623,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133352-d27e13",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend11_s624",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend11_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 624,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend11_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133351-a00dcb",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s601",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 601,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-73085e",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s602",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 602,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-7"
+    },
+    {
+      "id": "133351-614546",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s603",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 603,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-1"
+    },
+    {
+      "id": "133351-0ece18",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s604",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 604,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-a436d6",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s605",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 605,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133351-2893d2",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s606",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 606,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-6d94f0",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s607",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 607,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-643689",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s608",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 608,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133351-5e3e75",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s609",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 609,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-0"
+    },
+    {
+      "id": "133351-28d6df",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s610",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 610,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-2"
+    },
+    {
+      "id": "133351-e8a796",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s611",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 611,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-4"
+    },
+    {
+      "id": "133351-889bc4",
+      "owner": "raj-noise-f",
+      "name": "N_E3_pend14_s612",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 612,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-7"
+    },
+    {
+      "id": "133351-9b7ff3",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s613",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 613,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-7"
+    },
+    {
+      "id": "133351-9dced9",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s614",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 614,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-f7cc2d",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s615",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 615,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-9f27f3",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s616",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 616,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133351-486856",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s617",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 617,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-6"
+    },
+    {
+      "id": "133351-ed5e26",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s618",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 618,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133352-63123b",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s619",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 619,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-5"
+    },
+    {
+      "id": "133352-98e786",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s620",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 620,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133352-90f199",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s621",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 621,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": "q8-3"
+    },
+    {
+      "id": "133352-49259a",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s622",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 622,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133352-de6e77",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s623",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 623,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    },
+    {
+      "id": "133352-580c7d",
+      "owner": "raj-noise-g",
+      "name": "N_E3_pend14_s624",
+      "prompt": "Static frontal camera view: A 318g black metal ball is fixed to the tip of a lightweight rigid rod, which rotates freely about a stationary horizontal axle mounted between two vertical posts atop a black perforated optical table. Initially, the rod angle is 10 degree, with the ball extending out to one side. Upon release, the ball follows pendulum motion: it accelerates downward past the black vertical posts, ascends on the opposite side, and continues oscillating back and forth over numerous cycles, its amplitude slowly and gradually diminishing due to friction. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+      "image": "pend14_mid_f81.png",
+      "params": {
+        "width": 832,
+        "height": 480,
+        "num_frames": 93,
+        "fps": 24,
+        "steps": 35,
+        "guidance": 6.0,
+        "flow_shift": 10.0,
+        "seed": 624,
+        "negative_prompt": null,
+        "extra_params": {
+          "client": "raj-noise",
+          "noise": {
+            "device": "cpu"
+          },
+          "prog": "N",
+          "exp": "E3",
+          "frame": "pend14_mid_f81.png"
+        }
+      },
+      "endpoints": [
+        "q8-0",
+        "q8-1",
+        "q8-2",
+        "q8-3",
+        "q8-4",
+        "q8-5",
+        "q8-6",
+        "q8-7"
+      ],
+      "endpoint": null
+    }
+  ]
+}
