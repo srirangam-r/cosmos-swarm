@@ -2,3 +2,5 @@ clips/
 *.pid
 fetch.log
 submit_rest.log
+c2_inputs/
+clips_c2/

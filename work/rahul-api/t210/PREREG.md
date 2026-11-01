@@ -27,3 +27,9 @@ Analysis (analyze_t210.py):
 Amendment 1 (12:53 UTC, before any full-grid result): 10/24 clips have an empty instruction and the queue rejects an
 empty prompt. Those clips use "A robot manipulates an object." (NVIDIA notebook default, as in the DROID gen_vllm.py)
 as their base prompt, with R/N appended to it. Report the 14 instructed vs 10 default-prompt clips separately as well.
+
+Amendment 2 (12:56 UTC, after the chunk-1 result #4433, before any chunk-2 clip): add chunk 2 as in the harness's
+generate.py. Chunk 2 is conditioned on the LAST decoded frame (f16) of each arm's own chunk-1 clip plus action chunk 1,
+with the same prompt, seed and settings. Rollout = chunk1 (17 f) + chunk2[1:] (16 f) = 33 f vs real 33 f.
+Same decision rule (LPIPS R−base, clip unit, t 95% CI upper < +0.010 = NONINFERIOR, lower > 0 = WORSE) applied to
+(a) all 32 predicted frames and (b) chunk 2 only. Same N control and seed-noise pseudo-contrast.

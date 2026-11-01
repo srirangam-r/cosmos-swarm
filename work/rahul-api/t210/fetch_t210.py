@@ -2,12 +2,13 @@
 """Fetch only this task's (t210_*) finished queue jobs: <out>/<name>.mp4 + <name>.json sidecar."""
 import json, sys, urllib.request
 from pathlib import Path
+PREFIX = sys.argv[2] if len(sys.argv) > 2 else "t210_"
 URL = "http://100.111.167.68:8030"
 out = Path(sys.argv[1]); out.mkdir(parents=True, exist_ok=True)
 jobs = json.load(urllib.request.urlopen(f"{URL}/jobs?owner=rahul-api"))["jobs"]
 got = left = fail = 0
 for j in jobs:
-    if not j["name"].startswith("t210_"):
+    if not j["name"].startswith(PREFIX):
         continue
     if j["status"] != "done":
         left += j["status"] in ("pending", "running"); fail += j["status"] == "failed"
