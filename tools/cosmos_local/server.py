@@ -166,7 +166,7 @@ def sync(prompt: str = Form(""), negative_prompt: str | None = Form(None), size:
                 extra_params={k: v for k, v in extra.items() if k not in ("action", "internals")},
                 has_action=("action" in extra), input_image=(f"{stem}_input.png" if img is not None else None),
                 frames_out=len(frames), out_hw=list(frames[0].shape[:2]), seconds=round(dt, 1),
-                model="nvidia/Cosmos3-Nano (local diffusers bf16, group offload, safety check off)",
+                model="nvidia/Cosmos3-Nano (local diffusers bf16, " + ("group offload" if OFFLOAD else "no offload") + (", " + os.environ["COSMOS_LABEL"] if os.environ.get("COSMOS_LABEL") else "") + ", safety check off)",
                 scheduler="UniPCMultistepScheduler", torch=torch.__version__, server="raj-1 server.py")
     headers = {"X-Seconds": f"{dt:.1f}", "X-Clip-Id": stem}
     if spec:
