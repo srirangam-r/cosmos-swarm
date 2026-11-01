@@ -1,0 +1,26 @@
+{
+ "g12_rest": {
+  "window": [
+   79,
+   108
+  ],
+  "x_range_px": 4.73,
+  "y_range_px": 9.56,
+  "blob_area_first_last": [
+   628,
+   631
+  ]
+ },
+ "g04_rest": {
+  "window": [
+   144,
+   173
+  ],
+  "x_range_px": 4.86,
+  "y_range_px": 1.08,
+  "blob_area_first_last": [
+   1435,
+   1303
+  ]
+ }
+}
