@@ -2,7 +2,7 @@
 
 **36 checks PASS, 0 FAIL. No live queue submission or GPU run.**
 
-Owner commit `ac8d086396d6d6f4d352130981d2a59ad8788782` adopted completed review291's patch5975. This report validates the shipped CLI at `003cff7d53df272e56ab6192129aa5db103ca156`; no product source changed here.
+Owner commit `ac8d086396d6d6f4d352130981d2a59ad8788782` adopted completed review291's patch5975. Initial checks passed at `003cff7`; after rebasing onto owner's runner update `c5c1ca5`, the same 36 checks passed at `ae2580710cf6ebb570845e34c9edb23b9d5d6594`. Final raw evidence and source hashes reflect that second run. No product source changed here.
 
 The actual Python CLI generated two synthetic-fixture proxies, one pendulum and one ball, each 93 frames at 832×480 and 24 fps. Every frame decoded with OpenCV. These fixtures exercise CLI generation and serialization; they are not task277 inputs or evidence of physical accuracy.
 

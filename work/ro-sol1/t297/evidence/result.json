@@ -1,11 +1,11 @@
 {
   "scope": "CPU serialization/upload-byte smoke only; no live submission, native sigma, renderer geometry or physics validation",
-  "source_commit": "003cff7d53df272e56ab6192129aa5db103ca156",
+  "source_commit": "ae2580710cf6ebb570845e34c9edb23b9d5d6594",
   "baseline_commit": "0596dc120705693e0ea30ee9d8f6810452a46241",
   "source_sha256": {
     "tools/nano_phys/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
     "tools/nano_phys/__init__.py": "8aca562982b552e1c8ff7695581b50ad3373ef441c582114e5d0241290271b0b",
-    "tools/nano_phys/runner.py": "b4122edcdb938b02bc7dac2767829c1edb784974279ce43cb97b2a2547183952",
+    "tools/nano_phys/runner.py": "ed24627f7a7409fb0a79a1089ac53d0c7ff1f390d6d82d32c54768f5a9f8df59",
     "tools/nano_phys/proxy.py": "1e7cbdff3ba78348ec13c21d329e8c0ce6d59afe1d1c7c0034f244572c670ff5",
     "tools/nano_phys/cli.py": "2d679cad5da45fd54ba57313b6fd015707e74b58aba0da7e40615278901add37"
   },
