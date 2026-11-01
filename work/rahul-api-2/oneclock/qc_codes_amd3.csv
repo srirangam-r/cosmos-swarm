@@ -11,3 +11,23 @@ oc_A_ball1_s55,0,"continuous fall f0-12 but a second ball appears at top f14-16 
 oc_A_ball2_s55,1,"continuous fall f0-~14 from frame-0 spot; one ball; flight 1 ~f14-28 complete (low bounce toward back rail); motion blur only",2026-11-01T11:35
 oc_A_ball1_s56,0,"ball rises f0-4 before falling; ghost/streak morph at f12",2026-11-01T11:35
 oc_A_ball2_s56,0,"ball rises f0-4 before falling (no fall from rest)",2026-11-01T11:35
+oc_A_ball1_s57,0,"fall f0-4 then mid-air reversal: ball rises f4-12 without impact, falls again",2026-11-01T11:39
+oc_A_ball2_s57,0,"ball morphs and doubles from f4; two balls f12-28",2026-11-01T11:39
+oc_A_ball1_s58,0,"slow near-constant glide f0-36 drifting toward camera (ball grows ~1.6x); no clear flight 1 by f46",2026-11-01T11:39
+oc_A_ball2_s58,0,"ball fades/vanishes f12-22 during fall, reappears near rail f24",2026-11-01T11:39
+oc_A_ball1_s59,0,"gross scene artifact f2-10 (green streaks, arm/body appears), giant ball from f8",2026-11-01T11:39
+oc_A_ball2_s59,0,"ball vanishes f6; large object morph f8-14; big ball on plank from f16",2026-11-01T11:39
+oc_A_ball1_s60,0,"smear/morph at impact f10; ball faint/semi-transparent f12-20 in flight 1",2026-11-01T11:39
+oc_A_ball2_s60,0,"smear/morph at impact f10; ball faint/ghost f12-20 in flight 1",2026-11-01T11:39
+oc_A_ball1_s61,0,"fall f0-26 clean (slow onset) but ghost/transparent ball at impact f28-30 and ~2x larger ball in flight 1 f34-38",2026-11-01T11:44
+oc_A_ball2_s61,0,"second ball appears f20-24 (clone) during flight 1",2026-11-01T11:44
+oc_A_ball1_s62,0,"smear/morph at impact f10; ball ~1.5-2x larger in flight 1 f12-16 (toward camera)",2026-11-01T11:44
+oc_A_ball2_s62,0,"ball smears/teleports f2-4 (fall in ~4 f with a gap)",2026-11-01T11:44
+oc_A_ball1_s63,0,"ball rises f2-4 and leaves the top of frame f6-18, re-enters f20",2026-11-01T11:44
+oc_A_ball2_s63,0,"ball rises f2-6 and hovers near top to ~f20",2026-11-01T11:44
+oc_A_ball1_s64,0,"ball grows ~2x during fall f0-6 (toward camera); squash-morph at impacts f6, f18",2026-11-01T11:44
+oc_A_ball2_s64,0,"ball grows ~2x during fall f0-6 (toward camera); squash-morph at impacts f6, f18",2026-11-01T11:44
+oc_A_ball1_s65,0,"ball rises to top f2-8 and returns ~2.5x larger f10",2026-11-01T11:44
+oc_A_ball2_s65,0,"hover f0-10 then fall; morph at rail f18; ball ~2x larger on plank f20+ (toward camera)",2026-11-01T11:44
+oc_A_ball1_s66,0,"morph f2-6; ball rises to top, returns ~2.5x larger",2026-11-01T11:44
+oc_A_ball2_s66,0,"fall f0-4 then mid-air reversal f4-10 (rises to top), falls again f12-18",2026-11-01T11:44

@@ -67,3 +67,14 @@ same first frames, prompt and settings. The only difference: these run on the Br
 server.py and diffusers commit, torch 2.15.0; not bit-identical to q8, #3746). The endpoint is recorded per clip. QC codes
 are frozen before any ratio, the same as before. Analysis is unchanged (Amendment 2 rule, seed-bootstrap geo-mean rho1).
 Both are reported: seeds 21-50 alone (#3782) and 21-110 pooled, plus a q8-vs-Brev split as a stack check. Stop at seed 110 whatever the result.
+
+## Amendment 4 (2026-11-01 ~11:47 UTC, reporting only; written BEFORE any Amendment-3 ratio exists, in response to review #3874)
+No change to clips, QC rule, trackers or the primary statistic. Added to every report (21-50, 51-110, pooled):
+1. The seed-bootstrap percentile CI stays as preregistered, but with n_seeds < 10 it is labelled "descriptive" (with n=3 its
+   endpoints are just the observed extremes, #3874). Also reported: a log-t 95% interval over per-seed mean log rho1 (sensitivity).
+2. Per clip, both trackers' rho1 (t2, ff) are listed. Sensitivity: drop clips whose two valid trackers' rho1 differ by > 25%
+   (|log(t2/ff)| > log 1.25), even though they pass the < 4 px position gate.
+3. Ball1 vs ball2 counts are reported separately.
+4. Wording: the planted check validates the tracker + fit's g and e (12/12, #3587), not rho1 itself; the rho1 tool checks are the
+   synthetic known-rho clips and the real GAUGE reference. A result with rho1 near 1 is reported as "no resolved difference",
+   not as proof of one clock.
