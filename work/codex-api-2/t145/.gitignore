@@ -2,6 +2,7 @@ jobs.jsonl
 controls.jsonl
 out/
 acts/
+blind/
 *.log
 dispatch.lock
 __pycache__/
