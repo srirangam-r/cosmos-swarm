@@ -96,3 +96,49 @@ Notice that counter-examples exist in both directions:
    Even after applying the theoretical $T \propto \sqrt{1+S}$ length correction, Cosmos3-Nano remains $16.8\%$ slower than ground truth across the median of eligible clips.
 3. **Implications for Swarm Deliverables**:
    The slow pendulum in Cosmos3-Nano is **not** an artifact of rod elongation or simple geometric projection errors. Fixes targeting drawing geometry or geometric rigidity filters (such as best-of-N based purely on rod length) will not resolve the underlying temporal dynamics slowdown of the world model.
+
+---
+
+## 5. Follow-up Audit: Statistical Power and Nonlinear Swing Amplitude Analysis
+
+In response to review #5550 by `dk2`, two critical hypotheses were evaluated:
+
+### A. Statistical Power Derivation
+- Across the $n=10$ clips, $\text{sd}(\log(1+S)) = 0.083$. The theoretical physical slope of $0.50$ therefore predicts $\text{sd} = 0.041$ in $\log T$.
+- In contrast, the empirical residual variation in $\log(T/T_\text{real})$ across seeds is $\text{sd} = 0.319$ ($~8\times$ larger than the predicted stretch effect).
+- Synthetic power simulations confirm that at $n=10$, one-sided Spearman has only **9% power** to detect a $0.5$ slope against this degree of seed scatter ($n=100$ reaches 32% power).
+- Therefore, the primary informative physical estimand is the **length-corrected residual ratio** ($1.168\times$ median, $+16.8\%$ unexplained slowdown), which isolates the magnitude of the model's physical temporal error.
+
+### B. Empirical Test of the Nonlinear Amplitude Hypothesis ($K(\theta_0)$)
+The exact period of a pendulum oscillating at semi-amplitude $\theta_0$ is given by the complete elliptic integral of the first kind:
+$$T(\theta_0) = T_0 \cdot \frac{2}{\pi} K\left(\sin^2\frac{\theta_0}{2}\right)$$
+If Nano swings to much higher angles than the real recording, nonlinear period elongation could account for the remaining $1.17\times$ slowdown.
+
+We evaluated the exact per-clip semi-amplitude $\theta_0 = \frac{1}{2}(\max \theta - \min \theta)$ from `rodtrack` against the real reference (`real_pend10_f93`):
+- **Real pend10 baseline**: Peak-to-peak swing is $148.08^\circ$ ($\theta_0 = 74.04^\circ$, mean $\theta = 21.55^\circ$). Complete elliptic integral factor:
+  $$\frac{2}{\pi} K\left(\sin^2\frac{74.04^\circ}{2}\right) = 1.1156$$
+  Because real pend10 already has a large amplitude, its mocap period $T_\text{real} = 1.174\text{ s}$ already embodies an $11.6\%$ nonlinear elongation factor over small-angle $T_0$.
+- **Cosmos3-Nano clips**:
+
+| Clip | $T_\text{mp}$ (s) | $S$ | $\theta_0$ (deg) | $K_\text{ratio} = \frac{K(\theta_0)}{K(74.04^\circ)}$ | $\frac{T_\text{mp}}{T_\text{real}\sqrt{1+S}}$ | $\frac{T_\text{mp}}{T_\text{real}\sqrt{1+S}\cdot K_\text{ratio}}$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `N_E3_pend10_s602` | 2.186 | +0.150 | 107.32 | 1.1448 | 1.7375 | 1.5177 |
+| `N_E3_pend10_s604` | 2.509 | +0.328 | 58.32 | 0.9581 | 1.8549 | 1.9360 |
+| `N_E3_pend10_s607` | 1.664 | +0.217 | 57.66 | 0.9567 | 1.2858 | 1.3440 |
+| `N_E3_pend10_s608` | 1.323 | +0.366 | 65.62 | 0.9759 | 0.9645 | 0.9883 |
+| `N_E3_pend10_s617` | 1.225 | +0.204 | 57.79 | 0.9569 | 0.9513 | 0.9941 |
+| `N_E3_pend10_s619` | 1.433 | +0.363 | 93.13 | 1.0717 | 1.0458 | 0.9759 |
+| `N_E3_pend10_s623` | 2.249 | +0.192 | 75.64 | 1.0050 | 1.7553 | 1.7465 |
+| `t226_P_fast_s102` | 0.898 | +0.082 | 71.25 | 0.9916 | 0.7355 | 0.7417 |
+| `t226_P_still_s101` | 1.293 | +0.100 | 40.96 | 0.9259 | 1.0500 | 1.1341 |
+| `t226_P_still_s106` | 1.692 | +0.208 | 88.80 | 1.0530 | 1.3118 | 1.2458 |
+
+- **Key Findings on Amplitude**:
+  1. **6 of 10 Nano clips swing with *smaller* amplitude than real pend10** (median $68.4^\circ$ vs $74.0^\circ$).
+  2. Median $K_\text{ratio} = 0.984$ (IQR $[0.957, 1.058]$).
+  3. After both length AND nonlinear amplitude correction, the median residual unexplained slowdown is:
+     $$\text{Median } \frac{T_\text{mp}}{T_\text{real}\sqrt{1+S}\cdot K_\text{ratio}} = \mathbf{1.190\times}\quad (+19.0\%\text{ residual slowdown})$$
+  4. On **E3 natural continuations alone** (excluding t226 prompt arms), raw median $T_\text{mp}/T_\text{real}$ is $1.418\times$ ($+41.8\%$), residual after length is $1.286\times$ ($+28.6\%$), and residual after length + amplitude is **$1.344\times$ ($+34.4\%$)**.
+  5. Correlation between $K_\text{ratio}$ and the residual is null ($\text{Spearman } \rho = +0.20, p = 0.58$).
+
+**Conclusion**: Nonlinear amplitude does not explain Cosmos3-Nano's residual slowness. Nano's slowdown is an intrinsic failure of learned temporal dynamics.
