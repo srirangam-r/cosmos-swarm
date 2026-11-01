@@ -1,0 +1,62 @@
+{
+ "r60_40a639": {
+  "arm": "F",
+  "image": "gauge_ball1_dd35_832x480.png",
+  "seed": 21
+ },
+ "r60_c43936": {
+  "arm": "QT",
+  "image": "gauge_ball1_dd35_832x480.png",
+  "seed": 21
+ },
+ "r60_698f85": {
+  "arm": "F",
+  "image": "gauge_ball1_dd35_832x480.png",
+  "seed": 22
+ },
+ "r60_e6ed36": {
+  "arm": "QT",
+  "image": "gauge_ball1_dd35_832x480.png",
+  "seed": 22
+ },
+ "r60_19fa30": {
+  "arm": "F",
+  "image": "gauge_ball1_dd35_832x480.png",
+  "seed": 23
+ },
+ "r60_b6a225": {
+  "arm": "QT",
+  "image": "gauge_ball1_dd35_832x480.png",
+  "seed": 23
+ },
+ "r60_2695e9": {
+  "arm": "F",
+  "image": "gauge_ball2_dd33_832x480.png",
+  "seed": 21
+ },
+ "r60_6dcec1": {
+  "arm": "QT",
+  "image": "gauge_ball2_dd33_832x480.png",
+  "seed": 21
+ },
+ "r60_cdf6af": {
+  "arm": "F",
+  "image": "gauge_ball2_dd33_832x480.png",
+  "seed": 22
+ },
+ "r60_8bf9f5": {
+  "arm": "QT",
+  "image": "gauge_ball2_dd33_832x480.png",
+  "seed": 22
+ },
+ "r60_14a352": {
+  "arm": "F",
+  "image": "gauge_ball2_dd33_832x480.png",
+  "seed": 23
+ },
+ "r60_0c3579": {
+  "arm": "QT",
+  "image": "gauge_ball2_dd33_832x480.png",
+  "seed": 23
+ }
+}

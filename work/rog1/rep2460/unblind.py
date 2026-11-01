@@ -38,7 +38,7 @@ def ms(xs):
     return {"mean": m, "se": se, "n": len(xs)}
 
 out = {"per_clip": sorted(rows, key=lambda r: (r["image"], r["seed"], r["arm"])), "arms": {}, "paired_QT_minus_F": {}}
-metrics = ["moving_frac_last24", "p99diff_last24_mean", "still_since", "dover_fused", "dover_technical", "dover_aesthetic", "dd_norm", "dd_binary"]
+metrics = ["late_chg_px", "moving_frac_last24", "p99diff_last24_mean", "still_since", "dover_fused", "dover_technical", "dover_aesthetic", "dd_norm", "dd_binary"]
 for arm in ("F", "QT"):
     a = [r for r in rows if r["arm"] == arm]
     out["arms"][arm] = {m: ms([r.get(m) for r in a]) for m in metrics}
