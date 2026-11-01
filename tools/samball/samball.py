@@ -29,7 +29,7 @@ def read(path):
 
 def auto_point(F):
     import trk
-    B = trk.blobs(F[:8], mode='ball')
+    B = trk.blobs(F, mode='ball')
     for b in B:
         if b: return [float(b[0]), float(b[1])]
     raise SystemExit('no blob on first frames; pass --point')
