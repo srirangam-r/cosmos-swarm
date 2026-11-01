@@ -1,0 +1,13 @@
+name,settled_by_f92,rest_frame,identity_ok,notes
+r60_c43936,Y,68,Y,lands on plank ~f12; low hops with shadow gap f48-66; sits still at the same spot f68-92
+r60_698f85,N,-,N,lands f12; plank lifts/flips like a seesaw f14-28 (scene corruption); ball grows ~2x; keeps hopping to f92 (gaps/blur f86 f90)
+r60_0c3579,N,-,?,ball keeps bouncing between plank and front table to f92 (position changes every frame); ball looks large
+r60_b6a225,Y,72,Y,rolls back along plank and off its far end onto the table; still from ~f72 (small creep f80-87)
+r60_cdf6af,N,-,?,ball stays near far plank end but keeps spinning/hopping in place with blur to f92 (zoom f56-92); ball ~40 px
+r60_14a352,N,-,Y,keeps bouncing between plank and front table edge to f92; large blur/hops every few frames
+r60_19fa30,N,-,N,EXIT: 2-3 balls appear f4-12 (duplicates); ball(s) bounce to front edge then roll right behind the arm; no ball visible in frame from ~f46 (low late motion = ball gone, not rest)
+r60_2695e9,N,-,Y,high undamped bounces (apex above crop top, near gripper height) through f92
+r60_40a639,N,-,Y,high undamped bounces (apex above crop) through f92
+r60_6dcec1,Y,80,Y,hops f48-78 (shadow gap), then in continuous contact from ~f80 rolling slowly right ~1 px/f to f92 (Y = no airborne hops in last 12 f; it's a slow roll, not dead still)
+r60_8bf9f5,N,-,Y,low hops on plank continue to f92 (gap under ball every ~4 f in zoom)
+r60_e6ed36,Y,38,Y,lands f4; hops to ~f30; contact from ~f34, short roll left, still from ~f46 to f92

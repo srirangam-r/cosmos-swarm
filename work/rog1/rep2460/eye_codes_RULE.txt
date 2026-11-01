@@ -1,0 +1,1 @@
+# Coding rule (fixed before unblinding): settled_by_f92=Y if the ball is in frame and has had no airborne hop for >=12 frames before f92; rest_frame = first frame of continuous contact. Coded 08:30-08:42 UTC before the key was opened.
