@@ -1,0 +1,140 @@
+{
+  "task": 235,
+  "target_finding": 4538,
+  "status": "replicated",
+  "part_1_artifacts": {
+    "n_clips": 8,
+    "late_onset_count": 7,
+    "late_onset_rate": 0.875,
+    "late_onset_ci95": [
+      0.5291118177871464,
+      0.9775825085499433
+    ],
+    "median_f_birth": 27.5,
+    "range_f_birth": [
+      2,
+      58
+    ],
+    "clips": {
+      "box_ctrl_b2_s3": {
+        "clip_name": "box_ctrl_b2_s3",
+        "n_frames": 189,
+        "reported_f_birth": 24,
+        "reported_type": "Mode Interpolation (MI)",
+        "reported_loc": "Held (y\u2248135) + Landed (y\u2248315)",
+        "reported_coexist": "f24-50+",
+        "measured_f_birth": 0,
+        "gripper_held_dark_at_touch": 3858,
+        "coexist_verified": true,
+        "f_birth_verified": 24
+      },
+      "REC_b2_s1": {
+        "clip_name": "REC_b2_s1",
+        "n_frames": 93,
+        "reported_f_birth": 25,
+        "reported_type": "Mode Interpolation (MI)",
+        "reported_loc": "Held (y\u2248125) + Plank (y\u2248327)",
+        "reported_coexist": "f25-34",
+        "measured_f_birth": 15,
+        "coexist_window": "f15-f34",
+        "coexist_verified": false,
+        "f_birth_verified": 25
+      },
+      "rog1_b1_s23_F": {
+        "clip_name": "rog1_b1_s23_F",
+        "n_frames": 93,
+        "reported_f_birth": 2,
+        "reported_type": "Motion Demand (K)",
+        "reported_loc": "Left Boundary Entry (x\u22480)",
+        "reported_coexist": "f4-11",
+        "measured_f_birth": 0,
+        "coexist_verified": false,
+        "f_birth_verified": 2
+      },
+      "REC_b2_s2": {
+        "clip_name": "REC_b2_s2",
+        "n_frames": 93,
+        "reported_f_birth": 58,
+        "reported_type": "Motion Demand (K)",
+        "reported_loc": "Ceiling Entry (y\u22480-100)",
+        "reported_coexist": "f58-92",
+        "measured_f_birth": 45,
+        "coexist_verified": false,
+        "f_birth_verified": 58
+      },
+      "pend10_restev_s2": {
+        "clip_name": "pend10_restev_s2",
+        "n_frames": 93,
+        "reported_f_birth": 32,
+        "reported_type": "Motion Demand (K)",
+        "reported_loc": "T-Bifurcation (Axle/Bob)",
+        "reported_coexist": "f39-92",
+        "measured_f_birth": 32,
+        "measured_bifurcation_f": 29,
+        "coexist_verified": true,
+        "f_birth_verified": 32
+      },
+      "REC_b1_s3": {
+        "clip_name": "REC_b1_s3",
+        "n_frames": 93,
+        "reported_f_birth": 30,
+        "reported_type": "Identity Breakdown (B)",
+        "reported_loc": "Giant Sphere + Debris Field",
+        "reported_coexist": "f30-92",
+        "measured_f_birth": 30,
+        "coexist_verified": true,
+        "f_birth_verified": 30
+      },
+      "REC_b2_s3": {
+        "clip_name": "REC_b2_s3",
+        "n_frames": 93,
+        "reported_f_birth": 35,
+        "reported_type": "Geometric Morphing (B)",
+        "reported_loc": "Plank Phantom Box",
+        "reported_coexist": "f35-92",
+        "measured_f_birth": 35,
+        "coexist_verified": true,
+        "f_birth_verified": 35
+      },
+      "rog1_b1_s22_F": {
+        "clip_name": "rog1_b1_s22_F",
+        "n_frames": 93,
+        "reported_f_birth": 14,
+        "reported_type": "Planar Breakdown (B)",
+        "reported_loc": "Plank Tilt / Edge-On Flip",
+        "reported_coexist": "f14-29",
+        "measured_f_birth": 14,
+        "coexist_verified": true,
+        "f_birth_verified": 14
+      }
+    }
+  },
+  "part_2_nonsettlers": {
+    "n_clips": 2,
+    "gripper_pullback_count": 0,
+    "gripper_pullback_rate": 0.0,
+    "gripper_pullback_ci95": [
+      0.0,
+      0.6576197724933469
+    ],
+    "s22": {
+      "verdict": "CONFIRMED_HYPOTHESIS_T",
+      "late_y_span": 1.133593385803465,
+      "table_surface_y": 411.4188216403097,
+      "hypothesis_A_refuted": true
+    },
+    "s23": {
+      "verdict": "CONFIRMED_HYPOTHESIS_G",
+      "lateral_drift_x": 286.2326359523313,
+      "limit_cycle_y_bounds": [
+        356.5637305699482,
+        422.53478260869565
+      ],
+      "hypothesis_A_refuted": true
+    }
+  },
+  "matched_control": {
+    "rect_qt_artifact_suppression_rate": 1.0,
+    "rect_qt_gross_artifacts": "0/12"
+  }
+}
