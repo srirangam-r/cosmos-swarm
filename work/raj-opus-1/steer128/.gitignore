@@ -2,3 +2,5 @@ acts/
 clips/
 jobs_steer.jsonl
 *.mp4
+jobs_steer_S24.jsonl
+jobs_steer2.jsonl
