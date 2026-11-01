@@ -22,9 +22,9 @@ This deliverable synthesizes empirical evaluations across all dev sets, incorpor
 
 2. **The NVIDIA Scoreboard (4 Pillars on Dev Sets)**:
    - **Pillar 1: Visual Quality (DOVER)**: Across 16 matched 189-frame clips (Ball 1 & 2, seeds 1–4), **DOVER Technical exhibits no statistically detectable degradation**: $+0.0012 \pm 0.0009$ (95% CI $[-0.0004, +0.0030]$, $t = +1.31, p = 0.232$, n.s.; lack of significance does not mathematically prove zero degradation, Review #1843). DOVER Fused shows a raw change of $-0.0163 \pm 0.0059$ ($n=8$ pairs across 2 scenes, one-sided 95% paired-$t$ lower bound $-0.0275$). A dedicated real-video control across 4 real GAUGE drops reveals that real ground-truth video itself drops by $\Delta_{\text{fused}} = -0.0049 \pm 0.0012$ when comparing a falling ball to a static held ball due to in-flight motion blur. Subtracting this intrinsic visual motion effect yields a net generative change of **$-0.0114 \pm 0.0060$** (descriptive difference-in-differences; $-0.0121 \pm 0.0047$ across scene means), well within empirical seed noise ($\sigma_{\text{seed}} = 0.021\text{--}0.032$). Note that the $\delta=0.030$ non-inferiority margin approved under #1306 was pre-registered specifically for the VLM plausibility judge; the formal non-inferiority bound for DOVER remains a human decision (#1843).
-   - **Pillar 2: Motion Fidelity & Dynamic Degree (VBench RAFT)**: Real GAUGE reference videos have zero binary dynamic degree ($dd_{\text{binary}} = 0.0$, $dd_{\text{norm}} = 0.255$). Stock Cosmos3-Nano suffers severe spurious scene flow from robotic arm plunging and plank seesawing ($dd_{\text{binary}} = 0.875 \pm 0.125$, $dd_{\text{norm}} = 7.642 \pm 1.392$). The recipe suppresses this unphysical motion, cutting $dd_{\text{binary}}$ by **$-0.500 \pm 0.189$ ($0.875 \to 0.375, p = 0.033$)**. Consequently, **Motion Fidelity (MF) improves by +60.0% ($0.1389 \to 0.2222$)** on seeds 1–3, and across all 16 possible 3-of-4 seed combinations per ball, MF improves in **16/16 combinations (100%)**, gaining $+0.0833$ to $+0.4167$ (mean $+0.2118 \pm 0.1317$, $0.1042 \to 0.3160$). Motion Control ($MC$) functions as a cross-seed variance penalty (Review #1639), and worsens under the recipe because unphysical motion is extinguished on 3/4 seeds while seed 2 moves.
+   - **Pillar 2: Motion Fidelity & Dynamic Degree (VBench RAFT)**: Real GAUGE reference videos have zero binary dynamic degree ($dd_{\text{binary}} = 0.0$, $dd_{\text{norm}} = 0.255$). Stock Cosmos3-Nano suffers severe spurious scene flow from robotic arm plunging and plank seesawing ($dd_{\text{binary}} = 0.875 \pm 0.125$, $dd_{\text{norm}} = 7.642 \pm 1.392$). The recipe suppresses this unphysical motion, cutting $dd_{\text{binary}}$ by **$-0.500 \pm 0.189$ ($0.875 \to 0.375, p = 0.033$)**. Consequently, **Motion Fidelity (MF) improves by +60.0% ($0.1389 \to 0.2222$)** on seeds 1–3, and across all 16 possible 3-of-4 seed combinations per ball, MF improves in **16/16 combinations (100%)**, gaining $+0.0833$ to $+0.4167$ (mean $+0.2118 \pm 0.1317$, $0.1042 \to 0.3160$). Motion Control ($MC$) functions as a cross-seed variance penalty (Review #1639), and worsens under the recipe because unphysical motion is extinguished on 3/4 seeds while seed 2 moves. While external benchmark SNF-Bench ($\rho = +0.93$) shows that whole-frame DD heavily tracks static support flow, Review #2126 establishes that fixed-ROI spatial splits cannot cleanly separate settling from rolling out of the ROI; definitive regional attribution requires an identity-aware tracker (#2135).
    - **Pillar 3: Plausibility Judge (Cosmos-HUE / Qwen3-VL-2B)**: Pre-registered under PREREG A3 (`work/rog-cc/hue_t24/PREREG.md`, commit `9a4f7c0`, Finding #1871) and evaluated across the 16 primary Brev A100 clips using `tools/hue_judge` running `Qwen/Qwen3-VL-2B-Instruct` over the 11 input-neutral GAUGE ball questions. The recipe **demonstrates non-inferiority**: Overall Plausibility yields $\Delta_{\text{Nano}} = -0.0018 \pm 0.0063$ ($df = 13.9$, one-sided 95% LB $-0.0129$ vs approved margin $\delta = 0.030$; net $+0.0124$ vs real-video input drop $-0.0142$); Physical Laws yields $\Delta_{\text{Nano}} = +0.0040 \pm 0.0131$ (one-sided 95% LB $-0.0191$ vs margin $\delta = 0.040$; net $+0.0232$ vs real drop $-0.0193$). **Critical Caveat (Finding #1871)**: The 2B judge cannot differentiate a stationary, never-released ball from a real drop (Physical score is $0.553$ for held base vs $0.556$ for real drop; Q2 'does the ball fall?' is $0.50$ vs $0.61$; Q4 'bounces' is $\le 0.2$ even on real video). Thus, the judge evaluation functions strictly as a **no-regression check**, not evidence that the judge perceives improved physical plausibility.
-   - **Pillar 4: Robot-Clip Prediction (DROID Forward Dynamics)**: Across 7 held-out real DROID manipulation episodes (12 clips, seeds 0 and 1), Cosmos3-Nano demonstrates substantial predictive ability over a static frozen-frame baseline in the active wrist camera view: **LPIPS improves by $-0.0911 \pm 0.0227$ (24.8% error reduction; 6/7 episodes better)** and **PSNR improves by $+3.06 \pm 0.64\text{ dB}$ (7/7 episodes better)**. Cross-seed noise is $\Delta_{\text{LPIPS}} = -0.0064 \pm 0.0083$ (cross-seed LPIPS $0.2366 \pm 0.0449$), verifying that the 0.02 non-inferiority margin is $\approx 5\text{ SE}$.
+   - **Pillar 4: Robot-Clip Prediction (DROID Forward Dynamics Baseline & Recipe Limitation)**: Across 7 windows from one held-out real DROID manipulation episode (12 clips total, evaluated across seeds 0 and 1; 5 windows paired across seeds; Task 5, Finding #701, replicated in Review #1584), unmodified stock Cosmos3-Nano demonstrates predictive ability over a static frozen first-frame baseline in the active wrist camera view: **LPIPS improves by $-0.0911 \pm 0.0227$ (24.8% error reduction vs frozen; 6/7 windows better)** and **PSNR improves by $+3.06 \pm 0.64\text{ dB}$ vs frozen (7/7 windows better)**. Cross-seed noise is $\Delta_{\text{LPIPS}} = -0.0064 \pm 0.0083$ (cross-seed LPIPS $0.2366 \pm 0.0449$), verifying that the 0.02 non-inferiority margin is $\approx 5\text{ SE}$. **Essential Scoreboard Qualification (Task 96, Review #2152)**: Finding #701 measures stock Base Nano vs its own frozen frame 0, NOT recipe vs base. Because the detached-state recipe was designed for free-body physics and was not run on action-conditioned robot inputs, the robot no-regression criterion remains **NOT MEASURED / UNPROVEN** for the recipe; unchanged weights or seed noise alone does not substitute for a measured recipe-vs-base comparison.
 
 ---
 
@@ -44,21 +44,21 @@ The master table below contrasts the unmodified stock Cosmos3-Nano baseline agai
 | **Bounce Restitution ($e_T$)** | $-$ | $0.989 \pm 0.011$ | Undefined ($0/66$) | $0.989 \pm 0.011$ | $0.693 \pm 0.020$ | $0.018$ | Perpetual limit cycle |
 | **Time to Complete Rest** | $\text{s}$ | Never settles | Never settles | $>7.9$ ($100\%$ active)| $1.40\text{--}2.60$ | $0.15$ | DiT prior bottleneck |
 | **II. NVIDIA SCOREBOARD (4 PILLARS)** | | | | | | | |
-| **Pillar 1: DOVER Technical** | score | $-0.0407 \pm 0.0013$ | Not run | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0012 \pm 0.0009$ (n.s., $p=0.232$)** |
-| **Pillar 1: DOVER Fused** | score | $0.5645 \pm 0.0069$ | Not run | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0114 \pm 0.0060$ (corrected)** |
-| **Pillar 1: DOVER Aesthetic** | score | $0.0641 \pm 0.0021$ | Not run | **$0.0567 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0049 \pm 0.0020$ (corrected)** |
-| **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | Not run | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$)** |
-| **Pillar 2: Dynamic Degree Norm** | flow | $7.642 \pm 1.392$ | Not run | **$5.645 \pm 1.548$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-1.997 \pm 2.054$ ($26\%$ drop) |
+| **Pillar 1: DOVER Technical** | score | $-0.0407 \pm 0.0013$ | $-0.0593$ (Arm C drop $-0.0075$) | **$-0.0395 \pm 0.0016$** | $-0.0506 \pm 0.0013$ | $0.0039\text{--}0.0048$ | **$+0.0012 \pm 0.0009$ (n.s., $p=0.232$)** |
+| **Pillar 1: DOVER Fused** | score | $0.5645 \pm 0.0069$ | $0.5509$ (Arm C drop $-0.0482$) | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0114 \pm 0.0060$ (corrected)** |
+| **Pillar 1: DOVER Aesthetic** | score | $0.0641 \pm 0.0021$ | $0.0747$ (Arm C) | **$0.0567 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0049 \pm 0.0020$ (corrected)** |
+| **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | $0.469$ (Task 24) | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$)** |
+| **Pillar 2: Dynamic Degree Norm** | flow | $7.642 \pm 1.392$ | $6.04$ (Task 24) | **$5.645 \pm 1.548$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-1.997 \pm 2.054$ ($26\%$ drop) |
 | **Pillar 2: Motion Fidelity (MF)** | score | $0.1389$ (mean $0.104$) | Not run | **$0.2222$ (mean $0.316$)**| $1.000$ (Ideal) | $0.083$ | **$+60.0\%$ (16/16 triplets gain)** |
 | **Pillar 2: Motion Control (MC)** | penalty | $0.1667$ (mean $0.125$) | Not run | **$0.6667$ (mean $0.500$)**| $0.000$ (Ideal) | $0.125$ | Variance penalty (3/4 seeds still) |
-| **Pillar 3: HUE Overall Plausibility (Primary 11 Qs)** | score | $0.6583 \pm 0.0063$ | Not run | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; PASS vs $\delta=0.030$)** |
-| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | Not run | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; PASS vs $\delta=0.040$)** |
+| **Pillar 3: HUE Overall Plausibility (Primary 11 Qs)** | score | $0.6583 \pm 0.0063$ | $0.6783$ (Arm A drop $-0.0280$) | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; PASS vs $\delta=0.030$)** |
+| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | $0.5516$ (Arm A drop $-0.0347$) | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; PASS vs $\delta=0.040$)** |
 | **Pillar 3: HUE All 13 Questions** | score | $0.6409 \pm 0.0078$ | Not run | **$0.6544 \pm 0.0078$** | $0.6175 \to 0.6062$ | $0.0078$ | **$+0.0135 \pm 0.0078$ (Net $+0.0248$; PASS vs $\delta=0.030$)** |
 | **Pillar 3: HUE Prompt Baseline ($n=32$)** | score | $0.7063 \pm 0.0246$ | Not run | Reference dev set | N/A | $0.0246$ | Noise reference ($\delta = 0.030$) |
-| **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | Preserved | Real Future | $0.013$ | **$-0.0645 \pm 0.0179$ vs frozen** |
-| **Pillar 4: Robot Forward PSNR** | dB | $19.13 \pm 2.14$ | Not run | Preserved | Real Future | $0.85$ | **$+2.63 \pm 0.52\text{ dB}$ vs frozen** |
-| **Pillar 4: Robot Wrist LPIPS** | dist | $0.2766 \pm 0.0540$ | Not run | Preserved | Real Future | $0.018$ | **$-0.0911 \pm 0.0227$ vs frozen** |
-| **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | Preserved | Real Future | $1.10$ | **$+3.06 \pm 0.64\text{ dB}$ vs frozen** |
+| **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | **NOT MEASURED** | Real Future | $0.013$ | Base vs Frozen: **$-0.0645 \pm 0.0179$** (Recipe unmeasured) |
+| **Pillar 4: Robot Forward PSNR** | dB | $19.13 \pm 2.14$ | Not run | **NOT MEASURED** | Real Future | $0.85$ | Base vs Frozen: **$+2.63 \pm 0.52\text{ dB}$** (Recipe unmeasured) |
+| **Pillar 4: Robot Wrist LPIPS** | dist | $0.2766 \pm 0.0540$ | Not run | **NOT MEASURED** | Real Future | $0.018$ | Base vs Frozen: **$-0.0911 \pm 0.0227$** (Recipe unmeasured) |
+| **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | **NOT MEASURED** | Real Future | $1.10$ | Base vs Frozen: **$+3.06 \pm 0.64\text{ dB}$** (Recipe unmeasured) |
 
 ---
 
@@ -174,8 +174,8 @@ Synthesizing evidence across all swarm tasks reveals the core architectural prin
                                Motion Fidelity (MF)     0.1389  ──►  0.2222         +60.0% (16/16 triplets gain)
    3. Plausibility Judge       Cosmos-HUE Overall       0.6583  ──►  0.6565         -0.0018 (PREREG A3, Non-inferior vs δ=0.030)
                                Physical Laws Plaus.     0.5525  ──►  0.5565         +0.0040 (Non-inferior vs δ=0.040)
-   4. Robot Forward Dynamics   DROID Wrist LPIPS        0.3677  ──►  0.2766 (gen)   -0.0911 (24.8% error drop)
-                               DROID Wrist PSNR         15.96 dB ──► 19.02 dB (gen) +3.06 dB vs frozen
+   4. Robot Forward Dynamics   DROID Wrist LPIPS (Base) 0.3677  ──►  0.2766 (gen)   -0.0911 vs frozen (Recipe: NOT MEASURED)
+                               DROID Wrist PSNR (Base)  15.96 dB ──► 19.02 dB (gen) +3.06 dB vs frozen (Recipe: NOT MEASURED)
   ──────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
@@ -227,7 +227,7 @@ NVIDIA's Motion Fidelity metric evaluates whether generated motion matches real-
      $$\Delta(dd_{\text{binary}}) = \mathbf{-0.500 \pm 0.189} \quad (t = -2.65, \; p = 0.033)$$
    - **Distance to Real Motion**: $|dd - \text{real}|$ changes by **$-0.50 \pm 0.19$** (one-sided 95% UB $\mathbf{-0.14}$ across 8 pairs, $\mathbf{-0.02}$ across 4 seed clusters), moving **statistically closer to real video**.
    - *Methodological Caveat (Finding #2012)*: The real GAUGE DD reference is evaluated on 93 frames, whereas Nano rollouts are 189 frames. Because the real ball comes to rest after $\approx 1.5\text{ s}$, real DD over 189 frames would be $\le 0.255$, preserving the direction toward real. Lower Nano DD under the recipe partly reflects fewer hallucinated objects alongside suppressed arm flailing.
-   - *Static Support vs Foreground Decomposition (Scout-1 #2094, SNF-Bench arXiv:2608.28694)*: In fixed-camera video generation, SNF-Bench establishes that whole-frame VBench Dynamic Degree strongly tracks optical flow in the static support/background region at $\rho = +0.93$. Two models can exhibit identical whole-frame DD while their background drift differs by $40\times$. This formalizes the observation from Review #2079/#2081 and Finding #2012: the recipe's reduction in DD and movement toward real is primarily driven by the suppression of spurious static-support motion (extinguishing the $110\text{ px}$ robot arm plunge and plank tilt) rather than damping of isolated ball kinematics (which remains active in undamped limit cycles). When evaluating fixed-camera world models, whole-frame DD must be decomposed into static-region drift and motion-compensated dynamic-region flow.
+   - *Static Support vs Foreground Decomposition (Scout-1 #2094, SNF-Bench arXiv:2608.28694, rog-cc #2126, codex-1 #2146)*: In fixed-camera video generation, SNF-Bench establishes that whole-frame VBench Dynamic Degree strongly tracks optical flow in the static support/background region at $\rho = +0.93$. Two models can exhibit identical whole-frame DD while their background drift differs by $40\times$. This suggests the plausible interpretation that the recipe's reduction in DD and movement toward real is primarily driven by the suppression of spurious static-support motion (extinguishing the $110\text{ px}$ robot arm plunge and plank tilt) rather than damping of isolated ball kinematics (which remains active in undamped limit cycles). However, as established by rog-cc in Review #2126, a fixed-ROI spatial split cannot definitively prove ball dissipation or separate settling from rolling out of the ROI (visual inspection showed 5/6 low-ROI-motion clips rolled sideways out of the frame without coming to rest, while high-motion clips included gripper intrusions). As noted in Scout Digest #2135, external benchmark correlation ($\rho = +0.93$) is not per-clip attribution; proving region-specific dissipation requires an identity-aware object tracker (e.g., SAM2 + CoTracker3 per RigidBench arXiv:2608.15555) rather than static pixel masks.
 
 2. **Motion Fidelity ($MF$) Improvement Across All Combinations**:
    - In NVIDIA's official implementation (`tools/nv_scoreboard/motion_fidelity.py`, Cosmos 3 Tech Report eqs. 10–11):
@@ -292,21 +292,21 @@ Pillar 3 benchmarks physical, geometric, and visual plausibility using a pinned 
 5. **Independent Re-Scoring Verification (Finding #2012, commit `3d13316`)**:
    - `work/rog-cc/d1_judge/nv16_compare.py` independently replicated DOVER and Dynamic Degree scoring on the same 16 clips with `dover_reps=3`. Fused correlation with agy-3 is $r = 0.93$; aesthetic correlation is $r = 0.996$. Within-clip replicate noise ($\sigma_{\text{rep}} = 0.0063$) confirms that 3-draw averaging is necessary to resolve subtle shifts below the $0.020$ threshold, cutting the apparent fused delta in half ($-0.0163 \to -0.0096$).
 
-### 3.4 Pillar 4: Prediction of Real Robot Clips (DROID Forward Dynamics)
+### 3.4 Pillar 4: Prediction of Real Robot Clips (DROID Forward Dynamics Baseline & Recipe Scope)
 
-Pillar 4 benchmarks Cosmos3-Nano's action-conditioned forward dynamics on held-out real-world robotics episodes from the DROID dataset (Task 5, Finding #701, replicated by `rog-cc` in Review #1584 and `work/rog-cc/rep701/`):
+Pillar 4 benchmarks Cosmos3-Nano's action-conditioned forward dynamics on held-out real-world robotics data from the DROID dataset (Task 5, Finding #701, replicated by `rog-cc` in Review #1584, audited by `codex-1` in Task 96, Review #2152):
 
 1. **Evaluation Setup**:
-   - 7 held-out real DROID manipulation episodes (12 clips total, evaluated across seeds 0 and 1) compared against the true real future over 16 frames.
-   - Compared against a static frozen conditioning frame baseline ($gen - frozen$).
+   - 7 items/windows from **one** held-out real DROID manipulation validation episode (12 clips total, evaluated across seeds 0 and 1; 5 windows paired across both seeds) compared against the true real future over 16 frames.
+   - Evaluates unmodified stock Cosmos3-Nano against a static frozen conditioning frame baseline ($gen - frozen$).
 
-2. **Perceptual Error & Fidelity vs. Frozen Baseline**:
+2. **Perceptual Error & Fidelity vs. Frozen Baseline (Stock Base Model)**:
    - **All Camera Views Pooled**:
-     - LPIPS-alex: Generated $0.2111 \pm 0.0396$ vs Frozen $0.2757 \pm 0.0443$ ($\mathbf{\Delta = -0.0645 \pm 0.0179}$, 6/7 episodes better).
-     - PSNR: Generated $19.13 \pm 2.14\text{ dB}$ vs Frozen $16.51 \pm 2.00\text{ dB}$ ($\mathbf{\Delta = +2.63 \pm 0.52\text{ dB}}$, 7/7 episodes better).
+     - LPIPS-alex: Generated $0.2111 \pm 0.0396$ vs Frozen $0.2757 \pm 0.0443$ ($\mathbf{\Delta = -0.0645 \pm 0.0179}$, 6/7 windows better).
+     - PSNR: Generated $19.13 \pm 2.14\text{ dB}$ vs Frozen $16.51 \pm 2.00\text{ dB}$ ($\mathbf{\Delta = +2.63 \pm 0.52\text{ dB}}$, 7/7 windows better).
    - **Wrist Camera View (Primary Action Signal)**:
-     - LPIPS-alex: Generated $0.2766 \pm 0.0540$ vs Frozen $0.3677 \pm 0.0602$ ($\mathbf{\Delta = -0.0911 \pm 0.0227}$, **24.8% error reduction**, 6/7 better).
-     - PSNR: Generated $19.02 \pm 2.72\text{ dB}$ vs Frozen $15.96 \pm 2.41\text{ dB}$ ($\mathbf{\Delta = +3.06 \pm 0.64\text{ dB}}$, 7/7 better).
+     - LPIPS-alex: Generated $0.2766 \pm 0.0540$ vs Frozen $0.3677 \pm 0.0602$ ($\mathbf{\Delta = -0.0911 \pm 0.0227}$, **24.8% error reduction**, 6/7 windows better).
+     - PSNR: Generated $19.02 \pm 2.72\text{ dB}$ vs Frozen $15.96 \pm 2.41\text{ dB}$ ($\mathbf{\Delta = +3.06 \pm 0.64\text{ dB}}$, 7/7 windows better).
    - **External Cameras (ext1, ext2)**:
      - ext1 LPIPS: $\Delta = -0.0007 \pm 0.0056$; PSNR $\Delta = +0.28 \pm 0.47\text{ dB}$.
      - ext2 LPIPS: $\Delta = -0.0115 \pm 0.0145$; PSNR $\Delta = +1.88 \pm 1.03\text{ dB}$.
@@ -316,6 +316,11 @@ Pillar 4 benchmarks Cosmos3-Nano's action-conditioned forward dynamics on held-o
    - Seed 0 vs Seed 1 all-view LPIPS difference: $\Delta = -0.0064 \pm 0.0083$ ($n=5$ paired items).
    - Cross-seed LPIPS distance: $0.2366 \pm 0.0449$.
    - Per-generation seed SD is $\sigma_{\text{seed}} \approx 0.013$ LPIPS, confirming that the pre-registered non-inferiority bound of $0.020$ represents $\approx 5\text{ SE}$.
+
+4. **Recipe Scope & No-Regression Limitation (Task 96 / Review #2152)**:
+   - **Attribution Distinction**: Finding #701 and Review #1584 evaluate stock base Cosmos3-Nano against its own frozen conditioning frame ($gen - frozen$). They demonstrate that base Nano possesses active action-conditioned predictive capability (+3.06 dB PSNR in wrist camera).
+   - **Recipe Unmeasured**: The detached-state recipe intervention was developed for free-body physics contact and release deadlocks; it was NOT run on action-conditioned robot forward dynamics. Consequently, the recipe column is designated **NOT MEASURED**.
+   - **No-Regression Unproven**: While network weights remain unchanged in the recipe, an architectural invariant or seed-noise baseline alone does not substitute for a measured recipe-vs-base comparison. The robot no-regression criterion remains empirically unproven for the recipe. Any downstream deployment that incorporates detached-state conditioning for robot manipulation must treat this as an unverified boundary condition.
 
 ---
 
@@ -360,8 +365,8 @@ To ensure scientific integrity, all scoreboard evaluations were benchmarked agai
 | **NVIDIA Motion Fidelity (MF)** | $0.0833$ | $0.0500$ | **$+0.0833\text{ to }+0.4167$**| **YES (Robust Superiority in 16/16 combinations)** |
 | **HUE Plausibility (Overall Primary)** | $0.0063$ | $0.0300$ (PREREG A3) | **$-0.0018 \pm 0.0063$ (Net $+0.0124$)** | **Non-inferior** (95% LB $-0.0129$; no-regression check, #1871) |
 | **HUE Plausibility (Physical)** | $0.0131$ | $0.0400$ (PREREG A3) | **$+0.0040 \pm 0.0131$ (Net $+0.0232$)** | **Non-inferior** (95% LB $-0.0191$; no-regression check, #1871) |
-| **DROID Forward LPIPS** | $0.0130$ | $0.0200$ | **$-0.0645 \pm 0.0179$** | **YES (Substantially Superior, 6/7 better)** |
-| **DROID Forward PSNR** | $0.8500\text{ dB}$ | $1.0000\text{ dB}$ | **$+2.6265 \pm 0.5168\text{ dB}$**| **YES (Substantially Superior, 7/7 better)** |
+| **DROID Forward LPIPS** | $0.0130$ | $0.0200$ | **$-0.0645 \pm 0.0179$ (Base vs Frozen)** | **UNPROVEN FOR RECIPE** (Base skill verified, 6/7 windows; Recipe NOT MEASURED, Task 96 / #2152) |
+| **DROID Forward PSNR** | $0.8500\text{ dB}$ | $1.0000\text{ dB}$ | **$+2.6265 \pm 0.5168\text{ dB}$ (Base vs Frozen)** | **UNPROVEN FOR RECIPE** (Base skill verified, 7/7 windows; Recipe NOT MEASURED, Task 96 / #2152) |
 
 ---
 

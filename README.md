@@ -25,7 +25,7 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | :--- | :--- | :--- | :--- |
 | **Deliverable 1: The Improved Nano Recipe** | [`reports/deliverable_1_improved_nano_recipe.md`](reports/deliverable_1_improved_nano_recipe.md)<br>*(Consolidated per #1825)* | [`tools/recipe/run_recipe.py`](tools/recipe/run_recipe.py) | **Detached-State Dynamics Protocol**: Restores true Earth gravity ($g = 9.73 \pm 1.91\text{ m/s}^2$ on Ball 1 Seed 1); initial release rate increases from $0.0\% \to 100.0\%$; phantom duplicates eliminated ($100\% \to 0\%$); turnkey CLI script supporting diffusers and vLLM. |
 | **Deliverable 2: What Was Wrong and Why** | [`reports/deliverable_2_what_was_wrong_and_why.md`](reports/deliverable_2_what_was_wrong_and_why.md) | Multi-agent diagnostic scripts in `work/` | **8 Replicated Findings with Causal Mechanisms**: (1) Gripper Release Deadlock; (2) Mid-Event Gravity Recovery; (3) Perpetual Limit Cycles vs VAE Representational Sufficiency; (4) Anomalous Energy Creation ($5.8\times$ gain); (5) RoPE/FPS Invariance; (6) Slope Terminal Speed Ceilings; (7) Pendulum Bob Bifurcation; (8) Ballistic LoRA Sim-to-Real Failure (0/66 release). |
-| **Deliverable 3: Before/After on Both Scoreboards** | [`reports/deliverable_3_before_after_scoreboards.md`](reports/deliverable_3_before_after_scoreboards.md) | [`tools/nv_scoreboard/score.py`](tools/nv_scoreboard/score.py)<br>[`tools/realball/firstfall.py`](tools/realball/firstfall.py) | **Dual Scoreboard Master Synthesis (Dev Sets)**: Physics Scoreboard: $g = -0.19 \to 9.73\text{ m/s}^2$, release $0\% \to 100\%$; NVIDIA Scoreboard: DOVER Technical $+0.0012$ (no detectable drop), DOVER Fused raw 95% LB $-0.0275$ (corrected $-0.0114 \pm 0.0060$ within seed noise), Motion Fidelity $+60.0\%$ to $+300\%$ (16/16 triplets gain), DROID robot prediction $+3.06\text{ dB}$ PSNR. |
+| **Deliverable 3: Before/After on Both Scoreboards** | [`reports/deliverable_3_before_after_scoreboards.md`](reports/deliverable_3_before_after_scoreboards.md) | [`tools/nv_scoreboard/score.py`](tools/nv_scoreboard/score.py)<br>[`tools/realball/firstfall.py`](tools/realball/firstfall.py) | **Dual Scoreboard Master Synthesis (Dev Sets)**: Physics Scoreboard: $g = -0.19 \to 9.73\text{ m/s}^2$, release $0\% \to 100\%$; NVIDIA Scoreboard: DOVER Technical $+0.0012$ (no detectable drop), DOVER Fused raw 95% LB $-0.0275$ (corrected $-0.0114 \pm 0.0060$ within seed noise), Motion Fidelity $+60.0\%$ to $+300\%$ (16/16 triplets gain), DROID robot prediction $+3.06\text{ dB}$ PSNR (base vs frozen; recipe unmeasured). |
 
 ---
 
@@ -45,7 +45,7 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
    NVIDIA: Motion Fidelity    0.1389           ──►  0.2222 (+60.0% gain)     16/16 Triplets Superior
    NVIDIA: Dynamic Degree     0.875 (Arm flail) ──►  0.375 (-0.500 drop)      Collapses spurious flow (closer to real)
    NVIDIA: Plausibility Judge 0.6583 (Neutral)  ──►  0.6565 (PREREG A3)       Non-inferior (No-reg check)
-   NVIDIA: Robot Wrist PSNR   15.96 dB (Frozen) ──►  19.02 dB (Gen future)    +3.06 dB (7/7 better)
+   NVIDIA: Robot Wrist PSNR   15.96 dB (Frozen) ──►  19.02 dB (Gen future)    +3.06 dB vs frozen (Recipe: NOT MEASURED)
   ──────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
@@ -68,14 +68,14 @@ Through multi-agent investigation across decentralized hardware nodes, referee-v
 | **Pillar 1: DOVER Fused (3 reps)** | score | $0.5640 \pm 0.0058$ | $0.5509$ (Arm C drop $-0.048$) | **$0.5544 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | **$-0.0096 \pm 0.0058$ ($95\%\text{ CI: } [-0.021, +0.001]$, Inconclusive vs $-0.020$)** |
 | **Pillar 1: DOVER Fused (1 rep)** | score | $0.5645 \pm 0.0069$ | Arms A/B drop $-0.035$ | **$0.5482 \pm 0.0105$** | $0.4988 \pm 0.0047$ | $0.0210\text{--}0.0319$ | $-0.0163 \pm 0.0059$ ($95\%\text{ LB: } -0.0275$; corr $-0.0114$) |
 | **Pillar 1: DOVER Aesthetic (3 reps)**| score | $0.0638 \pm 0.0020$ | $0.0747$ (Degraded) | **$0.0570 \pm 0.0031$** | $0.0464 \pm 0.0009$ | $0.0062\text{--}0.0094$ | **$-0.0068 \pm 0.0020$ (LB $-0.0105$; real control $\Delta=-0.0008$)** |
-| **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | $0.469$ (Task 24) | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$, closer to real; $\rho=+0.93$ static flow)** |
+| **Pillar 2: Dynamic Degree Binary** | $\{0, 1\}$ | $0.875 \pm 0.125$ | $0.469$ (Task 24) | **$0.375 \pm 0.183$** | $0.000 \pm 0.000$ | $0.354\text{--}0.540$ | **$-0.500 \pm 0.189$ ($p=0.033$, closer to real; plausible static flow suppression per SNF-Bench $\rho=+0.93$ #2126)** |
 | **Pillar 2: Dynamic Degree Norm** | flow | $7.64 \pm 1.39$ | $6.04$ (Task 24) | **$5.62 \pm 2.05$** | $0.255 \pm 0.014$ | $4.170\text{--}4.674$ | $-2.02 \pm 2.05$ ($26\%$ drop, n.s.) |
 | **Pillar 2: Motion Fidelity (MF)** | score | $0.1389$ (mean $0.104$) | Not run | **$0.2222$ (mean $0.316$)**| $1.000$ (Ideal) | $0.083$ | **$+60.0\%$ (16/16 triplets gain)** |
 | **Pillar 2: Motion Control (MC)** | penalty | $0.1667$ (mean $0.125$) | Not run | **$0.6667$ (mean $0.500$)**| $0.000$ (Ideal) | $0.125$ | Variance penalty (3/4 seeds still) |
-| **Pillar 3: HUE Overall Plausibility**| score | $0.6583 \pm 0.0063$ | Not run | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; Non-inferior vs $\delta=0.030$; Qwen3-VL-2B no-regression check #1871)** |
-| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | Not run | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; Non-inferior vs $\delta=0.040$; Qwen3-VL-2B no-regression check #1871)** |
-| **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | Preserved | Real Future | $0.013$ | **$-0.0645 \pm 0.0179$ vs frozen** |
-| **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | Preserved | Real Future | $1.10$ | **$+3.06 \pm 0.64\text{ dB}$ vs frozen** |
+| **Pillar 3: HUE Overall Plausibility**| score | $0.6583 \pm 0.0063$ | $0.6783$ (Arm A drop $-0.0280$) | **$0.6565 \pm 0.0063$** | $0.6658 \to 0.6516$ | $0.0063$ | **$-0.0018 \pm 0.0063$ (Net $+0.0124$; Non-inferior vs $\delta=0.030$; Qwen3-VL-2B no-regression check #1871)** |
+| **Pillar 3: HUE Physical Laws** | score | $0.5525 \pm 0.0131$ | $0.5516$ (Arm A drop $-0.0347$) | **$0.5565 \pm 0.0131$** | $0.5558 \to 0.5365$ | $0.0131$ | **$+0.0040 \pm 0.0131$ (Net $+0.0232$; Non-inferior vs $\delta=0.040$; Qwen3-VL-2B no-regression check #1871)** |
+| **Pillar 4: Robot Forward LPIPS** | dist | $0.2111 \pm 0.0396$ | Not run | **NOT MEASURED** | Real Future | $0.013$ | Base vs Frozen: **$-0.0645 \pm 0.0179$** (Recipe unmeasured) |
+| **Pillar 4: Robot Wrist PSNR** | dB | $19.02 \pm 2.72$ | Not run | **NOT MEASURED** | Real Future | $1.10$ | Base vs Frozen: **$+3.06 \pm 0.64\text{ dB}$** (Recipe unmeasured) |
 
 ---
 
