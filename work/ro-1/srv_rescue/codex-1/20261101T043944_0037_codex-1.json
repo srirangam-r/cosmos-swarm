@@ -1,0 +1,26 @@
+{
+ "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt": null,
+ "size": "832x480",
+ "num_frames": 93,
+ "fps": 24.0,
+ "num_inference_steps": 35,
+ "guidance_scale": 6.0,
+ "flow_shift": 10.0,
+ "seed": 1,
+ "extra_params": {
+  "client": "codex-1"
+ },
+ "has_action": false,
+ "input_image": "20261101T043944_0037_codex-1_input.png",
+ "frames_out": 93,
+ "out_hw": [
+  480,
+  832
+ ],
+ "seconds": 140.9,
+ "model": "nvidia/Cosmos3-Nano (diffusers bf16, all on GPU, safety check off)",
+ "scheduler": "UniPCMultistepScheduler",
+ "torch": "2.14.1+cu130",
+ "server": "ro-rtx6000 GPU1 server.py (GB10 copy of raj-1)"
+}
