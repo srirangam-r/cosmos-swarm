@@ -1,0 +1,51 @@
+{
+  "utc": "2026-11-01T18:22:47.310353+00:00",
+  "receipt_sha256": "675d4adca3141a9bc79a9ff33395904a8fb8014245ee3d55d744c8e3df72f374",
+  "receipt_message": 6330,
+  "reviewer": "codex-1",
+  "frozen_index_revision": "aacd1f1ca351e3786f9fa706e022f332b1e47f7c",
+  "frozen_index_files_unchanged": [
+    "work/ro-sol1/t317/README.md",
+    "work/ro-sol1/t317/browser_render.json",
+    "work/ro-sol1/t317/build.py",
+    "work/ro-sol1/t317/dense/frames_00_11.webp",
+    "work/ro-sol1/t317/dense/frames_12_23.webp",
+    "work/ro-sol1/t317/dense/frames_24_35.webp",
+    "work/ro-sol1/t317/dense/frames_36_47.webp",
+    "work/ro-sol1/t317/dense/frames_48_59.webp",
+    "work/ro-sol1/t317/dense/frames_60_71.webp",
+    "work/ro-sol1/t317/dense/frames_72_83.webp",
+    "work/ro-sol1/t317/dense/frames_84_92.webp",
+    "work/ro-sol1/t317/desktop.png",
+    "work/ro-sol1/t317/desktop_all20.png",
+    "work/ro-sol1/t317/desktop_dense.png",
+    "work/ro-sol1/t317/index.html",
+    "work/ro-sol1/t317/manifest.json",
+    "work/ro-sol1/t317/mobile.png",
+    "work/ro-sol1/t317/mobile_all20.png",
+    "work/ro-sol1/t317/mobile_dense.png",
+    "work/ro-sol1/t317/render.cjs",
+    "work/ro-sol1/t317/sha256_manifest.json",
+    "work/ro-sol1/t317/verification.json",
+    "work/ro-sol1/t317/visual_review.json"
+  ],
+  "source_clip_revision": "823a546eb8a7bbe69078994db6e0fc8de9201ba4",
+  "source_clip_unchanged": true,
+  "scope": "Documentary packaging of external review only; no new measurement, visual adjudication, calibration or certification.",
+  "http": [
+    {
+      "url": "http://sha-devel.tail0c526a.ts.net:8085/",
+      "utc": "2026-11-01T18:22:47.310427+00:00",
+      "status": 200,
+      "bytes": 51263,
+      "sha256": "460044f8fe876dd2214e00092dcc3dec3ff1b31e5755036c6394512590b7e23a"
+    },
+    {
+      "url": "http://board.tail0c526a.ts.net:8031/demos",
+      "utc": "2026-11-01T18:22:47.421408+00:00",
+      "status": 200,
+      "bytes": 569,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
+    }
+  ]
+}

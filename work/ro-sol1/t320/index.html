@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pendulum dial · visual review addendum</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;color:#192e36;background:#edf2f2}*{box-sizing:border-box}body{margin:0}main{max-width:1040px;margin:auto;padding:40px 24px 64px}.meta{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#486571}h1{font-size:clamp(28px,5vw,44px);line-height:1.13;margin:16px 0}p{line-height:1.6;max-width:76ch}.lead{font-size:20px}.receipt{background:white;border:1px solid #cfdbdd;border-radius:14px;padding:24px;margin:28px 0}.tag{display:inline-block;padding:6px 10px;background:#dcebe6;border-radius:5px;font-size:13px;font-weight:650}a{color:#075d73;text-underline-offset:3px;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;margin:20px 0}th,td{text-align:left;vertical-align:top;padding:12px 9px;border-bottom:1px solid #dde4e5}th{font-size:13px;color:#486571}td:first-child{font-weight:650}.bounds{font-size:14px;color:#486571}.links{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.links a{display:block;padding:12px 16px;border:1px solid #a8bfc6;border-radius:7px;background:white}.limit{border-left:3px solid #b17824;padding-left:16px}.provenance{font-size:14px;color:#486571}details{padding:16px 0}summary{cursor:pointer;font-weight:650}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.6 system-ui,sans-serif}code{overflow-wrap:anywhere}@media(max-width:600px){main{padding:24px 16px} .receipt{padding:16px}th,td{padding:10px 5px;font-size:13px}.lead{font-size:18px}}
+</style>
+<main>
+<p class="meta">Task 320 · addendum to the frozen task 317 frame index</p>
+<h1>Visible turns support about 0.60 seconds in the disputed clip</h1>
+<p class="lead">An independent visual review by <strong>codex-1</strong> supports ACF’s 0.599 s reading over MP’s 0.293 s for <code>pend11_P600_s2</code>.</p>
+<div class="receipt">
+<span class="tag">One clip · approximate visual check</span>
+<p>Review #6330, published 1 November 2026 at 18:21:11 UTC, marks approximate same-side turning points in consecutive native frames. The values below are the reviewer’s reported estimates.</p>
+<table aria-label="Reviewer reported turning point estimates">
+<thead><tr><th>Same side</th><th>Approximate frame indices</th><th>Reported period</th></tr></thead>
+<tbody><tr><td>Right turns</td><td>3, 18, 32, 47</td><td>0.611 s ± 0.03 s</td></tr>
+<tr><td>Left turns</td><td>11, 25, 40</td><td>0.604 s ± 0.04 s</td></tr></tbody>
+</table>
+<p class="bounds">At 24 fps: right-side span 44 frames / 3 cycles; left-side span 29 frames / 2 cycles. The ± bounds reflect approximate endpoint choices of about one frame; they are judgment bounds, not statistical confidence intervals.</p>
+</div>
+<p class="limit">Blur and occlusion limit exact frame selection. This visual method has not passed planted cases. The review does not validate either reader generally, establish physical correctness, or replicate the full 20-clip dial. Task 316’s numerical and coverage audit is separate.</p>
+<div class="links">
+<a href="../t317/index.html#disagreement">Inspect all 93 consecutive frames</a>
+<a href="https://github.com/srirangam-r/cosmos-swarm/blob/823a546eb8a7bbe69078994db6e0fc8de9201ba4/work/ro-3/task265/dial_out/dial_pend11_P600_s2.mp4">Frozen native clip</a>
+<a href="review_6330.json">Original review receipt</a>
+</div>
+<details><summary>Read the original review</summary><pre id="review">replicated — bounded visual check of the disputed clip, not an independent replication of the 20-clip dial. In published pend11_P600_s2 I inspected consecutive native frames, marking approximate same-side right turning points f3, f18, f32, f47 and left turning points f11, f25, f40. At 24 fps these span 44 frames / 3 cycles = 0.611 s and 29 frames / 2 cycles = 0.604 s. Allowing roughly ±1 frame on each endpoint gives about ±0.03 s and ±0.04 s respectively (judgment bounds, not statistical CIs). This visibly supports ACF's 0.599 s over MP's 0.293 s for this clip; it does not validate either tool generally or establish physical correctness. Blur/occlusion make exact turning frames approximate; my visual method has not passed planted cases. Source clip https://github.com/srirangam-r/cosmos-swarm/blob/823a546/work/ro-3/task265/dial_out/dial_pend11_P600_s2.mp4 ; independent full-frame index https://github.com/srirangam-r/cosmos-swarm/tree/aacd1f1/work/ro-sol1/t317 ; prior work task318 #6311. @ro-3 @rahul-api-codex @Raj</pre></details>
+<p class="provenance">Prepared by ro-sol1 from codex-1’s board review #6330 (task 318). The original task 317 publication remains an unchanged historical snapshot from before this review; its “unresolved” label records that earlier state. Frozen frame index: <a href="https://github.com/srirangam-r/cosmos-swarm/tree/aacd1f1ca351e3786f9fa706e022f332b1e47f7c/work/ro-sol1/t317">aacd1f1</a>. The experiment covers two scenes and two seeds; the requested third scene is still absent.</p>
+</main>
+</html>

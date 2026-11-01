@@ -1,0 +1,60 @@
+{
+  "utc": "2026-11-01T18:22:37.326Z",
+  "preview_sha256": "82112c7156a888bdbafe03b280c1f406a529eb2b9b7fcff05890630ac7dc4838",
+  "mode": "headless installed Brave, anonymous CDP pipes, static local page; no video playback",
+  "renders": [
+    {
+      "name": "desktop",
+      "state": {
+        "overflow": false,
+        "text": "TASK 320 · ADDENDUM TO THE FROZEN TASK 317 FRAME INDEX\n\nVisible turns support about 0.60 seconds in the disputed clip\n\nAn independent visual review by codex-1 supports ACF’s 0.599 s reading over MP’s 0.293 s for pend11_P600_s2.\n\nOne clip · approximate visual check\n\nReview #6330, published 1 November 2026 at 18:21:11 UTC, marks approximate same-side turning points in consecutive native frames. The values below are the reviewer’s reported estimates.\n\nSame side\tApproximate frame indices\tReported period\nRight turns\t3, 18, 32, 47\t0.611 s ± 0.03 s\nLeft turns\t11, 25, 40\t0.604 s ± 0.04 s\n\nAt 24 fps: right-side span 44 frames / 3 cycles; left-side span 29 frames / 2 cycles. The ± bounds reflect approximate endpoint choices of about one frame; they are judgment bounds, not statistical confidence intervals.\n\nBlur and occlusion limit exact frame selection. This visual method has not passed planted cases. The review does not validate either reader generally, establish physical correctness, or replicate the full 20-clip dial. Task 316’s numerical and coverage audit is separate.\n\nInspect all 93 consecutive frames\nFrozen native clip\nOriginal review receipt\nRead the original review\n\nPrepared by ro-sol1 from codex-1’s board review #6330 (task 318). The original task 317 publication remains an unchanged historical snapshot from before this review; its “unresolved” label records that earlier state. Frozen frame index: aacd1f1. The experiment covers two scenes and two seeds; the requested third scene is still absent.",
+        "review": "replicated — bounded visual check of the disputed clip, not an independent replication of the 20-clip dial. In published pend11_P600_s2 I inspected consecutive native frames, marking approximate same-side right turning points f3, f18, f32, f47 and left turning points f11, f25, f40. At 24 fps these span 44 frames / 3 cycles = 0.611 s and 29 frames / 2 cycles = 0.604 s. Allowing roughly ±1 frame on each endpoint gives about ±0.03 s and ±0.04 s respectively (judgment bounds, not statistical CIs). This visibly supports ACF's 0.599 s over MP's 0.293 s for this clip; it does not validate either tool generally or establish physical correctness. Blur/occlusion make exact turning frames approximate; my visual method has not passed planted cases. Source clip https://github.com/srirangam-r/cosmos-swarm/blob/823a546/work/ro-3/task265/dial_out/dial_pend11_P600_s2.mp4 ; independent full-frame index https://github.com/srirangam-r/cosmos-swarm/tree/aacd1f1/work/ro-sol1/t317 ; prior work task318 #6311. @ro-3 @rahul-api-codex @Raj",
+        "links": [
+          "../t317/index.html#disagreement",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/823a546eb8a7bbe69078994db6e0fc8de9201ba4/work/ro-3/task265/dial_out/dial_pend11_P600_s2.mp4",
+          "review_6330.json",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/aacd1f1ca351e3786f9fa706e022f332b1e47f7c/work/ro-sol1/t317"
+        ]
+      }
+    },
+    {
+      "name": "desktop",
+      "linked": {
+        "url": "file:///home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t317/index.html#disagreement",
+        "dense": 8,
+        "ok": true
+      }
+    },
+    {
+      "name": "mobile",
+      "state": {
+        "overflow": false,
+        "text": "TASK 320 · ADDENDUM TO THE FROZEN TASK 317 FRAME INDEX\n\nVisible turns support about 0.60 seconds in the disputed clip\n\nAn independent visual review by codex-1 supports ACF’s 0.599 s reading over MP’s 0.293 s for pend11_P600_s2.\n\nOne clip · approximate visual check\n\nReview #6330, published 1 November 2026 at 18:21:11 UTC, marks approximate same-side turning points in consecutive native frames. The values below are the reviewer’s reported estimates.\n\nSame side\tApproximate frame indices\tReported period\nRight turns\t3, 18, 32, 47\t0.611 s ± 0.03 s\nLeft turns\t11, 25, 40\t0.604 s ± 0.04 s\n\nAt 24 fps: right-side span 44 frames / 3 cycles; left-side span 29 frames / 2 cycles. The ± bounds reflect approximate endpoint choices of about one frame; they are judgment bounds, not statistical confidence intervals.\n\nBlur and occlusion limit exact frame selection. This visual method has not passed planted cases. The review does not validate either reader generally, establish physical correctness, or replicate the full 20-clip dial. Task 316’s numerical and coverage audit is separate.\n\nInspect all 93 consecutive frames\nFrozen native clip\nOriginal review receipt\nRead the original review\n\nPrepared by ro-sol1 from codex-1’s board review #6330 (task 318). The original task 317 publication remains an unchanged historical snapshot from before this review; its “unresolved” label records that earlier state. Frozen frame index: aacd1f1. The experiment covers two scenes and two seeds; the requested third scene is still absent.",
+        "review": "replicated — bounded visual check of the disputed clip, not an independent replication of the 20-clip dial. In published pend11_P600_s2 I inspected consecutive native frames, marking approximate same-side right turning points f3, f18, f32, f47 and left turning points f11, f25, f40. At 24 fps these span 44 frames / 3 cycles = 0.611 s and 29 frames / 2 cycles = 0.604 s. Allowing roughly ±1 frame on each endpoint gives about ±0.03 s and ±0.04 s respectively (judgment bounds, not statistical CIs). This visibly supports ACF's 0.599 s over MP's 0.293 s for this clip; it does not validate either tool generally or establish physical correctness. Blur/occlusion make exact turning frames approximate; my visual method has not passed planted cases. Source clip https://github.com/srirangam-r/cosmos-swarm/blob/823a546/work/ro-3/task265/dial_out/dial_pend11_P600_s2.mp4 ; independent full-frame index https://github.com/srirangam-r/cosmos-swarm/tree/aacd1f1/work/ro-sol1/t317 ; prior work task318 #6311. @ro-3 @rahul-api-codex @Raj",
+        "links": [
+          "../t317/index.html#disagreement",
+          "https://github.com/srirangam-r/cosmos-swarm/blob/823a546eb8a7bbe69078994db6e0fc8de9201ba4/work/ro-3/task265/dial_out/dial_pend11_P600_s2.mp4",
+          "review_6330.json",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/aacd1f1ca351e3786f9fa706e022f332b1e47f7c/work/ro-sol1/t317"
+        ]
+      }
+    },
+    {
+      "name": "mobile",
+      "linked": {
+        "url": "file:///home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t317/index.html#disagreement",
+        "dense": 8,
+        "ok": true
+      }
+    }
+  ],
+  "exceptions": [],
+  "browser_pid": 11,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  }
+}
