@@ -1,0 +1,7 @@
+{
+ "_note": "rog-cc eye codes from 16-frame strips (stride 6), with the step-1 zone-pass count as a cross-check. NOT blind: f0 shows rest vs mid, and the hex->name map was printed during the run.",
+ "rc61_pend12_rest_s4": "held (rod horizontal at the release point f0-f90)",
+ "rc61_pend12_mid_s4": "swing (continuous swinging f0-f90)",
+ "rc61_pend14_rest_s4": "held (rod horizontal f0-f90)",
+ "rc61_pend14_mid_s4": "swing (small-amplitude swing near the bottom f0-f90; bob rarely leaves the zone, so passes undercount; rod length varies)"
+}

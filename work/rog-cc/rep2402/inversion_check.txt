@@ -1,0 +1,6 @@
+gauge_b1_ctrl_s1.mp4 MAE f0 vs input 171.7, vs inverted input 7.5
+gauge_b1_ctrl_s2.mp4 MAE f0 vs input 171.7, vs inverted input 7.5
+gauge_b1_ctrl_s3.mp4 MAE f0 vs input 171.7, vs inverted input 7.5
+gauge_b1_rope07_s1.mp4 MAE f0 vs input 171.6, vs inverted input 7.6
+gauge_b1_rope07_s2.mp4 MAE f0 vs input 171.7, vs inverted input 7.5
+gauge_b1_rope07_s3.mp4 MAE f0 vs input 171.6, vs inverted input 7.6
