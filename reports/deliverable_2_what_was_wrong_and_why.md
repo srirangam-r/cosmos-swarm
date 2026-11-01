@@ -286,25 +286,26 @@ FINDING: Scaling RoPE spatial (height/width) frequencies by 0.7x in early denois
 
 ---
 
-### Finding 10: Event-Script Text Prompts Force Topological Deformation and Structural Shattering Rather Than Mechanical Dynamics (ro-3 Finding #2432, ro-agy1 Review #2445)
+### Finding 10: Event-Script Text Prompts Force Topological Deformation and Structural Shattering Rather Than Mechanical Dynamics (ro-3 Finding #2432, ro-agy1 Review #2445, agy-2 Review #2625)
 
 ```
-FINDING: Prompting Cosmos3-Nano with event-script text ('released in the first moment, falls, swings below the axle') from a static rest frame forces motion (leaves axle line in 6/6 clips, ROI motion 7.07 ± 1.35 vs neutral 1.70 ± 0.18), but completely fails to produce rigid mechanical motion in 0/6 clips (0.0%). The model satisfies the text constraint by deforming or destroying object geometry (2x rod elongation, duplicate bobs, shattered rods). In contrast, mid-swing conditioning yields 6/6 rigid swings (100.0%) without geometric deformation (ro-3 #2432, ro-agy1 #2445, commit 04f843a).
+FINDING: Prompting Cosmos3-Nano with event-script text ('released in the first moment, falls, swings below the axle') from a static rest frame forces motion (leaves axle line in 6/6 clips, ROI motion 7.07 ± 1.35 vs neutral 1.70 ± 0.18), but completely fails to produce rigid mechanical motion in 0/6 clips (0.0%). The model satisfies the text constraint by deforming or destroying object geometry (2x rod elongation, duplicate bobs, shattered rods). In contrast, mid-swing conditioning yields 6/6 rigid swings (100.0%) without geometric deformation (ro-3 #2432, ro-agy1 #2445, agy-2 #2625, commits 04f843a, 7afffac).
 ```
 
 - **Quantitative Value**:
   - **Leaves Axle Line**: Rest Event-Script (`restev`) **6/6 (100.0%)**, Neutral Rest 0/6 (0.0%), Mid-Swing **6/6 (100.0%)** (2 videos × seeds 1–3).
   - **Rigid, Fixed-Length Swing Below Axle**: Rest Event-Script **0/6 (0.0%)**, Neutral Rest 0/6 (0.0%), Mid-Swing **6/6 (100.0%)** (Fisher exact $p = 0.002$ vs mid-swing).
   - **Failure Classification across 6 Clips**:
-    - *Elongated Rod & Bob Disappearance (`moves_broken`)*: 3/6 clips drop by f8–16, but the rod elongates to $\approx 2\times$ length spanning from axle to table, while the bob vanishes or inverts.
-    - *Multi-Rod Morphing & Duplicate Bobs (`delayed_morph`)*: 2/6 clips hold at the axle until $\approx \text{f}32$, then morph into a T-shaped multi-rod object with duplicate bobs dangling.
-    - *Structural Shattering (`detached`)*: 1/6 clips explodes into tangled rods by f12 and falls completely off the axle onto the table.
+    - *Elongated Rod & Bob Disappearance (`moves_broken`, Scout-1 Hypothesis D)*: In 3/6 clips (`pend10_restev_s1`, `s3`, `pend11_restev_s3`), the bob drops vertically from $y=116$ to $y=276\text{ px}$ impacting the table; nominal rod $L_0 = 106.4\text{ px}$ stretches by $1.55\text{--}1.79\times$ ($164.5\text{--}190.2\text{ px}$), confirmed by bright vertical column scans.
+    - *Multi-Rod Morphing & Duplicate Bobs (`delayed_morph`)*: In 2/6 clips (`pend10_restev_s2`, `pend11_restev_s2`), the DiT splits the rod into orthogonal horizontal and vertical tethers, spawning duplicate bobs.
+    - *Structural Shattering (`detached`)*: In 1/6 clips (`pend11_restev_s1`), the bob breaks off the axle and tumbles down.
   - **ROI Motion Energy (Gray Levels)**: Rest Event-Script **$7.07 \pm 1.35$** ($n=6$) vs Neutral Rest $1.70 \pm 0.18$ vs Mid-Swing $6.68 \pm 0.73$ (Real GAUGE reference: $5.06\text{--}5.40$). Motion metrics alone would falsely score restev as "fixed", paralleling the optical flow reward trap seen in VBench Dynamic Degree (Finding #2249).
-  - **Dynamical Period**: Referee-validated `measure_pend` reports `check` on 6/6 clips and `pend_acf` fails completely on 6/6 (0/6 measurable physical periods).
+  - **Dynamical Period**: Referee-validated `measure_pend` reports `check` on 6/6 clips and `pend_acf` fails completely on 6/6 (0/6 measurable physical periods vs 6/6 valid periods under mid-swing conditioning).
+  - **NVIDIA Scoreboard (agy-2 #2625)**: Mid-swing conditioning yields DOVER Fused gain $\Delta = +0.0154 \pm 0.0035$ ($p = 0.0071$) and Technical gain $+0.0049 \pm 0.0017$ ($p = 0.035$), while rest-event text prompting causes DOVER Fused degradation $\Delta = -0.0116 \pm 0.0038$ ($p = 0.0277$) and unphysical optical flow explosion ($DD_{\text{norm}} = 3.715 \pm 0.255$, paired $\Delta = +2.559 \pm 0.526, p = 0.0046$; $>2.3\times$ real mocap).
 - **Setup**: `nvidia/Cosmos3-Nano` (bfloat16, vLLM/diffusers, A100 & RTX 5090), $832\times 480$, 93f @ 24 fps, 35 steps, CFG 6.0, flow shift 10.0, no negative prompt. Input: real GAUGE pendulum videos 10 and 11, horizontal release frame (rest) vs mid-swing frame (mid). Prompt: `prompt_event.txt` ("released in the first moment, falls, swings below the axle") vs neutral prompt.
-- **Method**: Categorical blind eye coding from 4-frame ROI contact strips (`qc/restev_10.jpg`, `qc/restev_11.jpg`), spatio-temporal ROI motion tracking, referee-validated `tools/trk_ballfall/measure_pend.py` (PASS msg 201), and `pend_acf` autocorrelation. Replicated by `ro-agy1` in Review `#2445`.
+- **Method**: Categorical blind eye coding from 4-frame ROI contact strips (`qc/restev_10.jpg`, `qc/restev_11.jpg`), spatio-temporal ROI motion tracking, referee-validated `tools/trk_ballfall/measure_pend.py` (PASS msg 201), and `pend_acf` autocorrelation. Replicated by `ro-agy1` in Review `#2445` and independently evaluated on kinematics and scoreboard by `agy-2` in Review `#2625`.
 - **Control**: The neutral-prompt rest arm on identical frames and seeds (stays at horizontal axle line in 6/6 clips) and mid-swing arm.
-- **Evidence**: Commit `04f843a`, Finding `#2432`, Review `#2445`, `work/ro-3/task99_midswing_pendulum/` (`eye_codes.json`, `roi_motion_restev.json`, `qc/`).
+- **Evidence**: Commits `04f843a`, `7afffac`, Findings `#2432`, `#2625`, Reviews `#2445`, `work/ro-3/task99_midswing_pendulum/`, `work/agy-2/task109_pendulum_review/`.
 - **Causal Mechanism**: Directly confirms Scout-1's event-script hypothesis H-S (Finding #2305, Digest #2365; CausalCascade, arXiv:2610.15562): text prompts function as high-level semantic event classifiers that enforce event occurrence ("it falls"), but lack the temporal capacity to constrain continuous spatial-temporal mechanics. When initialized from a static zero-velocity boundary condition (held horizontal along axle), the diffusion prior cannot reconcile the static image tokens with continuous rigid rotation. Consequently, the model minimizes denoising loss by distorting object geometry (elastic rod stretching, phantom duplicate bobs, structural shattering) to satisfy the text condition without obeying rigid mechanics. This directly mirrors the phantom duplicate ball spawning observed under conflicting text/visual constraints in ball drops (Finding 1, Finding 9). Mid-event conditioning is the only intervention that preserves rigid geometry.
 
 ---
@@ -372,14 +373,16 @@ FINDING: Incorporating an explicit prompt event timing clause ("...bounces only 
     - DOVER Technical is flat ($\Delta = -0.0005 \pm 0.0009$), and Aesthetic improves nominally ($\Delta = +0.0032 \pm 0.0013, p=0.046$). Zero video quality penalty.
   - **Dynamic Degree Alignment**:
     - Normalized Dynamic Degree drops by $\Delta = \mathbf{-0.617 \pm 0.219}$ ($1.545 \to 0.928, t=-2.81, p=0.026$).
-    - Distance to real GAUGE reference motion ($|DD - \text{real}|$, real = 0.564) drops by $-0.616 \pm 0.220$ ($t=-2.80, p=0.026$), with **7/8 pairs moving closer to real reference video**.
+    - Distance to real GAUGE reference motion ($|DD - \text{real}|$, real = 0.564) drops by $-0.616 \pm 0.220$ ($t=-2.80, p=0.026$), with **7/8 pairs moving closer to real reference video** (on Ball 1, $|DD - \text{real}|$ drops from $1.10 \to 0.25$, ro-1 #2460, #2606).
   - **Causal Controls**:
     - Stillness control (`QS`: "The camera and the table stay still for the rest of the video") fails to settle on seeds 3 & 4 (late motion 3.124 and 2.735 vs F 3.326 and 3.132; late tile variance 171.06 and 74.74).
     - Restitution numbers (`R20/R95`, Finding #2260): stating $e=0.20$ vs $0.95$ yields unchanged $e_T \approx 1.0$ (steady 10.0 f and 7.7 f cycles).
-  - **HUE Plausibility Judge (Finding #2577)**:
+  - **HUE Plausibility Judge (ro-1 Finding #2577, scout-1 Mechanism #2602)**:
     - On `tools/hue_judge` (Qwen3-VL-2B), QT scores $0.585$ overall (Physical: $0.457$), matching the real GAUGE continuation video ($0.584$; Physical: $0.468$).
     - The apparent drop from F ($0.636$; Physical $0.531$) is driven entirely by release-specific questions (Q1: robot arm holding ball, Q2: ball falling after release, Q5: falling only after gripper releases) which are inapplicable to mid-fall inputs. On all three, real video scores like QT ($0.41/0.36/0.34$), not like F ($0.76/0.57/0.44$).
-    - Excluding these release questions gives QT $0.645$ vs F $0.650$ vs real $0.649$ ($\Delta = -0.0045 \pm 0.0041$, non-inferior).
+    - Meanwhile, Q6 ("bounces get lower until it comes to rest") fails to discriminate: base F scores $0.916$ despite settling in 0/8 clips; QT scores $0.896$ and real scores $0.891$.
+    - Scout-1 (#2602) identified the cognitive mechanism: sequential-inference hallucination (MoHallBench, arXiv:2607.01117) where a 2B judge rewards uninterrupted airborne motion by affirming the entire script, thereby penalizing true physical resting contact. Post-hoc removal of uninformative release questions yields $\Delta = -0.005 \pm 0.004$ (real $0.649$ vs QT $0.645$ vs F $0.650$, non-inferior).
+    - Recipe Prompt Adaptation (ro-1 #2606): v7 tests of the timed clause applied directly on top of Deliverable 1's recipe prompt (REC vs RECT) confirm 2/2 resting contact vs 0/2 under base prompt.
 - **Setup**: `nvidia/Cosmos3-Nano`, $832\times 480$, 24 fps, 93 frames, 35 steps, CFG 6.0, flow shift 10.0. Inputs: GAUGE Ball 1 (f33) and Ball 2 (f35) $\times$ seeds 1–5 / 1–3 ($n=8$ pairs).
 - **Method**: Referee planted-PASS `tools/realball/firstfall.py`, spatio-temporal strip variance, automated connected-component morphology, `tools/nv_scoreboard/score.py` (CUDA DOVER reps=3, RAFT DD), and `tools/hue_judge`.
 - **Evidence**: Commits `8d9f086`, `66c343d`, `05eb30c`; `work/ro-1/cause_v5/`, `work/agy-4/replicate_finding_2460/`, `work/ro-1/hue_qt/`.

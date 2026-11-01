@@ -47,10 +47,11 @@ DEFAULT_PROMPT_BASIC = (
     "A smooth metallic sphere drops vertically from rest above a flat wooden surface, "
     "falling freely under gravity, impacting the plank, and bouncing in real time."
 )
-# Stage 2: Validated dissipative settling prompt (ro-1 #2460, #2488, agy-4 Review #2553)
+# Stage 2: Validated dissipative settling prompt (ro-1 #2460, #2488, Review #2553, #2606)
 TIMED_DISSIPATIVE_PROMPT = (
-    "A smooth metallic sphere drops vertically above a flat wooden surface, falling freely under gravity, "
-    "bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video."
+    "A smooth metallic sphere drops vertically from rest above a flat wooden surface, falling freely under gravity, "
+    "impacting the plank, bounces only twice with rapidly diminishing heights, and comes to rest on the plank "
+    "within about one and a half seconds, staying still for the rest of the video."
 )
 DEFAULT_PROMPT_TIMED = TIMED_DISSIPATIVE_PROMPT
 DEFAULT_PROMPT = TIMED_DISSIPATIVE_PROMPT
@@ -404,9 +405,15 @@ def main():
     # Load prompt if JSON file or basic prompt flag
     if args.basic_prompt:
         prompt_str = DEFAULT_PROMPT_BASIC
-    elif args.settle or args.prompt == DEFAULT_PROMPT:
+    elif args.settle or args.prompt == DEFAULT_PROMPT or args.prompt == TIMED_DISSIPATIVE_PROMPT:
         prompt_str = TIMED_DISSIPATIVE_PROMPT
-        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, Review #2553)")
+        print("[prompt] Stage 2: Using validated event-timing prompt for dissipative settling (ro-1 #2460, Review #2553, #2606)")
+    elif args.settle and "and bouncing in real time." in args.prompt:
+        prompt_str = args.prompt.replace(
+            "and bouncing in real time.",
+            "bounces only twice with rapidly diminishing heights, and comes to rest on the plank within about one and a half seconds, staying still for the rest of the video."
+        )
+        print("[prompt] Stage 2: Substituted dissipative timing clause into custom prompt (ro-1 #2460, #2606)")
     else:
         prompt_str = args.prompt
     if prompt_str.endswith(".json") and os.path.exists(prompt_str):

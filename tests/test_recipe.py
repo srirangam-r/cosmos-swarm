@@ -268,6 +268,32 @@ class TestRecipeRunner(unittest.TestCase):
             self.assertEqual(sidecar["fps"], 24)
             self.assertEqual(sidecar["provenance"]["mode"], "dry-run")
 
+    def test_settle_prompt_flag(self):
+        """--settle activates Stage 2 event-timing dissipative settle prompt in sidecar."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            input_img = Path(tmpdir) / "test_input.png"
+            cv2.imwrite(str(input_img), np.full((480, 832, 3), 128, dtype=np.uint8))
+            out_video = Path(tmpdir) / "out_settle.mp4"
+            args = [
+                "run_recipe.py",
+                "--image", str(input_img),
+                "--out", str(out_video),
+                "--dry-run",
+                "--settle",
+            ]
+
+            with mock.patch.object(sys, "argv", args), contextlib.redirect_stdout(io.StringIO()):
+                run_recipe.main()
+
+            sidecar_path = out_video.with_suffix(".json")
+            self.assertTrue(sidecar_path.exists())
+            with open(sidecar_path) as f:
+                sidecar = json.load(f)
+
+            self.assertTrue(sidecar["stage_2_dissipative_settle"])
+            self.assertIn("bounces only twice with rapidly diminishing heights", sidecar["prompt"])
+            self.assertIn("comes to rest on the plank within about one and a half seconds", sidecar["prompt"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

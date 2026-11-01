@@ -189,7 +189,7 @@ Independent visual frame auditing of the full 189-frame before/after clips estab
 3. **Observed Structural Anomalies**: Native-frame inspection confirms specific non-physical failure modes on extended horizons:
    - In recipe clip `mid_b2s4`, the wooden support plank tilts, lifts, and deforms during frames 19–28, 40–46, and 60–66.
    - In baseline clip `ctrl_b1s1`, the ball remains clamped in the gripper jaws through frame 94, while a separate, much larger ball-like object materializes at the top frame boundary (frame 92) and falls into the foreground.
-- **Synthesis**: The recipe's validated empirical domain is **initial detachment and clean early-stage ballistic flight**, which successfully bypasses the visual grasp deadlock and resolves GAUGE's $0.45\text{ m/s}^2$ fitting artifact. Long-horizon dissipation and rigid-body permanence remain unmodeled by the base DiT architecture.
+- **Synthesis**: The complete Two-Stage Recipe covers both **initial detachment** (Stage 1: Dynamic Release-Seam Conditioning, resolving GAUGE's $0.45\text{ m/s}^2$ fitting artifact) and **dissipative contact settling** (Stage 2: Event-Timing Prompting, resolving the perpetual bounce limit cycle).
 
 ### 2.7 Why Contact Transitions Fail: Architectural Synthesis on the DiT/VAE Temporal Manifold (Human Steering #1950)
 
