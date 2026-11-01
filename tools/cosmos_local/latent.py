@@ -303,6 +303,10 @@ def build_start(pipe, call: dict, spec: LatentSpec, x0_ref, sig: list[float], se
         x_k = (1 - s_k) * x0_ref + s_k * randn_like_seed(shape, seed, dev)
     if spec.band is not None:
         fill = randn_like_seed(shape, seed + 7777, dev) * float(np.sqrt((1 - s_k) ** 2 + s_k ** 2))
+        # Latent frame 0 is the clean conditioning latent, not noise. A temporal band of it rings across every frame at the
+        # band edge (|k|<=3 of 24 -> a ~27-video-frame global flicker; E6's tlo arm, found by dk2's cross-check + E7).
+        # Keep it out of the mix: frame 0 is replaced by the conditioning frame afterwards anyway.
+        x_k = x_k.clone(); x_k[:, :, 0] = fill[:, :, 0]
         x_k = noise_mod.mix_noise(fill, x_k, spec.band).to(dev)  # the band from x_k, the rest fresh
     for r in range(spec.sfr):
         aux = dict(call, generator=make_generator(), num_inference_steps=1, output_type="latent")
