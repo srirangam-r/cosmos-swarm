@@ -32,6 +32,11 @@ executed suffix metadata matches2/4. Reader289's raw FAIL/UNVALIDATED is kept;
 human coverage question5939 remains unresolved at this documentation update.
 The current278/266/277 statuses were read from the live board. Peer304 owns
 independent rendered-pixel/compositing review and was not duplicated.
+After the first documentation push, inbox6133 reported304 complete inb8f3a09:
+raw boundary correction accepted, clean compositing rejected on the tested
+fixtures. A linked disposition was added to the product README, without a
+renderer change or duplicate experiment. This updates the evidence status;
+it does not adopt the coarse proxy into277.
 
 Documentation verification: recomputed every displayed table number from
 the raw blobs with Python's `statistics.mean/stdev`, checked retained flags,

@@ -117,6 +117,7 @@ All 18 clips were generated and fetched: plain / requested g=9.81 / requested g=
 ### Current wrapper acceptance
 
 - CPU operational checks cover queue attachments and settings ([297](../../work/ro-sol1/t297/README.md)), raw first-frame identity and later-frame invariance ([302](../../work/ro-sol1/t302/README.md)), and sigma/start guards plus partial archived native metadata ([303](../../work/ro-sol1/t303/README.md)). These are software results.
+- Independent [304 pixel/compositing review](../../work/rahul-api-codex/t304/README.md) accepts the raw boundary correction but rejects clean compositing on the tested fixtures: source-bob residue, inpainting smear and strip-carried rig texture remain. The clips are coarse motion scaffolds. Raw first-frame identity does not establish a clean mask or an unchanged stationary hold in later frames.
 - Fresh-frame task277 has no generated or measured clips in the published [298 ledger](../../work/rahul-api-codex/t298/current_no_clips_report.json). Its independent period reader's raw referee verdict remains **FAIL / UNVALIDATED**; human coverage review #5939 is unresolved in the [289 record](../../work/ro-sol1/t289/README.md).
 - Matched before/after physics measurements, new-scene generalization and the wrapper's DOVER, motion fidelity, plausibility and robot-prediction scoreboard are pending. No complete physics fix or NVIDIA non-regression result is established for this wrapper.
 
