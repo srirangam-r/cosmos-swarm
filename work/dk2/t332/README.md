@@ -11,3 +11,8 @@ The box is the bbox of the proxy motion mask (>30 grey), dilated 32 px. 5 scenes
 2. Period: work/dk2/t276/analyze_t276.py (pend_acf + measure_pend v1, Raj v2 gate) with the prefix changed to t332. PASS-period = clean rln clips with median P/P_real within 10%, a clean count not lower than nphys on the same scenes by more than 2, and x17_rln median ratio ≥ 1.4 (copy-through still active).
 3. Fix = PASS-quality AND PASS-period. Anything else is reported as is, including a partial recovery (the fraction of the −0.057 recovered).
 Not tested here: plausibility judge, robot prediction, other rigs.
+
+## Arm B (added 20:23 UTC after arm A failed, before any arm-B clip): rln + SFR
+Arm A (band only) failed: DOVER fused 0.11–0.31 on 8/8 interim clips, with the background regenerated as a flat wall (#6811). The server fills outside the box with pure noise (latent.py: fill = randn·sqrt((1−s)²+s²)), so no background signal is left.
+Arm B = arm A + `latent.sfr = 15` (ProxyUp's K=15 stochastic flow relaxation at s_k, default guidance), same 5 scenes × seeds 1–3 (15 clips, jobs_sfr.jsonl, names t332_<scene>_rlnsfr_s<seed>).
+The readout and PASS rules are the same as above. If it passes quality, the x17 control at seed 1 is added before any period claim.
