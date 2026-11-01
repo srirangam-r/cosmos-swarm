@@ -1,0 +1,144 @@
+{
+ "agent": "rahul-5-agy",
+ "codes": {
+  "ARMK": "DOWN",
+  "BRDS": "STILL",
+  "BXOR": "STILL",
+  "CGTK": "SWING",
+  "CJQA": "STILL",
+  "CLLZ": "OTHER",
+  "DBMU": "SWING",
+  "EIIG": "UP",
+  "ELGG": "STILL",
+  "EOVZ": "SWING",
+  "ETSU": "DOWN",
+  "EVEV": "STILL",
+  "EZKG": "STILL",
+  "FAKL": "DOWN",
+  "FDWA": "SWING",
+  "FEMH": "OTHER",
+  "FGSS": "SWING",
+  "FHJB": "SWING",
+  "FOHP": "STILL",
+  "GCPN": "SWING",
+  "GKFZ": "SWING",
+  "GLIA": "DOWN",
+  "GWSP": "STILL",
+  "HUXY": "SWING",
+  "ILDR": "DOWN",
+  "IRMJ": "DOWN",
+  "IRNK": "DOWN",
+  "ISUU": "SWING",
+  "JOOP": "SWING",
+  "JVCW": "STILL",
+  "KIBU": "STILL",
+  "KMKZ": "SWING",
+  "KOUB": "DOWN",
+  "KTSI": "STILL",
+  "LIIF": "UP",
+  "LNZU": "SWING",
+  "MAMF": "SWING",
+  "MRHG": "DOWN",
+  "MTMO": "SWING",
+  "MUWH": "STILL",
+  "MVYZ": "STILL",
+  "NILJ": "SWING",
+  "NLXA": "DOWN",
+  "NQDQ": "DOWN",
+  "NQIZ": "SWING",
+  "OQAP": "SWING",
+  "QSNY": "STILL",
+  "RUYZ": "DOWN",
+  "RWHG": "OTHER",
+  "SGFY": "STILL",
+  "SQAP": "DOWN",
+  "TACK": "DOWN",
+  "UPQJ": "STILL",
+  "UYPK": "UP",
+  "UZRR": "SWING",
+  "VQDL": "DOWN",
+  "VWGV": "STILL",
+  "VWUU": "STILL",
+  "VXJF": "SWING",
+  "VXQV": "DOWN",
+  "WILY": "DOWN",
+  "WIMZ": "SWING",
+  "WSTH": "SWING",
+  "WTUS": "DOWN",
+  "WTVP": "OTHER",
+  "XBSF": "SWING",
+  "XCFG": "DOWN",
+  "XECJ": "DOWN",
+  "XOUV": "DOWN",
+  "XUGV": "DOWN",
+  "XVQU": "SWING",
+  "XXOC": "DOWN",
+  "YEKA": "STILL",
+  "YMPT": "STILL",
+  "YSTH": "SWING",
+  "YWXC": "DOWN",
+  "ZEBT": "OTHER",
+  "ZMLU": "DOWN",
+  "ZNWE": "DOWN"
+ },
+ "controls_audit": {
+  "F_kaFrozen": {
+   "code": "STILL",
+   "concordance": "PASS",
+   "id": "KTSI"
+  },
+  "F_kaReal": {
+   "code": "DOWN",
+   "concordance": "PASS"
+  },
+  "F_kaUp": {
+   "code": "UP",
+   "concordance": "PASS",
+   "id": "LIIF"
+  },
+  "H_kaFrozen": {
+   "code": "STILL",
+   "concordance": "PASS"
+  },
+  "H_kaReal": {
+   "code": "DOWN",
+   "concordance": "PASS",
+   "id": "XOUV"
+  },
+  "P_kaFrozen": {
+   "code": "STILL",
+   "concordance": "PASS",
+   "id": "BRDS"
+  },
+  "P_kaReal": {
+   "code": "SWING",
+   "concordance": "PASS"
+  }
+ },
+ "protocol": "Pre-registered blind evaluation + Amendment 6 visual eye-check audit",
+ "scenes": {
+  "F": 27,
+  "H": 26,
+  "P": 26
+ },
+ "summary_by_scene": {
+  "F": {
+   "DOWN": 24,
+   "OTHER": 1,
+   "STILL": 1,
+   "UP": 1
+  },
+  "H": {
+   "DOWN": 2,
+   "OTHER": 4,
+   "STILL": 18,
+   "UP": 2
+  },
+  "P": {
+   "OTHER": 0,
+   "STILL": 1,
+   "SWING": 25
+  }
+ },
+ "total_strips": 79
+}
