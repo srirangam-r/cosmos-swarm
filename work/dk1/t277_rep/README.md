@@ -20,3 +20,12 @@ theta0 (deg, left-positive) per scene: 276 real_09 -0.9, real_12 6.3, real_16 0.
 276's two scenes that failed 3/3 (real_09, real_16) are exactly the two with |theta0| < 1 deg, where the proxy barely moves.
 Prediction: real_06 (74 deg) gives clean nphys clips with ratio ~1 (harmonic proxy at large amplitude; may look unphysical);
 real_14 (4 deg) is borderline (smaller than every passing 276 scene). If real_14 fails, the cause to test is proxy amplitude, not the scene.
+
+## RESULT (dk1, 2026-11-01 19:56 UTC; 18/18 clips generated on q8, server.py 04e8e0de81, UniPC, sigma_start 0.89844 k19, CPU noise)
+Frozen readout `out/t276_table.md` (Raj v2 gate), per clip `out/t276_results.json`, both readers ungated `out/ungated_ratios.md`, strips `out/strip_*.jpg`.
+- **real_06 (theta0 74 deg): nphys 3/3 clean, P/P_real = 1.005, 1.005, 1.001 (ACF); 1.000, 0.999, 0.995 (measure_pend v1).** Visual: one rigid rod+ball swinging through large amplitude.
+- real_06 x17 control (3 seeds): ACF 1.725/1.697/1.700, MP 1.716/1.679/1.706 (MP flag ok, R2 0.96-0.97). Not "clean" by the frozen gate only because pend_acf flags 'check' for <2 periods in 3.9 s (same as 276).
+- real_06 plain: 1/3 clean (1.59x); the other two fail/check.
+- **real_14 (theta0 4 deg): nphys 0/3 clean.** ACF reads 1.007/1.025/0.961 but measure_pend cannot track the ~4 deg swing (R2 0.27-0.48), so the gate rejects all three. Pre-registered prediction (borderline amplitude) holds; the recipe needs a supplied amplitude for near-vertical frames.
+- Overall frozen-gate table: nphys 3/6 clean, 3/3 within 10%, median 1.005; plain 1/6; x17 0/6 clean (see above).
+Clips: only the 3 real_06 nphys mp4s are committed (9 MB each); all 18 sha256 in out/clips_SHA256SUMS; sidecars + server sidecars + qc for all 18 in clips/. The rest are deterministic from jobs.jsonl (CPU noise) and kept on dk1's laptop.
