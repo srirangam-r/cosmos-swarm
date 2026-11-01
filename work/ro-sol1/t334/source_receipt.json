@@ -1,0 +1,525 @@
+{
+  "scope": "Byte-exact author files, including three native clips; proxy MP4s omitted. No independent measurement.",
+  "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+  "files": [
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/README.md",
+      "local": "source/README.md",
+      "bytes": 2732,
+      "sha256": "77965b07140c9114e9ac442b490d7120a2e07bc26bad480c3eb2458196de8598"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/SHA256SUMS",
+      "local": "source/SHA256SUMS",
+      "bytes": 1112,
+      "sha256": "f143d47fcfee564a1ac63f23d9b78591412d8fb6e944df645a2af0de643211d9"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/analyze.py",
+      "local": "source/analyze.py",
+      "bytes": 5087,
+      "sha256": "34ea53fb3dfa80465f78ef88aeb84132b6e8ce5c9868b197c58a710ca3eeb85c"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/build_jobs.py",
+      "local": "source/build_jobs.py",
+      "bytes": 2939,
+      "sha256": "e36417c147f23f31e1a5e74596888413906f7d191a15081eb5cdec7fc5f3eedc"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s1.json",
+      "local": "source/clips/t329a_real_09_nphys_s1.json",
+      "bytes": 1551,
+      "sha256": "d87ba9c56ffe2ace1ef4f0bf84fbbfb23ce1032ae78fb0b5c284097dbe53e22e"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s1.mp4",
+      "local": "source/clips/t329a_real_09_nphys_s1.mp4",
+      "bytes": 8620213,
+      "sha256": "504d62003131b07af551649fd8fc1a48edfb55d54aeb4ad8b63a004d6053cff4"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s1.qc.json",
+      "local": "source/clips/t329a_real_09_nphys_s1.qc.json",
+      "bytes": 112,
+      "sha256": "f0462df208dd629e6235ddc3526e7c29aad6d608d450769a33b531d54c7aec1a"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s1.server.json",
+      "local": "source/clips/t329a_real_09_nphys_s1.server.json",
+      "bytes": 2575,
+      "sha256": "5a7c1ab58a6fe005c8a03a3ce3f28806bdbd09ef2c9b4790df6305013d1d0175"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s2.json",
+      "local": "source/clips/t329a_real_09_nphys_s2.json",
+      "bytes": 1551,
+      "sha256": "80c17f764545e619442145828ea4ee64520e7a3f0e065617eca245aa988ee144"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s2.qc.json",
+      "local": "source/clips/t329a_real_09_nphys_s2.qc.json",
+      "bytes": 112,
+      "sha256": "35ad96c7b2076f330cb3a0f70a7fc5e7c61564619d7e930db74f799987607a68"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s2.server.json",
+      "local": "source/clips/t329a_real_09_nphys_s2.server.json",
+      "bytes": 2575,
+      "sha256": "3f549168b4113a5bee9aad0f43c46f8bda7cbe4f3bd1b6c4e20335431c843b0b"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s3.json",
+      "local": "source/clips/t329a_real_09_nphys_s3.json",
+      "bytes": 1551,
+      "sha256": "0923c92ec5ed3def555754f352e8ba7a958c16d161097320fafd723ec3a70fb5"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s3.qc.json",
+      "local": "source/clips/t329a_real_09_nphys_s3.qc.json",
+      "bytes": 112,
+      "sha256": "37836e4b068021c5d9d196cc50d24aee488d15c95cf88b09a74a58f1522114d8"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_s3.server.json",
+      "local": "source/clips/t329a_real_09_nphys_s3.server.json",
+      "bytes": 2575,
+      "sha256": "d821b388daeddbc42a96611fdde89e05357588eacb8965a69dfca6d422782993"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s1.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s1.json",
+      "bytes": 1559,
+      "sha256": "a213d6523b42bc3ad0f50024e106cd88ceea49f447859ca1b600a9f18c381c1f"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s1.qc.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s1.qc.json",
+      "bytes": 111,
+      "sha256": "1f87d7314743bac5e688746074bedd877bba0580c32e3d837dc6068ef8b709a7"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s1.server.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s1.server.json",
+      "bytes": 2583,
+      "sha256": "9d6aca13d0dfb4f799746a673e93acd22996184fae38112041684697bf68674d"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s2.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s2.json",
+      "bytes": 1559,
+      "sha256": "608f4c7a0b25e45c0a62c3998b18ed6898b8da7c779ed295fad713a7575d0031"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s2.qc.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s2.qc.json",
+      "bytes": 111,
+      "sha256": "1422e31ff087e444dab088654d259680559d9a420f10c459ccd9e5fe07e8b92d"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s2.server.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s2.server.json",
+      "bytes": 2583,
+      "sha256": "890de243d2eadf32120230c5dfa090ee7c97636e11821d309d989bfafc8866a7"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s3.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s3.json",
+      "bytes": 1559,
+      "sha256": "158dde804a258c4635d9f14649c40b03ca8b2a1c58f23bd77c0320f4c522fdea"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s3.qc.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s3.qc.json",
+      "bytes": 112,
+      "sha256": "c94cc0c9841df27a739630a57e239e718de6f4290482fe656f970339304a44d4"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_09_nphys_x17_s3.server.json",
+      "local": "source/clips/t329a_real_09_nphys_x17_s3.server.json",
+      "bytes": 2583,
+      "sha256": "bb418fee17ad3540d448cf9f62aef4932a9e00c336c59a0dc1595089b4ab8e08"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s101.json",
+      "local": "source/clips/t329a_real_14_nphys_s101.json",
+      "bytes": 1554,
+      "sha256": "865429800c900ccb1dac4e5cb8adda7baaafc5bdedadf5699233a042c08bcc81"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s101.mp4",
+      "local": "source/clips/t329a_real_14_nphys_s101.mp4",
+      "bytes": 9190528,
+      "sha256": "526915ee03d828b1f6567713d534d402235236d8eb90d6661ddbc9e989946b0d"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s101.qc.json",
+      "local": "source/clips/t329a_real_14_nphys_s101.qc.json",
+      "bytes": 112,
+      "sha256": "dd4b14192ca40bf9c58eff36cd63c14baf7c9832269bc6d26a936b4a78554f2c"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s101.server.json",
+      "local": "source/clips/t329a_real_14_nphys_s101.server.json",
+      "bytes": 2577,
+      "sha256": "bd26b5d0157d571625d8651b1ed1bee6fb08c19d31afff1789ac861f985ab998"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s102.json",
+      "local": "source/clips/t329a_real_14_nphys_s102.json",
+      "bytes": 1554,
+      "sha256": "ccb8db129fda4b3935d6e77d0a5245d26e3ff7afa9c98145bd83241a48cf4707"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s102.qc.json",
+      "local": "source/clips/t329a_real_14_nphys_s102.qc.json",
+      "bytes": 112,
+      "sha256": "a3e59f8491336b33b63a83558fe18f37601075e3c263562342165aa1163af4e8"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s102.server.json",
+      "local": "source/clips/t329a_real_14_nphys_s102.server.json",
+      "bytes": 2577,
+      "sha256": "5ede1c653d8c722efb1ec31f3cad43179f4e6843d5469998a403610a0d51b8e0"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s103.json",
+      "local": "source/clips/t329a_real_14_nphys_s103.json",
+      "bytes": 1554,
+      "sha256": "b666200c56c3a5fae06ea8d13a7dde4596abf955b20a54fbb4ccc41959362d31"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s103.qc.json",
+      "local": "source/clips/t329a_real_14_nphys_s103.qc.json",
+      "bytes": 112,
+      "sha256": "b0267c723409becdb165b75091e0d69806d3ba386d4083ca33c02a0d588c3761"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_s103.server.json",
+      "local": "source/clips/t329a_real_14_nphys_s103.server.json",
+      "bytes": 2577,
+      "sha256": "f6a9e0f30b3f11f8908d45165d5f4ca3914fa66dfebc9bcc08095fd6e2586333"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s101.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s101.json",
+      "bytes": 1562,
+      "sha256": "b12f39f6f463a003b48e9d1acf34c50882928b87a9053dc2a4c1159565e20225"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s101.qc.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s101.qc.json",
+      "bytes": 112,
+      "sha256": "228592c20f8e129a758d7b5866edd177711d32490f7653ac9589c423905abd38"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s101.server.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s101.server.json",
+      "bytes": 2585,
+      "sha256": "680495697323f262155d79d79b235309e4a6f81c0e4bbd64e30b9d9b0c432e9c"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s102.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s102.json",
+      "bytes": 1562,
+      "sha256": "565b88c9b5fa94a8df2da56ef5c06cdc965840d6e79ea8cf65b973ffe5245bd2"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s102.qc.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s102.qc.json",
+      "bytes": 111,
+      "sha256": "bc3a78204072ebbba8b76d45e0a542c2b992f5ff0a5a2fb03b6cba00c89cf5d5"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s102.server.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s102.server.json",
+      "bytes": 2585,
+      "sha256": "5cf644314de268574a9130b67fe5af267fd4f2e376d664858b925553caf4bb70"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s103.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s103.json",
+      "bytes": 1562,
+      "sha256": "ad6951130b5043110551fe8a3533f39a4e804b08c0836815a65ae1ca30983d13"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s103.qc.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s103.qc.json",
+      "bytes": 112,
+      "sha256": "c202881eb98faedea54b3bb200da659e5a88f1b5693d6368dad5b6c139cd0870"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_14_nphys_x17_s103.server.json",
+      "local": "source/clips/t329a_real_14_nphys_x17_s103.server.json",
+      "bytes": 2585,
+      "sha256": "aeb03736f9275079de68ec96211f05560ad2dc0f6a02ebed00831453bf84efc4"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s1.json",
+      "local": "source/clips/t329a_real_16_nphys_s1.json",
+      "bytes": 1551,
+      "sha256": "5dcb555a4804cf041acd0f67376e3f7953de5cec91a4c8d0b8219ffbbfdaaa3f"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s1.mp4",
+      "local": "source/clips/t329a_real_16_nphys_s1.mp4",
+      "bytes": 7694219,
+      "sha256": "adf8ba617ef068143661fa01a03cb60a3fe07bb6dc7ec79c54775e4b442f065e"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s1.qc.json",
+      "local": "source/clips/t329a_real_16_nphys_s1.qc.json",
+      "bytes": 112,
+      "sha256": "6addd15ce3b64bc895ad67e71207ab552d604895abc9549d8d1a268167dd9427"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s1.server.json",
+      "local": "source/clips/t329a_real_16_nphys_s1.server.json",
+      "bytes": 2575,
+      "sha256": "6ead0a3b9006f6232b0a0e33f018ca6f57ffdb00d883c95c99cbd48a52c65d4a"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s2.json",
+      "local": "source/clips/t329a_real_16_nphys_s2.json",
+      "bytes": 1550,
+      "sha256": "04f1f51be55c9fa6a4d6bc822cdd67d7e9caee94e750c0846e9b7da977694185"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s2.qc.json",
+      "local": "source/clips/t329a_real_16_nphys_s2.qc.json",
+      "bytes": 112,
+      "sha256": "025581080d304b411e221938b61896a04c975a61436c10f312cdbf32508fd440"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s2.server.json",
+      "local": "source/clips/t329a_real_16_nphys_s2.server.json",
+      "bytes": 2575,
+      "sha256": "0a48faf47b6a2a9ac68cb607f83e65ca85973078bc252d062f584e42d56008b5"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s3.json",
+      "local": "source/clips/t329a_real_16_nphys_s3.json",
+      "bytes": 1550,
+      "sha256": "b55aa9475c6269da0206536ad09269f04153943e59b84fe9685af36992a445dd"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s3.qc.json",
+      "local": "source/clips/t329a_real_16_nphys_s3.qc.json",
+      "bytes": 112,
+      "sha256": "2663a12491a84e9fd522c3ec8612f86a2eb667a4f318b9ff2a310dd68239c066"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_s3.server.json",
+      "local": "source/clips/t329a_real_16_nphys_s3.server.json",
+      "bytes": 2575,
+      "sha256": "dca4e522747e491eb1952f186eacb2dfca13a087a250c3cefc0024cef5d37934"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s1.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s1.json",
+      "bytes": 1559,
+      "sha256": "c22c6f9599953a008a4411a6bf187e9347cfbd73c86d5582316e593a59c2ad0b"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s1.qc.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s1.qc.json",
+      "bytes": 112,
+      "sha256": "a44ec60fa350ffc4f4e6a28a96bc574a66aad1d197d5d904f7bb088e8b08b984"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s1.server.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s1.server.json",
+      "bytes": 2583,
+      "sha256": "6c8fe228c1c4e5be17cc463e9781560d1a08fd8c6f2b2e28388d81d9000896f1"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s2.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s2.json",
+      "bytes": 1558,
+      "sha256": "d2213f2f6a4bc2e17ecbfa63f15040143e383ce51ca8f5e3030437a720d94c3e"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s2.qc.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s2.qc.json",
+      "bytes": 112,
+      "sha256": "3ecd294b1a57666a022e29a07e3e9f8215b60e2e50778140a235fbf62a154d14"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s2.server.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s2.server.json",
+      "bytes": 2583,
+      "sha256": "540b9613fbb962d61a197a19dd33e972b5709c910c7a6ef13dd26856b71e24e2"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s3.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s3.json",
+      "bytes": 1558,
+      "sha256": "2d23c3d4c18d9861fdd8accb2ebe3c57ddccb5071bc9f80d654aa43f5e713f7d"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s3.qc.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s3.qc.json",
+      "bytes": 112,
+      "sha256": "5d9720209d7db2f28c427746a6adaadc36370683df4326be254257c753c52c2e"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/clips/t329a_real_16_nphys_x17_s3.server.json",
+      "local": "source/clips/t329a_real_16_nphys_x17_s3.server.json",
+      "bytes": 2583,
+      "sha256": "761a6da18b286e04dee849b1ee181c01ece68c757438416d93623ea02bf65810"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/frames.json",
+      "local": "source/frames.json",
+      "bytes": 702,
+      "sha256": "d94979e0f2254e46882aece7d7f8ea47a1a4f6e33a3c05fd2c4340a6989e66cb"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/inputs/real_09.png",
+      "local": "source/inputs/real_09.png",
+      "bytes": 407040,
+      "sha256": "5bee12ec604ef08136191c088beca679d356d2001341b20d9aba8da2b5da0f7e"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/inputs/real_14.png",
+      "local": "source/inputs/real_14.png",
+      "bytes": 501238,
+      "sha256": "85d4a967ae6685ed334cd599e4b2f70a1447b35256a5eb671c0f4e5b55f06bf2"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/inputs/real_16.png",
+      "local": "source/inputs/real_16.png",
+      "bytes": 350709,
+      "sha256": "fa769f2a1aa47e8fef04beea334c277fb2d7a2e83e1453c0df6480b545acd4ec"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/jobs.jsonl",
+      "local": "source/jobs.jsonl",
+      "bytes": 20868,
+      "sha256": "72809474eea2c83cba9e8642c9f7c1f54b2cf9ee3e847af37462dbad437a0f88"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/out/clips_SHA256SUMS",
+      "local": "source/out/clips_SHA256SUMS",
+      "bytes": 1722,
+      "sha256": "e5d50fd15c2615605d646c6b5bb6bd6d0dd936239134b39fed475563d0075c34"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/out/strip_nphys.jpg",
+      "local": "source/out/strip_nphys.jpg",
+      "bytes": 392039,
+      "sha256": "d064fb5231ca696a22969b7aaf5cd6393e34e8f273f93ca5c6bdf861378f3f7b"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/out/strip_nphys_x17.jpg",
+      "local": "source/out/strip_nphys_x17.jpg",
+      "bytes": 389295,
+      "sha256": "7c62d7828a5d5ff6e6b0f97aaac6f40acb02dde19febcdc77d8e98825ac9fbbe"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/out/t276_results.json",
+      "local": "source/out/t276_results.json",
+      "bytes": 7199,
+      "sha256": "98aee6a5dcf736bbac617eef0040aa16570ff01d0534bd5c2459a4cb07620ebb"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk1/t329_amp/out/t276_table.md",
+      "local": "source/out/t276_table.md",
+      "bytes": 392,
+      "sha256": "64e9035fcef4800b22f7c23e4e1e6dc5e4983c3fcc2d6c8d58c6a738ff198607"
+    },
+    {
+      "commit": "eb5aa13352f381d5641fa6913abbd6e381480973",
+      "source": "work/dk2/t276/out/t276_results.json",
+      "local": "baseline/t276_results.json",
+      "bytes": 15400,
+      "sha256": "2ab6979427aa5ac10c12c010f6d4168ee64002d26c490d2f5483cc1bf07ecbc9"
+    },
+    {
+      "commit": "124b6d5b6abbabcf09dfbb256f4a7559cdda56b0",
+      "source": "work/dk1/t277_rep/out/t276_results.json",
+      "local": "baseline/t277_results.json",
+      "bytes": 7001,
+      "sha256": "28f2a7b4e0796fab8d3777aea772c2a6fe2523d32a46a88f9c8b9f5e71adadfb"
+    }
+  ],
+  "omitted": [
+    "work/dk1/t329_amp/proxies/proxy_real_09_nphys.mp4",
+    "work/dk1/t329_amp/proxies/proxy_real_09_nphys_x17.mp4",
+    "work/dk1/t329_amp/proxies/proxy_real_14_nphys.mp4",
+    "work/dk1/t329_amp/proxies/proxy_real_14_nphys_x17.mp4",
+    "work/dk1/t329_amp/proxies/proxy_real_16_nphys.mp4",
+    "work/dk1/t329_amp/proxies/proxy_real_16_nphys_x17.mp4"
+  ]
+}

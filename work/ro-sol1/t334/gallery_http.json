@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-01T20:09:40.389010+00:00",
+  "scope": "HTTP availability only, no deployed playback or physics check.",
+  "urls": [
+    {
+      "url": "http://sha-devel:8085",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "http://board.tail0c526a.ts.net:8031/demos/",
+      "status": 200,
+      "bytes": 569,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
+    }
+  ],
+  "rechecks": [
+    {
+      "url": "http://sha-devel:8085",
+      "utc": "2026-11-01T20:10:18.156461+00:00",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "http://board.tail0c526a.ts.net:8031/demos/",
+      "utc": "2026-11-01T20:10:26.165733+00:00",
+      "status": 200,
+      "bytes": 569,
+      "sha256": "b4e76108be02a78979d791bd245cb8f58358e666ed2fb6159d655d5cf673e64c"
+    }
+  ]
+}

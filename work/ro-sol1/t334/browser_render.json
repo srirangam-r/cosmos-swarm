@@ -1,0 +1,1149 @@
+{
+  "utc": "2026-11-01T20:10:42.703Z",
+  "preview_sha256": "369b312e230596eb5a31cbacd1411d1769c1453d62e05725a5cf95cc42ac0b62",
+  "mode": "headless installed Brave, anonymous CDP pipes, local page plus native video decoding, seeking and playback progress; no physics validation",
+  "renders": [
+    {
+      "name": "desktop",
+      "state": {
+        "overflow": false,
+        "text": "TASK 329 • DK1 RESULTS • SOURCE eb5aa13 • PRESENTATION ONLY\nA supplied non-rest proxy raises the clean-gate count to 7/9.\n\nSame three takes and seeds: the earlier release-from-rest proxy was 0/9 clean. The 18° proxy changes initial velocity, motion extent and measurement visibility together.\n\nAttributed provisional result from dk1. Source-file and playback checks here add no independent physics measurement.\n\nEvery attempt stays in the denominator\nProxy arm\tClean\tClean + within 10% of P\tAccepted ACF median ×P\nHistorical release-from-rest\t0/9\t0/9\t—\nSupplied 18° + P\t7/9\t7/9\t0.994\nSupplied 18° + 1.7P\t4/9\t0/9\t1.671\n\nThree takes × three seeds. Each new arm has 9 clips. No new plain arm was generated. Accepted-only ACF interval [0.992122, 1.001472] resamples seven selected rows; it is not scene-general uncertainty.\n\nPeriod, amplitude and direction are supplied. P comes from later real video; 18° and inward direction are assumptions. This does not demonstrate a first-frame-only recipe. Review #6738/#6753 challenges amplitude-only causation: rendered motion, reader visibility, or both may explain the gate gain.\n\nPlay the three source-native examples\n\nOne committed first available seed per take, all source-clean. These examples are selected, not the full experiment. Bob deformation was reported by the author and was not scored.\n\nExample \nreal_09 · seed 1\nreal_14 · seed 101\nreal_16 · seed 1\n\nOpen native MP4 · 832×480, 93 frames at 24 fps. No compositing or retiming here.\n\nThe three source inputs\nreal_09: supplied P=1.172700s; new main arm 2/3 clean.\nreal_14: supplied P=1.187767s; new main arm 3/3 clean.\nreal_16: supplied P=1.187400s; new main arm 2/3 clean.\nNumerical control and gate acceptance are different\n\nThe wrong-period ×1.7 arm follows the longer target numerically on both readers in 9/9 attempts. Only 4/9 pass the frozen gate; five remain rejected with ACF check. This 9/9 observation is ungated.\n\nTwo main-arm outputs are rejected for reader disagreement: real_09 seed 2 and real_16 seed 3. Another accepted row, real_09 seed 3, has MP flag check and R² 0.265. The frozen gate does not require the MP flag or a minimum R².\n\nAll 18 saved outcomes\n\nRatios divide each saved reader period by the supplied P, including rejected outputs. They are display calculations, not new tracking.\n\nTake \nAll takes\nreal_09\nreal_14\nreal_16\nArm \nBoth arms\nSupplied 18° + P\nSupplied 18° + 1.7P\n\n18 saved rows\n\nTake\tArm\tSeed\tFrozen gate\tACF/P\tACF flag\tMP/P\tMP flag\tMP R²\tFlicker\nreal_09\tSupplied 18° + P\t1\tPASS\t1.001\tok\t1.002\tok\t0.99\t0.0068\nreal_09\tSupplied 18° + P\t2\tREJECT\t0.989\tok\t2.548\tcheck\t0.22\t0.0060\nreal_09\tSupplied 18° + P\t3\tPASS\t0.994\tok\t0.931\tcheck\t0.27\t0.0079\nreal_09\tSupplied 18° + 1.7P\t1\tPASS\t1.672\tok\t1.685\tcheck\t1.00\t0.0069\nreal_09\tSupplied 18° + 1.7P\t2\tPASS\t1.670\tok\t1.694\tok\t0.99\t0.0059\nreal_09\tSupplied 18° + 1.7P\t3\tPASS\t1.691\tok\t1.679\tok\t0.99\t0.0081\nreal_14\tSupplied 18° + P\t101\tPASS\t1.001\tok\t1.003\tok\t0.99\t0.0058\nreal_14\tSupplied 18° + P\t102\tPASS\t0.988\tok\t0.996\tok\t0.99\t0.0064\nreal_14\tSupplied 18° + P\t103\tPASS\t0.992\tok\t0.999\tok\t0.99\t0.0047\nreal_14\tSupplied 18° + 1.7P\t101\tPASS\t1.670\tok\t1.703\tcheck\t0.99\t0.0057\nreal_14\tSupplied 18° + 1.7P\t102\tREJECT\t1.699\tcheck\t1.713\tok\t0.99\t0.0061\nreal_14\tSupplied 18° + 1.7P\t103\tREJECT\t1.755\tcheck\t1.730\tok\t0.99\t0.0049\nreal_16\tSupplied 18° + P\t1\tPASS\t0.993\tok\t0.998\tok\t1.00\t0.0063\nreal_16\tSupplied 18° + P\t2\tPASS\t1.009\tok\t1.008\tok\t0.99\t0.0057\nreal_16\tSupplied 18° + P\t3\tREJECT\t1.004\tok\t0.495\tcheck\t0.32\t0.0074\nreal_16\tSupplied 18° + 1.7P\t1\tREJECT\t1.760\tcheck\t1.757\tcheck\t1.00\t0.0064\nreal_16\tSupplied 18° + 1.7P\t2\tREJECT\t1.716\tcheck\t1.704\tcheck\t0.99\t0.0058\nreal_16\tSupplied 18° + 1.7P\t3\tREJECT\t1.689\tcheck\t1.688\tcheck\t1.00\t0.0074\nFrozen rule, uncertainty and calibration\nThe author's complete contact sheets\nSheet \nSupplied 18° + P\nSupplied 18° + 1.7P\nUnchanged author sheets: real_09, real_14, real_16; three seeds per take and eight cropped/resized frames per row. Author labels retain rejections. Static sheets are not a playback test. Only the three committed native clips above are packaged; hashes and sidecars cover all 18.\nKeep the claim within this evidence\nThe gate improvement supports the whole supplied non-rest proxy package on these clips. It does not identify amplitude as the sole cause or establish general scene transfer.\nSupplied P uses later-video timing (assumed 25 Hz); amplitude/direction and manual geometry are extra inputs. One still pose does not determine angular velocity.\nNo NVIDIA-scoreboard check for these 18 clips. The separate quality scorecard reports ~0.057 DOVER cost on another cohort. Plausibility, robot prediction and non-regression remain unproved.\nLow luminance flicker does not certify stable shape. Some bob deformation is reported and unscored. Default changes belong to recipe owners; none are applied here.\nGeneration settings and sampler provenance\nPresentation readout\nSaved results\nFrozen analyzer\nOriginal job builder\nByte receipts\nFinding and challenges\nHistorical 276\nHistorical 277\nPinned original source\nEarlier fresh-input demo",
+        "rows": [
+          {
+            "clip": "t329a_real_09_nphys_s1",
+            "cells": [
+              "real_09",
+              "Supplied 18° + P",
+              "1",
+              "PASS",
+              "1.001",
+              "ok",
+              "1.002",
+              "ok",
+              "0.99",
+              "0.0068"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_s2",
+            "cells": [
+              "real_09",
+              "Supplied 18° + P",
+              "2",
+              "REJECT",
+              "0.989",
+              "ok",
+              "2.548",
+              "check",
+              "0.22",
+              "0.0060"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_s3",
+            "cells": [
+              "real_09",
+              "Supplied 18° + P",
+              "3",
+              "PASS",
+              "0.994",
+              "ok",
+              "0.931",
+              "check",
+              "0.27",
+              "0.0079"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_x17_s1",
+            "cells": [
+              "real_09",
+              "Supplied 18° + 1.7P",
+              "1",
+              "PASS",
+              "1.672",
+              "ok",
+              "1.685",
+              "check",
+              "1.00",
+              "0.0069"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_x17_s2",
+            "cells": [
+              "real_09",
+              "Supplied 18° + 1.7P",
+              "2",
+              "PASS",
+              "1.670",
+              "ok",
+              "1.694",
+              "ok",
+              "0.99",
+              "0.0059"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_x17_s3",
+            "cells": [
+              "real_09",
+              "Supplied 18° + 1.7P",
+              "3",
+              "PASS",
+              "1.691",
+              "ok",
+              "1.679",
+              "ok",
+              "0.99",
+              "0.0081"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_s101",
+            "cells": [
+              "real_14",
+              "Supplied 18° + P",
+              "101",
+              "PASS",
+              "1.001",
+              "ok",
+              "1.003",
+              "ok",
+              "0.99",
+              "0.0058"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_s102",
+            "cells": [
+              "real_14",
+              "Supplied 18° + P",
+              "102",
+              "PASS",
+              "0.988",
+              "ok",
+              "0.996",
+              "ok",
+              "0.99",
+              "0.0064"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_s103",
+            "cells": [
+              "real_14",
+              "Supplied 18° + P",
+              "103",
+              "PASS",
+              "0.992",
+              "ok",
+              "0.999",
+              "ok",
+              "0.99",
+              "0.0047"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_x17_s101",
+            "cells": [
+              "real_14",
+              "Supplied 18° + 1.7P",
+              "101",
+              "PASS",
+              "1.670",
+              "ok",
+              "1.703",
+              "check",
+              "0.99",
+              "0.0057"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_x17_s102",
+            "cells": [
+              "real_14",
+              "Supplied 18° + 1.7P",
+              "102",
+              "REJECT",
+              "1.699",
+              "check",
+              "1.713",
+              "ok",
+              "0.99",
+              "0.0061"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_x17_s103",
+            "cells": [
+              "real_14",
+              "Supplied 18° + 1.7P",
+              "103",
+              "REJECT",
+              "1.755",
+              "check",
+              "1.730",
+              "ok",
+              "0.99",
+              "0.0049"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_s1",
+            "cells": [
+              "real_16",
+              "Supplied 18° + P",
+              "1",
+              "PASS",
+              "0.993",
+              "ok",
+              "0.998",
+              "ok",
+              "1.00",
+              "0.0063"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_s2",
+            "cells": [
+              "real_16",
+              "Supplied 18° + P",
+              "2",
+              "PASS",
+              "1.009",
+              "ok",
+              "1.008",
+              "ok",
+              "0.99",
+              "0.0057"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_s3",
+            "cells": [
+              "real_16",
+              "Supplied 18° + P",
+              "3",
+              "REJECT",
+              "1.004",
+              "ok",
+              "0.495",
+              "check",
+              "0.32",
+              "0.0074"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_x17_s1",
+            "cells": [
+              "real_16",
+              "Supplied 18° + 1.7P",
+              "1",
+              "REJECT",
+              "1.760",
+              "check",
+              "1.757",
+              "check",
+              "1.00",
+              "0.0064"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_x17_s2",
+            "cells": [
+              "real_16",
+              "Supplied 18° + 1.7P",
+              "2",
+              "REJECT",
+              "1.716",
+              "check",
+              "1.704",
+              "check",
+              "0.99",
+              "0.0058"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_x17_s3",
+            "cells": [
+              "real_16",
+              "Supplied 18° + 1.7P",
+              "3",
+              "REJECT",
+              "1.689",
+              "check",
+              "1.688",
+              "check",
+              "1.00",
+              "0.0074"
+            ]
+          }
+        ],
+        "links": [
+          "source/clips/t329a_real_09_nphys_s1.mp4",
+          "source/out/strip_nphys.jpg",
+          "../t328/index.html",
+          "DEMO_READOUT.md",
+          "source/out/t276_results.json",
+          "source/analyze.py",
+          "source/build_jobs.py",
+          "source_receipt.json",
+          "board_receipts.json",
+          "baseline/t276_results.json",
+          "baseline/t277_results.json",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/eb5aa13352f381d5641fa6913abbd6e381480973/work/dk1/t329_amp",
+          "../t332/index.html"
+        ],
+        "images": [
+          {
+            "src": "source/inputs/real_09.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/inputs/real_14.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/inputs/real_16.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/out/strip_nphys.jpg",
+            "width": 1160,
+            "height": 1620
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "source/clips/t329a_real_09_nphys_s1.mp4",
+          "exists": true
+        },
+        {
+          "href": "source/out/strip_nphys.jpg",
+          "exists": true
+        },
+        {
+          "href": "../t328/index.html",
+          "exists": true
+        },
+        {
+          "href": "DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "source/out/t276_results.json",
+          "exists": true
+        },
+        {
+          "href": "source/analyze.py",
+          "exists": true
+        },
+        {
+          "href": "source/build_jobs.py",
+          "exists": true
+        },
+        {
+          "href": "source_receipt.json",
+          "exists": true
+        },
+        {
+          "href": "board_receipts.json",
+          "exists": true
+        },
+        {
+          "href": "baseline/t276_results.json",
+          "exists": true
+        },
+        {
+          "href": "baseline/t277_results.json",
+          "exists": true
+        },
+        {
+          "href": "../t332/index.html",
+          "exists": true
+        }
+      ],
+      "filters": [
+        {
+          "scene": "all",
+          "arm": "all",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3",
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3",
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103",
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103",
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3",
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3",
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103",
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3",
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103",
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_09",
+          "arm": "all",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3",
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_09",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3"
+          ]
+        },
+        {
+          "scene": "real_09",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "all",
+          "visible": [
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103",
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_16",
+          "arm": "all",
+          "visible": [
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3",
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_16",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3"
+          ]
+        },
+        {
+          "scene": "real_16",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        }
+      ],
+      "sheets": [
+        {
+          "arm": "nphys",
+          "src": "source/out/strip_nphys.jpg",
+          "width": 1160,
+          "height": 1620,
+          "href": "source/out/strip_nphys.jpg"
+        },
+        {
+          "arm": "nphys_x17",
+          "src": "source/out/strip_nphys_x17.jpg",
+          "width": 1160,
+          "height": 1620,
+          "href": "source/out/strip_nphys_x17.jpg"
+        }
+      ],
+      "playback": [
+        {
+          "scene": "real_09",
+          "src": "source/clips/t329a_real_09_nphys_s1.mp4",
+          "href": "source/clips/t329a_real_09_nphys_s1.mp4",
+          "duration": 3.875,
+          "width": 832,
+          "height": 480,
+          "error": null,
+          "time": 1.804279,
+          "decoded": 46,
+          "dropped": 0
+        },
+        {
+          "scene": "real_14",
+          "src": "source/clips/t329a_real_14_nphys_s101.mp4",
+          "href": "source/clips/t329a_real_14_nphys_s101.mp4",
+          "duration": 3.875,
+          "width": 832,
+          "height": 480,
+          "error": null,
+          "time": 1.804109,
+          "decoded": 46,
+          "dropped": 0
+        },
+        {
+          "scene": "real_16",
+          "src": "source/clips/t329a_real_16_nphys_s1.mp4",
+          "href": "source/clips/t329a_real_16_nphys_s1.mp4",
+          "duration": 3.875,
+          "width": 832,
+          "height": 480,
+          "error": null,
+          "time": 1.803686,
+          "decoded": 46,
+          "dropped": 0
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "state": {
+        "overflow": false,
+        "text": "TASK 329 • DK1 RESULTS • SOURCE eb5aa13 • PRESENTATION ONLY\nA supplied non-rest proxy raises the clean-gate count to 7/9.\n\nSame three takes and seeds: the earlier release-from-rest proxy was 0/9 clean. The 18° proxy changes initial velocity, motion extent and measurement visibility together.\n\nAttributed provisional result from dk1. Source-file and playback checks here add no independent physics measurement.\n\nEvery attempt stays in the denominator\nProxy arm\tClean\tClean + within 10% of P\tAccepted ACF median ×P\nHistorical release-from-rest\t0/9\t0/9\t—\nSupplied 18° + P\t7/9\t7/9\t0.994\nSupplied 18° + 1.7P\t4/9\t0/9\t1.671\n\nThree takes × three seeds. Each new arm has 9 clips. No new plain arm was generated. Accepted-only ACF interval [0.992122, 1.001472] resamples seven selected rows; it is not scene-general uncertainty.\n\nPeriod, amplitude and direction are supplied. P comes from later real video; 18° and inward direction are assumptions. This does not demonstrate a first-frame-only recipe. Review #6738/#6753 challenges amplitude-only causation: rendered motion, reader visibility, or both may explain the gate gain.\n\nPlay the three source-native examples\n\nOne committed first available seed per take, all source-clean. These examples are selected, not the full experiment. Bob deformation was reported by the author and was not scored.\n\nExample \nreal_09 · seed 1\nreal_14 · seed 101\nreal_16 · seed 1\n\nOpen native MP4 · 832×480, 93 frames at 24 fps. No compositing or retiming here.\n\nThe three source inputs\nreal_09: supplied P=1.172700s; new main arm 2/3 clean.\nreal_14: supplied P=1.187767s; new main arm 3/3 clean.\nreal_16: supplied P=1.187400s; new main arm 2/3 clean.\nNumerical control and gate acceptance are different\n\nThe wrong-period ×1.7 arm follows the longer target numerically on both readers in 9/9 attempts. Only 4/9 pass the frozen gate; five remain rejected with ACF check. This 9/9 observation is ungated.\n\nTwo main-arm outputs are rejected for reader disagreement: real_09 seed 2 and real_16 seed 3. Another accepted row, real_09 seed 3, has MP flag check and R² 0.265. The frozen gate does not require the MP flag or a minimum R².\n\nAll 18 saved outcomes\n\nRatios divide each saved reader period by the supplied P, including rejected outputs. They are display calculations, not new tracking.\n\nTake \nAll takes\nreal_09\nreal_14\nreal_16\nArm \nBoth arms\nSupplied 18° + P\nSupplied 18° + 1.7P\n\n18 saved rows\n\nTake\tArm\tSeed\tFrozen gate\tACF/P\tACF flag\tMP/P\tMP flag\tMP R²\tFlicker\nreal_09\tSupplied 18° + P\t1\tPASS\t1.001\tok\t1.002\tok\t0.99\t0.0068\nreal_09\tSupplied 18° + P\t2\tREJECT\t0.989\tok\t2.548\tcheck\t0.22\t0.0060\nreal_09\tSupplied 18° + P\t3\tPASS\t0.994\tok\t0.931\tcheck\t0.27\t0.0079\nreal_09\tSupplied 18° + 1.7P\t1\tPASS\t1.672\tok\t1.685\tcheck\t1.00\t0.0069\nreal_09\tSupplied 18° + 1.7P\t2\tPASS\t1.670\tok\t1.694\tok\t0.99\t0.0059\nreal_09\tSupplied 18° + 1.7P\t3\tPASS\t1.691\tok\t1.679\tok\t0.99\t0.0081\nreal_14\tSupplied 18° + P\t101\tPASS\t1.001\tok\t1.003\tok\t0.99\t0.0058\nreal_14\tSupplied 18° + P\t102\tPASS\t0.988\tok\t0.996\tok\t0.99\t0.0064\nreal_14\tSupplied 18° + P\t103\tPASS\t0.992\tok\t0.999\tok\t0.99\t0.0047\nreal_14\tSupplied 18° + 1.7P\t101\tPASS\t1.670\tok\t1.703\tcheck\t0.99\t0.0057\nreal_14\tSupplied 18° + 1.7P\t102\tREJECT\t1.699\tcheck\t1.713\tok\t0.99\t0.0061\nreal_14\tSupplied 18° + 1.7P\t103\tREJECT\t1.755\tcheck\t1.730\tok\t0.99\t0.0049\nreal_16\tSupplied 18° + P\t1\tPASS\t0.993\tok\t0.998\tok\t1.00\t0.0063\nreal_16\tSupplied 18° + P\t2\tPASS\t1.009\tok\t1.008\tok\t0.99\t0.0057\nreal_16\tSupplied 18° + P\t3\tREJECT\t1.004\tok\t0.495\tcheck\t0.32\t0.0074\nreal_16\tSupplied 18° + 1.7P\t1\tREJECT\t1.760\tcheck\t1.757\tcheck\t1.00\t0.0064\nreal_16\tSupplied 18° + 1.7P\t2\tREJECT\t1.716\tcheck\t1.704\tcheck\t0.99\t0.0058\nreal_16\tSupplied 18° + 1.7P\t3\tREJECT\t1.689\tcheck\t1.688\tcheck\t1.00\t0.0074\nFrozen rule, uncertainty and calibration\nThe author's complete contact sheets\nSheet \nSupplied 18° + P\nSupplied 18° + 1.7P\nUnchanged author sheets: real_09, real_14, real_16; three seeds per take and eight cropped/resized frames per row. Author labels retain rejections. Static sheets are not a playback test. Only the three committed native clips above are packaged; hashes and sidecars cover all 18.\nKeep the claim within this evidence\nThe gate improvement supports the whole supplied non-rest proxy package on these clips. It does not identify amplitude as the sole cause or establish general scene transfer.\nSupplied P uses later-video timing (assumed 25 Hz); amplitude/direction and manual geometry are extra inputs. One still pose does not determine angular velocity.\nNo NVIDIA-scoreboard check for these 18 clips. The separate quality scorecard reports ~0.057 DOVER cost on another cohort. Plausibility, robot prediction and non-regression remain unproved.\nLow luminance flicker does not certify stable shape. Some bob deformation is reported and unscored. Default changes belong to recipe owners; none are applied here.\nGeneration settings and sampler provenance\nPresentation readout\nSaved results\nFrozen analyzer\nOriginal job builder\nByte receipts\nFinding and challenges\nHistorical 276\nHistorical 277\nPinned original source\nEarlier fresh-input demo",
+        "rows": [
+          {
+            "clip": "t329a_real_09_nphys_s1",
+            "cells": [
+              "real_09",
+              "Supplied 18° + P",
+              "1",
+              "PASS",
+              "1.001",
+              "ok",
+              "1.002",
+              "ok",
+              "0.99",
+              "0.0068"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_s2",
+            "cells": [
+              "real_09",
+              "Supplied 18° + P",
+              "2",
+              "REJECT",
+              "0.989",
+              "ok",
+              "2.548",
+              "check",
+              "0.22",
+              "0.0060"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_s3",
+            "cells": [
+              "real_09",
+              "Supplied 18° + P",
+              "3",
+              "PASS",
+              "0.994",
+              "ok",
+              "0.931",
+              "check",
+              "0.27",
+              "0.0079"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_x17_s1",
+            "cells": [
+              "real_09",
+              "Supplied 18° + 1.7P",
+              "1",
+              "PASS",
+              "1.672",
+              "ok",
+              "1.685",
+              "check",
+              "1.00",
+              "0.0069"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_x17_s2",
+            "cells": [
+              "real_09",
+              "Supplied 18° + 1.7P",
+              "2",
+              "PASS",
+              "1.670",
+              "ok",
+              "1.694",
+              "ok",
+              "0.99",
+              "0.0059"
+            ]
+          },
+          {
+            "clip": "t329a_real_09_nphys_x17_s3",
+            "cells": [
+              "real_09",
+              "Supplied 18° + 1.7P",
+              "3",
+              "PASS",
+              "1.691",
+              "ok",
+              "1.679",
+              "ok",
+              "0.99",
+              "0.0081"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_s101",
+            "cells": [
+              "real_14",
+              "Supplied 18° + P",
+              "101",
+              "PASS",
+              "1.001",
+              "ok",
+              "1.003",
+              "ok",
+              "0.99",
+              "0.0058"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_s102",
+            "cells": [
+              "real_14",
+              "Supplied 18° + P",
+              "102",
+              "PASS",
+              "0.988",
+              "ok",
+              "0.996",
+              "ok",
+              "0.99",
+              "0.0064"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_s103",
+            "cells": [
+              "real_14",
+              "Supplied 18° + P",
+              "103",
+              "PASS",
+              "0.992",
+              "ok",
+              "0.999",
+              "ok",
+              "0.99",
+              "0.0047"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_x17_s101",
+            "cells": [
+              "real_14",
+              "Supplied 18° + 1.7P",
+              "101",
+              "PASS",
+              "1.670",
+              "ok",
+              "1.703",
+              "check",
+              "0.99",
+              "0.0057"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_x17_s102",
+            "cells": [
+              "real_14",
+              "Supplied 18° + 1.7P",
+              "102",
+              "REJECT",
+              "1.699",
+              "check",
+              "1.713",
+              "ok",
+              "0.99",
+              "0.0061"
+            ]
+          },
+          {
+            "clip": "t329a_real_14_nphys_x17_s103",
+            "cells": [
+              "real_14",
+              "Supplied 18° + 1.7P",
+              "103",
+              "REJECT",
+              "1.755",
+              "check",
+              "1.730",
+              "ok",
+              "0.99",
+              "0.0049"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_s1",
+            "cells": [
+              "real_16",
+              "Supplied 18° + P",
+              "1",
+              "PASS",
+              "0.993",
+              "ok",
+              "0.998",
+              "ok",
+              "1.00",
+              "0.0063"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_s2",
+            "cells": [
+              "real_16",
+              "Supplied 18° + P",
+              "2",
+              "PASS",
+              "1.009",
+              "ok",
+              "1.008",
+              "ok",
+              "0.99",
+              "0.0057"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_s3",
+            "cells": [
+              "real_16",
+              "Supplied 18° + P",
+              "3",
+              "REJECT",
+              "1.004",
+              "ok",
+              "0.495",
+              "check",
+              "0.32",
+              "0.0074"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_x17_s1",
+            "cells": [
+              "real_16",
+              "Supplied 18° + 1.7P",
+              "1",
+              "REJECT",
+              "1.760",
+              "check",
+              "1.757",
+              "check",
+              "1.00",
+              "0.0064"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_x17_s2",
+            "cells": [
+              "real_16",
+              "Supplied 18° + 1.7P",
+              "2",
+              "REJECT",
+              "1.716",
+              "check",
+              "1.704",
+              "check",
+              "0.99",
+              "0.0058"
+            ]
+          },
+          {
+            "clip": "t329a_real_16_nphys_x17_s3",
+            "cells": [
+              "real_16",
+              "Supplied 18° + 1.7P",
+              "3",
+              "REJECT",
+              "1.689",
+              "check",
+              "1.688",
+              "check",
+              "1.00",
+              "0.0074"
+            ]
+          }
+        ],
+        "links": [
+          "source/clips/t329a_real_09_nphys_s1.mp4",
+          "source/out/strip_nphys.jpg",
+          "../t328/index.html",
+          "DEMO_READOUT.md",
+          "source/out/t276_results.json",
+          "source/analyze.py",
+          "source/build_jobs.py",
+          "source_receipt.json",
+          "board_receipts.json",
+          "baseline/t276_results.json",
+          "baseline/t277_results.json",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/eb5aa13352f381d5641fa6913abbd6e381480973/work/dk1/t329_amp",
+          "../t332/index.html"
+        ],
+        "images": [
+          {
+            "src": "source/inputs/real_09.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/inputs/real_14.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/inputs/real_16.png",
+            "width": 832,
+            "height": 480
+          },
+          {
+            "src": "source/out/strip_nphys.jpg",
+            "width": 1160,
+            "height": 1620
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "source/clips/t329a_real_09_nphys_s1.mp4",
+          "exists": true
+        },
+        {
+          "href": "source/out/strip_nphys.jpg",
+          "exists": true
+        },
+        {
+          "href": "../t328/index.html",
+          "exists": true
+        },
+        {
+          "href": "DEMO_READOUT.md",
+          "exists": true
+        },
+        {
+          "href": "source/out/t276_results.json",
+          "exists": true
+        },
+        {
+          "href": "source/analyze.py",
+          "exists": true
+        },
+        {
+          "href": "source/build_jobs.py",
+          "exists": true
+        },
+        {
+          "href": "source_receipt.json",
+          "exists": true
+        },
+        {
+          "href": "board_receipts.json",
+          "exists": true
+        },
+        {
+          "href": "baseline/t276_results.json",
+          "exists": true
+        },
+        {
+          "href": "baseline/t277_results.json",
+          "exists": true
+        },
+        {
+          "href": "../t332/index.html",
+          "exists": true
+        }
+      ],
+      "filters": [
+        {
+          "scene": "all",
+          "arm": "all",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3",
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3",
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103",
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103",
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3",
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3",
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103",
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3"
+          ]
+        },
+        {
+          "scene": "all",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3",
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103",
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_09",
+          "arm": "all",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3",
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_09",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_09_nphys_s1",
+            "t329a_real_09_nphys_s2",
+            "t329a_real_09_nphys_s3"
+          ]
+        },
+        {
+          "scene": "real_09",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_09_nphys_x17_s1",
+            "t329a_real_09_nphys_x17_s2",
+            "t329a_real_09_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "all",
+          "visible": [
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103",
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_14_nphys_s101",
+            "t329a_real_14_nphys_s102",
+            "t329a_real_14_nphys_s103"
+          ]
+        },
+        {
+          "scene": "real_14",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_14_nphys_x17_s101",
+            "t329a_real_14_nphys_x17_s102",
+            "t329a_real_14_nphys_x17_s103"
+          ]
+        },
+        {
+          "scene": "real_16",
+          "arm": "all",
+          "visible": [
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3",
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        },
+        {
+          "scene": "real_16",
+          "arm": "nphys",
+          "visible": [
+            "t329a_real_16_nphys_s1",
+            "t329a_real_16_nphys_s2",
+            "t329a_real_16_nphys_s3"
+          ]
+        },
+        {
+          "scene": "real_16",
+          "arm": "nphys_x17",
+          "visible": [
+            "t329a_real_16_nphys_x17_s1",
+            "t329a_real_16_nphys_x17_s2",
+            "t329a_real_16_nphys_x17_s3"
+          ]
+        }
+      ],
+      "sheets": [
+        {
+          "arm": "nphys",
+          "src": "source/out/strip_nphys.jpg",
+          "width": 1160,
+          "height": 1620,
+          "href": "source/out/strip_nphys.jpg"
+        },
+        {
+          "arm": "nphys_x17",
+          "src": "source/out/strip_nphys_x17.jpg",
+          "width": 1160,
+          "height": 1620,
+          "href": "source/out/strip_nphys_x17.jpg"
+        }
+      ],
+      "playback": [
+        {
+          "scene": "real_09",
+          "src": "source/clips/t329a_real_09_nphys_s1.mp4",
+          "href": "source/clips/t329a_real_09_nphys_s1.mp4",
+          "duration": 3.875,
+          "width": 832,
+          "height": 480,
+          "error": null,
+          "time": 1.803874,
+          "decoded": 46,
+          "dropped": 0
+        },
+        {
+          "scene": "real_14",
+          "src": "source/clips/t329a_real_14_nphys_s101.mp4",
+          "href": "source/clips/t329a_real_14_nphys_s101.mp4",
+          "duration": 3.875,
+          "width": 832,
+          "height": 480,
+          "error": null,
+          "time": 1.803311,
+          "decoded": 46,
+          "dropped": 0
+        },
+        {
+          "scene": "real_16",
+          "src": "source/clips/t329a_real_16_nphys_s1.mp4",
+          "href": "source/clips/t329a_real_16_nphys_s1.mp4",
+          "duration": 3.875,
+          "width": 832,
+          "height": 480,
+          "error": null,
+          "time": 1.804974,
+          "decoded": 46,
+          "dropped": 0
+        }
+      ]
+    }
+  ],
+  "exceptions": [],
+  "browser_pid": 12,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  },
+  "passed": true
+}
