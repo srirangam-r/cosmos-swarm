@@ -103,3 +103,19 @@ oc_A_ball1_s101,0,"fragments f10-14; clone (two balls) f16-22; then rolls toward
 oc_A_ball2_s101,0,"impact on rail f16 then depth move onto plank f18-46 (grows); glassy f20-22; no flight arc",2026-11-01T12:15
 oc_A_ball1_s102,0,"slow descent to rail f16; then comes toward camera (grows ~3x) and leaves frame bottom f30-36; no rebound flight",2026-11-01T12:15
 oc_A_ball2_s102,0,"slow descent to rail f14; then comes toward camera (grows ~3x) and leaves frame bottom f30-36; no rebound flight",2026-11-01T12:15
+oc_A_ball1_s103,0,"hovers/slow drift f0-24 with mid-air reversal f14-20 (no impact); smear f26; white smear artifact f38",2026-11-01T12:19
+oc_A_ball2_s103,0,"hovers f4-36 with a white fragment/clone under the ball f8-28; no impact before f38",2026-11-01T12:19
+oc_A_ball1_s104,0,"drifts diagonally right, perches at frame edge f8-16, leaves frame f18; no flight",2026-11-01T12:19
+oc_A_ball2_s104,0,"drifts diagonally right, rail f14, leaves frame f18-20; no flight",2026-11-01T12:19
+oc_A_ball1_s105,0,"glassy ball from f2; clone (two balls) f4; erratic jumps at right edge",2026-11-01T12:19
+oc_A_ball2_s105,0,"ball grows ~3x f4-8 (giant, toward camera); erratic",2026-11-01T12:19
+oc_A_ball1_s106,0,"ball vanishes f2, reappears on plank f4 (teleport toward camera); fragment f14; erratic",2026-11-01T12:19
+oc_A_ball2_s106,0,"glassy/fragmented ball f4-6, f14-16, f24-26, f36-38; clone f20",2026-11-01T12:19
+oc_A_ball1_s107,0,"glassy/ghost ball f2-4; vanishes f6; reappears on plank f12; erratic",2026-11-01T12:21
+oc_A_ball2_s107,0,"fall to rail f8, then rolls toward camera on plank f10-46 (grows ~3x); no rebound flight",2026-11-01T12:21
+oc_A_ball1_s108,0,"scene corruption (blocks) f2-4; ball vanishes; clones (2-3 balls) f10-12, f34, f46",2026-11-01T12:21
+oc_A_ball2_s108,0,"scene corruption (rail smear) f2-4; ball vanishes f4-8; clone f40-42; erratic",2026-11-01T12:21
+oc_A_ball1_s109,0,"glassy f4; clone/drip f6-8; giant ball (~4x) from f8; morph",2026-11-01T12:21
+oc_A_ball2_s109,0,"ball vanishes f2-6; reappears giant (~4x) f8; morph",2026-11-01T12:21
+oc_A_ball1_s110,0,"ball vanishes f4-6; reappears giant (~4x) f8-10; then rolls toward camera",2026-11-01T12:21
+oc_A_ball2_s110,0,"ball vanishes f2-4; fragment f6; reappears giant (~4x) f8",2026-11-01T12:21
