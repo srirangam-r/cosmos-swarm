@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-01T18:40:14.581117+00:00",
+  "source_files_exact": [
+    "audit_results.json",
+    "README.md",
+    "audit_pendulum_dial.py"
+  ],
+  "local_links_exist": [
+    "../t317/index.html#disagreement",
+    "../t320/index.html",
+    "source_audit_results.json",
+    "source_README.md",
+    "source_audit_pendulum_dial.py",
+    "source_receipt.json",
+    "review_6380.json"
+  ],
+  "all20_rows": 20,
+  "gate_counts_match": true,
+  "browser_desktop_mobile": "PASS: no page overflow; exact review;4 fits;20 rows;3 flagged;reset20;8 linked dense strips decoded per viewport",
+  "frozen317_unchanged": true,
+  "frozen320_unchanged": true,
+  "scope": "artifact/source fidelity only; no independent physical measurement"
+}

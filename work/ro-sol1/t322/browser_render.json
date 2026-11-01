@@ -1,0 +1,104 @@
+{
+  "utc": "2026-11-01T18:39:55.308Z",
+  "preview_sha256": "7f14bc44f27537c559e42733fb5aec863a3edda9978643a831012bd6a312f22a",
+  "mode": "headless installed Brave, anonymous CDP pipes, static local page; no video playback",
+  "renders": [
+    {
+      "name": "desktop",
+      "state": {
+        "overflow": false,
+        "text": "TASK 322 · PRESENTATION OF AGY-4’S COMPLETED AUDIT #6380 / TASK 316\n\nNano follows a supplied pendulum tempo across the published dial\n\nThe independent numerical audit reproduces ACF’s response over 0.6–2.0 seconds. One clip’s readers disagree; the full table retains that result.\n\nGrid: two scenes (pend10, pend11) × two seeds × five commanded periods = 20 clips. Each clip is 93 frames at 24 fps (3.875 seconds). The commanded period is supplied by a proxy.\n\n20/20\nACF flags are “ok”\n19/20\nReader gap ≤ 10%\n20/20\nFlicker below 0.08\n17/20\nBoth flags + gap + flicker pass\nKeep the selections visible\nReader / selection\tIncluded\tSlope ± SE\t95% bootstrap interval\tR²\tLargest error to command\nACF · all clips\t20/20\t1.0050 ± 0.0050\t[0.9916, 1.0180]\t0.99955\t1.54%\nMP · flag=ok only\t17/20\t1.0056 ± 0.0059\t[0.9909, 1.0227]\t0.99949\t1.63%\nMP · all clips\t20/20\t1.0461 ± 0.0312\t[0.9938, 1.1341]\t0.98423\t51.10%\nACF · all gates pass\t17/20\t1.0007 ± 0.0053\t[0.9879, 1.0157]\t0.99958\t1.26%\n\nValues are formatted from agy-4’s frozen JSON. ± denotes the source’s OLS standard error; the bootstrap interval is shown separately. Fits and their intervals describe this grid; they do not establish transfer to new scenes. “All gates pass” uses the ACF value on 17 accepted clips.\n\nThe discrepant clip remains in the all-clip result\n\npend11_P600_s2: command 0.600 s; ACF 0.5986 s; MP 0.2934 s (flag “check”); symmetric reader gap 68.43%. Agy-4’s audit interprets this as a half-period lock. Codex-1’s bounded visual review supports about 0.60 s; its visual method is unvalidated. The two 2.0 s clips flagged by MP remain within about 1.02% of command but have limited cycle counts.\n\nInspect all 93 frames\nRead codex-1’s visual review\nFrozen audit JSON\nScope of the demonstration\n\nThis demonstrates adherence to prescribed proxy tempo. The 1.186 s reference was calibrated to observed video through a 0.35 m length; independent physical prediction from first frame and prompt remains unproved. The requested third scene is absent. Low measured luminance flicker does not certify visual quality or zero flashing. This page supplies no new physical measurement, reader validation or NVIDIA scoreboard pass.\n\nSource inconsistencies and attribution\nAll 20 source rows\n\nPeriods in seconds; flicker is the source’s dimensionless luminance-change measure. Horizontal tables can be scrolled on narrow screens.\n\nAll clips\nFlagged clips\nShowing 20 of 20\nClip\tCommand\tACF / flag\tMP / flag\tReader gap\tFlicker\tAll gates\npend10_P600_s1\t0.600\t0.6016 / ok\t0.6026 / ok\t0.17%\t0.0042\tpass\npend10_P900_s1\t0.900\t0.8994 / ok\t0.8951 / ok\t0.48%\t0.0045\tpass\npend10_P1186_s1\t1.186\t1.1812 / ok\t1.1823 / ok\t0.09%\t0.0044\tpass\npend10_P1500_s1\t1.500\t1.5017 / ok\t1.5087 / ok\t0.46%\t0.0045\tpass\npend10_P2000_s1\t2.000\t2.0252 / ok\t2.0326 / ok\t0.37%\t0.0044\tpass\npend10_P600_s2\t0.600\t0.5993 / ok\t0.6020 / ok\t0.45%\t0.0029\tpass\npend10_P900_s2\t0.900\t0.9075 / ok\t0.9042 / ok\t0.36%\t0.0033\tpass\npend10_P1186_s2\t1.186\t1.1818 / ok\t1.1845 / ok\t0.23%\t0.0031\tpass\npend10_P1500_s2\t1.500\t1.4988 / ok\t1.5048 / ok\t0.40%\t0.0036\tpass\npend10_P2000_s2\t2.000\t1.9860 / ok\t1.9870 / ok\t0.05%\t0.0031\tpass\npend11_P600_s1\t0.600\t0.6060 / ok\t0.6027 / ok\t0.55%\t0.0050\tpass\npend11_P900_s1\t0.900\t0.8896 / ok\t0.8881 / ok\t0.16%\t0.0047\tpass\npend11_P1186_s1\t1.186\t1.1851 / ok\t1.1842 / ok\t0.08%\t0.0048\tpass\npend11_P1500_s1\t1.500\t1.4931 / ok\t1.4944 / ok\t0.09%\t0.0049\tpass\npend11_P2000_s1\t2.000\t2.0307 / ok\t2.0203 / check\t0.52%\t0.0047\tflagged\npend11_P600_s2\t0.600\t0.5986 / ok\t0.2934 / check\t68.43%\t0.0031\tflagged\npend11_P900_s2\t0.900\t0.9044 / ok\t0.9057 / ok\t0.14%\t0.0032\tpass\npend11_P1186_s2\t1.186\t1.1739 / ok\t1.1770 / ok\t0.27%\t0.0032\tpass\npend11_P1500_s2\t1.500\t1.4981 / ok\t1.5036 / ok\t0.36%\t0.0032\tpass\npend11_P2000_s2\t2.000\t1.9953 / ok\t1.9857 / check\t0.48%\t0.0033\tflagged\nRead agy-4’s original board review #6380\n\nPrepared by ro-sol1 as an attributed readout. Numerical source: agy-4, commit 27e60e7. Native experiment: ro-3, 823a546. Prior-work note #6387: ProxyUp, GAUGE, Physics-IQ.",
+        "review": "replicated (ACF speed dial) / qualified (censored MP selection, reader divergence, and calibrated reference).\n\nIndependent numerical and coverage audit of Finding #6274 (ro-3, task 265) across all 20 published clips (commit 823a546, work/ro-3/task265/):\n\n1. **Replication of ACF Linear Speed Dial (All 20 Clips, Unselected)**:\n   - Slope = 1.0050 ± 0.0050 (95% bootstrap CI: [0.9916, 1.0180])\n   - Intercept = -0.0055 ± 0.0067 s\n   - R² = 0.99955 (95% CI: [0.9993, 0.9999]), RMSE = 0.0107 s, MAE = 0.0071 s, Max relative error = 1.54%\n   - 20/20 ACF flags 'ok' (100.0%). ACF confirms linear adherence to commanded proxy periods from 0.6 s to 2.0 s with zero dropouts.\n\n2. **Censoring and Selection in Motion Peak (`measure_pend v1`, referee-PASS)**:\n   - **Headline 17-clip selection**: Reconstructed slope = 1.0056 ± 0.0059, R² = 0.99949, max error 1.63%, matching author #6274 bit-for-bit.\n   - **Full 20-clip unselected fit**: Slope = 1.0461 ± 0.0312 (95% CI: [0.9938, 1.1341]), Intercept = -0.0713 ± 0.0415 s, R² = 0.9842, max relative error = 51.10%.\n\n3. **Discrepant Clip Diagnosis**:\n   - `dial_pend11_P600_s2` (Command 0.600 s): ACF measured 0.5986 s ('ok'); MP measured 0.2934 s ('check', R²=0.352). This is a harmonic half-period lock (0.293 ≈ 0.599 / 2) due to peak splitting. Tool gap is 68.43%. Bounded visual review (#6330 codex-1, #6344 ro-sol1) supports ~0.60 s oscillation; raw MP 0.293 s is retained in the unselected statistics as requested in #6346.\n   - `dial_pend11_P2000_s1` (2.020 s) & `dial_pend11_P2000_s2` (1.986 s): Flagged 'check' by MP solely because 2.0 s yields only 2 half-cycles in a 93-frame (3.875 s) clip, tripping tracker safety bounds. Numerical periods remain within 1.0% of command.\n\n4. **Task 290/301 Strict Gates**:\n   - Tool gap <= 10%: 19/20 (95.0%) pass.\n   - Flicker < 0.08: 20/20 (100.0%) pass (median 0.0039, range [0.0029, 0.0050]).\n   - Both clean accepted (n=17): Slope = 1.0007 ± 0.0053 (95% CI: [0.9879, 1.0157]), R² = 0.99958, max error 1.26%.\n\n5. **Physical & Scope Limits**:\n   - Reference period P=1.186 s (L=0.35 m) was soft-calibrated to observed video (#5343); the dial demonstrates commanded proxy tempo adherence, not discovery of physical gravity. Grid spans 2 scenes (pend10, pend11) x 2 seeds; scene 3 remains open.\n\nEvidence & artifacts published at commit 27e60e7:\nhttps://github.com/srirangam-r/cosmos-swarm/tree/27e60e7caad2874a6be3875c4a2d73a2274a15ae/work/agy-4/task316_pendulum_dial_audit\n\n@ro-3 @codex-1 @Raj @rahul-api-codex @ro-sol1",
+        "rows": 20,
+        "fits": 4,
+        "links": [
+          "../t317/index.html#disagreement",
+          "../t320/index.html",
+          "source_audit_results.json",
+          "source_README.md",
+          "source_audit_pendulum_dial.py",
+          "source_receipt.json",
+          "review_6380.json",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/27e60e7caad2874a6be3875c4a2d73a2274a15ae/work/agy-4/task316_pendulum_dial_audit",
+          "https://arxiv.org/abs/2607.03732",
+          "https://arxiv.org/abs/2608.05948",
+          "https://arxiv.org/abs/2501.09038v2"
+        ]
+      }
+    },
+    {
+      "name": "desktop",
+      "filtered": {
+        "visible": [
+          "pend11_P2000_s1",
+          "pend11_P600_s2",
+          "pend11_P2000_s2"
+        ],
+        "count": "Showing 3 of 20",
+        "pressed": "true"
+      },
+      "reset": 20
+    },
+    {
+      "name": "desktop",
+      "linked": {
+        "url": "file:///home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t317/index.html#disagreement",
+        "dense": 8,
+        "ok": true
+      }
+    },
+    {
+      "name": "mobile",
+      "state": {
+        "overflow": false,
+        "text": "TASK 322 · PRESENTATION OF AGY-4’S COMPLETED AUDIT #6380 / TASK 316\n\nNano follows a supplied pendulum tempo across the published dial\n\nThe independent numerical audit reproduces ACF’s response over 0.6–2.0 seconds. One clip’s readers disagree; the full table retains that result.\n\nGrid: two scenes (pend10, pend11) × two seeds × five commanded periods = 20 clips. Each clip is 93 frames at 24 fps (3.875 seconds). The commanded period is supplied by a proxy.\n\n20/20\nACF flags are “ok”\n19/20\nReader gap ≤ 10%\n20/20\nFlicker below 0.08\n17/20\nBoth flags + gap + flicker pass\nKeep the selections visible\nReader / selection\tIncluded\tSlope ± SE\t95% bootstrap interval\tR²\tLargest error to command\nACF · all clips\t20/20\t1.0050 ± 0.0050\t[0.9916, 1.0180]\t0.99955\t1.54%\nMP · flag=ok only\t17/20\t1.0056 ± 0.0059\t[0.9909, 1.0227]\t0.99949\t1.63%\nMP · all clips\t20/20\t1.0461 ± 0.0312\t[0.9938, 1.1341]\t0.98423\t51.10%\nACF · all gates pass\t17/20\t1.0007 ± 0.0053\t[0.9879, 1.0157]\t0.99958\t1.26%\n\nValues are formatted from agy-4’s frozen JSON. ± denotes the source’s OLS standard error; the bootstrap interval is shown separately. Fits and their intervals describe this grid; they do not establish transfer to new scenes. “All gates pass” uses the ACF value on 17 accepted clips.\n\nThe discrepant clip remains in the all-clip result\n\npend11_P600_s2: command 0.600 s; ACF 0.5986 s; MP 0.2934 s (flag “check”); symmetric reader gap 68.43%. Agy-4’s audit interprets this as a half-period lock. Codex-1’s bounded visual review supports about 0.60 s; its visual method is unvalidated. The two 2.0 s clips flagged by MP remain within about 1.02% of command but have limited cycle counts.\n\nInspect all 93 frames\nRead codex-1’s visual review\nFrozen audit JSON\nScope of the demonstration\n\nThis demonstrates adherence to prescribed proxy tempo. The 1.186 s reference was calibrated to observed video through a 0.35 m length; independent physical prediction from first frame and prompt remains unproved. The requested third scene is absent. Low measured luminance flicker does not certify visual quality or zero flashing. This page supplies no new physical measurement, reader validation or NVIDIA scoreboard pass.\n\nSource inconsistencies and attribution\nAll 20 source rows\n\nPeriods in seconds; flicker is the source’s dimensionless luminance-change measure. Horizontal tables can be scrolled on narrow screens.\n\nAll clips\nFlagged clips\nShowing 20 of 20\nClip\tCommand\tACF / flag\tMP / flag\tReader gap\tFlicker\tAll gates\npend10_P600_s1\t0.600\t0.6016 / ok\t0.6026 / ok\t0.17%\t0.0042\tpass\npend10_P900_s1\t0.900\t0.8994 / ok\t0.8951 / ok\t0.48%\t0.0045\tpass\npend10_P1186_s1\t1.186\t1.1812 / ok\t1.1823 / ok\t0.09%\t0.0044\tpass\npend10_P1500_s1\t1.500\t1.5017 / ok\t1.5087 / ok\t0.46%\t0.0045\tpass\npend10_P2000_s1\t2.000\t2.0252 / ok\t2.0326 / ok\t0.37%\t0.0044\tpass\npend10_P600_s2\t0.600\t0.5993 / ok\t0.6020 / ok\t0.45%\t0.0029\tpass\npend10_P900_s2\t0.900\t0.9075 / ok\t0.9042 / ok\t0.36%\t0.0033\tpass\npend10_P1186_s2\t1.186\t1.1818 / ok\t1.1845 / ok\t0.23%\t0.0031\tpass\npend10_P1500_s2\t1.500\t1.4988 / ok\t1.5048 / ok\t0.40%\t0.0036\tpass\npend10_P2000_s2\t2.000\t1.9860 / ok\t1.9870 / ok\t0.05%\t0.0031\tpass\npend11_P600_s1\t0.600\t0.6060 / ok\t0.6027 / ok\t0.55%\t0.0050\tpass\npend11_P900_s1\t0.900\t0.8896 / ok\t0.8881 / ok\t0.16%\t0.0047\tpass\npend11_P1186_s1\t1.186\t1.1851 / ok\t1.1842 / ok\t0.08%\t0.0048\tpass\npend11_P1500_s1\t1.500\t1.4931 / ok\t1.4944 / ok\t0.09%\t0.0049\tpass\npend11_P2000_s1\t2.000\t2.0307 / ok\t2.0203 / check\t0.52%\t0.0047\tflagged\npend11_P600_s2\t0.600\t0.5986 / ok\t0.2934 / check\t68.43%\t0.0031\tflagged\npend11_P900_s2\t0.900\t0.9044 / ok\t0.9057 / ok\t0.14%\t0.0032\tpass\npend11_P1186_s2\t1.186\t1.1739 / ok\t1.1770 / ok\t0.27%\t0.0032\tpass\npend11_P1500_s2\t1.500\t1.4981 / ok\t1.5036 / ok\t0.36%\t0.0032\tpass\npend11_P2000_s2\t2.000\t1.9953 / ok\t1.9857 / check\t0.48%\t0.0033\tflagged\nRead agy-4’s original board review #6380\n\nPrepared by ro-sol1 as an attributed readout. Numerical source: agy-4, commit 27e60e7. Native experiment: ro-3, 823a546. Prior-work note #6387: ProxyUp, GAUGE, Physics-IQ.",
+        "review": "replicated (ACF speed dial) / qualified (censored MP selection, reader divergence, and calibrated reference).\n\nIndependent numerical and coverage audit of Finding #6274 (ro-3, task 265) across all 20 published clips (commit 823a546, work/ro-3/task265/):\n\n1. **Replication of ACF Linear Speed Dial (All 20 Clips, Unselected)**:\n   - Slope = 1.0050 ± 0.0050 (95% bootstrap CI: [0.9916, 1.0180])\n   - Intercept = -0.0055 ± 0.0067 s\n   - R² = 0.99955 (95% CI: [0.9993, 0.9999]), RMSE = 0.0107 s, MAE = 0.0071 s, Max relative error = 1.54%\n   - 20/20 ACF flags 'ok' (100.0%). ACF confirms linear adherence to commanded proxy periods from 0.6 s to 2.0 s with zero dropouts.\n\n2. **Censoring and Selection in Motion Peak (`measure_pend v1`, referee-PASS)**:\n   - **Headline 17-clip selection**: Reconstructed slope = 1.0056 ± 0.0059, R² = 0.99949, max error 1.63%, matching author #6274 bit-for-bit.\n   - **Full 20-clip unselected fit**: Slope = 1.0461 ± 0.0312 (95% CI: [0.9938, 1.1341]), Intercept = -0.0713 ± 0.0415 s, R² = 0.9842, max relative error = 51.10%.\n\n3. **Discrepant Clip Diagnosis**:\n   - `dial_pend11_P600_s2` (Command 0.600 s): ACF measured 0.5986 s ('ok'); MP measured 0.2934 s ('check', R²=0.352). This is a harmonic half-period lock (0.293 ≈ 0.599 / 2) due to peak splitting. Tool gap is 68.43%. Bounded visual review (#6330 codex-1, #6344 ro-sol1) supports ~0.60 s oscillation; raw MP 0.293 s is retained in the unselected statistics as requested in #6346.\n   - `dial_pend11_P2000_s1` (2.020 s) & `dial_pend11_P2000_s2` (1.986 s): Flagged 'check' by MP solely because 2.0 s yields only 2 half-cycles in a 93-frame (3.875 s) clip, tripping tracker safety bounds. Numerical periods remain within 1.0% of command.\n\n4. **Task 290/301 Strict Gates**:\n   - Tool gap <= 10%: 19/20 (95.0%) pass.\n   - Flicker < 0.08: 20/20 (100.0%) pass (median 0.0039, range [0.0029, 0.0050]).\n   - Both clean accepted (n=17): Slope = 1.0007 ± 0.0053 (95% CI: [0.9879, 1.0157]), R² = 0.99958, max error 1.26%.\n\n5. **Physical & Scope Limits**:\n   - Reference period P=1.186 s (L=0.35 m) was soft-calibrated to observed video (#5343); the dial demonstrates commanded proxy tempo adherence, not discovery of physical gravity. Grid spans 2 scenes (pend10, pend11) x 2 seeds; scene 3 remains open.\n\nEvidence & artifacts published at commit 27e60e7:\nhttps://github.com/srirangam-r/cosmos-swarm/tree/27e60e7caad2874a6be3875c4a2d73a2274a15ae/work/agy-4/task316_pendulum_dial_audit\n\n@ro-3 @codex-1 @Raj @rahul-api-codex @ro-sol1",
+        "rows": 20,
+        "fits": 4,
+        "links": [
+          "../t317/index.html#disagreement",
+          "../t320/index.html",
+          "source_audit_results.json",
+          "source_README.md",
+          "source_audit_pendulum_dial.py",
+          "source_receipt.json",
+          "review_6380.json",
+          "https://github.com/srirangam-r/cosmos-swarm/tree/27e60e7caad2874a6be3875c4a2d73a2274a15ae/work/agy-4/task316_pendulum_dial_audit",
+          "https://arxiv.org/abs/2607.03732",
+          "https://arxiv.org/abs/2608.05948",
+          "https://arxiv.org/abs/2501.09038v2"
+        ]
+      }
+    },
+    {
+      "name": "mobile",
+      "filtered": {
+        "visible": [
+          "pend11_P2000_s1",
+          "pend11_P600_s2",
+          "pend11_P2000_s2"
+        ],
+        "count": "Showing 3 of 20",
+        "pressed": "true"
+      },
+      "reset": 20
+    },
+    {
+      "name": "mobile",
+      "linked": {
+        "url": "file:///home/nail/other_work/sclaw/swarm-work/ro-sol1/cosmos-swarm-demo/work/ro-sol1/t317/index.html#disagreement",
+        "dense": 8,
+        "ok": true
+      }
+    }
+  ],
+  "exceptions": [],
+  "browser_pid": 11,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.93",
+    "revision": "@f4a2447c8c7657c132da1cb7be05e68a5dbe4f0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.19"
+  }
+}

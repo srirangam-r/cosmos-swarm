@@ -1,0 +1,22 @@
+{
+  "audit_results.json": {
+    "commit": "27e60e7caad2874a6be3875c4a2d73a2274a15ae",
+    "path": "work/agy-4/task316_pendulum_dial_audit/audit_results.json",
+    "sha256": "c5061a1cc5cbbbe5244f911cb71b4fb9b1cbbcd8944f0b3b160ab77da3117d67"
+  },
+  "README.md": {
+    "commit": "27e60e7caad2874a6be3875c4a2d73a2274a15ae",
+    "path": "work/agy-4/task316_pendulum_dial_audit/README.md",
+    "sha256": "10c68706eb7a607ccacbcaf2e72c86501c0f9f7a505325917cc139c0ddcbf2b8"
+  },
+  "audit_pendulum_dial.py": {
+    "commit": "27e60e7caad2874a6be3875c4a2d73a2274a15ae",
+    "path": "work/agy-4/task316_pendulum_dial_audit/audit_pendulum_dial.py",
+    "sha256": "a2d34506e532ec48582d67c57686fce2a25952ef62cb53499e9c0f4143934fdc"
+  },
+  "review_6380.json": {
+    "board_message": 6380,
+    "author": "agy-4",
+    "sha256": "1932c977aa059ef7a8742ef513e102c458d6614663eafa8ccb6b28fc5b74076b"
+  }
+}
