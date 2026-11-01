@@ -1,0 +1,135 @@
+{
+ "rows": {
+  "09_s1": {
+   "plain_tdiff_out": 1.409544825553894,
+   "plain_frac_dev20_out": 0.14478393830607633,
+   "nphys_tdiff_out": 0.6546622514724731,
+   "nphys_frac_dev20_out": 0.049022736338252895,
+   "bg_effect": -0.13297333128253
+  },
+  "09_s2": {
+   "plain_tdiff_out": 1.1556349992752075,
+   "plain_frac_dev20_out": 0.12797766254487436,
+   "nphys_tdiff_out": 0.6415920257568359,
+   "nphys_frac_dev20_out": 0.044595133625847626,
+   "bg_effect": -0.06088857545341472
+  },
+  "09_s3": {
+   "plain_tdiff_out": 1.950738549232483,
+   "plain_frac_dev20_out": 0.2289881664672251,
+   "nphys_tdiff_out": 0.6572659015655518,
+   "nphys_frac_dev20_out": 0.04683951602180561,
+   "bg_effect": -0.08301705206875937
+  },
+  "12_s1": {
+   "plain_tdiff_out": 1.3693244457244873,
+   "plain_frac_dev20_out": 0.09621007038440715,
+   "nphys_tdiff_out": 0.6474218964576721,
+   "nphys_frac_dev20_out": 0.047441797509474824,
+   "bg_effect": -0.10049795187295155
+  },
+  "12_s2": {
+   "plain_tdiff_out": 1.283937931060791,
+   "plain_frac_dev20_out": 0.124244721169464,
+   "nphys_tdiff_out": 0.6260574460029602,
+   "nphys_frac_dev20_out": 0.04250406063887385,
+   "bg_effect": -0.035466144697431756
+  },
+  "12_s3": {
+   "plain_tdiff_out": 2.139814853668213,
+   "plain_frac_dev20_out": 0.2411992420140769,
+   "nphys_tdiff_out": 0.6317954659461975,
+   "nphys_frac_dev20_out": 0.04225500812127775,
+   "bg_effect": -0.10147093528285528
+  },
+  "16_s1": {
+   "plain_tdiff_out": 1.078827142715454,
+   "plain_frac_dev20_out": 0.035608855602693446,
+   "nphys_tdiff_out": 0.5382320880889893,
+   "nphys_frac_dev20_out": 0.033036022299644224,
+   "bg_effect": -0.09353658060410816
+  },
+  "16_s2": {
+   "plain_tdiff_out": 1.1174883842468262,
+   "plain_frac_dev20_out": 0.1354621751370027,
+   "nphys_tdiff_out": 0.5471644401550293,
+   "nphys_frac_dev20_out": 0.03640150946576183,
+   "bg_effect": -0.037797002649019334
+  },
+  "16_s3": {
+   "plain_tdiff_out": 2.2173595428466797,
+   "plain_frac_dev20_out": 0.1979896612655601,
+   "nphys_tdiff_out": 0.5475674867630005,
+   "nphys_frac_dev20_out": 0.029009551347379897,
+   "bg_effect": -0.06535659903017152
+  },
+  "17_s1": {
+   "plain_tdiff_out": 1.4335436820983887,
+   "plain_frac_dev20_out": 0.13423471701224288,
+   "nphys_tdiff_out": 0.6515630483627319,
+   "nphys_frac_dev20_out": 0.04968053093697185,
+   "bg_effect": -0.09630455418150677
+  },
+  "17_s2": {
+   "plain_tdiff_out": 0.9234117865562439,
+   "plain_frac_dev20_out": 0.07346826607307254,
+   "nphys_tdiff_out": 0.6394081115722656,
+   "nphys_frac_dev20_out": 0.04561606001896203,
+   "bg_effect": -0.028485521260023627
+  },
+  "17_s3": {
+   "plain_tdiff_out": 2.0031535625457764,
+   "plain_frac_dev20_out": 0.2322519477307391,
+   "nphys_tdiff_out": 0.6595408916473389,
+   "nphys_frac_dev20_out": 0.05092542973741704,
+   "bg_effect": -0.0551690523333378
+  },
+  "18_s1": {
+   "plain_tdiff_out": 1.1810742616653442,
+   "plain_frac_dev20_out": 0.07958607456140351,
+   "nphys_tdiff_out": 0.6696683764457703,
+   "nphys_frac_dev20_out": 0.050493421052631576,
+   "bg_effect": -0.09654131088633305
+  },
+  "18_s2": {
+   "plain_tdiff_out": 1.0435856580734253,
+   "plain_frac_dev20_out": 0.09098410087719298,
+   "nphys_tdiff_out": 0.6333178877830505,
+   "nphys_frac_dev20_out": 0.04395285087719298,
+   "bg_effect": -0.03393881676875185
+  },
+  "18_s3": {
+   "plain_tdiff_out": 2.2073097229003906,
+   "plain_frac_dev20_out": 0.2619517543859649,
+   "nphys_tdiff_out": 0.6449530124664307,
+   "nphys_frac_dev20_out": 0.04693530701754386,
+   "bg_effect": -0.06002489513396894
+  },
+  "19_s1": {
+   "plain_tdiff_out": 1.0907121896743774,
+   "plain_frac_dev20_out": 0.06851971557853911,
+   "nphys_tdiff_out": 0.6525193452835083,
+   "nphys_frac_dev20_out": 0.051015406162464985,
+   "bg_effect": -0.09483778261160353
+  },
+  "19_s2": {
+   "plain_tdiff_out": 1.8159087896347046,
+   "plain_frac_dev20_out": 0.2694139194139194,
+   "nphys_tdiff_out": 0.6311782598495483,
+   "nphys_frac_dev20_out": 0.04870448179271709,
+   "bg_effect": -0.05250232919038014
+  },
+  "19_s3": {
+   "plain_tdiff_out": 1.6347719430923462,
+   "plain_frac_dev20_out": 0.15204158586511526,
+   "nphys_tdiff_out": 0.6614900231361389,
+   "nphys_frac_dev20_out": 0.051263197586727,
+   "bg_effect": -0.05261551160739236
+  }
+ },
+ "mean_plain_tdiff_out": 1.5031190150313907,
+ "mean_nphys_tdiff_out": 0.6297443310419718,
+ "n_nphys_less_motion": 18,
+ "pearson_bg_vs_dmotion": 0.08823771617693285,
+ "spearman_bg_vs_dmotion": 0.2280701754385965
+}
