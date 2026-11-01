@@ -1,0 +1,27 @@
+{
+ "summary": {
+  "n_clips": 1,
+  "n_seeds": 0
+ },
+ "clips": [
+  {
+   "clip": "oc_A_ball2_s55.mp4",
+   "rho1": null,
+   "how": "untracked",
+   "rho1_t2": null,
+   "rho1_ff": null,
+   "median_dy_px": 21.285000000000025,
+   "a_fall": 2.885341848116103,
+   "a_flights": [
+    0.2979656711858451,
+    -2.257259561768012
+   ],
+   "impacts": [
+    15,
+    30,
+    43
+   ]
+  }
+ ],
+ "real": []
+}

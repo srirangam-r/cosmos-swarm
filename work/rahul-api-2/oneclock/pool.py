@@ -6,7 +6,7 @@ Usage: python3 -I pool.py out.json q8=score_all_s21-50.json brev=score_amd3.json
 import sys, json, numpy as np
 from scipy import stats
 def seed(c): return int(c.split('_s')[-1].split('.')[0])
-def divergent(r): return r['rho1_t2'] is not None and r['rho1_ff'] is not None and abs(np.log(r['rho1_t2'] / r['rho1_ff'])) > np.log(1.25)
+def divergent(r): return bool(r['rho1_t2'] is not None and r['rho1_ff'] is not None and abs(np.log(r['rho1_t2'] / r['rho1_ff'])) > np.log(1.25))
 def summ(clips):
     by = {}
     for r in clips:

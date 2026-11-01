@@ -1,0 +1,24 @@
+{
+ "width": 832,
+ "height": 480,
+ "num_frames": 93,
+ "fps": 24,
+ "steps": 35,
+ "guidance": 6.0,
+ "flow_shift": 10.0,
+ "seed": 82,
+ "negative_prompt": null,
+ "image": "/home/shadeform/nano/oc/ball1_A.png",
+ "name": "oc_A_ball1_s82",
+ "prompt": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "extra_params": {
+  "client": "rahul-api-2"
+ },
+ "prompt_text": "Static frontal camera view: A 121g black ball is suspended high above a wooden plank, which is fixed on a black perforated optical table. Coefficient of friction is 0.81; coefficient of restitution is 0.58. When released, the ball undergoes free fall, followed by a sequence of successive bounces with diminishing peak heights, before finally coming to rest on the plank. Maintain structural integrity and object consistency throughout: no changing shapes, no blending, and no flashing background.",
+ "negative_prompt_text": null,
+ "model": "nvidia/Cosmos3-Nano (local diffusers bf16, group offload)",
+ "endpoint": "http://127.0.0.1:8011",
+ "server_clip_id": "20261101T115618_0032_rahul-api-2",
+ "seconds": 50.8,
+ "wall_seconds": 51.3
+}
